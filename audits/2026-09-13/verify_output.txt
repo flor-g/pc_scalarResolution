@@ -1,0 +1,11 @@
+theta_u* = -28.4375
+V1 max|dF/dphi_S - (-eps_S-eps_L)|      = 1.218e+01
+V1 max|dF/dphi_S - W(-eps_S-eps_L)|     = 2.220e-16
+V1 max|W^-1 dF/dphi_S - (-eps_S-eps_L)| = 1.776e-15
+V2 theta=   1.0000: code stiffest_state_rate 3.0000 | lambda_max(-grad^2 F, Euclidean) 2.0647 | lambda_max(W^-1-preconditioned) 3.0000
+   Eq. (22) form vs Euclidean z^T(-H)z: -22.392785 vs -22.392785
+V2 theta= -28.4375: code stiffest_state_rate 810.6907 | lambda_max(-grad^2 F, Euclidean) 809.8088 | lambda_max(W^-1-preconditioned) 810.6907
+   Eq. (22) form vs Euclidean z^T(-H)z: -1204.643174 vs -1204.643174
+V3 after 400 steps: max|W^1/2 phi_S(infer) - phi~_S(Bogacz)| = 1.78e-15, max|phi_u diff| = 8.88e-16
+V4 <mu,sum c> = -40.9119; mean_y dF/dtheta at 0 = -6.8187; <mu,sum c>/|Y| = -13.6373; <mu,sum c>/S = -20.4560; <mu,sum c>/(S|Y|) = -6.8187
+V4 sigma_S=3 (S=4): mean grad -3.4093; <mu,sum c>/(S|Y|) = -3.4093; /(2|Y|) = -6.8187
