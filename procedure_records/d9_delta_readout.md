@@ -65,7 +65,7 @@ Record format: `[x] Tn (date): what changed; acceptance result; commit`.
   Markdown only, so no stored output changes and E3 is unaffected.
 - [x] T4 (2026-09-13): `decisions.md`: A13 status, A16 and B7 added, dated findings under B1 and C3,
   D9 resolved and its register row. `agent.md`: §2 item 7 (E3 replay), §5.1 baseline.
-- [ ] T5: commit.
+- [x] T5 (2026-09-13): committed T1-T4 as cb8cc6a, by explicit paths; `thesis_outline/` left staged.
 
 ## 3. Findings
 
