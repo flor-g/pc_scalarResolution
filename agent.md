@@ -26,7 +26,12 @@ into a project file (`decisions.md`, the change record, this file), never only i
 | `composition guide.md` | The five-entry prose standard, applied in its stated order. | Before drafting or editing any prose or code comment. |
 | `decisions.md` | Every architectural and implementation decision, who made it, why, and every open decision. Also the Bogacz divergence register and the quantity trace register. | Before any change that touches the architecture, an evaluation, or a quantity. |
 | `theta_u_learned_reach.md` | The working record of the change that made θ_u learned everywhere: tasks T0-T11, findings F1-F34, and §5.C, the table of retained fixed-θ controls. | As the model for a change record (§5.3), and for the evidence behind decisions A9-A11 and I1-I5. |
-| `backups/` | Dated snapshots. Read the README in a folder before trusting its name. | Before restoring anything. |
+| `backups/` | Folder snapshots from before the project was under git (2026-09-11, 2026-09-12). Historical: never modify. Read a folder's README before trusting its name. | Only to recover something older than the first commit. |
+| `.gitignore`, `.gitattributes` | Git configuration: what is excluded (`.venv/`, `.DS_Store`, notebook checkpoints, caches), and the nbdime diff and merge drivers for notebooks. | Before changing what git tracks (§4.5). |
+
+**Repository.** The folder is a git repository on branch `main`, with the user's private GitHub
+repository as remote `origin` (`https://github.com/flor-g/pc_scalarResolution.git`). The first
+commit is 499918c (2026-09-13). Procedures are in §4.
 
 ### `main.ipynb`, by cell index (17 cells)
 
@@ -197,11 +202,15 @@ or use as a default, and to every number the prose quotes.
 
 ---
 
-## 4. Backups before high-risk changes
+## 4. Version control and backups
 
-The folder is not under version control, so backups are the only way back.
+The folder is a git repository (§1). **A commit is the backup**: it records every tracked file
+exactly and can be recovered at any time. Folder copies are needed only for files git does not
+track.
 
-**High-risk, backup required first:**
+### 4.1 High-risk changes
+
+A checkpoint (§4.2) is required before:
 
 - any edit to a code cell;
 - any execution that overwrites stored outputs (E3 treats main's outputs as evidence);
@@ -211,19 +220,84 @@ The folder is not under version control, so backups are the only way back.
 - rewriting (not appending to) `decisions.md`, `composition guide.md`, or a change record;
 - any edit to files outside this folder.
 
-A single hand edit to one prose sentence is low-risk. When unsure, back up: it is cheap.
+A single hand edit to one prose sentence is low-risk. When unsure, make a checkpoint: it is cheap.
 
-**Procedure.**
+### 4.2 Checkpoint before a high-risk change
 
-1. Make a **new** folder `backups/YYYY-MM-DD-<short-label>/`, where the label says what it precedes
-   (`2026-09-14-before-part-c-rewrite`). **Never copy into an existing backup folder** (F33: this
-   destroyed the only pre-T8 snapshot).
-2. Copy every file the change may touch, plus `decisions.md`.
-3. Write a `README.md` in that folder: the date, what change it precedes, the files, and the byte
-   size and sha256 of each original and each copy.
-4. Check the hashes are equal before making the change.
-5. Never modify or delete a backup. A snapshot of the finished state goes in its own
-   `-after-<label>` folder.
+1. Run `git status`.
+2. **Clean tree:** the current commit is the checkpoint. Record `git rev-parse --short HEAD` in the
+   change record, or in your report to the user if there is no record.
+3. **Uncommitted changes you made in this session:** commit them first, as
+   `Checkpoint before <label>` with the message body of §4.3, and record the hash.
+4. **Uncommitted or untracked changes you did not make:** they are the user's. Do not fold them into
+   your checkpoint and do not discard them. Stop and ask the user whether to commit them first.
+5. **Files outside the repository** (for example the outlines on the Desktop): git cannot back them
+   up. Copy them into a **new** folder `backups/YYYY-MM-DD-<label>/`, never into an existing one
+   (F33: that destroyed the only pre-T8 snapshot). Add a `README.md` listing each file with its
+   sha256, check the copies hash-equal, and commit the folder.
+
+### 4.3 Commits
+
+- **Stage explicit paths** (`git add main.ipynb appendix_E.ipynb decisions.md`). Never run
+  `git add -A` or `git add .` without reading `git status` first. Never commit credentials, tokens,
+  `.venv/`, or scratch files.
+- **One logical change per commit, and never half a coupling.** A commit that changes main's Code
+  Cell 2 also contains the E2 mirror (§2, item 1). A commit that changes code contains the
+  re-executed outputs of both notebooks, or its message says they were not re-executed. Do not
+  commit a state in which E3 fails unless the message says so.
+- **Notebook outputs are committed.** E3 reads them as evidence. Never add an output-stripping
+  filter (nbstripout or similar), and never clear outputs to shrink a diff.
+- **Message format:**
+
+  ```
+  <area>: <what changed, in one line>
+
+  Why: <decision, task, or finding IDs, e.g. A9, T3, F24; or "user request">
+  Verified: main 0 errors, 6 figures, 14/14; appendix_E 0 errors, 3 figures, E2 18/18, E3 PASS
+  ```
+
+  Write `Verified: not run` when nothing was executed. Add any attribution line your own harness
+  requires.
+- **Commit when a task closes**, after its verification, and record the hash on the task's line in
+  the change record.
+
+### 4.4 Remote
+
+- `origin` is the user's private GitHub repository. **Push only when the user asks.** Fetching is
+  always allowed.
+- **Never force-push.** If a push is rejected, stop and report it. Do not rebase, reset, or force
+  past the rejection.
+
+### 4.5 Operations that need the user's explicit approval in chat
+
+Each of these can destroy work that no commit holds, or rewrite history the remote already has:
+
+- `git reset --hard`, `git clean`, `git checkout -- <path>`, `git restore <path>` on a file with
+  uncommitted changes, `git stash drop` or `git stash clear`;
+- `git commit --amend`, `git rebase`, or any other rewrite of a commit that has been pushed;
+- `git push --force` in any form; deleting a branch or a tag;
+- changing `.gitignore` or `.gitattributes`.
+
+Reading history is always safe: `git log`, `git show <hash>:main.ipynb`, `git diff <hash> -- <path>`.
+To bring back an old version, first write it to a scratch location
+(`git show <hash>:main.ipynb > <scratch>/main.ipynb`), compare, and ask before replacing the working
+file.
+
+### 4.6 Notebook diffs with nbdime
+
+nbdime (4.0.4, installed in `.venv`) is git's diff and merge driver for `*.ipynb`, through
+`.gitattributes`. Git calls it by name, so **`.venv/bin` must be on the PATH**. Checked 2026-09-13:
+without it, `git diff` on a notebook stops with `external diff died` (exit 128).
+
+- Cell-by-cell diff: `PATH="$PWD/.venv/bin:$PATH" git diff -- main.ipynb`, or activate the
+  environment first with `source .venv/bin/activate`.
+- Raw JSON diff, bypassing nbdime: `git diff --no-ext-diff -- main.ipynb`.
+- `git diff --stat` works either way. Merges of notebooks need the same PATH.
+
+### 4.7 `backups/`
+
+The folder snapshots taken before the project was under git. They are history: never modify, move,
+or delete them. New folder backups are made only under §4.2, step 5.
 
 ---
 
@@ -273,7 +347,8 @@ pattern of `theta_u_learned_reach.md`:
 
 1. the user's instructions, verbatim;
 2. the decisions the change rests on, with pointers into `decisions.md`;
-3. tasks **in order**, backup first, each closed as `[x] Tn (date): what changed; acceptance result`;
+3. tasks **in order**, the checkpoint first (§4.2, hash recorded), each closed as
+   `[x] Tn (date): what changed; acceptance result; commit hash`;
 4. a findings log, written the moment something unexpected appears, before moving on;
 5. only after the code tasks close, the list of prose sites that must change, written against the
    executed outputs.
@@ -312,7 +387,8 @@ Stop, report, and wait when:
 - [ ] Read this file, `decisions.md`, and the relevant change record.
 - [ ] Confirm the files named in §1 exist and the cell map still holds (count cells, check headers).
 - [ ] Read the composition guide if prose will be touched.
-- [ ] Back up (§4) before the first high-risk edit.
+- [ ] `git status`: the tree is clean, or every uncommitted change is accounted for (§4.2).
+- [ ] Checkpoint (§4.2) before the first high-risk edit.
 
 **Before closing any change**
 
@@ -324,3 +400,5 @@ Stop, report, and wait when:
 - [ ] Every number the prose quotes is printed by a cell or a recorded script (§3.3).
 - [ ] Anchors, ToC, equation numbers, and references cell consistent (§2).
 - [ ] Change record and `decisions.md` updated, so the next agent does not depend on your memory.
+- [ ] Committed under §4.3: explicit paths, the IDs and a verification line in the message, the hash
+      in the change record. Pushed only if the user asked (§4.4).
