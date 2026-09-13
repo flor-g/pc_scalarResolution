@@ -25,7 +25,7 @@ Working record for two findings of `decisions.md` register E, on the pattern of
 - **DEC2 (user).** Every number the prose quotes is computed by an explicit script and printed in a
   code cell. This replaces the earlier allowance for a script recorded only in a change record
   (I8).
-- **DEC3 (agent, pending user confirmation).** Placement: numbers quoted in Text cells 4 and 5 are
+- **DEC3 (agent, confirmed by user 2026-09-13).** Placement: numbers quoted in Text cells 4 and 5 are
   printed by Code Cells 2 and 3; each of Appendices A–D gets its own code cell directly after it
   (Code Cells A–D); numbers quoted in Appendix E.1 are printed by a new Code Cell E4.
 

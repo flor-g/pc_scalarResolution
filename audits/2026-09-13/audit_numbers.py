@@ -1,7 +1,7 @@
 """Audit helper: (1) every constant/default in the code cells; (2) every number quoted in prose vs stored outputs."""
 import ast, glob, json, os, re, sys
 C = sys.argv[1]; OUT = sys.argv[2]
-REACH = "theta_u_learned_reach.md"
+REACH = "procedure_records/theta_u_learned_reach.md"
 
 # ---------- (1) constants and defaults ----------
 with open(f"{OUT}/constants.txt", "w") as fh:

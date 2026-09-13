@@ -4,7 +4,7 @@ The record of architectural, evaluation, and implementation decisions for `main.
 `appendix_E.ipynb`, with who made each and why. Procedures for adding to it are in `agent.md` §3.
 
 > **Seeded 2026-09-13 from earlier working records** (agent memory files and
-> `theta_u_learned_reach.md`), condensed. Equation numbers follow the 2026-09-09 numbering. Numbers
+> `procedure_records/theta_u_learned_reach.md`, abbreviated reach.md below), condensed. Equation numbers follow the 2026-09-09 numbering. Numbers
 > quoted here are for orientation: verify against the executed notebook before citing one.
 > Where the records do not say who made a decision, **Decided by** reads `not recorded`; the user
 > may wish to fill these in. Registers D and E were audited on 2026-09-13; their verdicts are
@@ -133,7 +133,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: see I1 for how θ\* is obtained.
 - Bogacz status: see D2.
 - Depends on it: every reported result.
-- Evidence: `theta_u_learned_reach.md` §1, T0-T11.
+- Evidence: `procedure_records/theta_u_learned_reach.md` §1, T0-T11.
 
 ### A10. The θ_u flow starts at θ_u(0) = 0
 - Status: Settled; supersedes readings (a) +1 and (b) ±1 on θ\*'s side
@@ -234,7 +234,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Status: Settled
 - Decided by: user (2026-09-11, D2)
 - Decision: each retained fixed-θ control states its justification in the prose. The list is
-  `theta_u_learned_reach.md` §5.C. θ_u = 1 is no longer the start, so that cannot be a control's
+  `procedure_records/theta_u_learned_reach.md` §5.C. θ_u = 1 is no longer the start, so that cannot be a control's
   justification.
 
 ### B5. Text cell 5 Part B keeps its θ_u = 1 table and adds a learned table
@@ -334,7 +334,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### I8. Appendix C and D numbers come from a recorded script, not a cell
 - Status: Superseded by C6 and I10 (2026-09-13)
-- Decided by: T5.1 decision in `theta_u_learned_reach.md`; who made it not recorded
+- Decided by: T5.1 decision in `procedure_records/theta_u_learned_reach.md`; who made it not recorded
 - The script is recorded verbatim in reach.md §7.1, and covers Appendix C §6 and Appendix D §1
   only. See E7.
 
@@ -352,7 +352,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### I10. Where the numbers of C6 are printed
 - Status: Settled
-- Decided by: **agent, pending user confirmation** (2026-09-13, `e4_e7_sourcing.md` DEC3)
+- Decided by: agent, confirmed by user (2026-09-13); proposed as DEC3 of `procedure_records/e4_e7_sourcing.md`
 - Decision: numbers quoted in Text cells 4 and 5 are printed by Code Cells 2 and 3, inside the
   functions whose output they belong to. Each of Appendices A–D is followed by its own code cell
   (Code Cells A–D; Code Cell A also prints Text cell 3 §2's numbers about g_y). Numbers Appendix
@@ -388,7 +388,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### O5. Appendix B's sign sentence
 - Status: **Settled** (user, 2026-09-13; record `procedure_records/o5_o6_resolution.md`). Opened
-  2026-09-13 from `e4_e7_sourcing.md` F2.
+  2026-09-13 from `procedure_records/e4_e7_sourcing.md` F2.
 - Decision: the counterfactual is both signs reversed, c_y → −c_y, maximizer +28.4375. Appendix B now
   reads "were both signs reversed the maximizer would be +28.437".
 - Appendix B says that "were the two signs reversed the maximizer would be +22.578". Code Cell B
@@ -398,7 +398,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### O6. Does a relay as fast as the error units keep F monotone?
 - Status: **Settled for now** (user, 2026-09-13; record `procedure_records/o5_o6_resolution.md`).
-  Opened 2026-09-13 from `e4_e7_sourcing.md` F8.
+  Opened 2026-09-13 from `procedure_records/e4_e7_sourcing.md` F8.
 - Decision: Eq. (E6) keeps τ_r ≤ τ_ε, and E.1 states the exception: at equality F is monotone under
   *some* only. E.1 also states what a strict bound would require: the largest τ_r/τ_ε at which no
   step of F decreases under any utterance, measured at every θ_u and prior claimed, with the bound
@@ -529,7 +529,7 @@ becomes live if a later phase unfixes σ.
 Every default, module constant and numeric literal in Code Cells 1–4 and E1–E3 was listed and
 classed (`constants.txt`). Every number quoted in the markdown was matched against the stored
 outputs of both notebooks (`prose_numbers.txt`): of 373, 273 match a stored output, 53 appear only
-in `theta_u_learned_reach.md`, and 47 in neither. Setting aside section numbers and coordinate
+in `procedure_records/theta_u_learned_reach.md`, and 47 in neither. Setting aside section numbers and coordinate
 pairs the matcher misread, 86 have no printed source. The matcher checks value and not provenance,
 so a number with few significant figures can match by coincidence.
 
@@ -570,7 +570,7 @@ rises still holds, in that metric. Stating D6 repairs both E1 and E2.
 
 What these sentences use the value for, that it is nonzero, is unaffected.
 
-**E4. "The elicited prior".** Class (e). **Resolved 2026-09-13** (A15, `e4_e7_sourcing.md`):
+**E4. "The elicited prior".** Class (e). **Resolved 2026-09-13** (A15, `procedure_records/e4_e7_sourcing.md`):
 reworded at every site, and Text cell 3 §3.4 now gives the user's reason for a Gaussian default.
 The finding as audited: The Gaussian of mean 0 and
 precision 1 in ζ is called elicited in Text cell 3 (the inventory's "fixed (elicited)", and §3.4),
@@ -599,7 +599,7 @@ quantities. The window's comment ("from 1e6 down to 1e3 times the settling toler
   σ at the floor of 1.
 
 **E7. Prose numbers printed by no cell and no recorded script.** **Resolved 2026-09-13** (C6, I10,
-`e4_e7_sourcing.md`): every number below is now printed by a code cell. A re-run of the audit
+`procedure_records/e4_e7_sourcing.md`): every number below is now printed by a code cell. A re-run of the audit
 over 365 quoted numbers finds none unsourced; its 9 unmatched are section numbers and coordinate
 pairs (`audits/2026-09-13/after_e7/`). Recomputing them corrected several quoted values (F1, F3–F7,
 F9 there) and raised F2 and F8, now O5 and O6. The finding as audited: class (e) until sourced. ★ marks
