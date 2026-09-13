@@ -32,7 +32,7 @@ Record format: `[x] Tn (date): what changed; acceptance result; commit`.
   run raises). Notebooks not re-executed.
 - [x] T2 (2026-09-13): prose, applied by a script requiring each edit to land exactly once.
   Acceptance: every edit landed once; both notebooks validate.
-- [x] T3 (2026-09-13): `decisions.md`: O5 and O6 settled by the user; a dated finding under A11.
+- [x] T3 (2026-09-13): `decisions.md`: O5 and O6 settled by the user; a dated finding under A11; commit 235cb59 (T1-T3).
 
 ## 3. Findings
 
