@@ -40,10 +40,12 @@ Answers to the agent's questions (verbatim):
   of φ_S\* under *some*.
 - **DEC3 (user).** Framing sites only: Eq. (12)'s paragraph, the Reporting statistics opening, the
   q_lit naming; the Part C/D verdicts stay in q with one sentence on their status.
-- **DEC4 (agent, pending user confirmation).** C6 requires the ℓ₀ peaks and the boundary check the
+- **DEC4 (agent, confirmed by user 2026-09-13).** C6 requires the ℓ₀ peaks and the boundary check the
   note quotes to be printed; they print as two blocks below the table, which stays as given.
-- **DEC5 (agent, pending user confirmation).** q_lit's "untempered literal posterior" becomes
-  "untempered literal listener".
+- **DEC5 (agent, confirmed by user 2026-09-13).** q_lit's "untempered literal posterior" becomes
+  "untempered literal listener". The user added (verbatim): "clarify at first mention that what
+  "literal" denotes here is distinct from what "literal" denotes in RSA and Gricean literature. Just
+  one sentence and no further explanation is needed on how our denotation is distinct."
 
 ## 2. Tasks
 
@@ -66,6 +68,10 @@ Record format: `[x] Tn (date): what changed; acceptance result; commit`.
 - [x] T4 (2026-09-13): `decisions.md`: A13 status, A16 and B7 added, dated findings under B1 and C3,
   D9 resolved and its register row. `agent.md`: §2 item 7 (E3 replay), §5.1 baseline.
 - [x] T5 (2026-09-13): committed T1-T4 as cb8cc6a, by explicit paths; `thesis_outline/` left staged.
+- [x] T6 (2026-09-13): DEC4 and DEC5 confirmed. Text cell 3 §7, at the first mention of *literal*:
+  one sentence that its denotation here is distinct from RSA's (Frank & Goodman, 2012) and the
+  Gricean literature's (Grice, 1975); both works already in the references. Markdown only, not
+  re-executed; committed with this line.
 
 ## 3. Findings
 

@@ -268,8 +268,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### B7. Part D reports the delta read-out beside the q figures
 - Status: Settled
-- Decided by: user (2026-09-13); the two print blocks under the table are agent, pending user
-  confirmation (`d9_delta_readout.md` DEC4)
+- Decided by: user (2026-09-13); the two print blocks under the table proposed by the agent
+  (`d9_delta_readout.md` DEC4), confirmed by the user 2026-09-13
 - Decision: after its figures Code Cell 2 prints, per Part D prior and utterance at θ_u\*, φ_u\*, the
   peak of φ_S\* in s (the grid node where φ_S\* is largest), its maximum and minimum, and the
   all-region q-mass for comparison; the delta-like row is repeated at the realizable θ_u, integrated.
@@ -301,8 +301,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - q_lit: θ_u = 0 and σ_S → ∞, field ℓ₀ − φ_L. Tempered control: θ_u = 0 at the model's σ, field
   ½(ℓ₀ − φ_L), the model's start. The model: θ\*. Never "the control" unqualified.
 - Findings added later: 2026-09-13, q_lit is "the untempered literal listener" where the prose
-  called it "the untempered literal posterior" (A16; wording agent, pending user confirmation,
-  `d9_delta_readout.md` DEC5).
+  called it "the untempered literal posterior" (A16; wording proposed as `d9_delta_readout.md` DEC5,
+  confirmed by the user 2026-09-13). At the first mention of *literal* the prose states, in one
+  sentence and without further explanation, that what it denotes here is distinct from what it
+  denotes in the RSA and Gricean literature (user, 2026-09-13).
 
 ### C4. Naming
 - Decided by: not recorded (settled 2026-09-07)
