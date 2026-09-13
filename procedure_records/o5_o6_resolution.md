@@ -31,7 +31,8 @@ Record format: `[x] Tn (date): what changed; acceptance result; commit`.
   refused. Acceptance: the cell parses; no stored output can change (a comment, and a message no
   run raises). Notebooks not re-executed.
 - [x] T2 (2026-09-13): prose, applied by a script requiring each edit to land exactly once.
-  Acceptance: every edit landed once; both notebooks validate.
+  Acceptance: every edit landed once; both notebooks load as JSON (strict validation already fails
+  at b1236f2, F4).
 - [x] T3 (2026-09-13): `decisions.md`: O5 and O6 settled by the user; a dated finding under A11; commit 235cb59 (T1-T3).
 
 ## 3. Findings
