@@ -34,7 +34,7 @@ into a project file (`decisions.md`, the change record, this file), never only i
 repository as remote `origin` (`https://github.com/flor-g/pc_scalarResolution.git`). The first
 commit is 499918c (2026-09-13). Procedures are in §4.
 
-### `main.ipynb`, by cell index (17 cells)
+### `main.ipynb`, by cell index (21 cells)
 
 | Index | Cell | Holds |
 |---|---|---|
@@ -48,14 +48,16 @@ commit is 499918c (2026-09-13). Procedures are in §4.
 | 9 | Code Cell 3 | Probes reported in Text cell 5. |
 | 10 | Text cell 6 | The Λ×α sweep. |
 | 11 | Code Cell 4 | The sweep. |
-| 12-15 | Appendices A-D | θ_L and g_y; θ\*, locality, alternatives; how many utility directions; why emission is exclusion. |
-| 16 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
+| 12, 14, 16, 18 | Appendices A-D | θ_L and g_y; θ\*, locality, alternatives; how many utility directions; why emission is exclusion. |
+| 13, 15, 17, 19 | Code Cells A-D | Each prints the numbers the appendix above it quotes; Code Cell A also prints Text cell 3 §2's (decision I10). |
+| 20 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
 
-### `appendix_E.ipynb` (8 cells)
+### `appendix_E.ipynb` (9 cells)
 
 Intro, E.1 equations (E1-E6), **Code Cell E1** (architecture with the relay), **Code Cell E2** (main's
 Code Cell 2 plus four checks), **Code Cell E3** (diffs E2's output against main's stored output),
-E.2 commitments, E.3 claims in main restated, references.
+**Code Cell E4** (the numbers E.1 quotes that E2 does not print), E.2 commitments, E.3 claims in
+main restated, references.
 
 ### Outside this folder
 
@@ -189,9 +191,9 @@ or use as a default, and to every number the prose quotes.
 
 **Rules.**
 
-- **Every number quoted in prose is printed by a cell**, or else by a script recorded verbatim in a
-  change record, with the prose site listed there. Numbers computed off-notebook and typed in are
-  class (e) until one of those holds.
+- **Every number quoted in prose is computed by explicit code and printed by a code cell**
+  (decision C6). A number computed off-notebook, or only by a script in a change record, is class
+  (e) until a cell prints it.
 - **Three objects must never be conflated, in code names, labels, or prose:** q_lit, the literal
   listener (θ_u = 0 **and** σ_S → ∞, field ℓ₀ − φ_L); the tempered control (θ_u = 0 at the model's σ,
   field ½(ℓ₀ − φ_L), which is also the model's start); and the model (learned θ\*). "The control"
@@ -327,8 +329,9 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
 
 - Use `.venv/bin/python`. **Never pipe the runner to `tail` or `head`**: the pipeline reports their
   exit status, so a failed run looks like success. Read the runner's own `RUNNER OK` line.
-- **Baseline as of 2026-09-13:** `main.ipynb` 0 errors, 6 figures, 14/14 specification checks,
-  about 225 s; `appendix_E.ipynb` 0 errors, 3 figures, E2 18/18, E3 PASS, about 560 s. Any departure
+- **Baseline as of 2026-09-13, after E4/E7:** `main.ipynb` 0 errors, 6 figures, 14/14
+  specification checks, about 240 s; `appendix_E.ipynb` 0 errors, 3 figures, E2 18/18, E3 PASS
+  (221 lines identical), about 660 s. Any departure
   from this is a finding, reported with the output, not explained away.
 - Report what was run and what it returned. If a step was skipped, say so.
 

@@ -1,0 +1,197 @@
+===== m05.py
+  L  20 def build_grid: num_nodes=101
+  L  20 def build_grid: half_width=6.0
+  L  20 def build_grid: dtype=DTYPE
+  L  20 def build_grid: device=None
+  L  48 def exclusion_indicator: sharpness=None
+  L  90 def gaussian_world_prior: mean=0.0
+  L  90 def gaussian_world_prior: precision=1.0
+  L 176 def __init__: num_nodes=101
+  L 176 def __init__: grid_half_width=6.0
+  L 176 def __init__: base_prior=None
+  L 176 def __init__: prior_mean=0.0
+  L 176 def __init__: prior_precision=1.0
+  L 176 def __init__: theta_L=None
+  L 176 def __init__: num_atoms=10
+  L 176 def __init__: lexical_strength=8.0
+  L 176 def __init__: mu_u=1.0
+  L 176 def __init__: theta_u='learned'
+  L 176 def __init__: theta_u_initial=0.0
+  L 176 def __init__: basis_degree=2
+  L 176 def __init__: sigma_lexical=1.0
+  L 176 def __init__: sigma_state=1.0
+  L 176 def __init__: sigma_utility=1.0
+  L 176 def __init__: exclusion_sharpness=None
+  L 176 def __init__: device=None
+  L 422 def predict_state: theta_u=None
+  L 431 def residuals: theta_u=None
+  L 439 def free_energy: theta_u=None
+  L 468 def closed_form_fixed_point: theta_u=None
+  L 539 def theta_u_stationary_points: utterances=None
+  L 586 def learned_theta_u: utterances=None
+  L 592 def hessian_quadratic_form: theta_u=None
+  L 610 def stiffest_state_rate: theta_u=None
+  L 633 def fast_time_constant: theta_u=None
+  L 633 def fast_time_constant: tau_state=1.0
+  L 652 def infer: dt=None
+  L 652 def infer: tau_error=None
+  L 652 def infer: tau_state=1.0
+  L 652 def infer: max_steps=None
+  L 652 def infer: max_time=1000.0
+  L 652 def infer: derivative_tolerance=1e-09
+  L 652 def infer: patience=10
+  L 652 def infer: record_history=True
+  L 652 def infer: theta_u=None
+  L 823 def learn_theta_u: tau_theta=20.0
+  L 823 def learn_theta_u: num_updates=50
+  L 823 def learn_theta_u: tau_state=1.0
+  L 823 def learn_theta_u: theta_u_initial=None
+  L  13 MODULE DTYPE = torch.float64
+  L  15 MODULE UTTERANCES = ['no', 'some', 'all']
+  L 149 MODULE BASE_WORLD_PRIORS = {'gaussian': gaussian_world_prior(0.0, 1.0), 'flat': uniform_world_prior(), 'skewed low': 
+  numeric literals: 101@20,179; 6.0@20,180; 10@185,662; 8.0@186; 1e-12@289,698; 1e-10@561; 4.0@649,578; 1000.0@660; 1e-09@661; 20.0@827; 50@828
+===== m07.py
+  L  38 def settle: theta_u=None
+  L  59 def check_specification: seed=0
+  L 453 def lexical_strength_sweep: strengths=(1, 2, 4, 8, 16, 32, 64)
+  L 564 def theta_u_learning_probe: tau_theta=20.0
+  L 564 def theta_u_learning_probe: num_updates=60
+  L 773 def base_prior_sweep: priors=None
+  L1089 def criterion_for_some: theta_u=None
+  L1089 def criterion_for_some: belief=None
+  L1107 def criterion_threshold: bisections=60
+  L1107 def criterion_threshold: ray_checks=200
+  L1155 def updates_to_criterion: tau_theta=20.0
+  L1155 def updates_to_criterion: tau_state=1.0
+  L1155 def updates_to_criterion: max_updates=60
+  L1172 def realizability_report: priors=None
+  L1172 def realizability_report: tau_theta=20.0
+  L  29 MODULE FEASIBLE_STIFFNESS = 1000.0
+  L 756 MODULE DELTA_ALL_ALPHA = 64.0
+  L 757 MODULE DELTA_ALL_LAMBDA = 8.0 * DELTA_ALL_ALPHA
+  L1331 MODULE evaluation_network = LexicalPredictiveCodingNetwork()
+  L1334 MODULE demonstration = demonstrate(evaluation_network)
+  L1336 MODULE implicature = scalar_implicature_probe(evaluation_network)
+  L1339 MODULE prior_rows = base_prior_sweep(evaluation_network)
+  L1340 MODULE realizability = realizability_report(evaluation_network)
+  numeric literals: 1000.0@29,1042,1041,164; 1e-08@112,116,119,384,333,1042; 1e-09@122,230,204,220,367,587; 1e-10@127,164,164; 50.0@135,1198,135; 400@136; 1e-05@176; 0.3@187,188; 1e-06@190,344; 17@194; 0.0001@233,1446; 51@255,258; 101@255; 201@255; 401@255,258,259,260; 801@255,259,260; 0.1@257,1042,1041; 0.005@262; 0.001@322,607; 1000000.0@322,1297,164; 120@323; 100000000.0@337; 25@357; 46@390,393; 4@453,1220,1302; 8@453,1375,1406,1450; 16@453; 32@453; 64@453; 1e-12@478; 20.0@564,1155,1172,357; 60@564,1107,1155; 5.0@713; 100.0@713,1042,1041; 64.0@756; 8.0@757; 10000000.0@1042,1041; 7@1046,1046; 200@1107; 10.0@1198,713,1042,1041; 600@1301; 3600@1301; 4000@1314; 2000@1315; 13@1363,1436; 3.6@1363,1436; 0.12@1371,1402,1444; 10@1378,1412,1458; 3.4@1393,1393; 9@1403,1447; 100@1457,1458,981
+===== m09.py
+  L  97 def mu_u_probe: settings=None
+  L  97 def mu_u_probe: theta_u=1.0
+  L 271 def mu_u_scale_probe: theta_u=1.0
+  L 327 def mu_u_sign_probe: magnitudes=(0.25, 0.5, 1.0, 2.0)
+  L 327 def mu_u_sign_probe: theta_u=1.0
+  L 430 def mu_u_plane_probe: radii=(0.25, 0.5, 1.0, 2.0, 4.0)
+  L 430 def mu_u_plane_probe: sectors=12
+  L 264 MODULE basis_rows = basis_parity_probe(evaluation_network)
+  numeric literals: 0.3@40; 9@79; 4@172,172,87; 0.2@243; 0.25@327,430; 12@430; 4.0@430,472; 180.0@455,563,564,471; 360.0@465; 0.7@472; 1e-09@499,71,47,72; 180@520,545; 20@545
+===== m11.py
+  L  30 def lambda_alpha_sweep: alphas=None
+  L  30 def lambda_alpha_sweep: lambdas=None
+  L  30 def lambda_alpha_sweep: verify_samples=6
+  L 429 def mu_u_sensitivity: cells=((1.0, 8.0), (16.0, 128.0))
+  L 490 def override_threshold: alpha=1024.0
+  L 490 def override_threshold: boundaries=(1.0, 2.0, 3.0)
+  L 350 def draw: norm=None
+  L 350 def draw: vmin=None
+  L 350 def draw: vmax=None
+  L 350 def draw: title=''
+  L 516 def critical: mu=None
+  L 426 MODULE MU_SENSITIVITY = ([1.0, 1.0], [0.05, 0.05], [5.0, 5.0], [-1.0, -1.0], [1.0, 2.0])
+  L 620 MODULE sweep_grids = lambda_alpha_sweep(evaluation_network)
+  L 621 MODULE plane_numbers = plane_summary(sweep_grids)
+  L 622 MODULE mu_sensitivity = mu_u_sensitivity(evaluation_network)
+  numeric literals: 6@35; 11@58; 12@59; 1e-12@192; 0.01@240; 8.0@305,429,306; 256.0@310; 64.0@318,318,310; 512.0@321; 2048.0@321; 6.5@356,358; 9@359; 11.5@367; 4.9@367,380,397; 8@371,390,414,360; 0.055@372,384,388,404,412; 0.02@372,384,388,404,412; 10@376,393,420; 4@380,397; 14.5@380,397; 0.05@426,426,603,603; 5.0@426,426,603,603; 16.0@429; 128.0@429; 1024.0@490,321,310; 0.001@533,221,239; 10000000.0@533; 90@534,356; 10.0@593; 100.0@593; 10000.0@593
+===== e02.py
+  L  33 def build_grid: num_nodes=101
+  L  33 def build_grid: half_width=6.0
+  L  33 def build_grid: dtype=DTYPE
+  L  33 def build_grid: device=None
+  L  61 def exclusion_indicator: sharpness=None
+  L 103 def gaussian_world_prior: mean=0.0
+  L 103 def gaussian_world_prior: precision=1.0
+  L 189 def __init__: num_nodes=101
+  L 189 def __init__: grid_half_width=6.0
+  L 189 def __init__: base_prior=None
+  L 189 def __init__: prior_mean=0.0
+  L 189 def __init__: prior_precision=1.0
+  L 189 def __init__: theta_L=None
+  L 189 def __init__: num_atoms=10
+  L 189 def __init__: lexical_strength=8.0
+  L 189 def __init__: mu_u=1.0
+  L 189 def __init__: theta_u='learned'
+  L 189 def __init__: theta_u_initial=0.0
+  L 189 def __init__: basis_degree=2
+  L 189 def __init__: sigma_lexical=1.0
+  L 189 def __init__: sigma_state=1.0
+  L 189 def __init__: sigma_utility=1.0
+  L 189 def __init__: exclusion_sharpness=None
+  L 189 def __init__: device=None
+  L 452 def predict_state: theta_u=None
+  L 452 def predict_state: relay=None
+  L 467 def residuals: theta_u=None
+  L 467 def residuals: relay=None
+  L 475 def free_energy: theta_u=None
+  L 475 def free_energy: relay=None
+  L 504 def closed_form_fixed_point: theta_u=None
+  L 575 def theta_u_stationary_points: utterances=None
+  L 622 def learned_theta_u: utterances=None
+  L 628 def hessian_quadratic_form: theta_u=None
+  L 646 def stiffest_state_rate: theta_u=None
+  L 669 def fast_time_constant: theta_u=None
+  L 669 def fast_time_constant: tau_state=1.0
+  L 687 def relay_loop_abscissa: tau_state=1.0
+  L 721 def infer: dt=None
+  L 721 def infer: tau_error=None
+  L 721 def infer: tau_state=1.0
+  L 721 def infer: tau_relay=None
+  L 721 def infer: max_steps=None
+  L 721 def infer: max_time=1000.0
+  L 721 def infer: derivative_tolerance=1e-09
+  L 721 def infer: patience=10
+  L 721 def infer: record_history=True
+  L 721 def infer: theta_u=None
+  L 968 def learn_theta_u: tau_theta=20.0
+  L 968 def learn_theta_u: num_updates=50
+  L 968 def learn_theta_u: tau_state=1.0
+  L 968 def learn_theta_u: theta_u_initial=None
+  L  26 MODULE DTYPE = torch.float64
+  L  28 MODULE UTTERANCES = ['no', 'some', 'all']
+  L 162 MODULE BASE_WORLD_PRIORS = {'gaussian': gaussian_world_prior(0.0, 1.0), 'flat': uniform_world_prior(), 'skewed low': 
+  numeric literals: 101@33,192; 6.0@33,193; 10@198,732; 8.0@199; 1e-12@303,790; 1e-10@597; 4.0@685,614; 1000.0@730; 1e-09@731; 20.0@972; 50@973
+===== e03.py
+  L  47 def settle: theta_u=None
+  L  68 def check_specification: seed=0
+  L 560 def lexical_strength_sweep: strengths=(1, 2, 4, 8, 16, 32, 64)
+  L 671 def theta_u_learning_probe: tau_theta=20.0
+  L 671 def theta_u_learning_probe: num_updates=60
+  L 880 def base_prior_sweep: priors=None
+  L1196 def criterion_for_some: theta_u=None
+  L1196 def criterion_for_some: belief=None
+  L1214 def criterion_threshold: bisections=60
+  L1214 def criterion_threshold: ray_checks=200
+  L1262 def updates_to_criterion: tau_theta=20.0
+  L1262 def updates_to_criterion: tau_state=1.0
+  L1262 def updates_to_criterion: max_updates=60
+  L1279 def realizability_report: priors=None
+  L1279 def realizability_report: tau_theta=20.0
+  L  38 MODULE FEASIBLE_STIFFNESS = 1000.0
+  L 863 MODULE DELTA_ALL_ALPHA = 64.0
+  L 864 MODULE DELTA_ALL_LAMBDA = 8.0 * DELTA_ALL_ALPHA
+  L1438 MODULE evaluation_network = LexicalPredictiveCodingNetwork()
+  L1441 MODULE demonstration = demonstrate(evaluation_network)
+  L1443 MODULE implicature = scalar_implicature_probe(evaluation_network)
+  L1446 MODULE prior_rows = base_prior_sweep(evaluation_network)
+  L1447 MODULE realizability = realizability_report(evaluation_network)
+  numeric literals: 1000.0@38,1149,1148,271; 1e-08@121,125,128,491,440,1149; 1e-09@131,192,214,337,192,311; 1e-10@136,271,271; 1e-12@161,214,585; 40.0@222; 80.0@222; 1.03@228; 50.0@242,1305,242; 400@243; 1e-05@283; 0.3@294,295; 1e-06@297,451; 17@301; 0.0001@340,1553; 51@362,365; 101@362; 201@362; 401@362,365,366,367; 801@362,366,367; 0.1@364,225,1149,1148; 0.005@369; 0.001@429,165,714; 1000000.0@429,1404,271; 120@430; 100000000.0@444; 25@464; 46@497,500; 4@560,1327,1409; 8@560,1482,1513,1557; 16@560; 32@560; 64@560; 20.0@671,1262,1279,222,464; 60@671,1214,1262,217; 5.0@820; 100.0@820,1149,1148; 64.0@863; 8.0@864; 10000000.0@1149,1148; 7@1153,1153; 200@1214; 10.0@1305,820,1149,1148; 600@1408; 3600@1408; 4000@1421; 2000@1422; 13@1470,1543; 3.6@1470,1543; 0.12@1478,1509,1551; 10@1485,1519,1565; 3.4@1500,1500; 9@1510,1554; 100@1564,1565,1088
+===== e04.py
+  L  23 MODULE transcript = io.StringIO()
+  L  46 MODULE BASELINE = pathlib.Path('main.ipynb')
+  L  53 MODULE baseline_cell = next((cell for cell in json.load(BASELINE.open())['cells'] if cell['cell_type'] == 'code' 
+  L  58 MODULE baseline = normalize(''.join((''.join(output.get('text', [])) for output in baseline_cell['outputs'] 
+  L  65 MODULE current = normalize(transcript.getvalue())
+  L  78 MODULE unchanged = len(baseline) - len(deleted) - len(replaced)
+  L 109 MODULE recorded = next((int(match.group(1)) for line in baseline if (match := re.fullmatch('(\\d+)/\\1 passe
+  L 114 MODULE expected_change = recorded is not None and len(replaced) == 1 and (replaced[0][0] == f'{recorded}/{recorded}
+  L 120 MODULE verdict = not deleted and expected_change and (len(inserted) == 4) and all((line.startswith('PASS') 
+  numeric literals: 78@81,87,128,137; 4@123,118,118

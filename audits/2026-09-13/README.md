@@ -16,3 +16,10 @@ Run from the project folder, with OUT any scratch directory:
 .venv/bin/python audits/2026-09-13/audit_numbers.py OUT audits/2026-09-13
 .venv/bin/python audits/2026-09-13/verify_audit.py OUT/m05.py
 ```
+
+## Second run, after E4 and E7
+
+`after_e7/` holds `audit_numbers.py` re-run on the notebooks after `e4_e7_sourcing.md` T4. Before
+that run the script was changed to skip the table of contents and the reference lists by their
+content rather than by cell index, since the new Code Cells A–D renumbered the cells. The first
+run's output above predates that change and is kept as it was.

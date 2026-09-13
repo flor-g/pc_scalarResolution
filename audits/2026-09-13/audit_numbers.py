@@ -62,8 +62,10 @@ tok_re = re.compile(r"(\d+(?:\.\d+)?)\s*\\times\s*10\^\{?(-?\d+)\}?|(?<![\w.$\\{
 rows = []; tally = {}
 for f in sorted(glob.glob(f"{C}/m*.md")) + sorted(glob.glob(f"{C}/e*.md")):
     name = os.path.basename(f)
-    if name in ("m00.md", "m16.md", "e07.md"): continue  # ToC, references
     text = open(f).read()
+    # the table of contents and the reference lists carry section numbers and DOIs, not results
+    if 'id="toc"' in text or 'id="references"' in text or text.startswith("## References"):
+        continue
     for m in tok_re.finditer(text):
         pre = text[max(0, m.start() - 14):m.start()]
         if skip_ctx.search(pre): continue

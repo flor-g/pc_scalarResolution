@@ -177,6 +177,20 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   takes no part in the dynamics or in Eq. (20).
 - Bogacz status: divergence (interpretive), see D9.
 
+### A15. The default base world prior is N(0, 1) in ζ, and it is not elicited
+- Status: Settled; supersedes the description of the Gaussian as "the elicited prior" (E4)
+- Decided by: user (2026-09-13)
+- Decision: ℓ₀ is supplied by an elicited distribution where one is available, and need not be.
+  Without one, the default is the Gaussian of mean 0 and precision 1 in ζ. It is one of the five
+  base world priors the model is tested on (Part D).
+- Theoretical reason: the framework represents states with Gaussians (Bogacz Eqs. 3, 36, 52). ℓ₀
+  is not a state unit and need not be Gaussian by construction, but a Gaussian default is the choice
+  consistent with the framework's assumption. The reason for mean 0 and precision 1 is not recorded.
+- Implementational reason: `gaussian_world_prior(0.0, 1.0)` is what the constructor uses when no
+  `base_prior` is given.
+- Bogacz status: not an operation.
+- Depends on it: every result reported "under the default Gaussian prior".
+
 ### A14. Implicature through θ_u is conventionalized, not computed within the trial
 - Status: Settled
 - Decided by: not recorded (resolved 2026-09-07)
@@ -256,6 +270,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   Subscripts capitalize exactly when the level is field-valued (L, S; not y, u). κ_y = BᵀWφ_L is the
   lexical projection; c_y = BᵀW(ℓ₀ − φ_L) is Appendix B's.
 
+### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
+- Decided by: user (2026-09-13)
+- A number computed off-notebook, or only by a script recorded in a change record, does not count
+  as sourced. Supersedes the allowance of I8.
+
 ### C5. Reader-facing text
 - Decided by: not recorded (set 2026-09-07); punctuation 2026-09-08; spacing and numbering chosen by
   the user 2026-09-09
@@ -312,7 +331,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Coupling rules in `agent.md` §2.
 
 ### I8. Appendix C and D numbers come from a recorded script, not a cell
-- Status: Settled
+- Status: Superseded by C6 and I10 (2026-09-13)
 - Decided by: T5.1 decision in `theta_u_learned_reach.md`; who made it not recorded
 - The script is recorded verbatim in reach.md §7.1, and covers Appendix C §6 and Appendix D §1
   only. See E7.
@@ -328,6 +347,16 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   `verify_samples` = 6; `MU_SENSITIVITY`; the radii and sectors of the μ_u plane.
 - Evidence that results do not depend on the exact values: τ_θ sets the rate only (Eq. 20); for
   the rest, not recorded.
+
+### I10. Where the numbers of C6 are printed
+- Status: Settled
+- Decided by: **agent, pending user confirmation** (2026-09-13, `e4_e7_sourcing.md` DEC3)
+- Decision: numbers quoted in Text cells 4 and 5 are printed by Code Cells 2 and 3, inside the
+  functions whose output they belong to. Each of Appendices A–D is followed by its own code cell
+  (Code Cells A–D; Code Cell A also prints Text cell 3 §2's numbers about g_y). Numbers Appendix
+  E.1 quotes that E2 does not print are printed by Code Cell E4.
+- Implementational reason: additions to Code Cell 2 go inside existing functions, so Code Cell
+  E3's replay needs no new calls; each addition is mirrored into E2 verbatim.
 
 ---
 
@@ -354,6 +383,21 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Status: Open as of 2026-09-09; **verify whether still open**
 - The user reported mistyping them and supplied the reading; the corrected wording is the user's to
   restate.
+
+### O5. Appendix B's sign sentence
+- Status: Open (2026-09-13, `e4_e7_sourcing.md` F2); the user's, since the sentence carries the sign
+  argument
+- Appendix B says that "were the two signs reversed the maximizer would be +22.578". Code Cell B
+  prints: both signs reversed gives +28.4375 (the exact symmetry); ℓ₀'s sign reversed alone gives
+  +22.5779; φ_L's sign reversed alone (the coupling ℓ₀ + φ_L) gives −22.5779. The sentence is left as
+  written until the user restates what it should claim.
+
+### O6. Does a relay as fast as the error units keep F monotone?
+- Status: Open (2026-09-13, `e4_e7_sourcing.md` F8); the user's, since it bears on Eq. (E6)
+- Code Cell E4 prints, at the default θ\*: under *some* no step of F falls at τ_r = τ_ε; under *no*
+  and *all* three do (worst −2.9e-2). E.1 now reports both. Eq. (E6) states τ_r ≤ τ_ε, E.2 says a
+  relay at the error units' own speed suffices, and `infer` already requires τ_r < τ_ε strictly.
+  Options: keep ≤ and state the exception; make the bound strict; or read "monotone" to a tolerance.
 
 ---
 
@@ -516,7 +560,9 @@ rises still holds, in that metric. Stating D6 repairs both E1 and E2.
 
 What these sentences use the value for, that it is nonzero, is unaffected.
 
-**E4. "The elicited prior".** Class (e). **Flagged to the user.** The Gaussian of mean 0 and
+**E4. "The elicited prior".** Class (e). **Resolved 2026-09-13** (A15, `e4_e7_sourcing.md`):
+reworded at every site, and Text cell 3 §3.4 now gives the user's reason for a Gaussian default.
+The finding as audited: The Gaussian of mean 0 and
 precision 1 in ζ is called elicited in Text cell 3 (the inventory's "fixed (elicited)", and §3.4),
 in Text cell 4 Part C three times, in Appendix B, in the `gaussian_world_prior` docstring and in one
 printed line of Code Cell 2. No elicitation source for those values appears in either notebook, and
@@ -532,7 +578,7 @@ quantities. The window's comment ("from 1e6 down to 1e3 times the settling toler
 
 **E6. Stale numbers and quotations.** Class (e).
 - E.1, under Eq. (E4a): "Code Cell E2 measures the gap at 1.78e-14". The stored output reads
-  1.90e-15.
+  1.90e-15. Corrected 2026-09-13.
 - E.3 *Revised*, sixth row, quotes Text cell 3 §7: "The only departure from Eq. (25) is the
   contraction against b…". No such sentence remains in `main.ipynb`.
 - E.3 *Unaffected*: "every number in Code cells 9 and 10" uses the numbering before 2026-09-09;
@@ -542,7 +588,11 @@ quantities. The window's comment ("from 1e6 down to 1e3 times the settling toler
   weights. The pseudocode cell likewise sketches Σ-learning clamped at 1e-3, where the model fixes
   σ at the floor of 1.
 
-**E7. Prose numbers printed by no cell and no recorded script.** Class (e) until sourced. ★ marks
+**E7. Prose numbers printed by no cell and no recorded script.** **Resolved 2026-09-13** (C6, I10,
+`e4_e7_sourcing.md`): every number below is now printed by a code cell. A re-run of the audit
+over 365 quoted numbers finds none unsourced; its 9 unmatched are section numbers and coordinate
+pairs (`audits/2026-09-13/after_e7/`). Recomputing them corrected several quoted values (F1, F3–F7,
+F9 there) and raised F2 and F8, now O5 and O6. The finding as audited: class (e) until sourced. ★ marks
 the ones an argument rests on.
 - Text cell 3 §2: Gram rank 3, condition number 21.0, θ_L AWX = I₃ to 2.4e-15. A and g_y exist
   only in the prose.
