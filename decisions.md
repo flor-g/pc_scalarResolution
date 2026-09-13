@@ -167,6 +167,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: E3 verifies the two implementations print the same results.
 - Bogacz status: divergence, see D1 and D5.
 - Findings added later: under A11 the relay needs only τ_r ≤ τ_ε, for monotone F (F26, 2026-09-11).
+  2026-09-13: at τ_r = τ_ε F is monotone under *some* only; under *no* and *all* three steps fall
+  (Code Cell E4). Eq. (E6) keeps ≤ for stability, with the exception stated (O6).
 
 ### A13. The read-out is a softmax outside the dynamics
 - Status: Settled
@@ -385,15 +387,23 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   restate.
 
 ### O5. Appendix B's sign sentence
-- Status: Open (2026-09-13, `e4_e7_sourcing.md` F2); the user's, since the sentence carries the sign
-  argument
+- Status: **Settled** (user, 2026-09-13; record `procedure_records/o5_o6_resolution.md`). Opened
+  2026-09-13 from `e4_e7_sourcing.md` F2.
+- Decision: the counterfactual is both signs reversed, c_y → −c_y, maximizer +28.4375. Appendix B now
+  reads "were both signs reversed the maximizer would be +28.437".
 - Appendix B says that "were the two signs reversed the maximizer would be +22.578". Code Cell B
   prints: both signs reversed gives +28.4375 (the exact symmetry); ℓ₀'s sign reversed alone gives
   +22.5779; φ_L's sign reversed alone (the coupling ℓ₀ + φ_L) gives −22.5779. The sentence is left as
   written until the user restates what it should claim.
 
 ### O6. Does a relay as fast as the error units keep F monotone?
-- Status: Open (2026-09-13, `e4_e7_sourcing.md` F8); the user's, since it bears on Eq. (E6)
+- Status: **Settled for now** (user, 2026-09-13; record `procedure_records/o5_o6_resolution.md`).
+  Opened 2026-09-13 from `e4_e7_sourcing.md` F8.
+- Decision: Eq. (E6) keeps τ_r ≤ τ_ε, and E.1 states the exception: at equality F is monotone under
+  *some* only. E.1 also states what a strict bound would require: the largest τ_r/τ_ε at which no
+  step of F decreases under any utterance, measured at every θ_u and prior claimed, with the bound
+  placed at or below it (not measured). E.2 and E.3 now claim stability, not monotonicity, for a
+  relay at τ_ε. `infer` keeps its strict guard, with a comment on how it differs from Eq. (E6).
 - Code Cell E4 prints, at the default θ\*: under *some* no step of F falls at τ_r = τ_ε; under *no*
   and *all* three do (worst −2.9e-2). E.1 now reports both. Eq. (E6) states τ_r ≤ τ_ε, E.2 says a
   relay at the error units' own speed suffices, and `infer` already requires τ_r < τ_ε strictly.
