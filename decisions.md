@@ -171,7 +171,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   (Code Cell E4). Eq. (E6) keeps ≤ for stability, with the exception stated (O6).
 
 ### A13. The read-out is a softmax outside the dynamics
-- Status: Settled
+- Status: Settled; its standing as the reported belief is reframed by A16 (2026-09-13)
 - Decided by: not recorded
 - Decision: q = e^{φ_S}/Σ_j w_j e^{φ_S,j} (Eq. 12). E[s], sd, region masses and the leak are
   summaries of q, not model quantities.
@@ -206,6 +206,24 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ## B. Evaluation
 
+### A16. q is a comparison read-out; the construction's posterior is the delta at the settled state
+- Status: Settled; reframes A13 and resolves D9
+- Decided by: user (2026-09-13)
+- Decision: q (Eq. 12) is kept for comparison with the RSA literature, and nothing in the
+  architecture or the construction dictates it. The posterior native to the construction is
+  Bogacz's delta at the settled state (φ_S\*, φ_u\*). Part D reports it after the q figures (B7). The
+  framing sites of the prose say so (Text cell 3 §4 item 5, Text cell 4 Part C and Reporting
+  statistics); Parts C and D keep their verdicts in q, stated as conditions on the comparison
+  read-out.
+- Theoretical reason: the framework's approximate posterior is a delta distribution (Bogacz §3,
+  Eq. 34), and the foundational assumptions of standard RSA differ from the framework's, so q is a
+  convention of the literature compared with.
+- Implementational reason: none.
+- Bogacz status: the delta is an instance of his Eq. (34); q has no counterpart in the tutorial (D9).
+- Depends on it: Text cell 3 §4 item 5; Text cell 4 Part C, Part D, Reporting statistics;
+  `delta_readout_report` in Code Cell 2.
+- Evidence: `procedure_records/d9_delta_readout.md` F1-F4.
+
 ### B1. The shift Δ_y is measured against q_lit, the untempered literal posterior
 - Status: Settled; supersedes the θ_u = 0 control as baseline
 - Decided by: user (2026-09-09)
@@ -215,6 +233,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   tempering plus the utility level, and the tempering is often the larger part. Eq. (39), the
   differential, is the statistic that isolates θ_u.
 - Depends on it: Parts C and D, Text cell 6, the verdict.
+- Findings added later: 2026-09-13, the prose no longer calls q_lit a posterior (A16, C3).
 
 ### B2. The criterion is the conjunction of two conditions
 - Status: Settled
@@ -247,6 +266,22 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Decision: where the criterion is met by utterances other than *some*, report it and read the
   headroom (saturation) before interpreting.
 
+### B7. Part D reports the delta read-out beside the q figures
+- Status: Settled
+- Decided by: user (2026-09-13); the two print blocks under the table are agent, pending user
+  confirmation (`d9_delta_readout.md` DEC4)
+- Decision: after its figures Code Cell 2 prints, per Part D prior and utterance at θ_u\*, φ_u\*, the
+  peak of φ_S\* in s (the grid node where φ_S\* is largest), its maximum and minimum, and the
+  all-region q-mass for comparison; the delta-like row is repeated at the realizable θ_u, integrated.
+  Below the table: the ℓ₀ peak beside the peak of φ_S\*("some") against the cell of *all*
+  (ζ ≥ θ_L), and, for a row where the model moves the peak out of the cell, the node-level
+  boundary check at θ_u\* on grids of 201, 401 and 801 nodes. Text cell 4 Part D carries a reading
+  guide that cites Appendix A's Voronoi cell.
+- Theoretical reason: A16.
+- Implementational reason: printed in Code Cell 2 so that E2 mirrors it and E3 checks it.
+- Depends on it: the reading guide in Text cell 4 Part D.
+- Evidence: `procedure_records/d9_delta_readout.md` F2-F4.
+
 ---
 
 ## C. Conventions that constrain claims
@@ -265,6 +300,9 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Decided by: user correction (2026-09-11)
 - q_lit: θ_u = 0 and σ_S → ∞, field ℓ₀ − φ_L. Tempered control: θ_u = 0 at the model's σ, field
   ½(ℓ₀ − φ_L), the model's start. The model: θ\*. Never "the control" unqualified.
+- Findings added later: 2026-09-13, q_lit is "the untempered literal listener" where the prose
+  called it "the untempered literal posterior" (A16; wording agent, pending user confirmation,
+  `d9_delta_readout.md` DEC5).
 
 ### C4. Naming
 - Decided by: not recorded (settled 2026-09-07)
@@ -431,7 +469,7 @@ verdict is the agent's reading and has not been confirmed by the user.
 | Error units | Eq. (18), `infer` | Instance under restriction (σ = 1) | his Eq. (54) at Σ = 1; D11 for σ ≠ 1 |
 | State units | Eq. (19), `infer` | Instance, in the coordinates of D6 | his Eq. (53) with Θ_L = −I and Θ_S = θ_u B̃; reproduced to 1.8e-15 over 400 Euler steps (V3). How the prose writes it: E2 |
 | Target identities | Eqs. (14), (17) | Instance | his Eq. (57) |
-| Read-out and reported statistics | Eqs. (12), (25)–(27) | Divergence | D9 |
+| Read-out and reported statistics | Eqs. (12), (25)–(27) | Divergence; resolved by A16 | D9 |
 | θ_u gradient | Eq. (20), `theta_u_gradient` | Divergence (locality) | D1 |
 | θ_u update scheme | `learn_theta_u` | Instance | D2 |
 | θ_u(0) = 0 | A10 | No counterpart | the tutorial is silent on initial values |
@@ -488,7 +526,9 @@ necessity (I1).
 **D8. φ_L clamped.** Instance: φ_L plays the observed input u (v₁) of his Eq. (51). The y level
 below it is inert while ε_y ≡ 0.
 
-**D9. The read-out rereads a state vector as a log-density.** Divergence (interpretive), not
+**D9. The read-out rereads a state vector as a log-density.** **Resolved 2026-09-13** (A16, B7,
+`procedure_records/d9_delta_readout.md`): q is a comparison read-out, and the delta at the settled
+state is reported beside it. The finding as audited: divergence (interpretive), not
 previously registered. **Flagged to the user.** Bogacz's approximate posterior is a delta at φ
 (Eq. 34), so the maximizer of F is the whole of his inference. Here that maximizer, φ_S ∈ ℝ^K, is
 reread as the log-density of a distribution over s (Eq. 12), and every reported statistic is a

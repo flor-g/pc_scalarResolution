@@ -90,7 +90,9 @@ Each of these has broken at least once.
    heading (`### <a id="..." name="..."></a>Title`). Code cells cannot hold anchors, so `code1`..
    `code4` sit at the end of the markdown cell above. When a heading moves or is added, add its
    anchor and regenerate cell 0.
-7. **Never replace `sys.stdout` with a tee under ipykernel.** It silently kills stream capture for
+7. **E3 replays Code Cell 2's printing calls by name.** A new printing call in Code Cell 2 must be
+   added to E3's replay list, with what it needs passed in, or E3 reports its lines as deleted.
+8. **Never replace `sys.stdout` with a tee under ipykernel.** It silently kills stream capture for
    the rest of the session. `contextlib.redirect_stdout` is safe.
 
 ---
@@ -329,9 +331,9 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
 
 - Use `.venv/bin/python`. **Never pipe the runner to `tail` or `head`**: the pipeline reports their
   exit status, so a failed run looks like success. Read the runner's own `RUNNER OK` line.
-- **Baseline as of 2026-09-13, after E4/E7:** `main.ipynb` 0 errors, 6 figures, 14/14
-  specification checks, about 240 s; `appendix_E.ipynb` 0 errors, 3 figures, E2 18/18, E3 PASS
-  (221 lines identical), about 660 s. Any departure
+- **Baseline as of 2026-09-13, after D9:** `main.ipynb` 0 errors, 6 figures, 14/14
+  specification checks, about 245 s; `appendix_E.ipynb` 0 errors, 3 figures, E2 18/18, E3 PASS
+  (260 lines identical), about 670 s. Any departure
   from this is a finding, reported with the output, not explained away.
 - Report what was run and what it returned. If a step was skipped, say so.
 
