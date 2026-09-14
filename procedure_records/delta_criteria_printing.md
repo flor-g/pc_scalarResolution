@@ -91,6 +91,10 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
     quantity; an I-entry for the mode tie rule if T1 makes one.
   - `thesis_outline/revisions.md` §8: point the numbers of Q2 and Q6 at their cells.
 - [ ] **T8. Commit** (agent.md §4.3), with the hash recorded on each closed task.
+- **Order (2026-09-14, user, S-5 of `evaluation_partD_atStrongLambda.md`):** these tasks follow
+  that change. T1 then prints the criteria in Code Cell 2 (Part D's four priors at Λ = 8) and in
+  Code Cell 2b (all five at Λ = 512), where the delta-like row now lives; T1's acceptance against
+  `output.txt` §PART D ROWS splits accordingly, and T4 mirrors into E2 and E2b.
 
 ## 3. Findings
 

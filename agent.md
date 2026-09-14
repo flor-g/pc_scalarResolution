@@ -35,7 +35,7 @@ into a project file (`decisions.md`, the change record, this file), never only i
 repository as remote `origin` (`https://github.com/flor-g/pc_scalarResolution.git`). The first
 commit is 499918c (2026-09-13). Procedures are in §4.
 
-### `main.ipynb`, by cell index (21 cells)
+### `main.ipynb`, by cell index (23 cells)
 
 | Index | Cell | Holds |
 |---|---|---|
@@ -45,18 +45,21 @@ commit is 499918c (2026-09-13). Procedures are in §4.
 | 5 | Code cell 1 | Architecture: `LexicalPredictiveCodingNetwork` and the grid and prior builders. Header `# === code cell 1` (lowercase). |
 | 6 | Text cell 4 | Evaluation, Parts A-D, reporting statistics Eqs. (25)-(27), integration cost. |
 | 7 | Code Cell 2 | Evaluation. **Mirrored in appendix_E's Code Cell E2** (§2). |
-| 8 | Text cell 5 | Notes after the evaluation: Part A (m), Part B (μ_u). |
-| 9 | Code Cell 3 | Probes reported in Text cell 5. |
-| 10 | Text cell 6 | The Λ×α sweep. |
-| 11 | Code Cell 4 | The sweep. |
-| 12, 14, 16, 18 | Appendices A-D | θ_L and g_y; θ\*, locality, alternatives; how many utility directions; why emission is exclusion. |
-| 13, 15, 17, 19 | Code Cells A-D | Each prints the numbers the appendix above it quotes; Code Cell A also prints Text cell 3 §2's (decision I10). |
-| 20 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
+| 8 | Text cell 4b | Part D's priors, the delta-like one included, all at Λ = 512 (decision B9). |
+| 9 | Code Cell 2b | Part D at Λ = 512. **Mirrored in appendix_E's Code Cell E2b** (§2). |
+| 10 | Text cell 5 | Notes after the evaluation: Part A (m), Part B (μ_u). |
+| 11 | Code Cell 3 | Probes reported in Text cell 5. |
+| 12 | Text cell 6 | The Λ×α sweep. |
+| 13 | Code Cell 4 | The sweep. |
+| 14, 16, 18, 20 | Appendices A-D | θ_L and g_y; θ\*, locality, alternatives; how many utility directions; why emission is exclusion. |
+| 15, 17, 19, 21 | Code Cells A-D | Each prints the numbers the appendix above it quotes; Code Cell A also prints Text cell 3 §2's (decision I10). |
+| 22 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
 
-### `appendix_E.ipynb` (9 cells)
+### `appendix_E.ipynb` (10 cells)
 
 Intro, E.1 equations (E1-E6), **Code Cell E1** (architecture with the relay), **Code Cell E2** (main's
-Code Cell 2 plus four checks), **Code Cell E3** (diffs E2's output against main's stored output),
+Code Cell 2 plus four checks), **Code Cell E2b** (main's Code Cell 2b, verbatim), **Code Cell E3**
+(diffs E2's and E2b's output against main's stored output),
 **Code Cell E4** (the numbers E.1 quotes that E2 does not print), E.2 commitments, E.3 claims in
 main restated, references.
 
@@ -76,9 +79,11 @@ Each of these has broken at least once.
 
 1. **Code Cell E2 is a copy of main's Code Cell 2.** E3 diffs their printed output line by line.
    Any edit to main's Code Cell 2, a comment included if it is printed, must be mirrored into E2 in
-   the same pass. Mirror by lifting the source verbatim out of main, never by retyping.
-2. **E3 finds its baseline by the exact prefix `# === Code Cell 2`.** Renaming main's code cells
-   breaks it with `StopIteration`.
+   the same pass. Mirror by lifting the source verbatim out of main, never by retyping. The same
+   holds for main's Code Cell 2b and E2b, which E3 requires to match with no difference (I11).
+2. **E3 finds its baselines by the exact prefixes `# === Code Cell 2:` and `# === Code Cell 2b:`**
+   (the colon matters: without it the first also matches 2b). Renaming main's code cells breaks it
+   with `LookupError` (I11).
 3. **E3 drops lines that begin with `cost:`.** Anything run-dependent (wall-clock seconds) must be
    printed behind that prefix, or E3 fails on noise.
 4. **E3 reads main's stored outputs**, so main must be executed before appendix_E, and main's
@@ -91,8 +96,8 @@ Each of these has broken at least once.
    heading (`### <a id="..." name="..."></a>Title`). Code cells cannot hold anchors, so `code1`..
    `code4` sit at the end of the markdown cell above. When a heading moves or is added, add its
    anchor and regenerate cell 0.
-7. **E3 replays Code Cell 2's printing calls by name.** A new printing call in Code Cell 2 must be
-   added to E3's replay list, with what it needs passed in, or E3 reports its lines as deleted.
+7. **E3 replays Code Cell 2's and Code Cell 2b's printing calls by name.** A new printing call in
+   either must be added to E3's replay list, with what it needs passed in, or E3 reports its lines as deleted.
 8. **Never replace `sys.stdout` with a tee under ipykernel.** It silently kills stream capture for
    the rest of the session. `contextlib.redirect_stdout` is safe.
 
@@ -332,9 +337,10 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
 
 - Use `.venv/bin/python`. **Never pipe the runner to `tail` or `head`**: the pipeline reports their
   exit status, so a failed run looks like success. Read the runner's own `RUNNER OK` line.
-- **Baseline as of 2026-09-13, after D9:** `main.ipynb` 0 errors, 6 figures, 14/14
-  specification checks, about 245 s; `appendix_E.ipynb` 0 errors, 3 figures, E2 18/18, E3 PASS
-  (260 lines identical), about 670 s. Any departure
+- **Baseline as of 2026-09-14, after B9:** `main.ipynb` 0 errors, 8 figures (2 in Code Cell 2,
+  3 in Code Cell 2b, 3 in Code Cell 4), 14/14 specification checks, about 250 s;
+  `appendix_E.ipynb` 0 errors, 5 figures, E2 18/18, E3 PASS on both cells (Code Cell 2: 190 lines
+  identical, 1 changed, 4 inserted; Code Cell 2b: 215 identical, none changed), about 670 s. Any departure
   from this is a finding, reported with the output, not explained away.
 - Report what was run and what it returned. If a step was skipped, say so.
 

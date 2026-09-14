@@ -301,6 +301,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Decision: Beta(64, 1) stands in for the unrepresentable P₀(s = 1) = 1; Λ must rise with α or the
   prior overrides the entry.
 - Evidence: the Gaussian prior at Λ = 512 is the control showing the effect is the prior's, not Λ's.
+- Findings added later:
+  - 2026-09-14 (`procedure_records/evaluation_partD_atStrongLambda.md` F1–F5). With Λ = 512 for all
+    five priors, the conjunction holds under three (flat, Beta(3,1), delta-like); every leak falls
+    below 1e−174, and the *no*/*all* shifts saturate to zero. The Gaussian control above still reads
+    +0.0071, but raising Λ alone does bring two diffuse priors into the conjunction. By B9 the row
+    and this derivation move to Code Cell 2b.
 
 ### B4. Fixed-θ_u evaluations only as stated controls
 - Status: Settled
@@ -377,6 +383,38 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     - k and c have the same signs in every configuration.
     - The limit field reproduces the model's mode node and all four verdicts ((a), (b), and both q
       conditions) in all 121 cells and Part D's five rows. F4's reading therefore holds cell by cell.
+  - **2026-09-14, Λ = 512 for all five priors (`procedure_records/evaluation_partD_atStrongLambda.md`
+    F7).** The delta criteria part from q's on two Part D rows for the first time: under the flat and
+    Beta(3,1) priors the q conjunction holds and criterion (a) does not (peaks move up to s = 0.917).
+
+### B9. Part D's companion at a strong Λ: every prior at Λ = 512, in a cell of its own
+- Status: Settled (implementation in progress)
+- Decided by: user (2026-09-14), approving S-1 to S-5 and S-7 of
+  `procedure_records/evaluation_partD_atStrongLambda.md`
+- Decision:
+  - A new text cell and code cell ("Text cell 4b", "Code Cell 2b") follow Code Cell 2. They report
+    Part D's evaluations with Λ = 512 (B3's Λ = 8α at α = 64) for all five priors and all three
+    utterances, each at its own θ_u\* (A9).
+  - Part D (Code Cell 2) keeps the four diffuse priors at Λ = 8. The delta-like row, and every block
+    that is about it or triggered only by it, moves to Code Cell 2b: the constants and their
+    derivation, the Gaussian-at-512 control, the headroom and mechanism blocks, the integrated run and
+    the roundoff floor, the delta read-out's realizable rows and boundary check, and the delta-like
+    figure (S-2).
+  - Code Cell 2b adds two figures at Λ = 512: *no*/*some*/*all* under the Gaussian prior, and *some*
+    under all five priors (S-7; reading recorded in the change record, agent, pending user
+    confirmation).
+  - The change precedes `delta_criteria_printing.md` T1, which then prints criteria (a) and (b) in
+    both cells (S-5).
+  - The argument of Parts C and D and Text cell 6 is rewritten after the code, against its outputs
+    (S-6).
+- Theoretical reason: the delta row alone carried Λ = 512, so Part D's table mixed two lexical
+  strengths; and at Λ = 8 the diffuse priors override the entries for *no* and *all* (max leak up to
+  0.91), so those columns partly measure the override that B3 says a probe must avoid.
+- Implementational reason: panels and counts within one cell share one Λ.
+- Bogacz status: no new operation; reported statistics of Eqs. (12), (15)–(16) as in B2 and B7.
+- Depends on it: Text cell 4 Parts C and D, *Integration cost and conditioning*, Text cell 6, E.1's
+  delta-like relay bound; B3, B7, B8, I10.
+- Evidence: `audits/2026-09-14-strong-lambda/` (F1–F8 of the change record).
 
 ---
 
@@ -487,7 +525,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   the rest, not recorded.
 
 ### I10. Where the numbers of C6 are printed
-- Status: Settled
+- Status: Settled; amended in part by I11 (2026-09-14)
 - Decided by: agent, confirmed by user (2026-09-13); proposed as DEC3 of `procedure_records/e4_e7_sourcing.md`
 - Decision: numbers quoted in Text cells 4 and 5 are printed by Code Cells 2 and 3, inside the
   functions whose output they belong to. Each of Appendices A–D is followed by its own code cell
@@ -495,6 +533,23 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   E.1 quotes that E2 does not print are printed by Code Cell E4.
 - Implementational reason: additions to Code Cell 2 go inside existing functions, so Code Cell
   E3's replay needs no new calls; each addition is mirrored into E2 verbatim.
+
+### I11. Code Cell 2b, its mirror, and how E3 finds both
+- Status: Settled
+- Decided by: agent, confirmed by user (2026-09-14; S-3 and S-4 of
+  `procedure_records/evaluation_partD_atStrongLambda.md`)
+- Decision:
+  - The cells B9 adds are named "Text cell 4b" and "Code Cell 2b" (anchors `tc4b`, `code2b`), so no
+    later cell is renumbered. Numbers Text cell 4b quotes are printed by Code Cell 2b.
+  - `appendix_E.ipynb` mirrors Code Cell 2b verbatim as Code Cell E2b. E3 replays both and diffs each
+    against main's stored output: Code Cell 2 as before (four inserted checks, the pass count),
+    Code Cell 2b with no difference allowed.
+  - E3 matches its baselines by `# === Code Cell 2:` and `# === Code Cell 2b:`, since "Code Cell 2b"
+    also begins with the old prefix `# === Code Cell 2`.
+  - E4's relay bound takes the delta-like row explicitly, since Part D's rows no longer include it.
+- Implementational reason: amends I10's "E3's replay needs no new calls". E3 keeps its coverage of
+  every moved block, including the integrated run, where the relay's path differs.
+- Depends on it: agent.md §1 (cell maps) and §2 (couplings 1, 2, 7).
 
 ---
 
@@ -902,3 +957,19 @@ not quantities.
 
 **E11. A value that silently assumes defaults.** Class (d), minor. `mu_u_probe` prints
 "+0.3333 b_j at theta_u = 1" from a hard-coded 1/3, whatever its `theta_u` argument or σ.
+
+**E12. Code Cell 2b's quantities (added 2026-09-14, B9).** Classed by the agent, pending user
+confirmation.
+- `STRONG_LAMBDA` = `DELTA_ALL_LAMBDA` = 512: class (c), a stated departure from the model's Λ = 8,
+  justified by B3's override threshold and B9. Every row of Code Cell 2b carries it and the table
+  prints it.
+- The table, tempering/utility split, condition counts, realizability thresholds and delta read-out
+  rows: class (b), the statistics of B2, B7, Eqs. (25)–(27) and (37), computed by Code Cell 2's
+  functions.
+- `strong_lambda_comparison` and `headroom_report`: class (b), the same statistics side by side
+  (B6's headroom, for every row).
+- `cell_margin_report`'s "nodes below" and "inside against outside": class (b) under B7's boundary
+  check, extended from the delta-like row to every row. Not yet defined in prose: Text cell 4b is a
+  scope paragraph until the prose pass.
+- Every number Code Cell 2b prints is class (e) for prose until Text cell 4b or Parts C–D quote it
+  against the executed output (`procedure_records/evaluation_partD_atStrongLambda.md` §5).

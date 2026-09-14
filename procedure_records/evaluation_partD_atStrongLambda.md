@@ -1,9 +1,9 @@
 # Part D at a strong Λ, and the new cell after Code Cell 2
 
 Working record, on the pattern of `theta_u_learned_reach.md` (agent.md §5.3). It is the guide for
-the change. **Status 2026-09-14: every task is OPEN, and so are the decisions in §3.** Nothing in the
-notebooks has changed. The numbers in §1 come from `audits/2026-09-14-strong-lambda/`. Under C6 no
-prose may quote them until a cell prints them.
+the change. **Status 2026-09-14: code tasks T0–T8 closed, T9 (commit) in progress; the prose pass
+(S-6, §5) is open.** §1.1–1.3 were measured by the probe before the change; Code Cell 2b now prints
+every number there (C6). The scripts are in `audits/2026-09-14-strong-lambda/`.
 
 ## 0. Instructions (the user's, verbatim, 2026-09-14)
 
@@ -22,8 +22,8 @@ prose may quote them until a cell prints them.
 **Reading of S-7 (agent, pending user confirmation).** The new code cell draws three figures, all at
 Λ = 512: *no*/*some*/*all* under the Gaussian prior (the counterpart of Code Cell 2's first figure);
 *some* under all five priors (the counterpart of its second); and the delta-like *no*/*some*/*all*
-figure moved from Code Cell 2 (S-2). main's figure count stays 6 in Code Cell 2 + 2b combined
-before the two additions, and becomes 8.
+figure moved from Code Cell 2 (S-2). main.ipynb's figures go from 6 to 8: Code Cell 2 keeps two,
+Code Cell 2b has three, Code Cell 4 keeps its three.
 
 ---
 
@@ -124,7 +124,7 @@ At the stored settings (Λ = 8 for the first four), the shifts for *some* are +0
   | delta (all) | 1.98e6 | 2.126 | 6.5 | 1 | yes |
 
   So an end-to-end integrated run like the delta row's (realizability block) is affordable for flat
-  and skewed high as well. **Not run.**
+  and skewed high as well. Not run by the probe; run in Code Cell 2b, see F10.
 
 - **F7. The delta read-out's criteria (B8) now part from q's conditions on two rows.**
 
@@ -162,6 +162,30 @@ At the stored settings (Λ = 8 for the first four), the shifts for *some* are +0
     points at "Code Cell 2's realizability block".
   - **I10** records that additions to Code Cell 2 go inside existing functions, so that E3's replay
     needs no new calls. A new cell departs from that implementational reason.
+
+### 1.3b Findings during implementation (2026-09-14, from `test_sources.py`, outside the notebooks)
+
+- **F10. The integrated run holds for the two new rows.** Flat: one update of Eq. (20) reaches
+  θ_u = 7.8161 (λ_max(H) = 63.1); the integrated fixed point gives shift −0.0119 and q_H = 0.0384,
+  both met, 13,589 Euler steps, agreeing with Eqs. (15)–(16) to 1e−9. Skewed high: θ_u = 7.9926
+  (65.9), shift −0.0925, q_H = 0.0442, both met, 14,199 steps. Their roundoff floors, 2.8–3.0e−11
+  and 3.0–4.5e−11, sit below `infer`'s 1e−9 tolerance, as the delta row's does.
+- **F11. A printed number in Code Cell 2 changes with the move.** The ℓ₀-invariance of the φ_S
+  contrasts at a shared θ_u = 1, over Part D's rows, is 5.3e−15 over the four priors against 3.6e−14
+  over five. Text cell 4 Part D quotes 3.6e−14 (prose pass). At Λ = 512 over five priors: 1.1e−13 at
+  θ_u = 1, and **0.0001** at each prior's own θ_u\* (0.0575 at Λ = 8), since the θ_u\* nearly coincide.
+- **F12. The peaks against the cell of *all*, at Λ = 512 and θ_u\*:** Gaussian 6 nodes below the
+  cell (inside against outside −3.256), flat 5 (−1.964), Beta(1,3) 7 (−3.216), Beta(3,1) 5 (−1.841),
+  delta-like 1 (−0.081). Only the delta row sits at the boundary.
+- **F13. The spike block at Λ = 512.** Under flat and Beta(3,1) the full network's mode moves to
+  s = 0.92 with density 0.0000 at the top node; q_lit is unchanged. The block's wording ("the
+  right-edge spike") describes Λ = 8; prose pass.
+- **F14. A printed sentence Code Cell 2b now contradicts on its own page (S-6).** The moved
+  Gaussian control still prints "Raising Lambda alone moves the shift AWAY from the criterion, so
+  the delta row's result is the prior's doing and not its Lambda's", a few lines below a table in
+  which raising Λ alone moves flat and Beta(3,1) into the criterion. It was moved verbatim, as
+  S-2 required; its wording belongs to the prose pass.
+- Timing: Code Cell 2 224 s (was about 245 s), Code Cell 2b 22 s.
 
 ### 1.4 Caveats
 
@@ -324,14 +348,30 @@ Rewriting them is the user's call.
 
 Record format when closing: `[x] Tn (date): what changed; acceptance result; commit`.
 
-- [ ] **T0. Checkpoint** (agent.md §4.2). Commit this record and `audits/2026-09-14-strong-lambda/`
-  first, then record the HEAD hash.
-- [ ] **T1. Settle S-1 to S-7 with the user.** Write each into `decisions.md`:
-  - a new B-entry for the Λ = 512 companion;
-  - a dated finding under B3 (§1 F1–F7) and under B8 (F7);
-  - the I10 amendment;
-  - the naming choice.
-- [ ] **T2. New code cell after Code Cell 2** (cell index 8 today), under S-1, S-2, S-3, S-7. Prints:
+- [x] **T0 (2026-09-14). Checkpoint.** This record and `audits/2026-09-14-strong-lambda/` committed
+  as a202cdb; the build and apply scripts read both notebooks at that commit.
+- [x] **T1 (2026-09-14). S-1 to S-5 and S-7 settled by the user; S-6 deferred to the prose pass.**
+  `decisions.md`: B9 (new), dated findings under B3 and B8, I10 marked amended, I11 (new: naming,
+  E2b, E3's two prefixes, E4's explicit delta row). Commit pending with T9.
+  - **Implementation choices made by the agent, pending user confirmation:**
+    - the integrated RUN and THE ROUNDOFF FLOOR run for **every** both-conditions row whose arrival
+      θ_u is integrable, not only the cheapest; a row that is not integrable is named. The delta
+      row's lines are unchanged by this;
+    - three printed sentences in Code Cell 2 print only when true: the "not a property of the model
+      alone" lines (only if the rows split), and the realizability narrative (only if some row has
+      a threshold);
+    - `scalar_implicature_probe`'s pointer "its sign is prior-dependent (Part D)" now reads
+      "(Code Cell 2b)", since Part D's four rows at Λ = 8 share one sign;
+    - the spike block stays in `base_prior_sweep`, so Code Cell 2b also prints it at Λ = 512;
+    - all three Code Cell 2b figures use a log vertical axis, like the moved delta-like figure;
+    - Code Cell 2b's comments correct E9's stale "Code Cell 3" to "Code Cell 4".
+  - Scripts (scratch, to be filed under `audits/2026-09-14-strong-lambda/` at T9):
+    `build_sources.py`, `cell2b_template.py`, `test_sources.py`, `apply_to_notebooks.py`, `new_e3.py`.
+- [x] **T2 (2026-09-14). New code cell after Code Cell 2** — closed: Code Cell 2b at main cell 9,
+  built by `build_sources.py` + `cell2b_template.py`. Acceptance: its numbers equal the probe; every
+  moved line prints byte-identically (`test_report.txt`); the flat row at Λ = 512 is a
+  both-conditions cell, as Code Cell 4 prints for (1, 512) (Code Cell 4 prints floors, not per-cell
+  values, so the match is of verdict, not of digits). Originally: (cell index 8 today), under S-1, S-2, S-3, S-7. Prints:
   - the Λ = 512 table of §1.2;
   - the E[s] and tempering/utility tables of F4–F5;
   - headroom for every row (F3: saturation now applies to *no* and *all* under all five);
@@ -349,25 +389,38 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   - every moved line is byte-identical to the line Code Cell 2 printed at T0, apart from any header
     rename;
   - the flat row equals Code Cell 4's (α, Λ) = (1, 512) cell.
-- [ ] **T3. Code Cell 2 residue.**
+- [x] **T3 (2026-09-14). Code Cell 2 residue** — closed: 1418 lines (was 1566). Acceptance: the only
+  changed printed lines are the counts (0 of 4), the pointer to Code Cell 2b, "four priors", and
+  the ℓ₀-invariance value (F11). Originally:
   - Remove the moved blocks and adjust `part_d_priors` and the shared loops per S-1/S-2.
   - Update comments that point at the delta row, the third figure, or "Code Cell 3".
   - **Acceptance:** the lines Code Cell 2 still prints equal their T0 versions, except the counts
     S-1(a) changes ("of 5" → "of 4") and anything S-2 splits.
-- [ ] **T4. Code Cell 4.** Update the comment at source line 67 if the realizability block moved.
+- [x] **T4 (2026-09-14). Code Cell 4** — closed, no edit: its comment points at functions that stay
+  in Code Cell 2. Originally: Update the comment at source line 67 if the realizability block moved.
   Nothing else there reads Code Cell 2's names.
-- [ ] **T5. Appendix E** under S-4:
+- [x] **T5 (2026-09-14). Appendix E** — closed by `apply_to_notebooks.py` and `new_e3.py`: E2
+  re-mirrored (exactly the header and the 98 relay-check lines differ from main), E2b added, E3 checks
+  both cells, E4 takes the delta-like row explicitly. Originally, under S-4:
   - re-mirror E2 by lifting main's Code Cell 2 verbatim (the scratchpad `remirror.py` pattern of
     the reach record);
   - mirror the new cell if S-4(a);
   - update E3's replay list and its baseline match (S-3's prefix issue);
   - make E4's delta-like row explicit.
-- [ ] **T6. Execute main, then appendix_E** (agent.md §5.1).
+- [x] **T6 (2026-09-14). Execute main, then appendix_E** — closed. `RUNNER OK main.ipynb: error
+  outputs 0, figures 8, runtime 249 s`, 14/14; `RUNNER OK appendix_E.ipynb: error outputs 0, figures
+  5, runtime 671 s`, E2 18/18, E3 PASS on Code Cell 2 (190 identical, 1 changed, 4 inserted) and on
+  Code Cell 2b (215 identical, 0 changed). Stored outputs of Code Cells 2 and 2b equal the
+  outside-notebook test; Code Cells 1, 3, 4, A–D, E1 and E4 print exactly what they printed at
+  a202cdb (`verify_executed.py`). Originally:
   - Baseline: main 0 errors, 6 figures (7 under S-7 yes), 14/14. appendix_E 0 errors, 3 figures,
     E2 18/18, E3 PASS.
   - Diff the stored outputs against T0: Code Cell 2's lost lines must reappear in the new cell.
     `cost:` lines excepted.
-- [ ] **T7. Structure.**
+- [x] **T7 (2026-09-14). Structure** — closed for code: Text cell 4b (heading, anchor `tc4b`, a scope
+  paragraph, anchor `code2b`); ToC regenerated (72 links, all resolve; indices checked); agent.md §1
+  cell maps, §2 couplings 1, 2, 7 and §5.1 baseline updated. decisions.md cites cells by name, not
+  index, so needs no change. Text cell 4b's argument is the prose pass (S-6). Originally:
   - New markdown cell before the new code cell, with its anchor inside the heading. The code anchor
     goes at the end of that markdown cell (agent.md §2 item 6).
   - Regenerate the ToC (cell 0).
@@ -375,7 +428,8 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
     move to 15, 17, 19, 21 and References to 22.
   - Update decisions.md entries that cite cell indices.
   - New displays are unnumbered unless the user approves renumbering (agent.md §2 item 5).
-- [ ] **T8. Records.**
+- [x] **T8 (2026-09-14). Records** — closed: decisions.md B9, I11, findings under B3 and B8, I10
+  amended, quantity trace entry for Code Cell 2b; `delta_criteria_printing.md` order note. Originally:
   - `decisions.md`: E-register entries for each new printed quantity; B3/B7/B8/I10 updates per T1.
   - `delta_criteria_printing.md`: note the order chosen under S-5, and that its T1 acceptance now
     spans two cells.
@@ -403,6 +457,14 @@ Draft wording goes to the user before it lands. Interpretive sites are under S-6
     keep the delta row per S-1.
   - The table (≈ 290–296) and its reading (≈ 298–319).
   - The delta read-out guide (≈ 343–376): the realizable row and the boundary check move.
+- **Found during implementation (§1.3b):**
+  - Text cell 4 Part D's ℓ₀-invariance "agree to 3.6 × 10⁻¹⁴" becomes 5.3 × 10⁻¹⁵ over the four
+    priors (F11); "differ by up to 0.058" at θ_u\* is over four priors too and must be re-read from
+    the output.
+  - Code Cell 2b's printed sentences that read Λ = 8 facts: the moved Gaussian-control conclusion
+    (F14) and the spike block's wording at Λ = 512 (F13). Printed text is prose for this pass.
+  - Code Cell 2's `scalar_implicature_probe` now points to Code Cell 2b for the sign's
+    prior-dependence; Text cell 4 Part C's pointers to "Part D" for the same claim follow it.
 - **Text cell 4, *Integration cost and conditioning*** (≈ 492–515): the delta-like threshold 2.126,
   the realizable run, and the separation 7.9e6 now print in the new cell. Add flat and skewed high if
   the run's candidates grow (F6).

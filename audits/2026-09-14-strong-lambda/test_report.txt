@@ -1,0 +1,16 @@
+old lines not printed by either new cell: 7
+  - 1 x above), and that its sign is prior-dependent (Part D).
+  - 1 x First condition (shift for "some" < 0) met under 1 of 5 priors: delta (all).
+  - 1 x Conjunction (also P(all-region | "some") < 1/2) met under 1: delta (all).
+  - 1 x ell_0-invariance of the phi_S contrasts across these five priors, all at Lambda = 8:
+  - 1 x at a shared theta_u = 1 (a control): 3.6e-14
+  - 1 x A threshold exists under 1 of 5 priors: delta (all).
+  - 1 x The conjunction then holds all the way to theta_u* under 1 of those 1.
+
+lines only in the new Code Cell 2 (not in old):
+  + 1 x above), and that its sign is prior-dependent (Code Cell 2b).
+  + 1 x First condition (shift for "some" < 0) met under 0 of 4 priors: none.
+  + 1 x Conjunction (also P(all-region | "some") < 1/2) met under 0: none.
+  + 1 x ell_0-invariance of the phi_S contrasts across these four priors, all at Lambda = 8:
+  + 1 x at a shared theta_u = 1 (a control): 5.3e-15
+  + 1 x A threshold exists under 0 of 4 priors.

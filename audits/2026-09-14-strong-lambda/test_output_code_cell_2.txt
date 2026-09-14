@@ -1,0 +1,227 @@
+SPECIFICATION CHECKS
+=============================================================================================================
+  PASS  convergence                                                      all three utterances settled
+  PASS  fixed point matches Eqs. (15)-(16)                               max |phi - phi*| = 9.98e-10
+  PASS  Eq. (17) eps_S = -eps_L                                          max residual = 9.99e-10
+  PASS  Eq. (17) eps_u = theta_u B^T W eps_S                             max residual = 3.87e-11
+  PASS  Sec. 8.2  F non-decreasing                                       min step = -1.71e-13 (roundoff at the fixed point), at tau_error = 3.084e-04 = tau_state / (4 lambda_max(H))
+  PASS  Eq. (12) read-out normalized                                     max |1 - q-mass| = 2.22e-16
+  PASS  Eq. (22) Hessian negative definite                               max over unit directions = -2.262e-01
+  PASS  Sec. 8.1(iii) relaxation rate independent of phi_L               rate per unit time no=1.0002312, some=1.0002304, all=1.0002312 (relative spread 7.7e-07)
+  PASS  Sec. 7 messages are gradients of Eq. (13)                        max relative error = 1.05e-06
+  PASS  Sec. 1  K is an accuracy parameter                               E[s] converging: |401-801| = 1.7e-03 (hard chi_y), 3.3e-06 (smooth chi_y); coarse 51-401 spread 1.1e-02 is the O(h) step artefact
+  PASS  Sec. 8.5  theta_u* of Eq. (B2) matches an independent bisection  closed form -28.4374874017, bisection -28.4374874017, relative gap 4.6e-14
+  PASS  Sec. 8.5  F~ has an interior maximum in theta_u                  theta_u* = -28.4375, |dF~/dtheta_u| = 5.5e-16, margin over the asymptote = +0.2398
+  PASS  Sec. 8.5  Eq. (20) ascends toward it from theta_u = 0            theta_u 0.000 -> -6.060 (target -28.437), |grad| 6.82 -> 1.29, min dF~ step +8.7e-02
+  PASS  Sec. 9.2 smooth lexical field is compatible                      max |phi_S - phi_S*| = 9.98e-10
+=============================================================================================================
+  14/14 passed
+
+DEMONSTRATION
+  Lambda = 8.0, theta_u = -28.4375 (learned, theta_u*), mu_u = [1.0, 1.0], boundary = 2.9444389791664403
+
+  utterance      E[s]    P(s~0)    P(s~1)      leak    steps   phi_u (tilt, width)
+  no           0.2715    0.3780    0.0006    0.6220   148104   [+0.322, +0.453]
+  some         0.5684    0.0000    0.0025    0.0000   148081   [-0.317, +0.857]
+  all          0.7262    0.0006    0.3740    0.6260   148104   [-0.317, +0.453]
+
+  'leak' is the q-mass over the region the entry excludes;
+  it goes to zero as Lambda grows, which is the Eq. (15) limit of Sec. 6.
+  'steps' are Euler steps at the time constants of the timescale commitment,
+  dt = tau_error / 2 = 1.54e-04 here.
+
+LAMBDA -> INFINITY RECOVERS THE HARD MASK (Sec. 6)
+  (closed form, each Lambda at its own learned theta_u*)
+    Lambda    theta_u*    max leak
+         1     -18.730    0.996621
+         2     -19.192    0.992925
+         4     -20.897    0.969597
+         8     -28.437    0.625972
+        16     -76.638    0.004976
+        32    1535.417    0.000000
+        64     342.254    0.000000
+  monotone decreasing: True;  leak at Lambda=64 is 5.03e-20
+
+SCALAR IMPLICATURE PROBE
+  full network: theta_u = -28.4375 (learned, theta_u*)
+  baseline: q_lit, the untempered literal posterior (phi_S = ell_0 - phi_L)
+  also shown: the theta_u = 0 control, that posterior tempered by 1/2
+
+  utterance   E[s] base  E[s] full  P(all) base  P(all) full     shift  P(all) th_u=0
+  no             0.1177     0.2715       0.0003       0.0006   +0.0003         0.0094
+  some           0.5008     0.5684       0.0016       0.0025   +0.0008         0.0191
+  all            0.8823     0.7262       0.8297       0.3740   -0.4557         0.5109
+
+  first condition, shift for "some" < 0:        NOT met (+0.0008)
+  second condition, P(all-region | "some") < 1/2: met (0.0025)
+  Under the criterion of Text cell 4 Part C, the conjunction, the criterion is NOT met:
+  under "some" the settled belief holds 0.0008 MORE all-region q-mass than q_lit.
+  Whether the criterion is met is a measurement; what meeting it commits
+  the model to is argued in Text cell 4 Part C, not here. Note that the
+  same criterion is met by other utterances too (see the shift column
+  above), and that its sign is prior-dependent (Code Cell 2b).
+
+SLOW PARAMETER (Eq. 20, Sec. 8.5)
+  mu_u = [1.0, 1.0]  (must be nonzero)
+  start: theta_u(0) = 0.0000, the tempered control; dF~/dtheta_u there = -6.8187
+  theta_u: 0.0000 -> -7.567163 over 60 updates at tau_theta = 20;  theta_u* = -28.4375 (Eq. B2)
+  F~ increased monotonically: True
+  final dF~/dtheta_u = -6.273e-01  (still ascending)
+  The flow is slow near the optimum because F~ is shallow there; the target
+  is the stationary point Part A locates in closed form, not this endpoint.
+
+  shift for "some" (Eq. 37, against q_lit): +0.0175 at the start, +0.0009 at the endpoint, +0.0008 at theta_u*
+  Ascending F~ moves the shift DOWN, toward the first condition of Text cell 4 Part C, and does not reach it at theta_u*.
+  Eq. (13) contains no term rewarding informativity, so this is not F pursuing
+  the criterion: raising |theta_u| amplifies the span(B) component of
+  (ell_0 - phi_L), and the sign of the shift is set by where those directions
+  put mass relative to the all-region. See `theta_u_dependence` below.
+
+THETA_U DEPENDENCE OF THE REPORTED QUANTITIES
+  theta_u* = -28.4375 (closed form, Appendix B); the rest of this cell
+  reports it. The other three columns hold theta_u fixed, as a control.
+
+  E[s]
+    utterance      tempered (0)             +1             -1        learned
+    no                   0.2658         0.2683         0.2605         0.2715
+    some                 0.5088         0.5448         0.5284         0.5684
+    all                  0.7342         0.7597         0.7114         0.7262
+
+  P(all-region)
+    utterance      tempered (0)             +1             -1        learned
+    no                   0.0094         0.0044         0.0030         0.0006
+    some                 0.0191         0.0114         0.0080         0.0025
+    all                  0.5109         0.5153         0.4251         0.3740
+
+  shift vs q_lit (37)
+    utterance      tempered (0)             +1             -1        learned
+    no                  +0.0091        +0.0041        +0.0028        +0.0003
+    some                +0.0175        +0.0098        +0.0064        +0.0008
+    all                 -0.3188        -0.3144        -0.4046        -0.4557
+
+  leak
+    utterance      tempered (0)             +1             -1        learned
+    no                 4.89e-01       5.30e-01       5.31e-01       6.22e-01
+    some               3.50e-04       7.49e-05       7.64e-05       4.07e-06
+    all                4.89e-01       4.85e-01       5.75e-01       6.26e-01
+
+    ||contrast||         9.6995        10.9524        10.9524        13.9124
+    (all - some, in the quadrature norm; it GROWS with |theta_u|, so the
+     utility level does move contrasts, unlike mu_u and ell_0.)
+
+  theta_u = +1 against theta_u = -1: largest difference 0.0902.
+  That is not small, and it is worth knowing WHERE it is large. phi_u*
+  carries a term linear in theta_u (through mu_u) and one quadratic in it
+  (through G); only the linear one changes under theta_u -> -theta_u, and
+  it is relatively largest when |theta_u| is of order 1:
+
+       |theta_u|   max dE[s]   max dP(all)
+          0.5000      0.0347        0.0624
+          1.0000      0.0483        0.0902
+          2.0000      0.0435        0.0850
+          5.0000      0.0223        0.0448
+         10.0000      0.0116        0.0234
+         28.4375      0.0041        0.0083
+        100.0000      0.0012        0.0024
+
+  The sign therefore matters most at |theta_u| of order 1 and progressively
+  less toward |theta_u*|, where the quadratic term dominates and the two
+  signs converge. The numbers this cell reports are read at theta_u*.
+
+BASE WORLD PRIOR SWEEP
+
+  prior        description                                  Lambda    theta_u* E[s] prior  P0(all)  E[s] | no    some    all  
+  gaussian     Gaussian in zeta (mean 0.0, precision 1.0)        8    -28.4375     0.5000   0.0016         0.271  0.568  0.726
+  flat         Uniform(0, 1) in s                                8   5950.6256     0.5000   0.0479         0.024  0.645  0.976
+  skewed low   Beta(1.0, 3.0) in s                               8    -14.5079     0.2519   0.0001         0.019  0.361  0.334
+  skewed high  Beta(3.0, 1.0) in s                               8     55.0081     0.7481   0.1367         0.665  0.808  0.982
+  (each prior at its own learned theta_u*)
+
+  implicature shift, P(all-region) full minus q_lit, the literal listener
+  (a scalar implicature for "some" requires a NEGATIVE shift)
+
+  prior                  no        some         all    max leak  P(all|some)    max |phi_S - phi_S*|
+  gaussian          +0.0003     +0.0008     -0.4557     6.3e-01       0.0025                 1.0e-09
+  flat              +0.0004     +0.0295     -0.0160     2.3e-02       0.0799     closed form (stiff)
+  skewed low        +0.0000     +0.0004     -0.1849     9.1e-01       0.0005                 9.9e-10
+  skewed high       +0.0547     +0.0421     -0.0087     9.1e-01       0.1788     closed form (stiff)
+  (the last column compares the integrated fixed point with Eqs. (15)-(16);
+   rows marked closed form have lambda_max(H) above 1e+03,
+   where integration under the timescale commitment is not affordable)
+
+  the "some" shift split into tempering (the theta_u = 0 control against
+  q_lit) and the utility level's own contribution (the remainder):
+  prior             shift   tempering   utility
+  gaussian        +0.0008     +0.0175   -0.0167
+  flat            +0.0295     +0.0854   -0.0559
+  skewed low      +0.0004     +0.0065   -0.0061
+  skewed high     +0.0421     +0.0988   -0.0568
+
+  First condition (shift for "some" < 0) met under 0 of 4 priors: none.
+  Conjunction (also P(all-region | "some") < 1/2) met under 0: none.
+
+  ell_0-invariance of the phi_S contrasts across these four priors, all at Lambda = 8:
+    at a shared theta_u = 1 (a control): 5.3e-15
+    at each prior's own learned theta_u*: 0.0575
+  (exact at a shared theta_u; under learning ell_0 also moves theta_u*,
+   so what is invariant is the map at fixed theta_u, not the row.)
+
+  THE RIGHT-EDGE SPIKE in the "some" panels of the flat and Beta(3,1)
+  rows, read in zeta, where the grid is uniform (the figures draw a
+  density in s, dividing by ds/dzeta, which is 1/405 at the top node):
+    prior        belief    mode (s)  density there  density at top node
+    flat         q_lit         0.50         0.2639               0.0026
+    flat         full          0.67         0.2767               0.0013
+    skewed high  q_lit         0.75         0.3188               0.0074
+    skewed high  full          0.84         0.3285               0.0023
+
+INTEGRATION COST: THE phi_u RATE OF Eq. (28) AGAINST |theta_u|
+   |theta_u|  phi_u rate  stiffness ratio  largest Euler dt
+      1.0000         2.0              1.0            1.0000
+     10.0000       101.0             50.5            0.0198
+     28.4375       809.7            404.8            0.0025
+     50.0000      2501.0           1250.5            0.0008
+  (stiffness ratio: the phi_u rate over the phi_S rate, 2. Largest Euler dt:
+   2 / rate, explicit Euler's own bound, before the timescale commitment tightens it.)
+  at theta_u* = -28.4375: Eq. (28) gives 809.69, lambda_max(H) = 810.69
+
+REALIZABILITY: WHAT THE CONJUNCTION NEEDS, AGAINST WHAT theta_u* COSTS
+
+  prior           theta_u*  lambda(theta_u*)  theta_crit  lambda(crit)  4 lambda(crit)  updates
+  gaussian          -28.44          8.11e+02               not met at theta_u*, so no threshold
+  flat             5950.63          3.54e+07               not met at theta_u*, so no threshold
+  skewed low        -14.51          2.12e+02               not met at theta_u*, so no threshold
+  skewed high        55.01          3.03e+03               not met at theta_u*, so no threshold
+  (theta_crit: the least |theta_u| on the ray to theta_u* at which the shift
+   for "some" is negative AND P(all-region | "some") < 1/2. 4 lambda is the
+   separation the timescale commitment then demands, tau_error <= tau_state /
+   4 lambda_max(H). updates: Eq. (20) steps from theta_u(0) = 0 to pass it.)
+  A threshold exists under 0 of 4 priors.
+
+THE DELTA READ-OUT: phi_S* AT THE SETTLED STATE, BY BASE WORLD PRIOR (Bogacz Eq. 34)
+
+  prior        theta_u                 y                     phi_u*  peak of phi_S* at s  max phi_S*  min phi_S*  q-mass, zeta > theta_L
+  gaussian     theta_u* = -28.4375     no        [+0.3223, +0.4526]               0.0474       -1.04      -19.90                  0.0006
+  gaussian     theta_u* = -28.4375     some      [-0.3174, +0.8572]               0.5890        3.53      -23.58                  0.0025
+  gaussian     theta_u* = -28.4375     all       [-0.3174, +0.4526]               0.9526       -1.06      -19.87                  0.3740
+  flat         theta_u* = 5950.6256    no        [-0.0015, +0.0001]               0.0474       -0.44       -9.01                  0.0007
+  flat         theta_u* = 5950.6256    some      [+0.0015, -0.0018]               0.6726        1.17      -12.73                  0.0799
+  flat         theta_u* = 5950.6256    all       [+0.0015, +0.0001]               0.9526       -0.44       -9.01                  0.9774
+  skewed low   theta_u* = -14.5079     no        [+1.4515, +0.2905]               0.0237        1.80      -19.08                  0.0000
+  skewed low   theta_u* = -14.5079     some      [+0.2062, +1.0782]               0.3274        1.90      -14.25                  0.0005
+  skewed low   theta_u* = -14.5079     all       [+0.2062, +0.2905]               0.2535       -3.82      -10.56                  0.0896
+  skewed high  theta_u* = 55.0081      no        [+0.0530, -0.0741]               0.7465       -3.85      -10.50                  0.1539
+  skewed high  theta_u* = 55.0081      some      [+0.3844, -0.2837]               0.8429        2.78      -22.77                  0.1788
+  skewed high  theta_u* = 55.0081      all       [+0.3844, -0.0741]               0.9790        1.82      -19.05                  0.9892
+  (peak: the grid node where phi_S* is largest. The last column is Eq. (27) under the
+   read-out q of Eq. (12), for comparison; the delta read-out does not use it.)
+
+  THE PEAK OF ell_0 AGAINST THE CELL OF "all", zeta >= theta_L = 2.9444, s >= 0.9500 (Appendix A)
+    prior                ell_0 peak (s)         phi_S*("some") peak (s)   at
+    gaussian             0.5000 outside                  0.5890 outside   theta_u* = -28.4375
+    flat                 0.5000 outside                  0.6726 outside   theta_u* = 5950.6256
+    skewed low           0.2535 outside                  0.3274 outside   theta_u* = -14.5079
+    skewed high          0.7465 outside                  0.8429 outside   theta_u* = 55.0081
+    under "some", ell_0 - phi_L peaks at the node where ell_0 peaks, under every prior: True
+
+
