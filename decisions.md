@@ -142,6 +142,17 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   revisions.md Q5: either θ\* stays the commitment and halting is an implementation account of
   approximating it, or the halted value becomes the commitment, which would revise this entry. No
   change to the model.
+- Findings added later: 2026-09-13, **Q5 settled by the user: θ\* stays the commitment; this entry
+  is unchanged.** The user's reason, to be explained in the paper at an appropriate place
+  (`thesis_outline/revisions.md` R10): the mathematical model predicts θ\* as the halting value, and
+  the simulation exposes a cost problem. No self-contained halting mechanism for the simulation has
+  been determined. Every "realizable" θ_u is defined ad hoc, given θ\* already known in closed form.
+  A simulated system should be assumed agnostic to that closed-form value, so an ad hoc realizable
+  θ_u cannot yet be adopted as the theoretical commitment. Checked against Code Cell 2 (agent):
+  `criterion_threshold` bisects on fractions of θ\*, and `realizability_report` computes an arrival
+  count only where the conjunction holds at θ\*. `updates_to_criterion` steps Eq. (20) without θ\*,
+  but it stops on Part C's criterion, which is a statistic of the read-out q against q_lit outside
+  the network, so that stopping rule is not one the simulated system has either.
 
 ### A10. The θ_u flow starts at θ_u(0) = 0
 - Status: Settled; supersedes readings (a) +1 and (b) ±1 on θ\*'s side

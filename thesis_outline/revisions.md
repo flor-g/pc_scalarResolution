@@ -49,6 +49,18 @@ Third message:
 > theta_u; remember that our model commits to learned theta_u and we never assume a fixed theta_u
 > unless it is a control. For Q2 and O7, can you elaborate on the issue a bit more?
 
+Fourth message:
+
+> For Q5, theta_u* stays the commitment. At an appropriate place, we might want to explain the
+> reason for choosing so: our mathematical model predicts theta_u* as the halting value, but the
+> simulation exposes a cost problem. We have not yet determined a self-contained halting mechanism
+> for the simulation. Any "realizable" theta_u are defined adhoc given theta_u* value known by
+> closed form. However, in a simulation, we would want to assume that the system is agnostic to the
+> value of the closed-form theta_u*, hence an adhoc realizable theta_u is insufficient to be adopted
+> to our theoretical commitment yet.
+> ---
+> With that said, let's address O7 first. Would you propose a renaming for senses 1 and 3?
+
 ## 1. Decisions this plan rests on
 
 | ID | Decision | Decided by |
@@ -62,6 +74,7 @@ Third message:
 | R7 | **Q1.** The Cremers parallel is kept, and moves into the discussion of the q read-out. It is stated about q against q_lit, where the tempering lives, and not about the utility level. It no longer serves §5.1 as corroboration. | user (2026-09-13) |
 | R8 | **Q3.** The background states only its own length and assumes no combined word count. **Applied** to `background_sections.md` lines 13–14, 2026-09-13. | user (2026-09-13) |
 | R9 | **Q4.** The halting claim concerned the **slow** maximizer: θ\* of F̃, in closed form (Eq. B2). The model commits to a learned θ_u; a fixed θ_u appears only as a stated control (A9, B4), and the outline's wording follows that. | user (2026-09-13) |
+| R10 | **Q5.** θ\* stays the commitment, and A9 is unchanged. The paper explains why at an appropriate place, recommended §5.3 (item 2). The model predicts θ\* as the halting value, but the simulation exposes a cost problem, and no self-contained halting mechanism for the simulation has been determined. Every "realizable" θ_u is defined ad hoc, given the closed-form θ\*. A simulated system should be assumed agnostic to that value, so an ad hoc θ_u cannot yet be adopted as the commitment. | user (2026-09-13) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
 commitment), A14 (conventionalized), A16 and B7 (q is a comparison read-out; the delta is the
@@ -280,9 +293,8 @@ Evidence for §5.3, reported without interpretation:
 - **Add after lines 388–397: the read-out link (R4, about 40 words).** Content in §5 below, item 1.
 - **Lines 398–420, what is not derived.** Survives. Add to its list that an end to learning short
   of the slow maximizer is also a claim about the unbuilt level (item 2).
-- **Lines 422–431, the position on the current gain.** Survives. **Before quoting**, confirm that a
-  cell prints the four exposure-only θ\* values (−11.28, −44.18, −65.70, −28.44) (C6). They are
-  not in this plan's sources.
+- **Lines 422–431, the position on the current gain.** Survives. The four exposure-only θ\* values
+  (−11.2844, −44.1766, −65.7004, −28.4375) are printed by Code Cell B, *ALTERNATIVE SPACES*.
 - **Lines 432–435, standing qualification.** Survives.
 
 ### §5.3 and §5.4 (new)
@@ -424,12 +436,23 @@ The section's title and its term for the cost sense wait on **O7**. The content,
   It is not a term of F̃, and its locality and its standing against Bogacz (2017) would both need
   arguing (a new entry in the divergence register). Check the tutorial's own remarks on parameter
   convergence before citing it either way (agent.md §3.2).
-- **The tension with A9 (Q5).** A flow halted short of θ\* holds θ_u at the halting value, which is
-  not θ\*. The paper must say which of these holds. Either θ\* stays the model's commitment and the
-  halting mechanism is an account of how an implemented network approximates it, so that no
-  implemented network ever holds θ\*. Or the committed θ_u becomes the halted value, which changes
-  what "learned" means in A9 and moves every reported number, though not the verdicts from the
-  threshold on (F29).
+- **Why θ\* stays the commitment (R10; the paper's explanation goes here).**
+  - The mathematical model predicts θ\* as the value at which the slow flow halts.
+  - The simulation exposes a cost problem, and no self-contained halting mechanism for it has been
+    determined.
+  - The lower θ_u values the evaluation reports are ad hoc: each is located using θ\* already known
+    in closed form. A simulated system should be assumed agnostic to that value, so none of them can
+    yet be adopted as the commitment.
+
+  Code Cell 2 shows the dependence concretely (checked 2026-09-13):
+  - the threshold (2.126) is a bisection on fractions of θ\*, and the run is attempted only where
+    the conjunction already holds at θ\*;
+  - the one-update θ_u (13.3749) is computed without θ\*, but the flow is stopped there by Part C's
+    criterion. That criterion is a statistic of the read-out q against q_lit, computed outside the
+    network: an evaluator's stopping rule, not one the simulated system has.
+
+  So these values measure what the verdict needs. The model's commitment remains θ\*, and the
+  missing halting mechanism is an open problem of the simulation.
 - **With the level.** Under R9, what §5.3 has to claim for the alternatives level concerns the slow
   flow, not how one inference ends. Either the level's slow objective has a maximizer its flow
   reaches, or its verdict does not depend on growing a gain whose cost grows with it. Neither is
@@ -503,7 +526,7 @@ The section's title and its term for the cost sense wait on **O7**. The content,
 
 ## 7. Questions for the user
 
-**Resolved:** Q1 as R7, Q3 as R8, Q4 as R9.
+**Resolved:** Q1 as R7, Q3 as R8, Q4 as R9, Q5 as R10.
 
 ### Q2. The "shape of absence" argument (open)
 
@@ -554,12 +577,10 @@ about lexical strength.
 **Agent's recommendation: (a).** It keeps what is measured, and it does not rest a claim about the
 level on the arm that the read-out partly produces.
 
-### Q5. How a halting mechanism stands with A9 (open, new)
+### Q5. How a halting mechanism stands with A9 (resolved, R10)
 
-Item 2 above. A flow halted short of θ\* does not hold θ\*, while A9 commits the model's θ_u to θ\*.
-Options: (i) θ\* stays the commitment, and halting is an implementation account of approximating
-it; or (ii) the halted value becomes the commitment, which revises A9. Recorded as a dated finding
-under A9 in `decisions.md`; no change to the model.
+θ\* stays the commitment, and A9 is unchanged. The reason, and where the paper gives it, are in
+item 2. Recorded under A9 in `decisions.md`.
 
 ### O7. The three senses of "realizability" (open, in `decisions.md`)
 
@@ -578,7 +599,7 @@ Elaborated there (finding of 2026-09-13).
 | 9.98e-10, 4.6e-14, tails 1.7e-3 / 3.3e-6 | Code Cell 2, Part A |
 | 404.8, Eq. (28) table | Text cell 4, *Integration cost and conditioning* |
 | F15 (not within 0.1% after 5,000 updates), 145/145 | `procedure_records/theta_u_learned_reach.md` (recorded scripts, not a cell) |
-| Exposure-only θ\* (−11.28, −44.18, −65.70) | **not located**; confirm before quoting |
+| Exposure-only θ\* (−11.2844, −44.1766, −65.7004, −28.4375) | Code Cell B, ALTERNATIVE SPACES |
 
 ## 9. Other stale pointers found
 
