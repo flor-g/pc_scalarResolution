@@ -569,6 +569,23 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   - **What renaming costs is uneven.** Senses 1 and 3 live in markdown plus one Code Cell B header.
     Sense 2 lives in a function name, a printed header, row labels and a docstring that E2 copies and
     E3 calls by name, so renaming it means re-running both notebooks.
+- Findings added later: 2026-09-13, **senses 1 and 3 renamed by the user** (record
+  `procedure_records/o7_renaming.md`).
+  - Sense 1 → **"exact solvability"** (agent's proposal, approved by the user). Appendix B's
+    preceding sentence already says θ v_p = u "is solvable". Changed: Appendix B's two sentences, and
+    Code Cell B's header, now `EXACT SOLVABILITY AT theta_u*`. Rejected: "exact fit", because in the
+    outline "fit" means fitting a model to data.
+  - Sense 3 → **no term. The user's wording, "collapses a contrast between exclusion sets"**, matches
+    existing usage (Text cell 5 Part A, "collapse {some, all}"; Appendix C's table, "collapses").
+    Appendix C §7 now reads "$m=2$ collapses no contrast between exclusion sets" and "$m=1$ *does*
+    collapse a contrast, the one between *some* and *all*". It is exact: every non-constant
+    {−1,0,1} combination of intervals is χ_A − χ_B for two exclusion sets, and it lies in the unseen
+    subspace iff the projection maps A and B to the same point. Rejected: "expressible" (Appendix C
+    §1 uses it for the span, which §7 contrasts with the lattice) and "representable" (already used
+    for s = 1 and in Appendix A, and the planned §5.4 argues about representation).
+  - **O7 stays Open for sense 2**, which is now the only use of the word. R10 of
+    `thesis_outline/revisions.md` adds that every "realizable θ_u" is located by the evaluator,
+    using θ\* or Part C's criterion, not by the simulated system.
 
 ---
 

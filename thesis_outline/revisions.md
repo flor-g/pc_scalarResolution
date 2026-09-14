@@ -582,9 +582,11 @@ level on the arm that the read-out partly produces.
 θ\* stays the commitment, and A9 is unchanged. The reason, and where the paper gives it, are in
 item 2. Recorded under A9 in `decisions.md`.
 
-### O7. The three senses of "realizability" (open, in `decisions.md`)
+### O7. The three senses of "realizability" (open for sense 2, in `decisions.md`)
 
-Elaborated there (finding of 2026-09-13).
+Elaborated there (finding of 2026-09-13). Senses 1 and 3 were renamed on 2026-09-13: Appendix B now
+says "exact solvability", and Appendix C §7 says that a projection "collapses a contrast between
+exclusion sets". Sense 2, the cost sense, is the only use left and is still open.
 
 ## 8. Where the numbers are printed
 
