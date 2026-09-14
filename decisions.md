@@ -457,6 +457,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   pointer from `main.ipynb` stays bare until the background outline is finalized (reach.md A11).
 - Findings added later: 2026-09-13, Appendix A's pointer to the alternatives level is bare on the
   same rule (A17).
+- Findings added later: 2026-09-13 (agent), the outline is now `thesis_outline/sections_3-6.md` and
+  the section numbers above no longer apply. Neither current outline contains the settling-cost
+  argument this pointer defers to: §5.1's complexity case concerns branching, not settling time. The
+  planned §5.3 of `thesis_outline/revisions.md` would supply the target. The pointer stays bare, and
+  the term itself is O7.
 
 ### O4. The `\ker` sentences in Text cell 3 §3.2 and Appendix A
 - Status: Open as of 2026-09-09; **verify whether still open**
@@ -485,6 +490,41 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   and *all* three do (worst −2.9e-2). E.1 now reports both. Eq. (E6) states τ_r ≤ τ_ε, E.2 says a
   relay at the error units' own speed suffices, and `infer` already requires τ_r < τ_ε strictly.
   Options: keep ≤ and state the exception; make the bound strict; or read "monotone" to a tolerance.
+
+### O7. "Realizability" names three different things
+- Status: Open (since 2026-09-13)
+- Decided by: not decided. Opened on the user's instruction (2026-09-13): "The terminology clash
+  needs to be handled more carefully, so mark it as open decision." Raised while planning the outline
+  revision, `thesis_outline/revisions.md` §5 item 2.
+- The term carries three senses across the notebooks:
+  1. **Exact realizability.** Appendix B: a θ at which both residuals vanish and F = 0, which is what
+     identifies θ there ("it is realizability that identifies θ"; "what μ_u ≠ 0 buys is not
+     realizability"). Code Cell B prints `REALIZABILITY AT theta_u*` in this sense.
+  2. **The cost of reaching the verdict.** Code Cell 2's `realizability_report` and its header
+     `REALIZABILITY: WHAT THE CONJUNCTION NEEDS, AGAINST WHAT theta_u* COSTS`; the `realizable θ_u`
+     rows of `delta_readout_report`; Text cell 4 Part D's reading guide (four uses); a Code Cell 4
+     comment; B7; O3. Mirrored in E2 and replayed by name in E3. It covers two different quantities:
+     the least |θ_u| meeting the conjunction (2.126 under the delta-like prior), and the θ_u one
+     update of Eq. (20) reaches (13.3749), which is the one labelled "realizable".
+  3. **Representability of a direction by exclusion sets.** Appendix C: "no exclusion set realizes
+     it", "is realizable".
+  "Realizing E_y" in Appendix A and in Code Cell 1's comment is ordinary usage and not part of the
+  clash.
+- Options, and what each would change:
+  - (a) Rename sense 2. This touches Code Cell 2's function name, headers and labels; E2 (agent.md §2
+    item 1); E3's replay list, which calls the function by name (item 7); Text cell 4; B7 and O3.
+    Both notebooks must be re-executed. A new term has to be chosen, and it should also say which of
+    the two quantities it names.
+  - (b) Rename sense 1: Appendix B's markdown and Code Cell B's printed header. Code Cell B is not
+    mirrored in E2, so only main is re-executed. Check first whether sense 1 is the established usage
+    Appendix B is borrowing, before renaming away from it.
+  - (c) Keep the word and define each sense at first use.
+  - Sense 3 can move to "represents" under any option.
+- Needed to decide: the user's choice among (a)-(c), and the replacement term if (a) or (b).
+- Interim rule: the outline revision does not introduce "realizability" in a new sense. Its new §5.3
+  names the cost sense descriptively until O7 is settled.
+- Depends on it: `thesis_outline/revisions.md` §5 item 2 and §3's §5.3 title; Text cell 4; Appendices
+  B and C; Code Cells 2 and B; E2 and E3; B7; O3.
 
 ---
 

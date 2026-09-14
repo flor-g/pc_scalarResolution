@@ -27,6 +27,7 @@ into a project file (`decisions.md`, the change record, this file), never only i
 | `decisions.md` | Every architectural and implementation decision, who made it, why, and every open decision. Also the Bogacz divergence register and the quantity trace register. | Before any change that touches the architecture, an evaluation, or a quantity. |
 | `audits/` | One folder per audit run, holding its scripts and their output, which the registers of `decisions.md` cite. | To reproduce or rerun an audit. |
 | `procedure_records/` | One working record per multi-step change (§5.3). Its `theta_u_learned_reach.md` is the record of the change that made θ_u learned everywhere: tasks T0-T11, findings F1-F34, and §5.C, the table of retained fixed-θ controls. | As the model for a change record (§5.3), and for the evidence behind decisions A9-A11 and I1-I5. |
+| `thesis_outline/` | The dissertation outline: `sections_3-6.md` (proposal, evaluation, discussion, conclusion), `background_sections.md` (background), and `revisions.md` (the pending revision plan for both). The composition guide covers the outlines. | Before any claim about the paper's argument, and before editing either outline: read `revisions.md` first. |
 | `backups/` | Folder snapshots from before the project was under git (2026-09-11, 2026-09-12). Historical: never modify. Read a folder's README before trusting its name. | Only to recover something older than the first commit. |
 | `.gitignore`, `.gitattributes` | Git configuration: what is excluded (`.venv/`, `.DS_Store`, notebook checkpoints, caches), and the nbdime diff and merge drivers for notebooks. | Before changing what git tracks (§4.5). |
 
@@ -61,9 +62,9 @@ main restated, references.
 
 ### Outside this folder
 
-- `~/Desktop/sections_3-5_outline.md`, `~/Desktop/background_sections_outline.md`: the dissertation
-  outline. The composition guide covers them. Do not edit the `_copy` versions.
-- **Not maintained, do not edit or treat as current:** `~/Desktop/revision*.ipynb`,
+- **Not maintained, do not edit or treat as current:** `~/Desktop/sections_3-5_outline.md`,
+  `~/Desktop/background_sections_outline.md` and their `_copy` versions (drafts of 2026-09-01,
+  superseded by `thesis_outline/`), `~/Desktop/revision*.ipynb`,
   `revision2 copy.ipynb`, `scalar_implicature_PC_annotated-7*`, `cell7_rebuilt_spec.md`,
   `mu_u_probe_report.md`.
 
@@ -236,7 +237,7 @@ A single hand edit to one prose sentence is low-risk. When unsure, make a checkp
    `Checkpoint before <label>` with the message body of §4.3, and record the hash.
 4. **Uncommitted or untracked changes you did not make:** they are the user's. Do not fold them into
    your checkpoint and do not discard them. Stop and ask the user whether to commit them first.
-5. **Files outside the repository** (for example the outlines on the Desktop): git cannot back them
+5. **Files outside the repository** (for example anything on the Desktop): git cannot back them
    up. Copy them into a **new** folder `backups/YYYY-MM-DD-<label>/`, never into an existing one
    (F33: that destroyed the only pre-T8 snapshot). Add a `README.md` listing each file with its
    sha256, check the copies hash-equal, and commit the folder.
