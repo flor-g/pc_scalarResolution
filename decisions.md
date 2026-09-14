@@ -415,6 +415,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: Text cell 4 Parts C and D, *Integration cost and conditioning*, Text cell 6, E.1's
   delta-like relay bound; B3, B7, B8, I10.
 - Evidence: `audits/2026-09-14-strong-lambda/` (F1–F8 of the change record).
+- Findings added later:
+  - 2026-09-14, prose pass (change record §6). **Agent drafts, pending user confirmation:** Part C's
+    first commitment restated as "strengthening is relative to the prior and to the strength of the
+    entry together"; two new reserved positions (the leak of *all* under the Gaussian prior at Λ = 8;
+    q's conjunction against the delta read-out's peak under flat and Beta(3,1)); Part C's closing
+    claim re-scoped to three of five priors at Λ = 512. Nothing here changes a settled decision.
 
 ---
 
@@ -973,3 +979,9 @@ confirmation.
   scope paragraph until the prose pass.
 - Every number Code Cell 2b prints is class (e) for prose until Text cell 4b or Parts C–D quote it
   against the executed output (`procedure_records/evaluation_partD_atStrongLambda.md` §5).
+
+**E13. Part D quoted all-region masses no cell printed (found 2026-09-14, prose pass F15).** Class (e),
+resolved. q_lit under *some* (0.0504 flat, 0.1368 Beta(3,1)) and the tempered control (0.0066, 0.1357,
+0.2356) were quoted at four decimals and printed by no cell. `base_prior_sweep` now prints the
+all-region masses of q_lit, the tempered control and the full network beside the tempering/utility
+split, in Code Cells 2 and 2b (and E2, E2b).

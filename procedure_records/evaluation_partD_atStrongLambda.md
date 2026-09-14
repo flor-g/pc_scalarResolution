@@ -1,8 +1,8 @@
 # Part D at a strong Λ, and the new cell after Code Cell 2
 
 Working record, on the pattern of `theta_u_learned_reach.md` (agent.md §5.3). It is the guide for
-the change. **Status 2026-09-14: code tasks T0–T8 closed, T9 (commit) in progress; the prose pass
-(S-6, §5) is open.** §1.1–1.3 were measured by the probe before the change; Code Cell 2b now prints
+the change. **Status 2026-09-14: code tasks T0–T9 closed; prose pass T10 drafted and verified, its
+interpretive choices (§6.2) awaiting the user's review.** §1.1–1.3 were measured by the probe before the change; Code Cell 2b now prints
 every number there (C6). The scripts are in `audits/2026-09-14-strong-lambda/`.
 
 ## 0. Instructions (the user's, verbatim, 2026-09-14)
@@ -472,3 +472,90 @@ Draft wording goes to the user before it lands. Interpretive sites are under S-6
   cell; add that flat at Λ = 512 is the cell (1, 512) (F8).
 - **Appendix E, E.1** (≈ line 100): the delta-like relay bound's source, per S-4.
 - **ToC, agent.md, decisions.md** cell references (T7).
+
+---
+
+## 6. Prose pass (T10, 2026-09-14, on the user's instruction "proceed to the prose pass")
+
+- [x] **T10 (2026-09-14).** Drafted, executed and verified: `RUNNER OK main.ipynb: error outputs 0,
+  figures 8, runtime 249 s`, 14/14; `RUNNER OK appendix_E.ipynb: error outputs 0, figures 5, runtime
+  693 s`, E2 18/18, E3 PASS on Code Cell 2 (191 identical) and Code Cell 2b (217 identical). The only
+  changed output lines are the mass columns (F15) and Code Cell 2b's control conclusion (F14). Every
+  decimal on a changed markdown line is found in the executed outputs (`verify_prose_pass.py`).
+  Committed for review; §6.2 is not settled until the user confirms.
+
+Checkpoint: 8aaf9ff (clean tree). Script: `prose_pass.py` (every replacement asserted against the
+current text). All sites of §5 were written against the executed outputs of 3cbb721; the new text is
+checked number by number against the re-executed outputs (`verify_prose_pass.py`).
+
+### 6.1 Sites changed
+
+- **Text cell 3 §3 item 4:** "one of the five base priors Text cell 4 Part D runs" → Part D and
+  Text cell 4b.
+- **Text cell 4 Part C:**
+  - the baseline and delta read-out pointers name Part D and Text cell 4b;
+  - the verdict paragraph: at Λ = 8 none of Part D's four; at Λ = 512 three (flat, Beta(3,1),
+    delta-like), with their thresholds; the Text cell 6 band contains the flat and delta-like rows;
+  - non-specificity: Gaussian at Λ = 8 unchanged, plus the leak of *all* there (0.6260); at Λ = 512
+    *no* and *all* saturate under all five;
+  - commitment 1 restated (see 6.2);
+  - the mechanism's sweep is printed by Code Cell 2b;
+  - the closing paragraph re-scoped to three priors at Λ = 512 and none of four at Λ = 8; the user's
+    final sentence ("Regarding whether direct alternative competition …") kept verbatim.
+- **Text cell 4 Part D:** intro to four priors at Λ = 8; the delta-like paragraph moved to Text cell
+  4b; ℓ₀-invariance 5.3e−15 over four; integrated rows over four; baseline/control masses over four
+  (the "coincide only … delta-like row" sentence cut, Entry 3a, since at Λ = 512 the tempering is
+  smaller under Beta(1,3) than under the delta-like prior); prior-dependence of size, not sign, with
+  the sign case pointed to Text cell 4b; the table loses the delta row, and its Beta(3,1) q_lit is
+  corrected from 0.1367 (that was P₀) to 0.1368; the conjunction reading ("under none of the four");
+  the four-row reading's last two sentences replaced by a pointer; the delta read-out guide's
+  realizable rows and φ_u\* example now name Text cell 4b; the peak paragraph over four priors; the two
+  departures from an entry's own cell now note that both rows have the largest leak, 0.91.
+- **Text cell 4, *Integration cost and conditioning*:** what is integrated at Λ = 8 and at Λ = 512;
+  thresholds for the three rows; the three integrated runs (step counts to three significant figures,
+  agent.md §5.2); the separation range 12–46 and 7.9e6–9.3e6.
+- **Text cell 4b:** written in full: why a strong Λ (with B3's derivation moved from Part D); headroom;
+  the table; the conjunction; what the shift is made of; the prior matters less (and why, Eq. 24's
+  saturation); the figures; the delta read-out at Λ = 512.
+- **Text cell 6:** the delta-like row and its table named as Text cell 4b's; the band paragraph
+  rewritten (see 6.3); the end-to-end runs pointer.
+- **Code Cell 2b / E2b (F14):** the moved Gaussian control no longer prints "the delta row's result
+  is the prior's doing and not its Lambda's". It prints that at one Λ the difference between the
+  Gaussian and delta-like rows is the prior's, and lists the priors under which raising Λ alone
+  carries the shift below zero, computed from the rows.
+- **Code Cell 2 / E2:** the tempering/utility table now also prints the all-region masses of q_lit,
+  the tempered control and the full network. Five numbers Part D quoted were printed by no cell
+  (F15).
+- **Appendix E:** E.1's delta-like relay bound is attributed to Text cell 4b; E.3's stale "Code cells
+  9 and 10" corrected to Code Cells 2 and 2b.
+
+### 6.2 Interpretive choices, agent drafts pending the user's review (agent.md §5.4)
+
+1. **Part C's first commitment.** Was "strengthening is prior-relative … it is the prior doing that
+   rather than the raised Λ". Now "strengthening is relative to the prior and to the strength of the
+   entry together": at Λ = 8 one sign across Part D's four priors; at Λ = 512 the sign follows the
+   prior; raising Λ alone carries flat and Beta(3,1) across zero and moves the Gaussian away. "It
+   appears exactly where the prior most favours *all*" is kept, scoped to the five priors at a
+   strength where every entry holds (the three with the largest P₀(all-region) meet it).
+2. **A new reserved position (Entry 3b).** Part C notes that the Gaussian verdict for *all* at Λ = 8
+   (−0.4557) comes with a leak of 0.6260 for that entry, and reserves our position.
+3. **A new reserved position (Entry 3b).** Text cell 4b notes that under flat and Beta(3,1) q meets
+   both conditions while the delta read-out's peak lies above the ℓ₀ peak, and reserves our position.
+   B8's criteria are not named (still class (e) until `delta_criteria_printing.md` T1).
+4. **Part C's closing claim** now reads "under three of five priors at a lexical strength where every
+   entry holds and over a band of the plane, and not under Part D's four priors at Λ = 8".
+5. **Text cell 4b's explanation of the prior's reduced effect** (every θ_u\* in the saturation of
+   Eq. 24) rests on `delta_criteria_printing.md` F5 (the halving within 1e−3 wherever |θ\*| is large);
+   no cell prints that check (C6 for the argument, not for a number).
+
+### 6.3 Corrections found in passing
+
+- Text cell 6 said the delta-like row was "the only one of the five to clear either" floor; at
+  Λ = 8 all four diffuse priors clear the second condition's floor (2 at α ≤ 8). Rewritten.
+- Text cell 4 Part D's table printed P₀(all-region) (0.1367) in the q_lit column for Beta(3,1).
+
+### 6.4 Findings
+
+- **F15.** Part D quoted q_lit masses 0.0504 and 0.1368 and tempered masses 0.0066, 0.1357 and 0.2356
+  that no cell printed at four decimals (C6). Resolved by printing the three masses beside the split
+  (Code Cell 2, E2, and so Code Cell 2b).
