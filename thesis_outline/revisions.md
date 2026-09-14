@@ -716,6 +716,10 @@ printed by any cell). **The two movements share a direction, not a source.**
 - **q's positive shift** is the tempering, which a mode cannot see.
 - **Bearing on the V.** The same result explains the missing left arm under the delta read-out: for
   α ≤ 8 the literal mode sits where the tilt wins at every Λ.
+- **Checked across the plane (record F5).** The halving of Eq. (24) is close in every cell: within
+  1e-3 in 111 of 121, and 17% on the tilt at worst, at the smallest |θ\*| (6.51). Eq. (24)'s limit
+  field gives the model's mode and all four verdicts in all 121 cells and in Part D's five rows. So
+  the reading does not rest on θ\* being large.
 
 ### Q5. How a halting mechanism stands with A9 (resolved, R10)
 

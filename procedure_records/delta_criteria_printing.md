@@ -67,8 +67,8 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
     - (ii) Code Cell 4's summary, for the plane counts;
     - (iii) both;
     - (iv) not printed, if the paper does not quote it.
-  - Before any of these, check the Eq. (24) halving across the plane, not only on the delta-like row
-    (F4 caveat).
+  - [x] Prerequisite (2026-09-13): the Eq. (24) halving is checked across the plane and on Part D's
+    rows (F5, `halving_check.py`). The placement decision above is still open.
   - Acceptance: equal to `mode_mechanism_output.txt` for whatever is printed.
 - [ ] **T4. Mirror into Appendix E** (agent.md §2).
   - Lift T1's changes and any T3 addition to Code Cell 2 verbatim into E2.
@@ -161,8 +161,32 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   - **Caveats.**
     - Modes are grid nodes.
     - The direction argument is first order.
-    - The Eq. (24) halving is checked exactly only on the delta-like row.
+    - The Eq. (24) halving was checked exactly only on the delta-like row. **Discharged by F5.**
     - No cell prints any of it.
+
+- **F5 (2026-09-13, `halving_check_output.txt`). Eq. (24)'s halving holds across the plane, and the
+  limit field carries F4's reading in every configuration tested.**
+  - **Exact form.** At σ = 1 with BᵀWB = I (checked to 2.2e-16), Eqs. (15)–(16) give the utility
+    coefficients as k = (θ/2)(μ_u + (θ/2)c)/(1 + θ²/2), with c = BᵀW(ℓ₀ − φ_L). The fitted coefficients
+    match that to 1.2e-15. So k − c/2 = ((θ/2)μ_u − c/2)/(1 + θ²/2), which vanishes as |θ_u\*| grows.
+  - **Distance from c/2, relative.**
+    - Plane: the median is 8.6e-7 for the tilt and 4.8e-6 for the width. Both columns are within
+      1e-3 in 111 cells, within 1e-2 in 119, and within 1e-1 in 120.
+    - The worst cell is (α, Λ) = (1, 2), at θ\* = −6.51, the smallest |θ\*| on the plane: its tilt is
+      17% below half (+0.94 against +1.14). The next is (1, 4), at θ\* = −16.39, with 3.4%.
+    - Part D: Gaussian tilt 1.0e-2, Beta(1,3) tilt 3.8e-2, everything else ≤ 3e-3. The delta-like
+      row is at 4.7e-7 and 3.7e-6.
+  - **Signs.** sign(k) = sign(c) in both columns in all 121 cells and all five Part D rows. c is
+    (+, −) in every plane cell; on Part D, Beta(1,3)'s c tilt is negative (−2.88). Part C's c_some
+    under the delta-like prior is reproduced: +961.66, −529.77.
+  - **The limit field.** ½(ℓ₀ − φ_L) + B c/2 has the model's mode node in all 121 cells.
+    Criteria (a) and (b) and q's two conditions read the same off it as off the model, in all 121
+    cells and in Part D's five rows. The q-masses differ slightly (flat 0.0798 against 0.0799;
+    Beta(3,1) 0.1775 against 0.1788) without changing a verdict.
+  - **Consequence.** F4's reading holds already at the smallest |θ_u\*| on the plane. In every
+    configuration tested, the verdicts of both read-outs are those of the model doubling the literal
+    field's own tilt and width. F4's caveat on the halving is discharged. Its other two caveats, grid
+    modes and the first-order argument, stand.
 
 ## 4. Prose sites (after T1–T5)
 

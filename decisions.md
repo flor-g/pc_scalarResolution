@@ -370,6 +370,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     The crossover is a literal mode near s = 0.94. So criterion (a) reads the peak, which the tilt
     governs near the centre, and q's first condition reads the tail, which the width governs. That is
     why they part.
+  - **Eq. (24)'s halving, checked across the plane (record F5,
+    `audits/2026-09-13-delta-criteria/halving_check_output.txt`).**
+    - The utility coefficients k equal (θ/2)(μ_u + (θ/2)c)/(1 + θ²/2) to 1.2e-15, and sit within 1e-3
+      of c/2 in 111 of 121 cells. The worst is (1, 2) at θ\* = −6.51, 17% on the tilt.
+    - k and c have the same signs in every configuration.
+    - The limit field reproduces the model's mode node and all four verdicts ((a), (b), and both q
+      conditions) in all 121 cells and Part D's five rows. F4's reading therefore holds cell by cell.
 
 ---
 
