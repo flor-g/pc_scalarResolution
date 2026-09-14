@@ -123,6 +123,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   computation); θ_L as an input rather than a multiplicative weight (gradient not Hebbian).
 - Bogacz status: the map is an instance of Eq. (42); its gradient, Eq. (A4), is a locality
   divergence the prose does not register, see D10.
+- Findings added later: 2026-09-13, Appendix A now states the divergence (A17).
 
 ### A9. θ_u is learned in every evaluation, each configuration its own θ\*
 - Status: Settled
@@ -223,6 +224,33 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: Text cell 3 §4 item 5; Text cell 4 Part C, Part D, Reporting statistics;
   `delta_readout_report` in Code Cell 2.
 - Evidence: `procedure_records/d9_delta_readout.md` F1-F4.
+
+### A17. Eq. (A4) is stated as non-local; the relay and the alternatives level are named, not derived
+- Status: Settled; resolves D10
+- Decided by: user (2026-09-13)
+- Decision: Appendix A states that Eq. (A4) does not satisfy the locality constraint, since θ_L gains
+  all |Y| rows of A and its gradient sums products formed at |Y| word-form units (the violation of
+  Eq. B4), and that a relay of the kind Appendix E gives θ_u would be required to make it local, in
+  one or two sentences and without detail, since φ_L is not variational at this phase. It then
+  notes, conditionally, that under the alternatives level the accompanying paper proposes on
+  complexity grounds each level carries two entries, and if each pair is carried by a single
+  log-odds unit Eq. (A4) has one term and no relay is needed. The pointer to the paper is bare (as
+  O3).
+- Theoretical reason: the user's instruction (verbatim): "clarify that theta_L as per A4 does not
+  satisfy locality constraint. Then suggest that a relay similar to how we treated theta_u in
+  appendix E would be required for theta_L to be local. This is just one or two sentences and do
+  not get into the details since we have not implemented variation phi_L at this phase yet." and
+  "cross refer to the paper, where we argued that an alternatives level is strongly motivated by
+  complexity reduction. With an alternatives level, phi_L would only represent two lexical entries
+  and I suppose therefore the locality problem should not arise at all and a relay wouldn't be
+  needed."
+- Qualification (agent, accepted by the user as the conditional wording): two entries remove the
+  sum only if the pair is carried by one unit; two word-form units sharing θ_L would still pool
+  across two neurons. Not stated in the prose: if one θ_L still gains the cuts of several cascade
+  levels, Eq. (A4) pools across levels again; the outline does not settle how θ_L is split.
+- Implementational reason: none; Eq. (A4) vanishes while φ_L is clamped, so no result moves.
+- Bogacz status: divergence, see D10.
+- Depends on it: Appendix A under Eq. (A4).
 
 ### B1. The shift Δ_y is measured against q_lit, the untempered literal posterior
 - Status: Settled; supersedes the θ_u = 0 control as baseline
@@ -420,6 +448,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - The complexity point (seconds of settling are an implausible cost) belongs to the outline's
   hypothesized alternative representation level (`sections_3-5_outline.md` 3.4, 3.4.3, 5.3). The
   pointer from `main.ipynb` stays bare until the background outline is finalized (reach.md A11).
+- Findings added later: 2026-09-13, Appendix A's pointer to the alternatives level is bare on the
+  same rule (A17).
 
 ### O4. The `\ker` sentences in Text cell 3 §3.2 and Appendix A
 - Status: Open as of 2026-09-09; **verify whether still open**
@@ -479,7 +509,7 @@ verdict is the agent's reading and has not been confirmed by the user.
 | Timescale bound | commitment 7, §8.3 | Instance under restriction | D4 |
 | Closed-form fixed points and θ\* | Eqs. (15)–(16), (B2), `settle` | Surrogate | D7 |
 | Euler step, stopping rule, horizon | `infer` | Surrogate | dt = τ_ε/2; max\|derivative\| < 1e-9 for 10 steps; max_time 1000 (I3, I4, I9). His exercises use a fixed Δt and horizon |
-| g_y, and the θ_L gradient (inactive) | Eqs. (A2)–(A4) | Map: instance. Gradient: divergence (locality) | D10 |
+| g_y, and the θ_L gradient (inactive) | Eqs. (A2)–(A4) | Map: instance. Gradient: divergence (locality), stated in Appendix A (A17) | D10 |
 | Relay r = Bφ_u | Eqs. (E1)–(E4) | Divergence | D5 |
 | Relay loop spectrum | Eq. (E5) | Analysis, not an operation | his §5.1 eigenvalue method (Eq. 66), applied to a different loop |
 | Equations quoted in Text cells 1–2 and the pseudocode | his Eqs. 6, 50, 53–54, 59–61, 71 | Quoted accurately | the pseudocode and the last sentence of Text cell 2 describe Σ-learning the model does not perform; see E6 |
@@ -540,7 +570,8 @@ of q_lit as a posterior; every verdict of Parts C–D and Text cell 6. The prose
 are not model quantities (§4.5, §9.1), but not that q is not the framework's variational posterior.
 Decided by: not recorded.
 
-**D10. The θ_L gradient pools across word-form units.** Divergence (locality), not previously
+**D10. The θ_L gradient pools across word-form units.** **Resolved 2026-09-13** (A17): Appendix A
+now states that Eq. (A4) is not local and names the relay. The finding as audited: divergence (locality), not previously
 registered, and contradicted by the prose. **Flagged to the user.** Eq. (A4),
 ∂F/∂θ_L = ε_y·AWφ_L = Σ_i ε_{y,i}⟨a_i, φ_L⟩, sums products formed at |Y| different postsynaptic
 neurons. By Appendix B's own criterion for Eq. (B4) that sum is not local, yet Appendix A calls
@@ -559,7 +590,7 @@ becomes live if a later phase unfixes σ.
 | CF1 | Text cell 3 §7, under Eq. (20) | his Eqs. (25) and (29) "are stated at the inference stage, before plasticity is introduced" | Both are in §2.5, after §2.4 *Learning model parameters*, introduced as the update rule for θ and called Hebbian. |
 | CF2 | Text cell 3 §8.3 | "Bogacz gives exactly this analysis for the corresponding subsystem (his §5.1, following Eqs. 59–61)" | His eigenvalue analysis (Eq. 66) is of an error node and its interneuron with φ held constant, a subsystem this model does not have. What carries over is his statement that ε converges when φ is slower, and the method. "Exactly" and "corresponding" overstate. |
 | CF3 | Appendix B, last paragraph before *Locality* | "the status of the corresponding claim in Bogacz, where inference is convex and plasticity is not" | The tutorial makes no convexity claim, and its running example g(v) = v² is non-convex in inference. |
-| CF4 | Appendix A, under Eq. (A4) | Eq. (A4) is "local on the same terms as Eq. (20)" | See D10. |
+| CF4 | Appendix A, under Eq. (A4) | Eq. (A4) is "local on the same terms as Eq. (20)" | See D10. Corrected 2026-09-13 (A17). |
 | CF5 | Code Cell E1 `relay()` docstring; Code Cell E2 comment above the relay checks | the m-fold pooling "is the sharing Bogacz's Sec. 5 rejects for Sigma" | His §5 removes a matrix inverse. Appendix B dropped this claim for that reason and E.2 says so; the two code comments kept it. |
 | CF6 | Text cell 3 Eq. (18); E.1 under Eq. (E3) | error units cite "Eqs. 53–54"; Θ tied to Θᵀ cites "Eqs. 53, 56" | Minor: the error units are his Eq. (54); Θᵀ appears in Eq. (53) and Θ in Eq. (54). |
 
