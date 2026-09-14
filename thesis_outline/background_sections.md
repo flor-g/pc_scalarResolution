@@ -10,8 +10,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
  
 ## Scale and argumentative shape
  
-- **Target length: approximately 3,595 words**, leaving roughly 2,400 of a 6,000-word dissertation
-  for §§3–6.
+- **Target length: approximately 3,595 words.**
 - **Opening (about 220 words).** The explanandum; the three questions the dissertation answers; and
   Marr's levels, fixed by contrast with RSA.
 - **Part I — What scalar resolution is asked to explain, and why the existing division does not

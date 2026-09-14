@@ -135,6 +135,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: see D2.
 - Depends on it: every reported result.
 - Evidence: `procedure_records/theta_u_learned_reach.md` §1, T0-T11.
+- Findings added later: 2026-09-13 (agent). The outline revision (`thesis_outline/revisions.md`
+  R9, item 2) argues that the slow flow of Eq. (20) never arrives at θ\* (F15) and that, without an
+  alternatives level, a mechanism outside F̃ must halt it. A flow halted short of θ\* holds θ_u at
+  the halting value, which is not the θ\* this entry defines as learned. Raised with the user as
+  revisions.md Q5: either θ\* stays the commitment and halting is an implementation account of
+  approximating it, or the halted value becomes the commitment, which would revise this entry. No
+  change to the model.
 
 ### A10. The θ_u flow starts at θ_u(0) = 0
 - Status: Settled; supersedes readings (a) +1 and (b) ±1 on θ\*'s side
@@ -525,6 +532,32 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   names the cost sense descriptively until O7 is settled.
 - Depends on it: `thesis_outline/revisions.md` §5 item 2 and §3's §5.3 title; Text cell 4; Appendices
   B and C; Code Cells 2 and B; E2 and E3; B7; O3.
+- Findings added later: 2026-09-13 (agent), elaborating the issue at the user's request.
+  - **Senses 1 and 2 contradict each other, not only differ.** Appendix B argues that the model's
+    θ_u is *not* realizable in sense 1: θ_u μ_u = c would need c ∥ μ_u, and at θ\* the residuals stay
+    at ‖r_S‖ = 22.5, 15.8, 22.5 with F̃ = −420.209 rather than 0. Part D's guide and Code Cell 2 then
+    call θ_u = 13.3749 "realizable", where the residuals do not vanish either. A reader who meets
+    Appendix B's sense first reads Part D as asserting something Appendix B denies.
+  - **The two senses have different logical types.** Sense 1 is a property of a generative model
+    against data (can it fit exactly), close to learning theory's "realizable case" (to be checked
+    before relying on it). Sense 2 is a property of a process (can the dynamics reach a quantity at an
+    acceptable cost). Sense 3 is a property of a lattice (is a direction a combination of exclusion
+    sets).
+  - **Sense 2 also collides with a sense outside the notebooks.** The planned §5.4 argues about
+    Marr's levels, where "realization" means implementation in a physical substrate, and the
+    philosophical literature uses "multiple realizability". Read in §5.4, "realizable" would be taken
+    as "physically implementable", which is near sense 2 but not the same claim: a process can be
+    implementable and still cost 7.9e6 in timescale separation.
+  - **Sense 2 is itself two quantities.** The least |θ_u| meeting the conjunction (2.126) is where
+    the verdict first holds; the θ_u after one update (13.3749) is where the integrated run was done.
+    One name for both blurs what §5.3 needs to keep apart: when the verdict is reached, and what
+    learning costs after that.
+  - **Every candidate replacement for sense 2 carries its own baggage.** "Reachable" (control theory:
+    a state some input can drive the system to), "tractable" (complexity theory: polynomial time),
+    "attainable" (weak but close), or a descriptive phrase such as "settling cost" (plain, longer).
+  - **What renaming costs is uneven.** Senses 1 and 3 live in markdown plus one Code Cell B header.
+    Sense 2 lives in a function name, a printed header, row labels and a docstring that E2 copies and
+    E3 calls by name, so renaming it means re-running both notebooks.
 
 ---
 
