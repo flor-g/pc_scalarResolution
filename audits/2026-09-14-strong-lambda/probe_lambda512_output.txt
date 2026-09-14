@@ -1,0 +1,50 @@
+REPRODUCTION: Part D as stored (Lambda = 8, delta row 512)
+  prior         Lambda    theta_u*  P0(all)  shift no     some      all  max leak  P(all|some)  1st  2nd
+  gaussian           8    -28.4375   0.0016   +0.0003  +0.0008  -0.4557   6.3e-01       0.0025    -  met
+  flat               8   5950.6256   0.0479   +0.0004  +0.0295  -0.0160   2.3e-02       0.0799    -  met
+  skewed low         8    -14.5079   0.0001   +0.0000  +0.0004  -0.1849   9.1e-01       0.0005    -  met
+  skewed high        8     55.0081   0.1367   +0.0547  +0.0421  -0.0087   9.1e-01       0.1788    -  met
+  delta (all)      512   1407.7691   0.9568   +0.0000  -0.5217  +0.0000   1.1e-74       0.4351  met  met
+
+  prior          E[s] no    some     all   q_lit some  tempered  tempering  utility    P(all|all) lit    full
+  gaussian         0.271   0.568   0.726       0.0016    0.0191    +0.0175  -0.0167            0.8297  0.3740
+  flat             0.024   0.645   0.976       0.0504    0.1357    +0.0854  -0.0559            0.9934  0.9774
+  skewed low       0.019   0.361   0.334       0.0001    0.0066    +0.0065  -0.0061            0.2745  0.0896
+  skewed high      0.665   0.808   0.982       0.1368    0.2356    +0.0988  -0.0568            0.9979  0.9892
+  delta (all)      0.003   0.946   0.998       0.9568    0.8982    -0.0586  -0.4631            1.0000  1.0000
+
+  prior         lambda_max(H)*  theta_crit  lambda(crit)  updates  holds to *   delta: ell_0 peak s some peak s  (a)  (b)
+  gaussian            8.11e+02                     no conjunction at theta_u*                0.5000      0.5890    -  met
+  flat                3.54e+07                     no conjunction at theta_u*                0.5000      0.6726    -  met
+  skewed low          2.12e+02                     no conjunction at theta_u*                0.2535      0.3274    -  met
+  skewed high         3.03e+03                     no conjunction at theta_u*                0.7465      0.8429    -  met
+  delta (all)         1.98e+06       2.126           6.5        1        True                0.9852      0.9468  met  met
+
+PROBE: Lambda = 512 for every prior
+  prior         Lambda    theta_u*  P0(all)  shift no     some      all  max leak  P(all|some)  1st  2nd
+  gaussian         512   1580.8143   0.0016   -0.0000  +0.0071  +0.0000  1.7e-177       0.0088    -  met
+  flat             512   1521.4822   0.0479   -0.0000  -0.0146  -0.0000  6.2e-177       0.0357  met  met
+  skewed low       512   1589.4935   0.0001   -0.0000  +0.0089  -0.0000  7.1e-175       0.0091    -  met
+  skewed high      512   1499.3704   0.1367   -0.0000  -0.0955  -0.0000  1.8e-179       0.0413  met  met
+  delta (all)      512   1407.7691   0.9568   +0.0000  -0.5217  +0.0000   1.1e-74       0.4351  met  met
+
+  prior          E[s] no    some     all   q_lit some  tempered  tempering  utility    P(all|all) lit    full
+  gaussian         0.002   0.899   0.998       0.0016    0.0191    +0.0175  -0.0104            1.0000  1.0000
+  flat             0.002   0.912   0.998       0.0504    0.1361    +0.0857  -0.1003            1.0000  1.0000
+  skewed low       0.002   0.898   0.998       0.0001    0.0067    +0.0065  +0.0024            1.0000  1.0000
+  skewed high      0.002   0.914   0.998       0.1368    0.2356    +0.0989  -0.1943            1.0000  1.0000
+  delta (all)      0.003   0.946   0.998       0.9568    0.8982    -0.0586  -0.4631            1.0000  1.0000
+
+  prior         lambda_max(H)*  theta_crit  lambda(crit)  updates  holds to *   delta: ell_0 peak s some peak s  (a)  (b)
+  gaussian            2.50e+06                     no conjunction at theta_u*                0.5000      0.9072    -  met
+  flat                2.31e+06       3.078          11.5        1        True                0.5000      0.9168    -  met
+  skewed low          2.53e+06                     no conjunction at theta_u*                0.2535      0.8966    -  met
+  skewed high         2.25e+06       1.021           3.0        1        True                0.7465      0.9168    -  met
+  delta (all)         1.98e+06       2.126           6.5        1        True                0.9852      0.9468  met  met
+
+  phi_u* (tilt, width) at Lambda = 512, and c_y = B^T W (ell_0 - phi_L)
+  gaussian     no: phi_u [-0.369,+0.222] c [-583.6,+350.5]  some: phi_u [+0.369,-0.245] c [+583.6,-387.7]  all: phi_u [+0.369,+0.222] c [+583.6,+350.5]
+  flat         no: phi_u [-0.384,+0.239] c [-583.6,+364.2]  some: phi_u [+0.384,-0.246] c [+583.6,-374.1]  all: phi_u [+0.384,+0.239] c [+583.6,+364.2]
+  skewed low   no: phi_u [-0.375,+0.226] c [-595.6,+359.3]  some: phi_u [+0.360,-0.238] c [+571.6,-379.0]  all: phi_u [+0.360,+0.226] c [+571.6,+359.3]
+  skewed high  no: phi_u [-0.381,+0.240] c [-571.6,+359.3]  some: phi_u [+0.397,-0.253] c [+595.6,-379.0]  all: phi_u [+0.397,+0.240] c [+595.6,+359.3]
+  delta (all)  no: phi_u [-0.146,+0.148] c [-205.6,+208.5]  some: phi_u [+0.683,-0.376] c [+961.7,-529.8]  all: phi_u [+0.683,+0.148] c [+961.7,+208.5]
