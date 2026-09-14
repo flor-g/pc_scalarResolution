@@ -61,6 +61,21 @@ Fourth message:
 > ---
 > With that said, let's address O7 first. Would you propose a renaming for senses 1 and 3?
 
+Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming.md`):
+
+> Sense 1 renaming approved. For sense 3 maybe say "this map collapses contrasts between exclusion
+> sets"? Reads easier this way.
+
+> The cost sense retain the "realizability" name as is; no change needed. Now let's work on Q2.
+> Here are my thoughts:
+>
+> 1. the delta read-out still comes with two criteria: a. whether mode(phi_s*) - mode(ell_0) is
+> negative; this is shift_some. b. whether mode(phi_s*) falls outside the cell of [[all]]. Just be
+> careful that even though these two criteria are meant to mirror the two criteria as already
+> defined, their satisfaction may not be equivalent.
+> 2. The V-shape is instereting and it definitely needs to be discussed,
+> 3. I am not sure what you mean with the unstated premise and what level is it a motivation of.
+
 ## 1. Decisions this plan rests on
 
 | ID | Decision | Decided by |
