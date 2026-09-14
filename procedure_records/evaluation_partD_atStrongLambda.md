@@ -433,7 +433,7 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   - `decisions.md`: E-register entries for each new printed quantity; B3/B7/B8/I10 updates per T1.
   - `delta_criteria_printing.md`: note the order chosen under S-5, and that its T1 acceptance now
     spans two cells.
-- [ ] **T9. Commit** (agent.md §4.3), with the hash on each closed task. Push only if asked.
+- [x] **T9 (2026-09-14). Commit** — closed: T0 is a202cdb; T1–T8 are 3cbb721. Not pushed.
 
 ---
 
