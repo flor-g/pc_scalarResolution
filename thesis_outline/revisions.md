@@ -204,6 +204,8 @@ lines 13–14 now state only its own target.
     the evidence for item 2;
   - the conjunction threshold against θ\*, placed at §4.6 and §5.3, because it is what dissolves
     the maximizer-as-halting claim.
+- **Tier A, the closed-vs-open-scale row (line 60).** Its "second empirical anchor" depends on Q7.
+  The row stays in Tier A only if §5.2's prediction is rebuilt on the learned model.
 - **Tier B, line 63.** §5.3 → §5.5.
 - **Tier C, lines 74–77.** Remove "Conditioning and stiffness (Eq. 28)", which moves to Tier A.
   §5.3 → §5.5.
@@ -226,6 +228,15 @@ Replace with §3 above.
   stability requirement of its own. It needs only τ_r ≤ τ_ε, and the reason is monotone F, not
   oscillation. It inherits θ_u⁻² from τ_ε rather than carrying its own. Eq. (E6) keeps ≤, with the
   exception that at equality F is monotone under *some* only (O6).
+
+### §3.5 (lines 197–213)
+
+- **Lines 201–209, the parity bullet.** Survives.
+- **Lines 212–213**, "Every result in §4.4 and §5.2 turns on which of the two an entry loads".
+  - Under learning, what the utility level doubles is the literal field's loading, the prior's
+    included (F5).
+  - §5.2's measured contribution is carried by the tilt (§5.2 entry below).
+  - Restate: the results turn on the literal field's tilt and width.
 
 ### §3.6 Two read-outs (new, about 100 words)
 
@@ -325,6 +336,93 @@ Evidence for §5.3, reported without interpretation:
   (−11.2844, −44.1766, −65.7004, −28.4375) are printed by Code Cell B, *ALTERNATIVE SPACES*.
 - **Lines 432–435, standing qualification.** Survives.
 
+### §5.2 (lines 436–477): re-examined 2026-09-14
+
+**Source.** `audits/2026-09-13-scale-structure/` (script and `output.txt`).
+- The audit uses Code Cell 1's closed form (agreement 0.0), and recovers θ\* = −28.4375 for the
+  default network.
+- A single-threshold predicate excludes the states below its cut: χ_t = 1[ζ < logit s_t], Λ = 8.
+- **No notebook cell prints any of this.**
+
+**Where §5.2's numbers come from.** No probe survives, in the project or on the Desktop. The numbers
+appear only in the outline.
+- **Gaussian precision 2, at θ_u = 1:** reproduces exactly. −0.0055 at s = 0.50 and +0.0200 at 0.98,
+  against the quoted −0.005 and +0.020.
+- **Flat prior:**
+  - at θ_u = 1, +0.0324 and +0.0669, against the quoted +0.034 and +0.070;
+  - at θ_u = −28.4375, the default prior's θ\* carried into another configuration (the F9/F23
+    pattern), +0.0455 and +0.0945, against the quoted "+0.047 → +0.099 at θ_u\*".
+
+  Close but not exact, so the flat setup differed slightly.
+- **Loading ratios:** 0.219 at 0.73 and 0.633 at 0.95 reproduce. At 0.99 the ratio is 0.994, not 1.07.
+- **So every magnitude in §5.2 is a θ_u = 1 control or a carried θ\*.** Under A9 and B4 neither can
+  stand as the model's result, and under C6 none is printed.
+
+**What the learned model gives.**
+- **Which θ\*.** A single predicate's θ\* needs an exposure ensemble, and that is undecided
+  (`decisions.md` O8). Two illustrative ensembles, the predicate alone and the predicate with its
+  complement, give |θ\*| from 4.6 to 91. Their contributions are within about 5% of Eq. (24)'s
+  limit.
+- **So the limit is used.** It needs no θ\*, and by F5 it decides every verdict on the plane.
+- **Contribution** = E_q[s] of the limit field minus E_q[s] of the tempered field. An asterisk marks
+  a cut the prior overrides: q-mass on the excluded states is at least 0.4 in the limit field.
+
+| s_t | 0.50 | 0.60 | 0.73 | 0.80 | 0.90 | 0.95 | 0.98 | 0.99 |
+|---|---|---|---|---|---|---|---|---|
+| flat | +0.0469 | +0.0460 | +0.0439 | +0.0436 | +0.0485 | +0.0619 | +0.0953 | +0.1158 |
+| Gaussian, precision 1 | −0.0084 | −0.0083 | −0.0015 | +0.0050 | +0.0149 | −0.0059\* | +0.0149\* | +0.0341\* |
+| Gaussian, precision 2 | −0.0196 | −0.0186 | −0.0129 | −0.0192 | −0.0704\* | +0.0109\* | +0.0336\* | +0.0242\* |
+| Gaussian, precision 4 | −0.0219 | −0.0205 | −0.0399 | −0.0908\* | +0.0087\* | +0.0229\* | +0.0177\* | +0.0124\* |
+
+**Findings.**
+1. **"Rises monotonically" fails.** Under the flat prior the contribution falls slightly, from
+   +0.0473 at 0.55 to +0.0436 at 0.80, and rises only above 0.80. The same dip appears at
+   θ_u = 1.
+2. **The sharp-prior comparison mixes held and overridden entries.**
+   - At Λ = 8 a Gaussian prior overrides an endpoint cut. In the limit field the q-mass on excluded
+     states is 0.62 at 0.95 and 0.97 at 0.98 under precision 1, and above 0.99 from 0.95 under
+     precision 2.
+   - The positive endpoint value §5.2 relies on (precision 2, "+0.020 at 0.98") comes from an entry
+     the prior has fully overridden: the literal listener's leak there is 1.0000.
+   - Among held entries, precision 1 turns from negative (up to 0.73) to positive (0.76 to 0.90),
+     which is the reversal §5.2 describes. Precisions 2 and 4 are negative at every held cut.
+3. **The tilt carries the contribution, not the width.** Splitting the limit field as in F4:
+   - under the flat prior, the tilt part runs +0.049 to +0.117 and the width part −0.043 to +0.017;
+   - under the Gaussians, the width part is negative at every cut.
+
+   §5.2's mechanism, that the entry's width loading grows toward the endpoint and is zero at the
+   midpoint, is exact as a statement about κ. It is not what produces the measured contribution.
+4. **Under learning, the doubled width is the prior's plus the entry's** (F5).
+   - c_width from the prior: −4.94 (flat), −18.60, −37.20, −74.40 (precisions 1, 2, 4).
+   - c_width from the entry: 0 at 0.50, rising to +5.82 at 0.98.
+   - So the width part favours the extremes only where the entry's width outweighs the prior's:
+     under the flat prior for cuts 0.93 to 0.98 (it is zero at 0.90), and never under the Gaussians
+     tested.
+5. **Read-out.** "Posterior degree" is E_q[s], a statistic of q (A16).
+   - Under the delta read-out (flat prior, limit), the mode moves above the cut for a mid-scale
+     predicate: 0.81 at s_t = 0.50, 0.87 at 0.73.
+   - From 0.95 up it stays at the cut's node, so the utility level does not move an endpoint
+     predicate's peak at all.
+   - R12's caution applies: §5.2 must say which read-out the prediction is stated on.
+6. **What survives.**
+   - The parity result, exactly: a midpoint cut has zero width loading, with the node half-weighted.
+   - The loading ratios at 0.73 and 0.95.
+   - Qualitatively: under the flat prior an endpoint cut's contribution exceeds the midpoint's
+     (+0.1158 against +0.0469). Under the default Gaussian prior a held mid-scale cut's contribution
+     is negative, while cuts from 0.76 to 0.90 are positive.
+
+**Site changes.**
+- **Remove, or recompute on the learned model:** the magnitudes, "monotonically", the sharp-prior
+  sentence, and the "(and from … at θ_u\*)" parenthetical.
+- **The parity paragraph survives**, restated as a fact about the entry's loading and not about the
+  measured contribution.
+- **The mechanism paragraph needs rewriting around F4/F5.** The utility level doubles the literal
+  field's tilt and width. The tilt carries the contribution to E[s], and the width favours the
+  extremes only where the entry's width outweighs the prior's (Q7).
+- **Downstream of Q7:** the prediction paragraph and the empirical-fit paragraph.
+- **The numerical note stays** (half-weighting the midpoint node).
+- **Before any rebuilt number is quoted:** a printing cell (C6) and an answer to O8.
+
 ### §5.3 and §5.4 (new)
 
 Content in §5 below, items 2 and 3.
@@ -344,6 +442,7 @@ Content in §5 below, items 2 and 3.
 - **Add one bullet.** Commitment 7 predicts error units at least 4λ_max(H) times faster than state
   units: 26× where the conjunction first holds, rising as learning proceeds. The prediction is
   conditional on this architecture without an alternatives level, and should be worded as such.
+- **Lines 499–500, the scale-structure interaction.** Depends on Q7.
 
 ### §6 Conclusion (lines 503–518)
 
@@ -355,9 +454,17 @@ Content in §5 below, items 2 and 3.
   survives.
 - **Add a clause** for item 3 of §5 below (not posable at the computational level), if §6's budget
   allows.
+- **Item 4 (lines 517–518). Depends on Q7.** It says the threshold semantics predicts "an
+  endpoint-orientation asymmetry … sharpest where prior knowledge is weakest". Under the learned
+  model the weak-prior half holds under the flat prior. The sharp-prior half rests on entries that
+  are overridden at Λ = 8.
 
 ### Open items (lines 539–569)
 
+- **Open item 1 (lines 541–549). Rewrite.**
+  - Its "validated by reproducing every published quantity" predates learned θ_u.
+  - The drafted probe it mentions cannot be found.
+  - It is replaced by Q7 and O8, plus a printing task once §5.2's numbers are rebuilt.
 - **Line 552.** `background_sections_outline.md` is now `background_sections.md`.
 - **Add.** A pointer to this file.
 
@@ -519,6 +626,10 @@ The cost sense keeps the name "realizability" (O7, settled). The content, per R9
 
 ## 6. `background_sections.md`
 
+**Line numbers below are from before R8's edit.** That edit joined lines 13–14 into one, so every
+later line is now one lower (for example, §1.3 Beat 3's forward pointer is at line 188 and the §2.2
+table's commitment 3 row at line 391).
+
 - **Lines 13–14, scale. Done 2026-09-13 (R8).** Now "Target length: approximately 3,595 words.",
   with no combined count.
 - **Lines 57–64, opening move 3.** Add the "not posable" clause (item 3) and a forward pointer to
@@ -528,6 +639,13 @@ The cost sense keeps the name "realizability" (O7, settled). The content, per R9
   the read-out q against the literal listener, with the tempering named. It drops "treats the fact as
   corroboration" and "what avoids it is a drain keyed to the alternative". The RSA side (lines
   183–188) survives.
+- **§1.7 (lines 309–334), the answer to Q3b.**
+  - The outline says of Q3b "Do not answer it here. §5.2 answers it from the parity structure of the
+    utility basis". That overstates what §5.2 can now claim. Parity fixes the entry's width loading,
+    but the measured contribution is carried by the tilt, and under learning the prior's width enters
+    too.
+  - Soften to "§5.2 takes it up", pending Q7.
+  - The literature bullets survive. The Leffel et al. check is still pending.
 - **§1.8 synthesis (lines 337–352).** Optional. One clause that the traditions share a
   computational-level framing under which the questions of §5.3 are not posable.
 - **Lines 368–373, §2.1 claim levels.** The algorithmic claim now carries commitment 7, whose
@@ -733,6 +851,22 @@ projection "collapses a contrast between exclusion sets". The cost sense keeps "
 unchanged, so §5.3 may use the word in that sense. It still says, per R10, that a realizable θ_u is
 located by the evaluator.
 
+### Q7. How to rebuild §5.2's prediction (open, new, 2026-09-14)
+
+The re-examination is §4's §5.2 entry. It leaves four choices, all interpretive and all the user's:
+- **What the prediction is stated on.** E_q[s], as §5.2 does now; the delta read-out's mode; or both,
+  following R12's pattern.
+- **Which mechanism the text gives.**
+  - The parity of the entry's width loading, which is true of κ but not of the measured contribution.
+  - Or F4/F5's doubling of the literal field's tilt and width, which is what the measurement shows.
+- **How the sharp-prior half is posed.** At Λ = 8 the Gaussian priors override endpoint cuts, so
+  either:
+  - Λ is raised until every compared entry is held (the rule for that belongs to O8); or
+  - the comparison is restricted to held entries, where precisions 2 and 4 give negative
+    contributions at every cut.
+- **Whether the empirical-fit paragraph still holds.** Whether Leffel, Xiang and Kennedy (2017) and
+  Xiang et al. (2022) still describe the model depends on the three choices above.
+
 ## 8. Where the numbers are printed
 
 | Numbers | Source |
@@ -747,6 +881,7 @@ located by the evaluator.
 | 404.8, Eq. (28) table | Text cell 4, *Integration cost and conditioning* |
 | F15 (not within 0.1% after 5,000 updates), 145/145 | `procedure_records/theta_u_learned_reach.md` (recorded scripts, not a cell) |
 | Exposure-only θ\* (−11.2844, −44.1766, −65.7004, −28.4375) | Code Cell B, ALTERNATIVE SPACES |
+| §5.2's re-examination: contributions, leaks, loadings, illustrative θ\* | `audits/2026-09-13-scale-structure/output.txt` (an audit script, not a cell) |
 
 ## 9. Other stale pointers found
 

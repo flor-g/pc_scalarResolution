@@ -636,6 +636,28 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   in the notebooks. The outline may use it in that sense, keeping R10's point that a "realizable
   θ_u" is located by the evaluator.
 
+### O8. θ_u\* and Λ for a single-predicate configuration (§5.2's probe)
+- Status: Open (since 2026-09-14)
+- Decided by: not decided. Raised by the agent while re-examining `thesis_outline/sections_3-6.md`
+  §5.2 (`thesis_outline/revisions.md` Q7).
+- **The question.** A9 requires every configuration to carry its own θ\*, the maximizer of F̃ over an
+  exposure ensemble. §5.2 evaluates predicates the notebooks do not contain (one threshold at an
+  arbitrary cut), so two things are unfixed:
+  1. **The exposure ensemble.**
+     - Candidates: the predicate alone; the predicate and its complement; the predicate within a
+       scale inventory.
+     - Measured for the first two (`audits/2026-09-13-scale-structure/output.txt`): |θ\*| from 4.6
+       to 91 across the tested priors and cuts, and E_q[s] contributions within about 5% of Eq. (24)'s
+       limit. So the verdicts there do not depend on this choice; the numbers do, slightly.
+  2. **Λ.** At Λ = 8 the Gaussian priors override endpoint cuts: q-mass on the excluded states is
+     0.62 to 1.0 from s_t = 0.95 up. Options:
+     - hold Λ at 8 and report the leak;
+     - raise Λ per configuration until the entry is held, by an override threshold analogous to
+       Eq. (41), which is derived for Beta(α, 1);
+     - restrict comparisons to held entries.
+- **Needed to decide:** the user's choice on both, before any §5.2 number is printed.
+- **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
+
 ---
 
 ## D. Bogacz divergence register
