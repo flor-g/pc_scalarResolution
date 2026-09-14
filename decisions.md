@@ -335,6 +335,30 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: the reading guide in Text cell 4 Part D.
 - Evidence: `procedure_records/d9_delta_readout.md` F2-F4.
 
+### B8. The delta read-out carries two criteria of its own
+- Status: Settled as a definition. Where and how the paper uses them is open (`thesis_outline/revisions.md` Q2, Q6).
+- Decided by: user (2026-09-13)
+- Decision: under *some*, (a) mode(φ_S\*) − mode(ℓ₀) < 0, the delta analogue of the shift; (b)
+  mode(φ_S\*) outside the cell of *all*, ζ < θ_L (Appendix A). The mode is the grid node where the
+  field is largest (B7). They mirror B2's two conditions and are **not assumed equivalent** to them
+  (user: "their satisfaction may not be equivalent").
+- Theoretical reason: A16. The delta is the construction's posterior, so the criterion needs a
+  form stated on it.
+- Implementational reason: none yet. No cell prints them (C6), so their numbers are class (e) for
+  prose.
+- Bogacz status: statistics of the delta read-out (his Eq. 34); the tutorial has no counterpart for
+  the criteria.
+- Depends on it: revisions.md Q2 (the V under both read-outs), Q6 (R7's supporting sentence).
+- Evidence: `audits/2026-09-13-delta-criteria/output.txt`, which reproduces Code Cell 2's Part D rows
+  and Code Cell 4's 59 and 33.
+  - Part D: the delta criteria agree with B2 row by row.
+  - Plane, 121 cells:
+    - first conditions 74 (q) against 67 (delta), disagreeing in 35;
+    - second conditions 59 and 59, coinciding in every cell;
+    - both 33 against 13, every delta conjunction being a q conjunction.
+  - mode(ℓ₀) = mode(ℓ₀ − φ_L) in every cell under *some*.
+  - Four cells have an unmoved mode.
+
 ---
 
 ## C. Conventions that constrain claims
@@ -510,7 +534,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   Options: keep ≤ and state the exception; make the bound strict; or read "monotone" to a tolerance.
 
 ### O7. "Realizability" names three different things
-- Status: Open (since 2026-09-13)
+- Status: **Settled** (user, 2026-09-13). Sense 1 became "exact solvability", sense 3 became "collapses
+  a contrast between exclusion sets", and sense 2 keeps "realizability". Opened 2026-09-13.
 - Decided by: not decided. Opened on the user's instruction (2026-09-13): "The terminology clash
   needs to be handled more carefully, so mark it as open decision." Raised while planning the outline
   revision, `thesis_outline/revisions.md` §5 item 2.
@@ -586,6 +611,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   - **O7 stays Open for sense 2**, which is now the only use of the word. R10 of
     `thesis_outline/revisions.md` adds that every "realizable θ_u" is located by the evaluator,
     using θ\* or Part C's criterion, not by the simulated system.
+- Findings added later: 2026-09-13, **sense 2 settled by the user: the cost sense keeps
+  "realizability" as it is; no change.** Code Cell 2, E2, E3, Text cell 4 Part D, B7 and O3 stay as
+  written, and the interim rule above lapses. With senses 1 and 3 renamed, the word now has one sense
+  in the notebooks. The outline may use it in that sense, keeping R10's point that a "realizable
+  θ_u" is located by the evaluator.
 
 ---
 

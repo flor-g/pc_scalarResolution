@@ -75,6 +75,9 @@ Fourth message:
 | R8 | **Q3.** The background states only its own length and assumes no combined word count. **Applied** to `background_sections.md` lines 13–14, 2026-09-13. | user (2026-09-13) |
 | R9 | **Q4.** The halting claim concerned the **slow** maximizer: θ\* of F̃, in closed form (Eq. B2). The model commits to a learned θ_u; a fixed θ_u appears only as a stated control (A9, B4), and the outline's wording follows that. | user (2026-09-13) |
 | R10 | **Q5.** θ\* stays the commitment, and A9 is unchanged. The paper explains why at an appropriate place, recommended §5.3 (item 2). The model predicts θ\* as the halting value, but the simulation exposes a cost problem, and no self-contained halting mechanism for the simulation has been determined. Every "realizable" θ_u is defined ad hoc, given the closed-form θ\*. A simulated system should be assumed agnostic to that value, so an ad hoc θ_u cannot yet be adopted as the commitment. | user (2026-09-13) |
+| R11 | **O7.** The cost sense keeps "realizability" unchanged. Senses 1 and 3 were renamed ("exact solvability"; "collapses a contrast between exclusion sets"). | user (2026-09-13) |
+| R12 | **The delta read-out's two criteria** (`decisions.md` B8), under *some*: (a) mode(φ_S\*) − mode(ℓ₀) < 0, the delta analogue of the shift; (b) mode(φ_S\*) outside the cell of *all*. They mirror Part C's two conditions, and satisfying one need not mean satisfying the other. | user (2026-09-13) |
+| R13 | **The V shape is discussed in the paper** (Q2). | user (2026-09-13) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
 commitment), A14 (conventionalized), A16 and B7 (q is a comparison read-out; the delta is the
@@ -135,7 +138,7 @@ Two further findings that change the outline as much as the headline does:
 | **5. Discussion** | **705** | **1,020** | |
 | 5.1 What an alternatives level would have to supply | 390 | 390 | Complexity-led; the q-normalization link added, the Cremers bullet moved out (R7) |
 | 5.2 Scale structure: a second prediction | 200 | 200 | |
-| 5.3 Settling cost, halting, and the plausibility commitment (new; title subject to O7) | — | 170 | Item 2 |
+| 5.3 Realizability, halting, and the plausibility commitment (new) | — | 170 | Item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | 120 | Item 3 |
 | 5.5 Limits (was 5.3) | 65 | 80 | Convergence of θ_u; conditioning |
 | 5.6 Predictions (was 5.4) | 50 | 60 | The timescale separation as a prediction |
@@ -262,7 +265,8 @@ and §4.1 and §4.4 need it.
     At α = 1024 it reads 2048, which is the saturated row.
   - Second condition: Λ ≥ 2 up to α = 8, 64 at α = 16, 256 at α = 32, 512 at α = 64, 1024 at
     α = 128, and unreachable past α = 256.
-  - The opposition of the two floors survives as the result. How to read it is Q2.
+  - The opposition of the two floors survives as the result. Discuss the V under both read-outs
+    (R13); what it shows and where it goes is Q2.
 - **Override law.** Learned slopes 1.9890 / 2.9334 / 4.3102, +36–45% over the tempered control
   ("severed" means that control). The 15–18% at θ_u = 1 is a control and is labelled as one, or cut.
 - **Spread D.** 0.0061 → 0.0009 → 0.0002 becomes 0.0057 → 0.0012 → 0.0003.
@@ -385,9 +389,12 @@ Content in §5 below, items 2 and 3.
   RSA, and which human participants do not show.
 - **What it is in this model.** It is the tempering (+0.0175, +0.0854, +0.0065, +0.0988). The
   utility level's own contribution runs the other way under every prior. The tempering exists only
-  for a read-out that normalizes: the delta's peak does not move under the halving. So the
-  anti-exhaustive direction belongs to reading this network through q against an untempered
-  baseline, not to the level that produces strengthening.
+  for a read-out that normalizes: the delta's peak does not move under the halving. Under q,
+  therefore, the positive shift is the tempering. **Superseded in part by the audit of 2026-09-13
+  (Q6):** the earlier sentence here said the direction belongs to q and "not to the level that
+  produces strengthening". Under the delta read-out's first criterion (R12), however, the mode of
+  φ_S\* moves up the scale on the same four priors, and because halving does not move a mode, that
+  movement is the utility level's alone.
 - **Guards.**
   - The parallel is in direction, not in conditions. Here it appears under all four non-delta
     priors, the flat one included, while background §1.3 states the RSA liability for skewed priors.
@@ -414,7 +421,7 @@ operation Appendix A says would not be local and §5.1 says binarity absorbs.
 
 ### Item 2. Settling cost, halting, and the plausibility commitment (§5.3, about 170 words)
 
-The section's title and its term for the cost sense wait on **O7**. The content, per R9:
+The cost sense keeps the name "realizability" (O7, settled). The content, per R9 and R10:
 
 - **What halts, and on which timescale.** The claim concerns the slow flow of Eq. (20), which
   ascends F̃ toward θ\* (Eq. B2), the value A9 commits the model's θ_u to. Since θ_u is an exposure
@@ -528,65 +535,153 @@ The section's title and its term for the cost sense wait on **O7**. The content,
 
 **Resolved:** Q1 as R7, Q3 as R8, Q4 as R9, Q5 as R10.
 
-### Q2. The "shape of absence" argument (open)
+### Q2. The "shape of absence" argument, the delta criteria, and the V (in progress)
 
-**What the argument was.** `sections_3-6.md` lines 23–28 and 329–338. At Part D's settings every
-prior met exactly one condition, and the two conditions' floors ran in opposite directions in α.
-The reading was that prior concentration buys the first condition and spends the second, that the
-architecture has only one axis along which to trade them, and that a level keyed to the alternative
-would decouple them. The pattern of which condition failed was treated as the outline of the
-missing level.
+**Settled so far (R12, R13).** The delta read-out carries two criteria of its own, mirroring Part
+C's, and need not agree with them. The V shape is discussed in the paper.
 
-**What broke.** "Never both": the delta-like row meets both, and 33 plane cells do.
+#### The audit
 
-**What survives, stated exactly.** Taking the larger of the two floors gives the least Λ at which
-both conditions hold, per α (Code Cell 4, `plane_summary`):
+`audits/2026-09-13-delta-criteria/` (script and `output.txt`). It executes Code Cell 1 and Code
+Cell 2's definitions, and reproduces Code Cell 2's Part D rows and Code Cell 4's counts (second
+condition 59, both 33). Everything is under *some*, each configuration at its own θ\*. **Nothing in
+this subsection is printed by a notebook cell yet** (see "Printing" below).
+
+**Part D's five rows agree row by row.**
+- Criterion (a) is met only under the delta-like prior, where the mode moves from 0.9852 to 0.9468.
+- Under the four diffuse priors the mode moves *up* the scale: 0.50 → 0.59, 0.50 → 0.67,
+  0.25 → 0.33, 0.75 → 0.84.
+- Criterion (b) is met under all five.
+
+**The plane (121 cells):**
+
+| | q read-out | delta read-out | disagree |
+|---|---|---|---|
+| first condition / criterion (a) | 74 | 67 | 35 cells |
+| second condition / criterion (b) | 59 | 59 | none |
+| both | 33 | 13 | 20 cells |
+
+- **The second conditions coincide in every cell** and in Part D's rows. That is measured, not
+  proved. A mode outside the cell and a minority of mass inside it are different statements, and
+  could part under a prior or grid not tested here.
+- **The first conditions disagree in 35 cells, in two groups.**
+  - *q's first condition without (a): 21 cells, all at α ≤ 16, at or above q's floor.*
+    - All-region mass falls: the utility part runs −0.03 to −0.40 and outweighs the tempering
+      (+0.02 to +0.10).
+    - The mode moves up the scale, e.g. from 0.50 to 0.92 at α = 1. At (16, 128) it does not move.
+  - *(a) without q's first condition: 14 cells, all where the prior overrides the entry.* These
+    are (32, 16), (64, 2 to 8), and the α = 1024 row up to Λ = 1024. The mode moves down while the
+    mass does not fall:
+    - at (32, 16) and (64, 2 to 8) the utility part of the shift is positive;
+    - on the α = 1024 row q is saturated at 1.0000, and cannot register the movement the mode shows
+      (0.9975 → 0.979, still inside the cell).
+- **Every delta conjunction is a q conjunction.** The reverse fails in 20 of q's 33 cells, all at
+  α ≤ 16.
+- **The tempering does not explain the difference.** A mode is unmoved by the halving, so
+  criterion (a) sees only the utility level. What separates the two first criteria is that the
+  utility level can lower the all-region mass and raise the mode at the same time.
+  - Likely reading, from §3.5's two columns: the even (width) column lowers both tails, and the odd
+    (tilt) column slides the peak.
+  - This reading is not decomposed in the audit.
+- **Grid facts.**
+  - Modes are grid nodes, 0.12 apart in ζ. Four cells have an unmoved mode, where (a) fails by a
+    zero shift.
+  - The smallest gap between the two largest nodes is 5.6e-5, so no mode is a tie.
+  - mode(ℓ₀) equals mode(ℓ₀ − φ_L) in every cell under *some*, so R12's baseline coincides with the
+    literal listener's mode. Under *no* or *all* the two would differ.
+
+**The V under each read-out.** For each α, the least Λ at which both hold, holding at every larger
+Λ (every condition's set of cells is upward closed on this grid):
 
 | α | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | ≥ 256 |
 |---|---|---|---|---|---|---|---|---|---|
-| least Λ for both | 512 | 256 | 128 | 64 | 64 | 256 | 512 | 1024 | none |
-| binding condition | first | first | first | first | second | second | second | second | second unreachable |
+| q read-out | 512 | 256 | 128 | 64 | 64 | 256 | 512 | 1024 | none |
+| delta read-out | none | none | none | none | 256 | 256 | 512 | 1024 | none |
 
-- **The shape is a V.** The least Λ is smallest, 64, at α = 8 to 16 and rises in both directions.
-  Diffuse priors need a strong lexicon for the first condition, and sharp priors need one for the
-  second.
-- **Part D's pattern follows from it.** Λ = 8 lies below the V at every α, so no Λ = 8 row can meet
-  both. The four diffuse rows miss on the first condition, and the delta-like row meets both only
-  because it carries Λ = 512, which sits on the V at α = 64.
-- **The left arm depends on the read-out.** The first condition is Δ against q_lit, which contains
-  the tempering (R7). The tempering is the larger part of Δ_some in 59 of the 121 plane cells
-  (Code Cell 4) and in all four of Part D's diffuse Λ = 8 rows (Code Cell 2; only the flat one is a
-  plane cell). Under the delta read-out the first condition has no analogue at all.
-- **The right arm is the binary one.** The second condition is the sign of one log-odds (item 1).
+- **The right arm is shared.** The second condition sets it, and there the read-outs coincide. It
+  runs at Λ = 8α for α = 32, 64 and 128, on a grid with factor-2 resolution.
+- **The left arm exists only under q.** Under the delta read-out, criterion (a) holds from Λ = 256 at
+  α = 16, Λ = 16 at α = 32, and Λ = 2 from α = 64. For α ≤ 8 no Λ on the grid moves the mode down.
+- **So the V is the q read-out's shape.** Under the delta read-out the conjunction needs a prior
+  concentrated enough (α ≥ 16 here) and a lexical strength that rises with the concentration.
+- **Correction to this file's earlier Q2 text.** It said the left arm depends on the read-out
+  because of the tempering. The dependence is confirmed, but the reason is the mass/mode
+  divergence, since the delta read-out does not see the tempering.
 
-**The issue.** The residual claim is no longer "the architecture cannot meet both". It is "a lexicon
-of fixed strength meets both only within a window of prior concentration, and the window's left
-edge is partly a property of the read-out". Whether that motivates a level representing
-alternatives is not settled by the numbers: it would need the premise that human strengthening does
-not need lexical strength to scale with prior concentration. Degen, Tessler and Goodman (2015)'s
-robustness across priors is the nearest evidence, but it is about how much the prior matters, not
-about lexical strength.
+#### The premise, explained
+
+- **Which level.** Lines 329–338 of `sections_3-6.md` used the one-condition-per-prior pattern as a
+  motivation for the **alternatives level** of §5.1: the proposed, unbuilt level that would
+  represent competition among alternatives within a trial.
+- **The argument the V would have to make.** Carried over into that role it would run: the
+  architecture meets both conditions only when Λ is matched to α; a level keyed to the alternative
+  would not need that; so the level is motivated.
+- **The unstated premise.** The step from "the model needs Λ matched to α" to "the model is missing
+  something" needs a premise the outline never states: that human listeners strengthen *some* across
+  prior concentrations *without* a comparable adjustment, with one lexical entry of fixed strength.
+  - Nothing in the dissertation measures that.
+  - Degen, Tessler and Goodman (2015) show strengthening is robust across priors. That is about how
+    far the prior moves the posterior, not about lexical strength, which has no direct human measure.
+- **Without the premise, the V is a property of this model, not evidence of a missing level.**
+  - Since R2 rests the level on complexity, the V does not need to motivate anything.
+  - The audit adds a second reason not to use it that way: the V's left arm belongs to the q
+    read-out.
+
+#### Options for the V (R13)
+
+- **(a)** §4.5 reports the V under both read-outs as a result: the right arm shared, the left arm
+  q-only, and the 20 cells where the conjunctions part. §5.1 does not use it. Its lines 329–338 go
+  entirely.
+- **(b)** As (a), plus one sentence in §5.1 that states the premise as a premise.
+
+**Agent's recommendation: (a).**
+
+**Budget, proposed.** §4.5 goes from 180 to 240 words. The extra 60 would come from §5.1 (390 → 350,
+since lines 329–338 go) and §4.3 (90 → 70).
+
+**Printing (C6).** Every delta-criterion number above comes from the audit script, so it is class (e)
+for prose until a cell prints it. Before §4.5 or the paper quotes one:
+- Code Cell 4's `plane_summary` and Code Cell 2's delta read-out block would print criteria (a) and
+  (b) and their floors;
+- Code Cell 2's addition is copied into E2 and replayed by E3;
+- both notebooks are re-executed.
+
+Not yet asked for.
+
+### Q6. Does R7's supporting sentence survive the delta criteria? (open, new)
+
+**What R7 rests on.** R7 placed the Cremers parallel in the q read-out discussion. Its supporting
+sentence (item 1) said the anti-exhaustive direction belongs to q "not to the level that produces
+strengthening", because the delta cannot see the tempering.
+
+**What the audit shows.** Under criterion (a) that no longer holds.
+- On the four diffuse Part D rows the mode of φ_S\* moves up the scale.
+- A mode is unmoved by the halving, so that movement is the utility level's alone.
+- So under q the utility level moves all-region mass down, and under the delta it moves the mode up.
+
+R7's placement is the user's decision and has not been changed; only the sentence is marked.
 
 **Options.**
-- (a) Keep the V as an observation in §4.5, say which arm is read-out dependent, and do not use it
-  in §5.1. §5.1 then rests on complexity alone (R2).
-- (b) As (a), plus one sentence in §5.1 using the V as secondary motivation, with the Degen premise
-  stated as a premise.
-- (c) Cut it from both §4.5's reading and §5.1, and report only the floors.
+- **(i)** Keep the parallel with q, and correct the sentence. Cremers, Wilcox and Spector's quantity
+  is a probability of the all-state, which only q supplies. Under q the positive shift is the
+  tempering; under the delta the upward movement of the mode is the utility level's, and it is not
+  a probability of *all* (the mode stays outside the cell).
+- **(ii)** Discuss the parallel under both read-outs.
+- **(iii)** Drop it.
 
-**Agent's recommendation: (a).** It keeps what is measured, and it does not rest a claim about the
-level on the arm that the read-out partly produces.
+**Agent's recommendation: (i).**
 
 ### Q5. How a halting mechanism stands with A9 (resolved, R10)
 
 θ\* stays the commitment, and A9 is unchanged. The reason, and where the paper gives it, are in
 item 2. Recorded under A9 in `decisions.md`.
 
-### O7. The three senses of "realizability" (open for sense 2, in `decisions.md`)
+### O7. The three senses of "realizability" (settled, in `decisions.md`)
 
-Elaborated there (finding of 2026-09-13). Senses 1 and 3 were renamed on 2026-09-13: Appendix B now
-says "exact solvability", and Appendix C §7 says that a projection "collapses a contrast between
-exclusion sets". Sense 2, the cost sense, is the only use left and is still open.
+Settled 2026-09-13 by the user. Appendix B now says "exact solvability", and Appendix C §7 says that a
+projection "collapses a contrast between exclusion sets". The cost sense keeps "realizability"
+unchanged, so §5.3 may use the word in that sense. It still says, per R10, that a realizable θ_u is
+located by the evaluator.
 
 ## 8. Where the numbers are printed
 
