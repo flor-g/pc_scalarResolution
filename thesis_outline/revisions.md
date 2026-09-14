@@ -93,6 +93,8 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R11 | **O7.** The cost sense keeps "realizability" unchanged. Senses 1 and 3 were renamed ("exact solvability"; "collapses a contrast between exclusion sets"). | user (2026-09-13) |
 | R12 | **The delta read-out's two criteria** (`decisions.md` B8), under *some*: (a) mode(φ_S\*) − mode(ℓ₀) < 0, the delta analogue of the shift; (b) mode(φ_S\*) outside the cell of *all*. They mirror Part C's two conditions, and satisfying one need not mean satisfying the other. | user (2026-09-13) |
 | R13 | **The V shape is discussed in the paper** (Q2). | user (2026-09-13) |
+| R14 | **Q2, option (a).** §4.5 reports the V under both read-outs as a result: the shared right arm, the left arm that exists only under q, and the 20 cells where the conjunctions part. §5.1 does not use the V, and its lines 329–338 go. **No evidence for a missing level is derived from the V.** Budget: §4.5 240, §5.1 350, §4.3 70. The code edits that let the prose quote these numbers are open tasks in `procedure_records/delta_criteria_printing.md`. | user (2026-09-13) |
+| R15 | **Q6, option (i).** The Cremers parallel stays with q, and item 1's sentence is corrected. Under q the positive shift is the tempering. Under the delta read-out the mode's upward movement is the utility level's, and is not a probability of *all*. **Why a similar movement emerges under the delta read-out is to be investigated** (open task in the same record). | user (2026-09-13) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
 commitment), A14 (conventionalized), A16 and B7 (q is a comparison read-out; the delta is the
@@ -143,15 +145,15 @@ Two further findings that change the outline as much as the headline does:
 | 3.4 State units, error units, and what is local | 210 | 230 | Commitment 7 in exact form; θ_u learned, starting at the tempered control; conditioning |
 | 3.5 Two choices the scale forces | 140 | 140 | |
 | 3.6 Two read-outs (new) | — | 100 | Item 1 |
-| **4. Evaluation** | **745** | **910** | |
+| **4. Evaluation** | **745** | **950** | |
 | 4.1 What is compared | 100 | 110 | Naming (literal listener, tempered control) |
 | 4.2 The criterion, and how to read the statistics | 170 | 170 | |
-| 4.3 The specification holds | 90 | 90 | |
+| 4.3 The specification holds | 90 | 70 | Trimmed to fund §4.5 (R14) |
 | 4.4 The five priors (retitled) | 220 | 260 | New table with tempering/utility split; the Cremers parallel on q (R7) |
-| 4.5 The plane, and where both conditions hold | 165 | 180 | Conjunction thresholds across the band |
+| 4.5 The plane, and where both conditions hold | 165 | 240 | Conjunction thresholds across the band; the V under both read-outs (R14) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | 100 | The evidence item 2 rests on |
-| **5. Discussion** | **705** | **1,020** | |
-| 5.1 What an alternatives level would have to supply | 390 | 390 | Complexity-led; the q-normalization link added, the Cremers bullet moved out (R7) |
+| **5. Discussion** | **705** | **980** | |
+| 5.1 What an alternatives level would have to supply | 390 | 350 | Complexity-led; the q-normalization link added, the Cremers bullet moved out (R7), lines 329–338 removed (R14) |
 | 5.2 Scale structure: a second prediction | 200 | 200 | |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | 170 | Item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | 120 | Item 3 |
@@ -187,7 +189,7 @@ lines 13–14 now state only its own target.
   - an end to learning short of a maximizer the slow flow never reaches, which the present
     architecture lacks (item 2; to be argued, not derived).
 
-  "The pattern is the shape of its absence" is withdrawn, or kept only as the weaker point in Q2.
+  "The pattern is the shape of its absence" is withdrawn (R14).
   The specification-not-built sentence (lines 28–32) survives unchanged.
 - **Lines 34–37, standing qualification.** Survives.
 
@@ -254,6 +256,7 @@ and §4.1 and §4.4 need it.
 - "Exact to 6.0e-11" → about 1e-9 (9.98e-10), since the stopping tolerance is now 1e-9 (I3).
 - Grid tails "1.6e-3 … 1.8e-6" → 1.7e-3 and 3.3e-6.
 - Add: θ\* from Eq. (B2) matches an independent bisection to 4.6e-14, and Eq. (20) ascends from 0.
+- Budget 70 words (R14): report the checks as a table and keep the prose to the grid-tail point.
 
 ### §4.4 (lines 265–297): rewrite
 
@@ -281,7 +284,13 @@ and §4.1 and §4.4 need it.
   - Second condition: Λ ≥ 2 up to α = 8, 64 at α = 16, 256 at α = 32, 512 at α = 64, 1024 at
     α = 128, and unreachable past α = 256.
   - The opposition of the two floors survives as the result. Discuss the V under both read-outs
-    (R13); what it shows and where it goes is Q2.
+    (R13, R14), with Q2's table:
+    - the right arm is shared, at Λ = 8α;
+    - the left arm exists only under q;
+    - in 20 cells the conjunctions part.
+
+    Report it as a result, and derive no evidence for a missing level from it. Its numbers wait on
+    the printing tasks (C6).
 - **Override law.** Learned slopes 1.9890 / 2.9334 / 4.3102, +36–45% over the tempered control
   ("severed" means that control). The 15–18% at θ_u = 1 is a control and is labelled as one, or cut.
 - **Spread D.** 0.0061 → 0.0009 → 0.0002 becomes 0.0057 → 0.0012 → 0.0003.
@@ -306,8 +315,8 @@ Evidence for §5.3, reported without interpretation:
 - **Framing (lines 324–327).** Lead with the complexity argument (R2). Lines 344–397 survive
   intact: the negative search, what is searched versus what branches, the binary inventory, the
   *most* case, the dimension and locality payoff, and binarity at the generative map.
-- **Lines 329–338, "Why the pattern points at such a level".** Its premise, never both, is gone.
-  What happens to it is Q2.
+- **Lines 329–338, "Why the pattern points at such a level". Removed (R14).** The V is reported in
+  §4.5 and motivates nothing here.
 - **Lines 339–343, the Cremers corroboration. Removed from §5.1 (R7).** The parallel moves to §4.4.
 - **Add after lines 388–397: the read-out link (R4, about 40 words).** Content in §5 below, item 1.
 - **Lines 398–420, what is not derived.** Survives. Add to its list that an end to learning short
@@ -405,11 +414,10 @@ Content in §5 below, items 2 and 3.
 - **What it is in this model.** It is the tempering (+0.0175, +0.0854, +0.0065, +0.0988). The
   utility level's own contribution runs the other way under every prior. The tempering exists only
   for a read-out that normalizes: the delta's peak does not move under the halving. Under q,
-  therefore, the positive shift is the tempering. **Superseded in part by the audit of 2026-09-13
-  (Q6):** the earlier sentence here said the direction belongs to q and "not to the level that
-  produces strengthening". Under the delta read-out's first criterion (R12), however, the mode of
-  φ_S\* moves up the scale on the same four priors, and because halving does not move a mode, that
-  movement is the utility level's alone.
+  therefore, the positive shift is the tempering. Under the delta read-out the mode of φ_S\* also moves up the
+  scale on the same four priors (R12). Because halving does not move a mode, that movement is the
+  utility level's. It is not a probability of *all*: the mode stays outside the cell of *all*. Why
+  the utility level produces it is under investigation (R15).
 - **Guards.**
   - The parallel is in direction, not in conditions. Here it appears under all four non-delta
     priors, the flat one included, while background §1.3 states the RSA liability for skewed priors.
@@ -548,9 +556,9 @@ The cost sense keeps the name "realizability" (O7, settled). The content, per R9
 
 ## 7. Questions for the user
 
-**Resolved:** Q1 as R7, Q3 as R8, Q4 as R9, Q5 as R10.
+**Resolved:** Q1 as R7, Q3 as R8, Q4 as R9, Q5 as R10, Q2 as R14, Q6 as R15.
 
-### Q2. The "shape of absence" argument, the delta criteria, and the V (in progress)
+### Q2. The "shape of absence" argument, the delta criteria, and the V (resolved, R14)
 
 **Settled so far (R12, R13).** The delta read-out carries two criteria of its own, mirroring Part
 C's, and need not agree with them. The V shape is discussed in the paper.
@@ -649,7 +657,8 @@ this subsection is printed by a notebook cell yet** (see "Printing" below).
   entirely.
 - **(b)** As (a), plus one sentence in §5.1 that states the premise as a premise.
 
-**Agent's recommendation: (a).**
+**Agent's recommendation: (a). Approved by the user (R14)**, who added that no evidence for a
+missing level needs to be derived from the V.
 
 **Budget, proposed.** §4.5 goes from 180 to 240 words. The extra 60 would come from §5.1 (390 → 350,
 since lines 329–338 go) and §4.3 (90 → 70).
@@ -661,9 +670,9 @@ for prose until a cell prints it. Before §4.5 or the paper quotes one:
 - Code Cell 2's addition is copied into E2 and replayed by E3;
 - both notebooks are re-executed.
 
-Not yet asked for.
+These are now open tasks, in `procedure_records/delta_criteria_printing.md` (R14).
 
-### Q6. Does R7's supporting sentence survive the delta criteria? (open, new)
+### Q6. Does R7's supporting sentence survive the delta criteria? (resolved, R15; investigation open)
 
 **What R7 rests on.** R7 placed the Cremers parallel in the q read-out discussion. Its supporting
 sentence (item 1) said the anti-exhaustive direction belongs to q "not to the level that produces
@@ -684,7 +693,29 @@ R7's placement is the user's decision and has not been changed; only the sentenc
 - **(ii)** Discuss the parallel under both read-outs.
 - **(iii)** Drop it.
 
-**Agent's recommendation: (i).**
+**Agent's recommendation: (i). Approved by the user (R15)**, who asked that the reason a similar
+movement emerges under the delta read-out be investigated. The sentence in item 1 is corrected, and
+the investigation is an open task in `procedure_records/delta_criteria_printing.md`.
+
+**Preliminary result** (record F4; `audits/2026-09-13-delta-criteria/mode_mechanism_output.txt`; not
+printed by any cell). **The two movements share a direction, not a source.**
+
+- **The split.** By Eq. (24) the model doubles the literal field's span-B component, which splits
+  into B's odd (tilt) and even (width) parts.
+- **The width** is negative in every configuration tested. It concentrates the belief toward the
+  centre of the scale, lowering the all-region mass (all 121 plane cells) and pulling the peak
+  inward.
+- **The tilt** carries the literal field's skew, prior and entry together, and slides the peak that
+  way.
+- **Which one wins.** The mode moves up wherever the tilt wins (50 cells, the literal mode at
+  s ≤ 0.94), and down wherever the width wins (67 cells, s ≥ 0.94).
+- **Why the read-outs part.** q's first condition reads the tail, which the width governs.
+  Criterion (a) reads the peak, which near the centre the tilt governs.
+- **Part D's diffuse rows.** The upward movement is the tilt, except under Beta(1,3), where the
+  width's inward pull lifts a mode that sits below the centre.
+- **q's positive shift** is the tempering, which a mode cannot see.
+- **Bearing on the V.** The same result explains the missing left arm under the delta read-out: for
+  α ≤ 8 the literal mode sits where the tilt wins at every Λ.
 
 ### Q5. How a halting mechanism stands with A9 (resolved, R10)
 

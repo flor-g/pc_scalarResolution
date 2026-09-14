@@ -358,6 +358,18 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     - both 33 against 13, every delta conjunction being a q conjunction.
   - mode(ℓ₀) = mode(ℓ₀ − φ_L) in every cell under *some*.
   - Four cells have an unmoved mode.
+- Findings added later: 2026-09-13.
+  - **The user approved revisions.md Q2 option (a) as R14.** §4.5 reports the V under both
+    read-outs, and no evidence for a missing level is derived from it.
+  - **The code edits that print these criteria are open tasks** T0–T8 in
+    `procedure_records/delta_criteria_printing.md`.
+  - **Preliminary, `audits/2026-09-13-delta-criteria/mode_mechanism_output.txt` (record F4).** The
+    utility field splits into B's odd (tilt) and even (width) parts. The width is negative in every
+    configuration tested and lowers all-region mass in all 121 plane cells. The tilt moves the mode
+    up in every cell where it rises (50); the width moves it down in every cell where it falls (67).
+    The crossover is a literal mode near s = 0.94. So criterion (a) reads the peak, which the tilt
+    governs near the centre, and q's first condition reads the tail, which the width governs. That is
+    why they part.
 
 ---
 
