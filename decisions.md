@@ -251,6 +251,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: none; Eq. (A4) vanishes while φ_L is clamped, so no result moves.
 - Bogacz status: divergence, see D10.
 - Depends on it: Appendix A under Eq. (A4).
+- Findings added later: 2026-09-13, the user moved the paragraph after *θ_L enters twice* and
+  asked whether the sentence under Eq. (A4) makes Eq. (A4) local. It shows each term local (Bogacz
+  Eq. 25 form), not the sum; at |Y| = 3 as stated the sum is non-local, and the locality line falls
+  between one word-form unit and several, not at two entries. The paragraph now says so (user
+  approved the wording). "Nothing here requires a normalization across the word-form units, which
+  would not be local" read as a locality claim; it now says Eq. (A4) involves no normalization but
+  does sum over the units (user, 2026-09-13).
 
 ### B1. The shift Δ_y is measured against q_lit, the untempered literal posterior
 - Status: Settled; supersedes the θ_u = 0 control as baseline
