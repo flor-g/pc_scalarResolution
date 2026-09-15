@@ -339,8 +339,8 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
   exit status, so a failed run looks like success. Read the runner's own `RUNNER OK` line.
 - **Baseline as of 2026-09-14, after B9:** `main.ipynb` 0 errors, 8 figures (2 in Code Cell 2,
   3 in Code Cell 2b, 3 in Code Cell 4), 14/14 specification checks, about 250 s;
-  `appendix_E.ipynb` 0 errors, 5 figures, E2 18/18, E3 PASS on both cells (Code Cell 2: 202 lines
-  identical, 1 changed, 4 inserted; Code Cell 2b: 233 identical, none changed), about 700 s. Any departure
+  `appendix_E.ipynb` 0 errors, 5 figures, E2 18/18, E3 PASS on both cells (Code Cell 2: 203 lines
+  identical, 1 changed, 4 inserted; Code Cell 2b: 234 identical, none changed), about 710 s. Any departure
   from this is a finding, reported with the output, not explained away.
 - Report what was run and what it returned. If a step was skipped, say so.
 

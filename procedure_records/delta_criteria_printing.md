@@ -51,6 +51,17 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   mode shift / mode position criteria and both, the q shift / q position criteria and both, the gap
   between the two largest nodes; then counts and pairwise agreement. Wording under B10/C7. Modes are
   printed in s only, not also in ζ (agent, pending user confirmation).
+  **Superseded 2026-09-14 by the user:** "Print the mode shift in grid steps alongside s, then add a
+  concise guide in code comment or text explaining to the reader that they can recover zeta by
+  multiplying by 0.12." Added: a `steps` column (k − k0, signed) beside the shift in s; a printed
+  legend line giving the grid spacing, read from the grid, and saying that steps times the spacing is
+  the shift in ζ; a two-line code comment on why (s compresses toward the ends of the scale).
+  Hand check before execution, from the printed s values: +3 for the Gaussian at Λ = 8, −11 for the
+  delta-like row.
+  Executed 2026-09-14: the column reads +3, +6, +3, +5 at Λ = 8 and +19, +20, +27, +11, −11 at Λ = 512
+  (realizable rows equal their θ_u\* rows), matching the hand check; printed spacing 0.12. Only the legend,
+  the column and E3's line counts changed. main 0 errors, 8 figures, 14/14, 249 s; appendix_E 0 errors,
+  5 figures, E2 18/18, E3 PASS (203 and 234 lines identical).
   Acceptance: Λ = 8 rows equal `output.txt` §PART D ROWS in every mode and yes/no; the delta-like row
   equals it too; the Λ = 512 rows equal `evaluation_partD_atStrongLambda.md` F7. Smallest top-2 gap
   3.4e−3 (no ties). Code Cell 2 at Λ = 8: the pairs agree in 4 of 4 rows. Code Cell 2b at Λ = 512: mode
