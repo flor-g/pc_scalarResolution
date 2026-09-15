@@ -1,0 +1,127 @@
+LAMBDA x ALPHA SWEEP
+  alpha  in [1, 1024]  (11 values)
+  Lambda in [2, 2048]  (11 values)
+  evaluated in closed form (Eqs. 15-16, exact by Sec. 8.6), each cell at
+  its own learned theta_u*: from -557.67 to 12228.42, negative at (1, 2), (1, 4), (2, 2)
+  verification: integration is feasible where lambda_max(H) <= 1e+03 under the timescale commitment,
+  which holds in 2 of 121 cells; 2 of them re-run through the full dynamics:
+    (1, 2, some), (1, 4, no)
+    worst |phi_S - phi_S*| = 9.95e-10, all converged = True
+
+  smallest Lambda holding the entry for "no" (leak < 0.5):
+    alpha =      1   Lambda >= 4
+    alpha =      2   Lambda >= 8
+    alpha =      4   Lambda >= 16
+    alpha =      8   Lambda >= 32
+    alpha =     16   Lambda >= 64
+    alpha =     32   Lambda >= 256
+    alpha =     64   Lambda >= 512
+    alpha =    128   Lambda >= 1024
+    alpha =    256   Lambda >= 2048
+    alpha =    512   none up to 2048
+    alpha =   1024   none up to 2048
+
+THE PLANE IN NUMBERS (each cell at its own learned theta_u*)
+
+  differential (39), shift(some) - shift(no):
+    negative in 94 of 121 cells; below -1e-3 in 72; below -1e-2 in 62
+    zero to roundoff (|differential| < 1e-12, saturated) in 10 cells: (1024, 2), (1024, 4), (1024, 8), (1024, 16), (1024, 32), (1024, 64), (1024, 128), (1024, 256), (1024, 512), (1024, 1024)
+    most negative -1.2470 at (64, 256); maximum +0.0656 at (1, 64)
+    positive in 17 cells, at alpha in [1, 2, 4]
+    |differential| < 1e-3 in 32 cells, 30 of them with Lambda <= alpha
+  raw shift for "some" (Part C's q shift criterion):
+    negative in 74 cells, minimum -0.9466; positive in 37 cells, up to alpha = 64
+    max |shift(no)| = 1.0000
+  the "some" shift split into tempering (theta_u = 0 against q_lit) and utility:
+    tempering larger in magnitude in 59 of the 121 cells where either is above roundoff; shift and utility part of opposite sign in 53
+    some - no difference: tempering median 0.0007, max 0.0988; utility median 0.0405, max 1.1884
+    sign agrees with the utility level's some - no difference: the differential in 104 cells, the raw shift in 84
+  Part C's conjunction:
+    q position criterion, P(all-region | "some") < 1/2, in 59 cells; both q criteria in 33, from (1, 512) to (128, 2048)
+    what the conjunction NEEDS, over those 33 cells:
+      |theta_crit| from 0.100 to 4.250, with lambda_max(H) there from 2.0 to 20.1,
+      33 of them within 1e+03 and so integrable, against 3.5e+04 to 3.6e+07 at theta_u*;
+      Eq. (20) from theta_u(0) = 0 passes the threshold in at most 2 update(s), and the conjunction then holds
+      to theta_u* in 33 of them. What costs hours is theta_u*, not the conjunction.
+    floor in Lambda by alpha (q shift / q position criterion):
+      1: 512.0/2.0  2: 256.0/2.0  4: 128.0/2.0  8: 64.0/2.0  16: 32.0/64.0  32: 32.0/256.0  64: 16.0/512.0  128: 2.0/1024.0  256: 2.0/-  512: 2.0/-  1024: 2048.0/-
+  the override diagonal, where shift(no) > 1/2:
+    (32, 128) +0.8348, (64, 256) +0.9996, (128, 512) +1.0000, (256, 1024) +1.0000, (512, 2048) +1.0000
+    (there the differential subtracts a saturated shift, so the raw
+     shift is the statistic to read; the leak map gives the same line.)
+  the grid ceiling at Lambda = 8, each cell at its own theta_u*:
+       alpha    spread D    max E[s]
+          64      0.0057      0.9791
+         256      0.0012      0.9799
+        1024      0.0003      0.9803
+    (D collapses as the prior sharpens: the top rows measure the grid
+     as much as the model, and E[s] tends to about 0.98 rather than to
+     sigma(6) = 0.9975.)
+    the delta-like prior, alpha = 64, as Lambda rises:
+      Lambda =    512   P(all-region | "some") = 0.4351   shift -0.5217   theta_u* = 1407.77
+      Lambda =   1024   P(all-region | "some") = 0.1352   shift -0.8217   theta_u* = 2687.54
+      Lambda =   2048   P(all-region | "some") = 0.0102   shift -0.9466   theta_u* = 5531.15
+
+  THE MODE SHIFT AND MODE POSITION CRITERIA ON THE PLANE, under "some" (B8), beside the q criteria
+    mode shift: mode(phi_S*) - mode(ell_0) < 0;  mode position: mode(phi_S*) outside the cell of
+    "all", zeta < theta_L. The mode is the grid node where the field is largest.
+    the mode shift criterion is met in 67 of 121 cells, the mode position criterion in 59, both in 13; the q shift criterion in 74, the q position criterion in 59, both in 33
+    the mode of phi_S* is the node of mode(ell_0) in 4 cells, a shift of 0 steps; mode(ell_0 - phi_L) differs from mode(ell_0) in 0 cells
+    smallest gap between the two largest nodes of phi_S*, ell_0 and ell_0 - phi_L: 5.60e-05 (no ties)
+    agreement, cell by cell:
+      the q and mode shift criteria: both met 53, only under q 21, only under the mode 14, neither 33
+      the q and mode position criteria: both met 59, only under q 0, only under the mode 0, neither 62
+      the two conjunctions: both met 13, only under q 20, only under the mode 0, neither 88
+    the 35 cells where a q criterion and its mode counterpart disagree:
+       alpha Lambda    theta_u* P(all|some)    shift tempering  utility mode ell_0 mode phi_S* q shift mode shift q position mode position
+           1    512     1521.48      0.0357  -0.0146   +0.0857  -0.1003     0.5000      0.9168     yes         no        yes           yes
+           1   1024     3022.86      0.0085  -0.0419   +0.0857  -0.1276     0.5000      0.9168     yes         no        yes           yes
+           1   2048     6025.90      0.0005  -0.0499   +0.0857  -0.1356     0.5000      0.9168     yes         no        yes           yes
+           2    256      759.70      0.0816  -0.0121   +0.0949  -0.1069     0.6726      0.9072     yes         no        yes           yes
+           2    512     1510.17      0.0384  -0.0552   +0.0949  -0.1500     0.6726      0.9168     yes         no        yes           yes
+           2   1024     3011.58      0.0090  -0.0846   +0.0949  -0.1794     0.6726      0.9168     yes         no        yes           yes
+           2   2048     6014.64      0.0005  -0.0931   +0.0949  -0.1879     0.6726      0.9168     yes         no        yes           yes
+           4    128      367.69      0.1472  -0.0308   +0.0988  -0.1296     0.8085      0.9072     yes         no        yes           yes
+           4    256      739.94      0.0967  -0.0813   +0.0988  -0.1801     0.8085      0.9168     yes         no        yes           yes
+           4    512     1489.07      0.0443  -0.1337   +0.0988  -0.2325     0.8085      0.9168     yes         no        yes           yes
+           4   1024     2989.79      0.0102  -0.1678   +0.0988  -0.2666     0.8085      0.9168     yes         no        yes           yes
+           4   2048     5992.49      0.0006  -0.1774   +0.0988  -0.2762     0.8085      0.9168     yes         no        yes           yes
+           8     64      186.10      0.2773  -0.0471   +0.0769  -0.1239     0.8849      0.9255     yes         no        yes           yes
+           8    128      350.73      0.2092  -0.1152   +0.0769  -0.1921     0.8849      0.9255     yes         no        yes           yes
+           8    256      710.76      0.1306  -0.1938   +0.0769  -0.2706     0.8849      0.9255     yes         no        yes           yes
+           8    512     1452.51      0.0577  -0.2667   +0.0769  -0.3436     0.8849      0.9255     yes         no        yes           yes
+           8   1024     2949.15      0.0130  -0.3114   +0.0769  -0.3882     0.8849      0.9168     yes         no        yes           yes
+           8   2048     5949.71      0.0008  -0.3237   +0.0769  -0.4005     0.8849      0.9168     yes         no        yes           yes
+          16     32      195.57      0.5298  -0.0139   +0.0166  -0.0305     0.9405      0.9526     yes         no         no            no
+          16     64      232.62      0.4511  -0.0926   +0.0166  -0.1092     0.9405      0.9468     yes         no        yes           yes
+          16    128      359.82      0.3404  -0.2032   +0.0166  -0.2198     0.9405      0.9405     yes         no        yes           yes
+          32     16      378.96      0.8067  +0.0148   -0.0517  +0.0665     0.9701      0.9664      no        yes         no            no
+          64      2      773.57      0.9634  +0.0066   -0.0586  +0.0652     0.9852      0.9763      no        yes         no            no
+          64      4      771.22      0.9623  +0.0054   -0.0586  +0.0640     0.9852      0.9763      no        yes         no            no
+          64      8      766.78      0.9598  +0.0030   -0.0586  +0.0616     0.9852      0.9763      no        yes         no            no
+        1024      2    12228.42      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024      4    12226.13      1.0000  -0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024      8    12221.57      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024     16    12212.52      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024     32    12194.69      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024     64    12160.08      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024    128    12095.02      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024    256    11980.89      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024    512    11812.07      1.0000  -0.0000   -0.0000  +0.0000     0.9975      0.9763      no        yes         no            no
+        1024   1024    11681.04      1.0000  -0.0000   -0.0000  +0.0000     0.9975      0.9734      no        yes         no            no
+    floors by alpha under both read-outs: the least Lambda from which a criterion holds at every
+    larger Lambda on this grid; - where it does not hold at the largest, * where it also holds
+    at some Lambda below its floor
+       alpha |    q shift q position     q both |    mode shift mode position     mode both
+           1 |        512          2        512 |             -             2             -
+           2 |        256          2        256 |             -             2             -
+           4 |        128          2        128 |             -             2             -
+           8 |         64          2         64 |             -             2             -
+          16 |         32         64         64 |           256            64           256
+          32 |         32        256        256 |            16           256           256
+          64 |         16        512        512 |             2           512           512
+         128 |          2       1024       1024 |             2          1024          1024
+         256 |          2          -          - |             2             -             -
+         512 |          2          -          - |             2             -             -
+        1024 |       2048          -          - |             2             -             -
+

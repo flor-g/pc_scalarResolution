@@ -98,7 +98,23 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
     resolved to the first index, and print the smallest gap between the two largest nodes.
   - Acceptance: the values equal `audits/2026-09-13-delta-criteria/output.txt` §PART D ROWS, and every
     line the cell printed before is unchanged.
-- [ ] **T2. Code Cell 4: record and summarize the delta criteria on the plane.**
+- [x] **T2 (2026-09-14). Code Cell 4: the mode criteria recorded and summarized on the plane.** Closed:
+  `lambda_alpha_sweep` stores, under *some* per cell, the mode nodes of φ_S\*, ℓ₀ and ℓ₀ − φ_L, the modes
+  of φ_S\* and ℓ₀ in s, whether φ_S\*'s mode is outside the cell of *all*, and the smallest top-2 gap of
+  the three fields. `plane_summary` adds `mode_shift`, `mode_position`, `mode_both` and `floors` (all six
+  criteria) to its returned summary, and prints one block after the existing lines: the counts under
+  both read-outs, unmoved modes and the ℓ₀ / ℓ₀ − φ_L comparison, the smallest gap, agreement for the
+  shift criteria, the position criteria and the conjunctions, the 35 cells where a q criterion and its
+  mode counterpart disagree (θ\*, P(all|some), shift, tempering, utility, both modes, the four yes/no),
+  and the floors by α under both read-outs (the V), with * where a criterion also holds below its floor
+  (none do). C7 names throughout. Acceptance (`audits/2026-09-14-mode-plane/test_t2.py`, before
+  execution): existing lines unchanged; counts 67/59/13 against 74/59/33, unmoved 4, differing modes 0,
+  gap 5.60e−05, agreement 53/21/14/33, 59/0/0/62, 13/20/0/88, all 35 rows and the V table equal to
+  `output.txt`: PASS. Executed: main 0 errors, 8 figures, 14/14, 251 s; the only output change is Code
+  Cell 4's 62 added lines, equal to the test; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS (203
+  and 234 identical), 703 s. Code Cell 4 is not mirrored in appendix_E. The unmoved-mode count is
+  printed as a node comparison (a shift of 0 steps). Originally:
+- **T2. Code Cell 4: record and summarize the delta criteria on the plane.**
   - `lambda_alpha_sweep` stores mode(φ_S\*), mode(ℓ₀) and mode(ℓ₀ − φ_L) under *some* per cell.
   - `plane_summary` prints, for the delta read-out:
     - the counts for (a), (b) and both;

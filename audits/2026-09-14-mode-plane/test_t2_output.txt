@@ -1,0 +1,67 @@
+existing lines unchanged: True
+THE MODE SHIFT AND MODE POSITION CRITERIA ON THE PLANE, under "some" (B8), beside the q criteria
+    mode shift: mode(phi_S*) - mode(ell_0) < 0;  mode position: mode(phi_S*) outside the cell of
+    "all", zeta < theta_L. The mode is the grid node where the field is largest.
+    the mode shift criterion is met in 67 of 121 cells, the mode position criterion in 59, both in 13; the q shift criterion in 74, the q position criterion in 59, both in 33
+    the mode of phi_S* is the node of mode(ell_0) in 4 cells, a shift of 0 steps; mode(ell_0 - phi_L) differs from mode(ell_0) in 0 cells
+    smallest gap between the two largest nodes of phi_S*, ell_0 and ell_0 - phi_L: 5.60e-05 (no ties)
+    agreement, cell by cell:
+      the q and mode shift criteria: both met 53, only under q 21, only under the mode 14, neither 33
+      the q and mode position criteria: both met 59, only under q 0, only under the mode 0, neither 62
+      the two conjunctions: both met 13, only under q 20, only under the mode 0, neither 88
+    the 35 cells where a q criterion and its mode counterpart disagree:
+       alpha Lambda    theta_u* P(all|some)    shift tempering  utility mode ell_0 mode phi_S* q shift mode shift q position mode position
+           1    512     1521.48      0.0357  -0.0146   +0.0857  -0.1003     0.5000      0.9168     yes         no        yes           yes
+           1   1024     3022.86      0.0085  -0.0419   +0.0857  -0.1276     0.5000      0.9168     yes         no        yes           yes
+           1   2048     6025.90      0.0005  -0.0499   +0.0857  -0.1356     0.5000      0.9168     yes         no        yes           yes
+           2    256      759.70      0.0816  -0.0121   +0.0949  -0.1069     0.6726      0.9072     yes         no        yes           yes
+           2    512     1510.17      0.0384  -0.0552   +0.0949  -0.1500     0.6726      0.9168     yes         no        yes           yes
+           2   1024     3011.58      0.0090  -0.0846   +0.0949  -0.1794     0.6726      0.9168     yes         no        yes           yes
+           2   2048     6014.64      0.0005  -0.0931   +0.0949  -0.1879     0.6726      0.9168     yes         no        yes           yes
+           4    128      367.69      0.1472  -0.0308   +0.0988  -0.1296     0.8085      0.9072     yes         no        yes           yes
+           4    256      739.94      0.0967  -0.0813   +0.0988  -0.1801     0.8085      0.9168     yes         no        yes           yes
+           4    512     1489.07      0.0443  -0.1337   +0.0988  -0.2325     0.8085      0.9168     yes         no        yes           yes
+           4   1024     2989.79      0.0102  -0.1678   +0.0988  -0.2666     0.8085      0.9168     yes         no        yes           yes
+           4   2048     5992.49      0.0006  -0.1774   +0.0988  -0.2762     0.8085      0.9168     yes         no        yes           yes
+           8     64      186.10      0.2773  -0.0471   +0.0769  -0.1239     0.8849      0.9255     yes         no        yes           yes
+           8    128      350.73      0.2092  -0.1152   +0.0769  -0.1921     0.8849      0.9255     yes         no        yes           yes
+           8    256      710.76      0.1306  -0.1938   +0.0769  -0.2706     0.8849      0.9255     yes         no        yes           yes
+           8    512     1452.51      0.0577  -0.2667   +0.0769  -0.3436     0.8849      0.9255     yes         no        yes           yes
+           8   1024     2949.15      0.0130  -0.3114   +0.0769  -0.3882     0.8849      0.9168     yes         no        yes           yes
+           8   2048     5949.71      0.0008  -0.3237   +0.0769  -0.4005     0.8849      0.9168     yes         no        yes           yes
+          16     32      195.57      0.5298  -0.0139   +0.0166  -0.0305     0.9405      0.9526     yes         no         no            no
+          16     64      232.62      0.4511  -0.0926   +0.0166  -0.1092     0.9405      0.9468     yes         no        yes           yes
+          16    128      359.82      0.3404  -0.2032   +0.0166  -0.2198     0.9405      0.9405     yes         no        yes           yes
+          32     16      378.96      0.8067  +0.0148   -0.0517  +0.0665     0.9701      0.9664      no        yes         no            no
+          64      2      773.57      0.9634  +0.0066   -0.0586  +0.0652     0.9852      0.9763      no        yes         no            no
+          64      4      771.22      0.9623  +0.0054   -0.0586  +0.0640     0.9852      0.9763      no        yes         no            no
+          64      8      766.78      0.9598  +0.0030   -0.0586  +0.0616     0.9852      0.9763      no        yes         no            no
+        1024      2    12228.42      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024      4    12226.13      1.0000  -0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024      8    12221.57      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024     16    12212.52      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024     32    12194.69      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024     64    12160.08      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024    128    12095.02      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024    256    11980.89      1.0000  +0.0000   -0.0000  +0.0000     0.9975      0.9790      no        yes         no            no
+        1024    512    11812.07      1.0000  -0.0000   -0.0000  +0.0000     0.9975      0.9763      no        yes         no            no
+        1024   1024    11681.04      1.0000  -0.0000   -0.0000  +0.0000     0.9975      0.9734      no        yes         no            no
+    floors by alpha under both read-outs: the least Lambda from which a criterion holds at every
+    larger Lambda on this grid; - where it does not hold at the largest, * where it also holds
+    at some Lambda below its floor
+       alpha |    q shift q position     q both |    mode shift mode position     mode both
+           1 |        512          2        512 |             -             2             -
+           2 |        256          2        256 |             -             2             -
+           4 |        128          2        128 |             -             2             -
+           8 |         64          2         64 |             -             2             -
+          16 |         32         64         64 |           256            64           256
+          32 |         32        256        256 |            16           256           256
+          64 |         16        512        512 |             2           512           512
+         128 |          2       1024       1024 |             2          1024          1024
+         256 |          2          -          - |             2             -             -
+         512 |          2          -          - |             2             -             -
+        1024 |       2048          -          - |             2             -             -
+
+
+summary keys: {'mode_shift': 67, 'mode_position': 59, 'mode_both': 13}
+ACCEPTANCE PASS

@@ -1,0 +1,8 @@
+main.ipynb: figures 8, errors 0
+  cell 13 # === Code Cell 4: the Lambda x alpha sweep. EVALU: 0 lines removed, 62 added
+  checks: ['14/14 passed']
+  Code Cell 4's new block equals the pre-execution test output: True
+  'condition' or 'verdict' in Code Cell 4 source or output: []
+appendix_E.ipynb: figures 5, errors 0
+  E2: ['18/18 passed']
+  E3: ['PASS  the relay changes no reported quantity in Code Cell 2: 203 lines identical, 0 deleted,', 'PASS  nor in Code Cell 2b: 234 lines identical, 0 deleted, 0 changed, 0 inserted']
