@@ -31,6 +31,9 @@ OPEN.** Nothing in the notebooks has been changed. The findings below come from 
 > (2026-09-14, on the three sub-choices offered) 1. (b) as you recommended. 2. all three blocks 3.
 > lambda at 8 only for Block 1's rows.
 
+> (2026-09-14, on the §8 draft, the §9 sentence and the counterfactual label) 1. prose approved. 2.
+> approved 3. confirmed;  When you finished this up, proceed to T2.
+
 T3's placement, as offered and chosen: a new Appendix C §8, the present §8 renumbered §9 (anchor
 `appc-8` becomes `appc-9`, ToC row regenerated); Code Cell C prints Block 1 (Part D's four priors at
 Λ = 8: tilt and width coefficients, modes and all-region masses of the tempered control, the control
@@ -266,7 +269,12 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
 - `main.ipynb` Appendix C: the new §8 (draft below, for the user's review; not in the notebook), the
   present §8 renumbered §9 with its first sentence re-scoped, the ToC row, the anchor.
 
-## 5. Draft for review: Appendix C §8 (T3's prose; not yet in the notebook)
+## 5. Appendix C §8 (T3's prose): approved by the user 2026-09-14 and applied
+
+Applied by `audits/2026-09-14-utility-split/apply_prose.py`: §8 inserted as drafted, the old §8 now
+§9 (`appc-9`), its first sentence as approved, the ToC row added (74 anchors, 73 links, none
+unresolved). One change beyond the approved wording, for grammar: the next sentence's "It does not
+address" became "They do not address", since its subject is now "Sections 1–7".
 
 Every number is printed by Code Cell C's `utility_split_report` (test output
 `audits/2026-09-14-utility-split/test_output.txt`, equal to the executed output if the run verifies).
