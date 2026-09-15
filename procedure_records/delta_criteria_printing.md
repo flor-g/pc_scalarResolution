@@ -342,3 +342,96 @@ Every number is printed by Code Cell C's `utility_split_report` (test output
 
 Present §8's first sentence, to become §9's: "Everything above concerns separation and spanning." →
 "Sections 1–7 concern separation and spanning."
+
+## 6. Draft for review: T6 prose (not yet in the notebook)
+
+Written 2026-09-15 against the executed outputs of 5ee04a6. Every number is printed by Code Cell 2's
+or 2b's criteria block, Code Cell 4's new block, or Code Cell C. What the C7 pass (98c2df8) already
+covers is kept; the edits below fill what T6 asks for. No heading is added, so the ToC does not change.
+
+**E1. Text cell 4, Part C, "The criteria" paragraph: one clause (T6 item 3).** The sentence ending
+"with a mode shift and a mode position criterion of its own." becomes:
+
+> …with a mode shift and a mode position criterion of its own. The two pairs are not assumed to
+> agree, and they do not always: over the plane of Text cell 6 the two position criteria agree in all
+> $121$ cells and the two shift criteria disagree in $35$.
+
+**E2. Text cell 4, Part D, "The delta read-out's two criteria": definitions as unnumbered displays,
+the new columns, and the Λ = 8 result (T6 item 1).** The paragraph becomes:
+
+> **The delta read-out's two criteria.** Under *some*, Code Cell 2 also prints two criteria on the
+> peak of $\varphi_S^\ast$, which it calls the mode. Writing $k^\ast$ for the grid node where
+> $\varphi_S^\ast$ is largest and $k_0$ for the node where $\ell_0$ is, the **mode shift criterion**
+> is
+>
+> $$k^\ast<k_0,$$
+>
+> met when the mode lies below the $\ell_0$ peak on the scale, and the **mode position criterion** is
+>
+> $$\zeta_{k^\ast}<\theta_L,$$
+>
+> met when the mode lies outside the cell of *all*. Both are statistics of the delta read-out, as the
+> q criteria are of $q$, and neither is a model quantity. Being comparisons of grid nodes, they resolve
+> a movement of the mode to one node; a tie would go to the first node, and the cell prints the gap
+> between the two largest values of $\varphi_S^\ast$, which is never zero in these rows. The cell
+> prints the mode shift in $s$ and in grid steps, $k^\ast-k_0$. The grid is uniform in $\zeta$ while
+> $s$ compresses toward the ends of the scale, so the steps, multiplied by the grid spacing of
+> $0.12$, give the shift in $\zeta$. The mode criteria are the counterparts on the delta read-out of
+> the q shift and q position criteria and are not assumed to agree with them, so the cell prints the
+> four side by side, with how often each pair agrees. As with the q criteria, this notebook takes no
+> position on how they should be interpreted. At $\Lambda=8$ the mode lies $3$, $6$, $3$ and $5$
+> grid steps above the $\ell_0$ peak under the Gaussian, flat, $\mathrm{Beta}(1,3)$ and
+> $\mathrm{Beta}(3,1)$ priors, so the mode shift criterion is met under none and the mode position
+> criterion under all four, and each agrees with its q counterpart in all four rows.
+
+**E3. Text cell 4, Part D, the spike paragraph: a correction (R15).** The sentence "The movement of
+the mode up the scale between the two is what the positive $\Delta_{\textit{some}}$ records." no
+longer holds: by the paragraph above it, the positive shift is tempering, and halving a field does not
+move its maximum. Proposed replacement:
+
+> The movement of the mode up the scale between the two is the utility level's, since the $\theta_u$
+> control, $\tfrac12(\ell_0-\varphi_L)$, keeps its maximum where $q_{\mathrm{lit}}$ has it; Appendix
+> C §8 splits the utility field into the part that moves the mode and the part that lowers the
+> all-region mass. The positive $\Delta_{\textit{some}}$ is the tempering the utility level fails to
+> undo, as above, and not that movement.
+
+**E4. Text cell 4b, after "We note the difference and reserve our position on it." (T6 item 1, for
+Code Cell 2b).** Inserted before "Under *no* and *all*…", which then opens a new paragraph:
+
+> Over the eight rows Code Cell 2b prints, the five at $\theta_u^\ast$ and the three realizable, the
+> mode position criterion is met in all eight and the mode shift criterion in two, the delta-like
+> prior's; the mode and q shift criteria agree in four of the eight. In grid steps the mode lies $19$,
+> $20$, $27$ and $11$ nodes above the $\ell_0$ peak under the four diffuse priors and $11$ below it
+> under the delta-like prior. The flat row is the plane's cell $(1,512)$, one of the $21$ cells
+> Appendix C §8 tabulates where the q shift criterion is met and the mode shift criterion is not.
+
+**E5. Text cell 6, section *Where both of Part C's q criteria hold*: two paragraphs after "What the
+conjunction costs" (T6 item 2, R14).**
+
+> **The same plane under the delta read-out.** Code Cell 4 also reads the mode shift and mode
+> position criteria of Text cell 4 Part D off every cell. The mode position criterion holds in the
+> same $59$ cells as the q position criterion. The mode shift criterion holds in $67$ cells against
+> the q shift criterion's $74$, and the two disagree in $35$: the q shift criterion alone is met in
+> $21$, all at $\alpha\le16$, and the mode shift criterion alone in $14$, which are ten cells of the
+> saturated $\alpha=1024$ row and $(32,16)$, $(64,2)$, $(64,4)$ and $(64,8)$. Both mode criteria hold
+> together in $13$ cells, every one of them inside the band of $33$, so the two conjunctions part in
+> $20$ cells, all of them met under q alone.
+>
+> Under the delta read-out the band keeps its right arm and loses its left. The mode position
+> criterion's floor is the q position criterion's at every $\alpha$. The mode shift criterion is never
+> met at $\alpha\le8$; from $\alpha=16$ its floor is $256$, then $16$ at $\alpha=32$, then $2$ from
+> $\alpha=64$ on. The floor of both mode criteria is therefore absent at $\alpha\le8$ and reads $256$,
+> $256$, $512$ and $1024$ at $\alpha=16$, $32$, $64$ and $128$, against the q conjunction's $64$,
+> $256$, $512$ and $1024$. The right arm, set by the position criteria, is shared from $\alpha=32$;
+> the left arm, where the q shift criterion's floor falls as the prior sharpens, exists only under q.
+> Appendix C §8 measures what the mode does there. Every cell where the mode moves up has the
+> tempered control's mode at $s\le0.9405$, and every cell where it moves down has it at
+> $s\ge0.9405$; at $\alpha=1$, $2$, $4$ and $8$ the $\ell_0$ peak, which is the tempered control's
+> mode, sits at $s=0.5000$, $0.6726$, $0.8085$ and $0.8849$.
+
+Choices to confirm with the user:
+- E3 corrects an interpretive sentence (agent.md §5.4); its replacement follows R15.
+- E2 writes the mode as the node $k^\ast$, following $k$ as the node index of Eqs. (25)–(27).
+  Appendix C §8 writes $k_1,k_2$ for the utility coefficients, in a separate cell.
+- E5 gives the V as a result and stops at the measurement: the two paragraphs do not say which
+  criterion reads which part of the field.
