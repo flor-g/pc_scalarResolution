@@ -25,6 +25,22 @@ OPEN.** Nothing in the notebooks has been changed. The findings below come from 
 > reader can make their own judgment. (Any positions we take would be left to the paper, not the
 > notebook. ) Execute next step.
 
+> (2026-09-14, on T3) I think T3 should be at appendix C; if you need me to be more specific than
+> that, explain what the print will include in more detail and I will tell you where it goes.
+
+> (2026-09-14, on the three sub-choices offered) 1. (b) as you recommended. 2. all three blocks 3.
+> lambda at 8 only for Block 1's rows.
+
+T3's placement, as offered and chosen: a new Appendix C §8, the present §8 renumbered §9 (anchor
+`appc-8` becomes `appc-9`, ToC row regenerated); Code Cell C prints Block 1 (Part D's four priors at
+Λ = 8: tilt and width coefficients, modes and all-region masses of the tempered control, the control
+plus each part alone and the model, slopes at the control's mode), Block 2 (the 121-cell plane: sign
+counts, mode up/down/unmoved and which part alone moves it, mass counts, where the control's mode
+sits, and the table of cells where the q shift criterion is met and the mode shift criterion is not)
+and Block 3 (the Eq. (24) halving: exact form, distance from c/2, signs, the limit field's mode and
+criteria, the ten cells furthest from the halving, Part D's four rows). The coefficients are at each
+configuration's own Λ and θ_u\*, not per unit Λ, and the new section says so.
+
 Under B10 every line these tasks print reports a condition or criterion as a measurement ("holds",
 "does not hold"), never as a verdict on strengthening.
 
@@ -92,7 +108,20 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
     - the unmoved-mode count, and whether mode(ℓ₀) and mode(ℓ₀ − φ_L) ever differ.
   - Acceptance: equal to `output.txt` §PLANE, §AGREEMENT, §CELLS WHERE THE READ-OUTS DISAGREE and §FLOORS
     AND THE V; the existing lines unchanged.
-- [ ] **T3. The tilt/width decomposition (R15). Placement is the user's call.**
+- [x] **T3 (2026-09-14). Code Cell C, `utility_split_report`: the tilt/width split printed in Appendix
+  C (user: new §8, Blocks 1-3, Block 1 at Λ = 8 only; §0).** Closed for the code: one function and one
+  call appended to Code Cell C, called with `part_d_priors()` and Code Cell 4's `sweep_grids` α and Λ
+  lists, so the plane is Code Cell 4's. Prints Blocks 1-3 as recorded in §0, under C7 names; the two
+  single-part fields are labelled as counterfactual, not network states (agent, pending user
+  confirmation: a construction of the report, not a control of the model). Acceptance
+  (`audits/2026-09-14-utility-split/acceptance.py`, run before insertion): every number of
+  `mode_mechanism_output.txt` and `halving_check_output.txt` for Part D's four diffuse rows, every plane
+  count, the 21-cell and ten-cell tables: PASS. Executed: main 0 errors, 8 figures, 14/14, 266 s; the
+  only output change is Code Cell C's 91 added lines, equal to the pre-insertion test; appendix_E 0
+  errors, 5 figures, E2 18/18, E3 PASS (203 and 234 lines identical), 673 s. Code Cell C is not mirrored
+  in appendix_E, so T4 does not apply. The §8 prose (and §9 renumbering, ToC, anchor) is drafted in §5
+  for review. Originally:
+- **T3. The tilt/width decomposition (R15). Placement is the user's call.**
   - The preliminary result, F4 below, comes from `mode_mechanism.py`. Decide whether it is printed,
     and where:
     - (i) Code Cell 2, for Part D's rows;
@@ -234,3 +263,58 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
 - `thesis_outline/revisions.md`: §4.5 (the V under both read-outs); item 1 and §4.4 (the Cremers
   parallel, with F4's two sources, if the paper keeps the explanation).
 - `main.ipynb`: as in T6.
+- `main.ipynb` Appendix C: the new §8 (draft below, for the user's review; not in the notebook), the
+  present §8 renumbered §9 with its first sentence re-scoped, the ToC row, the anchor.
+
+## 5. Draft for review: Appendix C §8 (T3's prose; not yet in the notebook)
+
+Every number is printed by Code Cell C's `utility_split_report` (test output
+`audits/2026-09-14-utility-split/test_output.txt`, equal to the executed output if the run verifies).
+
+> ### 8. Which part of the utility field moves the mode
+>
+> By Eq. (23) the field the utility level adds under *some*, $\varphi_S^\ast-\varphi_S^\ast(\theta_u{=}0)$,
+> lies in $\operatorname{span}B$, so at $m=2$ it is $k_1b_1+k_2b_2$: a tilt part on the odd column and
+> a width part on the even column, in §5's vocabulary. Unlike the projections of §§1–7, $k_1$ and
+> $k_2$ are not per unit $\Lambda$: each is taken at its configuration's own $\Lambda$ and
+> $\theta_u^\ast$, and $\theta_u^\ast$ moves with $\Lambda$. Code Cell C adds each part alone to the
+> tempered control ($\theta_u=0$, field $\tfrac12(\ell_0-\varphi_L)$, whose mode node is that of
+> $\ell_0$ in every configuration below) and reads off the mode and the all-region $q$-mass of
+> Eq. (27). Those two fields are constructed for the comparison; the network does not settle on
+> either.
+>
+> **Part D's priors at $\Lambda=8$.** The width coefficient is negative under all four priors, and
+> the tilt coefficient is positive under three and $-1.50$ under $\mathrm{Beta}(1,3)$. Width alone
+> lowers the all-region mass under all four, from $0.2356$ to $0.0230$ under $\mathrm{Beta}(3,1)$.
+> Under the Gaussian and flat priors the tempered control's mode sits at $s=0.5000$, where the width
+> part's slope is $0$: width alone leaves the mode there, tilt alone moves it up $6$ and $17$ grid
+> steps, and the model moves it up $3$ and $6$. Under $\mathrm{Beta}(3,1)$ tilt alone moves the mode up
+> $41$ steps and width alone down $4$, and the model moves it up $5$. Under $\mathrm{Beta}(1,3)$ the
+> directions are exchanged, tilt alone down $3$ and width alone up $4$, and the model moves it up $3$.
+>
+> **The plane.** Over the $121$ cells of Code Cell 4, the tilt coefficient is positive and the width
+> coefficient negative in every cell. The model's mode moves up in $50$ cells, down in $67$, and not
+> at all in $4$. In every up cell tilt alone moves it up and width alone does not; in every down cell
+> width alone moves it down and tilt alone does not. In all $117$ cells where the mode moves, the
+> direction is the sign of the two parts' summed slope at the tempered control's mode, which is the
+> first-order displacement of a smooth peak: adding $g$ to a field with a peak of curvature
+> $f''<0$ moves the peak by about $g'/(-f'')$. The up cells are those whose tempered mode sits at
+> $s\le0.9405$, the down cells those at $s\ge0.9405$. Width alone lowers the all-region mass in all
+> $121$ cells and tilt alone in none. Code Cell C tabulates the $21$ cells where the $q$ shift
+> criterion is met and the mode shift criterion is not.
+>
+> **Where the signs come from.** At $\sigma=1$ and $B^{\mathsf T}WB=I$, Eqs. (15)–(16) give
+> $k=\tfrac{\theta_u}{2}\big(\mu_u+\tfrac{\theta_u}{2}c\big)\big/\big(1+\tfrac{\theta_u^2}{2}\big)$
+> with $c=B^{\mathsf T}W(\ell_0-\varphi_L)$, so $k\to c/2$ as $\lvert\theta_u\rvert$ grows, which is
+> Eq. (24). The fitted $k$ matches that form to $1.2\times10^{-15}$. The relative distance from $c/2$
+> has median $8.6\times10^{-7}$ in the tilt column and $4.8\times10^{-6}$ in the width column, both
+> columns are within $10^{-3}$ of it in $111$ cells, and the largest distance is $17\%$, in the tilt
+> column at $(\alpha,\Lambda)=(1,2)$, where $\theta_u^\ast=-6.51$. $k$ and $c$ agree in sign in both
+> columns in all $121$ cells. The limit field of Eq. (24) has the model's mode node, and gives the
+> same reading on each of the four criteria, in all $121$ cells and under Part D's four priors. The
+> signs of the tilt and width parts are therefore the signs of the literal field's own projection.
+>
+> Modes here are grid nodes, and the direction argument is first order, checked only by its sign.
+
+Present §8's first sentence, to become §9's: "Everything above concerns separation and spanning." →
+"Sections 1–7 concern separation and spanning."

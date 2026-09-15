@@ -1,0 +1,8 @@
+main.ipynb: figures 8, errors 0
+  cell 19 # === Code Cell C: the numbers Appendix C quotes. : 0 lines removed, 91 added
+  checks: ['14/14 passed']
+  Sec. 8 output equals the pre-insertion test output: True
+  'condition' or 'verdict' in Code Cell C source or output: False
+appendix_E.ipynb: figures 5, errors 0
+  E2: ['18/18 passed']
+  E3: ['PASS  the relay changes no reported quantity in Code Cell 2: 203 lines identical, 0 deleted,', 'PASS  nor in Code Cell 2b: 234 lines identical, 0 deleted, 0 changed, 0 inserted']
