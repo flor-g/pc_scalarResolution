@@ -120,7 +120,7 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   only output change is Code Cell C's 91 added lines, equal to the pre-insertion test; appendix_E 0
   errors, 5 figures, E2 18/18, E3 PASS (203 and 234 lines identical), 673 s. Code Cell C is not mirrored
   in appendix_E, so T4 does not apply. The §8 prose (and §9 renumbering, ToC, anchor) is drafted in §5
-  for review. Originally:
+  for review. Commit 27a4122. Originally:
 - **T3. The tilt/width decomposition (R15). Placement is the user's call.**
   - The preliminary result, F4 below, comes from `mode_mechanism.py`. Decide whether it is printed,
     and where:
