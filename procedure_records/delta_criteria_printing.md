@@ -113,7 +113,7 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   `output.txt`: PASS. Executed: main 0 errors, 8 figures, 14/14, 251 s; the only output change is Code
   Cell 4's 62 added lines, equal to the test; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS (203
   and 234 identical), 703 s. Code Cell 4 is not mirrored in appendix_E. The unmoved-mode count is
-  printed as a node comparison (a shift of 0 steps). Originally:
+  printed as a node comparison (a shift of 0 steps). Commit 5ee04a6. Originally:
 - **T2. Code Cell 4: record and summarize the delta criteria on the plane.**
   - `lambda_alpha_sweep` stores mode(φ_S\*), mode(ℓ₀) and mode(ℓ₀ − φ_L) under *some* per cell.
   - `plane_summary` prints, for the delta read-out:
