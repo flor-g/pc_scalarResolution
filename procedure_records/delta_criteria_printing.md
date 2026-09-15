@@ -20,6 +20,14 @@ OPEN.** Nothing in the notebooks has been changed. The findings below come from 
 > V. Create open tasks for code cell edits. Regarding Q6, I agree with your suggestion; nevertheless,
 > we might want to poke why a similar phenomenon also emerged for delta-readout.
 
+> (2026-09-14) your decisions are confirmed. Just remember that we do not take a position that both
+> conditions need to be met to count as scalar strengthening. We are just reporting them so that the
+> reader can make their own judgment. (Any positions we take would be left to the paper, not the
+> notebook. ) Execute next step.
+
+Under B10 every line these tasks print reports a condition or criterion as a measurement ("holds",
+"does not hold"), never as a verdict on strengthening.
+
 ## 1. Decisions this rests on
 
 - `decisions.md` **B8** (user): the delta read-out's criteria, under *some*: (a) mode(φ_S\*) −
@@ -34,8 +42,21 @@ OPEN.** Nothing in the notebooks has been changed. The findings below come from 
 
 Record format when closing: `[x] Tn (date): what changed; acceptance result; commit`.
 
-- [ ] **T0. Checkpoint** (agent.md §4.2). Record the HEAD hash.
-- [ ] **T1. Code Cell 2, `delta_readout_report`: print criteria (a) and (b).**
+- [x] **T0 (2026-09-14). Checkpoint.** HEAD 7854b8f, clean tree. T1 prints in Code Cell 2, and so in
+  Code Cell 2b, which calls the same function (S-5 of `evaluation_partD_atStrongLambda.md`).
+- [x] **T1 (2026-09-14). Code Cell 2, `delta_readout_report`: print the mode shift and mode position
+  criteria (C7 names; (a) and (b) below).** Closed: one block at the end of `delta_readout_report`, so
+  it prints in Code Cell 2 (Part D's four rows at Λ = 8) and Code Cell 2b (five rows at θ_u\* and three
+  realizable rows at Λ = 512). Per row: modes of ℓ₀, ℓ₀ − φ_L and φ_S\* in s, the signed mode shift, the
+  mode shift / mode position criteria and both, the q shift / q position criteria and both, the gap
+  between the two largest nodes; then counts and pairwise agreement. Wording under B10/C7. Modes are
+  printed in s only, not also in ζ (agent, pending user confirmation).
+  Acceptance: Λ = 8 rows equal `output.txt` §PART D ROWS in every mode and yes/no; the delta-like row
+  equals it too; the Λ = 512 rows equal `evaluation_partD_atStrongLambda.md` F7. Smallest top-2 gap
+  3.4e−3 (no ties). Code Cell 2 at Λ = 8: the pairs agree in 4 of 4 rows. Code Cell 2b at Λ = 512: mode
+  and q shift criteria agree in 4 of 8 rows (flat and Beta(3,1), each at θ_u\* and realizable, have
+  the q shift criterion met and the mode shift criterion not), position criteria in 8 of 8.
+  Every previously printed line unchanged apart from the C7 renames. Originally:
   - For each Part D row under *some*, at θ_u\* and at the realizable θ_u row B7 already prints,
     print:
     - mode(ℓ₀), mode(ℓ₀ − φ_L) and mode(φ_S\*), in ζ and in s;
@@ -70,11 +91,16 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   - [x] Prerequisite (2026-09-13): the Eq. (24) halving is checked across the plane and on Part D's
     rows (F5, `halving_check.py`). The placement decision above is still open.
   - Acceptance: equal to `mode_mechanism_output.txt` for whatever is printed.
-- [ ] **T4. Mirror into Appendix E** (agent.md §2).
+- [x] **T4 (2026-09-14). Mirror into Appendix E** — closed for T1: the block patched into E2 with the
+  same replacement; no new printing call, so E3's replay list is unchanged. Originally:
   - Lift T1's changes and any T3 addition to Code Cell 2 verbatim into E2.
   - If a new printing call is added, add it to E3's replay list, with what it needs passed in.
   - Keep the `# === Code Cell 2` prefix.
-- [ ] **T5. Execute main, then appendix_E** (agent.md §5.1).
+- [x] **T5 (2026-09-14). Execute main, then appendix_E** — closed for T1: `RUNNER OK main.ipynb: error
+  outputs 0, figures 8, runtime 248 s`, 14/14; `RUNNER OK appendix_E.ipynb: error outputs 0, figures 5,
+  runtime 706 s`, E2 18/18, E3 PASS (202 and 233 lines identical), E4 unchanged. Output diffs against
+  7854b8f: the T1 block inserted, and the C7 renames. Record: `audits/2026-09-14-no-position/`. T2, T3
+  and T6 remain open. Originally:
   - Baseline: main 0 errors, 6 figures, 14/14; appendix_E 0 errors, 3 figures, E2 18/18, E3 PASS.
   - Diff the stored outputs against the T0 hash: only insertions, plus `cost:` lines.
 - [ ] **T6. Notebook prose. Wording needs the user's review before it lands.**

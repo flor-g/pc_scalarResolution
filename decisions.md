@@ -289,7 +289,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Findings added later: 2026-09-13, the prose no longer calls q_lit a posterior (A16, C3).
 
 ### B2. The criterion is the conjunction of two conditions
-- Status: Settled
+- Status: Superseded in part by B10 (2026-09-14): the two conditions stand as defined; the notebooks take no position that their conjunction is what counts
 - Decided by: user (from `sections_3-5_outline.md` §4.2)
 - Decision: first condition Δ_some < 0; second q_H(all | some) < ½. Neither alone suffices.
 - Depends on it: Part C, Part D table, Text cell 6 *Where both of Part C's conditions hold*.
@@ -342,7 +342,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Evidence: `procedure_records/d9_delta_readout.md` F2-F4.
 
 ### B8. The delta read-out carries two criteria of its own
-- Status: Settled as a definition. Where and how the paper uses them is open (`thesis_outline/revisions.md` Q2, Q6).
+- Status: Settled as a definition. Where and how the paper uses them is open (`thesis_outline/revisions.md` Q2, Q6). Reported without position in the notebooks (B10).
 - Decided by: user (2026-09-13)
 - Decision: under *some*, (a) mode(φ_S\*) − mode(ℓ₀) < 0, the delta analogue of the shift; (b)
   mode(φ_S\*) outside the cell of *all*, ζ < θ_L (Appendix A). The mode is the grid node where the
@@ -352,6 +352,9 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   form stated on it.
 - Implementational reason: none yet. No cell prints them (C6), so their numbers are class (e) for
   prose.
+  **2026-09-14: now printed** by `delta_readout_report` (Code Cells 2 and 2b; T1 of
+  `delta_criteria_printing.md`), under the C7 names mode shift criterion and mode position criterion,
+  so their Part D and Text cell 4b numbers are sourced.
 - Bogacz status: statistics of the delta read-out (his Eq. 34); the tutorial has no counterpart for
   the criteria.
 - Depends on it: revisions.md Q2 (the V under both read-outs), Q6 (R7's supporting sentence).
@@ -387,6 +390,29 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     F7).** The delta criteria part from q's on two Part D rows for the first time: under the flat and
     Beta(3,1) priors the q conjunction holds and criterion (a) does not (peaks move up to s = 0.917).
 
+### B10. The notebooks report the conditions and take no position on what counts as strengthening
+- Status: Settled
+- Decided by: user (2026-09-14)
+- Decision: "we do not take a position that both conditions need to be met to count as scalar
+  strengthening. We are just reporting them so that the reader can make their own judgment. (Any
+  positions we take would be left to the paper, not the notebook.)" Part C's two conditions (B2) and
+  the delta read-out's two criteria (B8) are reported, each and together, as measurements; no text or
+  printed line in `main.ipynb` or `appendix_E.ipynb` says that meeting them, or failing them, is or is
+  not scalar strengthening.
+- Theoretical reason: the notebook is the measurement record; what counts as strengthening is argued
+  in the paper.
+- Implementational reason: none.
+- Depends on it: Text cell 4 Part C (the criterion paragraph, "Neither is sufficient alone", every
+  "verdict" and "criterion met"), Parts D and 4b, Text cell 6, Code Cells 2 and 2b's printed lines
+  ("a scalar implicature for \"some\" requires a NEGATIVE shift", "the criterion is NOT met", "Part
+  C's verdict"), Code Cell 4's summary; `procedure_records/delta_criteria_printing.md` T1 wording.
+- Findings added later:
+  - 2026-09-14: the existing prose and printed lines take the position in many places; listed for the
+    user, not yet revised (agent.md §5.4).
+  - 2026-09-14, the user refined B10: "criterion is kay. Calling it a criterion does not mean we
+    commit to this criterion." Naming and wording in C7. Sites revised under
+    `procedure_records/b10_no_position.md`.
+
 ### B9. Part D's companion at a strong Λ: every prior at Λ = 512, in a cell of its own
 - Status: Settled (implementation in progress)
 - Decided by: user (2026-09-14), approving S-1 to S-5 and S-7 of
@@ -421,6 +447,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     entry together"; two new reserved positions (the leak of *all* under the Gaussian prior at Λ = 8;
     q's conjunction against the delta read-out's peak under flat and Beta(3,1)); Part C's closing
     claim re-scoped to three of five priors at Λ = 512. Nothing here changes a settled decision.
+  - 2026-09-14: **all of the above confirmed by the user**, together with the change record's T1
+    implementation choices and the S-7 reading. The user added B10.
 
 ---
 
@@ -451,6 +479,25 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - θ_L, never β (collides with `beta_world_prior`). F is Bogacz's negative free energy, maximized.
   Subscripts capitalize exactly when the level is field-valued (L, S; not y, u). κ_y = BᵀWφ_L is the
   lexical projection; c_y = BᵀW(ℓ₀ − φ_L) is Appendix B's.
+
+### C7. The four criteria's names, the stance sentence, and two words not used
+- Status: Settled
+- Decided by: user (2026-09-14)
+- Decision:
+  - The first criterion (B2's first condition, B8's (a)) is **the shift criterion**; the second (B2's
+    second, B8's (b)) is **the position criterion**. Where the read-out has to be named: **the q shift
+    criterion** (Δ_some < 0), **the q position criterion** (q_H(all | some) < ½), **the mode shift
+    criterion** (mode(φ_S\*) − mode(ℓ₀) < 0), **the mode position criterion** (mode(φ_S\*) outside the
+    cell of *all*).
+  - Calling them criteria does not commit the notebooks to them (B10).
+  - The words "condition" and "verdict" are not used in the notebooks, for consistency of word choice.
+  - Where the prose took a position ("we take …"), it reads, in the user's words: "the reader, in
+    accordance with their own judgement, may take satisfaction of the disjunction, the conjunction,
+    either one of the two alone, or even neither criteria as scalar strengthening. This notebook takes
+    no position on how the criteria should be interpreted." (The instruction wrote "nether"; read as
+    "neither".)
+- Depends on it: every site of `procedure_records/b10_no_position.md` §2; printed lines of Code Cells
+  2, 2b and 4 and of E2, E2b; decisions B2, B8 keep their historical wording.
 
 ### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
 - Decided by: user (2026-09-13)
@@ -964,8 +1011,8 @@ not quantities.
 **E11. A value that silently assumes defaults.** Class (d), minor. `mu_u_probe` prints
 "+0.3333 b_j at theta_u = 1" from a hard-coded 1/3, whatever its `theta_u` argument or σ.
 
-**E12. Code Cell 2b's quantities (added 2026-09-14, B9).** Classed by the agent, pending user
-confirmation.
+**E12. Code Cell 2b's quantities (added 2026-09-14, B9).** Classed by the agent, confirmed by the
+user 2026-09-14.
 - `STRONG_LAMBDA` = `DELTA_ALL_LAMBDA` = 512: class (c), a stated departure from the model's Λ = 8,
   justified by B3's override threshold and B9. Every row of Code Cell 2b carries it and the table
   prints it.

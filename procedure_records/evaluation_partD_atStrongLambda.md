@@ -2,7 +2,7 @@
 
 Working record, on the pattern of `theta_u_learned_reach.md` (agent.md §5.3). It is the guide for
 the change. **Status 2026-09-14: code tasks T0–T9 closed; prose pass T10 drafted and verified, its
-interpretive choices (§6.2) awaiting the user's review.** §1.1–1.3 were measured by the probe before the change; Code Cell 2b now prints
+interpretive choices (§6.2) confirmed by the user; B10 added.** §1.1–1.3 were measured by the probe before the change; Code Cell 2b now prints
 every number there (C6). The scripts are in `audits/2026-09-14-strong-lambda/`.
 
 ## 0. Instructions (the user's, verbatim, 2026-09-14)
@@ -19,7 +19,7 @@ every number there (C6). The scripts are in `audits/2026-09-14-strong-lambda/`.
 > argument; and we will do that after the codes are finished. Regarding S-7, yes, we want figures
 > for all five priors as well as the "no" "some" "all" figures under gaussian prior.
 
-**Reading of S-7 (agent, pending user confirmation).** The new code cell draws three figures, all at
+**Reading of S-7 (agent, confirmed by the user 2026-09-14).** The new code cell draws three figures, all at
 Λ = 512: *no*/*some*/*all* under the Gaussian prior (the counterpart of Code Cell 2's first figure);
 *some* under all five priors (the counterpart of its second); and the delta-like *no*/*some*/*all*
 figure moved from Code Cell 2 (S-2). main.ipynb's figures go from 6 to 8: Code Cell 2 keeps two,
@@ -353,7 +353,7 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
 - [x] **T1 (2026-09-14). S-1 to S-5 and S-7 settled by the user; S-6 deferred to the prose pass.**
   `decisions.md`: B9 (new), dated findings under B3 and B8, I10 marked amended, I11 (new: naming,
   E2b, E3's two prefixes, E4's explicit delta row). Commit pending with T9.
-  - **Implementation choices made by the agent, pending user confirmation:**
+  - **Implementation choices made by the agent, confirmed by the user 2026-09-14:**
     - the integrated RUN and THE ROUNDOFF FLOOR run for **every** both-conditions row whose arrival
       θ_u is integrable, not only the cheapest; a row that is not integrable is named. The delta
       row's lines are unchanged by this;
@@ -529,7 +529,13 @@ checked number by number against the re-executed outputs (`verify_prose_pass.py`
 - **Appendix E:** E.1's delta-like relay bound is attributed to Text cell 4b; E.3's stale "Code cells
   9 and 10" corrected to Code Cells 2 and 2b.
 
-### 6.2 Interpretive choices, agent drafts pending the user's review (agent.md §5.4)
+### 6.2 Interpretive choices, agent drafts confirmed by the user (2026-09-14)
+
+> your decisions are confirmed. Just remember that we do not take a position that both conditions
+> need to be met to count as scalar strengthening. We are just reporting them so that the reader can
+> make their own judgment. (Any positions we take would be left to the paper, not the notebook. )
+
+The second half is decision B10; the prose it bears on is not yet revised.
 
 1. **Part C's first commitment.** Was "strengthening is prior-relative … it is the prior doing that
    rather than the raised Λ". Now "strengthening is relative to the prior and to the strength of the
