@@ -685,8 +685,8 @@ C's, and need not agree with them. The V shape is discussed in the paper.
 
 `audits/2026-09-13-delta-criteria/` (script and `output.txt`). It executes Code Cell 1 and Code
 Cell 2's definitions, and reproduces Code Cell 2's Part D rows and Code Cell 4's counts (second
-condition 59, both 33). Everything is under *some*, each configuration at its own θ\*. **Nothing in
-this subsection is printed by a notebook cell yet** (see "Printing" below).
+condition 59, both 33). Everything is under *some*, each configuration at its own θ\*. **2026-09-15:
+every number in this subsection is printed**, by Code Cells 2, 2b and 4.
 
 **Part D's five rows agree row by row.**
 - Criterion (a) is met only under the delta-like prior, where the mode moves from 0.9852 to 0.9468.
@@ -815,8 +815,8 @@ R7's placement is the user's decision and has not been changed; only the sentenc
 movement emerges under the delta read-out be investigated. The sentence in item 1 is corrected, and
 the investigation is an open task in `procedure_records/delta_criteria_printing.md`.
 
-**Preliminary result** (record F4; `audits/2026-09-13-delta-criteria/mode_mechanism_output.txt`; not
-printed by any cell). **The two movements share a direction, not a source.**
+**Preliminary result** (record F4; printed by Code Cell C and reported in Appendix C §8 since
+2026-09-15). **The two movements share a direction, not a source.**
 
 - **The split.** By Eq. (24) the model doubles the literal field's span-B component, which splits
   into B's odd (tilt) and even (width) parts.
@@ -882,6 +882,12 @@ The re-examination is §4's §5.2 entry. It leaves four choices, all interpretiv
 | F15 (not within 0.1% after 5,000 updates), 145/145 | `procedure_records/theta_u_learned_reach.md` (recorded scripts, not a cell) |
 | Exposure-only θ\* (−11.2844, −44.1766, −65.7004, −28.4375) | Code Cell B, ALTERNATIVE SPACES |
 | §5.2's re-examination: contributions, leaks, loadings, illustrative θ\* | `audits/2026-09-13-scale-structure/output.txt` (an audit script, not a cell) |
+| Q2's Part D and Λ = 512 rows: the modes, the mode shift in s and in grid steps, the two mode criteria | `main.ipynb` Code Cells 2 and 2b, the mode criteria block |
+| Q2's plane counts (67, 59, 13 against 74, 59, 33), the 35 disagreeing cells, the four unmoved modes, the 5.6e-5 gap, and the V under both read-outs | Code Cell 4, `plane_summary` |
+| Q6's tilt/width split, the 50 and 67 up/down counts, Eq. (24)'s halving and the limit field | Code Cell C, `utility_split_report`; Appendix C §8 |
+
+(2026-09-15: R14's and R15's code and prose tasks, T1-T3, T6 and T7 of
+`procedure_records/delta_criteria_printing.md`, are closed.)
 
 ## 9. Other stale pointers found
 

@@ -34,6 +34,13 @@ OPEN.** Nothing in the notebooks has been changed. The findings below come from 
 > (2026-09-14, on the §8 draft, the §9 sentence and the counterfactual label) 1. prose approved. 2.
 > approved 3. confirmed;  When you finished this up, proceed to T2.
 
+> (2026-09-15, on T7's three questions) 1 and 3 are confirmed. Can you tell me more about 2?
+
+> (2026-09-15, on the classing of the two single-part fields) these are essentially algebraic
+> manipulations, as opposed to model manipulations that currently occupies the name of control. I
+> think both are control by nature, but for the sake of not confusing the reader maybe lets call it
+> counterfactual manipulations?
+
 T3's placement, as offered and chosen: a new Appendix C §8, the present §8 renumbered §9 (anchor
 `appc-8` becomes `appc-9`, ToC row regenerated); Code Cell C prints Block 1 (Part D's four priors at
 Λ = 8: tilt and width coefficients, modes and all-region masses of the tempered control, the control
@@ -57,7 +64,7 @@ Under B10 every line these tasks print reports a condition or criterion as a mea
   for a missing level is derived from it) and **R15** (the Cremers parallel stays with q; why the
   delta read-out shows a similar movement is to be investigated).
 
-## 2. Tasks, in order (all open)
+## 2. Tasks, in order
 
 Record format when closing: `[x] Tn (date): what changed; acceptance result; commit`.
 
@@ -355,7 +362,7 @@ Every number is printed by Code Cell C's `utility_split_report` (test output
 Present §8's first sentence, to become §9's: "Everything above concerns separation and spanning." →
 "Sections 1–7 concern separation and spanning."
 
-## 6. Draft for review: T6 prose (not yet in the notebook)
+## 6. T6 prose: approved by the user 2026-09-15 and applied (af971c4)
 
 Written 2026-09-15 against the executed outputs of 5ee04a6. Every number is printed by Code Cell 2's
 or 2b's criteria block, Code Cell 4's new block, or Code Cell C. What the C7 pass (98c2df8) already
@@ -423,10 +430,51 @@ and in Part C, at the first occurrence of "delta-like", which precedes Part D:
 > …and the delta-like prior concentrated on the all-region, a $\mathrm{Beta}(64,1)$ approaching a
 > point mass at $s=1$, which needs that $\Lambda$…
 
-## 7. Draft for review: T7 records (not yet applied)
+**E4. Text cell 4b, after "We note the difference and reserve our position on it." (T6 item 1, for
+Code Cell 2b).** Inserted before "Under *no* and *all*…", which then opens a new paragraph:
 
-Four changes, in `decisions.md` and `thesis_outline/revisions.md`. Under agent.md §3.1 a settled
-decision is never edited, so B8 takes a dated finding rather than a rewrite.
+> Over the eight rows Code Cell 2b prints, the five at $\theta_u^\ast$ and the three realizable, the
+> mode position criterion is met in all eight and the mode shift criterion in two, the delta-like
+> prior's; the mode and q shift criteria agree in four of the eight. In grid steps the mode lies $19$,
+> $20$, $27$ and $11$ nodes above the $\ell_0$ peak under the four diffuse priors and $11$ below it
+> under the delta-like prior. The flat row is the plane's cell $(1,512)$, one of the $21$ cells
+> Appendix C §8 tabulates where the q shift criterion is met and the mode shift criterion is not.
+
+**E5. Text cell 6, section *Where both of Part C's q criteria hold*: two paragraphs after "What the
+conjunction costs" (T6 item 2, R14).**
+
+> **The same plane under the delta read-out.** Code Cell 4 also reads the mode shift and mode
+> position criteria of Text cell 4 Part D off every cell. The mode position criterion holds in the
+> same $59$ cells as the q position criterion. The mode shift criterion holds in $67$ cells against
+> the q shift criterion's $74$, and the two disagree in $35$: the q shift criterion alone is met in
+> $21$, all at $\alpha\le16$, and the mode shift criterion alone in $14$, which are ten cells of the
+> saturated $\alpha=1024$ row and $(32,16)$, $(64,2)$, $(64,4)$ and $(64,8)$. Both mode criteria hold
+> together in $13$ cells, every one of them inside the band of $33$, so the two conjunctions part in
+> $20$ cells, all of them met under q alone.
+>
+> Under the delta read-out the band keeps its right arm and loses its left. The mode position
+> criterion's floor is the q position criterion's at every $\alpha$. The mode shift criterion is never
+> met at $\alpha\le8$; from $\alpha=16$ its floor is $256$, then $16$ at $\alpha=32$, then $2$ from
+> $\alpha=64$ on. The floor of both mode criteria is therefore absent at $\alpha\le8$ and reads $256$,
+> $256$, $512$ and $1024$ at $\alpha=16$, $32$, $64$ and $128$, against the q conjunction's $64$,
+> $256$, $512$ and $1024$. The right arm, set by the position criteria, is shared from $\alpha=32$;
+> the left arm, where the q shift criterion's floor falls as the prior sharpens, exists only under q.
+> Appendix C §8 measures what the mode does there. Every cell where the mode moves up has the
+> tempered control's mode at $s\le0.9405$, and every cell where it moves down has it at
+> $s\ge0.9405$; at $\alpha=1$, $2$, $4$ and $8$ the $\ell_0$ peak, which is the tempered control's
+> mode, sits at $s=0.5000$, $0.6726$, $0.8085$ and $0.8849$.
+
+Choices put to the user, all approved 2026-09-15:
+- E3 corrects an interpretive sentence (agent.md §5.4); its replacement follows R15.
+- E2 writes the mode as the node $k^\ast$, following $k$ as the node index of Eqs. (25)–(27).
+  Appendix C §8 writes $k_1,k_2$ for the utility coefficients, in a separate cell.
+- E5 gives the V as a result and stops at the measurement: the two paragraphs do not say which
+  criterion reads which part of the field.
+
+## 7. T7 records: approved by the user 2026-09-15 and applied
+
+Six changes, in `decisions.md`, `thesis_outline/revisions.md`, `agent.md` and the notebook. Under
+agent.md §3.1 a settled decision is never edited, so B8 takes a dated finding rather than a rewrite.
 
 **A. `decisions.md` B8, appended under *Findings added later*.**
 
@@ -466,11 +514,35 @@ decision is never edited, so B8 takes a dated finding rather than a rewrite.
 >   exact-form errors, and the limit field's mode and criteria: class (b), statistics of Eqs. (15),
 >   (16), (23) and (24) defined in Appendix C §8.
 > - The two single-part fields, the tempered control plus tilt alone and plus width alone:
->   constructions of the report, not states of the network and not controls of the model (E4's
->   labelling rule does not apply). They are labelled counterfactual in the printed block.
+>   **counterfactual manipulations** (C8), controls in nature but not manipulations of the model,
+>   since no setting of θ_u, Λ or μ_u produces either. Their printed numbers are class (b). B4's list
+>   of retained fixed-θ_u controls (`theta_u_learned_reach.md` §5.C) is unaffected, since neither
+>   field is an evaluation the model is run in. The printed block and Appendix C §8 name them so.
 > - Appendix C §1 writes every projection per unit Λ; §8's coefficients are the exception, each at
 >   its configuration's own Λ and θ_u\*, and §8 says so.
 > - Code Cell 2b's own quantities stay under E12, and E13's masses are unchanged.
+
+**B2. `decisions.md` C section, new entry C8 (the user, 2026-09-15).**
+
+> ### C8. "Control" names a manipulation of the model; an algebraic one is a counterfactual manipulation
+> - Status: Settled
+> - Decided by: user (2026-09-15)
+> - Decision: both kinds are controls in nature. The notebooks keep **control** for a manipulation of
+>   the model, a configuration the network is actually run in with a parameter held off its learned
+>   value: Part C's θ_u control, Text cell 5's θ_u = 1 tables, the μ_u settings, the m = 1 basis. A
+>   quantity built by algebra on settled fields, which no setting of the model produces, is a
+>   **counterfactual manipulation**: Appendix C §8's two single-part fields, the tempered control plus
+>   the tilt part alone and plus the width part alone.
+> - Theoretical reason: none. The distinction is for the reader (the user: "for the sake of not
+>   confusing the reader").
+> - Implementational reason: agent.md §3.3 keeps q_lit, the tempered control and the model apart, and
+>   B4 lists the retained fixed-θ_u controls in `theta_u_learned_reach.md` §5.C. A field that is the
+>   tempered control plus part of the utility field would take a third name confusable with the
+>   second, and would enter that list without matching any run.
+> - Bogacz status: naming convention; no operation.
+> - Depends on it: Appendix C §8's prose, Code Cell C's printed block, E14's classing.
+> - Evidence: no setting of θ_u, Λ, μ_u or B makes the network settle on either field; each is
+>   φ_S\*(θ_u = 0) plus one column's share of Eq. (23)'s utility field.
 
 **C. `decisions.md` I register, new entry I12.**
 
@@ -508,49 +580,19 @@ R15 rows are the user's and are not edited; the note goes in §8.
 - Q6, at *Preliminary result*: "(record F4; `audits/…/mode_mechanism_output.txt`; not printed by any
   cell)" becomes "(record F4; printed by Code Cell C and reported in Appendix C §8 since 2026-09-15)".
 
-Choices to confirm with the user:
-- I12 is an agent decision and needs confirmation, or a different tie rule.
-- E14 classes the two single-part fields as constructions of the report rather than as controls
-  (E4), which is what the user confirmed on 2026-09-14 for the printed label.
-- Whether the stale lines in Q2 and Q6 should be corrected in place, as above, or left and dated.
+**E. `agent.md` §3.3, the class (c) row (the user, 2026-09-15: "fix the error in agent.md").** The row
+cited "decision E4" for the rule that a control states its justification in the prose; the entry
+about controls is **B4** (E4 in `decisions.md` is the elicited-prior finding, and Code Cell E4 in
+`appendix_E.ipynb` is a third thing with that label). The row now cites B4, says a control is a
+configuration the network is actually run in, and adds C8's distinction: a quantity built by algebra
+on settled fields is a counterfactual manipulation, not a control.
 
-**E4. Text cell 4b, after "We note the difference and reserve our position on it." (T6 item 1, for
-Code Cell 2b).** Inserted before "Under *no* and *all*…", which then opens a new paragraph:
+**F. The naming applied with C8 (the user, 2026-09-15).** Code Cell C's comment and printed legend and
+Appendix C §8's sentence now say *counterfactual manipulation* and reserve *control* for a
+configuration the model is run in. Code Cell C's printed legend grows by one line, so main was
+re-executed; `appendix_E.ipynb` was not, since E3 reads main's Code Cell 2 and 2b outputs and Code
+Cell C is not mirrored there.
 
-> Over the eight rows Code Cell 2b prints, the five at $\theta_u^\ast$ and the three realizable, the
-> mode position criterion is met in all eight and the mode shift criterion in two, the delta-like
-> prior's; the mode and q shift criteria agree in four of the eight. In grid steps the mode lies $19$,
-> $20$, $27$ and $11$ nodes above the $\ell_0$ peak under the four diffuse priors and $11$ below it
-> under the delta-like prior. The flat row is the plane's cell $(1,512)$, one of the $21$ cells
-> Appendix C §8 tabulates where the q shift criterion is met and the mode shift criterion is not.
-
-**E5. Text cell 6, section *Where both of Part C's q criteria hold*: two paragraphs after "What the
-conjunction costs" (T6 item 2, R14).**
-
-> **The same plane under the delta read-out.** Code Cell 4 also reads the mode shift and mode
-> position criteria of Text cell 4 Part D off every cell. The mode position criterion holds in the
-> same $59$ cells as the q position criterion. The mode shift criterion holds in $67$ cells against
-> the q shift criterion's $74$, and the two disagree in $35$: the q shift criterion alone is met in
-> $21$, all at $\alpha\le16$, and the mode shift criterion alone in $14$, which are ten cells of the
-> saturated $\alpha=1024$ row and $(32,16)$, $(64,2)$, $(64,4)$ and $(64,8)$. Both mode criteria hold
-> together in $13$ cells, every one of them inside the band of $33$, so the two conjunctions part in
-> $20$ cells, all of them met under q alone.
->
-> Under the delta read-out the band keeps its right arm and loses its left. The mode position
-> criterion's floor is the q position criterion's at every $\alpha$. The mode shift criterion is never
-> met at $\alpha\le8$; from $\alpha=16$ its floor is $256$, then $16$ at $\alpha=32$, then $2$ from
-> $\alpha=64$ on. The floor of both mode criteria is therefore absent at $\alpha\le8$ and reads $256$,
-> $256$, $512$ and $1024$ at $\alpha=16$, $32$, $64$ and $128$, against the q conjunction's $64$,
-> $256$, $512$ and $1024$. The right arm, set by the position criteria, is shared from $\alpha=32$;
-> the left arm, where the q shift criterion's floor falls as the prior sharpens, exists only under q.
-> Appendix C §8 measures what the mode does there. Every cell where the mode moves up has the
-> tempered control's mode at $s\le0.9405$, and every cell where it moves down has it at
-> $s\ge0.9405$; at $\alpha=1$, $2$, $4$ and $8$ the $\ell_0$ peak, which is the tempered control's
-> mode, sits at $s=0.5000$, $0.6726$, $0.8085$ and $0.8849$.
-
-Choices to confirm with the user:
-- E3 corrects an interpretive sentence (agent.md §5.4); its replacement follows R15.
-- E2 writes the mode as the node $k^\ast$, following $k$ as the node index of Eqs. (25)–(27).
-  Appendix C §8 writes $k_1,k_2$ for the utility coefficients, in a separate cell.
-- E5 gives the V as a result and stops at the measurement: the two paragraphs do not say which
-  criterion reads which part of the field.
+Confirmed by the user 2026-09-15: I12; the Q2 and Q6 corrections made in place; C8's naming, so
+E14 classes the two single-part fields as counterfactual manipulations rather than as controls; and
+the `agent.md` fix. Nothing in T7 is left open.

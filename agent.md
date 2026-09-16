@@ -193,7 +193,7 @@ or use as a default, and to every number the prose quotes.
 |---|---|
 | **(a) Model quantity** | A symbol in Text cell 3 §2's inventory, or defined by a numbered equation. The code name is mapped to the symbol, and the code value equals the value the prose states (σ = 1, m = 2, μ_u = 1, Λ = 8, n = 10, and so on). |
 | **(b) Reported statistic** | Defined in Text cell 4 (Eqs. (25)-(27), (36)-(41)) as a summary of the read-out. The prose says it is not a model quantity. |
-| **(c) Control** | A deliberate departure from the model (e.g. θ_u held fixed). Under decision E4 its justification is stated in the prose where it is used, and it is labelled as a control in the output. |
+| **(c) Control** | A deliberate departure from the model (e.g. θ_u held fixed): a configuration the network is actually run in. Under decision **B4** its justification is stated in the prose where it is used, and it is labelled as a control in the output. A quantity built by algebra on settled fields, which no setting of the model produces, is not a control but a **counterfactual manipulation** (C8). |
 | **(d) Implementation constant** | A numerical choice with no model meaning (grid size, tolerance, feasibility threshold, zero band). Recorded in `decisions.md` with evidence that the results it supports do not depend on its exact value. |
 | **(e) Does not follow** | None of the above. **Flag it to the user in the same turn, add it to the quantity trace register in `decisions.md`, and neither keep it silently nor remove it silently.** |
 
