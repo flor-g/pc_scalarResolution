@@ -1,0 +1,182 @@
+Side quests, 2026-09-15. Scratch probes: no number here is printed by a notebook cell (C6).
+Run with .venv/bin/python from the project root.
+
+############ reflection_probe.py ############
+n = 10, theta_L = 2.944439, Lambda = 8.0, mu_u = [1.0, 1.0]
+
+== 1. is the substrate reflection-symmetric? ==
+  |zeta + refl(zeta)|      4.44e-16
+  |w - refl(w)|            0.00e+00
+  |ell_0 - refl(ell_0)|    0.00e+00
+  nearest grid node to +theta_L is 0.0556 away (0 would make the
+    strict/non-strict boundary in exclusion_indicator visible)
+
+== 2. basis parity ==
+  |refl(b1) + b1|  3.90e-17   (b1 odd: tilt)
+  |refl(b2) - b2|  6.94e-18   (b2 even: width)
+  <b1, ell_0> = -1.110e-16  (0 because b1 is odd and ell_0 even)
+  <b2, ell_0> = -18.599612
+
+== 3. the four indicators, and the reflection that pairs them ==
+  |refl(chi_no)   - chi_all|      0.00e+00
+  |refl(chi_some) - chi_not all|  0.00e+00
+  kappa per unit Lambda (tilt, width):
+    no        (+1.13989, -0.72098)
+    some      (-1.13989, +0.72098)
+    all       (-1.13989, -0.72098)
+    not all   (+1.13989, +0.72098)
+
+== 4. sum_y c_y, and the sign that sets theta_u* ==
+  {no, some, all}      sum c = (  +9.1191,  -50.0310)   <mu_u, sum c> =  -40.9119   theta_u* =  -28.4375
+  {no, not all, all}   sum c = (  -9.1191,  -50.0310)   <mu_u, sum c> =  -59.1501   theta_u* =  -19.7219
+
+== 5. is the mirrored inventory the reflection image? ==
+
+  mu_u = (1, 1), as stipulated (A5)
+    theta_u*  -28.43749 on {no, some, all}   -19.72192 on {no, not all, all}
+    |refl(phi_S*(no)) - phi_S*(all))|  1.164e+03
+    |refl(phi_S*(some)) - phi_S*(not all))|  3.764e+03
+    |refl(phi_S*(all)) - phi_S*(no))|  2.512e+03
+    worst 3.764e+03  ->  NOT a mirror
+
+  mu_u = (-1, 1), the reflected mu_u
+    theta_u*  -19.72192 on {no, some, all}   -28.43749 on {no, not all, all}
+    |refl(phi_S*(no)) - phi_S*(all))|  2.526e+03
+    |refl(phi_S*(some)) - phi_S*(not all))|  1.645e+03
+    |refl(phi_S*(all)) - phi_S*(no))|  1.174e+03
+    worst 2.526e+03  ->  NOT a mirror
+
+############ mirror_equivariance.py ############
+== 0. validate the helper against the notebook's own closed form ==
+  worst |fp - closed_form_fixed_point| over the three utterances: 0.00e+00
+  theta_u* reproduced: -28.437487 vs net -28.437487
+
+== A. the reflection applied to the model as a whole: (A, mu_u) vs (M, P mu_u) ==
+  theta_u*  -28.437487 on (A, mu_u)   -28.437487 on (M, P mu_u)   diff 4.26e-14
+  no    <-> all       |refl(phi_S*)-phi_S*| 5.33e-15   |P phi_u*-phi_u*| 1.17e-15
+  some  <-> not all   |refl(phi_S*)-phi_S*| 7.11e-15   |P phi_u*-phi_u*| 1.33e-15
+  all   <-> no        |refl(phi_S*)-phi_S*| 7.11e-15   |P phi_u*-phi_u*| 5.55e-16
+  worst 7.11e-15  ->  EXACT MIRROR
+
+== B. the mirrored inventory at the STIPULATED mu_u = (1,1) (A5) ==
+  theta_u*  -28.437487 on {no, some, all}   -19.721917 on {no, not all, all}
+  utterance       E[s]   P(all)    P(no)  P(all) lit  P(no) lit
+  no            0.2715   0.0006   0.3780      0.0003     0.8297
+  some          0.5684   0.0025   0.0000      0.0016     0.0000
+  all           0.7262   0.3740   0.0006      0.8297     0.0003
+  no*           0.2713   0.0006   0.3783      0.0003     0.8297
+  not all*      0.4305   0.0000   0.0025      0.0000     0.0016
+  all*          0.7253   0.3726   0.0006      0.8297     0.0003
+  (* = run in the mirrored inventory)
+
+== C. the scalar member's criterion, each inventory read on its own side ==
+  "some" vs all-region  (as printed): shift +0.0008 -> NOT met; position 0.0025 -> met
+  "not all" vs no-region   (mirrored): shift +0.0009 -> NOT met; position 0.0025 -> met
+  "not all" vs no-region   (mirrored, at P mu_u): shift +0.0008 -> NOT met; position 0.0025 -> met
+
+############ mirror_under_priors.py ############
+== does the reflection carry the prior? ==
+  Beta(3,1) -> Beta(1,3):  |refl(ell_0^A) - ell_0^M| = 8.88e-16
+  Beta(1,3) -> Beta(3,1):  |refl(ell_0^A) - ell_0^M| = 8.88e-16
+  Beta(64,1) -> Beta(1,64):  |refl(ell_0^A) - ell_0^M| = 1.42e-14
+  Beta(1,1) -> Beta(1,1):  |refl(ell_0^A) - ell_0^M| = 0.00e+00
+
+== the mirror, prior reflected as well, at P mu_u ==
+  Gaussian N(0,1) (self-reflective)  theta_u*  -28.43749 /  -28.43749  worst 7.11e-15  EXACT
+  Beta(3,1) <-> Beta(1,3)            theta_u*  +55.00812 /  +55.00812  worst 7.11e-15  EXACT
+  Beta(64,1) <-> Beta(1,64)          theta_u* +766.78287 / +766.78287  worst 1.14e-13  EXACT
+
+== the same, at the stipulated mu_u = (1,1) on both sides ==
+  Gaussian N(0,1)                    theta_u*  -28.43749 /  -19.72192  worst 4.98e-02  BROKEN
+  Beta(3,1) <-> Beta(1,3)            theta_u*  +55.00812 /  -17.03316  worst 5.67e-02  BROKEN
+
+############ granularity_probe.py ############
+== 1. where does n enter at all? ==
+  theta_L = log(2n - 1) is the only use of n in code cell 1; num_atoms is
+  then recovered from theta_L, so theta_L is the real quantity (Eq. A5).
+     n   theta_L  s at +theta_L  middle nodes  node on threshold?
+     2    1.0986         0.7500            19          no (0.019)
+     3    1.6094         0.8333            27          no (0.049)
+     4    1.9459         0.8750            33          no (0.026)
+     5    2.1972         0.9000            37          no (0.037)
+    10    2.9444         0.9500            49          no (0.056)
+    20    3.6636         0.9750            61          no (0.056)
+    50    4.5951         0.9900            77          no (0.035)
+   100    5.2933         0.9950            89          no (0.013)
+   201    5.9940         0.9975            99          no (0.006)
+   202    5.9989         0.9975            99          no (0.001)
+
+== 2. does anything structural move with n? ==
+     n  theta_L     kappa_no (tilt,width)  rank  rank mod 1   theta_u*  min kappa sep
+     2   1.0986  (+1.44586,-0.35458)     3           2   -32.5731        0.70917
+     3   1.6094  (+1.39066,-0.48465)     3           2   -31.8799        0.96930
+     4   1.9459  (+1.33667,-0.56936)     3           2   -31.1779        1.13872
+    10   2.9444  (+1.13989,-0.72098)     3           2   -28.4375        1.44196
+    50   4.5951  (+0.61074,-0.60717)     3           2   -21.5353        1.21434
+   100   5.2933  (+0.31197,-0.35865)     3           2   -19.1884        0.62394
+
+== 3. is n = 2 degenerate? ==
+  theta_L = 1.098612; the cell of s=0 is s <= 0.2500,
+  the cell of s=1 is s >= 0.7500
+  chi_some == chi_all ?  False
+  nodes where 'some' is true and 'all' is false: 19
+  the two thresholds are still distinct, so by Eq. (C2) the span mod the
+  constant is still 2 and m = 2 is still exactly right.
+  n = 1 raises: num_atoms (n) must be an integer >= 2; below 2 the entries for "some" and "all" coincide
+
+== 4. does any integer n put a grid node exactly on a threshold? ==
+  n from 2 to 201 (theta_L < 6 caps n at 201): exact hits none
+  closest approach n = 69, gap 1.91e-05
+  Latent fragility: exclusion_indicator excludes 'no' on zeta > -theta_L but
+  'some' on zeta < -theta_L, so a node exactly at -theta_L would be excluded by
+  NEITHER, breaking chi_no + chi_some = 1 there. Its own docstring says 'some'
+  is excluded where zeta <= -theta_L, which would give chi_some = 1. Code and
+  docstring disagree at exactly that node; no tested n reaches it.
+
+== 5. the separation margin as a function of n ==
+      n  theta_L  min kappa sep
+      2   1.0986        0.70917
+      3   1.6094        0.96930
+      4   1.9459        1.13872
+      5   2.1972        1.23664
+      6   2.3979        1.28054
+     10   2.9444        1.44196
+     15   3.3673        1.49027
+     20   3.6636        1.48339
+     30   4.0775        1.43011
+     40   4.3694        1.32081
+     50   4.5951        1.21434
+     75   5.0039        0.93351
+    100   5.2933        0.62394
+    150   5.7004        0.29277
+    201   5.9940        0.05999
+  best separated over n in [2, 201]: n = 15 at 1.49027
+
+############ granularity_criteria.py ############
+
+== criteria for "some", base prior N(0,1) in zeta (default) ==
+     n  theta_L   theta_u*   q shift  q shift   P(all)  q pos  mode step  mode pos
+     2   1.0986   -32.5731   +0.1017       no   0.2472    met         +4       met
+     3   1.6094   -31.8799   +0.0490       no   0.1044    met         +3       met
+     4   1.9459   -31.1779   +0.0222       no   0.0465    met         +3       met
+     5   2.1972   -30.6138   +0.0116       no   0.0249    met         +3       met
+    10   2.9444   -28.4375   +0.0008       no   0.0025    met         +3       met
+    20   3.6636   -25.6173   +0.0000       no   0.0001    met         +2       met
+    50   4.5951   -21.5353   -0.0000      met   0.0000    met         +1       met
+  q shift: P(all|some) - P(all|q_lit) < 0.  q pos: P(all|some) < 1/2.
+  mode step: grid steps from the tempered control's mode to the model's.
+  mode pos: the model's mode lies outside the cell of 'all'.
+
+== criteria for "some", base prior Beta(3,1) in s ==
+     n  theta_L   theta_u*   q shift  q shift   P(all)  q pos  mode step  mode pos
+     2   1.0986    65.5801   +0.2265       no   0.7965     no         +8        no
+     3   1.6094    61.8569   +0.2210       no   0.6368     no         +7        no
+     4   1.9459    59.5390   +0.1814       no   0.4984    met         +6       met
+     5   2.1972    58.1923   +0.1454       no   0.4062    met         +6       met
+    10   2.9444    55.0081   +0.0421       no   0.1788    met         +5       met
+    20   3.6636    53.1599   -0.0068      met   0.0596    met         +4       met
+    50   4.5951    54.5281   -0.0108      met   0.0110    met         +3       met
+  q shift: P(all|some) - P(all|q_lit) < 0.  q pos: P(all|some) < 1/2.
+  mode step: grid steps from the tempered control's mode to the model's.
+  mode pos: the model's mode lies outside the cell of 'all'.
+

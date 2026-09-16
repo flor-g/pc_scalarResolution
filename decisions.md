@@ -662,6 +662,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Status: Open (since 2026-09-07)
 - Appendix A derives θ_L from a just-noticeable difference, σ(−θ_L) = δ/2, with n = 1/δ. What fixes δ
   is not settled. The implementation takes n = 10.
+- Findings added later: 2026-09-15 (agent), **this decision is consequential, not cosmetic.** Probing
+  n while holding everything else fixed (O10, `procedure_records/side_quests_mirror_and_granularity.md`
+  F9) crosses criterion readings: under N(0,1) the q shift criterion for *some* is unmet at
+  n = 2…20 and met at n = 50, and under Beta(3,1) the q position and mode position criteria are
+  unmet at n = 2, 3 and met at n ≥ 4. So what fixes δ also fixes which side of a crossing the
+  reported criteria sit on. n enters only through θ_L = log(2n − 1); K does not track it (I6).
 
 ### O2. The exposure distribution p(y) is uniform and unargued
 - Status: Open; not yet raised with the user as a decision
@@ -815,6 +821,55 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      - restrict comparisons to held entries.
 - **Needed to decide:** the user's choice on both, before any §5.2 number is printed.
 - **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
+
+### O9. Is the O corner {1} as representational as {0}?
+- Status: Open (since 2026-09-15)
+- Decided by: not decided. Raised by the user as a side quest, with the answer wanted as a sense
+  rather than in full. Record: `procedure_records/side_quests_mirror_and_granularity.md`.
+- **The question.** Appendix C §4 records that E = {1}, the O corner, costs the architecture
+  nothing. The sharper form: does an inventory {*no*, *not all*, *all*} behave exactly as the
+  mirror of {*no*, *some*, *all*}?
+- **What is measured** (record F1-F5). Write R for the reflection ζ → −ζ and P = diag(−1, +1) on the
+  (tilt, width) coordinates.
+  1. **As representation, yes, exactly.** Rb₁ = −b₁ and Rb₂ = +b₂, so RB = BP and BᵀWR = P BᵀW;
+     Rχ_no = χ_all and Rχ_some = χ_not all exactly. The model built on (inventory, ℓ₀, μ_u) and the
+     model built on (mirrored inventory, Rℓ₀, Pμ_u) are reflections: the same θ_u\*, and φ_S\*, φ_u\*
+     related by R and P, to 7.11e-15 under N(0,1) and under Beta(3,1) ↔ Beta(1,3).
+  2. **As behaviour, no, and μ_u is the only reason.** The grid, W, b₁, b₂ and the default
+     ℓ₀ = N(0,1) are R-invariant or of definite parity; **μ_u = 1 is not**, since Pμ_u = (−1, +1).
+     At the stipulated μ_u, θ_u\* is −28.4375 on {*no*, *some*, *all*} against −19.7219 on
+     {*no*, *not all*, *all*}, and under Beta(3,1) ↔ Beta(1,3) it changes sign, +55.0081 against
+     −17.0332. The settled fields differ by only about 5e-2, because Eq. (24)'s limit k → c/2 is
+     independent of θ_u, its sign included.
+- **Needed to decide:** whether anything is claimed in the notebooks, and if so which. Options:
+  (a) leave Appendix C §4's aside as it stands, which finding 1 supports; (b) state the equivariance
+  and name μ_u as the single asymmetry, which would put a stipulation (A5) in the reader's view;
+  (c) treat "what a principled μ_u for a mirrored scale would be" as its own question.
+- **Depends on it:** Appendix C §4's aside; A5's stipulation μ_u = 1; nothing currently printed.
+- Evidence: `audits/2026-09-15-side-quests/output.txt`. Class (e) under `agent.md` §3.3 until a cell
+  prints it (C6).
+
+### O10. Does the number of atoms n change what the evaluation reports?
+- Status: Open (since 2026-09-15)
+- Decided by: not decided. Raised by the user alongside O9; same record.
+- **The question.** The implementation takes n = 10 (O1). Would three atoms, or exactly two, change
+  essential results, and is the model degenerate at two?
+- **What is measured** (record F6-F10):
+  1. **n enters in one place only:** θ_L = log(2n − 1). K does **not** track n, being an accuracy
+     parameter for the quadrature and not a state space (I6, Text cell 3 §1). θ_L < the grid
+     half-width caps n at 201.
+  2. **Nothing structural moves.** At n ∈ {2, 3, 4, 10, 50, 100} the three χ_y have rank 3, and
+     rank 2 modulo the constant, so there are still two thresholds and m = 2 stays exactly right
+     (Eq. C2). θ_u\* moves smoothly and keeps its sign.
+  3. **n = 2 is not degenerate.** χ_some ≠ χ_all, the two thresholds stay distinct, and 19 grid
+     nodes lie strictly between them. Degeneracy is at n = 1, where θ_L = 0 and the entries for
+     *some* and *all* coincide; the constructor already rejects it.
+  4. **But the reported criteria cross with n**, which is the substantive answer: see the dated
+     finding under O1.
+- **Needed to decide:** O1 first. Until what fixes δ is settled, every criterion reading carries an
+  unquantified dependence on a number nothing fixes.
+- **Depends on it:** O1; Text cell 4 Parts C and D; Text cell 6's plane; every criterion reading.
+- Evidence: as O9. Class (e) until a cell prints it (C6).
 
 ---
 
