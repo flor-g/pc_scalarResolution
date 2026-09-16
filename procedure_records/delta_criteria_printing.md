@@ -190,11 +190,24 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   - Text cell 4 Part C: one sentence that the conditions have a delta counterpart (B8) and that the
     two do not coincide.
   - Every quoted number is checked against the executed output.
-- [ ] **T7. Records.** Drafted 2026-09-15 in §7 below, for the user's review; not yet applied.
+- [x] **T7 (2026-09-15). Records, approved by the user and applied; commit 5acb6b5.** §7 holds the
+  six changes: `decisions.md` B8's dated finding, the new C8 (control names a manipulation of the
+  model; an algebraic one is a counterfactual manipulation), I12 (the argmax tie rule, confirmed by
+  the user), E14 (the classing of everything T1–T3 added); `thesis_outline/revisions.md` §8's three
+  rows, its dated note, and the two stale "not printed by any cell" lines; `agent.md` §3.3's class (c)
+  row, which cited decision E4 where the entry is B4, now also carrying C8's distinction; and C8's
+  naming in Code Cell C's comment and printed legend and in Appendix C §8. Verified: main 0 errors, 8
+  figures, 14/14, the only output change being Code Cell C's legend; Code Cells 2 and 2b unchanged, so
+  appendix_E was not re-executed. Still stale, left for the user: `revisions.md` line 816 says R15's
+  investigation "is an open task in `procedure_records/delta_criteria_printing.md`", which T3 closed.
+  Originally:
+- **T7. Records.**
   - `decisions.md`: B8's implementational reason; an E-register entry for each new printed
     quantity; an I-entry for the mode tie rule if T1 makes one.
   - `thesis_outline/revisions.md` §8: point the numbers of Q2 and Q6 at their cells.
-- [ ] **T8. Commit** (agent.md §4.3), with the hash recorded on each closed task.
+- [x] **T8 (2026-09-15). Commit** (agent.md §4.3), with the hash on each closed task: T1 2718404,
+  T2 5ee04a6, T3 27a4122 with its prose 5a7bc8e, T6 af971c4, T7 5acb6b5, plus the record commits
+  9937734, 92cf465, 4cb1d1a and 28c838a. Nothing is pushed; the user asks for pushes.
 - **Order (2026-09-14, user, S-5 of `evaluation_partD_atStrongLambda.md`):** these tasks follow
   that change. T1 then prints the criteria in Code Cell 2 (Part D's four priors at Λ = 8) and in
   Code Cell 2b (all five at Λ = 512), where the delta-like row now lives; T1's acceptance against
