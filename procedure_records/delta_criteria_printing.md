@@ -183,7 +183,7 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   - Text cell 4 Part C: one sentence that the conditions have a delta counterpart (B8) and that the
     two do not coincide.
   - Every quoted number is checked against the executed output.
-- [ ] **T7. Records.**
+- [ ] **T7. Records.** Drafted 2026-09-15 in §7 below, for the user's review; not yet applied.
   - `decisions.md`: B8's implementational reason; an E-register entry for each new printed
     quantity; an I-entry for the mode tie rule if T1 makes one.
   - `thesis_outline/revisions.md` §8: point the numbers of Q2 and Q6 at their cells.
@@ -422,6 +422,97 @@ and in Part C, at the first occurrence of "delta-like", which precedes Part D:
 
 > …and the delta-like prior concentrated on the all-region, a $\mathrm{Beta}(64,1)$ approaching a
 > point mass at $s=1$, which needs that $\Lambda$…
+
+## 7. Draft for review: T7 records (not yet applied)
+
+Four changes, in `decisions.md` and `thesis_outline/revisions.md`. Under agent.md §3.1 a settled
+decision is never edited, so B8 takes a dated finding rather than a rewrite.
+
+**A. `decisions.md` B8, appended under *Findings added later*.**
+
+> - **2026-09-15. The criteria are printed, and so is the mechanism under them.**
+>   - T1 (2718404): Code Cells 2 and 2b, mirrored in E2 and E2b, print per row the modes of ℓ₀,
+>     ℓ₀ − φ_L and φ_S\* in s, the mode shift in s and in grid steps, the two mode criteria beside the
+>     two q criteria, the gap between the two largest nodes, and the counts and pairwise agreement.
+>     At Λ = 8 the pairs agree in 4 of 4 rows; at Λ = 512 the shift criteria agree in 4 of 8 and the
+>     position criteria in 8 of 8.
+>   - T2 (5ee04a6): Code Cell 4 prints the same criteria over the 121 cells: 67, 59 and 13 against
+>     q's 74, 59 and 33, the 35 cells where a shift criterion and its counterpart disagree, the four
+>     unmoved modes, the 5.6e-5 smallest gap, and the floors under both read-outs.
+>   - T3 (27a4122, prose 5a7bc8e): Code Cell C prints the tilt/width split, the plane counts and
+>     Eq. (24)'s halving, reported in the new Appendix C §8.
+>   - T6 (af971c4): Text cell 4 Parts C and D, Text cell 4b and Text cell 6 carry the criteria in
+>     prose, under C7's names and B10's stance.
+>   - Every number in this entry's *Evidence* and in the F4/F5 findings above is therefore printed
+>     by a cell, and the numbers Q2 and Q6 of `thesis_outline/revisions.md` quote are sourced (C6).
+
+**B. `decisions.md` E register, new entry E14.**
+
+> **E14. The quantities T1–T3 added (2026-09-15).** Classed by the agent; the counterfactual label
+> was confirmed by the user 2026-09-14.
+> - Code Cells 2 and 2b (and E2, E2b): the modes in s, the mode shift in s and in grid steps
+>   $k^\ast-k_0$, the two mode criteria and their conjunction, the top-2 gap, and the counts and
+>   agreement: class (b), statistics of the delta read-out (B7, B8), defined in Text cell 4 Part D
+>   since T6.
+> - The grid spacing printed in that block's legend: class (d), read from the grid of I6 rather than
+>   stored as a constant.
+> - Code Cell 4, `lambda_alpha_sweep`: per cell under *some*, the mode nodes of φ_S\*, ℓ₀ and
+>   ℓ₀ − φ_L, the modes of φ_S\* and ℓ₀ in s, whether φ_S\*'s mode lies outside the cell of *all*, and
+>   the smallest top-2 gap of the three fields: class (b). `plane_summary`'s counts, agreement, the
+>   35-cell table and the six floors: class (b). Signs are read with I5's zero band.
+> - Code Cell C, `utility_split_report` (Appendix C §8): the tilt and width coefficients of the
+>   utility field, the span-B residual, the two slopes at the tempered control's mode, the modes and
+>   all-region masses of the four fields, the plane counts, the distances from c/2, the Gram and
+>   exact-form errors, and the limit field's mode and criteria: class (b), statistics of Eqs. (15),
+>   (16), (23) and (24) defined in Appendix C §8.
+> - The two single-part fields, the tempered control plus tilt alone and plus width alone:
+>   constructions of the report, not states of the network and not controls of the model (E4's
+>   labelling rule does not apply). They are labelled counterfactual in the printed block.
+> - Appendix C §1 writes every projection per unit Λ; §8's coefficients are the exception, each at
+>   its configuration's own Λ and θ_u\*, and §8 says so.
+> - Code Cell 2b's own quantities stay under E12, and E13's masses are unchanged.
+
+**C. `decisions.md` I register, new entry I12.**
+
+> ### I12. The mode is the first node of an argmax, and the gap is printed
+> - Status: Settled
+> - Decided by: agent, pending user confirmation (2026-09-15)
+> - Decision: the mode of a field is `torch.argmax`, which takes the **first** node when two nodes
+>   tie. Every block that reports a mode also prints the gap between the two largest values of
+>   φ_S\*, so a tie would print as 0. Observed smallest: 3.4e-3 over Part D's rows at Λ = 8,
+>   7.8e-3 over Code Cell 2b's rows, 5.6e-5 over the plane.
+> - Theoretical reason: none. B7 defines the mode as the largest node and is silent on ties.
+> - Implementational reason: a tie has to resolve somehow, and B8's mode shift criterion is a strict
+>   node comparison, so which way it resolves would decide the criterion in a tie. Printing the gap
+>   makes the rule's reach visible instead of assumed.
+> - Bogacz status: statistic of the delta read-out (his Eq. 34); no counterpart in the tutorial.
+> - Depends on it: B8's two criteria; Code Cells 2, 2b, 4 and C.
+> - Evidence: the gaps printed in those cells; `audits/2026-09-13-delta-criteria/output.txt`.
+
+**D. `thesis_outline/revisions.md`.** Three rows in §8, and two stale lines corrected. The R14 and
+R15 rows are the user's and are not edited; the note goes in §8.
+
+> | Q2's Part D and Λ = 512 rows: the modes, the mode shift in s and in grid steps, the two mode
+> criteria | `main.ipynb` Code Cells 2 and 2b, the mode criteria block |
+> | Q2's plane counts (67, 59, 13 against 74, 59, 33), the 35 disagreeing cells, the four unmoved
+> modes, the 5.6e-5 gap, and the V under both read-outs | Code Cell 4, `plane_summary` |
+> | Q6's tilt/width split, the 50 and 67 up/down counts, Eq. (24)'s halving and the limit field |
+> Code Cell C, `utility_split_report`; Appendix C §8 |
+>
+> (2026-09-15: R14's and R15's code tasks, T1–T3 and T6 of
+> `procedure_records/delta_criteria_printing.md`, are closed; T7 and T8 remain.)
+
+- Q2, under *The audit*: "**Nothing in this subsection is printed by a notebook cell yet** (see
+  "Printing" below)." becomes "**2026-09-15: every number in this subsection is printed**, by Code
+  Cells 2, 2b and 4."
+- Q6, at *Preliminary result*: "(record F4; `audits/…/mode_mechanism_output.txt`; not printed by any
+  cell)" becomes "(record F4; printed by Code Cell C and reported in Appendix C §8 since 2026-09-15)".
+
+Choices to confirm with the user:
+- I12 is an agent decision and needs confirmation, or a different tie rule.
+- E14 classes the two single-part fields as constructions of the report rather than as controls
+  (E4), which is what the user confirmed on 2026-09-14 for the printed label.
+- Whether the stale lines in Q2 and Q6 should be corrected in place, as above, or left and dated.
 
 **E4. Text cell 4b, after "We note the difference and reserve our position on it." (T6 item 1, for
 Code Cell 2b).** Inserted before "Under *no* and *all*…", which then opens a new paragraph:
