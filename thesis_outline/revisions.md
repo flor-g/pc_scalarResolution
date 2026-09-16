@@ -126,6 +126,12 @@ only as a control), C3 (three objects kept apart), O3 (the bare outline pointer)
   The construction's posterior is the delta at φ_S\*. The outline says "the read-out q meets both
   conditions", never "the posterior satisfies both criteria".
 
+**2026-09-15, to be revisited.** The table above is Part D as it stood on 2026-09-13. Since B9 the
+notebook reports Part D's four diffuse priors at Λ = 8, and in Text cell 4b all five priors at
+Λ = 512, where the conjunction holds under **three** (flat, Beta(3,1) and the delta-like prior). The
+scope sentence above therefore understates what the notebook now shows, and §§4.4, 4.5 and 6 below
+rest on it. Rebuilding those arguments on the Λ = 512 data is open.
+
 Two further findings that change the outline as much as the headline does:
 
 - **The utility level's own contribution is negative under all five priors** (reach.md F8, now
@@ -300,8 +306,8 @@ and §4.1 and §4.4 need it.
     - the left arm exists only under q;
     - in 20 cells the conjunctions part.
 
-    Report it as a result, and derive no evidence for a missing level from it. Its numbers wait on
-    the printing tasks (C6).
+    Report it as a result, and derive no evidence for a missing level from it. Its numbers are
+    printed by Code Cell 4's `plane_summary` (2026-09-15).
 - **Override law.** Learned slopes 1.9890 / 2.9334 / 4.3102, +36–45% over the tempered control
   ("severed" means that control). The 15–18% at θ_u = 1 is a control and is labelled as one, or cut.
 - **Spread D.** 0.0061 → 0.0009 → 0.0002 becomes 0.0057 → 0.0012 → 0.0003.
@@ -493,7 +499,8 @@ Content in §5 below, items 2 and 3.
   - it sits outside the dynamics and takes no part in Eq. (20);
   - nothing in the architecture dictates it.
 
-**What follows, all printed by Code Cell 2 (THE DELTA READ-OUT block):**
+**What follows, printed by Code Cell 2's delta read-out block, and by Code Cell 2b for the
+delta-like prior (B9, 2026-09-15):**
 
 - **The mode is shared.** The peak of φ_S\* is also q's mode, since the exponential and the
   normalizer do not move it. The read-outs differ in what needs the normalizer.
@@ -524,7 +531,8 @@ Content in §5 below, items 2 and 3.
   therefore, the positive shift is the tempering. Under the delta read-out the mode of φ_S\* also moves up the
   scale on the same four priors (R12). Because halving does not move a mode, that movement is the
   utility level's. It is not a probability of *all*: the mode stays outside the cell of *all*. Why
-  the utility level produces it is under investigation (R15).
+  the utility level produces it is measured in Appendix C §8 (2026-09-15): the utility field's tilt
+  part moves the mode, and its width part is what lowers the all-region mass.
 - **Guards.**
   - The parallel is in direction, not in conditions. Here it appears under all four non-delta
     priors, the flat one included, while background §1.3 states the RSA liability for skewed priors.
@@ -781,16 +789,12 @@ missing level needs to be derived from the V.
 **Budget, proposed.** §4.5 goes from 180 to 240 words. The extra 60 would come from §5.1 (390 → 350,
 since lines 329–338 go) and §4.3 (90 → 70).
 
-**Printing (C6).** Every delta-criterion number above comes from the audit script, so it is class (e)
-for prose until a cell prints it. Before §4.5 or the paper quotes one:
-- Code Cell 4's `plane_summary` and Code Cell 2's delta read-out block would print criteria (a) and
-  (b) and their floors;
-- Code Cell 2's addition is copied into E2 and replayed by E3;
-- both notebooks are re-executed.
+**Printing (C6). Done 2026-09-15.** Every delta-criterion number above is printed: the per-row
+criteria by Code Cells 2 and 2b, mirrored in E2 and E2b and replayed by E3, and the plane counts, the
+35 disagreeing cells and the floors by Code Cell 4's `plane_summary`. Both notebooks were
+re-executed. The tasks are closed in `procedure_records/delta_criteria_printing.md`.
 
-These are now open tasks, in `procedure_records/delta_criteria_printing.md` (R14).
-
-### Q6. Does R7's supporting sentence survive the delta criteria? (resolved, R15; investigation open)
+### Q6. Does R7's supporting sentence survive the delta criteria? (resolved, R15; investigation closed 2026-09-15)
 
 **What R7 rests on.** R7 placed the Cremers parallel in the q read-out discussion. Its supporting
 sentence (item 1) said the anti-exhaustive direction belongs to q "not to the level that produces
@@ -813,7 +817,8 @@ R7's placement is the user's decision and has not been changed; only the sentenc
 
 **Agent's recommendation: (i). Approved by the user (R15)**, who asked that the reason a similar
 movement emerges under the delta read-out be investigated. The sentence in item 1 is corrected, and
-the investigation is an open task in `procedure_records/delta_criteria_printing.md`.
+the investigation is closed: Appendix C §8 reports it (T3 of
+`procedure_records/delta_criteria_printing.md`, 2026-09-15).
 
 **Preliminary result** (record F4; printed by Code Cell C and reported in Appendix C §8 since
 2026-09-15). **The two movements share a direction, not a source.**
