@@ -654,6 +654,37 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: B8's two criteria; Code Cells 2, 2b, 4 and C.
 - Evidence: the gaps printed in those cells; `audits/2026-09-13-delta-criteria/output.txt`.
 
+### I13. χ_some is built as the complement of χ_no, not from a margin of its own
+- Status: Settled
+- Decided by: user (2026-09-16), after the agent reported the divergence
+- Decision: `exclusion_indicator` gives *some* no margin of its own. E_some is the complement of E_no
+  (Eq. 5), so χ_some = 1 − χ_no, in the step branch and the smooth branch alike. *no* and *all* keep
+  their own margins and the shared strict test. Applied to `main.ipynb` code cell 1 and to
+  `appendix_E.ipynb` Code Cell E1, which carries a verbatim copy.
+- Theoretical reason: Eq. (A1) writes E_some ↦ {ζ ≤ −θ_L}, **non-strict**, because Appendix A's
+  Voronoi reading puts the threshold at half a cell and gives the boundary to the endpoint's cell.
+  The complement form realizes that exactly, and makes χ_no + χ_some = 1 hold at every node — the
+  identity Appendix C §2 and Eq. (C1) rest on — by construction rather than by coincidence.
+- Implementational reason: the previous form built *some* from the negated margin of *no* and applied
+  the shared `margin > 0`, which yields the **strict** ζ < −θ_L. A single shared comparison cannot
+  express Eq. (A1)'s mix of one closed and two open regions; taking the complement keeps one
+  comparison and one smooth map while matching Eq. (A1). In the smooth branch the two forms differ
+  only as 1 − σ(x) against σ(−x), worst 2.22e-16.
+- Bogacz status: no counterpart (input encoding), as A2.
+- Depends on it: Eq. (6) and χ_y everywhere; Eq. (C1) and Appendix C §§2, 4; Code Cell 4's override
+  threshold table; Text cell 6's quoted θ_u\* range.
+- Evidence: `audits/2026-09-16-exclusion-complement/`. Acceptance PASS: step branch identical over
+  3000 shipped configurations, smooth branch within 2.22e-16, *no* and *all* bit-identical. At the
+  one reachable coincidence χ_some goes 0 → 1, χ_no + χ_some = 1 becomes exact, and the Eq. (C1)
+  residual falls from 3.0e-02 to 3.3e-16.
+- Findings added later: 2026-09-16 (agent), **the change was not output-neutral, contrary to the
+  agent's first report.** `override_threshold`'s `boundaries = (1.0, 2.0, 3.0)` puts θ_L = 3.0
+  exactly on node 25 of the K = 101 grid, the only such coincidence anywhere in either notebook. The
+  θ_u\* printed for that row moved 14946.06 → 14937.23, and Text cell 6's quoted range moved from
+  "13378 to 14946" to "13378 to 14937". **The new value is the correct one**: the old was computed
+  with χ_some = 0 at a node where Eq. (A1) requires 1. Every other printed line in both notebooks,
+  and every figure, is unchanged.
+
 ---
 
 ## O. Open decisions

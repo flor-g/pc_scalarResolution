@@ -126,10 +126,19 @@ Output of all five scripts: `audits/2026-09-15-side-quests/output.txt`.
   excludes where `margin > 0`, i.e. ζ < −θ_L, **strict**; its own docstring states the non-strict
   form, so the code disagrees with both the docstring and Eq. (A1). At a node lying exactly on
   −θ_L, χ_no and χ_some would both be 0 and χ_no + χ_some = 1 would fail there, which Appendix C §2
-  and Eq. (C1) rely on. It is invisible today: no integer n in [2, 201] puts a grid node on a
-  threshold, the closest being n = 69 at 1.9e-05. Prose defines and code implements
-  (`agent.md` §3), so the code is the side that is wrong. **Left for the user** (§5.4): it is a code
-  cell, and outside the scope of these two questions.
+  and Eq. (C1) rely on. Prose defines and code implements (`agent.md` §3), so the code is the side
+  that is wrong. **Left for the user** (§5.4): it is a code cell, and outside the scope of these two
+  questions.
+- **F11 corrected, 2026-09-16.** F11 as first written said the divergence was "invisible today: no
+  integer n in [2, 201] puts a grid node on a threshold". **That was wrong**, and the error was in
+  the scan, not the arithmetic: it swept only θ_L = log(2n − 1) for integer n and the K ladder, and
+  never covered the *explicit* θ_L values the notebooks pass. Code Cell 4's
+  `override_threshold(boundaries=(1.0, 2.0, 3.0))` puts **θ_L = 3.0 exactly on node 25** of the
+  K = 101 grid. The divergence was therefore live in a table the notebook prints, and fixing it
+  (decision I13) moved that row's θ_u\* from 14946.06 to 14937.23 and Text cell 6's quoted range
+  from "13378 to 14946" to "13378 to 14937". Lesson, beside F0: **a static scan for literals is not
+  a reachability test.** The authoritative check is a full printed-output diff of both notebooks
+  before and after, which is exhaustive over everything they actually compute.
 
 ## 4. What is not answered
 
