@@ -389,11 +389,27 @@ the mode up the scale between the two is what the positive $\Delta_{\textit{some
 longer holds: by the paragraph above it, the positive shift is tempering, and halving a field does not
 move its maximum. Proposed replacement:
 
-> The movement of the mode up the scale between the two is the utility level's, since the $\theta_u$
-> control, $\tfrac12(\ell_0-\varphi_L)$, keeps its maximum where $q_{\mathrm{lit}}$ has it; Appendix
-> C §8 splits the utility field into the part that moves the mode and the part that lowers the
-> all-region mass. The positive $\Delta_{\textit{some}}$ is the tempering the utility level fails to
-> undo, as above, and not that movement.
+> The movement of the mode up the scale between $q_{\mathrm{lit}}$ and the full network is the
+> utility level's, since the $\theta_u$ control, $\tfrac12(\ell_0-\varphi_L)$, keeps its maximum where
+> $q_{\mathrm{lit}}$ has it; Appendix C §8 splits the utility field into the part that moves the mode
+> and the part that lowers the all-region mass. What $\Delta_{\textit{some}}$ records is not that
+> movement: the shift under these two priors, $+0.0295$ and $+0.0421$, is all-region mass that the
+> tempering adds to $q_{\mathrm{lit}}$ and that the utility level then fails to take away, as the
+> paragraph above reports.
+
+**E6. The word "delta" (user, 2026-09-15).** Two sites, so that the name is read as the distribution
+and not as a difference. In Text cell 4 Part D, after "one row for each prior and utterance at that
+prior's $\theta_u^\ast$.":
+
+> The name is the delta *distribution* of Text cell 3 §4 item 5, the point mass at
+> $(\varphi_S^\ast,\varphi_u^\ast)$, and the same word in the *delta-like* prior names a
+> $\mathrm{Beta}(\alpha,1)$ approaching a point mass at $s=1$. Neither use carries any relation to
+> $\Delta_y$, the shift of Eq. (37).
+
+and in Part C, at the first occurrence of "delta-like", which precedes Part D:
+
+> …and the delta-like prior concentrated on the all-region, a $\mathrm{Beta}(64,1)$ approaching a
+> point mass at $s=1$, which needs that $\Lambda$…
 
 **E4. Text cell 4b, after "We note the difference and reserve our position on it." (T6 item 1, for
 Code Cell 2b).** Inserted before "Under *no* and *all*…", which then opens a new paragraph:
