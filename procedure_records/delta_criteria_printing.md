@@ -162,7 +162,19 @@ Record format when closing: `[x] Tn (date): what changed; acceptance result; com
   and T6 remain open. Originally:
   - Baseline: main 0 errors, 6 figures, 14/14; appendix_E 0 errors, 3 figures, E2 18/18, E3 PASS.
   - Diff the stored outputs against the T0 hash: only insertions, plus `cost:` lines.
-- [ ] **T6. Notebook prose. Wording needs the user's review before it lands.**
+- [x] **T6 (2026-09-15). Notebook prose, approved by the user and applied.** Closed: the six edits of
+  §6 (E1–E6) into Text cells 4, 4b and 6, commit af971c4. E1 Part C, the pairs do not always agree
+  (121 position, 35 shift); E2 Part D, the two criteria as unnumbered displays on $k^\ast$ and $k_0$,
+  the grid-steps column and the 0.12 spacing, and the Λ = 8 result (3, 6, 3, 5 steps; met under none
+  and all four); E3 the R15 correction, made explicit at the user's instruction (which shift, which
+  movement); E4 Text cell 4b, the eight rows and the steps at Λ = 512, with the flat row as plane cell
+  (1, 512); E5 Text cell 6, the plane under the delta read-out and the V under both read-outs; E6 (the
+  user, 2026-09-15) the word "delta" is the delta distribution, in the read-out's name and in the
+  delta-like prior, and is unrelated to $\Delta_y$. Applied by `audits/2026-09-14-mode-plane/apply_t6.py`.
+  Checks: every number in the new prose is printed by Code Cell 2, 2b, 4 or C; 74 anchors, 73 ToC
+  links, none unresolved; no new "condition" or "verdict"; markdown spacing kept. Markdown only, so
+  the notebooks were not re-executed. Originally:
+- **T6. Notebook prose. Wording needs the user's review before it lands.**
   - Text cell 4 Part D's reading guide defines (a) and (b) as reported statistics, class (b) of
     agent.md §3.3, as unnumbered displays so Eqs. (1)–(41) do not shift (agent.md §2 item 5). It
     also announces the new lines.
