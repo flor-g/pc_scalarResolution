@@ -949,9 +949,24 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   2b, 4 and C; B2's conjunction; O9's symmetry statement.
 
 ### O12. The all-region and the cell of *all* are now the same set
-- Status: Open (since 2026-09-17). **Recorded at the user's direction and deliberately not acted
-  on**: "we will fix this redundancy later, record and don't do anything about it yet."
-- Decided by: not decided. Raised by the agent while scoping O11.
+- Status: **Settled** (user, 2026-09-17; record `procedure_records/all_region_closed.md`). Opened
+  and settled the same day; recorded first, at the user's direction, before being acted on.
+- Decided by: user (2026-09-17), in their words: "resolve the redundancy in prose. In code,
+  preserve both 'upper_region' and 'inside', but add a comment next to the declaration statement of
+  'upper_region' explaining that this is identical to 'inside' by implication of our theoretical
+  commitment; however, it is left as a separate variable in case a reader want to experiment with
+  different definitions."
+- **Decision**, the second option below. **In prose**, the identity is stated once, in Text cell 4
+  Part C where the all-region is introduced: the threshold of Eq. (A5) makes the all-region
+  Appendix A's Voronoi cell of *all*, so the two names carry one region, *all-region* where a
+  q-mass is taken over it and *cell of all* where a mode is placed against it. Part D's
+  "Where the peak sits against the cell of *all*" now refers to Part C instead of re-deriving the
+  cell. **In code** both variables stay, with a three-line comment at the canonical declaration of
+  `upper_region` (Code Cell 2's `demonstrate`, mirrored in E2) recording that the two masks coincide
+  by the threshold of Eq. (A5), and that the pair is kept so either definition can be varied on its
+  own. Both names survive, so C4 is untouched.
+- **The framing below is how the question was recorded on 2026-09-17, kept unedited**
+  (`agent.md` §3.1). Its present tense describes the notebook before the prose was resolved.
 - **What happened.** O11 made Eq. (27)'s all-region R = {ζ ≥ θ_L}, which is exactly Appendix A's
   Voronoi cell of *all*. One set now carries two names and two implementations:
   - **code:** `upper_region = (zeta >= theta_L)` (14 sites in main, 9 in appendix_E) beside

@@ -46,6 +46,13 @@ mirrored.
   first. 14 + 9 masks, 2 + 1 labels, 2 prose.
 - [x] T3: both notebooks re-executed, main first.
 - [x] T4: O11 settled; B2 given a dated finding; O12 recorded; this record.
+- [x] T5 (2026-09-17): O12 resolved, on the user's instruction. Prose: Text cell 4 Part C states the
+  identity once; Part D refers to Part C instead of re-deriving the cell. Code: both `upper_region`
+  and `inside` kept, with a comment at the canonical declaration of `upper_region` (Code Cell 2's
+  `demonstrate`, mirrored in E2). Acceptance: every code cell compiles; the only source changes are
+  markdown in cell 6 (+7 −5) and three comment lines in each notebook; stored outputs byte-identical.
+  **Notebooks not re-executed** — the sole code change is a comment, which cannot move any output
+  (the precedent is T1 of `o5_o6_resolution.md`).
 
 ## 4. Verification
 
@@ -79,4 +86,10 @@ mirrored.
   sequenced with `;`, so execution proceeded despite the checker reporting FAIL. Harmless here only
   because the edit was right. Use `&&` so a failed check stops the run.
 - **F5 (the redundancy this creates).** The all-region and the cell of *all* are now the same set
-  with two names and two implementations. Recorded as **O12** at the user's direction, not acted on.
+  with two names and two implementations. Recorded as **O12** at the user's direction, then settled
+  by them the same day: resolved in prose, retained in code behind a comment. See T5.
+- **F6 (a fifth checker caught a real ambiguity, for once).** The comment insertion first anchored on
+  the pair `proportion = logistic(net.zeta)` + `upper_region = ...`, which occurs **twice** in Code
+  Cell 2 — in `demonstrate` and in `base_prior_sweep`. The assertion refused to patch rather than
+  guessing, and the anchor was moved to the enclosing `def demonstrate(`. Unlike F3 and F4, this is
+  the failure mode working as intended: assert the site count, never patch on a non-unique anchor.
