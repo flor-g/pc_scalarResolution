@@ -902,6 +902,37 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - **Depends on it:** O1; Text cell 4 Parts C and D; Text cell 6's plane; every criterion reading.
 - Evidence: as O9. Class (e) until a cell prints it (C6).
 
+### O11. Eq. (27)'s all-region is open where its own gloss, and the rest of the notebook, are closed
+- Status: Open (since 2026-09-17)
+- Decided by: not decided. Raised by the agent while applying I13. `agent.md` §3 requires a
+  prose/code disagreement to be recorded and put to the user rather than repaired in whichever
+  direction is convenient.
+- **The disagreement.** Text cell 4 defines P(all-region) over R = {ζ > θ_L}, "where *all* is true".
+  But *all* excludes E_all = {ζ < θ_L} (Eq. A1), so it is true on the **closed** {ζ ≥ θ_L}. Formula
+  and gloss disagree at the single node ζ = θ_L.
+- **The rest of the notebook already takes the closed form.** "The cell of *all*" is computed as
+  `zeta >= theta_L` everywhere it appears: the mode position criterion (C7), Code Cell C's
+  χ_not all, and the peak-of-ℓ₀ report. P(no-region) is closed too, R = {ζ ≤ −θ_L}. Eq. (27)'s
+  all-region is the only open one of the four.
+- **It also breaks the reflection of O9.** {ζ ≤ −θ_L} reflects to {ζ ≥ θ_L}, not to {ζ > θ_L}, so as
+  written the no-region and the all-region are not mirror images of each other.
+- **The options.**
+  1. *The gloss is loose; keep the formula.* Reword "where *all* is true" to name the open region.
+     Costs nothing computed, but leaves Eq. (27) inconsistent with the cell of *all* used elsewhere,
+     and the two regions unmirrored.
+  2. *The formula is wrong; make it R = {ζ ≥ θ_L}.* Restores the mirror, matches Eq. (A1) and the
+     cell of *all*, and makes all four regions closed at the endpoint. This changes the definition of
+     a **reported statistic**, and with it the q position criterion (B2, C7), which is why it is the
+     user's call.
+- **What option 2 would cost, measured.** Nothing printed, on the static evidence: the all-region is
+  computed only at θ_L = log 19, and no grid node lands on ±log 19 at any K in the ladder (closest
+  4.4e-03, at K = 201/401/801). The override table's θ_L = 1, 2, 3 — where θ_L = 3.0 *does* sit on a
+  node — takes a leak from χ_no and never an all-region mass. **Authoritative confirmation is a full
+  printed-output diff after the change, not this scan**: the equivalent scan gave three false
+  all-clears before I13.
+- **Depends on it:** Eq. (27); the q position criterion in Text cell 4 Part C and in Code Cells 2,
+  2b, 4 and C; B2's conjunction; O9's symmetry statement.
+
 ---
 
 ## D. Bogacz divergence register

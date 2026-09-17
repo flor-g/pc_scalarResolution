@@ -100,6 +100,13 @@ Each of these has broken at least once.
    either must be added to E3's replay list, with what it needs passed in, or E3 reports its lines as deleted.
 8. **Never replace `sys.stdout` with a tee under ipykernel.** It silently kills stream capture for
    the rest of the session. `contextlib.redirect_stdout` is safe.
+9. **`code cell 1` is copied almost whole into appendix_E's Code Cell E1.** 878 of its 912 lines are
+   identical; every `def` in main appears verbatim in E1, which adds only `relay`,
+   `relay_loop_abscissa` and `theta_u_gradient_columns`. **Nothing diffs the two.** E3 compares
+   printed output, not source, and the architecture cells print nothing of their own, so a change
+   made to one and not the other is invisible to every check in the project. Any edit to
+   `code cell 1` must be mirrored into E1 in the same pass, by lifting the source verbatim, never by
+   retyping (decision I13 was applied this way).
 
 ---
 

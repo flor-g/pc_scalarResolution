@@ -85,11 +85,24 @@ one comparison cannot express that. The old uniformity was bought by getting one
   (the mode-position criterion, Code Cell C's *not all*). After I13, 1 − χ_all = {ζ ≥ θ_L} agrees
   with the second. The residual tension is that Eq. (27)'s all-region is strict while its own gloss
   reads "where *all* is true", which is the closed cell. Same class of latent issue, in prose, and
-  out of scope here.
-- **F4 (a coupling `agent.md` §2 does not list).** Code cell 1 and Code Cell E1 both define
-  `exclusion_indicator`, byte-identically. §2's coupling list covers Code Cell 2 ↔ E2 but not this
-  one. Worth adding, for the next agent.
-- **F5 (a fragility worth the user's attention).** The override table's θ_L = 3.0 boundary sits
-  exactly on a grid node, so that row's printed θ_u\* is sensitive to the boundary convention in a
-  way the other two rows are not. Whether the boundaries should be nudged off the grid is a question
-  for the user, not this change.
+  out of scope here. **Recorded as open decision O11 on 2026-09-17**, at the user's direction, with
+  both options and the measured cost of each; it changes the definition of a reported statistic, so
+  it is theirs to settle.
+- **F4 (a coupling `agent.md` §2 did not list).** Code cell 1 and Code Cell E1 both define
+  `exclusion_indicator`, byte-identically, and §2's list covered Code Cell 2 ↔ E2 but not this pair.
+  **Added as coupling 9 on 2026-09-17**; F6 gives the true width of the duplication.
+- **F5 (the fragility, quantified 2026-09-17).** θ_u\* at the override threshold is a **staircase**
+  in θ_L: flat between grid-node crossings and stepping about 1.3% at each. At Λ = 4413.6 under
+  Beta(1024, 1), the crossings at 2.88, 3.00 and 3.12 give 15125.82, 14937.20, 14745.80 and
+  14551.38. θ_L = 3.0 sits exactly on a crossing, which is why a boundary convention decided it.
+  Pre-fix it returned 14946.04 — matching **neither** neighbouring plateau, because node 25 was
+  owned by neither entry; post-fix it returns 14937.20, the plateau below, owned by exactly one,
+  Eq. (A1)'s `≤` making the staircase left-continuous. The printed value is therefore exact for the
+  stated θ_L and grid, but it moves about 1.3% per grid node, so it reflects the grid's resolution
+  as much as the threshold's. Whether to nudge the boundaries off the node, or to quote fewer
+  figures, is the user's call.
+
+- **F6 (the duplication is far wider than one function).** Checking F4 properly: appendix_E's Code
+  Cell E1 shares **878 of code cell 1's 912 lines**, and every `def` in main appears verbatim in E1,
+  which adds only `relay`, `relay_loop_abscissa` and `theta_u_gradient_columns`. Nothing in the
+  project diffs the two. Added to `agent.md` §2 as coupling 9 on 2026-09-17.
