@@ -237,6 +237,30 @@ the parity paragraph S-7 keeps is exactly the statement O14's instinct doubts. *
 the symmetry rests on; it does not test the instinct, and nothing here says the symmetry accounts
 for the mismatch (R16).**
 
+**F19 (2026-09-17, for O14 and O10). The n = 1 degeneracy is a property of the single θ, not of n.**
+Building Eq. (A1) with the 0 boundary at −θ_L and the 1 boundary at θ_A, and taking the Gram rank of
+the three χ_y as O10 and Eq. (C2) do:
+
+| θ_L | θ_A | n | rank | rank mod **1** | max \|χ_some − χ_all\| | |
+|---:|---:|---:|---:|---:|---:|---|
+| log 7 | log 7 | 4 | 3 | 2 | 1.0000 | the model |
+| 0 | 0 | 1 | **2** | **1** | **0.0000** | O10's degeneracy: the entries coincide |
+| 0 | log 7 | 1 | 3 | 2 | 1.0000 | 0 boundary at n = 1, 1 boundary kept |
+| 0 | 0.5 | 1 | 3 | 2 | 1.0000 | both moved, still distinct |
+| log 7 | 0 | 4 | 3 | 2 | 1.0000 | the 1 boundary at the midpoint |
+
+So **representationally** the user's instinct holds: separate the two boundaries and n = 1 no longer
+collapses *some* into *all*, and the inventory keeps the two thresholds Eq. (C2) counts. The last row
+is the configuration in which a relative adjective's cut would be θ_A at the midpoint, with the 0
+boundary left where n puts it.
+
+**What this does not settle**, and what keeps it an instinct rather than a result:
+- Nothing here is dynamical. The user's instinct is that an architecture with an alternatives level
+  has different dynamics; no dynamics were run, and none can be until such an architecture exists.
+- **Eq. (A2)'s gain.** θ_L is the gain of g_y as well as a cut, so θ_L = 0 zeroes the word-form
+  prediction whatever θ_A does. Whether that survives the separation depends on which θ gains which
+  row of A, which is undetermined. It is the one obstacle the rank test does not touch.
+
 ## 6. What is open
 
 - **O13** (new): whether H1 and H2 are adopted, and if so what fixes Λ. Nothing was changed.
@@ -313,6 +337,16 @@ None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed
   > I need to clarify that theta_L is the lexical level's property, and only theta_A is meant to be
   > the alternative level's property. The lexical level infers the boundary of 0, and the
   > alternative level infers the boundary of 1.
+
+  And the correction that followed, which is what the instinct is actually about:
+
+  > I'm sorry for mispeaking earlier, but I meant the midpoint t of the relative class can be
+  > properly represented by one of theta_L or theta_A. As for n, we my instinct is that it is still
+  > dependent on theta_L. However, since an architecture with an alternatives level has different
+  > dynamics, it is well possible that n=1 no longer causes degeneracy.
+
+  So the quantity the separation would represent is **t**, the relative class's midpoint, not n; n
+  stays with θ_L. S-2's decision is unchanged: the relative class is not modelled here.
 
   Recorded as `decisions.md` **O14**. What follows for this change:
   - **No cut *t* enters the model.** Appendix A's identification argument and its "θ_L enters twice"
