@@ -1,0 +1,214 @@
+SELF-CHECKS
+  closed form here against Code Cell 1: 0.0e+00, 0.0e+00
+  theta_u* recovered for the default n = 10 network: -28.4375  (Code Cell 2 prints -28.4375)
+  n = 4: theta_L = 1.9459, cell of the top count s >= 0.875, cell of the bottom count s <= 0.125
+  MAX excludes 67 of 101 nodes, MIN excludes 34, a midpoint REL cut excludes 50.5
+  the five cells partition the grid: masses sum to 1.0000000000 under the prior alone
+
+WHAT XIANG ET AL. (2022) REPORT, as the target (Exp. 3, posterior degrees, five positions)
+  MAX  'participants consistently chose the maximum degree'                      -> peak at 5, near-categorical
+  MIN  'distributed among all the non-minimal degrees', 'peaking around the
+        middle part of the scale'                                                -> 2-5, peak at 3
+  REL  'clustered mainly on degrees above the mid-point'; the maximum has the
+        highest probability, with mass also at position 4                        -> 4-5, peak at 5
+  Exp. 2 (truth value judgments): more positive responses for MIN than REL than MAX;
+  the ONLY class with a credible image-type effect is MIN (shapes > artifacts, 2.54 [0.54, 4.38]).
+  Model fit by class (their Table 5 and Sec. 4): posterior R^2 MAX .94/.97, REL .69/.78, MIN .55/.58;
+  the semantic-threshold model .98/.58/.19 and the hybrid .97/.80/.32. MIN is every model's residual.
+
+======================================================================================================================
+1. PROFILES BY CLASS, SCANNED IN LAMBDA. Each row learns its own theta_u* (A9) over the
+   exposure ensemble its scale carries: {MAX, MIN} for a complete scale, {REL(t), REL(-t)} for
+   an open one. 'profile' is q-mass on the five positions; 'leak' is q-mass on the positions
+   the entry excludes; 'mode' is the peak of phi_S* (the delta read-out) as a position.
+======================================================================================================================
+
+  CONDITION: artifacts (less categorical prior)   (absolute sets Beta(3, 1) / its mirror; relative sets Beta(1, 1))
+    MAX  prior Beta(3.0, 1.0) in s
+       Lambda    theta_u*    E[s]  mode  peak                    profile 1..5    leak  shift vs q_lit
+          0.5       91.35   0.803     5     5    0.00  0.03  0.14  0.35  0.48   0.523         +0.0218
+            1       78.78   0.829     5     5    0.00  0.03  0.11  0.30  0.56   0.437         +0.0127
+            2       64.83   0.875     5     5    0.00  0.02  0.07  0.19  0.72   0.278         -0.0016
+            4       53.62   0.933     5     5    0.00  0.00  0.02  0.06  0.92   0.085         +0.0028
+            8       49.18   0.967     5     5    0.00  0.00  0.00  0.00  1.00   0.005         +0.0262
+           16       54.98   0.988     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0478
+           32       76.34   0.996     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0556
+           64      124.78   0.997     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0565
+          128      224.76   0.997     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0568
+          512      830.33   0.998     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0569
+    MIN  prior Beta(1.0, 3.0) in s
+       Lambda    theta_u*    E[s]  mode  peak                    profile 1..5    leak  shift vs q_lit
+          0.5      -10.66   0.248     2     2    0.31  0.45  0.19  0.05  0.00   0.313         -0.0307
+            1      -10.30   0.271     2     2    0.24  0.48  0.21  0.06  0.00   0.244         -0.0291
+            2       -9.68   0.308     2     2    0.14  0.53  0.25  0.07  0.00   0.141         -0.0166
+            4       -8.88   0.354     2     2    0.04  0.55  0.30  0.10  0.01   0.041         +0.0158
+            8      -10.57   0.405     2     2    0.00  0.49  0.36  0.14  0.01   0.003         +0.0643
+           16     -530.06   0.491     3     3    0.00  0.31  0.42  0.25  0.02   0.000         +0.1505
+           32       65.74   0.639     4     4    0.00  0.09  0.35  0.47  0.08   0.000         +0.2980
+           64      107.31   0.802     4     4    0.00  0.00  0.09  0.60  0.30   0.000         +0.4605
+          128      205.87   0.903     5     5    0.00  0.00  0.00  0.26  0.74   0.000         +0.5620
+          512      810.83   0.962     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.6208
+    REL  prior Beta(1.0, 1.0) in s
+       Lambda    theta_u*    E[s]  mode  peak                    profile 1..5    leak  shift vs q_lit
+          0.5       -4.67   0.539     3     4    0.11  0.21  0.24  0.28  0.16   0.417         -0.0221
+            1       -4.99   0.585     3     4    0.09  0.17  0.24  0.31  0.19   0.339         -0.0302
+            2       -6.27   0.666     3     4    0.05  0.11  0.22  0.37  0.25   0.207         -0.0252
+            4      -11.59   0.767     4     4    0.01  0.03  0.18  0.42  0.36   0.061         +0.0221
+            8      -33.32   0.845     4     5    0.00  0.00  0.11  0.36  0.53   0.004         +0.0893
+           16     -120.67   0.928     5     5    0.00  0.00  0.03  0.17  0.80   0.000         +0.1713
+           32     -470.20   0.988     5     5    0.00  0.00  0.00  0.01  0.99   0.000         +0.2315
+           64    -1868.39   0.996     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.2399
+          128    -7461.14   0.997     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.2408
+          512  -119158.53   0.998     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.2412
+
+  CONDITION: shapes (more categorical prior)   (absolute sets Beta(12, 1) / its mirror; relative sets Beta(1, 1))
+    MAX  prior Beta(12.0, 1.0) in s
+       Lambda    theta_u*    E[s]  mode  peak                    profile 1..5    leak  shift vs q_lit
+          0.5      158.45   0.944     5     5    0.00  0.00  0.00  0.08  0.91   0.085         +0.0125
+            1      157.99   0.948     5     5    0.00  0.00  0.00  0.06  0.94   0.063         +0.0092
+            2      157.22   0.954     5     5    0.00  0.00  0.00  0.03  0.97   0.033         +0.0074
+            4      156.14   0.962     5     5    0.00  0.00  0.00  0.01  0.99   0.009         +0.0108
+            8      155.52   0.972     5     5    0.00  0.00  0.00  0.00  1.00   0.001         +0.0204
+           16      158.31   0.987     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0351
+           32      172.13   0.996     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0442
+           64      212.06   0.997     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0457
+          128      305.20   0.997     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0460
+          512      903.70   0.998     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.0461
+    MIN  prior Beta(1.0, 12.0) in s
+       Lambda    theta_u*    E[s]  mode  peak                    profile 1..5    leak  shift vs q_lit
+          0.5      -54.39   0.067     1     1    0.85  0.15  0.00  0.00  0.00   0.847         -0.0255
+            1      -53.87   0.074     1     1    0.80  0.20  0.00  0.00  0.00   0.799         -0.0347
+            2      -52.84   0.092     2     1    0.68  0.32  0.00  0.00  0.00   0.676         -0.0510
+            4      -50.83   0.135     2     2    0.37  0.63  0.01  0.00  0.00   0.366         -0.0457
+            8      -47.03   0.182     2     2    0.04  0.94  0.02  0.00  0.00   0.045         -0.0073
+           16      -40.47   0.203     2     2    0.00  0.96  0.04  0.00  0.00   0.000         +0.0136
+           32      -34.38   0.246     2     2    0.00  0.89  0.11  0.00  0.00   0.000         +0.0568
+           64     -217.53   0.369     2     2    0.00  0.52  0.46  0.02  0.00   0.000         +0.1801
+          128      238.25   0.588     3     3    0.00  0.03  0.61  0.36  0.00   0.000         +0.3988
+          512      798.97   0.909     5     5    0.00  0.00  0.00  0.14  0.86   0.000         +0.7195
+    REL  prior Beta(1.0, 1.0) in s
+       Lambda    theta_u*    E[s]  mode  peak                    profile 1..5    leak  shift vs q_lit
+          0.5       -4.67   0.539     3     4    0.11  0.21  0.24  0.28  0.16   0.417         -0.0221
+            1       -4.99   0.585     3     4    0.09  0.17  0.24  0.31  0.19   0.339         -0.0302
+            2       -6.27   0.666     3     4    0.05  0.11  0.22  0.37  0.25   0.207         -0.0252
+            4      -11.59   0.767     4     4    0.01  0.03  0.18  0.42  0.36   0.061         +0.0221
+            8      -33.32   0.845     4     5    0.00  0.00  0.11  0.36  0.53   0.004         +0.0893
+           16     -120.67   0.928     5     5    0.00  0.00  0.03  0.17  0.80   0.000         +0.1713
+           32     -470.20   0.988     5     5    0.00  0.00  0.00  0.01  0.99   0.000         +0.2315
+           64    -1868.39   0.996     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.2399
+          128    -7461.14   0.997     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.2408
+          512  -119158.53   0.998     5     5    0.00  0.00  0.00  0.00  1.00   0.000         +0.2412
+
+======================================================================================================================
+2. WHICH LEVEL PRODUCES THE PROFILE. q_lit (ell_0 - phi_L, the literal listener), the tempered
+   control (theta_u = 0), and the model at its own theta_u*, on the five positions.
+======================================================================================================================
+
+  CONDITION: artifacts (less categorical prior)
+    MAX Lambda = 8    theta_u* =      49.18
+      prior alone               0.00  0.05  0.20  0.43  0.32   peak 4   E[s] 0.748   mode 0.746
+      q_lit                     0.00  0.00  0.00  0.00  1.00   peak 5   E[s] 0.940   mode 0.885
+      tempered (theta_u = 0)    0.00  0.00  0.01  0.01  0.97   peak 5   E[s] 0.944   mode 0.885
+      model (theta_u*)          0.00  0.00  0.00  0.00  1.00   peak 5   E[s] 0.967   mode 0.970
+    MIN Lambda = 8    theta_u* =     -10.57
+      prior alone               0.32  0.43  0.20  0.05  0.00   peak 2   E[s] 0.252   mode 0.254
+      q_lit                     0.00  0.63  0.30  0.07  0.00   peak 2   E[s] 0.341   mode 0.254
+      tempered (theta_u = 0)    0.01  0.50  0.30  0.16  0.03   peak 2   E[s] 0.407   mode 0.254
+      model (theta_u*)          0.00  0.49  0.36  0.14  0.01   peak 2   E[s] 0.405   mode 0.354
+    MIN Lambda = 16   theta_u* =    -530.06
+      prior alone               0.32  0.43  0.20  0.05  0.00   peak 2   E[s] 0.252   mode 0.254
+      q_lit                     0.00  0.63  0.30  0.07  0.00   peak 2   E[s] 0.341   mode 0.254
+      tempered (theta_u = 0)    0.00  0.51  0.30  0.16  0.03   peak 2   E[s] 0.411   mode 0.254
+      model (theta_u*)          0.00  0.31  0.42  0.25  0.02   peak 3   E[s] 0.491   mode 0.470
+    MIN Lambda = 32   theta_u* =      65.74
+      prior alone               0.32  0.43  0.20  0.05  0.00   peak 2   E[s] 0.252   mode 0.254
+      q_lit                     0.00  0.63  0.30  0.07  0.00   peak 2   E[s] 0.341   mode 0.254
+      tempered (theta_u = 0)    0.00  0.51  0.30  0.16  0.03   peak 2   E[s] 0.411   mode 0.254
+      model (theta_u*)          0.00  0.09  0.35  0.47  0.08   peak 4   E[s] 0.639   mode 0.646
+    REL Lambda = 8    theta_u* =     -33.32
+      prior alone               0.12  0.25  0.27  0.25  0.12   peak 3   E[s] 0.500   mode 0.500
+      q_lit                     0.00  0.00  0.24  0.51  0.25   peak 4   E[s] 0.756   mode 0.530
+      tempered (theta_u = 0)    0.01  0.01  0.17  0.40  0.41   peak 5   E[s] 0.799   mode 0.530
+      model (theta_u*)          0.00  0.00  0.11  0.36  0.53   peak 5   E[s] 0.845   mode 0.808
+    REL Lambda = 4    theta_u* =     -11.59
+      prior alone               0.12  0.25  0.27  0.25  0.12   peak 3   E[s] 0.500   mode 0.500
+      q_lit                     0.00  0.01  0.25  0.50  0.24   peak 4   E[s] 0.745   mode 0.530
+      tempered (theta_u = 0)    0.05  0.05  0.18  0.36  0.37   peak 5   E[s] 0.735   mode 0.530
+      model (theta_u*)          0.01  0.03  0.18  0.42  0.36   peak 4   E[s] 0.767   mode 0.646
+
+  CONDITION: shapes (more categorical prior)
+    MAX Lambda = 8    theta_u* =     155.52
+      prior alone               0.00  0.00  0.00  0.21  0.78   peak 5   E[s] 0.921   mode 0.926
+      q_lit                     0.00  0.00  0.00  0.00  1.00   peak 5   E[s] 0.951   mode 0.926
+      tempered (theta_u = 0)    0.00  0.00  0.00  0.01  0.99   peak 5   E[s] 0.958   mode 0.926
+      model (theta_u*)          0.00  0.00  0.00  0.00  1.00   peak 5   E[s] 0.972   mode 0.979
+    MIN Lambda = 8    theta_u* =     -47.03
+      prior alone               0.78  0.21  0.00  0.00  0.00   peak 1   E[s] 0.079   mode 0.074
+      q_lit                     0.00  0.98  0.02  0.00  0.00   peak 2   E[s] 0.189   mode 0.128
+      tempered (theta_u = 0)    0.05  0.86  0.09  0.00  0.00   peak 2   E[s] 0.218   mode 0.128
+      model (theta_u*)          0.04  0.94  0.02  0.00  0.00   peak 2   E[s] 0.182   mode 0.128
+    MIN Lambda = 16   theta_u* =     -40.47
+      prior alone               0.78  0.21  0.00  0.00  0.00   peak 1   E[s] 0.079   mode 0.074
+      q_lit                     0.00  0.98  0.02  0.00  0.00   peak 2   E[s] 0.189   mode 0.128
+      tempered (theta_u = 0)    0.00  0.90  0.09  0.00  0.00   peak 2   E[s] 0.227   mode 0.128
+      model (theta_u*)          0.00  0.96  0.04  0.00  0.00   peak 2   E[s] 0.203   mode 0.128
+    MIN Lambda = 32   theta_u* =     -34.38
+      prior alone               0.78  0.21  0.00  0.00  0.00   peak 1   E[s] 0.079   mode 0.074
+      q_lit                     0.00  0.98  0.02  0.00  0.00   peak 2   E[s] 0.189   mode 0.128
+      tempered (theta_u = 0)    0.00  0.90  0.09  0.00  0.00   peak 2   E[s] 0.227   mode 0.128
+      model (theta_u*)          0.00  0.89  0.11  0.00  0.00   peak 2   E[s] 0.246   mode 0.211
+    REL Lambda = 8    theta_u* =     -33.32
+      prior alone               0.12  0.25  0.27  0.25  0.12   peak 3   E[s] 0.500   mode 0.500
+      q_lit                     0.00  0.00  0.24  0.51  0.25   peak 4   E[s] 0.756   mode 0.530
+      tempered (theta_u = 0)    0.01  0.01  0.17  0.40  0.41   peak 5   E[s] 0.799   mode 0.530
+      model (theta_u*)          0.00  0.00  0.11  0.36  0.53   peak 5   E[s] 0.845   mode 0.808
+    REL Lambda = 4    theta_u* =     -11.59
+      prior alone               0.12  0.25  0.27  0.25  0.12   peak 3   E[s] 0.500   mode 0.500
+      q_lit                     0.00  0.01  0.25  0.50  0.24   peak 4   E[s] 0.745   mode 0.530
+      tempered (theta_u = 0)    0.05  0.05  0.18  0.36  0.37   peak 5   E[s] 0.735   mode 0.530
+      model (theta_u*)          0.01  0.03  0.18  0.42  0.36   peak 4   E[s] 0.767   mode 0.646
+
+======================================================================================================================
+3. THE CONFLICT BETWEEN EACH CLASS'S ENTRY AND ITS OWN PRIOR. 'override Lambda' is the least
+   Lambda at which the entry holds (leak < 1/2) at the class's own theta_u*; a class whose
+   prior piles up on the states its entry excludes needs a large one.
+======================================================================================================================
+    class prior                  sharpness  prior mass on the  override
+                                               excluded cells    Lambda
+    MAX   Beta(1.0, 1.0) in s            1              0.881      2.50
+    MIN   Beta(1.0, 1.0) in s            1              0.119    < 1e-3
+    REL   Beta(1.0, 1.0) in s            1              0.485    < 1e-3
+    MAX   Beta(3.0, 1.0) in s            3              0.684      0.63
+    MIN   Beta(1.0, 3.0) in s            3              0.316    < 1e-3
+    REL   Beta(1.0, 1.0) in s            3              0.485    < 1e-3
+    MAX   Beta(6.0, 1.0) in s            6              0.467    < 1e-3
+    MIN   Beta(1.0, 6.0) in s            6              0.533      0.94
+    REL   Beta(1.0, 1.0) in s            6              0.485    < 1e-3
+    MAX   Beta(12.0, 1.0) in s          12              0.218    < 1e-3
+    MIN   Beta(1.0, 12.0) in s          12              0.782      3.14
+    REL   Beta(1.0, 1.0) in s           12              0.485    < 1e-3
+    MAX   Beta(24.0, 1.0) in s          24              0.047    < 1e-3
+    MIN   Beta(1.0, 24.0) in s          24              0.953      6.59
+    REL   Beta(1.0, 1.0) in s           24              0.485    < 1e-3
+
+======================================================================================================================
+4. THE THREE ENTRIES UNDER ONE COMMON PRIOR, which isolates the entry from the prior.
+   Beta(1, 1), every entry at Lambda = 8, each learning theta_u* over {entry, its partner}.
+======================================================================================================================
+    entry                        theta_u*    E[s]   mode                    profile 1..5    leak
+    MAX  (excl. zeta < theta_L)      27.12   0.962  0.926    0.00  0.00  0.00  0.01  0.99   0.013
+    MIN  (excl. zeta <= -theta_L)      27.12   0.690  0.723    0.00  0.13  0.23  0.36  0.28   0.000
+    REL  cut at s = 0.50           -33.32   0.845  0.808    0.00  0.00  0.11  0.36  0.53   0.004
+    REL  cut at s = 0.62           -31.53   0.961  0.917    0.00  0.00  0.00  0.01  0.99   0.013
+    REL  cut at s = 0.38           -33.25   0.793  0.769    0.00  0.00  0.21  0.36  0.43   0.003
+
+======================================================================================================================
+5. THE EXPOSURE ENSEMBLE (H2 / decisions.md O8): theta_u* for the ensembles each scale carries,
+   at n = 4 and Lambda = 8, under the flat prior. The default n = 10 quantifier inventory is
+   printed by Code Cell B (no -11.2844, some -44.1766, all -65.7004, all three -28.4375).
+======================================================================================================================
+    complete scale {MAX, MIN}   (endpoint + some)   theta_u* =      27.12   E[s] under the first entry 0.962
+    complete scale {MAX}  alone                     theta_u* =      10.91   E[s] under the first entry 0.962
+    complete scale {MIN}  alone                     theta_u* =     167.70   E[s] under the first entry 0.689
+    open scale {REL(+), REL(-)} (the antonym pair)  theta_u* =     -33.32   E[s] under the first entry 0.845
+    open scale {REL} alone                          theta_u* =      23.38   E[s] under the first entry 0.848

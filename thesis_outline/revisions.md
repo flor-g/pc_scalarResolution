@@ -429,6 +429,65 @@ appear only in the outline.
 - **The numerical note stays** (half-weighting the midpoint node).
 - **Before any rebuilt number is quoted:** a printing cell (C6) and an answer to O8.
 
+**2026-09-17: the user's scale-class hypothesis, checked against Xiang et al.'s own data.**
+Record `procedure_records/scale_classes_hypothesis.md`; audit `audits/2026-09-17-scale-classes/`;
+decision O13; the 2026-09-14 findings above are unaffected and still hold.
+
+The user proposes that (H1) scalar expressions with unstable atomicity carry weaker lexical
+strength Λ, and (H2) open-scale adjectives behave like *some* while complete-scale adjectives behave
+like endpoint(s) + *some*. Instantiating Xiang et al.'s five scale positions as the five Voronoi
+cells of a predicate resolving n = 4 atoms (Eq. A5, θ_L = log 7), Eq. (A1) supplies the three
+classes directly: maximum-standard = *all*, minimum-standard = *some*, relative = a cut at a
+context threshold. The antonym each item pairs the adjective with is, in that adjective's own
+orientation, the entry's complement, so the exposure ensemble is {χ, 1 − χ} throughout, which
+answers half of O8 for this paradigm.
+
+- **The model was run on their 96 items, with their elicited priors, against their Experiment 3.**
+  Posterior-degree R² **0.81** overall, against their LG 0.78 and QF 0.82; by class **0.95 / 0.40 /
+  0.80** (max / min / rel) against LG .94/.55/.69 and QF .97/.58/.78. The literal listener alone
+  gives .95/.09/.20, so **the utility level is what earns the fit wherever an endpoint does not
+  already fix the answer** — a result §5.1 and §5.2 can both use, and one the outline does not
+  currently have.
+- **The minimum class is this model's residual too**, as it is every model's in their paper (their
+  ST model .19, their hybrid .32). §5.2 must not claim otherwise.
+- **H1's ordering holds in the form "a finite Λ is required".** The maximum class's fit is flat from
+  Λ = 8 to Λ = 2048, so the data put no upper bound on its lexical strength; the minimum class peaks
+  at Λ ≈ 32 and the relative class at Λ ≈ 16, both falling away above. A predicate anchored at the
+  scale's own endpoint behaves as a hard entry; the two whose thresholds depend on something
+  unstable do not.
+- **The one credible empirical interaction is reproduced in the right class and the right direction,
+  at one seventh of its size.** Xiang et al. find an image-type effect for the minimum class only,
+  in both experiments. In mean scale position, shapes minus artifacts: their prior +0.84 / −1.12 /
+  −0.00, their data −0.22 / **−1.13** / +0.23, this model +0.03 / **−0.16** / +0.01. The model
+  matches −1.13 only at Λ ≲ 2, where the class's fit collapses; **no single Λ fits both halves**
+  (shapes want Λ ≈ 6, artifacts Λ ≈ 24). That is H1 in a within-class form, and nothing else in the
+  model produces it: m = 3 and m = 4 leave the effect at −0.17 and −0.04.
+- **The between-class interaction §5.2 claims is there.** The maximum-minus-minimum gap is larger in
+  the shape condition than the artifact one, in the data (1.32 against 0.41) and in the model (0.61
+  against 0.42).
+- **§5.2's and §1.7's description of the prior manipulation is backwards.** Both call shapes the
+  impoverished-prior condition and artifacts the rich-prior one. The authors report the opposite
+  about the priors themselves — "artifacts tend to have a less categorical distribution than shapes,
+  in particular for the dimensions corresponding to absolute adjectives" (9:19) — and their elicited
+  priors bear it out (minimum class, mean position 1.19 for shapes against 2.31 for artifacts). The
+  shape condition is impoverished in world knowledge and **sharper** in elicited prior. Any sentence
+  about prior sharpness must be stated on the elicited priors, not on the labels. This is a
+  correction to the empirical-fit paragraph and to background §1.7, whichever way Q7 goes.
+- **What this does to the prediction.** The comparison the data make is not a monotone trend in the
+  cut's position under one prior sharpened: the classes differ in **which cut** they carry and in
+  **Λ**. A §5.2 rebuilt on this would state (i) the class-to-entry map, which is H2 and which the
+  data support; (ii) that the utility level is required off the endpoint and not at it; (iii) the
+  Λ ordering of F6; and (iv) the one interaction, with its size named as a shortfall rather than a
+  match. Whether to state any of it is Q7, and whether H1 and H2 are adopted at all is O13.
+- **Costs to weigh under O13.** H2's open-scale half needs a cut t that is neither endpoint nor
+  δ/2, so t joins θ_L as a quantity of the entry, and Appendix A's identification argument ("θ_L
+  enters twice") is written for a θ_L that is both the gain and the cut. H1 makes Λ a function of
+  atomicity, which gives the Λ axis of the plane a linguistic reading (a position on it becomes a
+  property of the expression — worth §4.5) but couples two quantities Text cell 3 §3 now fixes
+  independently.
+- **Nothing is printed by a cell**, so every number here is class (e) under `agent.md` §3.3. Quoting
+  any of it needs a five-position configuration the notebooks do not contain.
+
 ### §5.3 and §5.4 (new)
 
 Content in §5 below, items 2 and 3.
@@ -654,6 +713,13 @@ table's commitment 3 row at line 391).
     too.
   - Soften to "§5.2 takes it up", pending Q7.
   - The literature bullets survive. The Leffel et al. check is still pending.
+  - **2026-09-17: one bullet is wrong and must change whatever Q7 decides.** "the difference is most
+    dramatic in the impoverished-prior (geometric shapes) condition rather than the rich-prior
+    (familiar artifacts) one" has the prior manipulation backwards. Xiang et al. report that the
+    elicited shape priors are the **more** categorical ones (9:19), and their data agree. The
+    between-class difference is indeed larger in the shape condition (1.32 against 0.41 in mean
+    scale position), so the claim survives; its explanation does not. State it as a contrast between
+    novel and familiar objects, and say which way the elicited priors actually go.
 - **§1.8 synthesis (lines 337–352).** Optional. One clause that the traditions share a
   computational-level framing under which the questions of §5.3 are not posable.
 - **Lines 368–373, §2.1 claim levels.** The algorithmic claim now carries commitment 7, whose
@@ -872,6 +938,24 @@ The re-examination is §4's §5.2 entry. It leaves four choices, all interpretiv
 - **Whether the empirical-fit paragraph still holds.** Whether Leffel, Xiang and Kennedy (2017) and
   Xiang et al. (2022) still describe the model depends on the three choices above.
 
+**2026-09-17, what the new audit answers and what it leaves.** Three of the four choices can now be
+made against measurement rather than guessed (the §5.2 entry above, O13):
+- *What the prediction is stated on.* The posterior-degree comparison is E_q over the five cells,
+  which is the statistic Xiang et al. collect, so a prediction meant to meet their data is stated on
+  q. The delta read-out's mode is a separate statement and would have to be made separately.
+- *Which mechanism.* Neither of the two on offer. The classes differ in which cut they carry and in
+  Λ, and the measured mechanism is that the utility level is required off the endpoint and not at it
+  (R² .09 → .40 for the minimum class, .20 → .80 for the relative class, .95 → .95 for the maximum
+  class).
+- *How the sharp-prior half is posed.* On the elicited priors, not on the labels: the shape
+  condition is the sharper one (F12), which reverses the sentence the outline now has.
+- *The empirical-fit paragraph.* It needs correcting whatever else is decided, and the corrected
+  version has more to say than the current one: the model reaches the same overall fit as the
+  models in the paper, on the same items, and fails on the same class.
+**Still the user's:** whether the rebuilt §5.2 is stated at all (O13), and whether any of these
+numbers may be quoted, which needs a cell to print them (C6) and a five-position configuration the
+notebooks do not have.
+
 ## 8. Where the numbers are printed
 
 | Numbers | Source |
@@ -887,6 +971,7 @@ The re-examination is §4's §5.2 entry. It leaves four choices, all interpretiv
 | F15 (not within 0.1% after 5,000 updates), 145/145 | `procedure_records/theta_u_learned_reach.md` (recorded scripts, not a cell) |
 | Exposure-only θ\* (−11.2844, −44.1766, −65.7004, −28.4375) | Code Cell B, ALTERNATIVE SPACES |
 | §5.2's re-examination: contributions, leaks, loadings, illustrative θ\* | `audits/2026-09-13-scale-structure/output.txt` (an audit script, not a cell) |
+| The scale classes against Xiang et al. (2022): R² by class, Λ per class, the image-type effect, the class profiles | `audits/2026-09-17-scale-classes/` (audit scripts, not cells; class (e) until a cell prints them) |
 | Q2's Part D and Λ = 512 rows: the modes, the mode shift in s and in grid steps, the two mode criteria | `main.ipynb` Code Cells 2 and 2b, the mode criteria block |
 | Q2's plane counts (67, 59, 13 against 74, 59, 33), the 35 disagreeing cells, the four unmoved modes, the 5.6e-5 gap, and the V under both read-outs | Code Cell 4, `plane_summary` |
 | Q6's tilt/width split, the 50 and 67 up/down counts, Eq. (24)'s halving and the limit field | Code Cell C, `utility_split_report`; Appendix C §8 |

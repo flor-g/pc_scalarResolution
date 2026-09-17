@@ -1,0 +1,232 @@
+items 96; by class absolute_max 32, absolute_min 24, relative 40
+n = 4, theta_L = 1.9459; the five cells are s <= 0.125, then three of width 0.25, then s >= 0.875
+prior push-forward check: a uniform five-cell prior returns [0.1927, 0.2003, 0.2139, 0.2003, 0.1927]
+closed-form theta_u* against the scan, n = 4 inventory: 6.4e-06; default n = 10 inventory: -28.4375 (Code Cell 2 prints -28.4375)
+
+================================================================================================================
+6. THE MODEL AGAINST EXPERIMENT 3, ITEM BY ITEM. R^2 over the five positions of every item in
+   the class, at one Lambda for all classes; the relative cut is scanned separately below.
+   Their Table 5: LG .78 overall (.94 / .55 / .69), QF .82 overall (.97 / .58 / .78).
+================================================================================================================
+
+  relative cut between 2 and 3 (s = 0.375)
+     Lambda | model: all    max    min    rel |  q_lit: all    max    min    rel |  tempered: all
+       0.25 |      0.087  0.563  0.102  0.000 |      0.074  0.581  0.090  0.012 |      0.139 |
+        0.5 |      0.113  0.602  0.095  0.001 |      0.093  0.625  0.082  0.007 |      0.172 |
+          1 |      0.169  0.673  0.078  0.011 |      0.135  0.699  0.064  0.002 |      0.240 |
+          2 |      0.292  0.787  0.035  0.052 |      0.216  0.809  0.019  0.000 |      0.364 |
+          3 |      0.397  0.859  0.000  0.100 |      0.277  0.879  0.004  0.001 |      0.452 |
+          4 |      0.477  0.907  0.035  0.149 |      0.309  0.922  0.050  0.001 |      0.502 |
+          6 |      0.573  0.949  0.169  0.256 |      0.329  0.952  0.087  0.002 |      0.539 |
+          8 |      0.632  0.953  0.229  0.375 |      0.331  0.952  0.091  0.002 |      0.545 |
+         12 |      0.724  0.952  0.305  0.596 |      0.331  0.952  0.092  0.002 |      0.545 |
+         16 |      0.781  0.952  0.352  0.730 |      0.331  0.952  0.092  0.002 |      0.544 |
+         24 |      0.809  0.952  0.391  0.799 |      0.331  0.952  0.092  0.002 |      0.544 |
+         32 |      0.793  0.952  0.401  0.783 |      0.331  0.952  0.092  0.002 |      0.544 |
+         64 |      0.755  0.952  0.391  0.756 |      0.331  0.952  0.092  0.002 |      0.544 |
+        128 |      0.725  0.952  0.348  0.756 |      0.331  0.952  0.092  0.002 |      0.544 |
+
+  relative cut between 3 and 4 (s = 0.625)
+     Lambda | model: all    max    min    rel |  q_lit: all    max    min    rel |  tempered: all
+       0.25 |      0.092  0.563  0.102  0.000 |      0.080  0.581  0.090  0.006 |      0.144 |
+        0.5 |      0.122  0.602  0.095  0.007 |      0.110  0.625  0.082  0.000 |      0.184 |
+          1 |      0.195  0.673  0.078  0.050 |      0.179  0.699  0.064  0.014 |      0.269 |
+          2 |      0.362  0.787  0.035  0.204 |      0.331  0.809  0.019  0.104 |      0.436 |
+          3 |      0.507  0.859  0.000  0.356 |      0.440  0.879  0.004  0.172 |      0.557 |
+          4 |      0.608  0.907  0.035  0.462 |      0.484  0.922  0.050  0.197 |      0.626 |
+          6 |      0.703  0.949  0.169  0.582 |      0.494  0.952  0.087  0.201 |      0.670 |
+          8 |      0.747  0.953  0.229  0.669 |      0.492  0.952  0.091  0.200 |      0.672 |
+         12 |      0.800  0.952  0.305  0.782 |      0.492  0.952  0.092  0.200 |      0.667 |
+         16 |      0.809  0.952  0.352  0.800 |      0.492  0.952  0.092  0.200 |      0.665 |
+         24 |      0.787  0.952  0.391  0.767 |      0.492  0.952  0.092  0.200 |      0.665 |
+         32 |      0.777  0.952  0.401  0.757 |      0.492  0.952  0.092  0.200 |      0.665 |
+         64 |      0.755  0.952  0.391  0.756 |      0.492  0.952  0.092  0.200 |      0.665 |
+        128 |      0.725  0.952  0.348  0.756 |      0.492  0.952  0.092  0.200 |      0.665 |
+
+  relative cut between 4 and 5 (s = 0.875)
+     Lambda | model: all    max    min    rel |  q_lit: all    max    min    rel |  tempered: all
+       0.25 |      0.093  0.563  0.102  0.001 |      0.083  0.581  0.090  0.003 |      0.146 |
+        0.5 |      0.127  0.602  0.095  0.013 |      0.117  0.625  0.082  0.001 |      0.189 |
+          1 |      0.209  0.673  0.078  0.082 |      0.203  0.699  0.064  0.051 |      0.284 |
+          2 |      0.409  0.787  0.035  0.336 |      0.421  0.809  0.019  0.318 |      0.480 |
+          3 |      0.591  0.859  0.000  0.580 |      0.616  0.879  0.004  0.592 |      0.630 |
+          4 |      0.712  0.907  0.035  0.727 |      0.716  0.922  0.050  0.738 |      0.720 |
+          6 |      0.775  0.949  0.169  0.781 |      0.738  0.952  0.087  0.769 |      0.776 |
+          8 |      0.770  0.953  0.229  0.764 |      0.731  0.952  0.091  0.758 |      0.774 |
+         12 |      0.773  0.952  0.305  0.756 |      0.729  0.952  0.092  0.756 |      0.763 |
+         16 |      0.778  0.952  0.352  0.756 |      0.729  0.952  0.092  0.756 |      0.761 |
+         24 |      0.780  0.952  0.391  0.756 |      0.729  0.952  0.092  0.756 |      0.761 |
+         32 |      0.776  0.952  0.401  0.756 |      0.729  0.952  0.092  0.756 |      0.761 |
+         64 |      0.755  0.952  0.391  0.756 |      0.729  0.952  0.092  0.756 |      0.761 |
+        128 |      0.725  0.952  0.348  0.756 |      0.729  0.952  0.092  0.756 |      0.761 |
+
+================================================================================================================
+7. LAMBDA PER CLASS. The R^2 of a class depends only on that class's own Lambda, so each column
+   is its own scan. H1 predicts the ordering: the more of the threshold's location depends on
+   the unstable resolution delta, the weaker Lambda. max is anchored at the endpoint itself,
+   min at delta/2 above the other endpoint, rel at a context threshold with no atoms at all.
+================================================================================================================
+
+  relative cut between 2 and 3 (s = 0.375)
+     Lambda      max      min      rel
+          2    0.787    0.035    0.052
+          4    0.907    0.035    0.149
+          6    0.949    0.169    0.256
+          8    0.953    0.229    0.375
+         12    0.952    0.305    0.596
+         16    0.952    0.352    0.730
+         24    0.952    0.391    0.799
+         32    0.952    0.401    0.783
+         48    0.952    0.401    0.759
+         64    0.952    0.391    0.756
+         96    0.952    0.361    0.756
+        128    0.952    0.348    0.756
+        256    0.952    0.333    0.756
+        512    0.952    0.325    0.756
+       2048    0.952    0.325    0.756
+    best: max Lambda 8 (R^2 0.953), min Lambda 32 (R^2 0.401), relative Lambda 24 (R^2 0.799)
+
+  relative cut between 3 and 4 (s = 0.625)
+     Lambda      max      min      rel
+          2    0.787    0.035    0.204
+          4    0.907    0.035    0.462
+          6    0.949    0.169    0.582
+          8    0.953    0.229    0.669
+         12    0.952    0.305    0.782
+         16    0.952    0.352    0.800
+         24    0.952    0.391    0.767
+         32    0.952    0.401    0.757
+         48    0.952    0.401    0.756
+         64    0.952    0.391    0.756
+         96    0.952    0.361    0.756
+        128    0.952    0.348    0.756
+        256    0.952    0.333    0.756
+        512    0.952    0.325    0.756
+       2048    0.952    0.325    0.756
+    best: max Lambda 8 (R^2 0.953), min Lambda 32 (R^2 0.401), relative Lambda 16 (R^2 0.800)
+
+  relative cut between 4 and 5 (s = 0.875)
+     Lambda      max      min      rel
+          2    0.787    0.035    0.336
+          4    0.907    0.035    0.727
+          6    0.949    0.169    0.781
+          8    0.953    0.229    0.764
+         12    0.952    0.305    0.756
+         16    0.952    0.352    0.756
+         24    0.952    0.391    0.756
+         32    0.952    0.401    0.756
+         48    0.952    0.401    0.756
+         64    0.952    0.391    0.756
+         96    0.952    0.361    0.756
+        128    0.952    0.348    0.756
+        256    0.952    0.333    0.756
+        512    0.952    0.325    0.756
+       2048    0.952    0.325    0.756
+    best: max Lambda 8 (R^2 0.953), min Lambda 32 (R^2 0.401), relative Lambda 6 (R^2 0.781)
+
+================================================================================================================
+8. CLASS PROFILES AT THE FITTED LAMBDA, against the data, split by image type.
+   Positions 1..5. 'data' is Experiment 3; 'model' is this model; 'q_lit' the literal listener.
+================================================================================================================
+   fitted Lambda: {'absolute_max': 8.0, 'absolute_min': 32.0, 'relative': 16.0}; relative cut between positions 3 and 4 (s = 0.625)
+
+   absolute_max shape     (16 items)
+     prior   0.128  0.019  0.033  0.009  0.811   peak 5   mean position 4.36
+     q_lit   0.000  0.000  0.000  0.000  1.000   peak 5   mean position 5.00
+     model   0.000  0.000  0.000  0.000  1.000   peak 5   mean position 5.00
+     data    0.002  0.006  0.017  0.013  0.900   peak 5   mean position 4.61
+
+   absolute_max artifact  (16 items)
+     prior   0.177  0.119  0.143  0.128  0.432   peak 5   mean position 3.52
+     q_lit   0.002  0.001  0.000  0.000  0.996   peak 5   mean position 4.99
+     model   0.004  0.003  0.002  0.003  0.988   peak 5   mean position 4.97
+     data    0.018  0.011  0.016  0.026  0.929   peak 5   mean position 4.83
+
+   absolute_min shape     (12 items)
+     prior   0.923  0.008  0.036  0.021  0.013   peak 1   mean position 1.19
+     q_lit   0.000  0.102  0.518  0.225  0.155   peak 3   mean position 3.43
+     model   0.000  0.008  0.163  0.262  0.567   peak 5   mean position 4.39
+     data    0.017  0.122  0.301  0.253  0.224   peak 3   mean position 3.29
+
+   absolute_min artifact  (12 items)
+     prior   0.461  0.129  0.171  0.118  0.122   peak 1   mean position 2.31
+     q_lit   0.000  0.267  0.325  0.191  0.217   peak 3   mean position 3.36
+     model   0.000  0.009  0.074  0.273  0.644   peak 5   mean position 4.55
+     data    0.015  0.038  0.111  0.182  0.653   peak 5   mean position 4.42
+
+   relative     shape     (20 items)
+     prior   0.132  0.163  0.410  0.163  0.132   peak 3   mean position 3.00
+     q_lit   0.000  0.000  0.000  0.568  0.432   peak 4   mean position 4.43
+     model   0.000  0.000  0.000  0.109  0.891   peak 5   mean position 4.89
+     data    0.007  0.018  0.049  0.174  0.752   peak 5   mean position 4.65
+
+   relative     artifact  (20 items)
+     prior   0.159  0.233  0.217  0.233  0.159   peak 4   mean position 3.00
+     q_lit   0.000  0.000  0.000  0.645  0.355   peak 4   mean position 4.35
+     model   0.000  0.000  0.000  0.120  0.880   peak 5   mean position 4.88
+     data    0.052  0.026  0.054  0.186  0.681   peak 5   mean position 4.42
+
+================================================================================================================
+9. THE IMAGE-TYPE EFFECT, class by class. Xiang et al. find a credible image-type effect for
+   the MINIMUM class only, in both experiments (Exp. 2: 2.54 [0.54, 4.38]; Exp. 3: 0.99
+   [0.45, 1.54] with a -1.08 [-1.56, -0.59] interaction with scale position), and none for
+   the maximum or relative classes. Here: the shape-minus-artifact difference in the mean
+   scale position, in the data and in the model.
+================================================================================================================
+   class          data shape data artif  data diff  model shape  model artif  model diff  prior diff
+   absolute_max         4.61       4.83      -0.22         5.00         4.97       +0.03       +0.84
+   absolute_min         3.29       4.42      -1.13         4.39         4.55       -0.16       -1.12
+   relative             4.65       4.42      +0.23         4.89         4.88       +0.01       -0.00
+
+================================================================================================================
+10. THE MINIMUM CLASS, WHERE EVERY MODEL IN THEIR PAPER IS WEAKEST. Lambda against the two
+    image types separately, with the literal listener beside the model. The empirical means
+    are 3.29 (shape) and 4.42 (artifact), a difference of -1.13.
+================================================================================================================
+     Lambda |  model shape model artif    diff  R2 shape  R2 artif |  q_lit shape q_lit artif    diff  R2 shape  R2 artif
+        0.5 |        1.43        2.57   -1.14     0.239     0.038 |        1.31        2.51   -1.19     0.232     0.022 |
+          1 |        1.58        2.73   -1.15     0.229     0.017 |        1.47        2.69   -1.22     0.215     0.007 |
+          2 |        1.96        3.01   -1.05     0.187     0.005 |        1.94        3.00   -1.06     0.138     0.006 |
+          3 |        2.40        3.24   -0.84     0.095     0.062 |        2.52        3.20   -0.68     0.006     0.028 |
+          4 |        2.82        3.40   -0.58     0.003     0.127 |        2.98        3.29   -0.32     0.079     0.039 |
+          6 |        3.38        3.60   -0.22     0.108     0.242 |        3.36        3.35   +0.01     0.196     0.043 |
+          8 |        3.63        3.74   -0.11     0.152     0.352 |        3.42        3.36   +0.07     0.210     0.043 |
+         12 |        3.85        3.95   -0.09     0.148     0.542 |        3.43        3.36   +0.08     0.211     0.044 |
+         16 |        4.00        4.12   -0.12     0.127     0.673 |        3.43        3.36   +0.08     0.211     0.044 |
+         24 |        4.23        4.38   -0.15     0.090     0.809 |        3.43        3.36   +0.08     0.211     0.044 |
+         32 |        4.39        4.55   -0.16     0.068     0.862 |        3.43        3.36   +0.08     0.211     0.044 |
+         64 |        4.70        4.84   -0.14     0.036     0.864 |        3.43        3.36   +0.08     0.211     0.044 |
+
+================================================================================================================
+11. HOW MANY UTILITY DIRECTIONS (Appendix C). The same comparison at m = 2 (the model), and at
+    m = 3 and m = 4, which are MEASUREMENTS under the settled m = 2 and not a proposal.
+    Eq. (24)'s limit field is (1/2)(I + B B^T W)(ell_0 - phi_L): only the span(B) component of
+    the prior survives the utility level's amplification, so m bounds how much of a sharply
+    peaked prior can reach the settled belief.
+================================================================================================================
+      m      max      min      rel   overall    min: shape   artif    diff
+      2    0.953    0.401    0.800     0.802          4.39    4.55   -0.16
+      3    0.953    0.401    0.798     0.793          4.50    4.67   -0.17
+      4    0.953    0.125    0.800     0.751          3.99    4.02   -0.04
+    (data: -1.13)
+
+================================================================================================================
+12. THE INTERACTION sections_3-6.md §5.2 CLAIMS: is the difference BETWEEN classes larger in
+    one image condition? Mean scale position per class, and the largest gap between classes.
+    (The outline calls shapes the impoverished-prior condition. The authors report the
+    opposite about the priors themselves: 'artifacts tend to have a less categorical
+    distribution than shapes, in particular for the dimensions corresponding to absolute
+    adjectives', p. 9:19. The prior row below is their elicited prior.)
+================================================================================================================
+    prior
+                    max    min    rel  max - min  max - rel
+      shape        4.36   1.19   3.00       3.16       1.36
+      artifact     3.52   2.31   3.00       1.21       0.52
+    data
+                    max    min    rel  max - min  max - rel
+      shape        4.61   3.29   4.65       1.32      -0.03
+      artifact     4.83   4.42   4.42       0.41       0.42
+    model
+                    max    min    rel  max - min  max - rel
+      shape        5.00   4.39   4.89       0.61       0.11
+      artifact     4.97   4.55   4.88       0.42       0.09

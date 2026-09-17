@@ -856,6 +856,19 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      - restrict comparisons to held entries.
 - **Needed to decide:** the user's choice on both, before any §5.2 number is printed.
 - **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
+- **Finding, 2026-09-17** (record `procedure_records/scale_classes_hypothesis.md`, raised under
+  O13). **The ensemble question has an answer wherever the predicate is tested against an antonym.**
+  In Xiang et al.'s paradigm every item pairs an adjective with its antonym, and in the uttered
+  adjective's own orientation that antonym is the entry's **complement**: for a minimum-standard
+  adjective the partner is *no* = 1 − χ_some, for a maximum-standard one it is the O corner
+  1 − χ_all. So the exposure ensemble is {χ, 1 − χ}, which is one of the two illustrative ensembles
+  already measured on 2026-09-14, and no further choice is needed **for that paradigm**. It says
+  nothing about a predicate heard with no antonym.
+  **The Λ question is sharper, not settled.** Fitting the model to those 96 items gives a different
+  best Λ for each class (max: any Λ ≥ 8; min ≈ 32; rel ≈ 16), and within the minimum class a
+  different best Λ for each image type (shapes ≈ 6, artifacts ≈ 24). Holding Λ at 8 for every
+  configuration is therefore a choice the data argue against, and raising Λ per configuration until
+  the entry is held would erase the one prior effect the data show (F8, F9).
 
 ### O9. Is the O corner {1} as representational as {0}?
 - Status: Open (since 2026-09-15)
@@ -981,6 +994,51 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   and is what B8's mode position criterion is stated against.
 - **Depends on it:** nothing computed — the two already evaluate to the same mask, so this is naming
   and duplication, not a result.
+
+### O13. Does lexical strength follow the stability of the predicate's atomicity?
+- Status: Open (since 2026-09-17)
+- Decided by: not decided. Raised by the **user**, as a hypothesis to be checked before it is
+  adopted: "1. scalar expressions with unstable atomicity are associated with weaker lexical
+  strength; 2. open-scale adjectives behave similar to *some*; complete scale adjectives behave
+  similar to endpoint(s)+*some*." Record: `procedure_records/scale_classes_hypothesis.md`.
+- **What it would change.** Λ and θ_L are two independently fixed quantities of Text cell 3 §3
+  (A5 gives θ_L its denotation through n; §3 item 6 fixes Λ = 8 "if not said otherwise"). H1 makes
+  Λ a **function of how stably the predicate fixes** n, or δ in the gradable case of Eq. (A6). That
+  is a new dependency between two fixed quantities, and it would give the Λ axis of the Λ×α plane a
+  linguistic reading it does not now have: a position on it would be a property of the expression.
+- **H2 needs no new machinery.** In each adjective's own orientation Eq. (A1) already supplies the
+  three entries: maximum-standard absolute = *all*, minimum-standard absolute = *some*, and the
+  antonym the expression is paired with is that entry's complement (for *some* it is *no*, for
+  *all* it is Appendix C §4's O corner). A relative adjective needs one thing the model does not
+  have: a cut at a context threshold t that is neither endpoint nor δ/2, so **t would be a second
+  quantity beside θ_L**, and Appendix A's identification argument (θ_L A W X(θ_L) = I, "θ_L enters
+  twice") is stated for a θ_L that is both the gain and the cut. That is the structural cost of H2.
+- **What is measured** (record F1-F13, `audits/2026-09-17-scale-classes/`). Instantiating the five
+  scale positions of Xiang, Kennedy, Xu & Leffel (2022) as the five Voronoi cells of n = 4:
+  1. **H2's class-to-entry map is the one their data show**, class by class (F2).
+  2. On their own 96 items with their own elicited priors, the model's posterior-degree R² is 0.81
+     overall against their LG 0.78 and QF 0.82, and by class 0.95 / 0.40 / 0.80 (max / min / rel)
+     against LG .94/.55/.69 and QF .97/.58/.78 (F3, F4). The literal listener alone gives
+     .95/.09/.20, so the utility level is what earns the fit off the endpoint (F5).
+  3. **H1's ordering is supported in the form "a finite Λ is required".** The maximum class's fit
+     is flat from Λ = 8 to Λ = 2048; the minimum class peaks at Λ ≈ 32 and the relative class at
+     Λ ≈ 16, both falling away above (F6).
+  4. **H1 in a within-class form is what the one credible image-type effect asks for.** The model
+     puts that effect in the minimum class and nowhere else, as the data do, but at one seventh of
+     its size, and no single Λ fits both halves of that class: shapes want Λ ≈ 6, artifacts Λ ≈ 24
+     (F8, F9). m = 3 and m = 4 do not help.
+  5. What the model does not reproduce: the minimum class moves the belief up from the prior by the
+     same ~2.1 positions in both conditions, and at fixed θ\* the model moves it to a place, not by
+     a displacement (F10).
+- **Needed to decide:** the user's, on three things. (a) Whether Λ becomes a function of anything,
+  or stays a fixed quantity with the classes distinguished by their entries alone. (b) If it does,
+  what fixes it — the record shows the data want it to vary with the object's familiarity as well as
+  with the expression, which is a context dependence Λ does not now have. (c) Whether a relative
+  adjective's cut t enters the model at all, which is what H2's open-scale half requires.
+- **Depends on it:** `sections_3-6.md` §5.2 and §5.4, `background_sections.md` §1.7, revisions.md
+  Q7; the reading of the Λ axis in Text cell 6 and Code Cell 4; A5's θ_L and §3 item 6's Λ = 8.
+- Evidence: `audits/2026-09-17-scale-classes/output.txt` and `xiang_items_output.txt`. Class (e)
+  under `agent.md` §3.3 until a cell prints it (C6); no cell does.
 
 ---
 
