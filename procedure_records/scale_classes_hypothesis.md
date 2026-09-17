@@ -189,3 +189,141 @@ contribution). The parity result about κ is untouched.
 - Every number here is class (e) under `agent.md` §3.3 until a cell prints it (C6). Whether any of
   it should reach a cell is the user's call, and it would need a decision about a five-position
   configuration the notebooks do not currently contain.
+
+---
+
+# The change this record now covers: §5.2 rewritten, and Appendix F
+
+## 7. The user's instruction, verbatim (2026-09-17, second message)
+
+> Here's my take: for this section, state both H1 and H2, then report where the model's prediction
+> match Xiang's data as well as where it doesn't. Refrain from making any claims on the nature of
+> this mismatch. Every data quoted in this section must be reproducible. Add a new appendix F to
+> main.ipynb printing the model results quoted in this section. Now update revisions.md and
+> work-process documentations listing all the tasks that need to be done for this change. Do not
+> start the edits and implementations yet.
+
+Read with `agent.md` §3.1 and C6: the section states the two hypotheses, reports match and mismatch,
+and stops there; **no sentence characterizes what the mismatch is due to**, which rules out the
+mechanism sentences §5.2 now has and also rules out F9's and F10's readings, which stay in this
+record. "Every data quoted must be reproducible" is C6 made specific to this section: a number in
+§5.2 exists only if Code Cell F prints it.
+
+**Why F and not E.** `appendix_E.ipynb` holds Appendix E. The next free letter in `main.ipynb` is F,
+and the user named it.
+
+## 8. What must be settled before any code (blocking)
+
+None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed with what it changes.
+
+- **S-1. Is Λ fitted, and if so what class of quantity is a fitted Λ?** The section's Λ numbers come
+  from choosing, per class, the Λ that best matches their data. Nothing in this project is fitted;
+  the four classes of `agent.md` §3.3 have no room for a fitted parameter, so a quoted best-fit Λ is
+  class (e) as things stand. Options: **(i)** quote the whole Λ scan and no single value, which
+  keeps §5.2's standing "no fit is offered" sentence true and still carries F6's result (a finite Λ
+  is required by two classes and not by the third); **(ii)** declare a fitted quantity as a fifth
+  class in `agent.md` §3.3 and record each fitted Λ under it; **(iii)** fix Λ = 8 for every class,
+  which loses F6 and most of F4. The agent's reading is that (i) is the only option that leaves the
+  rest of the paper's standards intact, but the choice is the user's.
+- **S-2. Does the relative class enter at all?** A relative adjective's cut *t* is neither an
+  endpoint nor δ/2, so it is a quantity of the entry that Text cell 3 §2's inventory does not have,
+  and Appendix A's identification argument is written for a θ_L that is both the gain of Eq. (A2)
+  and the cut of Eq. (A1). Options: declare *t* (which opens A5 and Appendix A's "θ_L enters
+  twice"); or restrict §5.2 and Appendix F to the two absolute classes, losing H2's open-scale half
+  and the .80 that is the model's best class after the maximum one.
+- **S-3. May their data live in the repository?** R² is a statistic of the model **against their
+  data**, so Code Cell F cannot print it unless the data are present. Options: **(i)** commit the
+  34 KB derived aggregate (96 items × 5 positions: elicited prior, Experiment 3 posterior,
+  Experiment 2 judgment, class) with a README giving provenance, licence (CC-BY) and sha256, and
+  have Code Cell F read it; **(ii)** embed the 480 numbers in the cell; **(iii)** quote no R² and
+  restrict §5.2 to profile comparisons, which are still model-versus-data but need only the six
+  class profiles. The agent's reading is (i).
+- **S-4. n = 4.** Appendix F respawns the network at n = 4 so that Eq. (A5)'s cells are their five
+  scale positions. This is a setting of an existing quantity (class (a)) and needs a decisions.md
+  entry saying why 4 and that the default n = 10 is untouched. Confirm.
+- **S-5. May a cell print a published number?** The comparison quotes their LG/QF/ST/hybrid R²
+  values. Printing a literature value inside a cell is new; the alternative is to cite them in the
+  markdown and print only ours. Confirm which.
+- **S-6. The word budget.** §5.2 is allocated 200 words (revisions.md §3). Stating H1 and H2,
+  the instantiation, the matches and the mismatches will not fit. Estimate 340–380. Either §5
+  absorbs it (from §5.1's 350, the only section with slack), or the 3,000 total rises. The user's
+  call.
+- **S-7. Does §5.2 keep its parity paragraph?** The κ parity result survives (2026-09-14 finding 6)
+  but belongs to the old prediction, not to H1/H2. Keep, move to Appendix C, or drop.
+
+## 9. Tasks, in order
+
+Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are answered.
+
+- [ ] **T0. Checkpoint.** `git status` clean, record `git rev-parse --short HEAD`. The tree is clean
+      at `acabb7e` as this list is written.
+- [ ] **T1. The data file** (needs S-3). Add the derived aggregate under a new `data/xiang_2022/`
+      with `README.md` giving the OSF node, the four source files, the derivation, the licence and a
+      sha256 per file; add the derivation script beside it. Acceptance: the README's hashes match,
+      and a fresh read of the file reproduces the six class profiles in §5 F1 above.
+- [ ] **T2. Code Cell F** (needs S-1 to S-5). A new code cell printing every number §5.2 will quote,
+      and nothing else. Its blocks:
+      1. **Configuration and self-checks.** n = 4, θ_L = log 7, the five cells and their boundaries;
+         the three entries of Eq. (A1) in the adjective's own orientation and the complement that
+         each item's antonym supplies; that the audit's closed form equals `closed_form_fixed_point`
+         (expect 0.0); that the closed-form θ\* equals a scan (expect ~6e-06) and returns −28.4375
+         for the default n = 10 inventory; that a uniform five-cell prior pushes forward to
+         [0.193, 0.200, 0.214, 0.200, 0.193]; that the five cells partition the grid to 1e-10.
+      2. **The class profiles**, prior / q_lit / model / data, by class and image type, with the peak
+         and the mean scale position.
+      3. **R²** by class and overall, for the model and for q_lit, with their published values beside
+         (subject to S-5).
+      4. **The Λ scan per class**, wide enough to show that the maximum class is flat to Λ = 2048
+         and that the other two turn over.
+      5. **The image-type difference** per class, in prior, data and model.
+      6. **The between-class gaps** by image condition.
+      7. **The mismatch quantities**: the minimum class's R², the −0.16 against −1.13, the two
+         one-sided Λ optima, and the displacement from prior to posterior in both conditions.
+      Constraints: every helper stays local to this cell, so `code cell 1` is untouched and coupling
+      9 does not fire; no figure, so the figure baseline is unchanged; any wall-clock line goes
+      behind `cost:` (coupling 3). Acceptance: the cell prints every number the drafted §5.2 quotes,
+      and no number in §5.2 is absent from it.
+- [ ] **T3. Appendix F markdown cell.** Heading with anchor `appf`, the `codef` anchor at its end.
+      Content: H1 and H2 as stated by the user; the instantiation (five positions = five Voronoi
+      cells at n = 4, the three entries, the complement ensemble); what is measured and how R² is
+      computed; then match and mismatch, reported and not explained. Displays, if any, numbered F1,
+      F2 … (appendix letters restart, so the body's (1)–(41) is untouched and no renumbering
+      question arises). No sentence about what the mismatch is due to.
+- [ ] **T4. Structure.** Insert the two cells after Code Cell D (index 21), before References, which
+      becomes index 24; cell count 23 → 25. Regenerate the ToC (cell 0) with rows for 22 and 23 and
+      the moved References row. Acceptance: every ToC link resolves and every index in it is right.
+- [ ] **T5. References.** Add Xiang, Kennedy, Xu & Leffel (2022) and whichever of Kennedy (2007) and
+      Leffel, Xiang & Kennedy (2017) the drafted text cites, APA 7th, in alphabetical position. The
+      pending Leffel-versus-Xiang check (`background_sections.md` line 612) is decided here.
+- [ ] **T6. Couplings.** Confirm none fires: E3 diffs Code Cells 2 and 2b only; `code cell 1` is
+      unchanged so coupling 9 is quiet; no new printing call in Code Cell 2 or 2b, so coupling 7 is
+      quiet. Check whether `appendix_E.ipynb` §E.3 ("claims in main restated") needs a line.
+- [ ] **T7. Execute** main, then appendix_E, by `agent.md` §5.1. Acceptance: main 0 errors,
+      8 figures, 14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS on both cells. Record the
+      new runtime. Diff every other cell's stored output against T0: only the two new cells may
+      differ.
+- [ ] **T8. agent.md.** §1's `main.ipynb` cell map (23 → 25 cells, the new rows, References at 24)
+      and §5.1's baseline. §2 needs no new coupling if T6 holds; if Code Cell F reads the data file,
+      add a coupling for that path.
+- [ ] **T9. decisions.md.** New entries or amendments for whatever S-1 to S-5 settle: the n = 4
+      configuration; the treatment of Λ; *t*, if it enters; the data file and its provenance;
+      O13's status. Quantity-trace (register E) entries for every quantity Code Cell F prints, each
+      assigned a class under §3.3. O8 gains the pointer.
+- [ ] **T10. §5.2 prose**, written against the executed output, not before (needs S-6, S-7). Also
+      the §5.2 row of the word table in `sections_3-6.md` lines 81–103 and its scope-tier row at
+      line 60.
+- [ ] **T11. Background §1.7.** The prior-manipulation bullet (F12), and the Q3b sentence softened
+      per the 2026-09-14 entry. `background_sections.md` line numbers are one lower than
+      revisions.md cites, after R8.
+- [ ] **T12. revisions.md.** Mark the §5.2 entry and Q7 closed by this change; update §8's source
+      table so the numbers point at Code Cell F rather than at the audit; clear the audit from the
+      class (e) list.
+- [ ] **T13. Commit**, one logical change per commit, hashes recorded on each task line above.
+
+## 10. Prose sites, to be written only after T2 and T7
+
+- `sections_3-6.md` §5.2 (lines 436–477): the rewrite.
+- `sections_3-6.md` line 60 (scope tier) and the word table (lines 81–103).
+- `background_sections.md` §1.7.
+- Anything in §5.4, §5.6 or §6 item 4 that leans on the old §5.2 prediction (revisions.md lists
+  them under the 2026-09-14 entry).

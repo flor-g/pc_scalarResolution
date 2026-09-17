@@ -95,6 +95,7 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R13 | **The V shape is discussed in the paper** (Q2). | user (2026-09-13) |
 | R14 | **Q2, option (a).** §4.5 reports the V under both read-outs as a result: the shared right arm, the left arm that exists only under q, and the 20 cells where the conjunctions part. §5.1 does not use the V, and its lines 329–338 go. **No evidence for a missing level is derived from the V.** Budget: §4.5 240, §5.1 350, §4.3 70. The code edits that let the prose quote these numbers are open tasks in `procedure_records/delta_criteria_printing.md`. | user (2026-09-13) |
 | R15 | **Q6, option (i).** The Cremers parallel stays with q, and item 1's sentence is corrected. Under q the positive shift is the tempering. Under the delta read-out the mode's upward movement is the utility level's, and is not a probability of *all*. **Why a similar movement emerges under the delta read-out is to be investigated** (open task in the same record). | user (2026-09-13) |
+| R16 | **Q7.** §5.2 states H1 (expressions with unstable atomicity carry weaker lexical strength) and H2 (open-scale adjectives behave like *some*; complete-scale adjectives like endpoint(s) + *some*), then reports where the model's prediction matches Xiang et al.'s data and where it does not, **making no claim about the nature of the mismatch**. Every number it quotes is printed by a new Appendix F and Code Cell F in `main.ipynb`. Tasks and blocking decisions: `procedure_records/scale_classes_hypothesis.md` §§7–10. | user (2026-09-17) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
 commitment), A14 (conventionalized), A16 and B7 (q is a comparison read-out; the delta is the
@@ -160,7 +161,7 @@ Two further findings that change the outline as much as the headline does:
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | 100 | The evidence item 2 rests on |
 | **5. Discussion** | **705** | **980** | |
 | 5.1 What an alternatives level would have to supply | 390 | 350 | Complexity-led; the q-normalization link added, the Cremers bullet moved out (R7), lines 329–338 removed (R14) |
-| 5.2 Scale structure: a second prediction | 200 | 200 | |
+| 5.2 Scale structure: a second prediction | 200 | 200 | **Under revision (S-6, 2026-09-17): the rewrite is estimated at 340–380, and where the difference comes from is undecided.** |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | 170 | Item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | 120 | Item 3 |
 | 5.5 Limits (was 5.3) | 65 | 80 | Convergence of θ_u; conditioning |
@@ -488,6 +489,34 @@ answers half of O8 for this paradigm.
 - **Nothing is printed by a cell**, so every number here is class (e) under `agent.md` §3.3. Quoting
   any of it needs a five-position configuration the notebooks do not contain.
 
+**2026-09-17, the change the user directed (R16).** §5.2 is to **state both H1 and H2, then report
+where the model's prediction matches Xiang et al.'s data and where it does not, making no claim
+about the nature of the mismatch**, with every quoted number reproducible — which under C6 means
+printed by a new **Appendix F** and **Code Cell F** in `main.ipynb`. The task list, the acceptance
+test for each task, and the seven decisions that block the first of them are in
+`procedure_records/scale_classes_hypothesis.md` §§7–10. In outline:
+
+- **Blocking (S-1 to S-7, the user's).** Whether a fitted Λ may be quoted at all and what class of
+  quantity it would be (nothing in this project is fitted, so a best-fit Λ is class (e) as things
+  stand); whether the relative class enters, which needs a cut *t* beside θ_L and touches Appendix
+  A's identification argument; whether their data may sit in the repository, without which no R²
+  can be printed; n = 4; whether a cell may print a published number; §5.2's word budget; and
+  whether the κ parity paragraph stays.
+- **Tasks (T0–T13).** Checkpoint; the data file; Code Cell F; the Appendix F markdown cell;
+  structure and ToC; references; the coupling check; execution; `agent.md`; `decisions.md`; the
+  §5.2 prose; background §1.7; this file; commits.
+- **What this closes and what it cancels.** Q7 is answered on three of its four points by the
+  instruction itself, and the fourth (the empirical-fit paragraph) becomes T10. The 2026-09-14 site
+  changes stand: the magnitudes, "monotonically", the sharp-prior sentence and the "(… at θ_u\*)"
+  parenthetical go. **The mechanism paragraph goes with them**, since a mechanism *for the mismatch*
+  is what the instruction rules out; a mechanism for what the model does predict is still allowed,
+  and is where the κ parity paragraph would sit if S-7 keeps it.
+- **Word budget.** §5.2 is allocated 200 words in §3 above. The rewrite is estimated at 340–380.
+  Either §5 absorbs it — §5.1's 350 is the only line with slack — or the 3,000 total rises. Not the
+  agent's call (S-6).
+- **Not started.** No notebook cell, no outline line and no `agent.md` row has been touched for this
+  change.
+
 ### §5.3 and §5.4 (new)
 
 Content in §5 below, items 2 and 3.
@@ -748,7 +777,7 @@ table's commitment 3 row at line 391).
 
 ## 7. Questions for the user
 
-**Resolved:** Q1 as R7, Q3 as R8, Q4 as R9, Q5 as R10, Q2 as R14, Q6 as R15.
+**Resolved:** Q1 as R7, Q3 as R8, Q4 as R9, Q5 as R10, Q2 as R14, Q6 as R15, Q7 as R16.
 
 ### Q2. The "shape of absence" argument, the delta criteria, and the V (resolved, R14)
 
@@ -922,7 +951,7 @@ projection "collapses a contrast between exclusion sets". The cost sense keeps "
 unchanged, so §5.3 may use the word in that sense. It still says, per R10, that a realizable θ_u is
 located by the evaluator.
 
-### Q7. How to rebuild §5.2's prediction (open, new, 2026-09-14)
+### Q7. How to rebuild §5.2's prediction (answered by the user 2026-09-17 as R16; see the §5.2 entry in §4 and `procedure_records/scale_classes_hypothesis.md` §§7–10)
 
 The re-examination is §4's §5.2 entry. It leaves four choices, all interpretive and all the user's:
 - **What the prediction is stated on.** E_q[s], as §5.2 does now; the delta read-out's mode; or both,

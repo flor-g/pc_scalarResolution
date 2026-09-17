@@ -1039,6 +1039,17 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   Q7; the reading of the Λ axis in Text cell 6 and Code Cell 4; A5's θ_L and §3 item 6's Λ = 8.
 - Evidence: `audits/2026-09-17-scale-classes/output.txt` and `xiang_items_output.txt`. Class (e)
   under `agent.md` §3.3 until a cell prints it (C6); no cell does.
+- **Finding, 2026-09-17 (later the same day).** The user has directed how §5.2 presents this, which
+  narrows O13 without closing it: "state both H1 and H2, then report where the model's prediction
+  match Xiang's data as well as where it doesn't. Refrain from making any claims on the nature of
+  this mismatch. Every data quoted in this section must be reproducible. Add a new appendix F to
+  main.ipynb printing the model results quoted in this section." So **the paper states H1 and H2 as
+  the hypothesis under test and reports the comparison; whether the model adopts a Λ that varies
+  with atomicity is still open here**, and the difference matters: a variable Λ would be a change to
+  Text cell 3 §3, while a scanned Λ is a control (B4). Seven decisions block the implementation,
+  listed as S-1 to S-7 in `procedure_records/scale_classes_hypothesis.md` §8; S-1 (whether a fitted
+  Λ may be quoted, and what class of quantity it is) and S-2 (whether the relative cut *t* enters
+  the model) are the two that reach back into this entry.
 
 ---
 
