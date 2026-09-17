@@ -220,6 +220,23 @@ to Λ = 2048; min peaks at 0.401 at Λ = 32 and falls to 0.325. Shape minus arti
 position: prior +0.84 / −1.12, data −0.22 / −1.13, model +0.03 / −0.16. The gap between the two
 classes: data +1.32 (shape) against +0.41 (artifact), model +0.61 against +0.42.
 
+**F18 (2026-09-17, for O14). The parity of the two entries holds only while one θ fixes both ends.**
+κ for *some* at n = 4 is (tilt −1.33667, width +0.56936), fixed by the 0 boundary. Moving the 1
+boundary alone, with the 0 boundary held:
+
+| θ_A | cut in s | tilt | width | tilt − tilt(*some*) | width + width(*some*) |
+|---:|---:|---:|---:|---:|---:|
+| 0.50 θ_L | 0.7257 | −1.45665 | −0.31963 | −0.11999 | +0.24973 |
+| 0.80 θ_L | 0.8259 | −1.40626 | −0.45378 | −0.06959 | +0.11557 |
+| **θ_L** | 0.8750 | −1.33667 | −0.56936 | **+0.00000** | **+0.00000** |
+| 1.25 θ_L | 0.9193 | −1.24788 | −0.66040 | +0.08879 | −0.09105 |
+| 2.00 θ_L | 0.9800 | −0.86631 | −0.72692 | +0.47035 | −0.15757 |
+
+The identical tilts and cancelling widths are a consequence of θ_A = θ_L, not of anything else, so
+the parity paragraph S-7 keeps is exactly the statement O14's instinct doubts. **This measures what
+the symmetry rests on; it does not test the instinct, and nothing here says the symmetry accounts
+for the mismatch (R16).**
+
 ## 6. What is open
 
 - **O13** (new): whether H1 and H2 are adopted, and if so what fixes Λ. Nothing was changed.
@@ -291,6 +308,12 @@ None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed
   > implemented yet, so my take is that we point to this intinct and leave it as an instinct. Thus,
   > we do not try to model the relative class with our current implementation.
 
+  And the clarification that followed, verbatim:
+
+  > I need to clarify that theta_L is the lexical level's property, and only theta_A is meant to be
+  > the alternative level's property. The lexical level infers the boundary of 0, and the
+  > alternative level infers the boundary of 1.
+
   Recorded as `decisions.md` **O14**. What follows for this change:
   - **No cut *t* enters the model.** Appendix A's identification argument and its "θ_L enters twice"
     paragraph are untouched, and the objection that motivated S-2 does not arise.
@@ -299,8 +322,9 @@ None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed
     class's 0.80, since that number comes from a configuration the model does not have.
   - **The instinct is stated as an instinct**, once, with no promise attached and no claim that it
     accounts for the mismatch. Placement: the agent recommends the close of §5.2, pointing back to
-    §5.1 where the alternatives level is proposed, since θ_L and θ_A would be that level's
-    quantities. Confirm the placement at T10.
+    §5.1 where an alternatives level is proposed, since θ_A is the quantity that would need a level
+    to carry it. Confirm the placement at T10. §5.1 itself gains nothing: naming θ_A among what the
+    level "would have to supply" would turn the instinct into a promise.
   - **The parity paragraph is where the symmetry the instinct doubts is actually stated**, which is
     why S-7 keeping it matters more under this scope than it did before.
 

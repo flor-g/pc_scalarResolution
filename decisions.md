@@ -1053,7 +1053,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   fitted for H1 and nowhere else, and *t* does not enter — the relative class is not modelled, so
   H2's open-scale half is stated and left untested (**O14**).
 
-### O14. Are the two endpoints symmetric, or do they need θ_L and θ_A?
+### O14. Are the two endpoints symmetric, or does the 1 boundary belong to another level?
 - Status: Open (since 2026-09-17). **What is settled** is only how the paper treats it: §5.2 points
   to it as an instinct, once, promising nothing, and the relative class is not modelled with the
   current implementation (record `procedure_records/scale_classes_hypothesis.md` §8, S-2).
@@ -1068,22 +1068,37 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   > However, we want to avoid making too many promises in the paper over things we haven't
   > implemented yet, so my take is that we point to this intinct and leave it as an instinct.
 
-- **What the model does now.** One θ_L fixes both ends: Eq. (A1) sends *no* to {ζ > −θ_L} and *all*
-  to {ζ < θ_L}, Eq. (A5) gives θ_L its denotation through n, and Eq. (A2) makes the same θ_L the
-  gain of g_y. The symmetry is exact and measurable: at n = 4 the entries for *all* and *some* have
-  **identical tilt loadings and exactly opposite width loadings** (difference 0.0e+00, sum 0.0e+00),
-  so at the utility level the two differ in the even coordinate alone. O9 records the neighbouring
-  fact that the whole construction is equivariant under the reflection ζ → −ζ, with μ_u the single
-  asymmetry.
-- **What separating them would change.** Two thresholds where there is one: A5's denotation (which n
-  would belong to which θ), Appendix A's identification argument, which is written for a θ_L that is
-  both the cut of Eq. (A1) and the gain of Eq. (A2); Appendix C's count, which is a count of
-  thresholds (C2); and the alternatives level of §5.1, which is where the pair would live.
+- **Which level each boundary belongs to** (the user's clarification, 2026-09-17): "theta_L is the
+  lexical level's property, and only theta_A is meant to be the alternative level's property. The
+  lexical level infers the boundary of 0, and the alternative level infers the boundary of 1." So
+  the pair does **not** live at one level: θ_L stays where it is, and only the 1 boundary moves.
+- **What the model does now.** One θ_L fixes both ends: Eq. (A1) sends *no* to {ζ > −θ_L}, *some* to
+  {ζ ≤ −θ_L} and *all* to {ζ < θ_L}. The first two are the 0 boundary and would be untouched; it is
+  the third that would read {ζ < θ_A}. Eq. (A5) already gives n its denotation through the **0**
+  boundary, σ(−θ_L) = 1/2n, so n stays with the lexical level and θ_A is what is unconstrained.
+  Eq. (A2) makes θ_L the gain of g_y as well as a cut, which is what identifies it (Appendix A,
+  *θ_L enters twice*); θ_A would need an identification of its own.
+- **The symmetry is exact, and it holds only because one θ does both ends.** At n = 4 the entries
+  for *all* and *some* have identical tilt loadings and exactly opposite width loadings (difference
+  0.0e+00, sum 0.0e+00), so at the utility level the two differ in the even coordinate alone. Moving
+  the 1 boundary alone destroys it: at θ_A = 1.25 θ_L the tilts differ by 0.089 and the widths no
+  longer cancel (+0.091); at θ_A = 2 θ_L, 0.470 and −0.158. O9 records the neighbouring fact that
+  the whole construction is equivariant under ζ → −ζ, with μ_u the single asymmetry.
+- **What separating them would change.** Appendix A's sentence that Eq. (A1) excludes the states
+  outside each anchored cell "symmetrically at both ends"; the identification argument, which would
+  have to be given for θ_A too; Appendix C's count, which counts thresholds (C2) and would now count
+  two that need not be symmetric, so Appendix C §5's parity table is rebuilt; O11 and O12, since the
+  all-region R = {ζ ≥ θ_L} and the cell of *all* would both become {ζ ≥ θ_A} and their identity
+  needs rechecking; and §5.1, which is where an alternatives level able to carry θ_A is proposed.
+- **Which of §5.2's two classes sits on which boundary**, as Eq. (A1) already stands: the minimum
+  class is *some*, fixed by the **0** boundary, and the maximum class is *all*, fixed by the **1**
+  boundary. That is bookkeeping about the present model, not a claim about the instinct.
 - **Needed to decide:** nothing now. This is recorded so the instinct is not lost and is not
   overclaimed. Nothing in the notebooks depends on it, and no result here rests on it.
 - **Depends on it:** `sections_3-6.md` §5.2's closing sentence and its pointer to §5.1. Nothing
   computed.
-- Evidence: `audits/2026-09-17-scale-classes/xiang_items_output.txt` block 16(e) for the symmetry;
+- Evidence: `audits/2026-09-17-scale-classes/xiang_items_output.txt` block 16(e) for the symmetry,
+  and `procedure_records/scale_classes_hypothesis.md` F18 for what breaks it;
   the mismatch it is an instinct about is F8 to F10 and F17 of the record. **No measurement here
   tests the instinct**, and §5.2 does not say that it accounts for the mismatch (R16).
 

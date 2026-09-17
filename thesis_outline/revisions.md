@@ -96,7 +96,7 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R14 | **Q2, option (a).** §4.5 reports the V under both read-outs as a result: the shared right arm, the left arm that exists only under q, and the 20 cells where the conjunctions part. §5.1 does not use the V, and its lines 329–338 go. **No evidence for a missing level is derived from the V.** Budget: §4.5 240, §5.1 350, §4.3 70. The code edits that let the prose quote these numbers are open tasks in `procedure_records/delta_criteria_printing.md`. | user (2026-09-13) |
 | R15 | **Q6, option (i).** The Cremers parallel stays with q, and item 1's sentence is corrected. Under q the positive shift is the tempering. Under the delta read-out the mode's upward movement is the utility level's, and is not a probability of *all*. **Why a similar movement emerges under the delta read-out is to be investigated** (open task in the same record). | user (2026-09-13) |
 | R16 | **Q7.** §5.2 states H1 (expressions with unstable atomicity carry weaker lexical strength) and H2 (open-scale adjectives behave like *some*; complete-scale adjectives like endpoint(s) + *some*), then reports where the model's prediction matches Xiang et al.'s data and where it does not, **making no claim about the nature of the mismatch**. Every number it quotes is printed by a new Appendix F and Code Cell F in `main.ipynb`. Tasks and blocking decisions: `procedure_records/scale_classes_hypothesis.md` §§7–10. | user (2026-09-17) |
-| R17 | **S-2 and S-7.** §5.2 models the two **absolute** classes only. The relative class is not modelled, so no context cut *t* enters and Appendix A is untouched; H2 is stated in full and its open-scale half is left untested. The κ parity paragraph stays in §5.2, restated at n = 4, where it states the symmetry the user's instinct doubts. That instinct — that the two endpoints are not symmetric and would separate into θ_L and θ_A under the alternatives level — is stated once, as an instinct, with no promise and no claim that it accounts for the mismatch (`decisions.md` **O14**). | user (2026-09-17) |
+| R17 | **S-2 and S-7.** §5.2 models the two **absolute** classes only. The relative class is not modelled, so no context cut *t* enters and Appendix A is untouched; H2 is stated in full and its open-scale half is left untested. The κ parity paragraph stays in §5.2, restated at n = 4, where it states the symmetry the user's instinct doubts. That instinct — that the two endpoints are not symmetric, the **0** boundary being the lexical level's θ_L and the **1** boundary an alternatives level's θ_A — is stated once, as an instinct, with no promise and no claim that it accounts for the mismatch (`decisions.md` **O14**). | user (2026-09-17) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
 commitment), A14 (conventionalized), A16 and B7 (q is a comparison read-out; the delta is the
@@ -525,9 +525,14 @@ test for each task, and the seven decisions that block the first of them are in
   in the even coordinate alone. The old ratios (0.219, 0.633, 1.07) go with the old prediction. This
   is also where the symmetry O14's instinct doubts is stated, which is why it earns its place.
 - **One sentence of instinct** (O14), at the close, pointing back to §5.1: the two endpoints may not
-  be symmetric, and under the alternatives level they would separate into θ_L and θ_A. Stated as an
-  instinct, promising nothing, and **not** offered as an account of the mismatch — R16 still holds
-  over the rest of the section.
+  be symmetric. **θ_L is the lexical level's and stays there, inferring the boundary of 0; only the
+  boundary of 1, θ_A, would belong to an alternatives level.** Stated as an instinct, promising
+  nothing, and **not** offered as an account of the mismatch — R16 still holds over the rest of the
+  section. §5.1 is not altered: naming θ_A among what the level "would have to supply" would turn
+  the instinct into a promise.
+- **Which boundary each modelled class sits on**, as Eq. (A1) already stands: the minimum class is
+  *some*, fixed by the 0 boundary; the maximum class is *all*, fixed by the 1 boundary. §5.2 may say
+  that much, since it describes the present model. It draws nothing from it.
 - **Not started.** No notebook cell, no outline line and no `agent.md` row has been touched for this
   change.
 
