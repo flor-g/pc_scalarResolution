@@ -912,6 +912,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   3. **n = 2 is not degenerate.** χ_some ≠ χ_all, the two thresholds stay distinct, and 19 grid
      nodes lie strictly between them. Degeneracy is at n = 1, where θ_L = 0 and the entries for
      *some* and *all* coincide; the constructor already rejects it.
+     **Finding, 2026-09-17 (under O14):** that degeneracy is a property of the **single θ**, not of
+     n. Eq. (A1) built with the 0 boundary at −θ_L and the 1 boundary at an independent θ_A keeps
+     χ_some ≠ χ_all and keeps the Gram rank at 3, 2 modulo the constant, at n = 1 (record F19). The
+     constructor's rejection of n < 2 is right for the model as it stands and would not be for a
+     separated pair.
   4. **But the reported criteria cross with n**, which is the substantive answer: see the dated
      finding under O1.
 - **Needed to decide:** O1 first. Until what fixes δ is settled, every criterion reading carries an
@@ -1075,7 +1080,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - **What the model does now.** One θ_L fixes both ends: Eq. (A1) sends *no* to {ζ > −θ_L}, *some* to
   {ζ ≤ −θ_L} and *all* to {ζ < θ_L}. The first two are the 0 boundary and would be untouched; it is
   the third that would read {ζ < θ_A}. Eq. (A5) already gives n its denotation through the **0**
-  boundary, σ(−θ_L) = 1/2n, so n stays with the lexical level and θ_A is what is unconstrained.
+  boundary, σ(−θ_L) = 1/2n, and the user confirms n stays with θ_L: "As for n, we my instinct is
+  that it is still dependent on theta_L." **What the separation would represent is t**, the relative
+  class's midpoint — "the midpoint t of the relative class can be properly represented by one of
+  theta_L or theta_A" — the quantity S-2 found nothing in the present model fixes.
   Eq. (A2) makes θ_L the gain of g_y as well as a cut, which is what identifies it (Appendix A,
   *θ_L enters twice*); θ_A would need an identification of its own.
 - **The symmetry is exact, and it holds only because one θ does both ends.** At n = 4 the entries
@@ -1093,6 +1101,14 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - **Which of §5.2's two classes sits on which boundary**, as Eq. (A1) already stands: the minimum
   class is *some*, fixed by the **0** boundary, and the maximum class is *all*, fixed by the **1**
   boundary. That is bookkeeping about the present model, not a claim about the instinct.
+- **n = 1.** The user adds: "since an architecture with an alternatives level has different
+  dynamics, it is well possible that n=1 no longer causes degeneracy." Measured (record F19):
+  **representationally this already holds.** O10's degeneracy at n = 1 is a property of the single
+  θ, not of n — with the boundaries separated, θ_L = 0 leaves χ_some ≠ χ_all and the Gram rank stays
+  3, 2 modulo the constant, so Eq. (C2) still counts two thresholds. The dynamical half is untested
+  and stays an instinct. One obstacle the rank test does not reach: θ_L is also the gain of
+  Eq. (A2), so θ_L = 0 zeroes the word-form prediction unless the separation also decides which θ
+  gains which row of A.
 - **Needed to decide:** nothing now. This is recorded so the instinct is not lost and is not
   overclaimed. Nothing in the notebooks depends on it, and no result here rests on it.
 - **Depends on it:** `sections_3-6.md` §5.2's closing sentence and its pointer to §5.1. Nothing
