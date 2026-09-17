@@ -85,9 +85,9 @@ one comparison cannot express that. The old uniformity was bought by getting one
   (the mode-position criterion, Code Cell C's *not all*). After I13, 1 − χ_all = {ζ ≥ θ_L} agrees
   with the second. The residual tension is that Eq. (27)'s all-region is strict while its own gloss
   reads "where *all* is true", which is the closed cell. Same class of latent issue, in prose, and
-  out of scope here. **Recorded as open decision O11 on 2026-09-17**, at the user's direction, with
-  both options and the measured cost of each; it changes the definition of a reported statistic, so
-  it is theirs to settle.
+  out of scope here. Recorded as open decision O11 on 2026-09-17, with both options and the measured
+  cost of each. **Settled by the user the same day** in favour of the closed form: Eq. (27)'s
+  all-region is now R = {ζ ≥ θ_L}. See `all_region_closed.md`; no printed number moved.
 - **F4 (a coupling `agent.md` §2 did not list).** Code cell 1 and Code Cell E1 both define
   `exclusion_indicator`, byte-identically, and §2's list covered Code Cell 2 ↔ E2 but not this pair.
   **Added as coupling 9 on 2026-09-17**; F6 gives the true width of the duplication.

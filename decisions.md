@@ -293,6 +293,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Decided by: user (from `sections_3-5_outline.md` §4.2)
 - Decision: first condition Δ_some < 0; second q_H(all | some) < ½. Neither alone suffices.
 - Depends on it: Part C, Part D table, Text cell 6 *Where both of Part C's conditions hold*.
+- Findings added later: 2026-09-17 (agent), the region the second condition is stated over changed
+  under **O11**: P(all-region) now takes the closed R = {ζ ≥ θ_L}. B2's own text is unaffected, since
+  it states the condition as q_H(all | some) < ½ without naming the region's endpoint, and no printed
+  number moved in either notebook.
 
 ### B3. Delta-like prior: Beta(64, 1) with Λ = 8α = 512
 - Status: Settled
@@ -903,10 +907,21 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Evidence: as O9. Class (e) until a cell prints it (C6).
 
 ### O11. Eq. (27)'s all-region is open where its own gloss, and the rest of the notebook, are closed
-- Status: Open (since 2026-09-17)
-- Decided by: not decided. Raised by the agent while applying I13. `agent.md` §3 requires a
-  prose/code disagreement to be recorded and put to the user rather than repaired in whichever
-  direction is convenient.
+- Status: **Settled** (user, 2026-09-17; record `procedure_records/all_region_closed.md`). Opened
+  2026-09-17 while applying I13.
+- Decided by: user (2026-09-17), choosing option 2 below: "the formula needs to be changed".
+- **Decision.** Eq. (27)'s all-region is the **closed** R = {ζ ≥ θ_L}. Applied to 23 mask sites
+  (14 in main, 9 in appendix_E), 3 printed labels, and the two prose statements in Text cell 4
+  (the Eq. (27) definition, and "the region ζ ≥ θ_L is s ≥ 0.95"). All four regions are now closed
+  at the endpoint, the all-region is the mirror of the no-region under O9's reflection, and it
+  coincides with Appendix A's cell of *all* — which O12 records as a redundancy to resolve later.
+- **Measured outcome.** No printed number moved anywhere in either notebook: the only differing
+  printed lines are the 5 occurrences of the two relabelled headers. All 13 figures byte-identical;
+  main 0 errors, 8 figures, 14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS. The change is
+  inert because no grid node lands on +θ_L for any θ_L the notebooks use, at any K in the ladder.
+- **The framing below is how the question was put to the user on 2026-09-17, kept unedited**
+  (`agent.md` §3.1: a decision's body is never rewritten after the fact). Its present tense
+  describes the notebook as it stood before the change.
 - **The disagreement.** Text cell 4 defines P(all-region) over R = {ζ > θ_L}, "where *all* is true".
   But *all* excludes E_all = {ζ < θ_L} (Eq. A1), so it is true on the **closed** {ζ ≥ θ_L}. Formula
   and gloss disagree at the single node ζ = θ_L.
@@ -932,6 +947,25 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   all-clears before I13.
 - **Depends on it:** Eq. (27); the q position criterion in Text cell 4 Part C and in Code Cells 2,
   2b, 4 and C; B2's conjunction; O9's symmetry statement.
+
+### O12. The all-region and the cell of *all* are now the same set
+- Status: Open (since 2026-09-17). **Recorded at the user's direction and deliberately not acted
+  on**: "we will fix this redundancy later, record and don't do anything about it yet."
+- Decided by: not decided. Raised by the agent while scoping O11.
+- **What happened.** O11 made Eq. (27)'s all-region R = {ζ ≥ θ_L}, which is exactly Appendix A's
+  Voronoi cell of *all*. One set now carries two names and two implementations:
+  - **code:** `upper_region = (zeta >= theta_L)` (14 sites in main, 9 in appendix_E) beside
+    `inside = zeta >= theta_L`, the cell-of-*all* masks (3 in main, 3 in appendix_E). They now
+    evaluate identically at every node.
+  - **prose:** Text cell 4's "The all-region is the continuous form of the top state" and "Where the
+    peak sits against the cell of *all*" define the same region twice, in the same terms.
+- **Options.** Unify under one name and one helper; keep both names but state the identity once in
+  prose; leave as is.
+- **Needed to decide:** the user's choice of name (C4). "All-region" runs through Text cells 4, 4b
+  and 6 and `thesis_outline/sections_3-6.md`; "cell of *all*" carries Appendix A's Voronoi reading
+  and is what B8's mode position criterion is stated against.
+- **Depends on it:** nothing computed — the two already evaluate to the same mask, so this is naming
+  and duplication, not a result.
 
 ---
 
