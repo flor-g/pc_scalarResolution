@@ -96,6 +96,7 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R14 | **Q2, option (a).** §4.5 reports the V under both read-outs as a result: the shared right arm, the left arm that exists only under q, and the 20 cells where the conjunctions part. §5.1 does not use the V, and its lines 329–338 go. **No evidence for a missing level is derived from the V.** Budget: §4.5 240, §5.1 350, §4.3 70. The code edits that let the prose quote these numbers are open tasks in `procedure_records/delta_criteria_printing.md`. | user (2026-09-13) |
 | R15 | **Q6, option (i).** The Cremers parallel stays with q, and item 1's sentence is corrected. Under q the positive shift is the tempering. Under the delta read-out the mode's upward movement is the utility level's, and is not a probability of *all*. **Why a similar movement emerges under the delta read-out is to be investigated** (open task in the same record). | user (2026-09-13) |
 | R16 | **Q7.** §5.2 states H1 (expressions with unstable atomicity carry weaker lexical strength) and H2 (open-scale adjectives behave like *some*; complete-scale adjectives like endpoint(s) + *some*), then reports where the model's prediction matches Xiang et al.'s data and where it does not, **making no claim about the nature of the mismatch**. Every number it quotes is printed by a new Appendix F and Code Cell F in `main.ipynb`. Tasks and blocking decisions: `procedure_records/scale_classes_hypothesis.md` §§7–10. | user (2026-09-17) |
+| R17 | **S-2 and S-7.** §5.2 models the two **absolute** classes only. The relative class is not modelled, so no context cut *t* enters and Appendix A is untouched; H2 is stated in full and its open-scale half is left untested. The κ parity paragraph stays in §5.2, restated at n = 4, where it states the symmetry the user's instinct doubts. That instinct — that the two endpoints are not symmetric and would separate into θ_L and θ_A under the alternatives level — is stated once, as an instinct, with no promise and no claim that it accounts for the mismatch (`decisions.md` **O14**). | user (2026-09-17) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
 commitment), A14 (conventionalized), A16 and B7 (q is a comparison read-out; the delta is the
@@ -141,7 +142,7 @@ Two further findings that change the outline as much as the headline does:
   says that the maximizer of F supplies a halting mechanism. So item 2 is new material, not a
   correction of existing text.
 
-## 3. Word allocation at 3,000
+## 3. Word allocation at 3,000, raised to 3,200 on 2026-09-17 (S-6)
 
 | Section | Was | Now | What the change pays for |
 |---|---:|---:|---|
@@ -161,13 +162,13 @@ Two further findings that change the outline as much as the headline does:
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | 100 | The evidence item 2 rests on |
 | **5. Discussion** | **705** | **980** | |
 | 5.1 What an alternatives level would have to supply | 390 | 350 | Complexity-led; the q-normalization link added, the Cremers bullet moved out (R7), lines 329–338 removed (R14) |
-| 5.2 Scale structure: a second prediction | 200 | 200 | **Under revision (S-6, 2026-09-17): the rewrite is estimated at 340–380, and where the difference comes from is undecided.** |
+| 5.2 Scale structure: a second prediction | 200 | **400** | R16/R17: H1 and H2 stated; the instantiation; the parity of the two entries; match and mismatch; the O14 sentence. The user raised the budget rather than trim §5.1 (S-6). |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | 170 | Item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | 120 | Item 3 |
 | 5.5 Limits (was 5.3) | 65 | 80 | Convergence of θ_u; conditioning |
 | 5.6 Predictions (was 5.4) | 50 | 60 | The timescale separation as a prediction |
 | **6. Conclusion** | **150** | **150** | |
-| **Total** | **2,400** | **3,000** | |
+| **Total** | **2,400** | **3,200** | |
 
 **Renumbering this causes.** Limits and Predictions move from §5.3 and §5.4 to §5.5 and §5.6, so
 four references change: `sections_3-6.md` lines 57, 63 and 77 (§5.3 → §5.5) and
@@ -511,9 +512,22 @@ test for each task, and the seven decisions that block the first of them are in
   parenthetical go. **The mechanism paragraph goes with them**, since a mechanism *for the mismatch*
   is what the instruction rules out; a mechanism for what the model does predict is still allowed,
   and is where the κ parity paragraph would sit if S-7 keeps it.
-- **Word budget.** §5.2 is allocated 200 words in §3 above. The rewrite is estimated at 340–380.
-  Either §5 absorbs it — §5.1's 350 is the only line with slack — or the 3,000 total rises. Not the
-  agent's call (S-6).
+- **Word budget.** Settled: §5.2 goes from 200 to 400 and the §§3–6 total from 3,000 to 3,200. The
+  user raised the budget rather than take it out of §5.1 (S-6).
+- **Scope, settled 2026-09-17 as R17.** §5.2 models the **two absolute classes only**. The 56 items
+  those classes carry give R² 0.953 (maximum) and 0.401 (minimum), 0.804 over both, against 0.728
+  for the literal listener and 0.789 for the tempered control — so the utility level's whole
+  contribution sits in the minimum class. **The relative class's 0.80 is not reported**, since it
+  comes from a configuration the model does not have. H2 is stated in full and its open-scale half
+  is named as untested.
+- **The parity paragraph stays** (S-7), restated at n = 4: the entries for *all* and for *some* have
+  identical tilt loadings and exactly opposite width loadings, so at the utility level they differ
+  in the even coordinate alone. The old ratios (0.219, 0.633, 1.07) go with the old prediction. This
+  is also where the symmetry O14's instinct doubts is stated, which is why it earns its place.
+- **One sentence of instinct** (O14), at the close, pointing back to §5.1: the two endpoints may not
+  be symmetric, and under the alternatives level they would separate into θ_L and θ_A. Stated as an
+  instinct, promising nothing, and **not** offered as an account of the mismatch — R16 still holds
+  over the rest of the section.
 - **Not started.** No notebook cell, no outline line and no `agent.md` row has been touched for this
   change.
 

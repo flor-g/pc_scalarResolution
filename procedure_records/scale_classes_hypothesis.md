@@ -205,6 +205,21 @@ four tested. The model carries m = 2 as a property of the architecture, not beca
 inventories demand it. This is not the collapse Eq. (C3) reports for an odd m = 1 basis: the pair's
 two loadings are opposite, not equal, so the utility level is not common-mode on them.
 
+**F17 (2026-09-17, the section as S-2 finally scopes it).** The two absolute classes only, 56 of the
+96 items, no cut *t* anywhere. R² of our own predictions against their Experiment 3:
+
+| | max | min | both classes |
+|---|---:|---:|---:|
+| the model at θ\* | 0.953 | 0.401 | **0.804** |
+| the tempered control | 0.951 | 0.208 | 0.789 |
+| the literal listener | 0.952 | 0.092 | 0.728 |
+
+So the utility level's whole contribution sits in the minimum class, and the maximum class is
+indifferent to it (0.952 against 0.953). Λ scanned per class: max reaches 0.953 at Λ = 8 and is flat
+to Λ = 2048; min peaks at 0.401 at Λ = 32 and falls to 0.325. Shape minus artifact in mean scale
+position: prior +0.84 / −1.12, data −0.22 / −1.13, model +0.03 / −0.16. The gap between the two
+classes: data +1.32 (shape) against +0.41 (artifact), model +0.61 against +0.42.
+
 ## 6. What is open
 
 - **O13** (new): whether H1 and H2 are adopted, and if so what fixes Λ. Nothing was changed.
@@ -256,7 +271,38 @@ None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed
   values are cited in §5.2's prose, and the by-item R² of **our** predictions against their data is
   ours to print.
 - **S-6 — settled.** The word budget rises as needed.
-- **S-2 and S-7 — still open**, and the subject of the measurements F14 to F16 above.
+- **S-7 — settled, the agent's recommendation.** The parity paragraph stays in §5.2, restated for
+  n = 4, with its numbers printed by Code Cell F. Under the scope S-2 sets, what it states is that
+  **the maximum and minimum entries differ in the even (width) coordinate alone**: their tilts are
+  identical to 0.0e+00 and their widths sum to 0.0e+00 (F15, F17e). The general parity statement —
+  that a cut at the midpoint of the log-odds scale would carry no even component at all, measured
+  1.2e-17 with the node on the cut half-weighted — is kept as a statement, not as a modelled class.
+  The old ratios 0.219 / 0.633 / 1.07 go with the old prediction; they were n = 10 cuts.
+- **S-2 — settled: the relative class is not modelled.** The user's reasoning, verbatim
+  (2026-09-17):
+
+  > even though we currently model the two endpoint as symmetric to each other, I do not think it is
+  > actually the case. Recall our motivation for an alternatives level; under this proposed
+  > architecture, the 0 and the 1 would no longer be defined by the same theta, but instead theta_L
+  > and theta_A. I think our current model's symmetricity is the culprit of mismatch that we have
+  > with Xiang's data. My instinct is that n can be properly represented by the architecture
+  > (particularly as one of theta_L or theta_A) once the two thetas are separated from each other.
+  > However, we want to avoid making too many promises in the paper over things we haven't
+  > implemented yet, so my take is that we point to this intinct and leave it as an instinct. Thus,
+  > we do not try to model the relative class with our current implementation.
+
+  Recorded as `decisions.md` **O14**. What follows for this change:
+  - **No cut *t* enters the model.** Appendix A's identification argument and its "θ_L enters twice"
+    paragraph are untouched, and the objection that motivated S-2 does not arise.
+  - **§5.2 still states H2 in full** (the user's first instruction) and says plainly that its
+    open-scale half is not tested here, pointing to the instinct. It must not report the relative
+    class's 0.80, since that number comes from a configuration the model does not have.
+  - **The instinct is stated as an instinct**, once, with no promise attached and no claim that it
+    accounts for the mismatch. Placement: the agent recommends the close of §5.2, pointing back to
+    §5.1 where the alternatives level is proposed, since θ_L and θ_A would be that level's
+    quantities. Confirm the placement at T10.
+  - **The parity paragraph is where the symmetry the instinct doubts is actually stated**, which is
+    why S-7 keeping it matters more under this scope than it did before.
 
 - **S-1. Is Λ fitted, and if so what class of quantity is a fitted Λ?** The section's Λ numbers come
   from choosing, per class, the Λ that best matches their data. Nothing in this project is fitted;
@@ -303,7 +349,7 @@ Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are 
       with `README.md` giving the OSF node, the four source files, the derivation, the licence and a
       sha256 per file; add the derivation script beside it. Acceptance: the README's hashes match,
       and a fresh read of the file reproduces the six class profiles in §5 F1 above.
-- [ ] **T2. Code Cell F** (S-1, S-3, S-4, S-5 settled; needs S-2). A new code cell printing every number §5.2 will quote,
+- [ ] **T2. Code Cell F** (S-1 to S-7 settled). A new code cell printing every number §5.2 will quote,
       and nothing else. Its blocks:
       1. **Configuration and self-checks.** n = 4, θ_L = log 7, the five cells and their boundaries;
          the three entries of Eq. (A1) in the adjective's own orientation and the complement that
@@ -311,16 +357,19 @@ Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are 
          (expect 0.0); that the closed-form θ\* equals a scan (expect ~6e-06) and returns −28.4375
          for the default n = 10 inventory; that a uniform five-cell prior pushes forward to
          [0.193, 0.200, 0.214, 0.200, 0.193]; that the five cells partition the grid to 1e-10.
-      2. **The class profiles**, prior / q_lit / model / data, by class and image type, with the peak
-         and the mean scale position.
+      2. **The class profiles**, prior / q_lit / model / data, for the two absolute classes by image
+         type, with the peak and the mean scale position.
       3. **R²** by class and overall, for the model and for q_lit — **ours only** (S-5). Their
          published values are cited in §5.2's prose and printed nowhere.
       4. **The Λ scan per class**, wide enough to show that the maximum class is flat to Λ = 2048
-         and that the other two turn over.
+         and that the minimum class turns over at Λ = 32. Λ is labelled as fitted, and as fitted for
+         H1 alone (S-1).
       5. **The image-type difference** per class, in prior, data and model.
       6. **The between-class gaps** by image condition.
-      7. **The mismatch quantities**: the minimum class's R², the −0.16 against −1.13, the two
-         one-sided Λ optima, and the displacement from prior to posterior in both conditions.
+      7. **The mismatch quantities**: the minimum class's R², the −0.16 against −1.13, and the
+         displacement from prior to posterior in both conditions. Reported, not explained (R16).
+      8. **The parity of the two entries' loadings** (S-7): κ for *all* and for *some* at n = 4,
+         their identical tilt, their opposite width, and the midpoint statement.
       Constraints: every helper stays local to this cell, so `code cell 1` is untouched and coupling
       9 does not fire; no figure, so the figure baseline is unchanged; any wall-clock line goes
       behind `cost:` (coupling 3). Acceptance: the cell prints every number the drafted §5.2 quotes,
@@ -334,9 +383,10 @@ Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are 
 - [ ] **T4. Structure.** Insert the two cells after Code Cell D (index 21), before References, which
       becomes index 24; cell count 23 → 25. Regenerate the ToC (cell 0) with rows for 22 and 23 and
       the moved References row. Acceptance: every ToC link resolves and every index in it is right.
-- [ ] **T5. References.** Add Xiang, Kennedy, Xu & Leffel (2022) and whichever of Kennedy (2007) and
-      Leffel, Xiang & Kennedy (2017) the drafted text cites, APA 7th, in alphabetical position. The
-      pending Leffel-versus-Xiang check (`background_sections.md` line 612) is decided here.
+- [ ] **T5. References.** Add Xiang, Kennedy, Xu & Leffel (2022), and Kennedy (2007) if §5.2 names
+      the open-scale class it does not model, APA 7th, in alphabetical position. The pending
+      Leffel-versus-Xiang check (`background_sections.md` line 612) is decided here. Their LG/QF/ST
+      and hybrid R² values are cited in the prose and printed by no cell (S-5).
 - [ ] **T6. Couplings.** Confirm none fires: E3 diffs Code Cells 2 and 2b only; `code cell 1` is
       unchanged so coupling 9 is quiet; no new printing call in Code Cell 2 or 2b, so coupling 7 is
       quiet. Check whether `appendix_E.ipynb` §E.3 ("claims in main restated") needs a line.
@@ -351,7 +401,7 @@ Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are 
       configuration; the treatment of Λ; *t*, if it enters; the data file and its provenance;
       O13's status. Quantity-trace (register E) entries for every quantity Code Cell F prints, each
       assigned a class under §3.3. O8 gains the pointer.
-- [ ] **T10. §5.2 prose**, written against the executed output, not before (S-6 settled: the budget rises; needs S-7). Also
+- [ ] **T10. §5.2 prose**, written against the executed output, not before. §5.2 goes to about 400 words and the §§3–6 total to 3,200 (S-6). Confirm the instinct sentence's placement with the user. Also
       the §5.2 row of the word table in `sections_3-6.md` lines 81–103 and its scope-tier row at
       line 60.
 - [ ] **T11. Background §1.7.** The prior-manipulation bullet (F12), and the Q3b sentence softened

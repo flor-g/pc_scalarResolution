@@ -502,3 +502,80 @@ print("    (the last column is |kappa(chi) + kappa(1 - chi)|: B is orthogonal to
 print("     an antonym's loading is exactly the negative of the entry's, and the pair is a")
 print("     reflection about the prior's own coupling rather than a collapse of the kind Eq. (C3)")
 print("     reports for an odd m = 1 basis)")
+
+
+print()
+print("=" * 112)
+print("16. THE SECTION AS S-2 SCOPES IT: the two absolute classes only (56 of the 96 items). The")
+print("    relative class is not modelled, so no cut t enters and Appendix A is untouched. These are")
+print("    the numbers §5.2 would quote, and the list Code Cell F has to print.")
+print("=" * 112)
+ABS = [k for k in items if k[3] in ("absolute_max", "absolute_min")]
+FIT = {"absolute_max": 8.0, "absolute_min": 32.0}
+
+
+def collect(level, lam_by_class, keys):
+    pred, obs = [], []
+    for k in keys:
+        pred.extend(model_profile(k[3], items[k]["prior"], lam_by_class[k[3]], 0.0, level))
+        obs.extend(items[k]["post"])
+    return pred, obs
+
+
+print("  (a) R^2 of our own predictions against their Experiment 3, by class and over both")
+for level, name in (("model", "model at theta_u*"), ("literal", "the literal listener"),
+                    ("tempered", "the tempered control")):
+    parts = [f"{pearson_r2(*collect(level, FIT, [k for k in ABS if k[3] == c])):.3f}"
+             for c in ("absolute_max", "absolute_min")]
+    both = pearson_r2(*collect(level, FIT, ABS))
+    print(f"      {name:<22} max {parts[0]}   min {parts[1]}   both classes {both:.3f}")
+
+print("\n  (b) Lambda scanned per class (S-1: fitted, and fitted only here, because H1 is about Lambda)")
+print(f"      {'Lambda':>7}{'max':>9}{'min':>9}")
+for lam in (2, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 128, 256, 512, 2048):
+    vals = [pearson_r2(*collect("model", {**FIT, c: lam}, [k for k in ABS if k[3] == c]))
+            for c in ("absolute_max", "absolute_min")]
+    print(f"      {lam:>7g}{vals[0]:>9.3f}{vals[1]:>9.3f}")
+
+print("\n  (c) The class profiles, positions 1..5, by image type")
+for cls in ("absolute_max", "absolute_min"):
+    for img in ("shape", "artifact"):
+        keys = [k for k in ABS if k[3] == cls and k[2] == img]
+        print(f"      {cls:<13}{img:<10}({len(keys)} items)")
+        for lvl, level in (("prior", None), ("q_lit", "literal"), ("model", "model"), ("data", None)):
+            acc = [0.0] * 5
+            for k in keys:
+                v = (items[k]["prior"] if lvl == "prior" else items[k]["post"] if lvl == "data"
+                     else model_profile(cls, items[k]["prior"], FIT[cls], 0.0, level))
+                for i in range(5):
+                    acc[i] += v[i] / len(keys)
+            print(f"        {lvl:<7}" + " ".join(f"{x:6.3f}" for x in acc)
+                  + f"   peak {1 + max(range(5), key=lambda i: acc[i])}"
+                  + f"   mean position {sum((i + 1) * x for i, x in enumerate(acc)):.2f}")
+
+print("\n  (d) Shape minus artifact, in mean scale position, and the gap between the two classes")
+for source in ("prior", "data", "model"):
+    row, gaps = {}, {}
+    for img in ("shape", "artifact"):
+        means = {}
+        for cls in ("absolute_max", "absolute_min"):
+            keys = [k for k in ABS if k[3] == cls and k[2] == img]
+            means[cls] = sum(sum((i + 1) * x for i, x in enumerate(
+                items[k]["prior"] if source == "prior" else items[k]["post"] if source == "data"
+                else model_profile(cls, items[k]["prior"], FIT[cls], 0.0)))
+                for k in keys) / len(keys)
+        row[img] = means
+        gaps[img] = means["absolute_max"] - means["absolute_min"]
+    print(f"      {source:<7} max {row['shape']['absolute_max'] - row['artifact']['absolute_max']:+.2f}"
+          f"   min {row['shape']['absolute_min'] - row['artifact']['absolute_min']:+.2f}"
+          f"   |   max - min: shape {gaps['shape']:+.2f}, artifact {gaps['artifact']:+.2f}")
+
+print("\n  (e) The parity S-7 keeps, at n = 4: the two classes' loadings kappa = B^T W chi")
+for label, chi in (("MAX = all ", CHI_ALL), ("MIN = some", CHI_SOME)):
+    k = B.T @ (W * chi)
+    print(f"      {label}  tilt {float(k[ODD]):+.5f}   width {float(k[EVEN]):+.5f}")
+kA, kI = B.T @ (W * CHI_ALL), B.T @ (W * CHI_SOME)
+print(f"      tilt difference {abs(float(kA[ODD] - kI[ODD])):.1e}; width sum "
+      f"{abs(float(kA[EVEN] + kI[EVEN])):.1e}: the two entries differ in the EVEN coordinate alone")
+print(f"      a cut at the midpoint of the log-odds scale would have width "
+      f"{float((B.T @ (W * chi_cut(0.0)))[EVEN]):+.1e} (the parity statement, not a modelled class)")

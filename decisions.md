@@ -1049,7 +1049,43 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   Text cell 3 §3, while a scanned Λ is a control (B4). Seven decisions block the implementation,
   listed as S-1 to S-7 in `procedure_records/scale_classes_hypothesis.md` §8; S-1 (whether a fitted
   Λ may be quoted, and what class of quantity it is) and S-2 (whether the relative cut *t* enters
-  the model) are the two that reach back into this entry.
+  the model) are the two that reach back into this entry. **Both are now answered** (same record, §8): Λ is
+  fitted for H1 and nowhere else, and *t* does not enter — the relative class is not modelled, so
+  H2's open-scale half is stated and left untested (**O14**).
+
+### O14. Are the two endpoints symmetric, or do they need θ_L and θ_A?
+- Status: Open (since 2026-09-17). **What is settled** is only how the paper treats it: §5.2 points
+  to it as an instinct, once, promising nothing, and the relative class is not modelled with the
+  current implementation (record `procedure_records/scale_classes_hypothesis.md` §8, S-2).
+- Decided by: the instinct is the **user's** (2026-09-17), in their words:
+
+  > even though we currently model the two endpoint as symmetric to each other, I do not think it is
+  > actually the case. Recall our motivation for an alternatives level; under this proposed
+  > architecture, the 0 and the 1 would no longer be defined by the same theta, but instead theta_L
+  > and theta_A. I think our current model's symmetricity is the culprit of mismatch that we have
+  > with Xiang's data. My instinct is that n can be properly represented by the architecture
+  > (particularly as one of theta_L or theta_A) once the two thetas are separated from each other.
+  > However, we want to avoid making too many promises in the paper over things we haven't
+  > implemented yet, so my take is that we point to this intinct and leave it as an instinct.
+
+- **What the model does now.** One θ_L fixes both ends: Eq. (A1) sends *no* to {ζ > −θ_L} and *all*
+  to {ζ < θ_L}, Eq. (A5) gives θ_L its denotation through n, and Eq. (A2) makes the same θ_L the
+  gain of g_y. The symmetry is exact and measurable: at n = 4 the entries for *all* and *some* have
+  **identical tilt loadings and exactly opposite width loadings** (difference 0.0e+00, sum 0.0e+00),
+  so at the utility level the two differ in the even coordinate alone. O9 records the neighbouring
+  fact that the whole construction is equivariant under the reflection ζ → −ζ, with μ_u the single
+  asymmetry.
+- **What separating them would change.** Two thresholds where there is one: A5's denotation (which n
+  would belong to which θ), Appendix A's identification argument, which is written for a θ_L that is
+  both the cut of Eq. (A1) and the gain of Eq. (A2); Appendix C's count, which is a count of
+  thresholds (C2); and the alternatives level of §5.1, which is where the pair would live.
+- **Needed to decide:** nothing now. This is recorded so the instinct is not lost and is not
+  overclaimed. Nothing in the notebooks depends on it, and no result here rests on it.
+- **Depends on it:** `sections_3-6.md` §5.2's closing sentence and its pointer to §5.1. Nothing
+  computed.
+- Evidence: `audits/2026-09-17-scale-classes/xiang_items_output.txt` block 16(e) for the symmetry;
+  the mismatch it is an instinct about is F8 to F10 and F17 of the record. **No measurement here
+  tests the instinct**, and §5.2 does not say that it accounts for the mismatch (R16).
 
 ---
 

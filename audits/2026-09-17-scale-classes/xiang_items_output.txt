@@ -276,3 +276,64 @@ closed-form theta_u* against the scan, n = 4 inventory: 6.4e-06; default n = 10 
      an antonym's loading is exactly the negative of the entry's, and the pair is a
      reflection about the prior's own coupling rather than a collapse of the kind Eq. (C3)
      reports for an odd m = 1 basis)
+
+================================================================================================================
+16. THE SECTION AS S-2 SCOPES IT: the two absolute classes only (56 of the 96 items). The
+    relative class is not modelled, so no cut t enters and Appendix A is untouched. These are
+    the numbers §5.2 would quote, and the list Code Cell F has to print.
+================================================================================================================
+  (a) R^2 of our own predictions against their Experiment 3, by class and over both
+      model at theta_u*      max 0.953   min 0.401   both classes 0.804
+      the literal listener   max 0.952   min 0.092   both classes 0.728
+      the tempered control   max 0.951   min 0.208   both classes 0.789
+
+  (b) Lambda scanned per class (S-1: fitted, and fitted only here, because H1 is about Lambda)
+       Lambda      max      min
+            2    0.787    0.035
+            4    0.907    0.035
+            6    0.949    0.169
+            8    0.953    0.229
+           12    0.952    0.305
+           16    0.952    0.352
+           24    0.952    0.391
+           32    0.952    0.401
+           48    0.952    0.401
+           64    0.952    0.391
+           96    0.952    0.361
+          128    0.952    0.348
+          256    0.952    0.333
+          512    0.952    0.325
+         2048    0.952    0.325
+
+  (c) The class profiles, positions 1..5, by image type
+      absolute_max shape     (16 items)
+        prior   0.128  0.019  0.033  0.009  0.811   peak 5   mean position 4.36
+        q_lit   0.000  0.000  0.000  0.000  1.000   peak 5   mean position 5.00
+        model   0.000  0.000  0.000  0.000  1.000   peak 5   mean position 5.00
+        data    0.002  0.006  0.017  0.013  0.900   peak 5   mean position 4.61
+      absolute_max artifact  (16 items)
+        prior   0.177  0.119  0.143  0.128  0.432   peak 5   mean position 3.52
+        q_lit   0.002  0.001  0.000  0.000  0.996   peak 5   mean position 4.99
+        model   0.004  0.003  0.002  0.003  0.988   peak 5   mean position 4.97
+        data    0.018  0.011  0.016  0.026  0.929   peak 5   mean position 4.83
+      absolute_min shape     (12 items)
+        prior   0.923  0.008  0.036  0.021  0.013   peak 1   mean position 1.19
+        q_lit   0.000  0.102  0.518  0.225  0.155   peak 3   mean position 3.43
+        model   0.000  0.008  0.163  0.262  0.567   peak 5   mean position 4.39
+        data    0.017  0.122  0.301  0.253  0.224   peak 3   mean position 3.29
+      absolute_min artifact  (12 items)
+        prior   0.461  0.129  0.171  0.117  0.122   peak 1   mean position 2.31
+        q_lit   0.000  0.267  0.325  0.191  0.217   peak 3   mean position 3.36
+        model   0.000  0.009  0.074  0.273  0.644   peak 5   mean position 4.55
+        data    0.015  0.038  0.111  0.182  0.653   peak 5   mean position 4.42
+
+  (d) Shape minus artifact, in mean scale position, and the gap between the two classes
+      prior   max +0.84   min -1.12   |   max - min: shape +3.16, artifact +1.21
+      data    max -0.22   min -1.13   |   max - min: shape +1.32, artifact +0.41
+      model   max +0.03   min -0.16   |   max - min: shape +0.61, artifact +0.42
+
+  (e) The parity S-7 keeps, at n = 4: the two classes' loadings kappa = B^T W chi
+      MAX = all   tilt -1.33667   width -0.56936
+      MIN = some  tilt -1.33667   width +0.56936
+      tilt difference 0.0e+00; width sum 0.0e+00: the two entries differ in the EVEN coordinate alone
+      a cut at the midpoint of the log-odds scale would have width +1.2e-17 (the parity statement, not a modelled class)
