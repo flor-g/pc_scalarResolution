@@ -179,6 +179,32 @@ manipulation is not a sharpening of one prior but two elicited sets. The 2026-09
 (the numbers were θ_u = 1 controls or a carried θ\*; "monotonically" fails; the tilt carries the
 contribution). The parity result about κ is untouched.
 
+**F14 (2026-09-17, for S-2). A relative adjective's cut is not identified by the data.** Best R² for
+the relative class, each candidate cut with its own Λ scan: midpoint 0.793 (Λ 16), the item's own
+prior median 0.795 (Λ 24), its prior upper quartile 0.797 (Λ 16), cell boundary s = 0.375 0.799
+(Λ 24), s = 0.625 0.800 (Λ 16), s = 0.875 0.781 (Λ 6). A spread of 0.019 across every plausible
+choice, so **t need not be fitted**: stipulating the midpoint costs 0.007 against the best cut.
+
+**F15 (2026-09-17, for S-7). The parity of the three classes' loadings at n = 4**, κ = BᵀWχ:
+
+| entry | cut (s) | tilt | width | \|width/tilt\| |
+|---|---:|---:|---:|---:|
+| MAX = *all* | 0.875 | −1.33667 | −0.56936 | 0.426 |
+| MIN = *some* | 0.125 | −1.33667 | **+0.56936** | 0.426 |
+| REL, cut at the midpoint | 0.500 | −1.49985 | **+0.00000** | 0 |
+| REL, cut at s = 0.625 | 0.625 | −1.48785 | −0.17284 | 0.116 |
+
+**The maximum and minimum entries share their tilt exactly and differ only in the sign of their
+width**, and a midpoint cut is the one entry with no even component at all (the node on the cut
+half-weighted, as the 2026-09-14 numerical note says). An antonym's κ is exactly the negative of the
+entry's, to 2.2e-16, since B is orthogonal to the constant.
+
+**F16 (2026-09-17, for S-2). None of H2's inventories forces m = 2.** Every one of them is a
+complementary pair, so by Appendix C §5 its span modulo the constant is 1, measured as 1 for all
+four tested. The model carries m = 2 as a property of the architecture, not because these
+inventories demand it. This is not the collapse Eq. (C3) reports for an odd m = 1 basis: the pair's
+two loadings are opposite, not equal, so the utility level is not common-mode on them.
+
 ## 6. What is open
 
 - **O13** (new): whether H1 and H2 are adopted, and if so what fixes Λ. Nothing was changed.
@@ -215,6 +241,22 @@ and the user named it.
 ## 8. What must be settled before any code (blocking)
 
 None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed with what it changes.
+
+**Answered by the user, 2026-09-17 (second message of the day):**
+- **S-1 — settled, option (ii) in effect but bounded.** "the point of H1 is about a fitted Lambda;
+  for H1 and only for H1 this is allowed since it is part of the hypothesis's commitment." So Λ is a
+  fitted quantity **here and nowhere else**, because H1 is a claim about Λ, and it is labelled as
+  fitted where it is printed. Nothing else in §5.2 or Appendix F may be fitted — which is what makes
+  S-2 a live question rather than a matter of fitting *t* too.
+- **S-3 — settled.** The data live in the repository.
+- **S-4 — settled.** n = 4.
+- **S-5 — settled, the opposite of the agent's reading.** "do not print published number; any
+  published number should appear in the paper with proper citation; the code is only to print our
+  own predictions." So Code Cell F prints the model's own quantities only; their LG/QF/ST/hybrid R²
+  values are cited in §5.2's prose, and the by-item R² of **our** predictions against their data is
+  ours to print.
+- **S-6 — settled.** The word budget rises as needed.
+- **S-2 and S-7 — still open**, and the subject of the measurements F14 to F16 above.
 
 - **S-1. Is Λ fitted, and if so what class of quantity is a fitted Λ?** The section's Λ numbers come
   from choosing, per class, the Λ that best matches their data. Nothing in this project is fitted;
@@ -257,11 +299,11 @@ Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are 
 
 - [ ] **T0. Checkpoint.** `git status` clean, record `git rev-parse --short HEAD`. The tree is clean
       at `acabb7e` as this list is written.
-- [ ] **T1. The data file** (needs S-3). Add the derived aggregate under a new `data/xiang_2022/`
+- [ ] **T1. The data file** (S-3 settled: yes). Add the derived aggregate under a new `data/xiang_2022/`
       with `README.md` giving the OSF node, the four source files, the derivation, the licence and a
       sha256 per file; add the derivation script beside it. Acceptance: the README's hashes match,
       and a fresh read of the file reproduces the six class profiles in §5 F1 above.
-- [ ] **T2. Code Cell F** (needs S-1 to S-5). A new code cell printing every number §5.2 will quote,
+- [ ] **T2. Code Cell F** (S-1, S-3, S-4, S-5 settled; needs S-2). A new code cell printing every number §5.2 will quote,
       and nothing else. Its blocks:
       1. **Configuration and self-checks.** n = 4, θ_L = log 7, the five cells and their boundaries;
          the three entries of Eq. (A1) in the adjective's own orientation and the complement that
@@ -271,8 +313,8 @@ Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are 
          [0.193, 0.200, 0.214, 0.200, 0.193]; that the five cells partition the grid to 1e-10.
       2. **The class profiles**, prior / q_lit / model / data, by class and image type, with the peak
          and the mean scale position.
-      3. **R²** by class and overall, for the model and for q_lit, with their published values beside
-         (subject to S-5).
+      3. **R²** by class and overall, for the model and for q_lit — **ours only** (S-5). Their
+         published values are cited in §5.2's prose and printed nowhere.
       4. **The Λ scan per class**, wide enough to show that the maximum class is flat to Λ = 2048
          and that the other two turn over.
       5. **The image-type difference** per class, in prior, data and model.
@@ -309,7 +351,7 @@ Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are 
       configuration; the treatment of Λ; *t*, if it enters; the data file and its provenance;
       O13's status. Quantity-trace (register E) entries for every quantity Code Cell F prints, each
       assigned a class under §3.3. O8 gains the pointer.
-- [ ] **T10. §5.2 prose**, written against the executed output, not before (needs S-6, S-7). Also
+- [ ] **T10. §5.2 prose**, written against the executed output, not before (S-6 settled: the budget rises; needs S-7). Also
       the §5.2 row of the word table in `sections_3-6.md` lines 81–103 and its scope-tier row at
       line 60.
 - [ ] **T11. Background §1.7.** The prior-manipulation bullet (F12), and the Q3b sentence softened

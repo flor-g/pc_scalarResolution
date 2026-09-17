@@ -230,3 +230,49 @@ closed-form theta_u* against the scan, n = 4 inventory: 6.4e-06; default n = 10 
                     max    min    rel  max - min  max - rel
       shape        5.00   4.39   4.89       0.61       0.11
       artifact     4.97   4.55   4.88       0.42       0.09
+
+================================================================================================================
+13. S-2: WHERE A RELATIVE ADJECTIVE'S CUT COULD COME FROM. Under S-1 only Lambda may be
+    fitted, so t has to be stipulated or derived. Four candidates, each with its own Lambda
+    scan over the relative class alone.
+================================================================================================================
+    midpoint                    0.118 0.317 0.462 0.578 0.732 0.793 0.785 0.763 0.756 0.756   best R^2 0.793 at Lambda 16
+    prior median                0.137 0.274 0.383 0.484 0.647 0.742 0.795 0.785 0.758 0.756   best R^2 0.795 at Lambda 24
+    prior upper quartile        0.280 0.506 0.601 0.672 0.765 0.797 0.783 0.766 0.756 0.756   best R^2 0.797 at Lambda 16
+    cell boundary s = 0.375     0.052 0.149 0.256 0.375 0.596 0.730 0.799 0.783 0.756 0.756   best R^2 0.799 at Lambda 24
+    cell boundary s = 0.625     0.204 0.462 0.582 0.669 0.782 0.800 0.767 0.757 0.756 0.756   best R^2 0.800 at Lambda 16
+    cell boundary s = 0.875     0.336 0.727 0.781 0.764 0.756 0.756 0.756 0.756 0.756 0.756   best R^2 0.781 at Lambda 6
+    (Lambda = 2, 4, 6, 8, 12, 16, 24, 32, 64, 128 across the row)
+
+================================================================================================================
+14. S-7: THE PARITY OF THE ENTRIES' LOADINGS, kappa = B^T W chi, at n = 4. The three classes
+    of H2, each with the complement its antonym supplies. A cut at the midpoint of the
+    log-odds scale has no even component at all, which is the parity result §5.2 now states.
+================================================================================================================
+    entry                               cut (s)      tilt     width  |width/tilt|
+    MAX  = all,  excl. zeta < theta_L     0.875  -1.33667  -0.56936         0.426
+       its antonym, the O corner          0.875  +1.33667  +0.56936         0.426
+    MIN  = some, excl. zeta <= -theta_L    0.125  -1.33667  +0.56936         0.426
+       its antonym, no                    0.125  +1.33667  -0.56936         0.426
+    REL  cut at the midpoint              0.500  -1.49985  +0.00000         0.000
+       its antonym                        0.500  +1.49985  -0.00000         0.000
+    REL  cut at s = 0.625                 0.625  -1.48785  -0.17284         0.116
+    REL  cut at s = 0.375                 0.375  -1.48785  +0.17284         0.116
+    (a node lying exactly on a cut is half-weighted, which is what returns the midpoint
+     cut's width to machine precision)
+
+================================================================================================================
+15. S-2 and Appendix C §5: HOW MANY UTILITY DIRECTIONS EACH OF THESE INVENTORIES FORCES.
+    Appendix C §5 counts the span of the entries modulo the constant. A complementary pair
+    spans 1, whatever its cut, so none of H2's inventories forces m = 2; the model carries
+    m = 2 as a property of the architecture.
+================================================================================================================
+    inventory                                thresholds  span mod 1  kappa_1 + kappa_2
+    complete scale, MAX and its antonym               1           1            2.2e-16
+    complete scale, MIN and its antonym               1           1            2.2e-16
+    open scale, REL(midpoint) and antonym             1           1            1.3e-17
+    open scale, REL(s = 0.625) and antonym            1           1            1.1e-16
+    (the last column is |kappa(chi) + kappa(1 - chi)|: B is orthogonal to the constant, so
+     an antonym's loading is exactly the negative of the entry's, and the pair is a
+     reflection about the prior's own coupling rather than a collapse of the kind Eq. (C3)
+     reports for an odd m = 1 basis)

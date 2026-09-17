@@ -401,3 +401,104 @@ for source in ("prior", "data", "model"):
               f"{means['relative']:>7.2f}"
               f"{means['absolute_max'] - means['absolute_min']:>11.2f}"
               f"{means['absolute_max'] - means['relative']:>11.2f}")
+
+
+print()
+print("=" * 112)
+print("13. S-2: WHERE A RELATIVE ADJECTIVE'S CUT COULD COME FROM. Under S-1 only Lambda may be")
+print("    fitted, so t has to be stipulated or derived. Four candidates, each with its own Lambda")
+print("    scan over the relative class alone.")
+print("=" * 112)
+
+
+def prior_quantile_cut(p, level=0.5):
+    """The node below which the elicited prior holds `level` of its mass, linear within a cell."""
+    cum = 0.0
+    for i in range(N_ATOMS + 1):
+        if cum + p[i] >= level:
+            frac = (level - cum) / p[i] if p[i] > 0 else 0.0
+            lo = EDGES[i] if i > 0 else float(zeta[0])
+            hi = EDGES[i + 1] if i < N_ATOMS else float(zeta[-1])
+            return lo + frac * (hi - lo)
+        cum += p[i]
+    return float(zeta[-1])
+
+
+def rel_profile(prior, lam, mode):
+    if mode == "midpoint":
+        t = 0.0
+    elif mode == "prior median":
+        t = prior_quantile_cut(prior, 0.5)
+    elif mode == "prior upper quartile":
+        t = prior_quantile_cut(prior, 0.75)
+    else:
+        t = mode
+    return model_profile("relative", prior, lam, t)
+
+
+REL = [k for k in items if k[3] == "relative"]
+for label in ("midpoint", "prior median", "prior upper quartile",
+              BOUNDS[1], BOUNDS[2], BOUNDS[3]):
+    name = label if isinstance(label, str) else f"cell boundary s = {1 / (1 + math.exp(-label)):.3f}"
+    best = (0.0, None)
+    row = []
+    for lam in (2, 4, 6, 8, 12, 16, 24, 32, 64, 128):
+        pred, obs = [], []
+        for k in REL:
+            pred.extend(rel_profile(items[k]["prior"], lam, label))
+            obs.extend(items[k]["post"])
+        r2 = pearson_r2(pred, obs)
+        row.append(r2)
+        if r2 > best[0]:
+            best = (r2, lam)
+    print(f"    {name:<28}" + " ".join(f"{v:5.3f}" for v in row)
+          + f"   best R^2 {best[0]:.3f} at Lambda {best[1]:g}")
+print("    (Lambda = 2, 4, 6, 8, 12, 16, 24, 32, 64, 128 across the row)")
+
+print()
+print("=" * 112)
+print("14. S-7: THE PARITY OF THE ENTRIES' LOADINGS, kappa = B^T W chi, at n = 4. The three classes")
+print("    of H2, each with the complement its antonym supplies. A cut at the midpoint of the")
+print("    log-odds scale has no even component at all, which is the parity result §5.2 now states.")
+print("=" * 112)
+print(f"    {'entry':<34}{'cut (s)':>9}{'tilt':>10}{'width':>10}{'|width/tilt|':>14}")
+ENTRIES = [("MAX  = all,  excl. zeta < theta_L", CHI_ALL, 1 - 1 / (2 * N_ATOMS)),
+           ("   its antonym, the O corner", 1.0 - CHI_ALL, 1 - 1 / (2 * N_ATOMS)),
+           ("MIN  = some, excl. zeta <= -theta_L", CHI_SOME, 1 / (2 * N_ATOMS)),
+           ("   its antonym, no", 1.0 - CHI_SOME, 1 / (2 * N_ATOMS)),
+           ("REL  cut at the midpoint", chi_cut(0.0), 0.5),
+           ("   its antonym", 1.0 - chi_cut(0.0), 0.5),
+           ("REL  cut at s = 0.625", chi_cut(BOUNDS[2]), 0.625),
+           ("REL  cut at s = 0.375", chi_cut(BOUNDS[1]), 0.375)]
+ODD = next(j for j in range(B.shape[1]) if float((B[:, j] + B[:, j].flip(0)).abs().max()) < 1e-9)
+EVEN = next(j for j in range(B.shape[1]) if float((B[:, j] - B[:, j].flip(0)).abs().max()) < 1e-9)
+for label, chi, cut in ENTRIES:
+    kappa = B.T @ (W * chi)
+    tilt, width = float(kappa[ODD]), float(kappa[EVEN])
+    ratio = "-" if abs(tilt) < 1e-12 else f"{abs(width / tilt):.3f}"
+    print(f"    {label:<34}{cut:>9.3f}{tilt:>+10.5f}{width:>+10.5f}{ratio:>14}")
+print("    (a node lying exactly on a cut is half-weighted, which is what returns the midpoint")
+print("     cut's width to machine precision)")
+
+print()
+print("=" * 112)
+print("15. S-2 and Appendix C §5: HOW MANY UTILITY DIRECTIONS EACH OF THESE INVENTORIES FORCES.")
+print("    Appendix C §5 counts the span of the entries modulo the constant. A complementary pair")
+print("    spans 1, whatever its cut, so none of H2's inventories forces m = 2; the model carries")
+print("    m = 2 as a property of the architecture.")
+print("=" * 112)
+print(f"    {'inventory':<40}{'thresholds':>11}{'span mod 1':>12}{'kappa_1 + kappa_2':>19}")
+for label, chi in (("complete scale, MAX and its antonym", CHI_ALL),
+                   ("complete scale, MIN and its antonym", CHI_SOME),
+                   ("open scale, REL(midpoint) and antonym", chi_cut(0.0)),
+                   ("open scale, REL(s = 0.625) and antonym", chi_cut(BOUNDS[2]))):
+    pair = torch.stack([chi, 1.0 - chi], dim=1)
+    centred = pair - (W[:, None] * pair).sum(0) / W.sum()
+    span = int(torch.linalg.matrix_rank(centred.T @ (W[:, None] * centred), rtol=1e-9))
+    k1, k2 = B.T @ (W * chi), B.T @ (W * (1.0 - chi))
+    print(f"    {label:<40}{1:>11}{span:>12}"
+          f"{float((k1 + k2).abs().max()):>19.1e}")
+print("    (the last column is |kappa(chi) + kappa(1 - chi)|: B is orthogonal to the constant, so")
+print("     an antonym's loading is exactly the negative of the entry's, and the pair is a")
+print("     reflection about the prior's own coupling rather than a collapse of the kind Eq. (C3)")
+print("     reports for an odd m = 1 basis)")
