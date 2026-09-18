@@ -285,3 +285,123 @@ Code before prose (`agent.md` §5.3). Nothing below starts until P-1 to P-7 are 
 - `sections_3-6.md` §3's word table (lines 81–103) and the scope tiers (lines 41–77).
 - `background_sections.md` §1.2 and §1.3 Beat 2.
 - Whatever U12 turns up in §5.1, §6 and the background's forward pointers.
+
+---
+
+## 8. The user's answers (2026-09-17), and what they open
+
+> For P-5, state at an appropriate place that our utility level is a linear projection of the same
+> log quantity. In the background section, foreshadow the similarity; however, we should also
+> explicitly warn reader that, mathematically, projection does NOT imply equivalence and it is
+> dangerous to forget that difference. For P-6, all verdicts associated should be reworked; tell me
+> about it if you need further decisions/clarifications on my end.
+
+**P-5 settled.** The parallel is stated; the background foreshadows it; and the warning that a
+projection is not an equivalence is explicit, not left to the reader. **P-4** is settled with it:
+all four parts of G8 are stated.
+
+**P-6 settled in principle** — every verdict is reworked. The inventory is §9 below, and three
+choices inside it are raised as P-8 to P-10.
+
+### G10. The warning has an exact form, and it is measured
+
+$B$ is orthogonal to the constant: $B^{\mathsf T}W\mathbf 1 = 9.4\times10^{-17}$ (m = 2, the
+constant column dropped in Part A). So the utility level's drive is **invariant to an additive
+constant** on the field it reads: adding $3.7\cdot\mathbf 1$ to $\ell_0-\varphi_L$ leaves
+$c_{\textit{some}} = (9.119088, -24.367443)$ unchanged to $1.4\times10^{-14}$.
+
+- **The statement.** $S_1$ reads $\log L_0(s\mid u)$, normalizer included. The utility level reads
+  $B^{\mathsf T}W(\ell_0-\varphi_L)$: **rank 2, and blind to exactly the direction the normalizer
+  lives in.** Two of the scale's coordinates — the tilt and the width of Appendix C — and nothing
+  else. That is the warning in its exact form, and it is stronger than a caution: the projection
+  discards the one component that makes $\log L_0$ a normalized quantity.
+- **The nuance that must not be got wrong.** The invariance is a property of $c_y$, not of the
+  model. $\varphi_S^\ast$ is *not* defined up to a constant — Text cell 3 §9.1 establishes there is
+  no flat direction, and Appendix D §3's third reading turns on it — because the
+  $\sigma_S(\ell_0-\varphi_L)$ term of Eq. (15) carries the constant directly. Say the invariance of
+  the *coupling*; never write that the model is constant-invariant.
+
+### G11. The trade-off survives, but as a property of the plane, not of the five priors
+
+The floors table (Code Cell 4, already printed) gives the least Λ from which each criterion holds at
+every larger Λ, by α on Beta(α,1):
+
+| α | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 | 1024 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| q shift | 512 | 256 | 128 | 64 | 32 | 32 | 16 | 2 | 2 | 2 | 2048 |
+| q position | 2 | 2 | 2 | 2 | 64 | 256 | 512 | 1024 | — | — | — |
+
+The two floors run in opposite directions and cross at α = 16. **§4.5's opposing-floors result is
+untouched**, and so is the argument that a drain keyed to the alternative would not consume the
+headroom the position criterion needs. What is false is the Part D framing: at Λ = 512 the
+conjunction holds for α = 1 to 64 (7 of the 11 rows), because 512 lies above both floors over most
+of the range, and among Part D's five priors the position criterion holds under **all five**. So
+"prior concentration buys the first and spends the second" is a statement about the **floors**, and
+it can no longer be carried by "under every prior tested".
+
+### G12. The Λ = 512 picture, for the rework
+
+From Text cell 4b, already printed: the q position criterion holds under **five of five**; the q
+shift criterion under **three** (flat, Beta(3,1), delta-like); **no prior meets the shift criterion
+alone**. So the two conditions no longer separate the rows — the shift criterion is strictly the
+harder one, and the three that meet it are the three with the most prior mass on the all-region
+(0.0479, 0.1367, 0.9568), the shift deepening with that mass. The anti-exhaustive direction holds
+under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against four of five at
+Λ = 8.
+
+---
+
+## 9. Every verdict site, and what it needs (P-6)
+
+`sections_3-6.md` unless noted. "Planned" means `revisions.md` §4 already has an entry, written
+against the Λ = 8 count; those entries are corrected here, not only the outline.
+
+| # | Site | What is wrong | Status |
+|---|---|---|---|
+| V1 | Central claim, constructive claim (lines 21–32) | "Exactly one condition holds under every prior tested, never both and never neither" — false twice over at Λ = 512 | Planned rewrite; its **replacement** was written at 1 of 5 and needs 3 of 5 |
+| V2 | Scope tiers, Tier A criterion row (line 52) | "The spine of the constructive claim" | Planned: → "the verdict, and the evidence that the conjunction is reachable". Still right, and stronger |
+| V3 | §4.2 (lines 234–253) | The criterion itself survives; the guard's instances are fixed-θ_u controls | Planned, unaffected by P-6 |
+| V4 | §4.4 table and lines 277–289 (lines 265–297) | The whole section is the Λ = 8 table | **U10.** Needs P-10 |
+| V5 | §4.4 line 288, anti-exhaustive "four of five" | Two of five at Λ = 512 | **P-9** |
+| V6 | §4.5 (lines 298–317) | 22 cells → 33; band (1,512)–(128,2048) | Planned; **G11 adds** that the floors are now where the trade-off is stated |
+| V7 | §5.1 lines 329–338, "Why the pattern points at such a level" | Removed under R14 already; but its *claim* is what §6 item 3 still asserts | **P-8** |
+| V8 | §5.1 lines 339–343, Cremers corroboration, "four of five" | Moved to §4.4 under R7; the count changes with it | **P-9** |
+| V9 | §6 item 3 (lines 511–516) | "Satisfies only one of the two conditions … under every prior tested" — false | Planned rewrite; restate per P-8 |
+| V10 | §6 item 1 (lines 505–508) | Nothing wrong. It already says the entry "compet[es] additively against the world prior in the same log-density" | **Carries R18's commitment** with a clause; no rework |
+| V11 | `background_sections.md` line 189, §1.3 Beat 3 | "§5.1 reports … four of five priors"; R7 redirects it to §4.4 | **P-9** |
+| V12 | `background_sections.md` §1.3 Beat 2 (lines 166–185) | Nothing wrong; gains the RSA material | U11 |
+| V13 | `revisions.md` §2's table and scope sentence | Part D as of 2026-09-13 | U13 |
+| V14 | §6 item 4, §5.2, §5.6 | Depend on Q7/R16 | Belongs to T0–T13, not here |
+
+**Not a verdict site:** the notebooks. Under B10/C7 they report criteria and take no position, and
+Text cell 4b already states the Λ = 512 counts in that register. Nothing in `main.ipynb` or
+`appendix_E.ipynb` needs a verdict rework; U7 only re-executes them.
+
+---
+
+## 10. Further decisions this opens (P-8 to P-10)
+
+- **P-8. What replaces the trade-off claim, and where it is sourced.** The claim "prior
+  concentration buys the first condition and spends the second" motivates the drain keyed to the
+  alternative, and it appears at V7 and V9. By G11 it is true of the **floors** and false of the
+  five priors. Options: (i) restate it on the floors — §4.5's own result, unchanged — and drop
+  "under every prior tested" wherever it appears; (ii) withdraw it entirely and let R2's complexity
+  argument carry §5.1 alone; (iii) keep it only inside §4.5 and let §5.1 and §6 point there.
+  **Recommendation (i)**, because the result it rests on is untouched and printed, and because
+  removing it would leave §6 item 3 with nothing to say about what a level would change. This
+  rewrites an interpretive argument, so under `agent.md` §5.4 it is the user's.
+- **P-9. Which Λ the anti-exhaustive count is stated at** (V5, V8, V11). Four of five at Λ = 8, two
+  of five at Λ = 512. Stating it at Λ = 512 is consistent with the rest of §4.4 and makes the
+  direction **something raising Λ removes**, which is R18's counterforce doing visible work — but it
+  weakens the Cremers tie, which background §1.3 Beat 3 offers as "a second, independent reason".
+  Options: Λ = 512 only; Λ = 8 only, labelled; or both, as the contrast. **Recommendation: both**,
+  in one sentence — it costs about 15 words and it is the cleanest demonstration of the commitment.
+- **P-10. Whether §4.4 reports one Λ or two.** The notebook keeps both (Part D at Λ = 8, Text cell
+  4b at Λ = 512). Reporting only Λ = 512 is cheaper and is where the verdict now lives; reporting
+  both is what makes the counterforce visible in the evaluation rather than only asserted in §3.2.
+  **Recommendation: the Λ = 512 table, with Λ = 8 as a one-line contrast**, which resolves P-9 the
+  same way and joins P-6 to R18.
+
+**Tasks these change.** U9 gains the P-5 statement in §3.3 and the exact warning of G10; U11 gains
+the background foreshadowing and the same warning; U12 is no longer a sweep for stragglers but the
+worked list V1–V13 above; U10 absorbs V4–V6.

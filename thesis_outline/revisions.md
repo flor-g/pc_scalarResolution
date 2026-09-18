@@ -98,6 +98,8 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R16 | **Q7.** §5.2 states H1 (expressions with unstable atomicity carry weaker lexical strength) and H2 (open-scale adjectives behave like *some*; complete-scale adjectives like endpoint(s) + *some*), then reports where the model's prediction matches Xiang et al.'s data and where it does not, **making no claim about the nature of the mismatch**. Every number it quotes is printed by a new Appendix F and Code Cell F in `main.ipynb`. Tasks and blocking decisions: `procedure_records/scale_classes_hypothesis.md` §§7–10. | user (2026-09-17) |
 | R17 | **S-2 and S-7.** §5.2 models the two **absolute** classes only. The relative class is not modelled, so no context cut *t* enters and Appendix A is untouched; H2 is stated in full and its open-scale half is left untested. The κ parity paragraph stays in §5.2, restated at n = 4, where it states the symmetry the user's instinct doubts. That instinct — that the two endpoints are not symmetric, the **0** boundary being the lexical level's θ_L and the **1** boundary an alternatives level's θ_A — is stated once, as an instinct, with no promise and no claim that it accounts for the mismatch (`decisions.md` **O14**). | user (2026-09-17) |
 | R18 | **The Λ–ℓ₀ counterforce is stated as a commitment.** Under a strong Λ the q shift criterion is met under more priors, and the mechanism is that Λ and ℓ₀ counteract each other. The reader is told that this is a **choice not forced by construction**: ℓ₀ could have been placed at g_S, which would not have let the two counteract as directly. The reasons given are (a) putting ℓ₀ at g_S is messy node-wise and leaves the architecture less clean, and (b) it is intuitive to hypothesize that the world prior and lexical strength have counteractive dynamics. §§3–4 also say whether the commitment has a parallel in RSA. `decisions.md` **A3** is confirmed, not reopened. Tasks U0–U14 and the blocking decisions P-1 to P-7: `procedure_records/ell0_placement_and_counterforce.md`. | user (2026-09-17) |
+| R19 | **The RSA projection parallel is stated, with an explicit warning.** The paper says that the utility level reads a **linear projection of the same log quantity** S₁ reads, log L₀(s|u). The background **foreshadows** the similarity. Both places warn the reader explicitly that, mathematically, **a projection does not imply an equivalence**, and that forgetting the difference is dangerous. The warning has an exact form: BᵀW1 = 0, so the coupling is rank 2 and blind to the constant direction — the one the normalizer lives in (G10 of the record). The coupling is constant-invariant; **the model is not** (§9.1, no flat direction). | user (2026-09-17) |
+| R20 | **Every verdict is reworked on the Λ = 512 data.** The conjunction holds under three of five priors, not none and not one, and the q position criterion under all five, so no prior meets the shift criterion alone. Sites V1–V13 and the three choices this opens (P-8 to P-10) are in the record §§9–10. §4.5's opposing floors are untouched and are where the trade-off claim is now sourced. The notebooks are **not** verdict sites (B10/C7). | user (2026-09-17) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
 commitment), A14 (conventionalized), A16 and B7 (q is a comparison read-out; the delta is the
@@ -205,6 +207,14 @@ lines 13–14 now state only its own target.
     architecture lacks (item 2; to be argued, not derived).
 
   "The pattern is the shape of its absence" is withdrawn (R14).
+
+  **2026-09-17 (R20, site V1).** The replacement above was written when the conjunction held
+  under **one** of Part D's five priors. On the Λ = 512 data it holds under **three**, and the
+  q position criterion under all five, so the positive thesis is stronger and the sentence being
+  replaced is false twice over, not once. R2's complexity basis is unchanged and needs no new
+  decision; only its scope sentence moves. Consider adding the one structured fact that survives:
+  **no prior meets the shift criterion alone**, so the two conditions are nested rather than
+  opposed among these five.
   The specification-not-built sentence (lines 28–32) survives unchanged.
 - **Lines 34–37, standing qualification.** Survives.
 
@@ -246,6 +256,12 @@ Replace with §3 above.
   is already fixed for it.
 - **§3.3, the g_S bullet.** One clause: g_S carries no tonic offset **because** ℓ₀ sits in g_L, with
   the pointer to §3.2. The bullet currently reads as though g_S having no offset were given.
+- **§3.3, "The chain terminates in utility" (R19).** This is the appropriate place for the
+  projection statement, because it is where the coupling lives: the utility level reads
+  c_y = BᵀW(ℓ₀ − φ_L), **a linear projection of the same log quantity RSA's S₁ reads**. Attach the
+  warning here, in its exact form (G10): rank 2, BᵀW1 = 0, blind to the constant the normalizer
+  occupies — so the similarity is a projection and **not** an equivalence, and treating it as one is
+  dangerous. Roughly 45 words, part of P-3's total.
 - **Budget.** About 90 words in §3.2 and 20 in §3.3 — **blocked on P-3**, and §3's word table is not
   edited until it is answered.
 - **Not a reopening.** Every finding behind this block is a reason **for** A3 as it stands
@@ -323,10 +339,23 @@ and §4.1 and §4.4 need it.
 - **Add one sentence** pointing to §4.6: the verdict is shown in the dynamics, not only in closed
   form.
 
+**2026-09-17 (R20, sites V4 and V5): this entry is itself stale.** It was written against the Λ = 8
+table. Rebuild the section on Text cell 4b's Λ = 512 rows, which are already printed and need no new
+code: the q position criterion under **five of five**, the q shift criterion under **three** (flat,
+Beta(3,1), delta-like), **no prior meeting the shift criterion alone**, and the shift deepening with
+prior mass on the all-region (0.0479, 0.1367, 0.9568). Whether the section carries one Λ or two is
+**P-10**; the anti-exhaustive count — four of five at Λ = 8, **two of five** at Λ = 512 — is **P-9**.
+The Eq. (24) mechanism paragraph (lines 290–297) survives either way.
+
 ### §4.5 (lines 298–317)
 
 - **The band.** 22 cells → **33**; band (8,128)–(128,2048) → **(1,512)–(128,2048)**. The
   delta-like row is inside the band, at its lower edge in Λ.
+- **2026-09-17 (R20, site V6).** §4.5 is now where the trade-off claim is **sourced**, not merely
+  illustrated. The floors table (Code Cell 4, printed) gives q shift 512/256/128/64/32/32/16/2/2/2/2048
+  and q position 2/2/2/2/64/256/512/1024/—/—/— over α = 1…1024: opposing directions, crossing at
+  α = 16. At Λ = 512 both hold for α = 1 to 64, which is why Part D's five rows no longer show the
+  tension. Keep the floors sentence and let §5.1 and §6 point here (P-8).
 - **Floors.**
   - First condition: Λ ≥ 512 at α = 1, 64 at α = 8, 16 at α = 64, and 2 from α = 128 to 512.
     At α = 1024 it reads 2048, which is the saturated row.
@@ -367,6 +396,12 @@ Evidence for §5.3, reported without interpretation:
 - **Lines 329–338, "Why the pattern points at such a level". Removed (R14).** The V is reported in
   §4.5 and motivates nothing here.
 - **Lines 339–343, the Cremers corroboration. Removed from §5.1 (R7).** The parallel moves to §4.4.
+
+  **2026-09-17 (R20, sites V7 and V8).** The removed bullet's *claim* — prior concentration buys
+  the first condition and spends the second — still stands in §6 item 3, and on the Λ = 512 data it
+  is false of the five priors and true of the **floors** (record G11: the two floors run in opposite
+  directions and cross at α = 16; §4.5's result is untouched). Where that claim is sourced from now
+  is blocking decision **P-8**. The Cremers count moving with it is **P-9**.
 - **Add after lines 388–397: the read-out link (R4, about 40 words).** Content in §5 below, item 1.
 - **Lines 398–420, what is not derived.** Survives. Add to its list that an end to learning short
   of the slow maximizer is also a claim about the unbuilt level (item 2).
@@ -595,6 +630,13 @@ Content in §5 below, items 2 and 3.
   any end to learning other than a maximizer the slow flow never reaches, are what a level
   representing alternatives would change. The rest of item 3 (the design and what is not derived)
   survives.
+
+  **2026-09-17 (R20, site V9).** "Under every prior tested" must go whatever P-8 decides: at
+  Λ = 512 the position criterion holds under all five and the conjunction under three. If P-8 takes
+  option (i) the clause becomes a pointer to §4.5's floors, not to Part D. **Item 1 (lines 505–508)
+  needs no rework and is the natural home for one clause of R18** — it already says the entry
+  "compet[es] additively against the world prior in the same log-density", which is the counterforce
+  named without being flagged as a commitment.
 - **Add a clause** for item 3 of §5 below (not posable at the computational level), if §6's budget
   allows.
 - **Item 4 (lines 517–518). Depends on Q7.** It says the threshold semantics predicts "an
@@ -797,11 +839,17 @@ table's commitment 3 row at line 391).
   RSA plays the role of Eq. (41)'s Λ_crit ≈ α log 2n**, the exchange rate that quantifies the
   counterforce. That last point is the part of the commitment with no parallel at all, and is the
   one worth the words.
-- **The parallel that is not free to state: P-5.** The tightest structural parallel is that S₁ reads
-  log L₀(s|u) while the utility level reads BᵀW(ℓ₀ − φ_L), a linear projection of the same log
-  quantity. It invites exactly the reading line 373 tells the writer to block ("do not equate this
-  mapping with RSA's social recursion"). Blocked on the user (P-4, P-5 of
-  `procedure_records/ell0_placement_and_counterforce.md`).
+- **The projection parallel, foreshadowed here and warned about (2026-09-17, R19; P-4 and P-5
+  settled).** S₁ reads log L₀(s|u); the utility level reads BᵀW(ℓ₀ − φ_L), a **linear projection of
+  the same log quantity**. The background foreshadows the similarity and, in the same breath, warns
+  that **a projection is not an equivalence** and that forgetting the difference is dangerous. Give
+  the warning its exact form rather than as a caution: BᵀW1 = 0 (9.4e-17), so the coupling is rank 2
+  and **blind to the constant direction — exactly where log L₀'s normalizer lives**; adding 3.7·1 to
+  the field leaves c_y unchanged to 1.4e-14. Two coordinates of the scale, the tilt and the width of
+  Appendix C, and nothing else. **The nuance that must not be got wrong:** the invariance is of the
+  *coupling*, not of the model — φ_S\* is not defined up to a constant (§9.1 has no flat direction,
+  and Appendix D §3's third reading turns on it). This satisfies line 373's instruction by making
+  the disanalogy precise, rather than by leaving the parallel out.
 - **§1.7 (lines 309–334), the answer to Q3b.**
   - The outline says of Q3b "Do not answer it here. §5.2 answers it from the parity structure of the
     utility basis". That overstates what §5.2 can now claim. Parity fixes the entry's width loading,
