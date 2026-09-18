@@ -97,6 +97,7 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R15 | **Q6, option (i).** The Cremers parallel stays with q, and item 1's sentence is corrected. Under q the positive shift is the tempering. Under the delta read-out the mode's upward movement is the utility level's, and is not a probability of *all*. **Why a similar movement emerges under the delta read-out is to be investigated** (open task in the same record). | user (2026-09-13) |
 | R16 | **Q7.** §5.2 states H1 (expressions with unstable atomicity carry weaker lexical strength) and H2 (open-scale adjectives behave like *some*; complete-scale adjectives like endpoint(s) + *some*), then reports where the model's prediction matches Xiang et al.'s data and where it does not, **making no claim about the nature of the mismatch**. Every number it quotes is printed by a new Appendix F and Code Cell F in `main.ipynb`. Tasks and blocking decisions: `procedure_records/scale_classes_hypothesis.md` §§7–10. | user (2026-09-17) |
 | R17 | **S-2 and S-7.** §5.2 models the two **absolute** classes only. The relative class is not modelled, so no context cut *t* enters and Appendix A is untouched; H2 is stated in full and its open-scale half is left untested. The κ parity paragraph stays in §5.2, restated at n = 4, where it states the symmetry the user's instinct doubts. That instinct — that the two endpoints are not symmetric, the **0** boundary being the lexical level's θ_L and the **1** boundary an alternatives level's θ_A — is stated once, as an instinct, with no promise and no claim that it accounts for the mismatch (`decisions.md` **O14**). | user (2026-09-17) |
+| R18 | **The Λ–ℓ₀ counterforce is stated as a commitment.** Under a strong Λ the q shift criterion is met under more priors, and the mechanism is that Λ and ℓ₀ counteract each other. The reader is told that this is a **choice not forced by construction**: ℓ₀ could have been placed at g_S, which would not have let the two counteract as directly. The reasons given are (a) putting ℓ₀ at g_S is messy node-wise and leaves the architecture less clean, and (b) it is intuitive to hypothesize that the world prior and lexical strength have counteractive dynamics. §§3–4 also say whether the commitment has a parallel in RSA. `decisions.md` **A3** is confirmed, not reopened. Tasks U0–U14 and the blocking decisions P-1 to P-7: `procedure_records/ell0_placement_and_counterforce.md`. | user (2026-09-17) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
 commitment), A14 (conventionalized), A16 and B7 (q is a comparison read-out; the delta is the
@@ -134,6 +135,8 @@ notebook reports Part D's four diffuse priors at Λ = 8, and in Text cell 4b all
 scope sentence above therefore understates what the notebook now shows, and §§4.4, 4.5 and 6 below
 rest on it. Rebuilding those arguments on the Λ = 512 data is open.
 
+**2026-09-17.** That rebuild is now task **U10** of `procedure_records/ell0_placement_and_counterforce.md`, and it needs no new code: Text cell 4b and Code Cell 2b already print every row. The count moves to **three of five** (flat, Beta(3,1), delta-like), which under `agent.md` §5.4 is a headline change and is blocking decision **P-6** there. The §4.4 entry in §4 below was written against the Λ = 8 table and is stale in the same way; U10 corrects it too.
+
 Two further findings that change the outline as much as the headline does:
 
 - **The utility level's own contribution is negative under all five priors** (reach.md F8, now
@@ -169,6 +172,10 @@ Two further findings that change the outline as much as the headline does:
 | 5.6 Predictions (was 5.4) | 50 | 60 | The timescale separation as a prediction |
 | **6. Conclusion** | **150** | **150** | |
 | **Total** | **2,400** | **3,200** | |
+
+**Pending, 2026-09-17 (R18, blocking decision P-3).** The Λ–ℓ₀ commitment needs about 90 words in
+§3.2, 20 in §3.3, 30 in §4.1 and 50 in background §1.3. Whether that is paid by raising the budget
+again or by trimming is unanswered, and **this table is not edited until it is**.
 
 **Renumbering this causes.** Limits and Predictions move from §5.3 and §5.4 to §5.5 and §5.6, so
 four references change: `sections_3-6.md` lines 57, 63 and 77 (§5.3 → §5.5) and
@@ -222,6 +229,28 @@ lines 13–14 now state only its own target.
 
 Replace with §3 above.
 
+### §3.2 (lines 124–141) and §3.3's g_S bullet (lines 155–165): new, 2026-09-17 (R18)
+
+- **§3.2, one bullet after "The price of a soft lexicon".** The commitment: ℓ₀ enters through g_L
+  (Eq. 9), so the entry and the prior meet as a **difference** at one error unit,
+  ε_L = φ_L − ℓ₀ + φ_S, and the level above reads that difference as c_y = BᵀW(ℓ₀ − φ_L). ℓ₀ could
+  have entered at g_S instead; that is `decisions.md` **A3**, and it is a choice, not a consequence.
+  Under the alternative the two never meet at a node, and the coupling becomes −BᵀW(ℓ₀ + φ_L) — the
+  entry enters the same way under both, and the whole difference is the sign the prior carries
+  against it. Reasons (a) and (b) of R18, plus the third: under g_L the literal listener is a fixed
+  point of the network (σ_S → ∞), and under g_S it is not reachable at any σ. Detail and numbers go
+  to Appendix D (P-1); the body quotes at most one.
+- **§3.2, same bullet or the one above it (P-4).** Λ → ∞ is not merely "a hard truth-conditional
+  constraint" but **RSA's literal listener**: log L₀ = log P(s) + log⟦u⟧(s) with log⟦u⟧ ∈ {0, −∞},
+  and φ_S = ℓ₀ − Λχ_y is that with −∞ replaced by −Λ. One clause; the background's §1.2 notation
+  is already fixed for it.
+- **§3.3, the g_S bullet.** One clause: g_S carries no tonic offset **because** ℓ₀ sits in g_L, with
+  the pointer to §3.2. The bullet currently reads as though g_S having no offset were given.
+- **Budget.** About 90 words in §3.2 and 20 in §3.3 — **blocked on P-3**, and §3's word table is not
+  edited until it is answered.
+- **Not a reopening.** Every finding behind this block is a reason **for** A3 as it stands
+  (`agent.md` §3.1); A3 gains a dated amendment (U2) and stays settled.
+
 ### §3.4 (lines 166–196)
 
 - **Line 170.** τ_ε ≪ τ_φ ≪ τ_θ → τ_ε ≤ τ_φ/(4 λ_max(H)) ≪ τ_φ ≪ τ_θ (A11, Text cell 3
@@ -259,6 +288,7 @@ and §4.1 and §4.4 need it.
 - **Lines 226–229.** "The θ_u=0 control" → "the tempered control". Add that it is also where
   learning starts.
 - **Line 230.** q_H is the settled belief *read through q*. Point to §3.6.
+- **Lines 222–225 (2026-09-17, R18).** The sentence that q_lit "is a fixed point of this network rather than an external construction" is true **because** ℓ₀ sits in g_L (A3). Under the g_S placement ℓ₀ − φ_L is reachable at no σ, so the sentence that removes the "built to be beaten" objection would not be available. Add the dependency in a clause and point to §3.2.
 
 ### §4.2 (lines 234–253)
 
@@ -754,6 +784,24 @@ table's commitment 3 row at line 391).
   the read-out q against the literal listener, with the tempering named. It drops "treats the fact as
   corroboration" and "what avoids it is a drain keyed to the alternative". The RSA side (lines
   183–188) survives.
+- **Lines 166–185, §1.3 Beat 2, and §1.2 (2026-09-17, R18).** Beat 2 already states the inverted
+  parallel — wRSA makes *the prior* defeasible against the utterance, this architecture makes *the
+  lexical entry* defeasible against the prior. Extend it, about 50 words, with what RSA has and does
+  not have. Has: the Λ → ∞ limit **is** RSA's literal listener (§3.2 states it there too); and a
+  "where does the prior enter" degree of freedom of its own, resolved the other way, P(s) appearing
+  in L₀ and again in L₁ ∝ S₁(u|s)P(s) — a contrast, in one sentence, possibly better placed in §1.2
+  where the three equations already sit. Does not have: any single counterpart to a finite Λ. RSA's
+  ways of letting prior and semantics trade off use a **latent variable** rather than a strength —
+  lexical uncertainty (Potts et al., 2016), threshold uncertainty (Lassiter & Goodman, hence Xiang
+  et al.'s LG model, which ties this to §5.2), and wonkiness (Degen et al., 2015) — and **nothing in
+  RSA plays the role of Eq. (41)'s Λ_crit ≈ α log 2n**, the exchange rate that quantifies the
+  counterforce. That last point is the part of the commitment with no parallel at all, and is the
+  one worth the words.
+- **The parallel that is not free to state: P-5.** The tightest structural parallel is that S₁ reads
+  log L₀(s|u) while the utility level reads BᵀW(ℓ₀ − φ_L), a linear projection of the same log
+  quantity. It invites exactly the reading line 373 tells the writer to block ("do not equate this
+  mapping with RSA's social recursion"). Blocked on the user (P-4, P-5 of
+  `procedure_records/ell0_placement_and_counterforce.md`).
 - **§1.7 (lines 309–334), the answer to Q3b.**
   - The outline says of Q3b "Do not answer it here. §5.2 answers it from the parity structure of the
     utility basis". That overstates what §5.2 can now claim. Parity fixes the entry's width loading,
@@ -1020,6 +1068,7 @@ notebooks do not have.
 | Exposure-only θ\* (−11.2844, −44.1766, −65.7004, −28.4375) | Code Cell B, ALTERNATIVE SPACES |
 | §5.2's re-examination: contributions, leaks, loadings, illustrative θ\* | `audits/2026-09-13-scale-structure/output.txt` (an audit script, not a cell) |
 | The scale classes against Xiang et al. (2022): R² by class, Λ per class, the image-type effect, the class profiles | `audits/2026-09-17-scale-classes/` (audit scripts, not cells; class (e) until a cell prints them) |
+| Where ℓ₀ enters: the two couplings, the 2BᵀWℓ₀ identity, the σ-limit table, Part D under both placements | `audits/2026-09-17-ell0-placement/` (an audit script, not a cell; class (e) until Code Cell D prints them, task U3) |
 | Q2's Part D and Λ = 512 rows: the modes, the mode shift in s and in grid steps, the two mode criteria | `main.ipynb` Code Cells 2 and 2b, the mode criteria block |
 | Q2's plane counts (67, 59, 13 against 74, 59, 33), the 35 disagreeing cells, the four unmoved modes, the 5.6e-5 gap, and the V under both read-outs | Code Cell 4, `plane_summary` |
 | Q6's tilt/width split, the 50 and 67 up/down counts, Eq. (24)'s halving and the limit field | Code Cell C, `utility_split_report`; Appendix C §8 |

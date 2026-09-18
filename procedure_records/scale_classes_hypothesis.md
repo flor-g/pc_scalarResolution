@@ -401,6 +401,12 @@ None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed
 
 Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are answered.
 
+**Ordering, 2026-09-17.** The user has put another change ahead of this list: the Λ–ℓ₀
+counterforce and where ℓ₀ enters, `procedure_records/ell0_placement_and_counterforce.md`, tasks
+U0–U14. T0–T13 follow it. The two lists touch no common cell — that change works on Appendix D,
+Code Cell D and §§3–4, this one adds Appendix F and rewrites §5.2 — but both renumber nothing and
+both regenerate the ToC, so whichever runs second re-checks cell indices before T4/U5.
+
 - [ ] **T0. Checkpoint.** `git status` clean, record `git rev-parse --short HEAD`. The tree is clean
       at `acabb7e` as this list is written.
 - [ ] **T1. The data file** (S-3 settled: yes). Add the derived aggregate under a new `data/xiang_2022/`

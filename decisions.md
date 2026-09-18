@@ -64,6 +64,33 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: none recorded.
 - Bogacz status: instance under restriction (ℓ₀ fixed), see D3.
 - Depends on it: Eqs. (9), (11), (15); Appendix D.
+- **Dated finding, 2026-09-17 (evidence only; A3 is confirmed, not reopened).** The alternative was
+  measured rather than argued: `audits/2026-09-17-ell0-placement/` runs variant B (g_L = −φ_S,
+  g_S = ℓ₀ + θ_u Bφ_u) against the model, everything else held.
+  - The placement changes exactly one quantity, the utility level's drive: c_y = BᵀW(ℓ₀ − φ_L) here
+    against −BᵀW(ℓ₀ + φ_L) there. The two differ by exactly 2BᵀWℓ₀ (max 2.8e-14 over the three
+    entries) and sum to −2BᵀWφ_L (1.1e-14), so **the entry enters both the same way and the whole
+    difference is the sign the prior carries against it**. At σ_L = σ_S the two give the same φ_S
+    given φ_u (1.8e-15); φ_u\* differs by 12.3997 at θ_u = 1, and φ_S\* by 3.9996.
+  - **Under g_L the literal listener is a fixed point of the network** (φ_S\* → ℓ₀ − φ_L as
+    σ_S → ∞, 2.7e-5 at σ_S = 1e6); **under g_S it is reachable at no σ** (σ_S → ∞ gives −φ_L,
+    σ_L → ∞ gives ℓ₀ + θ_u Bφ_u). This is a third theoretical reason, and Text cell 4's Part C
+    baseline sentence depends on it.
+  - The two are distinguishable as soon as σ_L ≠ σ_S: the φ_S difference at a shared φ_u is exactly
+    (σ_L − σ_S)ℓ₀/S (6.3063 predicted, 6.3063 measured at σ_L = 2). So a later precision-bearing
+    phase tests the placement.
+  - The evaluation depends on it: at Λ = 8 the anti-exhaustive shift for *some* is two to three
+    orders of magnitude larger under g_S (+0.3405 against +0.0004 on Beta(1,3)), and at Λ = 512 the
+    conjunction holds under 3 of 5 priors here against 2 of 5 there.
+  - The user (2026-09-17) gave two further reasons for the placement — (a) ℓ₀ at g_S is messy
+    node-wise and leaves the architecture less clean; (b) it is intuitive to hypothesize that the
+    world prior and lexical strength have counteractive dynamics — and decided that the paper states
+    the placement as a commitment (`revisions.md` **R18**). **Folding (a), (b) and the third reason
+    into the entry's reason fields, and widening "Depends on it" to name c_y, Text cell 4 Part C's
+    baseline sentence and the Λ = 512 result, is task U2 of
+    `procedure_records/ell0_placement_and_counterforce.md`, pending its blocking decision P-7.**
+  - Variant B's fields are a **counterfactual manipulation (C8)**, not a control: no setting of the
+    model produces them. Any cell that prints them must label them so.
 
 ### A4. g_S = θ_u B φ_u with θ_u scalar and B fixed; B is a single projection
 - Status: Settled
