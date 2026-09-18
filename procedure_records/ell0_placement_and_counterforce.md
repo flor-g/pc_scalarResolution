@@ -287,7 +287,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
       - **Verification.** `main.ipynb` re-executed: **0 errors, 8 figures, 14/14, 250 s**. Against
         U3's commit, cells 20 (markdown) and 21 differ, and Code Cell 2b's output differs in 12
         lines, every one of them a `cost:` line.
-- [x] **U5. Anchors and ToC** (2026-09-18). Commit `PENDING`. The `appd-5` anchor was already inline
+- [x] **U5. Anchors and ToC** (2026-09-18). Commit `4b0eb71`. The `appd-5` anchor was already inline
       in the heading from U4 (coupling 6). Cell 0's Appendix D rows were **derived from cell 20's own
       headings and `\tag{}`s** rather than typed, so the titles and equation ranges cannot drift from
       the appendix: the header row now carries the new title and **(D1)–(D7)**, row 4 the rewritten
