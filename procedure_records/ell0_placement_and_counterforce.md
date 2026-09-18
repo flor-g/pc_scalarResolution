@@ -4,9 +4,10 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 2026-09-17, before T0–T13 of `scale_classes_hypothesis.md`. Pattern: `agent.md` §5.3.
 
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
-lists are live; the prefixes keep them apart. **Status: nothing started.** The user's "do not start
-the edits and implementations yet" from the §5.2 instruction has not been lifted, and P-1 to P-7
-below are unanswered.
+lists are live; the prefixes keep them apart.
+
+**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0, U1 and U2 are closed. U3 is the next
+task and is the first edit to `main.ipynb`.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -218,13 +219,13 @@ differ.
 
 ## 6. Tasks, in order
 
-Code before prose (`agent.md` §5.3). Nothing below starts until P-1 to P-7 are answered.
+Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onward are unblocked.
 
-- [ ] **U0. Checkpoint.** `git status` clean, record `git rev-parse --short HEAD`. Clean at
-      `b548e0a` as this list is written.
-- [ ] **U1. Settle P-1 to P-7 with the user.** Record each answer here verbatim, as §8 of
-      `scale_classes_hypothesis.md` does.
-- [ ] **U2. `decisions.md`.** Amend **A3** per P-7: the two user reasons dated 2026-09-17, the third
+- [x] **U0. Checkpoint** (2026-09-17). Clean at `b548e0a` when the list was written; clean again at
+      `90a9352` before U2.
+- [x] **U1. Settle the blocking decisions** (2026-09-17). P-4 and P-5 in §8, P-1, P-2, P-3, P-7,
+      P-8, P-9, P-10 in §11, each verbatim. Commit `1c473d8`, `90a9352`.
+- [x] **U2. `decisions.md`** (2026-09-17, P-7 = amend). **A3 amended:** the two user reasons dated 2026-09-17, the third
       reason (G4), the evidence line pointing at `audits/2026-09-17-ell0-placement/`, and the
       widened "Depends on it". Add a dated finding under **B1/B2** if P-6 changes the criterion's
       reported scope. Register-E entries for every quantity a cell newly prints (U3), each classed
@@ -405,3 +406,43 @@ Text cell 4b already states the Λ = 512 counts in that register. Nothing in `ma
 **Tasks these change.** U9 gains the P-5 statement in §3.3 and the exact warning of G10; U11 gains
 the background foreshadowing and the same warning; U12 is no longer a sweep for stragglers but the
 worked list V1–V13 above; U10 absorbs V4–V6.
+
+
+---
+
+## 11. The user's answers, round three (2026-09-17), verbatim
+
+> P-8: do as you recommended. P-9: both, as you recommend. P-10: do as you recommend. P-1: printed
+> by Code Cell D. P-2: yes, 3.2 as the host. P-3: word budget is fine. P-7: amend.
+
+**Every blocking decision is now answered.** In the form they take in the tasks:
+
+| | Settled as |
+|---|---|
+| **P-1** | The alternative placement is **reported with numbers, printed by Code Cell D** (option (ii)). U3 is live; until it runs, A3's numbers are class (e) under `agent.md` §3.3. |
+| **P-2** | **§3.2 hosts the commitment**; §3.3 takes the g_S clause and, under R19, the projection statement. |
+| **P-3** | **The budget is raised, not trimmed.** §§3–6 go 3,200 → **3,450**; background §1.3 goes 340 → about 415. Applied to `revisions.md` §3. |
+| **P-4, P-5** | All four parts of G8 are stated; the background foreshadows; the warning is explicit and takes G10's exact form. R19. |
+| **P-6** | Every verdict reworked; sites V1–V13. R20. |
+| **P-7** | **Amend A3 in place.** Done (U2). |
+| **P-8** | **Option (i):** the trade-off claim is restated on the **floors** (§4.5, G11) and "under every prior tested" goes wherever it appears — V7 and V9. §5.1 and §6 point at §4.5 for it. |
+| **P-9** | **Both counts**, in one sentence: four of five at Λ = 8, two of five at Λ = 512, the direction being what raising Λ removes. Applies at V5, V8 and V11. |
+| **P-10** | **§4.4 carries the Λ = 512 table with Λ = 8 as a one-line contrast.** This is also how P-9 is discharged, so P-6's rework and R18's commitment become one piece of writing. |
+
+**Found while applying P-3.** `revisions.md` §3's §5 subtotal read 980 after S-6 raised §5.2 from
+200 to 400; the correct figure is 1,180 (the grand total 3,200 was right). Corrected in the same
+pass and noted under the table.
+
+**What U3 must now print**, given P-1 and the decisions above — the numbers §3.2, §3.3, §4.1 and
+Appendix D will quote:
+
+1. c_y under both placements, per utterance, and the two identities of G1 (2BᵀWℓ₀ and −2BᵀWφ_L).
+2. The σ_L = σ_S agreement at a shared φ_u (1.8e-15) and the (σ_L − σ_S)ℓ₀/S difference at σ_L = 2.
+3. The σ-limit table of G4: ℓ₀ − φ_L reached under g_L and under no σ under g_S.
+4. **R19's warning, which is a new requirement on U3:** BᵀW1, and c_y's invariance to an additive
+   constant on the field. Neither is in the audit's eight blocks — they were measured separately
+   and must be added.
+5. Part D under both placements (G6), at Λ = 8 and Λ = 512, since P-10 puts both Λ in §4.4 and
+   P-1 puts the alternative's numbers in a cell.
+
+All of it labelled **counterfactual manipulation (C8)**, never "control".

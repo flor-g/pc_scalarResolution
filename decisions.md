@@ -56,14 +56,33 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### A3. ℓ₀ sits in g_L: g_L(φ_S) = ℓ₀ − φ_S
 - Status: Settled
-- Decided by: user accepted the relocation (2026-09-06)
+- Decided by: user accepted the relocation (2026-09-06); reasons extended by the user (2026-09-17)
 - Decision: the base prior enters as the reference point of the lexical complement (Eq. 9), not in
-  g_S.
-- Theoretical reason: x ↦ ℓ₀ − x is the order-reversing affine involution on log-weights, the
-  transport of set complement; g_L′ = −I, so ε_L reaches φ_S inhibitorily.
-- Implementational reason: none recorded.
+  g_S. **It is a choice, not a consequence**, and the paper states it as a commitment
+  (`thesis_outline/revisions.md` R18).
+- Theoretical reason: four, the first recorded in 2026-09-06 and the rest on 2026-09-17.
+  1. x ↦ ℓ₀ − x is the order-reversing affine involution on log-weights, the transport of set
+     complement; g_L′ = −I, so ε_L reaches φ_S inhibitorily. Its fixed point ℓ₀/2 is a field the
+     model settles on (Appendix D §3).
+  2. **The user (a).** Putting ℓ₀ at g_S is messy node-wise and the architecture is less clean. In
+     exact form: under g_L the entry and the prior meet as one error unit's activity,
+     ε_L = φ_L − ℓ₀ + φ_S; under g_S they never meet, and ℓ₀ − φ_L is no unit's activity.
+  3. **The user (b).** It is intuitive to hypothesize that the world prior and lexical strength have
+     counteractive dynamics. This has empirical content: the two placements are distinguishable as
+     soon as σ_L ≠ σ_S, the φ_S difference at a shared φ_u being exactly (σ_L − σ_S)ℓ₀/S.
+  4. **Agent, from the measurement below.** Under g_L the literal listener ℓ₀ − φ_L is a fixed point
+     of the network (σ_S → ∞); under g_S it is reachable at no σ. Text cell 4 Part C's baseline, and
+     the sentence that it is not an external construction built to be beaten, depend on this.
+- Implementational reason: none.
 - Bogacz status: instance under restriction (ℓ₀ fixed), see D3.
-- Depends on it: Eqs. (9), (11), (15); Appendix D.
+- Depends on it: Eqs. (9), (11), (15), and **Eq. (16)'s coupling c_y = BᵀW(ℓ₀ − φ_L)**, which is the
+  one quantity the placement changes; Appendix D; **Text cell 4 Part C's baseline** (reason 4);
+  **the Λ = 512 result** — at Λ = 8 the anti-exhaustive shift for *some* is two to three orders of
+  magnitude larger under g_S, and at Λ = 512 the conjunction holds under 3 of 5 priors here against
+  2 of 5 there.
+- Evidence: `audits/2026-09-17-ell0-placement/`, commit b548e0a; to be printed by Code Cell D
+  (task U3 of `procedure_records/ell0_placement_and_counterforce.md`, P-1 settled by the user
+  2026-09-17). Until that cell runs, the numbers are class (e) under §3.3.
 - **Dated finding, 2026-09-17 (evidence only; A3 is confirmed, not reopened).** The alternative was
   measured rather than argued: `audits/2026-09-17-ell0-placement/` runs variant B (g_L = −φ_S,
   g_S = ℓ₀ + θ_u Bφ_u) against the model, everything else held.
@@ -82,13 +101,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   - The evaluation depends on it: at Λ = 8 the anti-exhaustive shift for *some* is two to three
     orders of magnitude larger under g_S (+0.3405 against +0.0004 on Beta(1,3)), and at Λ = 512 the
     conjunction holds under 3 of 5 priors here against 2 of 5 there.
-  - The user (2026-09-17) gave two further reasons for the placement — (a) ℓ₀ at g_S is messy
-    node-wise and leaves the architecture less clean; (b) it is intuitive to hypothesize that the
-    world prior and lexical strength have counteractive dynamics — and decided that the paper states
-    the placement as a commitment (`revisions.md` **R18**). **Folding (a), (b) and the third reason
-    into the entry's reason fields, and widening "Depends on it" to name c_y, Text cell 4 Part C's
-    baseline sentence and the Λ = 512 result, is task U2 of
-    `procedure_records/ell0_placement_and_counterforce.md`, pending its blocking decision P-7.**
+  - The user (2026-09-17) gave reasons (a) and (b) and decided that the paper states the placement
+    as a commitment (`revisions.md` **R18**). **P-7 settled by the user the same day: amend.** The
+    reasons and the widened dependency list are folded into the fields above (task U2, closed
+    2026-09-17); this finding is kept as the evidence behind them.
   - Variant B's fields are a **counterfactual manipulation (C8)**, not a control: no setting of the
     model produces them. Any cell that prints them must label them so.
 

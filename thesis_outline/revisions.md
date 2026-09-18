@@ -147,37 +147,42 @@ Two further findings that change the outline as much as the headline does:
   says that the maximizer of F supplies a halting mechanism. So item 2 is new material, not a
   correction of existing text.
 
-## 3. Word allocation at 3,000, raised to 3,200 on 2026-09-17 (S-6)
+## 3. Word allocation at 3,000, raised to 3,200 on 2026-09-17 (S-6), then to 3,450 the same day (P-3)
 
 | Section | Was | Now | What the change pays for |
 |---|---:|---:|---|
-| **3. The proposed architecture** | **800** | **920** | |
+| **3. The proposed architecture** | **800** | **1,085** | |
 | 3.1 What the model must do | 90 | 90 | |
-| 3.2 A continuous world state and a soft lexicon | 160 | 160 | |
-| 3.3 The chain, and the semantics of its threshold | 200 | 200 | |
+| 3.2 A continuous world state and a soft lexicon | 160 | **270** | R18: the Λ–ℓ₀ commitment and the g_S alternative (90); Λ → ∞ is RSA's literal listener (20) |
+| 3.3 The chain, and the semantics of its threshold | 200 | **255** | R18: g_S carries no offset because ℓ₀ sits in g_L (10); R19: the projection parallel and the warning that it is not an equivalence (45) |
 | 3.4 State units, error units, and what is local | 210 | 230 | Commitment 7 in exact form; θ_u learned, starting at the tempered control; conditioning |
 | 3.5 Two choices the scale forces | 140 | 140 | |
 | 3.6 Two read-outs (new) | — | 100 | Item 1 |
-| **4. Evaluation** | **745** | **950** | |
-| 4.1 What is compared | 100 | 110 | Naming (literal listener, tempered control) |
+| **4. Evaluation** | **745** | **1,020** | |
+| 4.1 What is compared | 100 | **140** | Naming (literal listener, tempered control); R18: q_lit is a fixed point only because ℓ₀ sits in g_L |
 | 4.2 The criterion, and how to read the statistics | 170 | 170 | |
 | 4.3 The specification holds | 90 | 70 | Trimmed to fund §4.5 (R14) |
-| 4.4 The five priors (retitled) | 220 | 260 | New table with tempering/utility split; the Cremers parallel on q (R7) |
-| 4.5 The plane, and where both conditions hold | 165 | 240 | Conjunction thresholds across the band; the V under both read-outs (R14) |
+| 4.4 The five priors (retitled) | 220 | **285** | New table with tempering/utility split; the Cremers parallel on q (R7); R20/P-10: the Λ = 512 table with Λ = 8 as a one-line contrast, and P-9's two counts |
+| 4.5 The plane, and where both conditions hold | 165 | **255** | Conjunction thresholds across the band; the V under both read-outs (R14); P-8: the opposing floors are now where the trade-off claim is sourced |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | 100 | The evidence item 2 rests on |
-| **5. Discussion** | **705** | **980** | |
+| **5. Discussion** | **705** | **1,180** | (the 980 written here on 2026-09-17 was stale: it predated §5.2's 200 → 400. The grand total was right; this subtotal was not.) |
 | 5.1 What an alternatives level would have to supply | 390 | 350 | Complexity-led; the q-normalization link added, the Cremers bullet moved out (R7), lines 329–338 removed (R14) |
 | 5.2 Scale structure: a second prediction | 200 | **400** | R16/R17: H1 and H2 stated; the instantiation; the parity of the two entries; match and mismatch; the O14 sentence. The user raised the budget rather than trim §5.1 (S-6). |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | 170 | Item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | 120 | Item 3 |
 | 5.5 Limits (was 5.3) | 65 | 80 | Convergence of θ_u; conditioning |
 | 5.6 Predictions (was 5.4) | 50 | 60 | The timescale separation as a prediction |
-| **6. Conclusion** | **150** | **150** | |
-| **Total** | **2,400** | **3,200** | |
+| **6. Conclusion** | **150** | **165** | R18: one clause on item 1, which already names the counterforce without flagging it |
+| **Total** | **2,400** | **3,450** | |
 
-**Pending, 2026-09-17 (R18, blocking decision P-3).** The Λ–ℓ₀ commitment needs about 90 words in
-§3.2, 20 in §3.3, 30 in §4.1 and 50 in background §1.3. Whether that is paid by raising the budget
-again or by trimming is unanswered, and **this table is not edited until it is**.
+**2026-09-17, P-3 settled by the user: the budget is fine.** The table above is raised rather than
+trimmed, 3,200 → **3,450**. The background pays separately: `background_sections.md` §1.3 goes from
+340 to about **415** (R19's parallel and its warning), and under R8 the background states only its
+own length, so no combined count changes.
+
+**An arithmetic error found while applying this.** The §5 subtotal row read **980** after S-6 raised
+§5.2 from 200 to 400: 350 + 400 + 170 + 120 + 80 + 60 = **1,180**. The grand total 3,200 was
+correct, so only the subtotal was wrong. Corrected above.
 
 **Renumbering this causes.** Limits and Predictions move from §5.3 and §5.4 to §5.5 and §5.6, so
 four references change: `sections_3-6.md` lines 57, 63 and 77 (§5.3 → §5.5) and
