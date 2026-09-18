@@ -1,7 +1,9 @@
 # Revisions to the thesis outline
 
 Plan for revising `sections_3-6.md` and `background_sections.md`, written 2026-09-13. **Neither
-outline has been edited yet, except `background_sections.md` lines 13–14 (R8).** This file lists
+outline has been edited yet, except `background_sections.md` lines 13–14 (R8) and
+`sections_3-6.md` §§3.2–3.3 (R18, R19; task U9 of `procedure_records/ell0_placement_and_counterforce.md`,
+2026-09-18).** This file lists
 what is stale, what is new, where each change goes, and what the user still has to decide (§7).
 Numbers are quoted from the executed `main.ipynb` unless a source is named; §8 says where each is
 printed.

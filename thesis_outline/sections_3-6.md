@@ -121,7 +121,7 @@ a desideratum imposed from outside:
    dynamics can be assessed as a claim about implementation rather than assumed to converge.
 Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the test.
  
-## 3.2 A continuous world state and a soft lexicon (about 160 words)
+## 3.2 A continuous world state and a soft lexicon (about 270 words)
  
 - The world state is a proportion $s\in(0,1)$ carried in logit coordinates,
   $\zeta=\operatorname{logit}(s)$ (Eq. 1). Because $\operatorname{logit}$ is a bijection
@@ -135,11 +135,51 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   (Eq. 6). Two sentences on why exclusion rather than the truth set: under exclusion, "this entry
   carries no lexical information" and "this entry contributes no lexical field" are one statement,
   since the tautology maps to $\varphi_L=0$.
-- **The price of a soft lexicon.** $\Lambda\to\infty$ recovers a hard truth-conditional constraint;
-  finite $\Lambda$ buys differentiability and makes the lexicon *defeasible*. A sufficiently
-  confident prior therefore overrides the entry outright, so that the model, told *no*, comes to
-  believe $s\approx1$. §4.5 measures where it bites (Eq. 41).
-## 3.3 The chain, and the semantics of its threshold (about 200 words)
+- **The price of a soft lexicon.** $\Lambda\to\infty$ recovers a hard truth-conditional constraint,
+  and the object at that limit is RSA's literal listener. Introduce the base world prior here, where
+  it first does work: $\ell_0=\log p_0$ at the grid nodes, a log-density over $\zeta$. The field
+  $\ell_0-\Lambda\chi_y$, the prior restricted by the entry, is then §1.2's
+  $\log L_0(s\mid u)=\log P(s)+\log\llbracket u\rrbracket(s)$ up to $L_0$'s normalizer, in
+  $\zeta$'s coordinates: $\ell_0$ plays $\log P(s)$, and $-\Lambda\chi_y$ plays
+  $\log\llbracket u\rrbracket\in\{0,-\infty\}$ with $-\infty$ replaced by $-\Lambda$. One clause in
+  the paper, about 20 words; §3.3 returns to the normalizer. Finite $\Lambda$ buys differentiability
+  and makes the lexicon *defeasible*. A sufficiently confident prior therefore overrides the entry
+  outright, so that the model, told *no*, comes to believe $s\approx1$. §4.5 measures where it
+  bites (Eq. 41).
+- **Where the prior meets the entry is a commitment, and the paper says so (R18).** The override is
+  a contest between $\Lambda$ and $\ell_0$. The model stages that contest at one node because
+  $\ell_0$ enters through the map predicting the lexical field from the situation belief,
+  $g_L(\varphi_S)=\ell_0-\varphi_S$ (Eq. 9): the entry and the prior then meet as a single
+  difference in the lexical level's residual, $\varphi_L-g_L(\varphi_S)=\varphi_L-\ell_0+\varphi_S$,
+  which one error unit carries (Eq. 11; Bogacz, 2017), and raising $\Lambda$ pushes against $\ell_0$
+  there. **Nothing in the construction forces $\ell_0$ into $g_L$** (`decisions.md` A3). It could
+  have entered one map up, in the map from the utility state: $g_L(\varphi_S)=-\varphi_S$ with
+  $g_S(\varphi_u)=\ell_0+\theta_uB\varphi_u$ (Eq. D5). That placement is as local as Eq. (9) and
+  has the same Bogacz status (Appendix D Sec. 5), so locality does not decide between them. Give the
+  three reasons for the choice, one clause each:
+  1. *The architecture is cleaner.* Under Eq. (9) the contest is one unit's activity. Under
+     Eq. (D5), $\ell_0-\varphi_L$ is no unit's activity and exists only as a combination of two
+     residuals.
+  2. *It builds in a hypothesis about the dynamics:* that the world prior and lexical strength
+     counteract. Under Eq. (9) the two enter Eq. (15) as one term with one weight. Under Eq. (D5)
+     they still oppose each other in $\varphi_S^\ast$, but less directly, since the prior is then
+     weighted with the utility level's prediction and the entry apart from it. The hypothesis has
+     empirical content: the two placements return the same situation field from the same utility
+     state only while the lexical and situation levels' variances are equal, $\sigma_L=\sigma_S$,
+     and otherwise differ in it by $(\sigma_L-\sigma_S)\ell_0/S$ with $S=\sigma_L+\sigma_S$, so a
+     later precision-bearing phase tests the placement instead of inheriting it.
+  3. *The literal listener is a state the network reaches.* Under Eq. (9) the field
+     $\ell_0-\varphi_L$ is what Eq. (15) returns as $\sigma_S\to\infty$, when the utility level's
+     prediction carries no weight. Under Eq. (D5) no setting of the variances returns it. §4.1's
+     baseline rests on this reason.
+
+  Close on what the choice changes. The two placements differ in one quantity, the utility level's
+  drive $c_y$ (§3.3), and there only by the sign the prior carries against the entry: the couplings
+  differ by $2B^{\mathsf T}W\ell_0$, the same vector whatever was uttered (Eq. D7). §4.4 reports what
+  raising $\Lambda$ does under Eq. (9). The rows under Eq. (D5) are a **counterfactual
+  manipulation**, not a control, and stay in Appendix D and Code Cell D. About 90 words in the
+  paper, and no number quoted here.
+## 3.3 The chain, and the semantics of its threshold (about 255 words)
  
 - The chain of prediction runs $y\leftarrow\varphi_L\leftarrow\varphi_S\leftarrow\varphi_u\leftarrow1$
   (Eq. 7). $\varphi_L$ is clamped by the observed entry, so $\varepsilon_y\equiv0$ (Eq. 8) — **as a
@@ -157,12 +197,33 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   just-noticeable difference $\delta$ (Eq. A6). $n$ is the size of the space §5.1's search runs
   over, and §5.2 turns the same quantity into a prediction.
 - **The chain terminates in utility.** $g_S$ carries the utility state into the situation field
-  through a fixed profile matrix $B$ (Eq. 10; Eq. E2 at the relay). $\mu_u\ne0$ is a standing
-  requirement: at $\mu_u=0$ the terminating contribution vanishes for every $\theta_u$, the chain
-  stops rather than terminates, and $\theta_u$ becomes unidentifiable along the degeneracy
+  through a fixed profile matrix $B$ (Eq. 10; Eq. E2 at the relay), and carries nothing else:
+  $\ell_0$, which could have entered here as a tonic offset, enters at $g_L$ (§3.2). $\mu_u\ne0$ is
+  a standing requirement: at $\mu_u=0$ the terminating contribution vanishes for every $\theta_u$,
+  the chain stops rather than terminates, and $\theta_u$ becomes unidentifiable along the degeneracy
   $(\theta_u,\varphi_u)\mapsto(c\theta_u,\varphi_u/c)$. This is Bogacz's own unstated premise
   ($v_p\neq0$) stated; Appendix B sharpens it to $\langle\mu_u,\sum_y c_y\rangle\neq0$, a condition
-  on direction.
+  on direction, where $c_y$ is the drive the field below exerts on the utility level under entry
+  $y$ (Eq. 16, next bullet).
+- **What the utility level reads: a projection, and not an equivalence (R19).** At the stationary
+  point, the afferent sum each utility unit forms through its own profile,
+  $\theta_u\langle\varepsilon_S,b_i\rangle$ (Eq. 19), takes in the field below through one
+  quantity, $c_y=B^{\mathsf T}W(\ell_0-\varphi_L)$ (Eq. 16), one pairing per column of $B$. By
+  §3.2, $\ell_0-\varphi_L$ is $\log L_0$ up to its normalizer, with $-\infty$ softened to $-\Lambda$,
+  so **the utility level reads a linear projection of the same log quantity RSA's $S_1$ reads**
+  (§1.2), softened as the lexicon is. State that, and warn in the same
+  breath that a projection does not imply an equivalence and that forgetting the difference is
+  dangerous. Give the warning its exact form: $B^{\mathsf T}W\mathbf 1=0$, so $c_y$ is blind to the
+  constant direction, which is exactly where $\log L_0$'s normalizer lives, and keeps only the
+  field's coordinates along the columns of $B$ — at $m=2$, the tilt and the width of §3.5. The
+  normalizer is what RSA's informativity runs on: for two utterances true at the same state, their
+  unnormalized $\log L_0$ agree there, and $S_1$'s preference between them, cost aside, comes from
+  their normalizers alone. Then the nuance that must not be got wrong: the invariance belongs to the
+  coupling, and the model does not share it. Eq. (15) carries the constant into $\varphi_S^\ast$,
+  and Eq. (21)'s strict concavity leaves no flat direction for it to vanish along; never write that
+  the model is constant-invariant. Code Cell D prints both facts (Appendix D Sec. 5). About 45 words
+  in the paper; the normalizer sentence is the agent's addition to R19 and the first to cut if the
+  bullet overruns.
 ## 3.4 State units, error units, and what is local (about 210 words)
  
 - Error units relax toward their residuals and state units ascend $\mathcal F$ (Eqs. 18–19), both

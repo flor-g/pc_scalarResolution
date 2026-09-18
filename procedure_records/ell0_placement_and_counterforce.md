@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U8 are closed. The prose tasks U9–U12
-are next.**
+**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U9 are closed. U10 (§§4.1, 4.4–4.5)
+is next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -344,9 +344,32 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         verbatim**, which inside those six would delete E1's relay; the item now says so.
       - **§5.1 unchanged.** 249 s and 679 s against the stated "about 250 s" and "about 710 s", with
         every count identical.
-- [ ] **U9. §3 prose.** §3.2 gains the commitment bullet (P-2) and, per P-4, the clause naming
-      Λ → ∞ as RSA's literal listener; §3.3's g_S bullet gains the pointer. Both written against
-      U7's output.
+- [x] **U9. §3 prose** (2026-09-18). `sections_3-6.md` §§3.2–3.3 only; headings raised to P-3's 270
+      and 255. No number is quoted in either section, so C6 does not arise.
+      - **§3.2, "The price of a soft lexicon"** now names the Λ → ∞ object as RSA's L₀ (G8.1), and
+        defines ℓ₀ in place, since §3.2 is its first use in the outline.
+      - **§3.2, a new bullet: the commitment (R18).** The contest between Λ and ℓ₀ is staged at one
+        error unit because ℓ₀ sits in g_L; Eq. (D5) is as local and has the same Bogacz status, so
+        locality does not decide it (A3). The three reasons, one clause each: (a) cleaner, in G3's
+        exact form; (b) the counteraction hypothesis, with G5's empirical content; the agent's
+        fixed-point reason (G4), tied to §4.1. It closes on Eq. (D7) and points to §4.4, and calls
+        the Eq. (D5) rows a counterfactual manipulation (C8).
+      - **§3.3, the g_S bullet** says g_S carries nothing else and ℓ₀ enters at g_L. **A
+        pre-existing Entry 5 slip fixed in passing:** the bullet used c_y (Appendix B's condition)
+        before anything defined it; it now glosses c_y in place.
+      - **§3.3, a new bullet: the projection and its warning (R19)**, in G10's exact form, with the
+        coupling/model nuance. Two calibrations under composition-guide Entry 2: the utility level's
+        drive is described as each utility unit's own afferent sum (Eq. 19), so the reading is
+        local; and ℓ₀ − φ_L is log L₀ only with −∞ softened to −Λ, so the parallel says so.
+      - **One agent addition, flagged in the bullet:** the sentence that RSA's informativity runs on
+        the normalizer (for two utterances true at one state, S₁'s preference comes from their
+        normalizers alone, cost aside). It follows from §1.2's three equations, so it quotes no
+        number, and it makes concrete why forgetting the difference is dangerous. The bullet names it
+        as the first to cut.
+      - **Not done here, by the plan:** G8.3 (no RSA counterpart to a finite Λ; nothing plays
+        Λ_crit) and G8.4 (P(s) in both L₀ and L₁) go to the background (U11). The outline's own
+        word table and §3 heading still carry pre-R1 figures; replacing them is `revisions.md` §4's
+        "Word allocation table" entry, which no U task owns.
 - [ ] **U10. §4.4 and §4.5, rebuilt on Λ = 512.** The larger prose job, and it subsumes
       `revisions.md` §2's open note of 2026-09-15. Sources: Text cell 4b and Code Cell 2b, already
       executed — **no new code is needed for this task**. It must also correct the §4.4 entry in
