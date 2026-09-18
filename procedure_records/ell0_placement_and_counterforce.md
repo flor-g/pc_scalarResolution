@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U6 are closed. U7 (executing both
-notebooks) is next.**
+**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U7 are closed; the code tasks are
+finished. U8 (`agent.md`) is next, then the prose tasks U9–U12.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -320,9 +320,17 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
            with E1's signature. If `code cell 1` ever gains that argument, Code Cell D raises
            `TypeError`. `TruthSetNetwork` is not exposed the same way: it overrides only
            `predict_lexical`, whose signature the two notebooks share.
-- [ ] **U7. Execute** main, then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
-      14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS on both cells. Diff every other
-      cell's stored output against U0: only Code Cell D may differ.
+- [x] **U7. Execute** (2026-09-18), main then appendix_E, by `agent.md` §5.1. Commit `PENDING`.
+      **Both at baseline, exactly.**
+      - `main.ipynb`: **0 errors, 8 figures, 14/14, 249 s.** Every code cell source-identical to U6's
+        commit; against its stored outputs the only differing lines are 12 `cost:` lines in Code
+        Cell 2b.
+      - `appendix_E.ipynb`: **0 errors, 5 figures, E2 18/18, E3 PASS on both cells, 679 s.** Code
+        Cell 2: 203 lines identical, 0 deleted, 1 changed (the pass count), 4 inserted (the relay's
+        checks). Code Cell 2b: 234 identical, none changed. Against the committed appendix_E, the
+        only differing lines are 12 `cost:` lines in E2b.
+      - Over the whole change (checkpoint `b548e0a` to here), the only stored output that differs
+        in anything but wall-clock is Code Cell D's, which is the one U3 and U4 set out to change.
 - [ ] **U8. `agent.md`.** Cell count is unchanged if U3 appends to Code Cell D rather than adding a
       cell; update §5.1's baseline only if the runtime moves materially. If U3 is skipped (P-1 = (i))
       this task is empty.
