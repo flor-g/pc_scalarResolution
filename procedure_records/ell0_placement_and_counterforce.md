@@ -320,7 +320,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
            with E1's signature. If `code cell 1` ever gains that argument, Code Cell D raises
            `TypeError`. `TruthSetNetwork` is not exposed the same way: it overrides only
            `predict_lexical`, whose signature the two notebooks share.
-- [x] **U7. Execute** (2026-09-18), main then appendix_E, by `agent.md` §5.1. Commit `PENDING`.
+- [x] **U7. Execute** (2026-09-18), main then appendix_E, by `agent.md` §5.1. Commit `bf746b1`.
       **Both at baseline, exactly.**
       - `main.ipynb`: **0 errors, 8 figures, 14/14, 249 s.** Every code cell source-identical to U6's
         commit; against its stored outputs the only differing lines are 12 `cost:` lines in Code
