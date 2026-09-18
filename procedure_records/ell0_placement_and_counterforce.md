@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U3 are closed. U4 (Appendix D's new
-prose section) is next.**
+**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U4 are closed. U5 (anchors and the
+ToC) is next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -263,12 +263,30 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         whose only changed lines are `cost:` wall-clock. Appendix D §§1 and 3 reproduce every stored
         number exactly (θ_u\* −28.43749 under both conventions, Eq. (D3)'s +4.000000, the field
         norms, Eq. (D4)). `appendix_E.ipynb` is **not** re-executed here; that is U7.
-- [ ] **U4. Appendix D prose.** A new section — "Where ℓ₀ enters" — covering: the logical space
-      (g_L, g_S, or a bias belonging to no g and therefore to no error unit; μ_u and g_y are ruled
-      out by rank and by the clamp); variant B's closed form; G1, G3, G4, G5. New numbered displays
-      continue the appendix's own sequence as **D5, D6, …**, so the body's (1)–(41) is untouched and
-      coupling 5 does not fire. Also update Appendix D §4's closing sentence, which currently says
-      the appendix settles the E–T asymmetry and nothing else.
+- [x] **U4. Appendix D prose** (2026-09-17). New **Sec. 5, "Where ℓ₀ enters"**, with displays
+      **(D5)–(D7)**; the body's (1)–(41) is untouched and coupling 5 does not fire. Commit `PENDING`.
+      - **Content, kept to what the notebook can say and the paper cannot.** The logical space in
+        three clauses (a bias belonging to no g is not a prediction and so has no error unit; μ_u is
+        in ℝ^m; g_y is out while φ_L is clamped); Eq. (D5)'s Bogacz status, which is Eq. (9)'s, so
+        one register entry covers both; Eq. (D6), the alternative's stationary point; Eq. (D7), the
+        two coupling identities; then four short paragraphs — the one quantity that differs, what
+        Eq. (9) makes available, what the coupling does not carry, and Part D under both. **The
+        commitment framing and the reasons are not argued here; they are §3.2's.** Part D's rows are
+        noted with our position reserved (composition guide Entry 3b), as Text cell 4b does.
+      - **Sec. 4 rewritten** to close Secs. 1–3 and point forward to Sec. 5, instead of reading as
+        the appendix's own close. Its "assymetry" typo is corrected in the same sentence.
+      - **Appendix retitled**, "why emission is exclusion" → "why emission is exclusion, and where
+        ℓ₀ enters", since the appendix now answers two questions about the same map. **Agent
+        decision, named to the user.** Text cell 3's two references to Appendix D stay accurate (one
+        already says it derives "ℓ₀'s place here"); cell 0's ToC row still reads "(D1)–(D4)" and
+        carries the old title, which **U5** fixes.
+      - **One number was quoted before it was printed**, and Code Cell D was corrected rather than
+        the prose: block (4) printed the same-φ_u agreement as `0.0000`, so it now prints four
+        significant figures (`1.776e-15`, and `6.306` against a predicted `6.306`). Every number
+        Sec. 5 quotes is now in Code Cell D's output — checked one by one.
+      - **Verification.** `main.ipynb` re-executed: **0 errors, 8 figures, 14/14, 250 s**. Against
+        U3's commit, cells 20 (markdown) and 21 differ, and Code Cell 2b's output differs in 12
+        lines, every one of them a `cost:` line.
 - [ ] **U5. Anchors and ToC.** A new Appendix D heading needs an inline anchor (`appd-5`) and a ToC
       row (coupling 6). Regenerate cell 0; do not hand-edit it.
 - [ ] **U6. Couplings.** Confirm none fires: E3 replays Code Cells 2 and 2b only, so a new printing
