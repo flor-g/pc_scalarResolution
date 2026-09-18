@@ -51,7 +51,7 @@ commit is 499918c (2026-09-13). Procedures are in §4.
 | 11 | Code Cell 3 | Probes reported in Text cell 5. |
 | 12 | Text cell 6 | The Λ×α sweep. |
 | 13 | Code Cell 4 | The sweep. |
-| 14, 16, 18, 20 | Appendices A-D | θ_L and g_y; θ\*, locality, alternatives; how many utility directions; why emission is exclusion. |
+| 14, 16, 18, 20 | Appendices A-D | θ_L and g_y; θ\*, locality, alternatives; how many utility directions; why emission is exclusion, and where ℓ₀ enters (Sec. 5, Eqs. (D5)–(D7), decision A3). |
 | 15, 17, 19, 21 | Code Cells A-D | Each prints the numbers the appendix above it quotes; Code Cell A also prints Text cell 3 §2's (decision I10). |
 | 22 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
 
@@ -101,12 +101,27 @@ Each of these has broken at least once.
 8. **Never replace `sys.stdout` with a tee under ipykernel.** It silently kills stream capture for
    the rest of the session. `contextlib.redirect_stdout` is safe.
 9. **`code cell 1` is copied almost whole into appendix_E's Code Cell E1.** 878 of its 912 lines are
-   identical; every `def` in main appears verbatim in E1, which adds only `relay`,
-   `relay_loop_abscissa` and `theta_u_gradient_columns`. **Nothing diffs the two.** E3 compares
-   printed output, not source, and the architecture cells print nothing of their own, so a change
-   made to one and not the other is invisible to every check in the project. Any edit to
-   `code cell 1` must be mirrored into E1 in the same pass, by lifting the source verbatim, never by
-   retyping (decision I13 was applied this way).
+   identical. Every `def` in main appears in E1, which adds only `relay`, `relay_loop_abscissa` and
+   `theta_u_gradient_columns`; 24 of main's 30 are verbatim. The other six — `__init__`,
+   `predict_state`, `residuals`, `free_energy`, `infer`, `theta_u_gradient` — carry the relay in E1
+   (`predict_state`, `residuals` and `free_energy` take an extra `relay=None`). **Nothing diffs the
+   two.** E3 compares printed output, not source, and the architecture cells print nothing of their
+   own, so a change made to one and not the other is invisible to every check in the project. Any
+   edit to `code cell 1` must be mirrored into E1 in the same pass, by lifting the source verbatim,
+   never by retyping (decision I13 was applied this way) — **except inside those six**, where lifting
+   main's version would delete the relay: apply the same change to E1's version and keep its relay
+   argument. (Corrected 2026-09-18: this item said every `def` was verbatim.)
+
+**Loud dependencies.** Not couplings of the kind above, since each fails with an exception rather
+than silently, but an agent renaming or re-signing these should know what breaks:
+
+- **Code Cell D reads names from Code Cells 2 and 2b**: `part_d_priors` and `criterion_for_some`
+  (Code Cell 2), `STRONG_LAMBDA` and `DELTA_ALL_ALPHA` (Code Cell 2b). Renaming any of them raises
+  `NameError` in Code Cell D.
+- **Code Cell D overrides `predict_state` against main's signature**, `(phi_u, theta_u=None)`, in
+  `UtilityPlacementNetwork` (Appendix D Sec. 5). If `code cell 1`'s `predict_state` gains an
+  argument — as E1's has, `relay` — Code Cell D raises `TypeError`. `TruthSetNetwork` overrides only
+  `predict_lexical`, whose signature the two notebooks share, and is not exposed.
 
 ---
 

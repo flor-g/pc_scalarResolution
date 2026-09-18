@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U7 are closed; the code tasks are
-finished. U8 (`agent.md`) is next, then the prose tasks U9–U12.**
+**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U8 are closed. The prose tasks U9–U12
+are next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -331,9 +331,19 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         only differing lines are 12 `cost:` lines in E2b.
       - Over the whole change (checkpoint `b548e0a` to here), the only stored output that differs
         in anything but wall-clock is Code Cell D's, which is the one U3 and U4 set out to change.
-- [ ] **U8. `agent.md`.** Cell count is unchanged if U3 appends to Code Cell D rather than adding a
-      cell; update §5.1's baseline only if the runtime moves materially. If U3 is skipped (P-1 = (i))
-      this task is empty.
+- [x] **U8. `agent.md`** (2026-09-18). Commit `PENDING`.
+      - **§1 cell map.** The Appendices A–D row now names "where ℓ₀ enters (Sec. 5, Eqs. (D5)–(D7),
+        decision A3)". The cell count stays 23 and the Code Cells A–D row stays accurate.
+      - **§2, the two loud dependencies from U6**, recorded under a new *Loud dependencies* paragraph
+        after coupling 9, explicitly marked as not couplings of §2's kind.
+      - **§2 coupling 9 corrected — a pre-existing inaccuracy found while writing the second
+        dependency.** It said every `def` in `code cell 1` appears verbatim in E1. Measured: 24 of 30
+        do; `__init__`, `predict_state`, `residuals`, `free_energy`, `infer` and `theta_u_gradient`
+        carry the relay in E1. The "878 of 912 lines" figure beside it is right (re-measured). The
+        correction matters because coupling 9 also instructs mirroring **by lifting the source
+        verbatim**, which inside those six would delete E1's relay; the item now says so.
+      - **§5.1 unchanged.** 249 s and 679 s against the stated "about 250 s" and "about 710 s", with
+        every count identical.
 - [ ] **U9. §3 prose.** §3.2 gains the commitment bullet (P-2) and, per P-4, the clause naming
       Λ → ∞ as RSA's literal listener; §3.3's g_S bullet gains the pointer. Both written against
       U7's output.
