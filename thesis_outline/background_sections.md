@@ -10,11 +10,11 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
  
 ## Scale and argumentative shape
  
-- **Target length: approximately 3,595 words.**
+- **Target length: approximately 3,670 words.**
 - **Opening (about 220 words).** The explanandum; the three questions the dissertation answers; and
   Marr's levels, fixed by contrast with RSA.
 - **Part I — What scalar resolution is asked to explain, and why the existing division does not
-  settle it (about 2,035 words).** Establishes two things §§3–6 need and one they dissolve: that
+  settle it (about 2,110 words).** Establishes two things §§3–6 need and one they dissolve: that
   every existing account computes strengthening over a *represented alternative set*; that the
   accounts deriving it *from the prior* carry a documented liability; and that the debates over
   which level a pattern belongs to share a presupposition about staging.
@@ -74,7 +74,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
   as it is named as one.
 ---
  
-# Part I. What scalar resolution is asked to explain, and why the existing division does not settle it (about 2,035 words)
+# Part I. What scalar resolution is asked to explain, and why the existing division does not settle it (about 2,110 words)
  
 ## 1.1 Scalar implicature and the target explanandum (about 200 words)
  
@@ -137,7 +137,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
 - **Counterargument to cut:** the "RSA is already recursive, so why add another iterative mechanism?"
   exchange. It defended the superseded precision thesis and serves nothing now.
 - **Transition:** The dependency on \(P(s)\) creates a specific and documented failure.
-## 1.3 Strengthening derived from the prior, and its two liabilities (about 340 words)
+## 1.3 Strengthening derived from the prior, and its two liabilities (about 415 words)
  
 *Merges the previous draft's §1.3 and §1.4 and promotes the Cremers material out of §1.5. The
 section's function has changed: it is no longer the setup for a wonkiness mechanism, but the first
@@ -163,7 +163,7 @@ of the two empirical anchors §5.1 uses.*
 - *Counterargument:* numerical and slider judgments are noisy. The convergence of expected-number
   judgments, all-state judgments, and separate normality judgments is nevertheless stronger than
   reliance on one dependent measure.
-**Beat 2 — wRSA as the response, and the inverted parallel (about 100 words).**
+**Beat 2 — wRSA as the response, the inverted parallel, and what RSA has of the commitment (about 175 words).**
  
 - A latent wonkiness variable \(w\); under the usual setting \(P(s\mid w)\) is the elicited world
   prior, under the wonky setting a uniform back-off. The pragmatic listener becomes
@@ -173,6 +173,34 @@ of the two empirical anchors §5.1 uses.*
   prior** defeasible against the utterance. This dissertation's architecture makes **the lexical
   entry** defeasible against the prior — finite lexical strength \(\Lambda\), §3.2 — and §4.5
   quantifies where that override bites. Two sentences, no verdict, forward pointer only.
+- **What RSA has of the commitment, and what it lacks (R18; about 50 words).** §3.2 states as a
+  commitment that the prior and the lexical entry meet as counterforces at one node. Foreshadow it
+  against §1.2's three equations:
+  - *RSA has the hard limit.* As \(\Lambda\to\infty\) the model's field for the prior restricted by the
+    entry is \(\log L_0\) up to its normalizer (§3.2). One clause, a forward pointer.
+  - *RSA has a choice of where the prior enters, and makes it the other way.* \(P(s)\) enters \(L_0\)
+    and enters again in \(L_1\propto S_1(u\mid s)P(s)\). In this architecture the prior enters once,
+    and the commitment is which map carries it (§3.2). One sentence, stated as a contrast.
+  - *RSA has no single counterpart to a finite \(\Lambda\).* Its ways of letting prior and semantics
+    trade off use a **latent variable** rather than a strength: lexical uncertainty (Potts et al.,
+    2016), threshold uncertainty, where the listener infers the cut jointly with the state
+    (Lassiter & Goodman, 2017; the basis of Xiang et al.'s (2022) LG model, §1.7), and wonkiness,
+    above. **Nothing in RSA plays the role of the override law** (§4.5, Eq. 41): the lexical
+    strength needed to hold the entry against the prior grows linearly in the prior's concentration,
+    at a rate set by the logarithm of the predicate's granularity. That is the part of the commitment
+    with no parallel, and the one worth the words. **State the law in words here, not in symbols:**
+    §4.5 writes it \(\Lambda_{\mathrm{crit}}\approx\alpha\log2n\), whose \(\alpha\) is a Beta
+    concentration, and §1.2 has already fixed \(\alpha\) as RSA's speaker optimality.
+- **The projection parallel, foreshadowed and warned against in one breath (R19; about 25 words).**
+  The model's utility level reads a fixed linear projection of the same log quantity \(S_1\) reads,
+  \(\log L_0\) (§3.3). Say so here, and warn in the same sentence that a projection does not imply an
+  equivalence and that forgetting the difference is dangerous: the projection discards the constant
+  component, which is exactly where \(L_0\)'s normalizer lives (§3.3 gives the exact form). Two guards
+  for the writer:
+  - Say that the **projection** discards the component, never that the model does. The model is
+    not blind to it (§3.3).
+  - This is how §2.1's instruction not to equate the mapping with RSA's social recursion is
+    honoured here: by making the disanalogy precise, not by leaving the parallel out.
 - **Cut entirely** (Entry 3a): the internal-limitations list (what exactly is revised; uniform
   back-off as one option among many; \(P(w)=.5\) as a fitted choice), and the binary-versus-graded
   counterargument. All of it existed to motivate a continuous precision parameter this architecture
@@ -185,10 +213,14 @@ of the two empirical anchors §5.1 uses.*
 - State that it does not by itself establish a covert grammatical operator, and that it is a second,
   independent reason to ask whether the computation of strengthening should reference the listener's
   current prior at all.
-- **Forward pointer, stated without embarrassment:** §5.1 reports that *this model exhibits the same
-  anti-exhaustive direction on four of five priors*, and treats the fact as corroboration — both
-  models derive strengthening from the prior, so both inherit the liability, and what avoids it is a
-  drain keyed to the alternative.
+- **Forward pointer, stated without embarrassment (R7, P-9).** §4.4 reports the same direction in
+  this model, as a property of its read-out \(q\) against its literal listener. Give both counts: it
+  appears under all four priors that have a row at the weaker lexical strength, and under two of
+  five at the stronger, where raising the strength removes it under two priors and enlarges it under
+  the other two. Name what carries it: the tempering, the halving of the settled log-density that §4.1's tempered
+  control isolates (§4.4). Call it a parallel in direction, not a
+  shared liability, since the mechanisms differ. Do not treat it as corroboration, and do not say
+  what would avoid it: §5.1 no longer uses it (R2).
 - **Transition:** The grammatical tradition computes strengthening over alternatives without
   consulting the prior at all.
 ## 1.4 The Chierchia line: local exhaustification and comparison among strengthened parses (about 360 words)
@@ -608,6 +640,8 @@ Kennedy, C. (2007). Vagueness and grammar: The semantics of relative and absolut
 Kogo, N., & Trengove, C. (2015). Is predictive coding theory articulated enough to be testable? *Frontiers in Computational Neuroscience, 9*, Article 111. https://doi.org/10.3389/fncom.2015.00111
  
 Kratzer, A., & Shimoyama, J. (2002). Indeterminate pronouns: The view from Japanese. In Y. Otsu (Ed.), *Proceedings of the 3rd Tokyo Conference on Psycholinguistics* (pp. 1-25). Hituzi Syobo.
+ 
+Lassiter, D., & Goodman, N. D. (2017). Adjectival vagueness in a Bayesian model of interpretation. *Synthese, 194*(10), 3801-3836. https://doi.org/10.1007/s11229-015-0786-1 **[Verify pages and DOI; and whether Xiang et al. (2022) build their LG model on this paper or on Lassiter & Goodman (2013, SALT 23).]**
  
 Leffel, T., Xiang, M., & Kennedy, C. (2017). *Interpreting gradable adjectives in context: Domain distribution vs. scalar representation* [Manuscript]. **[Check whether Xiang et al. (2022) reports the shapes/artifacts contrast in the same terms; if so, cite the article and drop the manuscript.]**
  

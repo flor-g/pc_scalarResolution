@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U10 are closed. U11 (background) is
-next.**
+**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U11 are closed. U12 (the remaining
+verdict sites) is next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -398,9 +398,24 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
       - **Deliberately not carried:** Text cell 4b's claim that every θ\* at Λ = 512 sits in
         Eq. (24)'s saturation (no cell prints it for the four diffuse rows); item 1's delta read-out
         results (they need §3.6 first).
-- [ ] **U11. Background §1.3 Beat 2**, extended with the RSA parallel per P-4/P-5, and §1.2 if
-      G8.4's contrast (P(s) in both L₀ and L₁) is stated there instead. Note `background_sections.md`
-      line numbers run one lower than `revisions.md` cites, after R8.
+- [x] **U11. Background §1.3** (2026-09-18). `background_sections.md` only.
+      - **Beat 2** gains G8.1 (the hard limit is L₀, a forward pointer), G8.4 (P(s) in L₀ and again in
+        L₁; the prior enters this model once, and the commitment is which map), G8.3 (latent variables,
+        not a strength: lexical uncertainty, threshold uncertainty, wonkiness; nothing plays the
+        override law), and R19's foreshadowing with the warning in the same sentence and the
+        coupling/model guard. All in Beat 2, not §1.2, because §1.3 carries P-3's added budget.
+      - **Beat 3 (V11, taken here because it is the same subsection)**: pointer to §4.4, both counts
+        as U10 corrected them, the tempering named, "corroboration" and the drain dropped (R7).
+      - **Headings and totals** moved by P-3's +75: §1.3 415, Part I 2,110, target 3,670.
+      - **Reference added:** Lassiter & Goodman (2017), *Synthese*, marked [verify], including
+        whether Xiang et al.'s LG model builds on it or on the 2013 SALT paper.
+      - **Found: α names two quantities** — RSA's speaker optimality (§1.2) and the Beta concentration
+        of Eq. (41). The background states the override law in words; the clash is `revisions.md`
+        **Q8**, open, for the user.
+      - **Found for U12:** Beat 1's "redeployment" bullet says human robustness to prior concentration
+        is "precisely the profile a drain scaling with prior mass on the all-region cannot produce" and
+        flags it forward to §5.1. That is the trade-off claim in another form, and after P-8 it must
+        point at §4.5's floors or go.
 - [ ] **U12. Anything leaning on the old headline.** §5.1, §6 and the background's forward pointers
       that say the conjunction holds under none or one prior. Blocked on P-6.
 - [ ] **U13. `revisions.md`.** R18–R20 rows once P-1 to P-7 are answered; the §3 word table per

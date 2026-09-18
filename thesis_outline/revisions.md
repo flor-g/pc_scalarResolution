@@ -888,6 +888,15 @@ table's commitment 3 row at line 391).
   *coupling*, not of the model — φ_S\* is not defined up to a constant (§9.1 has no flat direction,
   and Appendix D §3's third reading turns on it). This satisfies line 373's instruction by making
   the disanalogy precise, rather than by leaving the parallel out.
+- **2026-09-18, applied by U11** (the two bullets above, and Beat 3's forward pointer, V11). All
+  three RSA points go in Beat 2, including the P(s)-twice contrast: §1.2's budget was not raised,
+  §1.3's was (P-3), and Beat 2 can point back at §1.2's equations. Beat 2's heading 100 → 175, §1.3's
+  340 → 415, Part I's 2,035 → 2,110, and the target length 3,595 → 3,670 (R8: the background's own
+  length only). Lassiter & Goodman (2017) is added to the reference list, marked [verify]. Beat 3's
+  pointer now goes to §4.4, gives P-9's two counts as U10 corrected them, names the tempering, and
+  drops "corroboration" and the drain. **Found:** α names two things, RSA's speaker optimality
+  (§1.2) and the Beta concentration of Eq. (41) and §4.5; the background states the override law in
+  words for that reason, and the clash is open question **Q8** below.
 - **§1.7 (lines 309–334), the answer to Q3b.**
   - The outline says of Q3b "Do not answer it here. §5.2 answers it from the parity structure of the
     utility basis". That overstates what §5.2 can now claim. Parity fixes the entry's width loading,
@@ -1137,6 +1146,15 @@ made against measurement rather than guessed (the §5.2 entry above, O13):
 **Still the user's:** whether the rebuilt §5.2 is stated at all (O13), and whether any of these
 numbers may be quoted, which needs a cell to print them (C6) and a five-position configuration the
 notebooks do not have.
+
+### Q8. α names two quantities (open, found 2026-09-18 in U11)
+
+Background §1.2 fixes α as RSA's speaker optimality, S₁ ∝ exp{α[log L₀ − C(u)]}. `sections_3-6.md`
+§4.5, Eq. (36) and Eq. (41) use α for the concentration of the prior Beta(α,1), and Λ_crit ≈ α log 2n
+is the law the background now cites as having no RSA counterpart, so the two meet in the one
+sentence where a reader compares them. The notebooks use α only in the Beta sense. Options: rename
+the Beta concentration in the paper (for example κ is taken by Appendix C, so a fresh letter); or
+subscript RSA's (α_S). Not decided; the background avoids the symbol meanwhile.
 
 ## 8. Where the numbers are printed
 
