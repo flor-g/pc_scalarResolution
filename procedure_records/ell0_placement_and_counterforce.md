@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U4 are closed. U5 (anchors and the
-ToC) is next.**
+**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U5 are closed. U6 (couplings) is
+next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -287,8 +287,14 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
       - **Verification.** `main.ipynb` re-executed: **0 errors, 8 figures, 14/14, 250 s**. Against
         U3's commit, cells 20 (markdown) and 21 differ, and Code Cell 2b's output differs in 12
         lines, every one of them a `cost:` line.
-- [ ] **U5. Anchors and ToC.** A new Appendix D heading needs an inline anchor (`appd-5`) and a ToC
-      row (coupling 6). Regenerate cell 0; do not hand-edit it.
+- [x] **U5. Anchors and ToC** (2026-09-18). Commit `PENDING`. The `appd-5` anchor was already inline
+      in the heading from U4 (coupling 6). Cell 0's Appendix D rows were **derived from cell 20's own
+      headings and `\tag{}`s** rather than typed, so the titles and equation ranges cannot drift from
+      the appendix: the header row now carries the new title and **(D1)–(D7)**, row 4 the rewritten
+      heading, and a new row 5 `(D5)–(D7)`. Only those three lines of cell 0 change. **All 74 ToC
+      links resolve** to an inline anchor. `appendix_E.ipynb` names Appendix D once, in a list of
+      appendices, unaffected by the title. Markdown only: no execution needed, and the stored outputs
+      are those U4 verified.
 - [ ] **U6. Couplings.** Confirm none fires: E3 replays Code Cells 2 and 2b only, so a new printing
       call in Code Cell D is outside its list (couplings 1, 2, 7); `code cell 1` untouched, so
       coupling 9 is quiet; no new figure. Check whether `appendix_E.ipynb` §E.3 ("claims in main
