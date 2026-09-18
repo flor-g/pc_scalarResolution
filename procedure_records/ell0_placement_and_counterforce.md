@@ -264,7 +264,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         number exactly (θ_u\* −28.43749 under both conventions, Eq. (D3)'s +4.000000, the field
         norms, Eq. (D4)). `appendix_E.ipynb` is **not** re-executed here; that is U7.
 - [x] **U4. Appendix D prose** (2026-09-17). New **Sec. 5, "Where ℓ₀ enters"**, with displays
-      **(D5)–(D7)**; the body's (1)–(41) is untouched and coupling 5 does not fire. Commit `PENDING`.
+      **(D5)–(D7)**; the body's (1)–(41) is untouched and coupling 5 does not fire. Commit `ccaccd4`.
       - **Content, kept to what the notebook can say and the paper cannot.** The logical space in
         three clauses (a bias belonging to no g is not a prediction and so has no error unit; μ_u is
         in ℝ^m; g_y is out while φ_L is clamped); Eq. (D5)'s Bogacz status, which is Eq. (9)'s, so
