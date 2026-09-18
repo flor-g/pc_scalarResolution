@@ -370,7 +370,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         Λ_crit) and G8.4 (P(s) in both L₀ and L₁) go to the background (U11). The outline's own
         word table and §3 heading still carry pre-R1 figures; replacing them is `revisions.md` §4's
         "Word allocation table" entry, which no U task owns.
-- [x] **U10. §4.4 and §4.5, rebuilt on Λ = 512** (2026-09-18). `sections_3-6.md` §§4.1, 4.4, 4.5;
+- [x] **U10. §4.4 and §4.5, rebuilt on Λ = 512** (2026-09-18, commit `bab65cc`). `sections_3-6.md` §§4.1, 4.4, 4.5;
       headings to P-3's 140, 285, 255. No new code: every number is in the stored output of Code
       Cells 2, 2b or 4, checked by script against the outputs, not against the text cells.
       - **§4.1.** The A3 clause (G4): q_lit is a fixed point **because** ℓ₀ enters at g_L. The
