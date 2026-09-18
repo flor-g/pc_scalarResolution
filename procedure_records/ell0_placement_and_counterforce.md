@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0, U1 and U2 are closed. U3 is the next
-task and is the first edit to `main.ipynb`.**
+**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U3 are closed. U4 (Appendix D's new
+prose section) is next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -232,13 +232,37 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
       under `agent.md` §3.3 — note that variant B's fields are a **counterfactual manipulation
       (C8)**, not a control, since no setting of the model produces them, and C8's wording must be
       used in both the cell's labels and the prose.
-- [ ] **U3. Code Cell D** (only if P-1 is (ii) or (iii)). Append a block printing: the two couplings
-      per utterance; the two identities of G1 with their residuals; the σ-limit table of G4; and, if
-      (iii), G6's table. Constraints: **every helper local to the cell** — `code cell 1` is not
-      touched, so coupling 9 stays quiet and variant B never becomes a method on the class; no
-      figure, so the 8-figure baseline holds; any wall-clock line behind `cost:` (coupling 3);
-      labels say "counterfactual manipulation", never "control". Acceptance: every number the new
-      prose quotes is printed here, and no number in the new prose is absent from it.
+- [x] **U3. Code Cell D** (2026-09-17, P-1 = printed by Code Cell D). Appended
+      `UtilityPlacementNetwork`, three helpers and `ell0_placement_report`, printing five blocks
+      under the heading *Sec. 5: where ell_0 enters*, plus self-checks. Commit `dcf4fdf`.
+      - **Built from 𝓕, not asserted.** The alternative is a subclass overriding `predict_lexical`
+        and `predict_state` only, exactly as `TruthSetNetwork` already does in this cell, and it is
+        solved by the cell's own `settle_by_newton` on Eq. (13). Its closed form agrees with Newton
+        to **3.6e-15**, and its θ\* is **+22.57787** both in closed form and by the cell's
+        `learned_by_bisection` on Eq. (20).
+      - **Eq. (B2) over given couplings.** `theta_u_stationary_points` builds c_y inline, so a
+        local `theta_star_over_couplings` takes c_y as an argument. Fed the model's own couplings it
+        returns **−28.43749**, the parent's value, and that check prints before it is used.
+      - **What it prints.** (1) the two couplings per entry and the identities c(g_L) − c(g_S) =
+        2BᵀWℓ₀ to 2.8e-14 and c(g_L) + c(g_S) = −2BᵀWφ_L to 1.1e-14; (2) **R19's warning** —
+        BᵀW1 = (+9.4e-17, −2.6e-17), the constant component ⟨1, ℓ₀ − φ_L⟩_W per entry
+        (−154.5617, −107.5217, −154.5617, so it is **not the same for every entry**), and c_y
+        unchanged to 1.4e-14 by adding 3.7·1; (3) the σ-limit table; (4) the same-φ_u agreement and
+        the (σ_L − σ_S)ℓ₀/S difference; (5) Part D's five priors under both placements at Λ = 8 and
+        Λ = 512, scored by the cell's own `criterion_for_some`.
+      - **Constraints met.** Every helper is local to Code Cell D; `code cell 1` is untouched, so
+        coupling 9 is quiet; no figure, so the 8-figure baseline holds; no wall-clock is printed, so
+        coupling 3 does not arise. Every label says *counterfactual manipulation*, never *control*,
+        and the two θ_u = 1 rows say "a control" as B4 requires.
+      - **A dependency to record in U6/U8:** the block reads `part_d_priors` (Code Cell 2) and
+        `STRONG_LAMBDA`, `DELTA_ALL_ALPHA` (Code Cell 2b). Renaming any of them raises `NameError`
+        in Code Cell D — loud, not silent, so it is not a coupling of the §2 kind, but it is a new
+        cross-cell dependency and belongs in the record.
+      - **Verification.** `main.ipynb` re-executed: **0 errors, 8 figures, 14/14, 246 s**. Against
+        the checkpoint only two cells differ — Code Cell D (source and output) and Code Cell 2b,
+        whose only changed lines are `cost:` wall-clock. Appendix D §§1 and 3 reproduce every stored
+        number exactly (θ_u\* −28.43749 under both conventions, Eq. (D3)'s +4.000000, the field
+        norms, Eq. (D4)). `appendix_E.ipynb` is **not** re-executed here; that is U7.
 - [ ] **U4. Appendix D prose.** A new section — "Where ℓ₀ enters" — covering: the logical space
       (g_L, g_S, or a bias belonging to no g and therefore to no error unit; μ_u and g_y are ruled
       out by rank and by the clamp); variant B's closed form; G1, G3, G4, G5. New numbered displays
