@@ -416,7 +416,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         is "precisely the profile a drain scaling with prior mass on the all-region cannot produce" and
         flags it forward to §5.1. That is the trade-off claim in another form, and after P-8 it must
         point at §4.5's floors or go.
-- [x] **U12. The verdict sites** (2026-09-18). Against §9's table:
+- [x] **U12. The verdict sites** (2026-09-18, commit `7f03135`). Against §9's table:
       - **V1**, central claim: the verdict on Λ = 512 and the plane, then R2's list with P-8's floors
         argument as its last item, marked argued and not measured; "shape of its absence" withdrawn.
       - **V2**, Tier A criterion row: reworded as planned.
