@@ -1,0 +1,2 @@
+E1 class carries the relay: True
+Sec. 5 lines: stored 61, under E1 61, differing 0

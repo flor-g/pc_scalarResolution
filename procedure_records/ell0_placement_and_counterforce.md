@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U5 are closed. U6 (couplings) is
-next.**
+**Status, 2026-09-17: P-1 to P-10 are all answered (§11). U0–U6 are closed. U7 (executing both
+notebooks) is next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -295,10 +295,31 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
       links resolve** to an inline anchor. `appendix_E.ipynb` names Appendix D once, in a list of
       appendices, unaffected by the title. Markdown only: no execution needed, and the stored outputs
       are those U4 verified.
-- [ ] **U6. Couplings.** Confirm none fires: E3 replays Code Cells 2 and 2b only, so a new printing
-      call in Code Cell D is outside its list (couplings 1, 2, 7); `code cell 1` untouched, so
-      coupling 9 is quiet; no new figure. Check whether `appendix_E.ipynb` §E.3 ("claims in main
-      restated") needs a line for the commitment.
+- [x] **U6. Couplings** (2026-09-18). **None fires.** Commit `PENDING`. Against the checkpoint
+      `b548e0a`, only cells 0, 20 and 21 of `main.ipynb` differ in source; the cell count is 23.
+      - **1, 2, 7.** Code Cells 2 and 2b are source-identical to the checkpoint, and their headers
+        still carry the exact prefixes `# === Code Cell 2:` and `# === Code Cell 2b:`, which are
+        the only things E3 locates main's cells by. E3 never reads Code Cell D.
+      - **3.** Code Cell D prints no run-dependent line. **5.** The body's tags are still exactly
+        (1)–(41); Appendix D's run (D1)–(D7). **6.** Closed in U5. **8.** Code Cell D does not touch
+        `sys.stdout`. **9.** `code cell 1` is source-identical to the checkpoint, so E1 needs no
+        mirror. Figures 8 → 8.
+      - **E.3 needs no line, and that is now measured rather than assumed.** E.3 lists Appendix D
+        as *Unaffected* by the relay, a line written before Sec. 5 existed. Running Code Cell D's
+        Sec. 5 report on E1's architecture — E1 for `code cell 1`, E2 and E2b's definitions for
+        Code Cells 2 and 2b, Eq. (D5) written at the relay as g_S = ℓ₀ + θ_u r — reproduces **all
+        61 lines** of main's stored Sec. 5 output, self-checks included. Script and output:
+        `audits/2026-09-17-ell0-placement/relay_check.py`, `relay_check_output.txt`.
+      - **Two loud dependencies, for U8 to record.** Neither is a coupling of `agent.md` §2's kind,
+        because each fails with an exception rather than silently.
+        1. *Names.* Code Cell D now reads `part_d_priors` and `criterion_for_some` (Code Cell 2)
+           and `STRONG_LAMBDA`, `DELTA_ALL_ALPHA` (Code Cell 2b). Renaming any raises `NameError`.
+        2. *A signature.* `UtilityPlacementNetwork.predict_state` overrides main's
+           `predict_state(phi_u, theta_u=None)`. E1's version takes a third argument, `relay`, so
+           the override **cannot run on E1 as written** — the relay check above had to restate it
+           with E1's signature. If `code cell 1` ever gains that argument, Code Cell D raises
+           `TypeError`. `TruthSetNetwork` is not exposed the same way: it overrides only
+           `predict_lexical`, whose signature the two notebooks share.
 - [ ] **U7. Execute** main, then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
       14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS on both cells. Diff every other
       cell's stored output against U0: only Code Cell D may differ.
