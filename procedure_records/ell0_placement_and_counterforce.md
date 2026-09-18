@@ -344,7 +344,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         verbatim**, which inside those six would delete E1's relay; the item now says so.
       - **§5.1 unchanged.** 249 s and 679 s against the stated "about 250 s" and "about 710 s", with
         every count identical.
-- [x] **U9. §3 prose** (2026-09-18). `sections_3-6.md` §§3.2–3.3 only; headings raised to P-3's 270
+- [x] **U9. §3 prose** (2026-09-18, commit `d667600`). `sections_3-6.md` §§3.2–3.3 only; headings raised to P-3's 270
       and 255. No number is quoted in either section, so C6 does not arise.
       - **§3.2, "The price of a soft lexicon"** now names the Λ → ∞ object as RSA's L₀ (G8.1), and
         defines ℓ₀ in place, since §3.2 is its first use in the outline.
