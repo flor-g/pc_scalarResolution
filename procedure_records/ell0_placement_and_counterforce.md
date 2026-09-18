@@ -234,7 +234,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
       used in both the cell's labels and the prose.
 - [x] **U3. Code Cell D** (2026-09-17, P-1 = printed by Code Cell D). Appended
       `UtilityPlacementNetwork`, three helpers and `ell0_placement_report`, printing five blocks
-      under the heading *Sec. 5: where ell_0 enters*, plus self-checks. Commit `dcf4fdf`.
+      under the heading *Sec. 5: where ell_0 enters*, plus self-checks. Commit `23bdf23`.
       - **Built from 𝓕, not asserted.** The alternative is a subclass overriding `predict_lexical`
         and `predict_state` only, exactly as `TruthSetNetwork` already does in this cell, and it is
         solved by the cell's own `settle_by_newton` on Eq. (13). Its closed form agrees with Newton
