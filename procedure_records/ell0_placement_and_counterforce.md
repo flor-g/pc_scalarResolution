@@ -398,7 +398,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
       - **Deliberately not carried:** Text cell 4b's claim that every θ\* at Λ = 512 sits in
         Eq. (24)'s saturation (no cell prints it for the four diffuse rows); item 1's delta read-out
         results (they need §3.6 first).
-- [x] **U11. Background §1.3** (2026-09-18). `background_sections.md` only.
+- [x] **U11. Background §1.3** (2026-09-18, commit `4510beb`). `background_sections.md` only.
       - **Beat 2** gains G8.1 (the hard limit is L₀, a forward pointer), G8.4 (P(s) in L₀ and again in
         L₁; the prior enters this model once, and the commitment is which map), G8.3 (latent variables,
         not a strength: lexical uncertainty, threshold uncertainty, wonkiness; nothing plays the
