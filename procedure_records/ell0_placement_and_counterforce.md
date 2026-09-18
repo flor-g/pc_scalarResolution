@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U9 are closed. U10 (§§4.1, 4.4–4.5)
-is next.**
+**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U10 are closed. U11 (background) is
+next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -370,11 +370,34 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         Λ_crit) and G8.4 (P(s) in both L₀ and L₁) go to the background (U11). The outline's own
         word table and §3 heading still carry pre-R1 figures; replacing them is `revisions.md` §4's
         "Word allocation table" entry, which no U task owns.
-- [ ] **U10. §4.4 and §4.5, rebuilt on Λ = 512.** The larger prose job, and it subsumes
-      `revisions.md` §2's open note of 2026-09-15. Sources: Text cell 4b and Code Cell 2b, already
-      executed — **no new code is needed for this task**. It must also correct the §4.4 entry in
-      `revisions.md` §4, which was written against the Λ = 8 table and is itself stale. §4.1 gains
-      the sentence recording that q_lit's status as a fixed point depends on A3 (G4).
+- [x] **U10. §4.4 and §4.5, rebuilt on Λ = 512** (2026-09-18). `sections_3-6.md` §§4.1, 4.4, 4.5;
+      headings to P-3's 140, 285, 255. No new code: every number is in the stored output of Code
+      Cells 2, 2b or 4, checked by script against the outputs, not against the text cells.
+      - **§4.1.** The A3 clause (G4): q_lit is a fixed point **because** ℓ₀ enters at g_L. The
+        renamings (literal listener, tempered control) come in with it, because §4.4 now uses them
+        and Entry 5 needs them defined first; DEC5's sentence goes in with a writer's note that it
+        does not contradict U9's §3.2 (L₀ only as Λ → ∞, a limit and not a setting).
+      - **§4.4 "The five priors".** Text cell 4b's table with tempering and utility columns; the
+        conjunction under three of five, position under five, nested among these rows and not on
+        the plane; the Λ = 8 contrast in one bullet (P-10), placing the change in the utility
+        level's contribution, the one quantity the placement changes (Eq. D7), and the prior
+        mattering less (contrasts agree to 0.0001 against 0.0575); P-9's two counts; the Cremers
+        guards; the Eq. (23)–(24) mechanism.
+      - **§4.5.** 33 cells, band (1,512)–(128,2048); the floors as the source of the trade-off
+        claim (P-8); the V under both read-outs (R14); Eq. (41) as the exchange rate of §3.2's
+        contest; spread D and the least-|θ_u| sentence at the printed values.
+      - **Three things the plan had wrong, found against the printed rows** (details in
+        `revisions.md` §4's §4.4 entry): (1) the utility level's contribution is **positive under
+        Beta(1,3) at Λ = 512** (+0.0024), so "negative under all five" and item 1's Cremers guard hold
+        at Λ = 8 only; (2) "four of five at Λ = 8" is really **all four priors with a Λ = 8 row**, the
+        delta-like prior having none; (3) raising Λ **removes** the anti-exhaustive direction under
+        flat and Beta(3,1) but **enlarges** it under Gaussian and Beta(1,3), so §10's gloss on P-9
+        ("something raising Λ removes") was half true. P-9's decision itself, both counts in one
+        sentence, stands and is applied. Also corrected: the floors cross between α = 8 and 16; the
+        Eq. (41) match is 4.1%, not 4%.
+      - **Deliberately not carried:** Text cell 4b's claim that every θ\* at Λ = 512 sits in
+        Eq. (24)'s saturation (no cell prints it for the four diffuse rows); item 1's delta read-out
+        results (they need §3.6 first).
 - [ ] **U11. Background §1.3 Beat 2**, extended with the RSA parallel per P-4/P-5, and §1.2 if
       G8.4's contrast (P(s) in both L₀ and L₁) is stated there instead. Note `background_sections.md`
       line numbers run one lower than `revisions.md` cites, after R8.
@@ -383,6 +406,11 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
 - [ ] **U13. `revisions.md`.** R18–R20 rows once P-1 to P-7 are answered; the §3 word table per
       P-3; close the 2026-09-15 note in §2; a §8 source row for the placement numbers; and mark the
       §4.4 entry corrected by U10.
+      **Added 2026-09-18 by the user ("fold that into U13"):** replace `sections_3-6.md`'s own word
+      table (its "Word allocation" section) with `revisions.md` §3's, and bring the section headings
+      it leaves stale into line (the §3, §4 and §5 totals and every subsection heading U9 and U10 did
+      not touch). **Also found:** `decisions.md` A3's Evidence line still says the numbers are "to be
+      printed by Code Cell D … until that cell runs, class (e)"; U3 printed them, so that line is stale.
 - [ ] **U14. Commit**, one logical change per commit, hashes recorded on each task line above.
 
 ---

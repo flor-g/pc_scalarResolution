@@ -276,18 +276,26 @@ Neither of the following is chosen. Both are consequences of the lexicon's thres
  
 # 4. Evaluation (about 745 words)
  
-## 4.1 What is compared (about 100 words)
+## 4.1 What is compared (about 140 words)
  
 Three beliefs, all internal to the model:
  
-- $q_{\mathrm{lit}}$, the **untempered literal posterior**, $\varphi_S=\ell_0-\varphi_L$: the prior
-  restricted by the entry and nothing else. It is a fixed point of this network rather than an
-  external construction, being what Eq. (15) returns as $\sigma_S\to\infty$. Say so; it removes the
-  obvious objection that the baseline was built to be beaten.
-- The **$\theta_u=0$ control**, $(\ell_0-\varphi_L)/2$: the literal posterior tempered by one half,
-  the halving surviving into the belief because the read-out is exponential. It is a third quantity
-  and not the baseline, and it holds the temperature fixed so that the utility level's own
-  contribution can be read off.
+- $q_{\mathrm{lit}}$, the **untempered literal listener**, $\varphi_S=\ell_0-\varphi_L$: the prior
+  restricted by the entry and nothing else. At this first mention, one sentence saying that what
+  "literal" denotes here is distinct from what it denotes in RSA and the Gricean literature, and no
+  further explanation (DEC5 of `procedure_records/d9_delta_readout.md`). Writer's note, not for the
+  paper: the sentence does not contradict §3.2, whose identification with RSA's $L_0$ holds only as
+  $\Lambda\to\infty$, a limit and not a setting, so the sentence is true of every configuration
+  evaluated. $q_{\mathrm{lit}}$ is a fixed point of this network rather than an external
+  construction, being what Eq. (15) returns as $\sigma_S\to\infty$, **and it is one because
+  $\ell_0$ enters at $g_L$**: under the placement §3.2 sets aside, no setting of the variances
+  returns it (§3.2, reason 3; `decisions.md` A3). Say both; the first removes the obvious objection
+  that the baseline was built to be beaten, and the clause names what that answer rests on.
+- The **tempered control**, $(\ell_0-\varphi_L)/2$, at $\theta_u=0$: the literal listener tempered
+  by one half, the halving surviving into the belief because the read-out is exponential. It is a
+  third quantity and not the baseline, and it holds the temperature fixed so that the utility level's
+  own contribution can be read off. It is also where learning starts: Eq. (20) runs from
+  $\theta_u(0)=0$.
 - $q_H$, the settled belief.
 State once, plainly, that RSA and wRSA are **analytic baselines and are not implemented**, so no
 quantitative comparison is offered or implied.
@@ -323,59 +331,118 @@ a step: $1.6\times10^{-3}$ under the hard mask against $1.8\times10^{-6}$ under 
 the smooth mask serving as the control that identifies which of the two is model and which is
 quadrature. Code Cell E3 checks that the relay reproduces every one of these numbers.
  
-## 4.4 One condition, every time (about 220 words)
+## 4.4 The five priors (about 285 words)
  
-**This is the section the argument turns on.**
+**This is the section the argument turns on.** It reports Text cell 4b's rows: all five priors at
+$\Lambda=512$, each at its own learned $\theta_u^\ast$, with $\Lambda=8$ entering as a one-line
+contrast (R20, P-10).
  
-| prior | $q_{\mathrm{lit}}$ | $q_H$ | $\Delta_{\textit{some}}$ | first | second |
-|---|---|---|---|---|---|
-| Gaussian | 0.0016 | 0.0114 | $+0.0098$ | not met | met |
-| flat | 0.0504 | 0.1384 | $+0.0880$ | not met | met |
-| $\mathrm{Beta}(1,3)$ | 0.0001 | 0.0033 | $+0.0032$ | not met | met |
-| $\mathrm{Beta}(3,1)$ | 0.1368 | 0.2498 | $+0.1130$ | not met | met |
-| delta-like | 0.9568 | 0.6080 | $-0.3488$ | met | not met |
+| prior | $\theta_u^\ast$ | $P_0$(all-region) | $q_{\mathrm{lit}}$ | $q_H$ | $\Delta_{\textit{some}}$ | tempering | utility | first | second |
+|---|---|---|---|---|---|---|---|---|---|
+| Gaussian | $+1580.81$ | 0.0016 | 0.0016 | 0.0088 | $+0.0071$ | $+0.0175$ | $-0.0104$ | not met | met |
+| flat | $+1521.48$ | 0.0479 | 0.0504 | 0.0357 | $-0.0146$ | $+0.0857$ | $-0.1003$ | met | met |
+| $\mathrm{Beta}(1,3)$ | $+1589.49$ | 0.0001 | 0.0001 | 0.0091 | $+0.0089$ | $+0.0065$ | $+0.0024$ | not met | met |
+| $\mathrm{Beta}(3,1)$ | $+1499.37$ | 0.1367 | 0.1368 | 0.0413 | $-0.0955$ | $+0.0989$ | $-0.1943$ | met | met |
+| delta-like | $+1407.77$ | 0.9568 | 0.9568 | 0.4351 | $-0.5217$ | $-0.0586$ | $-0.4631$ | met | met |
  
-- **The conjunction holds under none, and the two conditions separate every row between them.**
-  Neither a row satisfying both nor a row satisfying neither appears. State it as an observation
-  before interpreting it.
+- **Why $\Lambda=512$, in one sentence.** At Part D's $\Lambda=8$ the diffuse priors override the
+  entries for *no* and *all* (largest leak $0.63$ under the Gaussian prior, $0.91$ under both skewed
+  priors), so those rows measure the override as well as the criterion; at $\Lambda=512$ every
+  entry holds under every prior (largest leak $1.1\times10^{-74}$). Read *some* only: under *no*
+  and *all* the literal listener already holds none and all of the all-region, so their zero shifts
+  are saturation.
+- **The conjunction holds under three of the five**, the flat, $\mathrm{Beta}(3,1)$ and delta-like
+  priors, and the second condition under all five, so no prior meets the first condition alone.
+  State it as an observation before interpreting it. Among these five rows the two conditions are
+  nested, the first the harder; on the plane they are not (§4.5: the first holds in 74 cells, the
+  second in 59). The three are the priors with the most prior mass on the all-region, and across
+  them the shift deepens with that mass.
+- **The contrast with $\Lambda=8$, and where §3.2's commitment shows.** At $\Lambda=8$ the four
+  diffuse priors meet the second condition only, with shifts $+0.0008$, $+0.0295$, $+0.0004$ and
+  $+0.0421$. Raising $\Lambda$ to 512 carries the flat and $\mathrm{Beta}(3,1)$ priors across zero
+  and moves the Gaussian and $\mathrm{Beta}(1,3)$ priors further from it. The tempering barely moves
+  with $\Lambda$; what moves is the utility level's own contribution, whose drive $c_y$ is the one
+  quantity the placement of $\ell_0$ changes (§3.2, Eq. D7). The prior also matters less at this
+  $\Lambda$: the $\varphi_S$ contrasts between utterances agree across the five priors to $0.0001$
+  at each prior's own $\theta_u^\ast$, against $0.0575$ across Part D's four at $\Lambda=8$.
 - **Decompose the shift before interpreting it.** $\Delta_y$ contains the tempering and the utility
-  level, and they come apart at the $\theta_u=0$ control. Under the four diffuse priors the
-  tempering carries the shift ($+0.0175$, $+0.0854$, $+0.0065$, $+0.0988$) while the utility level's
-  own contribution is small and of either sign ($-0.0077$, $+0.0027$, $-0.0033$, $+0.0142$). Only
-  under the delta-like prior does the utility level move much mass, and there it moves it down, by
-  $-0.2902$. So the sign of the shift is a fact about the prior the entry is read against, not about
-  the entry.
-- **The positive shifts are the anti-exhaustive direction**, and this should be named rather than
-  passed over: on four of five priors the settled belief holds *more* all-region mass than the
-  literal listener. §5.1 takes up what that costs.
+  level, and they come apart at the tempered control. Where the conjunction holds, the utility
+  level's contribution outweighs the tempering. It is negative under four priors and positive under
+  $\mathrm{Beta}(1,3)$. Whether the first condition is met therefore depends on the prior the entry
+  is read against.
+- **The anti-exhaustive direction, and the Cremers parallel (R7, P-9; about 40 words).** Give both
+  counts in one sentence. The shift is positive under all four priors that have a row at
+  $\Lambda=8$ (the delta-like prior has none there, since it needs the stronger lexicon), and under
+  two of five at $\Lambda=512$, the Gaussian and $\mathrm{Beta}(1,3)$. Raising $\Lambda$ removes the
+  direction under the flat and $\mathrm{Beta}(3,1)$ priors, the two of those four with the most
+  prior mass on the all-region, and enlarges it under the other two ($+0.0008\to+0.0071$,
+  $+0.0004\to+0.0089$). Name it: the settled belief holds *more* all-region mass than the literal
+  listener, the direction Cremers, Wilcox and Spector (2023) identify as a liability of baseline
+  RSA. Guards:
+  - The parallel is in direction, not in conditions, and the mechanisms differ: the $\tfrac12$
+    temperature of a finite $\sigma_S$ here, the prior acting through the speaker model there. Say
+    "parallel", not "shared liability".
+  - Under $q$ the tempering carries the direction. At $\Lambda=8$ the utility level's contribution
+    runs against it under all four priors; at $\Lambda=512$ it runs against it under the Gaussian
+    prior and **with** it under $\mathrm{Beta}(1,3)$, $+0.0024$ of the $+0.0089$.
+  - §5.1 does not use the parallel as evidence for the alternatives level (R2).
 - **Where the first condition is met, the mechanism is amplification, not competition.** Differencing
-  Eq. (16) against its own $\theta_u=0$ case gives
+  Eq. (16) against the tempered control gives
   $\varphi_S^\ast(\theta_u)-\varphi_S^\ast(0)=\tfrac{\theta_u}{2}B\varphi_u^\ast$ (Eq. 23, exact to
-  $1.8\times10^{-15}$), and growing $|\theta_u|$ drives
+  $1.8\times10^{-15}$ at the Gaussian prior's $\theta_u^\ast$), and growing $|\theta_u|$ drives
   $\varphi_S^\ast\to\tfrac12(I+BB^{\mathsf T}W)(\ell_0-\varphi_L)$ (Eq. 24) — the control field with
   its component in $\operatorname{span}B$ **doubled**. Under the delta-like prior the two entries'
-  projections differ only in the width coordinate, and doubling a negative width coordinate lowers
-  both tails, the all-region among them.
-## 4.5 The plane, and where both conditions hold (about 165 words)
+  couplings share their tilt coordinate and differ only in width, and doubling a negative width
+  coordinate lowers both tails, the all-region among them. Eq. (24)'s limit gives that row's
+  $-0.5217$, and so does its own $\theta_u^\ast$.
+- **One sentence pointing to §4.6:** the conjunction is shown in the integrated dynamics, not only
+  in closed form, for all three rows that meet it (Code Cell 2b).
+## 4.5 The plane, and where both conditions hold (about 255 words)
  
-- The conjunction is not out of reach. Sweeping lexical strength against prior concentration on the
-  limit family $\mathrm{Beta}(\alpha,1)$, both conditions hold together in **22 of 121 cells**, in a
-  band running from $(\alpha,\Lambda)=(8,128)$ to $(128,2048)$.
-- **The band's shape is the result, not its existence.** Each condition holds above a floor in
-  $\Lambda$, and the two floors run in opposite directions in $\alpha$. The first condition's floor
-  **falls** as the prior sharpens — from $\Lambda\ge2048$ at $\alpha=1$ to $\Lambda\ge2$ by
-  $\alpha=64$ — because the more prior mass sits on the all-region, the less lexical strength the
-  utility level needs to take some away. The second condition's floor **rises** — from $\Lambda\ge2$
-  up to $\alpha=8$ to $\Lambda\ge1024$ at $\alpha=64$, and past $\alpha=256$ it is unreachable on
-  this grid. The band is where the higher floor is still on the plane.
-- **The override law.** $\Lambda_{\mathrm{crit}}\approx\alpha\log2n$ (Eq. 41), linear in prior
-  concentration with a slope fixed by the predicate's granularity alone. Measured slopes match to
-  within $4\%$ with the utility level severed; restoring it raises the requirement by $15$–$18\%$ at
-  $\theta_u=1$ and $36$–$45\%$ at $\theta_u^\ast$.
+- **The conjunction is not confined to Part D's rows.** Sweeping lexical strength against prior
+  concentration on the limit family $\mathrm{Beta}(\alpha,1)$, both conditions hold together in
+  **33 of 121 cells**, in a band running from $(\alpha,\Lambda)=(1,512)$ to $(128,2048)$. Text
+  cell 4b's flat row is the band's corner cell $(1,512)$, and its delta-like row is the cell
+  $(64,512)$, at the band's lower edge in $\Lambda$. The Gaussian and $\mathrm{Beta}(1,3)$ priors
+  are not members of the family, and $\mathrm{Beta}(3,1)$ falls between $\alpha=2$ and $\alpha=4$.
+- **The floors, and where the trade-off claim now lives (P-8).** Each condition holds above a floor
+  in $\Lambda$, and the two floors run in opposite directions in $\alpha$. The first condition's
+  floor **falls** as the prior sharpens, from $\Lambda\ge512$ at $\alpha=1$ to $\Lambda\ge16$ at
+  $\alpha=64$ and $\Lambda\ge2$ from $\alpha=128$ to $512$ (the $\alpha=1024$ row reads 2048 and is
+  saturated): the more prior mass sits on the all-region, the less lexical strength the utility
+  level needs to take some away. The second condition's floor **rises**, from $\Lambda\ge2$ up to
+  $\alpha=8$ to $64$, $256$, $512$ and $1024$ at $\alpha=16$, $32$, $64$ and $128$, and past
+  $\alpha=256$ it is unreachable on this grid. The floors cross between $\alpha=8$ and $\alpha=16$.
+  **This is the claim that prior concentration buys the first condition and spends the second, and
+  it is sourced here, on the floors.** It is a property of the plane and not of Part D's rows: at
+  $\Lambda=512$ both floors lie at or below 512 from $\alpha=1$ to $64$, which is why those rows do
+  not show the tension (§4.4). "Under every prior tested" is not written anywhere; §5.1 and §6
+  point here.
+- **The V, under both read-outs (R13, R14).** The least $\Lambda$ at which both conditions hold
+  runs $512$, $256$, $128$, $64$, $64$, $256$, $512$, $1024$ over $\alpha=1$ to $128$, a V with its
+  minimum at $\alpha=8$ and $16$. Under the delta read-out's two criteria (§3.6; R12) the right arm
+  is shared from $\alpha=32$, at $\Lambda=8\alpha$; the left arm exists only under $q$, since the
+  mode shift criterion is never met at $\alpha\le8$; and the two conjunctions part in 20 cells, all
+  of them met under $q$ alone. Report the V as a result, and derive no evidence for a missing level
+  from it.
+- **The override law, the exchange rate of §3.2's contest.** $\Lambda_{\mathrm{crit}}\approx\alpha\log2n$
+  (Eq. 41), linear in prior concentration with a slope fixed by the predicate's granularity alone:
+  the rate at which lexical strength must grow to hold the entry against a sharper $\ell_0$.
+  Measured slopes match it to within $4.1\%$ at the tempered control (ratios $1.041$, $1.014$,
+  $0.998$ at $\alpha=1024$). With $\theta_u^\ast$ re-learned
+  they are $1.9890$, $2.9334$ and $4.3102$, $36$–$45\%$ above it: the utility level reinforces the
+  prior against the entry. That nothing in RSA plays this role is background §1.3's point (U11), not
+  this section's.
 - **Two honesty notes.** The band is reached by raising $\Lambda$, a parameter of the lexicon rather
   than an elicited quantity — but Eq. (41) means its required value is predicted rather than
   arbitrary. And what fails first as $\alpha$ grows is the model's ability to tell the utterances
-  apart, the spread $D$ collapsing $0.0061\to0.0009\to0.0002$ over $\alpha=64,256,1024$.
+  apart, the spread $D$ falling $0.0057\to0.0012\to0.0003$ over $\alpha=64,256,1024$ at
+  $\Lambda=8$.
+- **What the conjunction needs, measured apart from what $\theta_u^\ast$ costs.** Across the 33
+  cells the least $|\theta_u|$ meeting the conjunction runs from $0.100$ to $4.250$, with
+  $\lambda_{\max}(H)$ between $2.0$ and $20.1$ there, so every cell is integrable at the $\theta_u$
+  the conjunction needs; at their own $\theta_u^\ast$ the same cells have $\lambda_{\max}(H)$
+  between $3.5\times10^{4}$ and $3.6\times10^{7}$. §4.6 takes it up.
 ---
  
 # 5. Discussion (about 705 words)

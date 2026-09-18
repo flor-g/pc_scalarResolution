@@ -312,6 +312,10 @@ and §4.1 and §4.4 need it.
   learning starts.
 - **Line 230.** q_H is the settled belief *read through q*. Point to §3.6.
 - **Lines 222–225 (2026-09-17, R18).** The sentence that q_lit "is a fixed point of this network rather than an external construction" is true **because** ℓ₀ sits in g_L (A3). Under the g_S placement ℓ₀ − φ_L is reachable at no σ, so the sentence that removes the "built to be beaten" objection would not be available. Add the dependency in a clause and point to §3.2.
+- **2026-09-18, applied by U10.** The A3 clause, the two renamings, "where learning starts", and
+  DEC5's one sentence, with a writer's note that it does not contradict §3.2 (the L₀ identification
+  holds only as Λ → ∞, a limit and not a setting). **Not applied:** the line 230 pointer to §3.6,
+  which does not exist in the outline yet. Heading 100 → 140 (P-3).
 
 ### §4.2 (lines 234–253)
 
@@ -354,6 +358,25 @@ prior mass on the all-region (0.0479, 0.1367, 0.9568). Whether the section carri
 **P-10**; the anti-exhaustive count — four of five at Λ = 8, **two of five** at Λ = 512 — is **P-9**.
 The Eq. (24) mechanism paragraph (lines 290–297) survives either way.
 
+**2026-09-18, applied by U10, and three corrections to this entry.** §4.4 is rebuilt on Text cell
+4b's Λ = 512 table (with the tempering and utility columns from Code Cell 2b), Λ = 8 as one bullet
+of contrast, retitled "The five priors", heading 220 → 285.
+1. **"Negative under all five" holds at Λ = 8 only.** At Λ = 512 the utility level's contribution is
+   negative under four priors and **positive under Beta(1,3), +0.0024** (Code Cell 2b). The
+   decomposition bullet says so.
+2. **"Four of five at Λ = 8" (P-9) is imprecise.** The delta-like prior has no Λ = 8 row; it needs
+   Λ = 512. At Λ = 8 the anti-exhaustive direction holds under **all four priors that have a row**.
+   §4.4 states it that way.
+3. **"The direction being what raising Λ removes" (the gloss on P-9) is half true.** Raising Λ
+   removes it under the flat and Beta(3,1) priors and **enlarges** it under the Gaussian
+   (+0.0008 → +0.0071) and Beta(1,3) (+0.0004 → +0.0089). §4.4 states both halves.
+- The mechanism bullet survives, with its evidence confined to what is printed: Eq. (23) at the
+  Gaussian θ\*, and the Eq. (24) limit on the delta-like row. The claim that every θ\* at Λ = 512
+  sits in Eq. (24)'s saturation is Text cell 4b's prose and is **not** carried, since no cell prints
+  it for the four diffuse rows.
+- **Not applied:** item 1's delta read-out results, which need §3.6 to define the mode criteria
+  first. The §4.6 pointer is one sentence, pointing to a section still to be written.
+
 ### §4.5 (lines 298–317)
 
 - **The band.** 22 cells → **33**; band (8,128)–(128,2048) → **(1,512)–(128,2048)**. The
@@ -382,6 +405,12 @@ The Eq. (24) mechanism paragraph (lines 290–297) survives either way.
 - **Add.** Across the 33 cells the least |θ_u| meeting the conjunction runs from 0.100 to 4.250,
   with λ_max(H) between 2.0 and 20.1 there, so every cell is integrable at the θ_u its verdict
   needs. At their own θ\* the same cells have λ_max(H) between 3.5e4 and 3.6e7.
+- **2026-09-18, applied by U10**, heading 165 → 255. The trade-off claim is stated on the floors
+  (P-8 (i)), "under every prior tested" is barred there, and Eq. (41) is named as the exchange rate of
+  §3.2's contest. The θ_u = 1 control slopes are **cut**. Two small corrections: the floors cross
+  **between α = 8 and α = 16**, not at 16 (64/2 at α = 8, 32/64 at α = 16); and the severed-level
+  slopes match Eq. (41) to within **4.1%**, not 4% (ratio 1.041 at θ_L = 1). The V refers to the
+  delta read-out's criteria by §3.6 and R12, which §3.6 must define when it is written.
 
 ### §4.6 What the verdict needs, against what θ\* costs (new, about 100 words)
 
@@ -712,7 +741,9 @@ delta-like prior (B9, 2026-09-15):**
   anti-exhaustive direction Cremers, Wilcox and Spector (2023) identify as a liability of baseline
   RSA, and which human participants do not show.
 - **What it is in this model.** It is the tempering (+0.0175, +0.0854, +0.0065, +0.0988). The
-  utility level's own contribution runs the other way under every prior. The tempering exists only
+  utility level's own contribution runs the other way under every prior. **(2026-09-18, U10: true at Λ = 8
+  only. At Λ = 512 it runs the same way under Beta(1,3), +0.0024 of a +0.0089 shift. §4.4 carries
+  the correction.)** The tempering exists only
   for a read-out that normalizes: the delta's peak does not move under the halving. Under q,
   therefore, the positive shift is the tempering. Under the delta read-out the mode of φ_S\* also moves up the
   scale on the same four priors (R12). Because halving does not move a mode, that movement is the
