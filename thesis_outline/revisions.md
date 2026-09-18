@@ -223,6 +223,10 @@ lines 13–14 now state only its own target.
   **no prior meets the shift criterion alone**, so the two conditions are nested rather than
   opposed among these five.
   The specification-not-built sentence (lines 28–32) survives unchanged.
+  **2026-09-18, applied by U12.** The constructive claim now states the verdict on Λ = 512 (three of
+  five, the second condition under all five, nested among these rows) and on the plane (33 of 121,
+  opposed floors), then R2's list, with P-8's floors argument added as its last item, marked as
+  argued rather than measured. "The shape of its absence" is gone. The scope line (lines 4–5) is U13's.
 - **Lines 34–37, standing qualification.** Survives.
 
 ### Scope tiers (lines 41–77)
@@ -236,6 +240,8 @@ lines 13–14 now state only its own target.
     the evidence for item 2;
   - the conjunction threshold against θ\*, placed at §4.6 and §5.3, because it is what dissolves
     the maximizer-as-halting claim.
+- **2026-09-18, U12:** the criterion row's rewording is applied. The relay row and the three new rows
+  are not, since they belong to R1–R17's revision and not to R20.
 - **Tier A, the closed-vs-open-scale row (line 60).** Its "second empirical anchor" depends on Q7.
   The row stays in Tier A only if §5.2's prediction is rebuilt on the learned model.
 - **Tier B, line 63.** §5.3 → §5.5.
@@ -438,6 +444,12 @@ Evidence for §5.3, reported without interpretation:
   is false of the five priors and true of the **floors** (record G11: the two floors run in opposite
   directions and cross at α = 16; §4.5's result is untouched). Where that claim is sourced from now
   is blocking decision **P-8**. The Cremers count moving with it is **P-9**.
+
+  **2026-09-18, applied by U12 (P-8 (i)).** Both bullets are replaced by one: the case is complexity
+  (R2); the criterion adds what the level would change, stated on §4.5's floors, marked as argued
+  from them and not measured; "under every prior tested" is barred; the old reading (R14) and the
+  corroboration (R7) are named as withdrawn. The framing paragraph (lines 324–327, "lead with the
+  complexity argument") is **not** rewritten here; it belongs to R2's own revision of §5.1.
 - **Add after lines 388–397: the read-out link (R4, about 40 words).** Content in §5 below, item 1.
 - **Lines 398–420, what is not derived.** Survives. Add to its list that an end to learning short
   of the slow maximizer is also a claim about the unbuilt level (item 2).
@@ -673,6 +685,12 @@ Content in §5 below, items 2 and 3.
   needs no rework and is the natural home for one clause of R18** — it already says the entry
   "compet[es] additively against the world prior in the same log-density", which is the counterforce
   named without being flagged as a commitment.
+
+  **2026-09-18, applied by U12.** Item 1 gains the clause flagging the placement as a commitment
+  (§3.2). Item 3 now says the network meets both conditions (three of five at Λ = 512, a band of the
+  plane, within two updates of learning) and that what a level would change is the cost: the
+  opposed floors (§4.5, P-8) and the missing end to learning. Heading 150 → 165 (P-3). Item 4 is
+  Q7's and untouched.
 - **Add a clause** for item 3 of §5 below (not posable at the computational level), if §6's budget
   allows.
 - **Item 4 (lines 517–518). Depends on Q7.** It says the threshold semantics predicts "an

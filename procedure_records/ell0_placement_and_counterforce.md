@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U11 are closed. U12 (the remaining
-verdict sites) is next.**
+**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U12 are closed. U13 (`revisions.md`
+and the outline's word table) is next.**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -416,8 +416,19 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         is "precisely the profile a drain scaling with prior mass on the all-region cannot produce" and
         flags it forward to §5.1. That is the trade-off claim in another form, and after P-8 it must
         point at §4.5's floors or go.
-- [ ] **U12. Anything leaning on the old headline.** §5.1, §6 and the background's forward pointers
-      that say the conjunction holds under none or one prior. Blocked on P-6.
+- [x] **U12. The verdict sites** (2026-09-18). Against §9's table:
+      - **V1**, central claim: the verdict on Λ = 512 and the plane, then R2's list with P-8's floors
+        argument as its last item, marked argued and not measured; "shape of its absence" withdrawn.
+      - **V2**, Tier A criterion row: reworded as planned.
+      - **V7, V8**, §5.1: the two bullets become one (P-8 (i)), stated on §4.5's floors.
+      - **V9, V10**, §6: item 1 flags the placement as a commitment; item 3 rewritten. Heading 165.
+      - **Background Beat 1** (found in U11): the "drain scaling with prior mass" line now states the
+        rising floor (§4.5) and points to §5.1's argument.
+      - **Already done or elsewhere:** V4–V6 (U10), V11–V12 (U11); V3 and V14 are not R20's; V13 is
+        U13's. A grep for the old headline's phrases ("every prior tested", "four of five", "under
+        none", "exactly one condition", "shape of its absence", "only one of the two") finds only
+        the sentences in §4.5 and §5.1 that bar the phrase; the outline's word table still titles
+        §4.4 "One condition, every time", which U13 replaces.
 - [ ] **U13. `revisions.md`.** R18–R20 rows once P-1 to P-7 are answered; the §3 word table per
       P-3; close the 2026-09-15 note in §2; a §8 source row for the placement numbers; and mark the
       §4.4 entry corrected by U10.

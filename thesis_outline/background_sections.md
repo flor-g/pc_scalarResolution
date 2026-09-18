@@ -157,9 +157,10 @@ of the two empirical anchors §5.1 uses.*
   the all-state after *some*.
 - Filler conditions tracked prior knowledge, arguing against the explanation that participants simply
   ignored world knowledge.
-- **The redeployment.** Human strengthening is **robust against prior concentration** — which is
-  precisely the profile a drain scaling with prior mass on the all-region cannot produce. Flag
-  forward to §5.1.
+- **The redeployment.** Human strengthening is **robust against prior concentration**. In this
+  model the strengthened reading stays a majority under a concentrated prior only above a floor in
+  lexical strength, and that floor rises with the concentration (§4.5). Flag forward to §4.5 for the
+  floor and to §5.1, which argues that a drain keyed to the alternative would not carry it up.
 - *Counterargument:* numerical and slider judgments are noisy. The convergence of expected-number
   judgments, all-state judgments, and separate normality judgments is nevertheless stronger than
   reliance on one dependent measure.

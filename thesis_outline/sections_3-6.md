@@ -20,12 +20,26 @@ rather than assumed: the utility level amplifies the observed entry's own low-ra
 the prior–lexicon net (Eqs. 23–24), under a gain $\theta_u$ whose value is fixed by cross-trial
 exposure rather than by anything about the current trial.
  
-**Constructive claim.** The architecture reproduces only part of the profile, and the part it
-misses is structured rather than random. Under the two-condition criterion of §4.2, exactly one
-condition holds under every prior tested, never both and never neither, and the two conditions'
-thresholds run in opposite directions as the prior sharpens. The natural reading is that a level
-representing within-trial competition among alternatives is absent, and the pattern is the shape
-of its absence. **Such a level is compatible with this architecture; it is specified here and not
+**Constructive claim.** The architecture meets the two-condition criterion of §4.2. At a lexical
+strength that holds every entry against each of the five priors ($\Lambda=512$), both conditions hold
+under three of the five priors, the three with the most prior mass on the all-region, and the
+second holds under all five, so among these priors the two conditions are nested (§4.4). Across
+the plane of lexical strength against prior concentration both hold in 33 of 121 cells, in a band
+whose shape two opposed floors set: as the prior sharpens, the first condition's floor in $\Lambda$
+falls and the second's rises (§4.5). The case for a level representing within-trial competition
+among alternatives therefore does not rest on the criterion failing (R2). It rests on what such a
+level would save:
+- branching logarithmic in the predicate's granularity;
+- one dimension per level, so plasticity is local without the relay;
+- an affine generative map that keeps the convergence proof;
+- a read-out that needs no normalization across the scale (§5.1);
+- an end to learning short of a maximizer the slow flow never reaches, which the present
+  architecture lacks (the new §5.3 of `revisions.md`; argued, not derived);
+- and, on the plane, a drain keyed to the alternative rather than to prior mass on the all-region,
+  which would not carry the second condition's floor up as the first's falls (§4.5's floors; argued
+  in §5.1, not measured).
+
+**Such a level is compatible with this architecture; it is specified here and not
 built.** What the dissertation contributes in its place is that specification: the construction the
 model works under states exactly what any additional level must supply — a state space, a position
 in the chain, generative maps in both directions, and a convergence argument — and §5.1 discharges
@@ -49,7 +63,7 @@ reader should weigh is recorded as a fact with our position reserved.
 | Result | Where | Why it is load-bearing |
 |---|---|---|
 | Amplification mechanism, Eqs. (23)–(24) | §3.5, §4.4 | It is what produces the effect, and it is measured |
-| The two-condition criterion and its results | §4.2–§4.5 | The spine of the constructive claim |
+| The two-condition criterion and its results | §4.2–§4.5 | The verdict, and the evidence that the conjunction is reachable |
 | Conventionalization of $\theta_u^\ast$ by exposure (App. B) | §3.4, §5.1 | The position the architecture commits to |
 | The four construction obligations (Text cell 3; §8; App. B) | §5.1 | Turns the gap into a specification |
 | Binary branching per level, and $m=1$ (App. C §§2, 5) | §5.1 | Makes the alternatives level tractable and local |
@@ -454,21 +468,17 @@ excludes within-trial competition. It is that adding a level is a construction w
 obligations, that the present results discharge part of each, and that the architecture's own
 results point at which design is the tractable one.
  
-- **Why the pattern points at such a level.** The two conditions of §4.2 are not independently hard;
-  they are hard *against each other*, along the single axis the architecture currently makes
-  available. The first requires mass to move out of the all-region, and the only thing here that
-  moves it is the utility level amplifying a negative width coordinate — which requires the prior to
-  be concentrated on the all-region already. The second requires the residual all-region mass to be
-  a minority, and prior concentration is exactly what makes that hard. **Prior concentration buys
-  the first condition and spends the second**, and the band of §4.5 exists only because raising
-  $\Lambda$ supplies a second axis. A drain keyed to the *alternative* would not scale with prior
-  mass on the all-region, and so would satisfy the first condition without consuming the headroom
-  the second needs.
-- **Corroboration from the anti-exhaustive shifts.** On four of five priors the settled belief is
-  *more* confident in the excluded state than the literal listener — the failure mode Cremers,
-  Wilcox and Spector (2023) show baseline RSA is exposed to under skewed priors, and which human
-  participants do not exhibit. Both models derive strengthening from the prior and both inherit the
-  liability. A drain keyed to the alternative rather than to the prior is what avoids it.
+- **What the criterion adds to the case, and where it is sourced (P-8).** The case for the level is
+  the complexity it saves (R2; the design below). The criterion adds one thing the level would
+  change, and it is stated on §4.5's floors, not on Part D's rows. As the prior sharpens, the first
+  condition's floor in $\Lambda$ falls and the second's rises, so on the plane prior concentration
+  buys the first condition and spends the second. A drain keyed to the *alternative* would not
+  scale with prior mass on the all-region, and so would lower the first floor without raising the
+  second. Say that this is argued from the floors and not measured, since no such drain is built.
+  Do not write "under every prior tested": at $\Lambda=512$ both floors lie at or below it from
+  $\alpha=1$ to $64$, and Part D's rows show no tension (§4.4). The earlier bullet reading the
+  pattern as pointing at an absent level is withdrawn (R14), and the anti-exhaustive parallel now
+  lives in §4.4 as a parallel, not as corroboration (R7).
 **The design: resolution as a negative search.** State the position, because it is what makes the
 remaining obligations answerable rather than open.
  
@@ -628,17 +638,21 @@ remain, and naming them is the point of saying so:
   judgments.
 ---
  
-# 6. Conclusion (about 150 words)
+# 6. Conclusion (about 165 words)
  
 1. A field-valued world state on a dense scale, with a soft lexical entry competing additively
-   against the world prior in the same log-density, admits a closed-form stationary point and a
+   against the world prior in the same log-density — a placement of the prior the architecture
+   commits to, not one its construction forces (§3.2) — admits a closed-form stationary point and a
    recurrent network that provably reaches it, with plasticity local at every $m$.
 2. That network moves belief mass away from the *all* reading without representing any alternative,
    by amplifying the observed entry's own projection under a gain fixed by exposure. The effect
    therefore does not by itself diagnose a within-trial alternatives computation.
-3. But the network satisfies only one of the two conditions the criterion imposes, under every prior
-   tested, because prior concentration buys the first and spends the second. A level representing
-   competition among alternatives would decouple them. This dissertation specifies that level and
+3. The network also meets both conditions the criterion imposes: under three of five priors at a
+   lexical strength that holds every entry, across a band of the plane, and within two updates of
+   learning. What a level representing competition among alternatives would change is what the
+   network pays for that. On the plane the first condition's floor falls as the prior sharpens and
+   the second's rises (§4.5), and a drain keyed to the alternative would not raise the second; and
+   learning has no end short of a maximizer the slow flow never reaches. This dissertation specifies that level and
    proposes a design for it — resolution as a negative search branching binarily at each level,
    which keeps the dimension at one, the plasticity local, and the generative map affine enough to
    inherit the convergence proof — but does not derive its algebra, and says so in §5.1.
