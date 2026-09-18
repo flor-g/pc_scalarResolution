@@ -331,7 +331,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         only differing lines are 12 `cost:` lines in E2b.
       - Over the whole change (checkpoint `b548e0a` to here), the only stored output that differs
         in anything but wall-clock is Code Cell D's, which is the one U3 and U4 set out to change.
-- [x] **U8. `agent.md`** (2026-09-18). Commit `PENDING`.
+- [x] **U8. `agent.md`** (2026-09-18). Commit `1320fa1`.
       - **§1 cell map.** The Appendices A–D row now names "where ℓ₀ enters (Sec. 5, Eqs. (D5)–(D7),
         decision A3)". The cell count stays 23 and the Code Cells A–D row stays accurate.
       - **§2, the two loud dependencies from U6**, recorded under a new *Loud dependencies* paragraph
