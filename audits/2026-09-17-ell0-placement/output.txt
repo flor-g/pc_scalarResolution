@@ -1,0 +1,108 @@
+------------------------------------------------------------------------------
+1. Self-check: variant A reproduces the stored network
+  theta_u* (A, default inventory)      -28.43749     [expect -28.43749]
+  theta_u* (A, recomputed from c_y^A)  -28.43749
+  G = B^T W B - I  max|.|               2.2e-16
+------------------------------------------------------------------------------
+2. The utility level's drive c_y, under the two placements (Eq. 16's numerator)
+   A:  c_y = B^T W (ell_0 - phi_L)      the prior NET of the entry
+   B:  c_y = -B^T W (ell_0 + phi_L)     the prior and the entry SUMMED
+
+   utterance                   c_y^A                  c_y^B
+   no            [-9.1191, -12.8318]     [-9.1191, 24.3674]
+   some           [9.1191, -24.3674]      [9.1191, 12.8318]
+   all            [9.1191, -12.8318]      [9.1191, 24.3674]
+
+   no         max|c^A - c^B - 2 B^T W ell_0| = 2.8e-14     max|c^A + c^B + 2 B^T W phi_L| = 3.6e-15
+   some       max|c^A - c^B - 2 B^T W ell_0| = 1.5e-14     max|c^A + c^B + 2 B^T W phi_L| = 1.1e-14
+   all        max|c^A - c^B - 2 B^T W ell_0| = 2.1e-14     max|c^A + c^B + 2 B^T W phi_L| = 1.1e-14
+
+   So the two differ by exactly 2 B^T W ell_0, whatever the entry, and agree up to
+   the sign the prior carries against the entry.  2 B^T W ell_0 = [-0.0, -37.1992]
+------------------------------------------------------------------------------
+3. At sigma_L = sigma_S the two agree GIVEN phi_u; they differ in phi_u* itself
+   phi_S*(phi_u) difference is (sigma_L - sigma_S) ell_0 / S, exactly.
+
+   no     at theta_u = 1:  max|phi_S^A - phi_S^B| at the SAME phi_u 1.8e-15   |phi_u*^A - phi_u*^B| 12.3997   max|phi_S*^A - phi_S*^B| 3.9996
+   some   at theta_u = 1:  max|phi_S^A - phi_S^B| at the SAME phi_u 1.8e-15   |phi_u*^A - phi_u*^B| 12.3997   max|phi_S*^A - phi_S*^B| 3.9996
+   all    at theta_u = 1:  max|phi_S^A - phi_S^B| at the SAME phi_u 1.8e-15   |phi_u*^A - phi_u*^B| 12.3997   max|phi_S*^A - phi_S*^B| 3.9996
+
+   With sigma_L = 2, sigma_S = 1 the first column is no longer zero:
+   no     max|phi_S^A - phi_S^B| at the same phi_u 6.3063   predicted (sigma_L - sigma_S)|ell_0|_max / S 6.3063
+   some   max|phi_S^A - phi_S^B| at the same phi_u 6.3063   predicted (sigma_L - sigma_S)|ell_0|_max / S 6.3063
+   all    max|phi_S^A - phi_S^B| at the same phi_u 6.3063   predicted (sigma_L - sigma_S)|ell_0|_max / S 6.3063
+------------------------------------------------------------------------------
+4. Is the literal listener ell_0 - phi_L a fixed point of the network?
+   A:  phi_S* = [sigma_L theta B phi_u + sigma_S (ell_0 - phi_L)] / S  ->  ell_0 - phi_L
+       as sigma_S -> infinity.  The baseline is a limit of the model itself.
+   B:  phi_S* = [sigma_L (ell_0 + theta B phi_u) - sigma_S phi_L] / S.
+       sigma_S -> infinity gives -phi_L (the entry, prior discarded);
+       sigma_L -> infinity gives ell_0 + theta B phi_u (the prior, entry discarded).
+
+   sigma_S = 1e6  max|phi_S^A - (ell_0 - phi_L)| 2.71e-05     max|phi_S^B - (ell_0 - phi_L)| 1.89e+01
+   sigma_L = 1e6  max|phi_S^A - (ell_0 - phi_L)| 2.71e+01     max|phi_S^B - (ell_0 - phi_L)| 8.15e+00
+------------------------------------------------------------------------------
+5. Part D's five priors, at Lambda = 8 and at Lambda = 512, under both placements
+   q_lit is ell_0 - phi_L throughout (variant A's baseline), so the two variants are
+   scored against the same literal listener.  shift = q_H - q_lit for *some*.
+
+   Lambda = 8
+   prior           theta*^A    theta*^B    q_lit    q_H^A    q_H^B   shift^A   shift^B  A 1st/2nd  B 1st/2nd
+   gaussian          -28.44       22.58   0.0016   0.0025   0.3832   +0.0008   +0.3815  no /met    no /met
+   flat             5950.63       15.86   0.0504   0.0799   0.3662   +0.0295   +0.3159  no /met    no /met
+   skewed low        -14.51       17.44   0.0001   0.0005   0.3406   +0.0004   +0.3405  no /met    no /met
+   skewed high        55.01      112.18   0.1368   0.1788   0.3383   +0.0421   +0.2016  no /met    no /met
+   delta-like        766.78     -786.78   0.9568   0.9598   0.4502   +0.0030   -0.5067  no /no     met/met
+
+   Lambda = 512
+   prior           theta*^A    theta*^B    q_lit    q_H^A    q_H^B   shift^A   shift^B  A 1st/2nd  B 1st/2nd
+   gaussian         1580.81     1433.13   0.0016   0.0088   0.0603   +0.0071   +0.0587  no /met    no /met
+   flat             1521.48     1482.39   0.0504   0.0357   0.0575   -0.0146   +0.0071  met/met    no /met
+   skewed low       1589.49     1426.38   0.0001   0.0091   0.0547   +0.0089   +0.0546  no /met    no /met
+   skewed high      1499.37     1505.31   0.1368   0.0413   0.0547   -0.0955   -0.0820  met/met    met/met
+   delta-like       1407.77     5370.61   0.9568   0.4351   0.0074   -0.5217   -0.9494  met/met    met/met
+
+------------------------------------------------------------------------------
+6. The largest leak in a row (the prior overriding the entry), at theta*
+   prior         Lambda     leak A     leak B
+   gaussian           8   6.26e-01   1.81e-03
+   flat               8   2.26e-02   1.70e-03
+   skewed low         8   9.10e-01   1.57e-03
+   skewed high        8   9.08e-01   1.54e-03
+   delta-like         8   1.00e+00   3.08e-04
+   gaussian         512  1.74e-177  9.75e-177
+   flat             512  6.17e-177  9.32e-177
+   skewed low       512  7.13e-175  8.90e-177
+   skewed high      512  1.75e-179  8.90e-177
+   delta-like       512   1.06e-74  1.33e-177
+------------------------------------------------------------------------------
+7. How Lambda reaches the utility level under each placement
+   |c_y| as Lambda grows, under the Gaussian prior (utterance *some*):
+
+     Lambda      |c^A|      |c^B|  |c^A| - |c^B|
+      1e-09    18.5996    18.5996        +0.0000
+          1    19.3542    17.9149        +1.4393
+          8    26.0179    15.7421       +10.2758
+         64    97.5380    77.9789       +19.5590
+        512   700.6834   680.8037       +19.8797
+    4.1e+03  5534.4814  5514.5967       +19.8848
+
+   At Lambda -> 0 (no lexical field) the two couplings are +B^T W ell_0 and -B^T W ell_0:
+   c^A = [0.0, -18.5996]   c^B = [0.0, 18.5996]
+   As Lambda -> infinity both approach -Lambda B^T W chi_y, so the placements differ
+   in the prior's sign against the entry, not in the entry's own leading term.
+------------------------------------------------------------------------------
+8. Self-check: theta*^B maximizes variant B's reduced free energy
+   F is evaluated directly from variant B's residuals at its own stationary
+   (phi_S, phi_u), averaged over the three utterances, and scanned in theta.
+
+   gaussian     Lambda     8   theta*^B      22.5779   argmax on a +-50% scan      22.5779   rel. gap 0.00e+00
+   gaussian     Lambda   512   theta*^B    1433.1274   argmax on a +-50% scan    1433.1274   rel. gap 0.00e+00
+   flat         Lambda     8   theta*^B      15.8618   argmax on a +-50% scan      15.8618   rel. gap 0.00e+00
+   flat         Lambda   512   theta*^B    1482.3938   argmax on a +-50% scan    1482.3938   rel. gap 0.00e+00
+   skewed low   Lambda     8   theta*^B      17.4392   argmax on a +-50% scan      17.4392   rel. gap 0.00e+00
+   skewed low   Lambda   512   theta*^B    1426.3832   argmax on a +-50% scan    1426.3832   rel. gap 0.00e+00
+   skewed high  Lambda     8   theta*^B     112.1771   argmax on a +-50% scan     112.1771   rel. gap 0.00e+00
+   skewed high  Lambda   512   theta*^B    1505.3053   argmax on a +-50% scan    1505.3053   rel. gap 0.00e+00
+   delta-like   Lambda     8   theta*^B    -786.7826   argmax on a +-50% scan    -786.7826   rel. gap 0.00e+00
+   delta-like   Lambda   512   theta*^B    5370.6075   argmax on a +-50% scan    5370.6075   rel. gap 0.00e+00
