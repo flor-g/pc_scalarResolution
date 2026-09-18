@@ -295,7 +295,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
       links resolve** to an inline anchor. `appendix_E.ipynb` names Appendix D once, in a list of
       appendices, unaffected by the title. Markdown only: no execution needed, and the stored outputs
       are those U4 verified.
-- [x] **U6. Couplings** (2026-09-18). **None fires.** Commit `PENDING`. Against the checkpoint
+- [x] **U6. Couplings** (2026-09-18). **None fires.** Commit `84e45e8`. Against the checkpoint
       `b548e0a`, only cells 0, 20 and 21 of `main.ipynb` differ in source; the cell count is 23.
       - **1, 2, 7.** Code Cells 2 and 2b are source-identical to the checkpoint, and their headers
         still carry the exact prefixes `# === Code Cell 2:` and `# === Code Cell 2b:`, which are
