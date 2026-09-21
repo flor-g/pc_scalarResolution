@@ -123,6 +123,47 @@ pieces and checks it against the notebook's:
   which the conjunction is first met, which is the measured form of "the conjunction is reached
   early": it is a fact about the shape of the update, not about where the flow stops.
 
+- **H9. There is an INTEGRABILITY BOUNDARY just above λ = 1206, and H8's cost table is wrong**
+  (measured 2026-09-21 at HA4b; `integrability_boundary.py`, `integrability_spectrum.py`,
+  `integrability_output.txt`). One `infer` at Λ = 512:
+
+  | θ_u | λ_max | steps | steps/λ | seconds |
+  |---:|---:|---:|---:|---:|
+  | 13.37 | 180.8 | 39,007 | 215.8 | 1.73 |
+  | 34.70 | 1,206.1 | 264,724 | 219.5 | 11.64 |
+  | 52.07 | 2,713.3 | 21,706,280 | **8000.0** | 945.50 |
+  | 54.43 | 2,964.6 | 23,717,000 | **8000.0** | 1025.57 |
+  | 61.27 | 3,756.0 | 30,048,104 | **8000.0** | 1305.24 |
+  | 71.09 | 5,055.8 | 40,446,305 | **8000.0** | 1751.29 |
+
+  `infer` sets `max_steps = ceil(max_time / dt)` with `max_time = 1000.0` and
+  `dt = tau_state/(8λ)`, so the cap **is** 8000·λ. The four large rows hit it exactly and
+  returned **`converged = False`**: they are failures, not expensive successes. Cost is *linear*
+  in λ — 219·λ steps at a flat 45 µs/step — up to the boundary, and the integration simply stops
+  converging within its time horizon above it. **It is not a condition-number effect**:
+  λ_min = 1.00000 at every θ_u tested, so cond = λ_max, and the 219 → 8000 jump is not in the
+  spectrum. Why 27 simulated time units suffice below the boundary and 1000 do not above it is
+  **not diagnosed**; nothing may be written about the cause until it is.
+
+  **Two corrections this forces.**
+  1. **H8's table is withdrawn.** It priced a row by scaling Code Cell 2b's *settling* step count
+     and never priced the *flow*, which under halting is 61–173 updates × 3 inferences climbing
+     into the non-converging region. Its "12 to 37 s" and "27 to 50 s" are not what a halted row
+     costs. H4's 4λ figures stand (they are closed-form) and H2/H3's verdicts stand.
+  2. **`FEASIBLE_STIFFNESS` is not the pure machine budget the agent described to the user.** It
+     sits just under the convergence boundary — 1206 converges, 2713 does not — so raising it past
+     about 1.2e3 admits rows that fail, and the block's
+     `RuntimeError("the arrival theta_u was expected to be integrable")` fires. The user's approval
+     to raise it was given on the agent's wrong description and **was not acted on**; the point was
+     put back to them.
+
+- **H10. What survives at Λ = 512, measured.** The conjunction holds at **every** halted θ_u at
+  both tolerances, and the criteria barely move: flat's shift −0.0119 at today's arrival against
+  −0.0145 halted; delta-like −0.5182 against −0.5213, with θ\*'s −0.5217. So halting costs no
+  verdict (H2 confirmed against the real implementation). Of the three rows, only
+  **delta (all) at tol = 1** (θ_u = 34.70, λ = 1206, 11.6 s) is inside the integrability boundary;
+  flat (54.43) and skewed high (52.07) at tol = 1 are outside, as are all three at tol = 1e-1.
+
 ---
 
 ## 5. What this opens, for the user
@@ -305,3 +346,32 @@ stay class (e) unless a cell is later asked to print them.
 **Corrected at HA0:** this paragraph used to begin "every reported number", which Q-HA2's answer
 makes false. The realizable rows move, because they are now defined by the tolerance. What the scope
 line protects is everything the paper reports **as a prediction** — and those are at θ\*.
+
+---
+
+## 8. HA4b: the open question (2026-09-21)
+
+**Blocking the conversion of call sites 3 and 4.** H9 and H10 are measured; what to do about them
+is the user's.
+
+- **The integrability boundary is real and sits between λ = 1206 and λ = 2713.** Above it `infer`
+  exhausts `max_time` and returns `converged = False`. Nothing in the model changes; what changes
+  is which θ_u the notebook can *exhibit* by integration.
+- **At tol = 1, one of the three Λ = 512 rows survives it** (delta (all), θ_u = 34.70, λ = 1206,
+  11.6 s). The other two would print the existing "is not run end to end" line with the reason,
+  which is an honest report and costs nothing.
+- **At tol = 1e-1 none survives it**, so the end-to-end block would report nothing at Λ = 512.
+- **The user's proposal (2026-09-21): tolerance is a function of the case's Λ**, with 1e-1 at
+  Λ = 8 and 1 at Λ = 512 as ad hoc demonstration values, the hypothesis to be stated in the
+  outline. **The premise the user was given for it — that cost is super-linear in λ — was the
+  agent's error and is withdrawn (H9).** The hypothesis keeps independent, measured support: a
+  *fixed* absolute tolerance buys very different amounts of flow at different Λ (15 updates at
+  Λ = 8 against 61–173 at Λ = 512 for the same 1e-1), because the gradient's scale grows with Λ.
+  If the hypothesis is stated, it must rest on that and **not** on the withdrawn cost claim.
+- **Note for whoever writes it:** a tolerance keyed to Λ is *not* the relative tolerance
+  |Δθ| < tol·|θ| that H5 rejects as a guard. Λ is a standing property of the configuration, fixed
+  before the flow starts; |θ| is where the trajectory currently is. The first is a stipulation
+  about the case, the second is the system reading its own trajectory, which is what the user
+  ruled out. The outline should draw that line explicitly, or the two will be confused.
+- **Not diagnosed:** why the settling time crosses from ~27 to >1000 simulated time units. No
+  claim about the cause goes anywhere until it is.

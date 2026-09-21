@@ -1,0 +1,19 @@
+=== integrability_boundary.py: one inference, timed, at each halt point (Lambda = 512) ===
+  theta_u    lambda       steps   seconds   note
+    13.37     180.8       39007      1.73   TODAY's arrival row
+    34.70    1206.1      264724     11.64   delta, tol=1
+    52.07    2713.3    21706280    945.50   skewed high, tol=1
+    54.43    2964.6    23717000   1025.57   flat, tol=1
+    61.27    3756.0    30048104   1305.24   flat, tol=1e-1
+    71.09    5055.8    40446305   1751.29   delta, tol=1e-1
+
+=== integrability_spectrum.py: is it the condition number? NO, lambda_min = 1 throughout ===
+    max_steps = ceil(max_time / dt) = ceil(1000 / (tau_state / (8 lambda))) = 8000 lambda,
+    so steps/lmax = 8000.0 EXACTLY means the run exhausted max_time and did NOT converge.
+ theta_u  lambda_max  lambda_min      cond       steps steps/lmax steps/cond
+   13.37       180.8     1.00000     180.8       39007      215.8      215.8
+   34.70      1206.1     1.00000    1206.1      264724      219.5      219.5
+   52.07      2713.3     1.00000    2713.3    21706280     8000.0     8000.0
+   54.43      2964.6     1.00000    2964.6    23717000     8000.0     8000.0
+   61.27      3756.0     1.00000    3756.0    30048104     8000.0     8000.0
+   71.09      5055.8     1.00000    5055.8    40446305     8000.0     8000.0
