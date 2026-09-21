@@ -153,8 +153,8 @@ need to change anything else"*. Tasks below; **nothing is implemented**.
   - **(i) (recommended) Keep both, relabelled.** They are demonstrations that the conjunction is
     reached early in the flow and integrable there, not predictions at a halted θ_u. Under A19 the
     prose says so, and says that neither stopping rule is the halting mechanism: one is the
-    evaluator's criterion, the other needs θ\*.
-    the halting account is about where the flow would stop, not about how these rows were located.
+    evaluator's criterion, the other needs θ\*. The halting account is about where
+    the flow would stop, not about how these two rows were located.
   - **(ii) Recompute them at a tolerance.** Rejected by A19's third part: the rows would then depend
     on the ad hoc quantity.
   - **(iii) Drop them.** They are §4.6's evidence and Text cell 4's demonstration that the verdict
