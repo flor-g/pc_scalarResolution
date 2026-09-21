@@ -287,6 +287,45 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   `delta_readout_report` in Code Cell 2.
 - Evidence: `procedure_records/d9_delta_readout.md` F1-F4.
 
+### A18. The inventory holds at least {χ_y, ker χ_y}; antonymy is not a model primitive
+- Status: Settled
+- Decided by: the **user** (2026-09-21), closing O8's ensemble half.
+- Decision: the exposure ensemble of A9 contains, for any entry, **at least that entry and its
+  kernel**: {χ, ker χ}, in Appendix D Eq. (D2)'s sense. **An antonym of x is never needed to define
+  x.** A predicate heard with no antonym therefore raises no gap — the ensemble is architectural,
+  not lexical.
+- Theoretical reason, the user's, recorded as given:
+  1. **Antonymy is a consequence, and closer to a coincidence, of learned scalar resolution.** Two
+     words happen to share a scale and may then be called antonyms. Nothing in the architecture
+     introduces the relation.
+  2. **Antonymy is not invertible; the kernel is.** ant(ant(x)) need not be x, and Xiang et al.'s own
+     materials show it (F20): *straight* is paired with *bent* and with *curved*, *short* with *long*
+     and with *tall*. ker is an involution wherever it closes (Eq. D2), which is what makes it the
+     architectural partner and antonymy a lexical accident.
+  3. **The architectural partner exists where the lexical one does not.** ker E_all = {1}, the O
+     corner of Appendix C §4, which English does not lexicalize (Horn's gap) and which Appendix D §2
+     already records as the entry whose complement escapes the family.
+- **What this phase may predict, and how far.** In this phase complement(x) may **coincide** with
+  ant(x) — it does for Xiang et al.'s absolute pairs — and that coincidence is a prediction of the
+  single θ, not a definition. It is stated as such, and not transported (the pattern of O9).
+- **Phase note: the stipulation goes partly stale, in the direction of becoming a consequence.**
+  Under the proposed architecture of §5.1, with **at most two entries per level**, the two entries
+  of a level are strictly boolean complements by construction, so what this phase stipulates the
+  next one derives. **This does not conflict with O14's asymmetry:** complementarity holds *within*
+  a level, while O14's asymmetry is *across* levels — the 0 boundary fixed by θ_L and the 1 boundary
+  by an alternatives level's θ_A. F18's broken parity is a fact about moving one boundary against
+  the other, which is a relation between levels, not between the two entries of one.
+- **What stays a stipulation here.** That the inventory contains the pair at all is this phase's
+  stipulation, in O2's sense, and is labelled as one. This phase models no exposure statistics; it
+  declines to derive the inventory and declines to invent frequencies for it (O2).
+- Bogacz status: none; this is a statement about what the ensemble of A9 contains.
+- Depends on it: A9's ensemble, hence every θ\*; O8; §5.2's ensemble sentence; Appendix D §2's
+  kernel table, which is where the notation is defined; §5.1's cascade, already written as
+  ⟨E_some, ker E_some⟩ and ⟨E_all, ker E_all⟩.
+- Evidence: F20 and F1 in `procedure_records/scale_classes_hypothesis.md`; the ensemble probes of
+  `audits/2026-09-13-scale-structure/` (|θ\*| 4.6 to 91 across candidate ensembles, verdicts
+  unchanged in what was tested). Tasks: `procedure_records/exposure_stipulation.md` X6–X8.
+
 ### A17. Eq. (A4) is stated as non-local; the relay and the alternatives level are named, not derived
 - Status: Settled; resolves D10
 - Decided by: user (2026-09-13)
@@ -919,7 +958,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   θ_u" is located by the evaluator.
 
 ### O8. θ_u\* and Λ for a single-predicate configuration (§5.2's probe)
-- Status: Open (since 2026-09-14)
+- Status: **Settled 2026-09-21**, in both halves: Λ by the user's S-9 and the narrowing below, the
+  ensemble by decision **A18**. Raised 2026-09-14.
 - Decided by: not decided. Raised by the agent while re-examining `thesis_outline/sections_3-6.md`
   §5.2 (`thesis_outline/revisions.md` Q7).
 - **The question.** A9 requires every configuration to carry its own θ\*, the maximizer of F̃ over an
@@ -963,11 +1003,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   groups; Experiment 1 elicits the priors with **no adjective at all**. So the {χ, 1 − χ} ensemble
   **cannot be argued from exposure in the experiment**; by the principle above it does not need to
   be, and it is argued instead from the inventory a speaker has.
-- **Still open, and now scoped by phase (2026-09-21).** What ensemble a predicate heard with **no**
-  antonym carries, and whether the paradigm's {χ, 1 − χ} may be stipulated generally. The user has
-  asked to look at this closely before deciding, because the complement relation is a property of
-  **this phase's** single θ (F18, F19) and must not be carried into the phase where the two
-  boundaries come apart (O14). Neither question blocks T0–T13.
+- **The ensemble half is closed, 2026-09-21, by the user → new decision A18.** The ensemble is
+  architectural: it holds at least {χ, ker χ}, and an antonym is never needed to define an entry, so
+  the no-antonym case is not a gap. {χ, 1 − χ} in Xiang et al.'s paradigm is that pair, with ant(x)
+  **coinciding** with ker(x) for those absolute classes — a prediction of this phase's single θ, not
+  a definition, and not transported (O9's pattern). That the inventory contains the pair at all is
+  this phase's stipulation, labelled as one (O2).
+- **O8 is therefore settled in both halves.** Nothing in it blocks T0–T13.
 - **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
 - **Finding, 2026-09-17** (record `procedure_records/scale_classes_hypothesis.md`, raised under
   O13). **The ensemble question has an answer wherever the predicate is tested against an antonym.**

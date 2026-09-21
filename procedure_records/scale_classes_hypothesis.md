@@ -299,10 +299,12 @@ has**, which the experiment neither creates nor limits. §5.2 must say it that w
 - **O13** (new): whether H1 and H2 are adopted, and if so what fixes Λ. Nothing was changed.
 - **O8**: F1 and the antonym structure answer the ensemble question for this paradigm ({χ, 1 − χ});
   the Λ question is now sharper, not settled — F9 says the data want Λ to vary within a class.
-  **2026-09-21: the Λ half is settled (S-9 above, and O8's own narrowing); the ensemble half is
-  being looked at closely by the user before it is decided, because the complement relation is a
-  property of this phase's single θ (F18, F19) and the next phase separates the boundaries (O14).
-  Neither blocks T0–T13.**
+  **2026-09-21: O8 is settled in both halves.** The Λ half by S-9 above; the ensemble half by the
+  user's decision **A18** — the ensemble is architectural, {χ, ker χ}, and an antonym is never needed
+  to define an entry. For these absolute classes ant(x) **coincides** with ker(x) in this phase, a
+  prediction of the single θ, not a definition. **Wording constraint on T2's block 1 and T10's
+  prose:** state the ensemble as the **inventory's**, never as the experiment's — F20 shows the latin
+  square denies the exposure reading — and make no claim about antonymy.
 - **Q7** in `revisions.md`: three of its four choices are now answerable from measurement, and the
   fourth (the empirical-fit paragraph) needs F12 either way.
 - Every number here is class (e) under `agent.md` §3.3 until a cell prints it (C6). Whether any of

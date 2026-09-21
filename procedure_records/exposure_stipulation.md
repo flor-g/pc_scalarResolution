@@ -1,9 +1,10 @@
-# Uniform exposure, stated as a stipulation
+# The exposure ensemble, stated as a stipulation: its weights and its membership
 
-Working record for the change the user approved on 2026-09-21, settling `decisions.md` **O2**.
-Pattern: `agent.md` §5.3.
+Working record for the change the user approved on 2026-09-21, settling `decisions.md` **O2** (the
+ensemble's **weights**) and, from the same day, **A18** and **O8**'s ensemble half (its
+**membership**). Pattern: `agent.md` §5.3.
 
-**Task IDs here are `X0`–`X5`.** `N0`–`N8` (`resolution_naming.md`) and `T0`–`T16`
+**Task IDs here are `X0`–`X8`.** `N0`–`N8` (`resolution_naming.md`) and `T0`–`T16`
 (`scale_classes_hypothesis.md`) are live at the same time; the prefixes keep them apart.
 
 **Status, 2026-09-21: approved, nothing implemented.** No question is outstanding. The user's
@@ -89,11 +90,41 @@ covers both, and X5 folds into N8. Run alone, this change needs no execution at 
 
 ---
 
-## 5. What this change does not do
+## 6. The membership half (A18, added 2026-09-21)
+
+**The decision.** The ensemble holds at least {χ, ker χ} (Appendix D Eq. (D2)); an antonym is never
+needed to define an entry; antonymy is a lexical accident of two words sharing a scale, is not
+invertible where ker is, and has no word at all where ker E_all = {1}, the O corner. In this phase
+ant(x) may **coincide** with ker(x), which is a prediction of the single θ and is not transported
+(O9's pattern). That the inventory holds the pair at all is this phase's stipulation, labelled as
+one; under §5.1's proposed level, with at most two entries per level, it becomes a consequence
+instead — and that is compatible with O14, since complementarity is **within** a level and O14's
+asymmetry is **across** levels.
+
+- [ ] **X6. Appendix B and Appendix D.** Appendix B's ensemble passage says what the ensemble
+      contains, beside X1's sentence on how it is weighted, so membership and weights are stated
+      together and both are labelled as this phase's stipulations. Appendix D §2, which already
+      defines ker and tabulates where it escapes the family, gains the one sentence that the
+      inventory holds {χ, ker χ} for any entry — it is the notation's home, and the E_all row is the
+      case that makes the point.
+- [ ] **X7. §5.1 and §5.2.** §5.1's cascade is already written ⟨E_some, ker E_some⟩ and
+      ⟨E_all, ker E_all⟩; one clause connects it to A18 so the design and the commitment read as one
+      claim. §5.2 states the ensemble as the inventory's, **not** as the experiment's: F20 shows the
+      latin square denies the exposure reading, and the user's principle is that inventory follows
+      from exposure but not conversely. It also says that ant coincides with ker for these absolute
+      classes in this phase, with no thesis about antonymy.
+- [ ] **X8. Records.** `decisions.md` A18 and O8 are written (2026-09-21); `revisions.md` gains the
+      site entries for X6 and X7; `scale_classes_hypothesis.md` T2's block 1 and T10's prose carry
+      the wording constraint of X7.
+
+---
+
+## 7. What this change does not do
 
 - It does not measure the sensitivity of θ_u\* or of the criteria to p(y). Option (d) was declined.
 - It does not touch Code Cell B's *ALTERNATIVE SPACES* block, which varies ensemble **membership**
   and is a different probe.
-- It does not settle **O8**, which asks what ensemble a single-predicate configuration has. O8
-  inherits this entry's principle — stipulate, label, and decline to invent — but its membership
-  question is still the user's to answer.
+- It does not derive the inventory. A18 fixes what the ensemble contains; why a lexicon contains
+  those entries is not this phase's question.
+- It does not measure a no-antonym configuration. A18 says the ensemble is {χ, ker χ} whether or not
+  a word lexicalizes ker χ, so nothing needs re-running; the audit's ensemble probes stand.
