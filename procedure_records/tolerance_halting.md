@@ -408,3 +408,79 @@ is the user's.
   is a linear extrapolation through a regime change and may not be printed as a measurement. Either
   it is replaced by the cap (a lower bound on the steps, with non-convergence stated) or the claim
   is made qualitatively. **Not yet changed**; it is part of HA4b.
+
+- **H12. The convergence boundary is DIAGNOSED: a roundoff floor that grows as θ_u², against a
+  fixed stopping tolerance** (2026-09-21, `why_it_stops_converging.py`,
+  `why_it_stops_converging_output.txt`). It is **neither** of the two candidates named when H9 was
+  recorded — not a slow mode of the dynamics, and not an instability of explicit Euler.
+
+  **The dynamics settle just as fast on both sides of it.** max|derivative| decays exponentially at
+  rate ≈ 1 per simulated time unit (the rate λ_min = 1 predicts) and reaches its floor by t ≈ 37 at
+  either θ_u, then sits there unchanged to t = 166:
+
+  | | θ_u = 34.70 (λ = 1206) | θ_u = 52.07 (λ = 2713) |
+  |---|---|---|
+  | t ≈ 10 | 1.668e-2 | 5.277e-2 |
+  | t ≈ 20 | 5.254e-7 | 5.276e-2 → 5.254e-6 at t = 18 |
+  | t ≈ 37–41 | **5.484e-10** | **1.234e-9** |
+  | t ≈ 74–166 | 5.484e-10 (unchanged) | 1.234e-9 (unchanged) |
+
+  **What differs is only the floor's height**, and the floor is a clean square law in θ_u:
+
+  | θ_u | 13.37 | 20.00 | 34.70 | 42.00 | 46.90 | 52.07 | 61.27 |
+  |---|---|---|---|---|---|---|---|
+  | floor | 8.220e-11 | 1.828e-10 | 5.484e-10 | 8.031e-10 | 1.001e-9 | 1.234e-9 | 1.708e-9 |
+  | /θ_u² | 4.598e-13 | 4.570e-13 | 4.555e-13 | 4.553e-13 | 4.551e-13 | 4.551e-13 | 4.550e-13 |
+  | converges | yes | yes | yes | yes | **no** | no | no |
+
+  **floor = 4.55e-13 · θ_u²**, constant to three figures over a 4.6-fold range, crossing the 1e-9
+  tolerance at **θ_u = 46.6, λ = 2177** — with 42.00 the last success measured and 46.90 the first
+  failure. Above the crossing the derivative can never fall below the tolerance, so the test cannot
+  fire however long the run, and it ends at the cap.
+
+  **Why quadratic:** θ_u enters the roundoff twice — the residuals carry it, and `phi_u_dot`
+  multiplies the state error by it again (`-eps_utility + theta * project(eps_state)`).
+  max|φ_S| ≈ 856 at *both* θ_u, so this is **not** the state growing.
+
+  **What it means.** The boundary is a property of **the stopping tolerance**, not of the model, the
+  integrator, or the machine's speed. I3 set 1e-9 above the roundoff floor measured at the θ_u of
+  the time (F34: 8e-11 to 1.6e-10 — consistent with this law at θ_u ≈ 13–19). **The principle was
+  right; the constant does not travel.** Applying I3's own principle consistently — a tolerance that
+  sits above the floor at the θ_u actually being integrated — would restore convergence at every
+  θ_u the halting flow reaches, and would let all three Λ = 512 rows run end to end instead of one.
+  **That is a change to I3 and is the user's**; see §9.
+
+---
+
+## 9. The decision H12 opens, for the user (2026-09-21)
+
+**`infer`'s stopping tolerance is not inconsequential after all.** A19's point 5 reads: *"it is not
+imperative that the fast loop has the same tolerance as the slow loop, and coarsening the tolerance
+does not affect runtime or result by much, so we leave discussions on fast loop tolerance since it
+is inconsequential; the implementation takes 1e-9."* That rested on **H7**, which coarsened the
+fast tolerance at **Λ = 8** and found nothing moved. H12 shows the opposite at the θ_u the halting
+flow reaches at **Λ = 512**: the fixed 1e-9 is precisely what makes those configurations
+non-integrable, and so decides which realizable θ_u can be **exhibited** at all. H7 is not wrong;
+it was measured where the floor is far below the tolerance.
+
+**The striking parallel, worth the paper's notice.** The user's own hypothesis for the *slow* loop
+— that a case's representative tolerance scales with its Λ (R23) — has an exact analogue here for
+the *fast* loop: a fixed absolute tolerance is not scale-free, and 1e-9 means something different
+at θ_u = 13 than at θ_u = 52. The same observation at both timescales.
+
+**Options.**
+
+1. **Leave I3 at 1e-9.** One of three Λ = 512 rows runs end to end (`delta (all)`); the other two
+   report why not. Honest, cheap, and already implemented. The cost is that the end-to-end
+   demonstration is thinner than it was.
+2. **Scale the fast tolerance with the floor**, e.g. `derivative_tolerance = max(1e-9, k·θ_u²)`
+   with k a few multiples of 4.55e-13. This *implements I3's stated principle* — sit above the
+   roundoff floor — rather than overriding it, and restores convergence at every θ_u the flow
+   reaches. It changes stored step counts wherever θ_u is large, and F34's numbers need restating
+   as a law rather than a band.
+3. **Scale it, but only where 1e-9 is unreachable**, which is option 2 with the `max` doing the
+   work; identical below θ_u = 46.6, so no existing printed step count moves.
+
+**Not decided, and nothing about integrability goes in the paper until it is.** Option 3 looks to
+the agent like the one that changes least while being correct, but I3 is a standing decision and
+the choice is the user's.

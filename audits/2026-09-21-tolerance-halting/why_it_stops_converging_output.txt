@@ -1,0 +1,33 @@
+Stopping tolerance is 1e-9. dt = tau_state / (8 lambda), so a step budget of
+N steps simulates N / (8 lambda) time units.
+
+=== theta_u = 34.7  (lambda_max(H) = 1206.1) ===
+       steps  sim. time   max|derivative|   max|phi_S|  < 1e-9?
+       50000        5.2         2.969e+00       853.54    False
+      100000       10.4         1.668e-02       856.49    False
+      200000       20.7         5.254e-07       856.51    False
+      400000       41.5         5.484e-10       856.51     True
+      800000       82.9         5.484e-10       856.51     True
+     1600000      165.8         5.484e-10       856.51     True
+
+=== theta_u = 52.07  (lambda_max(H) = 2713.3) ===
+       steps  sim. time   max|derivative|   max|phi_S|  < 1e-9?
+       50000        2.3         5.188e+01       804.49    False
+      100000        4.6         5.277e+00       851.61    False
+      200000        9.2         5.276e-02       856.83    False
+      400000       18.4         5.254e-06       856.89    False
+      800000       36.9         1.234e-09       856.89    False
+     1600000       73.7         1.234e-09       856.89    False
+
+THE ROUNDOFF FLOOR AGAINST theta_u (each run to t = 50, past the plateau)
+    theta_u    lambda        floor   floor/theta^2  converges?
+      13.37     180.8    8.220e-11       4.598e-13        True
+      20.00     402.0    1.828e-10       4.570e-13        True
+      34.70    1206.1    5.484e-10       4.555e-13        True
+      42.00    1766.0    8.031e-10       4.553e-13        True
+      46.90    2201.6    1.001e-09       4.551e-13       False
+      52.07    2713.3    1.234e-09       4.551e-13       False
+      61.27    3756.0    1.708e-09       4.550e-13       False
+
+  If the floor is c * theta_u^2 with c = 4.598e-13, it crosses the 1e-9
+  stopping tolerance at theta_u = 46.6, where lambda_max(H) = 2177.
