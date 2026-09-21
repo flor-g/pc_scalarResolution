@@ -133,7 +133,12 @@ only as a control), C3 (three objects kept apart), O3 (the bare outline pointer)
   The construction's posterior is the delta at φ_S\*. The outline says "the read-out q meets both
   conditions", never "the posterior satisfies both criteria".
 
-**2026-09-15, to be revisited.** The table above is Part D as it stood on 2026-09-13. Since B9 the
+**2026-09-15, closed 2026-09-18 by U10 (site V13).** The table above is Part D as it stood on
+2026-09-13 and is kept as the record of that state; it is **not** the paper's evidence any more.
+The evidence is Text cell 4b's five rows at Λ = 512, which §4's §4.4 entry and `sections_3-6.md`
+§4.4 now carry: the conjunction under **three** of five (flat, Beta(3,1), delta-like), the q
+position criterion under **five**, no prior meeting the q shift criterion alone, and 33 of the 121
+plane cells. Read the scope paragraph below as historical. Since B9 the
 notebook reports Part D's four diffuse priors at Λ = 8, and in Text cell 4b all five priors at
 Λ = 512, where the conjunction holds under **three** (flat, Beta(3,1) and the delta-like prior). The
 scope sentence above therefore understates what the notebook now shows, and §§4.4, 4.5 and 6 below
@@ -201,7 +206,7 @@ lines 13–14 now state only its own target.
 ### Header and central claim
 
 - **Lines 4–5, scope line.** "Approximately 2,400 words" → 3,000. "Code cells 1–4, Appendices A–D"
-  → add Code Cells A–D.
+  → add Code Cells A–D. **2026-09-21, applied by U13**, at P-3's 3,450 rather than R1's 3,000.
 - **Lines 23–32, constructive claim. Rewrite.** It rests on "exactly one condition holds under every
   prior tested, never both and never neither", which is false at θ\*. Proposed basis, per R2: the
   architecture meets the criterion, under a concentrated prior and across a band of the plane. The
@@ -251,6 +256,15 @@ lines 13–14 now state only its own target.
 ### Word allocation table (lines 81–103)
 
 Replace with §3 above.
+
+**2026-09-21, applied by U13** (the user folded this into U13 on 2026-09-18). The outline's table now
+carries §3's figures with a "was" column, and the headings of §3, §3.4, §4, §4.3, §5, §5.1 and §5.2
+are brought into line; §§3.2, 3.3, 4.1, 4.4, 4.5 and 6 were already moved by U9–U12. A note under
+the table says which sections have bodies written to the new budget and which do not.
+**The renumbering of §3's "Renumbering this causes" paragraph is applied with it:** Limits and
+Predictions become §5.5 and §5.6 in the outline, and the four references follow
+(`sections_3-6.md` Tier A's relay row, Tier B, Tier C, and `background_sections.md`'s commitment 3
+row). §§3.6, 4.6, 5.3 and 5.4 are listed in the table but have no bodies yet; the note says so.
 
 ### §3.2 (lines 124–141) and §3.3's g_S bullet (lines 155–165): new, 2026-09-17 (R18)
 
@@ -1190,7 +1204,7 @@ subscript RSA's (α_S). Not decided; the background avoids the symbol meanwhile.
 | Exposure-only θ\* (−11.2844, −44.1766, −65.7004, −28.4375) | Code Cell B, ALTERNATIVE SPACES |
 | §5.2's re-examination: contributions, leaks, loadings, illustrative θ\* | `audits/2026-09-13-scale-structure/output.txt` (an audit script, not a cell) |
 | The scale classes against Xiang et al. (2022): R² by class, Λ per class, the image-type effect, the class profiles | `audits/2026-09-17-scale-classes/` (audit scripts, not cells; class (e) until a cell prints them) |
-| Where ℓ₀ enters: the two couplings, the 2BᵀWℓ₀ identity, the σ-limit table, Part D under both placements | `audits/2026-09-17-ell0-placement/` (an audit script, not a cell; class (e) until Code Cell D prints them, task U3) |
+| Where ℓ₀ enters: the two couplings, the 2BᵀWℓ₀ identity, BᵀW1 and the constant component, the σ-limit table, Part D under both placements at Λ = 8 and 512 | `main.ipynb` **Code Cell D**, *Sec. 5: where ell_0 enters* (printed since U3, 2026-09-17; no longer class (e)). The audit that established them, `audits/2026-09-17-ell0-placement/`, is kept as the derivation and is not the source the prose cites. |
 | Q2's Part D and Λ = 512 rows: the modes, the mode shift in s and in grid steps, the two mode criteria | `main.ipynb` Code Cells 2 and 2b, the mode criteria block |
 | Q2's plane counts (67, 59, 13 against 74, 59, 33), the 35 disagreeing cells, the four unmoved modes, the 5.6e-5 gap, and the V under both read-outs | Code Cell 4, `plane_summary` |
 | Q6's tilt/width split, the 50 and 67 up/down counts, Eq. (24)'s halving and the limit field | Code Cell C, `utility_split_report`; Appendix C §8 |

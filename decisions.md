@@ -80,9 +80,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   **the Λ = 512 result** — at Λ = 8 the anti-exhaustive shift for *some* is two to three orders of
   magnitude larger under g_S, and at Λ = 512 the conjunction holds under 3 of 5 priors here against
   2 of 5 there.
-- Evidence: `audits/2026-09-17-ell0-placement/`, commit b548e0a; to be printed by Code Cell D
-  (task U3 of `procedure_records/ell0_placement_and_counterforce.md`, P-1 settled by the user
-  2026-09-17). Until that cell runs, the numbers are class (e) under §3.3.
+- Evidence: **`main.ipynb` Code Cell D, *Sec. 5: where ell_0 enters*, which prints them** (task U3,
+  2026-09-17, commit 23bdf23; P-1 settled by the user 2026-09-17), so they are no longer class (e)
+  under §3.3. The audit behind them, `audits/2026-09-17-ell0-placement/` at commit b548e0a, is the
+  derivation and is not what the prose cites.
 - **Dated finding, 2026-09-17 (evidence only; A3 is confirmed, not reopened).** The alternative was
   measured rather than argued: `audits/2026-09-17-ell0-placement/` runs variant B (g_L = −φ_S,
   g_S = ℓ₀ + θ_u Bφ_u) against the model, everything else held.

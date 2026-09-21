@@ -1,8 +1,9 @@
 Sections 3 6 outline · MD
 # Outline for the proposal, evaluation, and discussion sections
  
-Scope: §§3–6, approximately 2,400 words. Written against `main.ipynb` (Text cells 1–6,
-Code cells 1–4, Appendices A–D, Eqs. (1)–(41)) and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
+Scope: §§3–6, approximately 3,450 words (`revisions.md` §3: R1, S-6 and P-3). Written against
+`main.ipynb` (Text cells 1–6, Code Cells 1–4, Appendices A–D with Code Cells A–D, Eqs. (1)–(41))
+and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
  
 ---
  
@@ -34,7 +35,7 @@ level would save:
 - an affine generative map that keeps the convergence proof;
 - a read-out that needs no normalization across the scale (§5.1);
 - an end to learning short of a maximizer the slow flow never reaches, which the present
-  architecture lacks (the new §5.3 of `revisions.md`; argued, not derived);
+  architecture lacks (§5.3; argued, not derived);
 - and, on the plane, a drain keyed to the alternative rather than to prior mass on the all-region,
   which would not carry the second condition's floor up as the first's falls (§4.5's floors; argued
   in §5.1, not measured).
@@ -68,13 +69,13 @@ reader should weigh is recorded as a fact with our position reserved.
 | The four construction obligations (Text cell 3; §8; App. B) | §5.1 | Turns the gap into a specification |
 | Binary branching per level, and $m=1$ (App. C §§2, 5) | §5.1 | Makes the alternatives level tractable and local |
 | Non-locality of normalization across word forms (App. A) | §5.1 | The obstacle binarity removes |
-| The relay, Eqs. (E1)–(E6) | §3.4, §5.3 | Locality at $m>1$, and the cost it carries |
+| The relay, Eqs. (E1)–(E6) | §3.4, §5.5 | Locality at $m>1$, and the cost it carries |
 | $\theta_L$ as predicate granularity, Eqs. (A5)–(A6) | §3.3, §5.1–§5.2 | Sets the search's resolution; the closed/open prediction |
 | $m$ = threshold count and the parity argument (App. C) | §3.5, §5.1–§5.2 | Fixes dimension; the mechanism behind §5.2 |
 | Closed vs open scale, extreme-favouring (new, §5.2) | §5.2 | Second empirical anchor; connects to Xiang et al. |
 | Strict concavity, unique fixed point, closed forms | §3.4, §4.3 | Makes the dynamics a testable implementation claim |
  
-**Tier B — recorded as a fact, position reserved.** One or two sentences each, no verdict, in §5.3
+**Tier B — recorded as a fact, position reserved.** One or two sentences each, no verdict, in §5.5
 or a footnote.
  
 - *Exact zero is unrepresentable* (App. A): a predicate over $n$ atoms cannot distinguish "none"
@@ -88,37 +89,48 @@ or a footnote.
 **Tier C — left in the notebook and cited.** Conditioning and stiffness (Eq. 28); the
 $\mu_u$/$\ell_0$ common-mode invariance and its polar sweep (Eqs. 32–35); the flat-direction
 resolution (§9.1); grid refinement; the multidimensional ceiling (§9.3), except for one sentence
-in §5.3; the weight-transport accounting of § E.2.
+in §5.5; the weight-transport accounting of § E.2.
  
 ---
  
 ## Word allocation
- 
-| Section | Words | Function |
-|---|---:|---|
-| **3. The proposed architecture** | **800** | |
-| 3.1 What the model must do | 90 | Four design requirements |
-| 3.2 A continuous world state and a soft lexicon | 160 | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price |
-| 3.3 The chain, and the semantics of its threshold | 200 | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$ |
-| 3.4 State units, error units, and what is local | 210 | Concavity, closed forms, the relay |
-| 3.5 Two choices the scale forces | 140 | $m=2$ from threshold parity; the amplification axis |
-| **4. Evaluation** | **745** | |
-| 4.1 What is compared | 100 | Three beliefs; RSA/wRSA as analytic baselines only |
-| 4.2 The criterion, and how to read the statistics | 170 | The conjunction; the softmax-nonlinearity guard |
-| 4.3 The specification holds | 90 | Closed forms, Hessian, grid |
-| 4.4 One condition, every time | 220 | The central result and its mechanism |
-| 4.5 The plane, and where both conditions hold | 165 | The band; opposing floors; Eq. (41) |
-| **5. Discussion** | **705** | |
-| 5.1 What an alternatives level would have to supply | 390 | The specification, and what is left undone |
-| 5.2 Scale structure: a second prediction | 200 | Closed vs open; Xiang et al. |
-| 5.3 Limits | 65 | Convergence status, linear-Gaussian caveat, the relay's cost |
-| 5.4 Predictions | 50 | Exposure; granularity; the midpoint cut |
-| **6. Conclusion** | **150** | |
-| **Total** | **2,400** | |
- 
----
- 
-# 3. The proposed architecture (about 800 words)
+
+Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R1) → 3,200 (S-6) →
+**3,450** (P-3). The "was" column is the 2,400 allocation this outline was written to.
+
+| Section | Was | Words | Function |
+|---|---:|---:|---|
+| **3. The proposed architecture** | 800 | **1,085** | |
+| 3.1 What the model must do | 90 | 90 | Four design requirements |
+| 3.2 A continuous world state and a soft lexicon | 160 | **270** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
+| 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
+| 3.4 State units, error units, and what is local | 210 | **230** | Concavity, closed forms, the relay; commitment 7; $\theta_u$ learned |
+| 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
+| 3.6 Two read-outs (new) | — | **100** | `revisions.md` §5, item 1 |
+| **4. Evaluation** | 745 | **1,020** | |
+| 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
+| 4.2 The criterion, and how to read the statistics | 170 | 170 | The conjunction; the softmax-nonlinearity guard |
+| 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
+| 4.4 The five priors | 220 | **285** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism |
+| 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
+| 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
+| **5. Discussion** | 705 | **1,180** | |
+| 5.1 What an alternatives level would have to supply | 390 | **350** | The specification, and what is left undone |
+| 5.2 Scale structure: a second prediction | 200 | **400** | H1 and H2 against Xiang et al. (R16, R17) |
+| 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
+| 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
+| 5.5 Limits (was 5.3) | 65 | **80** | Convergence status, linear-Gaussian caveat, the relay's cost |
+| 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
+| **6. Conclusion** | 150 | **165** | |
+| **Total** | **2,400** | **3,450** | |
+
+**What this table does not do.** §§3.6, 4.6, 5.3 and 5.4 are new sections whose content is planned
+in `revisions.md` §5 and whose bodies are not written in this outline yet; Limits and Predictions
+keep their text under their new numbers, §5.5 and §5.6. Only the headings of §§3.2, 3.3, 4.1, 4.4,
+4.5 and 6 have bodies rewritten to their new budgets (tasks U9–U12); the rest carry the new figure
+against text still written to the old one.
+
+# 3. The proposed architecture (about 1,085 words)
  
 ## 3.1 What the model must do (about 90 words)
  
@@ -238,7 +250,7 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   the model is constant-invariant. Code Cell D prints both facts (Appendix D Sec. 5). About 45 words
   in the paper; the normalizer sentence is the agent's addition to R19 and the first to cut if the
   bullet overruns.
-## 3.4 State units, error units, and what is local (about 210 words)
+## 3.4 State units, error units, and what is local (about 230 words)
  
 - Error units relax toward their residuals and state units ascend $\mathcal F$ (Eqs. 18–19), both
   instances of Bogacz's Eqs. (53)–(54). The slow parameter follows his own gradient under
@@ -288,7 +300,7 @@ Neither of the following is chosen. Both are consequences of the lexicon's thres
   centre and the extremes. Every result in §4.4 and §5.2 turns on which of the two an entry loads.
 ---
  
-# 4. Evaluation (about 745 words)
+# 4. Evaluation (about 1,020 words)
  
 ## 4.1 What is compared (about 140 words)
  
@@ -334,7 +346,7 @@ quantitative comparison is offered or implied.
   while $\Delta_{\textit{some}}$ varies by more than a fifth of its own size across six $\mu_u$
   settings. Any claim about a contrast between utterances must be checked against $\varphi_S$
   directly.
-## 4.3 The specification holds (about 90 words)
+## 4.3 The specification holds (about 70 words)
  
 Brief, and reported as a table rather than argued. The closed forms are exact to
 $6.0\times10^{-11}$ against the integrated dynamics; the fixed-point identities of Eq. (17) hold;
@@ -459,9 +471,9 @@ contrast (R20, P-10).
   between $3.5\times10^{4}$ and $3.6\times10^{7}$. §4.6 takes it up.
 ---
  
-# 5. Discussion (about 705 words)
+# 5. Discussion (about 1,180 words)
  
-## 5.1 What an alternatives level would have to supply (about 390 words)
+## 5.1 What an alternatives level would have to supply (about 350 words)
  
 **Frame the section as a specification, not a concession.** The claim is not that this architecture
 excludes within-trial competition. It is that adding a level is a construction with four stated
@@ -571,7 +583,7 @@ remain, and naming them is the point of saying so:
   alternatives computation in the present model — $\varphi_L$ is a function of the observed
   utterance alone, $g_S$ reaches the belief only through $\varphi_u$, and no term in Eq. (13)
   involves any unobserved utterance — and they settle nothing about human processing.
-## 5.2 Scale structure: a second prediction (about 200 words)
+## 5.2 Scale structure: a second prediction (about 400 words)
  
 - **The setup.** §3.3 fixes $\theta_L$ by the predicate's own resolution: at a scale endpoint the
   threshold is supplied by the scale itself (Eq. A5), while a predicate with no endpoint to anchor
@@ -613,7 +625,7 @@ remain, and naming them is the point of saying so:
 - **Calibrate the claim.** The model was not fitted to these data and no fit is offered; what is
   offered is that a qualitative interaction the model derives from scale structure alone matches one
   the literature reports. Say that, and no more.
-## 5.3 Limits (about 65 words)
+## 5.5 Limits (about 80 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
   reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
@@ -625,7 +637,7 @@ remain, and naming them is the point of saying so:
 - Multidimensional semantics with sharp lexical boundaries is a declared non-compatibility.
 - Not learned: $\Lambda$, $\theta_L$, $B$, $\mu_u$, the inventory.
 - Tier B facts recorded here, position reserved.
-## 5.4 Predictions (about 50 words)
+## 5.6 Predictions (about 60 words, was §5.4)
  
 - **Exposure frequency should shift strengthening.** $\theta_u^\ast$ is set by
   $3\,\mathbb E_{p(y)}[c_y]$, so non-uniform exposure to the inventory moves it. No analogue in RSA.

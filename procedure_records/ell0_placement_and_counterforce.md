@@ -6,8 +6,8 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U12 are closed. U13 (`revisions.md`
-and the outline's word table) is next.**
+**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U13 are closed. U14 (the closing check)
+is next, and the one open question is Q8, the α clash (`revisions.md` §7).**
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -429,14 +429,23 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         none", "exactly one condition", "shape of its absence", "only one of the two") finds only
         the sentences in §4.5 and §5.1 that bar the phrase; the outline's word table still titles
         §4.4 "One condition, every time", which U13 replaces.
-- [ ] **U13. `revisions.md`.** R18–R20 rows once P-1 to P-7 are answered; the §3 word table per
-      P-3; close the 2026-09-15 note in §2; a §8 source row for the placement numbers; and mark the
-      §4.4 entry corrected by U10.
-      **Added 2026-09-18 by the user ("fold that into U13"):** replace `sections_3-6.md`'s own word
-      table (its "Word allocation" section) with `revisions.md` §3's, and bring the section headings
-      it leaves stale into line (the §3, §4 and §5 totals and every subsection heading U9 and U10 did
-      not touch). **Also found:** `decisions.md` A3's Evidence line still says the numbers are "to be
-      printed by Code Cell D … until that cell runs, class (e)"; U3 printed them, so that line is stale.
+- [x] **U13. `revisions.md`, the outline's table, and the stale pointers** (2026-09-21).
+      - **`revisions.md`.** R18–R20 and §3's table were already in place from U1. Now: the
+        2026-09-15 note in §2 is **closed** and its table re-scoped as the 2026-09-13 record rather
+        than the paper's evidence (site **V13**); §8's ℓ₀-placement row names **Code Cell D's Sec. 5**
+        as the source and drops class (e), keeping the audit as the derivation; the scope-line and
+        word-table entries in §4 are marked applied.
+      - **`sections_3-6.md`.** The scope line reads 3,450 and names Code Cells A–D. The word table is
+        replaced by §3's, with a "was" column and a note saying which sections have bodies written to
+        the new budget. Headings brought into line: §3 1,085, §3.4 230, §4 1,020, §4.3 70, §5 1,180,
+        §5.1 350, §5.2 400. **The renumbering is applied**: Limits → §5.5, Predictions → §5.6, with
+        the three references in the scope tiers and one in `background_sections.md` (commitment 3)
+        following. §§3.6, 4.6, 5.3 and 5.4 appear in the table with no bodies yet, and the note says
+        so; the central claim's pointer to the new §5.3 now works.
+      - **`decisions.md` A3.** The Evidence line no longer says the numbers are "to be printed" or
+        class (e): Code Cell D prints them (U3, `23bdf23`), and the audit is named as the derivation.
+      - **Not done, and not U13's:** the outline bodies whose budgets moved under R1–R17 but whose
+        text U9–U12 did not touch (§3.4, §4.3, §5.1, §5.2, §5.5, §5.6). The table's note flags them.
 - [ ] **U14. Commit**, one logical change per commit, hashes recorded on each task line above.
 
 ---
