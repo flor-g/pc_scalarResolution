@@ -766,11 +766,37 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   unmet at n = 2, 3 and met at n ≥ 4. So what fixes δ also fixes which side of a crossing the
   reported criteria sit on. n enters only through θ_L = log(2n − 1); K does not track it (I6).
 
-### O2. The exposure distribution p(y) is uniform and unargued
-- Status: Open; not yet raised with the user as a decision
-- The θ_u flow averages the three utterances' gradients equally, so the operative quantity is
-  3·E_{p(y)}[c_y] at uniform p(y). Non-uniform exposure moves θ\*. Appendix B names it as a prior over
-  utterances; no text argues for uniform.
+### O2. The exposure distribution p(y) is uniform, and the paper says so
+- Status: **Settled 2026-09-21**
+- Decided by: the **user** (2026-09-21), choosing option (a) of the four put to them: stipulate
+  uniform and label it, rather than argue it from a principle, fit it to corpus frequencies, or
+  add a sensitivity sweep.
+- Decision: p(y) stays **uniform**, and every result is reported at uniform exposure, said to be a
+  **stipulation of this phase** and not a finding. No number moves, since uniform is what the code
+  already does.
+- **The user's reason, and it holds exactly.** "Essentially the same philosophy as fixing all σ at
+  1." Text cell 3 §3 item 3 fixes every σ at 1 because **this phase implements no precision
+  inference**, and 1 is the multiplicative identity, so every connection carries equal weight; the
+  log σ terms are kept in the objective "only to mark where a later precision-bearing version would
+  reintroduce them". Uniform p(y) is the same move for exposure: **this phase models no exposure
+  statistics**, so every utterance carries equal weight, and in both cases the stipulated value is
+  the one that makes the quantity vanish from the formula — σ = 1 makes ε_y = r_y and the log σ
+  terms constant; uniform p(y) makes 3·E_{p(y)}[c_y] the bare sum Σ_y c_y of Eq. (B3).
+- **One asymmetry to state, not to hide.** σ is a variable in the code with a default of 1; p(y) is
+  not a variable at all, being implicit in the batched sum, so a later frequency-bearing phase adds
+  a weight vector where a precision-bearing phase only changes defaults (D11 for σ ≠ 1).
+- Theoretical reason: A14 — implicature through θ_u is conventionalized, so the exposure ensemble is
+  the mechanism, and its weights are a claim about what a listener hears. This phase declines the
+  claim rather than inventing frequencies for it.
+- Depends on it: every θ_u\*, hence every reported result; §5.6's prediction that exposure frequency
+  shifts strengthening, which is now explicitly a prediction **about departures from the stipulated
+  uniform**; Appendix B's "prior over utterances" sentence; O8, which asks the same question about
+  ensemble **membership** for §5.2's predicates and inherits this principle.
+- **What is not claimed.** Nothing here measures how far a non-uniform p(y) would move θ_u\* or the
+  criteria. Code Cell B's *ALTERNATIVE SPACES* block varies ensemble **membership** (θ_u\* from
+  −11.2844 for *no* alone to −65.7004 for *all* alone, −28.4375 for the three together), which is
+  not the same probe. The sensitivity sweep of option (d) was considered and **not** adopted.
+- Tasks: `procedure_records/exposure_stipulation.md` (X0–X5).
 
 ### O3. The outline pointer for the cost of realizability
 - Status: Open, by the user's choice

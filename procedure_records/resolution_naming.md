@@ -117,6 +117,11 @@ S2's line changes Code Cell A's output, so both notebooks are re-executed (N6).
       records.
 - [ ] **N8. Commit**, one logical change per commit, hashes recorded above.
 
+**Sequencing note (2026-09-21).** `procedure_records/exposure_stipulation.md` (X0–X5, decision O2)
+is approved and waiting too. It touches cells 16 and 4 where this list touches 14, 15, 5, 0 and E1,
+so the two do not collide, and N6's execution would cover both. Running them in one pass saves an
+`appendix_E.ipynb` run of about 11 minutes.
+
 ---
 
 ## 6. What this change does not do
