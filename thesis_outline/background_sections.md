@@ -109,9 +109,13 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
   Goodman & Frank, 2016).
 - **Core equations, with notation fixed for the rest of the dissertation:**
   - Literal listener: \(L_0(s\mid u)\propto \llbracket u\rrbracket(s)P(s)\).
-  - Pragmatic speaker: \(S_1(u\mid s)\propto \exp\{\alpha[\log L_0(s\mid u)-C(u)]\}\).
+  - Pragmatic speaker: \(S_1(u\mid s)\propto \exp\{\alpha_{\mathrm{rsa}}[\log L_0(s\mid u)-C(u)]\}\).
   - Pragmatic listener: \(L_1(s\mid u)\propto S_1(u\mid s)P(s)\).
-  - \(\alpha\) controls soft-maximal speaker choice; \(C(u)\) penalizes costly forms. The
+  - \(\alpha_{\mathrm{rsa}}\) controls soft-maximal speaker choice; \(C(u)\) penalizes costly
+    forms. **The subscript is not decoration** (Q8, settled by the user 2026-09-21): §§4.5 and 5.2
+    use a bare \(\alpha\) for the concentration of the prior \(\mathrm{Beta}(\alpha,1)\), and the
+    two quantities meet in §1.3's override-law sentence. Every RSA \(\alpha\) in the dissertation
+    carries the subscript; the Beta concentration keeps the bare symbol, as the notebooks write it. The
     "informativeness" term is the log probability that the literal listener recovers the intended
     state, not an unanalyzed general-purpose utility (Frank & Goodman, 2012; Goodman & Frank, 2016).
 - **The point to make visible, which the previous draft left implicit.** The alternative set enters
@@ -190,8 +194,9 @@ of the two empirical anchors §5.1 uses.*
     strength needed to hold the entry against the prior grows linearly in the prior's concentration,
     at a rate set by the logarithm of the predicate's granularity. That is the part of the commitment
     with no parallel, and the one worth the words. **State the law in words here, not in symbols:**
-    §4.5 writes it \(\Lambda_{\mathrm{crit}}\approx\alpha\log2n\), whose \(\alpha\) is a Beta
-    concentration, and §1.2 has already fixed \(\alpha\) as RSA's speaker optimality.
+    §4.5 writes it \(\Lambda_{\mathrm{crit}}\approx\alpha\log2n\), whose \(\alpha\) is the Beta
+    concentration and not §1.2's \(\alpha_{\mathrm{rsa}}\) (Q8), and the background has defined
+    neither the family nor \(n\).
 - **The projection parallel, foreshadowed and warned against in one breath (R19; about 25 words).**
   The model's utility level reads a fixed linear projection of the same log quantity \(S_1\) reads,
   \(\log L_0\) (§3.3). Say so here, and warn in the same sentence that a projection does not imply an

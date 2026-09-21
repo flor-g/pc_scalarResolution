@@ -101,6 +101,7 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R17 | **S-2 and S-7.** §5.2 models the two **absolute** classes only. The relative class is not modelled, so no context cut *t* enters and Appendix A is untouched; H2 is stated in full and its open-scale half is left untested. The κ parity paragraph stays in §5.2, restated at n = 4, where it states the symmetry the user's instinct doubts. That instinct — that the two endpoints are not symmetric, the **0** boundary being the lexical level's θ_L and the **1** boundary an alternatives level's θ_A — is stated once, as an instinct, with no promise and no claim that it accounts for the mismatch (`decisions.md` **O14**). | user (2026-09-17) |
 | R18 | **The Λ–ℓ₀ counterforce is stated as a commitment.** Under a strong Λ the q shift criterion is met under more priors, and the mechanism is that Λ and ℓ₀ counteract each other. The reader is told that this is a **choice not forced by construction**: ℓ₀ could have been placed at g_S, which would not have let the two counteract as directly. The reasons given are (a) putting ℓ₀ at g_S is messy node-wise and leaves the architecture less clean, and (b) it is intuitive to hypothesize that the world prior and lexical strength have counteractive dynamics. §§3–4 also say whether the commitment has a parallel in RSA. `decisions.md` **A3** is confirmed, not reopened. Tasks U0–U14 and the blocking decisions P-1 to P-7: `procedure_records/ell0_placement_and_counterforce.md`. | user (2026-09-17) |
 | R19 | **The RSA projection parallel is stated, with an explicit warning.** The paper says that the utility level reads a **linear projection of the same log quantity** S₁ reads, log L₀(s|u). The background **foreshadows** the similarity. Both places warn the reader explicitly that, mathematically, **a projection does not imply an equivalence**, and that forgetting the difference is dangerous. The warning has an exact form: BᵀW1 = 0, so the coupling is rank 2 and blind to the constant direction — the one the normalizer lives in (G10 of the record). The coupling is constant-invariant; **the model is not** (§9.1, no flat direction). | user (2026-09-17) |
+| R21 | **RSA's speaker-optimality parameter is written α_rsa throughout the dissertation** (Q8). The bare α stays the concentration of the prior Beta(α,1), as `main.ipynb` and `sections_3-6.md` §§4.5 and 5.2 write it, so Eq. (41)'s Λ_crit ≈ α log 2n is unambiguous where §1.3 cites it. Applied to `background_sections.md` §1.2 (the S₁ equation and its gloss) and §1.3; the notebooks never use α in the RSA sense, so none of them changes. | user (2026-09-21) |
 | R20 | **Every verdict is reworked on the Λ = 512 data.** The conjunction holds under three of five priors, not none and not one, and the q position criterion under all five, so no prior meets the shift criterion alone. Sites V1–V13 and the three choices this opens (P-8 to P-10) are in the record §§9–10. §4.5's opposing floors are untouched and are where the trade-off claim is now sourced. The notebooks are **not** verdict sites (B10/C7). | user (2026-09-17) |
 
 Decisions in `decisions.md` this plan relies on: A9–A11 (θ_u learned, start 0, timescale
@@ -1179,14 +1180,16 @@ made against measurement rather than guessed (the §5.2 entry above, O13):
 numbers may be quoted, which needs a cell to print them (C6) and a five-position configuration the
 notebooks do not have.
 
-### Q8. α names two quantities (open, found 2026-09-18 in U11)
+### Q8. α names two quantities (settled by the user 2026-09-21 → R21)
 
 Background §1.2 fixes α as RSA's speaker optimality, S₁ ∝ exp{α[log L₀ − C(u)]}. `sections_3-6.md`
 §4.5, Eq. (36) and Eq. (41) use α for the concentration of the prior Beta(α,1), and Λ_crit ≈ α log 2n
 is the law the background now cites as having no RSA counterpart, so the two meet in the one
-sentence where a reader compares them. The notebooks use α only in the Beta sense. Options: rename
-the Beta concentration in the paper (for example κ is taken by Appendix C, so a fresh letter); or
-subscript RSA's (α_S). Not decided; the background avoids the symbol meanwhile.
+sentence where a reader compares them. The notebooks use α only in the Beta sense. Options were to rename the Beta concentration
+(κ is taken by Appendix C, so it would need a fresh letter) or to subscript RSA's. **The user chose
+the subscript, α_rsa** (2026-09-21) = R21. Applied in `background_sections.md` §1.2, where the
+gloss now says why the subscript is there, and in §1.3's override-law bullet. The Beta
+concentration keeps the bare α everywhere, including both notebooks, which never write RSA's.
 
 ## 8. Where the numbers are printed
 

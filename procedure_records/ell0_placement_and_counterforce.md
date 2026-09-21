@@ -6,8 +6,9 @@ Working record for the change to §§3 and 4 (and background §§1.2–1.3) that
 **Task IDs in this record are `U0`–`U14`.** `scale_classes_hypothesis.md` uses `T0`–`T13` and both
 lists are live; the prefixes keep them apart.
 
-**Status, 2026-09-18: P-1 to P-10 are all answered (§11). U0–U13 are closed. U14 (the closing check)
-is next, and the one open question is Q8, the α clash (`revisions.md` §7).**
+**Status, 2026-09-21: P-1 to P-10 are answered (§11), and U0–U14 are closed, so this change is
+finished.** Q8, raised in U11, was settled by the user on 2026-09-21 (RSA's parameter is α_rsa,
+`revisions.md` R21). Next: T0–T13 of `procedure_records/scale_classes_hypothesis.md`.
 
 **Checkpoint.** Tree clean at `b548e0a` as this list is written.
 
@@ -446,7 +447,41 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         class (e): Code Cell D prints them (U3, `23bdf23`), and the audit is named as the derivation.
       - **Not done, and not U13's:** the outline bodies whose budgets moved under R1–R17 but whose
         text U9–U12 did not touch (§3.4, §4.3, §5.1, §5.2, §5.5, §5.6). The table's note flags them.
-- [ ] **U14. Commit**, one logical change per commit, hashes recorded on each task line above.
+- [x] **U14. Close the change** (2026-09-21). One logical change per commit throughout; every task
+      line above carries its hash. The closing checklist of `agent.md` §6, item by item:
+      - **Bogacz.** One new operation in the change, Eq. (D5), and it has Eq. (9)'s status, an
+        instance under restriction (A3, D3). No divergence entry is needed.
+      - **Quantities.** **A gap found and closed here:** U2 required Register-E entries for
+        everything Code Cell D newly prints, and U3 closed without writing them. `decisions.md`
+        now carries **E15**, classing the couplings and identities (a), BᵀW1 and the constant
+        component (a), the σ-limit and same-φ_u blocks (a) with their two σ controls and the θ_u = 1
+        control labelled, Part D under both placements (b), and Eq. (D5) itself as a counterfactual
+        manipulation (C8). **Nothing in the change is class (e).**
+      - **Decisions.** A3 amended (U2) and its Evidence line corrected (U13); R18–R21 in
+        `revisions.md` §1; the agent decisions named to the user as they were made (Appendix D's
+        retitle in U4, the §4.1 renamings in U10, the normalizer sentence in U9). **Q8 settled by
+        the user 2026-09-21: RSA's parameter is α_rsa** → R21, applied in `background_sections.md`
+        §§1.2 and 1.3. The notebooks never write RSA's α, so neither changed.
+      - **Mirror.** `main.ipynb` is 23 cells; Code Cells 2 and 2b keep the exact `# === Code Cell 2:`
+        and `# === Code Cell 2b:` prefixes E3 locates them by; `code cell 1` untouched since the
+        checkpoint, so coupling 9 stays quiet.
+      - **Execution.** Neither notebook has changed since **U7** (`bf746b1`), which ran both at
+        baseline: main 0 errors, 8 figures, 14/14, 249 s; appendix_E 0 errors, 5 figures, E2 18/18,
+        E3 PASS, 679 s. U8–U14 touched no notebook, so nothing needed re-running.
+      - **Numbers.** Re-checked by script at close: the 68 decimal figures in everything U9–U13
+        wrote (the central claim, §§3.2–3.3, 4.1, 4.4, 4.5, §5.1's new bullet, §6, background Beat 2
+        and Beat 3) all appear in the stored output of a code cell. C6 holds.
+      - **Anchors and numbering.** All 74 ToC links resolve; the body's tags run (1)–(41) complete;
+        Appendix D's run (D1)–(D7).
+      - **One deviation, reported rather than repaired.** The ten commits from U9 to U13 carry the
+        subject line and the attribution but not `agent.md` §4.3's `Why:` and `Verified:` lines;
+        U0–U8's commits do. The history is not rewritten for it (that needs the user under §4.5);
+        this entry is the record that the tasks were prose-only and that no notebook was executed
+        for them.
+
+      **The change is closed.** Open items it leaves: the user has not confirmed U4's retitle of
+      Appendix D, and `revisions.md` §7's older questions (Q2's residue, Q7's remainder) are
+      untouched by it. Next is **T0–T13** of `procedure_records/scale_classes_hypothesis.md`.
 
 ---
 

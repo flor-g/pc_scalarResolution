@@ -1452,3 +1452,28 @@ single-part fields is the user's (C8).
 - Appendix C §1 writes every projection per unit Λ; §8's coefficients are the exception, each at its
   configuration's own Λ and θ_u\*, and §8 says so.
 - Code Cell 2b's own quantities stay under E12, and E13's masses are unchanged.
+
+**E15. The quantities Code Cell D's Sec. 5 adds (2026-09-18, task U3 of
+`procedure_records/ell0_placement_and_counterforce.md`; entered 2026-09-21 in U14, having been
+missed when U3 closed).** Classed by the agent. Nothing here is class (e): every number the prose of
+Appendix D Sec. 5, §3.2, §3.3 and §4.1 quotes is printed by this block.
+- The couplings c_y under Eq. (9) and under Eq. (D5), per utterance, and the two identities
+  c(g_L) − c(g_S) = 2BᵀWℓ₀ and c(g_L) + c(g_S) = −2BᵀWφ_L: **class (a)**, c_y being Eq. (16)'s
+  quantity and Eq. (D7) naming the identities.
+- BᵀW1, ⟨1, ℓ₀ − φ_L⟩_W per utterance, and c_y's invariance to an additive constant on the field:
+  **class (a)**, projections of Eq. (3) taken on Eq. (15)'s field, defined in Appendix D Sec. 5 and
+  quoted by §3.3 as R19's warning.
+- The σ-limit table, max |φ_S\* − (ℓ₀ − φ_L)| at σ_S = 1e6 and σ_L = 1e6 under both placements:
+  **class (a)** in the fields compared; the two σ settings are **controls (c)**, labelled as such,
+  and θ_u = 1 there is a fixed-θ_u control under B4, also labelled.
+- The same-φ_u agreement, the (σ_L − σ_S)ℓ₀/S difference, and the φ_u\*/φ_S\* gaps at θ_u = 1:
+  **class (a)**, with the same two controls.
+- Part D's five priors under both placements at Λ = 8 and Λ = 512 — θ\*, q_lit, q_H, the shift and
+  the two q criteria: **class (b)**, Text cell 4's statistics (Eqs. 25–27, 37) computed by Code
+  Cell 2's own `criterion_for_some`.
+- **The alternative placement itself** (g_L = −φ_S with g_S = ℓ₀ + θ_u Bφ_u, Eq. D5, and every field
+  and θ\* built from it): a **counterfactual manipulation (C8)**, not a control, since no setting of
+  the model produces it. The cell's labels and the prose both say so, and B4's list of retained
+  fixed-θ_u controls is unaffected.
+- Bogacz status: Eq. (D5) has Eq. (9)'s, an instance under restriction (A3, D3), so §3.2 registers
+  no new divergence.
