@@ -429,7 +429,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         none", "exactly one condition", "shape of its absence", "only one of the two") finds only
         the sentences in §4.5 and §5.1 that bar the phrase; the outline's word table still titles
         §4.4 "One condition, every time", which U13 replaces.
-- [x] **U13. `revisions.md`, the outline's table, and the stale pointers** (2026-09-21).
+- [x] **U13. `revisions.md`, the outline's table, and the stale pointers** (2026-09-21, commit `1bdeeea`).
       - **`revisions.md`.** R18–R20 and §3's table were already in place from U1. Now: the
         2026-09-15 note in §2 is **closed** and its table re-scoped as the 2026-09-13 record rather
         than the paper's evidence (site **V13**); §8's ℓ₀-placement row names **Code Cell D's Sec. 5**
