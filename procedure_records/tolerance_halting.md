@@ -234,10 +234,29 @@ the pre-decision wording.
       `f07db5d`** (2026-09-21). No uncommitted work of the user's was present, so §4.2 step 2
       applies and the current commit is the checkpoint; no `backups/` folder is needed, since every
       file this change touches is tracked.
-- [ ] **HA1. `code cell 1`, `learn_theta_u`** under Q-HA1: the halting rule, its docstring stating
-      that the flow halts when its own update falls below the tolerance, and that the value is ad
-      hoc (A19). **Coupling 9 fires** — E1 carries the same def with its relay argument, so the edit
-      is applied to E1's own version, not lifted over it.
+- [x] **HA1. `code cell 1`, `learn_theta_u`** under Q-HA1 — done 2026-09-21, commit recorded below.
+      The rule: `step = (tau_state/tau_theta)*gradient`, applied, then `abs(step) < tolerance`
+      halts. `tolerance` is **keyword-only with no default**, so no run can inherit an ad hoc value
+      silently (A19 point 2) and every call site must name the value it is demonstrating at.
+      `num_updates` becomes a cap that **raises `RuntimeError`** when reached — the user's
+      instruction of 2026-09-21: *"when it is hit it should raise a runtime error. If any of our
+      cases ended up incurring a runtime error, then we need to report it as such."* Two guards
+      added (`tolerance <= 0`, `num_updates < 1`), both `ValueError`, neither about the
+      trajectory's shape. The docstring gains three paragraphs: the rule and that it reads only the
+      unit's own last step, the ad hoc status of the value with θ\* as the tolerance-free
+      prediction, and the cap's meaning.
+      **Coupling 9 holds**: the two definitions were already byte-identical here (the relay lives
+      in `theta_u_gradient`, not in this def), so the same four replacements were applied to E1's
+      own copy, and the two are verified source-identical after the edit.
+      **Verified** against block 5 by integrating the real flow (not the audit's rebuild) through
+      the edited cell: at Λ = 8, flat halts after 1 update at θ_u = **+0.000495** at both 1e-1 and
+      1, gaussian after 1 update at **−0.340933** at 1 — the audit's 0.0005 and −0.3409. The cap
+      raises with the last step's size, the tolerance and θ_u in the message; omitting `tolerance`
+      is a `TypeError`.
+      **Consequence carried to HA4:** the eight call sites (four per notebook) now fail with a
+      `TypeError` until they name a tolerance, so **neither notebook executes between HA1 and
+      HA4.** This is deliberate — a default would have hidden exactly the quantity A19 refuses to
+      commit to — and it is why HA1's commit says `Verified: not run`.
 - [ ] **HA2. `infer`'s docstring and I3.** The 1e-9 is the same mechanism at the fast timescale, not
       a numerical detail; it stays above the roundoff floor (F34) and keeps its value. No behaviour
       changes.
