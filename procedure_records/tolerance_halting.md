@@ -83,14 +83,18 @@ pieces and checks it against the notebook's:
   fourth decimal: the delta-like row's shift is −0.5217 at θ\* and −0.5208 at tol = 1, with
   P(all | *some*) 0.4351 against 0.4361.
 
-- **H5. The hazard: the rule can halt at a slow *start*, not only near the asymptote.** Under the
+- **H5. The rule halts at a slow *start*, not only near the asymptote. Since 2026-09-21 this is a
+  prediction of the commitment, not a hazard of it** (the user ruled out any guard; see §6). Under the
   flat prior at Λ = 8, where θ\* = 5950.63, the first update is tiny because ⟨μ_u, Σ_y c_y⟩ is small
   there, so any tolerance ≥ 1e-2 halts after **one update, at θ_u = 0.0005** — the tempered control
   in all but name. The verdict is unchanged (the conjunction fails at θ\* too), but the reported
-  shift would be +0.0854 rather than +0.0295. **Any adopted rule needs a guard**, and the audit does
-  not choose one. Candidates: a relative tolerance |Δθ| < tol·|θ|; a rule that halts only after the
-  flow has left its start; or a minimum number of updates. Each is a stipulation of the same kind as
-  the tolerance itself.
+  shift would be +0.0854 rather than +0.0295 — the tempering alone. The guards once considered here
+  (a relative tolerance |Δθ| < tol·|θ|; halting only after the flow has left its start; a minimum
+  number of updates) are **rejected**: each requires the system to know something about the shape of
+  its own trajectory beyond its local input, which is the commitment's own premise. What the
+  commitment predicts instead: **where the flow starts slowly, the system halts at once and the
+  belief stays at the tempered control.** Under Λ = 8 that is the flat prior at every coarse
+  tolerance tested.
 
 - **H6. A fine tolerance never fires in any plausible number of exposures.** At 1e-9 and 1e-6 at
   Λ = 512 the flow is still at θ_u ≈ 600 after **2,000,000 updates**, against θ\* ≈ 1500. This is
@@ -102,6 +106,22 @@ pieces and checks it against the notebook's:
   1e-9 to 1e-2 at Λ = 8 leaves every verdict unchanged, moves φ_S by at most 5.2e-3, and saves only
   513 → 152 Euler steps. So "tolerance halts the fast loop" is already true and costs nothing to
   say; the claim that does work is the one about the **slow** flow.
+
+- **H8. What a committed tolerance costs, measured 2026-09-21** (block 4 of the audit, added after
+  the user chose to define `learn_theta_u` by the tolerance itself). Steps are scaled from Code Cell
+  2b's integrated delta-like row (39,035 steps at λ = 180.9), since dt = τ_state/(8λ):
+
+  | tolerance | Λ = 512: θ_halt | updates | an integrated row | Λ = 8: θ_halt |
+  |---|---|---|---|---|
+  | 1 | 34.7 to 61.4 | 3 to 7 | **12 to 37 s** | −0.34, 0.0005, −0.42, 0.18 — one update everywhere |
+  | 1e-1 | 61.1 to 71.1 | 3 to 173 | **27 to 50 s** | −5.29, 0.0005, −4.32, 5.51 |
+  | 1e-2 | 129.2 to 149.9 | 3,023 to 3,657 | **166 to 223 s** | −10.59, 0.0005, −8.07, 11.46 |
+
+  The notebook's whole baseline is about 250 s and Code Cell 2b integrates three such rows, so
+  **1e-2 is not affordable** (about nine minutes for the three) while 1 and 1e-1 are (about 80 to
+  110 s added). At Λ = 512 the halted θ_u of 35 to 71 sits far above the θ_crit of 1.0 to 3.1 at
+  which the conjunction is first met, which is the measured form of "the conjunction is reached
+  early": it is a fact about the shape of the update, not about where the flow stops.
 
 ---
 
@@ -130,7 +150,30 @@ Adopting the proposal touches an interpretive commitment, so under `agent.md` §
 the tolerance is ad hoc, so nothing reported may depend on it. Recorded as `decisions.md` **A19**
 and `revisions.md` **R22**; A9 and R10 are unchanged, which is the point of the position. The user's
 scope line: *"besides changing the notebook codes for halt and the halting description, we don't
-need to change anything else"*. Tasks below; **nothing is implemented**.
+need to change anything else"*.
+
+**2026-09-21, second decision by the user, which answers Q-HA1 and Q-HA2 and rules out the guard:**
+
+> If we commit to defining halt in terms of coarse tolerance, we should define learn_theta_u as what
+> we commit to and report all realizable theta in terms of that. The fact that the conjunction is
+> reached early can be stated in prose as a fact about the shape of update. Moreover, if we do
+> commit to tolerance as what halting depends on, a guard would be UNACCEPTABLE; implementing a
+> guard would be essentially ungraceful patchwork to save an incorrect theory; in particular, a
+> guard violates our fundamental commitment that a system is agnostic to the close form or the shape
+> of the update beyond its local input. That being said, if we commit to tolerance as halt, then
+> that commitment predicts early halting for slow start; the implications of this commitment should
+> be clearly stated as such.
+
+So: **Q-HA1 = the committed tolerance**, not an argument passed where convenient; **Q-HA2 = every
+realizable θ_u is the tolerance-halted one**, and the two rules that locate today's (the evaluator's
+criterion, and bisection on fractions of θ\*) stop being how a realizable θ_u is defined. **No
+guard**, on the principle that a guard needs knowledge of the trajectory's shape that the system
+does not have. **The slow-start halt is therefore a prediction and is stated as one** (H5).
+
+**What still divides the reported from the demonstrated.** A19's third part stands: the paper's
+results are at θ\*, which is what keeps them independent of the ad hoc tolerance. What the tolerance
+now fixes is the **realizable** rows — demonstrations that the dynamics reach the verdict — and they
+carry the tolerance's value on their face. Tasks below; **nothing is implemented**.
 
 ---
 

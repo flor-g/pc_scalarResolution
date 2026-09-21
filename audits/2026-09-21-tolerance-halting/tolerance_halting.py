@@ -216,3 +216,41 @@ for theta in (1.0, one_update):
               f"upper {row['upper']:.4f}  both {row['both']}")
 
 print("\nDONE")
+
+# ---------------------------------------------- 4. what a COMMITTED tolerance costs
+# Added 2026-09-21 after the user ruled out any guard and asked that the realizable
+# theta_u be reported at the committed tolerance itself. The question is which coarse
+# tolerance leaves an integrated demonstration affordable: steps scale with
+# lambda_max(H), since dt = tau_error / 2 = tau_state / (8 lambda).
+block("(4) WHAT A COMMITTED TOLERANCE COSTS, AND WHERE IT HALTS")
+reference = net.respawn(base_prior=beta_world_prior(64.0, 1.0), lexical_strength=512.0)
+ref_theta = 13.374852
+ref_rate = float(reference.stiffest_state_rate(ref_theta))
+ref_steps = 39035          # Code Cell 2b, the delta-like row, integrated end to end
+print(f"    reference: the delta-like row integrated at theta_u = {ref_theta:.4f}, "
+      f"lambda = {ref_rate:.1f}, {ref_steps} Euler steps (Code Cell 2b).")
+print("    steps below are that count scaled by lambda, which is how dt moves.\n")
+for lam, rows in ((8.0, part_d_priors()),
+                  (512.0, {**part_d_priors(), "delta (all)": beta_world_prior(64.0, 1.0)})):
+    print(f"      Lambda = {lam:.0f}")
+    print(f"      {'prior':<12} {'tol':>6}  {'theta_halt':>11}  {'updates':>8}  {'4*lambda':>9}"
+          f"  {'est. steps':>11}  {'est. time':>10}  {'shift':>9}  {'both':>6}")
+    for name, specification in rows.items():
+        prior, overrides = (specification if isinstance(specification, tuple)
+                            else (specification, {}))
+        probe = net.respawn(base_prior=prior, lexical_strength=lam, **overrides)
+        halts = flow_halts(probe, tolerances=(1.0, 1e-1, 1e-2), cap=200_000)
+        for tol in (1.0, 1e-1, 1e-2):
+            updates, theta = halts[tol]
+            shift, upper, both, rate = verdict(probe, theta)
+            steps = ref_steps * rate / ref_rate
+            seconds = steps * 46e-6                       # 46 us/step, Code Cell 2b's rate
+            t = f"{seconds:.1f} s" if seconds < 600 else f"{seconds / 3600:.1f} h"
+            u = "> cap" if updates is None else f"{updates:d}"
+            print(f"      {name:<12} {tol:>6.0e}  {theta:>11.4f}  {u:>8}  {4 * rate:>9.2e}"
+                  f"  {steps:>11.2e}  {t:>10}  {shift:>+9.4f}  {str(both):>6}")
+    print()
+print("    (an integrated demonstration is what Code Cell 2b runs for three rows; the")
+print("     notebook's whole baseline is about 250 s, so a row costing minutes is not")
+print("     affordable there, and one costing hours is not affordable at all.)")
+print("\nDONE (4)")

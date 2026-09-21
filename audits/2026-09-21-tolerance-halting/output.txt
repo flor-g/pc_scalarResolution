@@ -132,4 +132,46 @@ TOLERANCE AS THE HALTING MECHANISM OF Eq. (20) -- audit, 2026-09-21
       tol   1e-03: steps     136  max|phi_S - phi_S*| 1.36e-04  shift +0.0140  upper 0.0156  both False
       tol   1e-02: steps     101  max|phi_S - phi_S*| 1.34e-03  shift +0.0140  upper 0.0156  both False
 
+(4) WHAT A COMMITTED TOLERANCE COSTS, AND WHERE IT HALTS
+--------------------------------------------------------
+    reference: the delta-like row integrated at theta_u = 13.3749, lambda = 180.9, 39035 Euler steps (Code Cell 2b).
+    steps below are that count scaled by lambda, which is how dt moves.
+
+      Lambda = 8
+      prior           tol   theta_halt   updates   4*lambda   est. steps   est. time      shift    both
+      gaussian      1e+00      -0.3409         1   8.46e+00     4.57e+02       0.0 s    +0.0140   False
+      gaussian      1e-01      -5.2852        15   1.20e+02     6.46e+03       0.3 s    +0.0010   False
+      gaussian      1e-02     -10.5879       245   4.56e+02     2.46e+04       1.1 s    +0.0008   False
+      flat          1e+00       0.0005         1   8.00e+00     4.32e+02       0.0 s    +0.0854   False
+      flat          1e-01       0.0005         1   8.00e+00     4.32e+02       0.0 s    +0.0854   False
+      flat          1e-02       0.0005         1   8.00e+00     4.32e+02       0.0 s    +0.0854   False
+      skewed low    1e+00      -0.4231         1   8.72e+00     4.70e+02       0.0 s    +0.0045   False
+      skewed low    1e-01      -4.3233        13   8.28e+01     4.47e+03       0.2 s    +0.0004   False
+      skewed low    1e-02      -8.0734       173   2.69e+02     1.45e+04       0.7 s    +0.0004   False
+      skewed high   1e+00       0.1770         1   8.13e+00     4.38e+02       0.0 s    +0.1087   False
+      skewed high   1e-01       5.5135        16   1.30e+02     6.99e+03       0.3 s    +0.0564   False
+      skewed high   1e-02      11.4632       280   5.34e+02     2.88e+04       1.3 s    +0.0476   False
+
+      Lambda = 512
+      prior           tol   theta_halt   updates   4*lambda   est. steps   est. time      shift    both
+      gaussian      1e+00      60.0836         3   1.44e+04     7.79e+05      35.9 s    +0.0072   False
+      gaussian      1e-01      61.1065        13   1.49e+04     8.06e+05      37.1 s    +0.0072   False
+      gaussian      1e-02     129.4674      3042   6.71e+04     3.62e+06     166.4 s    +0.0071   False
+      flat          1e+00      54.4290         3   1.19e+04     6.40e+05      29.4 s    -0.0145    True
+      flat          1e-01      61.2717        61   1.50e+04     8.11e+05      37.3 s    -0.0145    True
+      flat          1e-02     129.5823      3089   6.72e+04     3.62e+06     166.7 s    -0.0146    True
+      skewed low    1e+00      61.3835         3   1.51e+04     8.14e+05      37.4 s    +0.0090   False
+      skewed low    1e-01      61.3835         3   1.51e+04     8.14e+05      37.4 s    +0.0090   False
+      skewed low    1e-02     129.2486      3023   6.68e+04     3.61e+06     165.8 s    +0.0090   False
+      skewed high   1e+00      52.0653         3   1.09e+04     5.85e+05      26.9 s    -0.0953    True
+      skewed high   1e-01      61.3728        77   1.51e+04     8.13e+05      37.4 s    -0.0953    True
+      skewed high   1e-02     129.8517      3111   6.75e+04     3.64e+06     167.4 s    -0.0954    True
+      delta (all)   1e+00      34.6953         7   4.82e+03     2.60e+05      12.0 s    -0.5208    True
+      delta (all)   1e-01      71.0893       173   2.02e+04     1.09e+06      50.2 s    -0.5213    True
+      delta (all)   1e-02     149.8553      3657   8.98e+04     4.85e+06     222.9 s    -0.5215    True
+
+    (an integrated demonstration is what Code Cell 2b runs for three rows; the
+     notebook's whole baseline is about 250 s, so a row costing minutes is not
+     affordable there, and one costing hours is not affordable at all.)
+
 DONE
