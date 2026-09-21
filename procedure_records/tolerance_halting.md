@@ -484,3 +484,38 @@ at θ_u = 13 than at θ_u = 52. The same observation at both timescales.
 **Not decided, and nothing about integrability goes in the paper until it is.** Option 3 looks to
 the agent like the one that changes least while being correct, but I3 is a standing decision and
 the choice is the user's.
+
+- **H13. The floor tracks λ_max(H), not θ_u², and that is what makes a scaled tolerance legitimate**
+  (2026-09-21, after the user asked *which* θ_u the agent's recommendation meant).
+
+  **The user's objection.** A tolerance defined in terms of the **closed-form θ\*** would be
+  illegitimate: unlike Λ, θ\* is agnostic to the system — the network has no access to it, which is
+  R10's standing objection and the reason A9 keeps it as a commitment rather than a mechanism. The
+  agent's recommendation meant the **current** θ_u, the value the utility unit holds, which is
+  constant within one inference by the two-timescale commitment. But checking the variable showed
+  θ_u was the wrong one anyway:
+
+  | | floor/θ_u² | floor/λ_max(H) |
+  |---|---|---|
+  | spread, θ_u = 13.37 → 61.27 | 1.0107× | **1.0003×** |
+
+  **floor = 4.547e-13 · λ_max(H)**, flat to four significant figures. θ_u² only appeared clean
+  because λ_max = 1/σ_u + θ_u²·λ_max(G)/σ_S is nearly quadratic in θ_u at these magnitudes. The
+  mechanism is arithmetic, not fitted: **floor ≈ 2.4 · ε · |φ_S| · λ_max** with ε = 2.22e-16 and
+  max|φ_S| ≈ 856 — a derivative is a rate times a state error, the state error sits at machine
+  precision relative to the state, and the stiffest rate is λ_max.
+
+  **Why λ_max answers the objection.** It is computed from the network's own weights, basis, σ's and
+  current θ_u; `fast_time_constant` **already computes it** to set τ_error and dt; and the
+  architecture **already requires the system to have it**, since D4's standing commitment is
+  τ_error ≤ τ_state / (4 λ_max(H)). If keying a tolerance to λ_max were system-agnostic, D4 would be
+  too, and the two-timescale argument with it.
+
+  **The one asymmetry to state, not bury.** Within an inference θ_u is fixed, so this is a standing
+  property and not a reading of the trajectory. Across the slow flow θ_u changes, so the fast
+  tolerance would change from update to update — which is already true of `dt` and `tau_error`, and
+  for the same reason.
+
+  So §9's option 2 is restated: **`derivative_tolerance = max(1e-9, k·λ_max(H))`**, k a few
+  multiples of 4.55e-13. Below θ_u ≈ 46.6 the `max` returns 1e-9 and **no printed step count moves**.
+  Still the user's decision (I3).
