@@ -90,7 +90,7 @@ covers both, and X5 folds into N8. Run alone, this change needs no execution at 
 
 ---
 
-## 6. The membership half (A18, added 2026-09-21)
+## 5. The membership half (A18, added 2026-09-21)
 
 **The decision.** The ensemble holds at least {χ, ker χ} (Appendix D Eq. (D2)); an antonym is never
 needed to define an entry; antonymy is a lexical accident of two words sharing a scale, is not
@@ -119,7 +119,7 @@ asymmetry is **across** levels.
 
 ---
 
-## 7. What this change does not do
+## 6. What this change does not do
 
 - It does not measure the sensitivity of θ_u\* or of the criteria to p(y). Option (d) was declined.
 - It does not touch Code Cell B's *ALTERNATIVE SPACES* block, which varies ensemble **membership**
