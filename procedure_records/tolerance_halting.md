@@ -188,35 +188,52 @@ carry the tolerance's value on their face. Tasks below; **nothing is implemented
 
 ---
 
-## 7. Tasks (HA0–HA8), and the two questions that block them
+## 7. Tasks (HA0–HA8), and the two questions that blocked them
 
-**Blocking, because each decides whether stored output moves.**
+**Both are answered by the user's second decision (§6), and both were answered *against* the
+agent's recommendation.** The options are kept below as the record of what was not chosen; the
+answers are what HA1 and HA4 implement. Corrected 2026-09-21 at HA0, because the list still carried
+the pre-decision wording.
 
-- **Q-HA1. How does `learn_theta_u` halt?** Today it runs a fixed `num_updates` and stops there,
-  which is the arbitrary cap A19 replaces.
-  - **(i) (recommended) The tolerance is an explicit argument with no default**, and `num_updates`
-    stays as a guard against a flow that never meets it. Call sites pass a tolerance only where a
-    halt is being demonstrated; the cells that report θ\* do not call the flow at all. **No stored
-    output moves**, and the code says what A19 says.
-  - **(ii) A default tolerance.** Then every existing call halts by it, the SLOW PARAMETER block's
-    "0.0000 → −7.567163 over 60 updates" line changes, and a default value is exactly the ad hoc
-    quantity A19 says results must not depend on.
+- **Q-HA1. How does `learn_theta_u` halt? — ANSWERED: by the committed tolerance.** Today it runs a
+  fixed `num_updates` and stops there, which is the arbitrary cap A19 replaces. The user: *"we
+  should define learn_theta_u as what we commit to"*. So the flow halts when |Δθ_u| < tol, and
+  `num_updates` becomes a cap that reports when it is hit rather than a stopping rule. **Not**
+  option (i) below, which the user overrode.
+  - ~~**(i) (agent's recommendation, overridden) The tolerance is an explicit argument with no
+    default**~~, `num_updates` kept as a guard, call sites passing a tolerance only where a halt is
+    demonstrated, **no stored output moving**. Overridden because it leaves the committed mechanism
+    out of the definition of the thing the paper commits to.
+  - ~~**(ii) A default tolerance**~~, in the form first put — a silent default — is also not what
+    was chosen. What is chosen is the same mechanically but not rhetorically: the tolerance is the
+    halting rule, its value is ad hoc and **labelled as such at every call site and in every caption
+    that reports a row halted by it** (A19 point 2, demonstration value 1e-1).
+  - **Consequence, which the earlier wording denied: stored output moves.** Every existing call to
+    the flow now halts by the tolerance, so the SLOW PARAMETER block's "0.0000 → −7.567163 over 60
+    updates" line changes, and HA6's acceptance can no longer be "the baseline, unchanged".
 - **Q-HA2. What happens to the two "realizable" θ_u the evaluation already reports** — the
   criterion-stopped one-update rows (7.8161, 7.9926, 13.3749) and `criterion_threshold`'s bisection
-  on fractions of θ\*?
-  - **(i) (recommended) Keep both, relabelled.** They are demonstrations that the conjunction is
-    reached early in the flow and integrable there, not predictions at a halted θ_u. Under A19 the
-    prose says so, and says that neither stopping rule is the halting mechanism: one is the
-    evaluator's criterion, the other needs θ\*. The halting account is about where
-    the flow would stop, not about how these two rows were located.
-  - **(ii) Recompute them at a tolerance.** Rejected by A19's third part: the rows would then depend
-    on the ad hoc quantity.
-  - **(iii) Drop them.** They are §4.6's evidence and Text cell 4's demonstration that the verdict
-    does not wait for θ\*; dropping them would cost that.
+  on fractions of θ\*? **ANSWERED: option (ii), recompute at the tolerance.** The user: *"report all
+  realizable theta in terms of that. The fact that the conjunction is reached early can be stated in
+  prose as a fact about the shape of update."* So the evaluator's criterion and the bisection stop
+  being how a realizable θ_u is **defined**; what they showed — that the conjunction is met early in
+  the flow — is stated in prose instead, on H8's measured form (θ_halt of 35 to 71 at Λ = 512 sits
+  far above the θ_crit of 1.0 to 3.1).
+  - ~~**(i) (agent's recommendation, overridden) Keep both, relabelled.**~~ Overridden: a
+    demonstration located by a rule the model does not own is not a realizable θ_u under A19.
+  - **(ii) Recompute them at a tolerance. — CHOSEN.** The earlier note that A19's third part
+    rejects this was wrong, and is corrected in §6: A19 puts the **predictions** in closed form at
+    θ\*, which is what keeps them tolerance-free, while a **realizable** row is by definition the
+    one the dynamics reach and so carries the tolerance on its face.
+  - ~~**(iii) Drop them.**~~ Not chosen; §4.6's evidence and Text cell 4's demonstration are kept,
+    recomputed.
 
-**Tasks, once both are answered.**
+**Tasks.**
 
-- [ ] **HA0. Checkpoint** (`agent.md` §4.2), before any code cell is touched.
+- [x] **HA0. Checkpoint** (`agent.md` §4.2), before any code cell is touched. **Clean tree,
+      `f07db5d`** (2026-09-21). No uncommitted work of the user's was present, so §4.2 step 2
+      applies and the current commit is the checkpoint; no `backups/` folder is needed, since every
+      file this change touches is tracked.
 - [ ] **HA1. `code cell 1`, `learn_theta_u`** under Q-HA1: the halting rule, its docstring stating
       that the flow halts when its own update falls below the tolerance, and that the value is ad
       hoc (A19). **Coupling 9 fires** — E1 carries the same def with its relay argument, so the edit
@@ -227,17 +244,26 @@ carry the tolerance's value on their face. Tasks below; **nothing is implemented
 - [ ] **HA3. Text cell 3 §7 or §8.5**, where Eq. (20) is introduced: one passage on halting by
       tolerance, θ\* as the asymptote the commitment names, and the ad hoc status of the value.
       Under B10/C7 the cell takes no position on what that means for the brain.
-- [ ] **HA4. Appendix B and Text cell 4's realizability block**: the relabelling Q-HA2 settles.
+- [ ] **HA4. Appendix B and Text cell 4's realizability block**: the recomputation Q-HA2 settles.
+      Every realizable θ_u is the tolerance-halted one, reported at the demonstration tolerance and
+      labelled with it; the fact that the conjunction is met well before the halt moves into prose,
+      on H8's numbers. C6 applies — each quoted number is printed by the cell that reports it.
 - [ ] **HA5. Couplings and numbering.** 5 (no new tag unless HA3 adds one), 6, 9 (HA1), and E3's
       prefixes; the ToC only if a heading moves.
-- [ ] **HA6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: the baseline, unchanged
-      under Q-HA1(i) — main 0 errors, 8 figures, 14/14; appendix_E 0 errors, 5 figures, E2 18/18,
-      E3 PASS — with any departure reported rather than explained away.
+- [ ] **HA6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
+      14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS. **Stored output moves here** (Q-HA1's
+      consequence), so the acceptance is no longer "the baseline, unchanged": the expected departures
+      are the realizable rows, the SLOW PARAMETER block's update line, and `cost:` lines. Any other
+      departure — above all in the θ\* tables or the plane — is reported, not explained away.
 - [ ] **HA7. The outline.** §5.3 (planned) states the halting account and rests its cost argument on
       H2–H4; §5.5 Limits and §3.4 carry a clause if HA3 introduces notation they use. `revisions.md`
       R22's site entries.
 - [ ] **HA8. Commit**, one logical change per commit, hashes recorded above.
 
-**What stays untouched, by the user's scope line:** every reported number, A9, R10, the θ\* tables,
-the plane, and §§4.1–4.5. The audit's H2–H4 are evidence for the discussion, not new results to
-print, and they stay class (e) unless a cell is later asked to print them.
+**What stays untouched, by the user's scope line:** A9, R10, the θ\* tables, the plane, and
+§§4.1–4.5. The audit's H2–H4 are evidence for the discussion, not new results to print, and they
+stay class (e) unless a cell is later asked to print them.
+
+**Corrected at HA0:** this paragraph used to begin "every reported number", which Q-HA2's answer
+makes false. The realizable rows move, because they are now defined by the tolerance. What the scope
+line protects is everything the paper reports **as a prediction** — and those are at θ\*.
