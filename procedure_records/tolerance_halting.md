@@ -329,8 +329,23 @@ the pre-decision wording.
         so a tolerance coarse enough to halt after one (≥ 1 at Λ = 8, block 5) makes that check
         **fail** rather than pass vacuously. That is deliberate and is commented in the cell — a
         silent weakening would have been the patchwork the user ruled out.
-  - [ ] **HA4b. Call sites 3 and 4**, the end-to-end rows and the delta read-out's realizable row.
-        Blocked on a measurement and a question — see §8.
+  - [x] **HA4b. Call sites 3 and 4**, done 2026-09-21, commit `d8c93ef`. New helper
+        `halt_by_tolerance` applies `learn_theta_u`'s rule at the closed-form equilibrium, so the
+        survey stays affordable; the end-to-end run integrates the flow and lands on it to better
+        than **1e-13**. The realizability block is now **two tables** — where the flow halts (the
+        realizable θ_u) and where the conjunction is first met, the second labelled in the OUTPUT
+        as a fact about the shape of the update and not a halting rule. `DEMONSTRATION_TOLERANCE`
+        is keyed to Λ, `{8.0: 1e-1, 512.0: 1}`, strict (an unlisted Λ raises).
+        `FEASIBLE_STIFFNESS` 1.0e3 → **1.3e3**, just above 1206. The H11 cost line is replaced by
+        `infer`'s own cap as a lower bound. The roundoff-floor block's leftover `arrival` reference
+        (a `NameError`) is fixed to the halted θ_u.
+        **Measured:** Λ = 8 block 0.0 s; Λ = 512 block **377.5 s**, of which the 7 integrated
+        updates of the flow are 149 s and the settle 11.7 s — so **the flow, not the settling, is
+        where the time goes**, which is exactly the assumption H8 got backwards. At Λ = 512 only
+        `delta (all)` is inside the gate; `flat` and `skewed high` print the not-run-end-to-end
+        line with their λ and the reason.
+        **Still open in HA4:** the prose half — Appendix B and Text cell 4's realizability
+        passage — which describes what these rows are. Not started.
 - [ ] **HA5. Couplings and numbering.** 5 (no new tag unless HA3 adds one), 6, 9 (HA1), and E3's
       prefixes; the ToC only if a heading moves.
 - [ ] **HA6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
