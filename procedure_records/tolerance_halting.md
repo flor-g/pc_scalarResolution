@@ -267,6 +267,25 @@ the pre-decision wording.
       Every realizable θ_u is the tolerance-halted one, reported at the demonstration tolerance and
       labelled with it; the fact that the conjunction is met well before the halt moves into prose,
       on H8's numbers. C6 applies — each quoted number is printed by the cell that reports it.
+  - [x] **HA4a. Call sites 1 and 2**, done 2026-09-21, commit recorded below. Code Cell 2 gains two
+        named constants beside `FEASIBLE_STIFFNESS`: `DEMONSTRATION_TOLERANCE = 1.0e-1`, commented
+        as ad hoc and named once so every row halted by it prints it, and `HALTING_CAP = 100_000`,
+        commented as a cap and not a stopping rule. **Site 1**, `check_specification`'s
+        "Eq. (20) ascends toward it from theta_u = 0": was 25 fixed updates, now halts at the
+        demonstration tolerance after **15 updates at θ_u = −5.285227** (default Λ = 8,
+        θ\* = −28.4375), F~ monotone, |grad| 6.82 → 2.00. **Site 2**,
+        `theta_u_learning_probe`: `num_updates=60` is replaced by `tolerance`, defaulting to the
+        named constant **which the block now prints**, so the ad hoc value is never invisible; the
+        SLOW PARAMETER line becomes "0.0000 → −5.285227, halted after 15 update(s)" in place of
+        "over 60 updates", and the settled/still-ascending clause becomes the halting relation (the
+        final gradient −1.997 gives a step of 0.0999, just under 0.1).
+        **Both sites got cheaper**, 15 updates against 25 and 60.
+        **One dependence to keep visible:** site 1's clause that |grad| shrinks needs two updates,
+        so a tolerance coarse enough to halt after one (≥ 1 at Λ = 8, block 5) makes that check
+        **fail** rather than pass vacuously. That is deliberate and is commented in the cell — a
+        silent weakening would have been the patchwork the user ruled out.
+  - [ ] **HA4b. Call sites 3 and 4**, the end-to-end rows and the delta read-out's realizable row.
+        Blocked on a measurement and a question — see §8.
 - [ ] **HA5. Couplings and numbering.** 5 (no new tag unless HA3 adds one), 6, 9 (HA1), and E3's
       prefixes; the ToC only if a heading moves.
 - [ ] **HA6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
