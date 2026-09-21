@@ -767,11 +767,6 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   planned §5.3 of `thesis_outline/revisions.md` would supply the target. The pointer stays bare, and
   the term itself is O7.
 
-### O4. The `\ker` sentences in Text cell 3 §3.2 and Appendix A
-- Status: Open as of 2026-09-09; **verify whether still open**
-- The user reported mistyping them and supplied the reading; the corrected wording is the user's to
-  restate.
-
 ### O5. Appendix B's sign sentence
 - Status: **Settled** (user, 2026-09-13; record `procedure_records/o5_o6_resolution.md`). Opened
   2026-09-13 from `procedure_records/e4_e7_sourcing.md` F2.
@@ -915,9 +910,19 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   the entry is held would erase the one prior effect the data show (F8, F9).
 
 ### O9. Is the O corner {1} as representational as {0}?
-- Status: Open (since 2026-09-15)
-- Decided by: not decided. Raised by the user as a side quest, with the answer wanted as a sense
-  rather than in full. Record: `procedure_records/side_quests_mirror_and_granularity.md`.
+- Status: **Settled 2026-09-21**
+- Decided by: the **user** (2026-09-21), on the measurement below. Raised by the user as a side
+  quest 2026-09-15, with the answer wanted as a sense rather than in full. Record:
+  `procedure_records/side_quests_mirror_and_granularity.md`.
+- **Decision.** The reflection is exact (finding 1), so **this implementation predicts that the O
+  corner is just as representational**. The prediction is read as a fact about the implementation as
+  it stands: it is **not transported to the proposed next phase**, where {0} and {1} stop being
+  fixed by the same θ and become asymmetric (**O14**, the user's instinct). Any statement of the
+  prediction carries that limit with it.
+- **Where it is stated:** the paper, not the notebooks (B10, C7). `thesis_outline/sections_3-6.md`
+  Tier B's O-corner bullet carries it; Appendix C §4's aside stands unchanged. If the prose quotes a
+  number for the equivariance, C6 requires a cell to print it first — today the 7.11e-15 lives only
+  in the audit, so state the prediction qualitatively or print it.
 - **The question.** Appendix C §4 records that E = {1}, the O corner, costs the architecture
   nothing. The sharper form: does an inventory {*no*, *not all*, *all*} behave exactly as the
   mirror of {*no*, *some*, *all*}?
@@ -933,17 +938,22 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      {*no*, *not all*, *all*}, and under Beta(3,1) ↔ Beta(1,3) it changes sign, +55.0081 against
      −17.0332. The settled fields differ by only about 5e-2, because Eq. (24)'s limit k → c/2 is
      independent of θ_u, its sign included.
-- **Needed to decide:** whether anything is claimed in the notebooks, and if so which. Options:
-  (a) leave Appendix C §4's aside as it stands, which finding 1 supports; (b) state the equivariance
-  and name μ_u as the single asymmetry, which would put a stipulation (A5) in the reader's view;
-  (c) treat "what a principled μ_u for a mirrored scale would be" as its own question.
+- **Resolved against the options raised 2026-09-15:** (a) as far as the notebooks go — Appendix C
+  §4's aside stands and nothing new is claimed there; the paper adds the prediction and its limit.
+  Option (c), what a principled μ_u for a mirrored scale would be, is **not** taken up; finding 2
+  stays on record as the measured asymmetry, with our position reserved.
 - **Depends on it:** Appendix C §4's aside; A5's stipulation μ_u = 1; nothing currently printed.
 - Evidence: `audits/2026-09-15-side-quests/output.txt`. Class (e) under `agent.md` §3.3 until a cell
   prints it (C6).
 
 ### O10. Does the number of atoms n change what the evaluation reports?
-- Status: Open (since 2026-09-15)
-- Decided by: not decided. Raised by the user alongside O9; same record.
+- Status: **Addressed 2026-09-21** (user: "O10–O14 already had been addressed"). The measurement
+  below is the answer and is not reopened. **One task it leaves:** the finding lives only in
+  `procedure_records/side_quests_mirror_and_granularity.md`, and the user asked that how the
+  evaluation varies with n be **reported in both the notebook and the paper** — tasks **T14–T16**
+  of `procedure_records/scale_classes_hypothesis.md`, with the placement question **S-8** there.
+  Until a cell prints them, these numbers are class (e) under `agent.md` §3.3.
+- Decided by: the measurement is the agent's, raised by the user alongside O9; same record.
 - **The question.** The implementation takes n = 10 (O1). Would three atoms, or exactly two, change
   essential results, and is the model degenerate at two?
 - **What is measured** (record F6-F10):
@@ -1045,7 +1055,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   and duplication, not a result.
 
 ### O13. Does lexical strength follow the stability of the predicate's atomicity?
-- Status: Open (since 2026-09-17)
+- Status: **Addressed 2026-09-21** (user). How the dissertation treats it is settled by **R16**:
+  §5.2 states H1, reports match and mismatch against Xiang et al. (2022), and makes no claim about
+  the nature of the mismatch. The hypothesis itself is **not adopted** as a decision about Λ, and
+  the entry stays as the record of that. Implementation: T0–T13 of
+  `procedure_records/scale_classes_hypothesis.md`. Raised 2026-09-17.
 - Decided by: not decided. Raised by the **user**, as a hypothesis to be checked before it is
   adopted: "1. scalar expressions with unstable atomicity are associated with weaker lexical
   strength; 2. open-scale adjectives behave similar to *some*; complete scale adjectives behave
@@ -1103,7 +1117,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   H2's open-scale half is stated and left untested (**O14**).
 
 ### O14. Are the two endpoints symmetric, or does the 1 boundary belong to another level?
-- Status: Open (since 2026-09-17). **What is settled** is only how the paper treats it: §5.2 points
+- Status: **Addressed 2026-09-21** (user), in the same sense as O13: the treatment is settled and
+  the question is not. **O9 now depends on it** — this implementation's prediction that the O corner
+  is just as representational is explicitly not carried into the asymmetric phase this entry
+  describes. Raised 2026-09-17. **What is settled** is how the paper treats it: §5.2 points
   to it as an instinct, once, promising nothing, and the relative class is not modelled with the
   current implementation (record `procedure_records/scale_classes_hypothesis.md` §8, S-2).
 - Decided by: the instinct is the **user's** (2026-09-17), in their words:

@@ -84,6 +84,14 @@ or a footnote.
 - *The O corner costs nothing* (App. C §4): *not all* introduces no threshold and so no dimension.
   The model's verdict is that Horn's (1972) lexicalization gap is not representational. (It also
   bears on §5.1: enlarging the alternative set need not enlarge the space.)
+  **What the implementation predicts, and how far (O9, settled 2026-09-21).** The reflection
+  $\zeta\mapsto-\zeta$ carries the inventory onto its mirror exactly, so **this implementation
+  predicts that the O corner is just as representational**. State the limit in the same breath: the
+  prediction is about the architecture as it stands, and it is **not** carried into the phase §5.1
+  proposes, where the two endpoints stop being fixed by the same threshold and become asymmetric
+  (§5.2's instinct sentence; `decisions.md` O14). Position reserved on $\mu_u$, the one quantity
+  that breaks the mirror. Quote no number here unless a cell prints it first (C6): the equivariance
+  is measured in an audit, not in a notebook.
 - *Exclusion over truth sets* (App. D): stated in §3 in two sentences as a forced design choice,
   not as a finding — though §5.1 now gives it a second, independent motivation.
 **Tier C — left in the notebook and cited.** Conditioning and stiffness (Eq. 28); the

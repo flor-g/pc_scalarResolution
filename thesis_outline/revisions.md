@@ -251,6 +251,10 @@ lines 13–14 now state only its own target.
 - **Tier A, the closed-vs-open-scale row (line 60).** Its "second empirical anchor" depends on Q7.
   The row stays in Tier A only if §5.2's prediction is rebuilt on the learned model.
 - **Tier B, line 63.** §5.3 → §5.5.
+- **Tier B, the O-corner bullet (2026-09-21, `decisions.md` O9 settled).** Applied: the bullet now
+  states that this implementation predicts the O corner is just as representational, **and** that the
+  prediction does not transport to the asymmetric phase of O14, with our position reserved on μ_u
+  and no number quoted until a cell prints the equivariance.
 - **Tier C, lines 74–77.** Remove "Conditioning and stiffness (Eq. 28)", which moves to Tier A.
   §5.3 → §5.5.
 

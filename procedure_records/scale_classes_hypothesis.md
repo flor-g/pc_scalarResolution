@@ -397,6 +397,22 @@ None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed
 - **S-7. Does §5.2 keep its parity paragraph?** The κ parity result survives (2026-09-14 finding 6)
   but belongs to the old prediction, not to H1/H2. Keep, move to Appendix C, or drop.
 
+**Raised 2026-09-21, not yet answered — S-8.** The user asked that **how the evaluation varies with
+n** be reported in the notebook and in the paper, the finding currently sitting in
+`procedure_records/side_quests_mirror_and_granularity.md` (F6–F10, decision **O10**). Two things are
+the user's to settle:
+1. **Where it goes in the paper.** (a) §4, as a property of the evaluation, since it says which side
+   of a crossing the reported verdicts sit on; (b) §5.2, next to H1, since n is what atomicity
+   fixes and H1 is about exactly that instability; (c) §5.5 Limits, one sentence. **Recommendation:
+   (a) with one clause in §5.2**, because F9 is a fact about the criterion's readings, which §4
+   reports, while H1's claim concerns Λ, not n. It costs about 60 words in §4 and 15 in §5.2.
+2. **Which cell prints it, and how wide the sweep is.** The side quest measured n at Λ = 8 under two
+   priors only. Options: the existing Code Cell A (Appendix A owns θ_L and n); a block in Code
+   Cell F, which is being written anyway; or a new cell. **Recommendation: Code Cell A**, since
+   Eq. (A5) is where n gets its denotation, and a sweep of n against the two priors already reported,
+   at Λ = 8 and at Λ = 512, so the paper can say whether the crossings move with Λ (the side quest
+   did not check, and §4.4 now reports at Λ = 512).
+
 ## 9. Tasks, in order
 
 Code before prose (`agent.md` §5.3). Nothing below starts until S-1 to S-7 are answered.
@@ -475,6 +491,24 @@ both regenerate the ToC, so whichever runs second re-checks cell indices before 
       table so the numbers point at Code Cell F rather than at the audit; clear the audit from the
       class (e) list.
 - [ ] **T13. Commit**, one logical change per commit, hashes recorded on each task line above.
+
+**Added 2026-09-21 at the user's request (decision O10). Blocked on S-8.**
+
+- [ ] **T14. Print how the evaluation varies with n.** The cell S-8 settles prints, for the priors
+      and lexical strengths S-8 fixes: θ_L = log(2n − 1) at each n, θ_u\*, the two q criteria and the
+      two mode criteria for *some*, and the κ separation of F10. Acceptance: the numbers of F7–F10
+      that the prose will quote are reproduced by the cell (they are class (e) until then), the
+      crossings of F9 are printed rather than described, and no figure is added unless S-8 asks for
+      one. n = 1 stays rejected by the constructor (F8).
+- [ ] **T15. The prose**, at the site S-8 settles: n = 10 is a stipulation (O1), not a neutral choice
+      of units; the criteria's readings cross with n; m = 2 and the rank results do not move (F7);
+      n = 2 is not degenerate and n = 1 is (F8). Written against T14's output. Whether this entails
+      anything about O1 is **not** claimed here.
+- [ ] **T16. Records.** `decisions.md`: O10 gains the pointer to the printed source and its numbers
+      leave class (e); O1 gains a line that the reporting exists, since F9 is what makes it
+      consequential. `procedure_records/side_quests_mirror_and_granularity.md` §4 loses "neither
+      question has any prose site" for side quest 2. `thesis_outline/revisions.md`: a site entry and
+      a §8 source row.
 
 ## 10. Prose sites, to be written only after T2 and T7
 
