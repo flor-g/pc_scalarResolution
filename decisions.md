@@ -937,7 +937,26 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      - raise Λ per configuration until the entry is held, by an override threshold analogous to
        Eq. (41), which is derived for Beta(α, 1);
      - restrict comparisons to held entries.
-- **Needed to decide:** the user's choice on both, before any §5.2 number is printed.
+- **Narrowed 2026-09-21.** The old line — "the user's choice on both, before any §5.2 number is
+  printed" — was too broad. The ensemble half is answered for the modelled paradigm (the finding
+  below), and the Λ half is settled for §5.2 by **S-1** (Λ is fitted, for H1 alone, labelled).
+  **Settled 2026-09-21 by the user:**
+  1. **§5.2 fits one Λ per class, not per (class, image type).** The user's reason, recorded as
+     given: *a constrained model should carry as few fitted quantities as possible*. Fitting per
+     image type would entail the stipulation that lexical strength depends on both class and image
+     type, **and the user does not argue that stipulation is implausible** — there is no obvious
+     reason it is. The paper therefore **opts out of the extra fit; it does not claim the dependence
+     is absent.** §5.2 must be worded so: never "Λ does not depend on image type", only "we did not
+     fit one". The two best-fitting values within the minimum class (shapes ≈ 6, artifacts ≈ 24,
+     F9) are reported as a property of the fit, not as a second fitted parameter.
+  2. **Λ outside the fitted setting:** a configuration holds its own stated Λ and **reports the
+     leak** (B6: headroom before shifts), rather than raising Λ per configuration until the entry
+     holds or restricting comparisons to held entries.
+- **Still open, and now scoped by phase (2026-09-21).** What ensemble a predicate heard with **no**
+  antonym carries, and whether the paradigm's {χ, 1 − χ} may be stipulated generally. The user has
+  asked to look at this closely before deciding, because the complement relation is a property of
+  **this phase's** single θ (F18, F19) and must not be carried into the phase where the two
+  boundaries come apart (O14). Neither question blocks T0–T13.
 - **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
 - **Finding, 2026-09-17** (record `procedure_records/scale_classes_hypothesis.md`, raised under
   O13). **The ensemble question has an answer wherever the predicate is tested against an antonym.**

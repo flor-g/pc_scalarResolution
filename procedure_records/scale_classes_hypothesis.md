@@ -266,6 +266,10 @@ boundary left where n puts it.
 - **O13** (new): whether H1 and H2 are adopted, and if so what fixes Λ. Nothing was changed.
 - **O8**: F1 and the antonym structure answer the ensemble question for this paradigm ({χ, 1 − χ});
   the Λ question is now sharper, not settled — F9 says the data want Λ to vary within a class.
+  **2026-09-21: the Λ half is settled (S-9 above, and O8's own narrowing); the ensemble half is
+  being looked at closely by the user before it is decided, because the complement relation is a
+  property of this phase's single θ (F18, F19) and the next phase separates the boundaries (O14).
+  Neither blocks T0–T13.**
 - **Q7** in `revisions.md`: three of its four choices are now answerable from measurement, and the
   fourth (the empirical-fit paragraph) needs F12 either way.
 - Every number here is class (e) under `agent.md` §3.3 until a cell prints it (C6). Whether any of
@@ -412,6 +416,16 @@ the user's to settle:
    Eq. (A5) is where n gets its denotation, and a sweep of n against the two priors already reported,
    at Λ = 8 and at Λ = 512, so the paper can say whether the crossings move with Λ (the side quest
    did not check, and §4.4 now reports at Λ = 512).
+
+**Settled 2026-09-21 — S-9. One fitted Λ per class, not per (class, image type).** The user's
+reason: a constrained model should carry as few fitted quantities as possible. Fitting per image
+type would entail that lexical strength depends on class **and** image type, a stipulation the user
+does **not** call implausible; the paper opts out of the extra fit rather than arguing against the
+dependence. Consequences for the tasks: **T2 block 4** keeps its per-class scan; **T2 block 5** keeps
+the image-type difference as a measured difference, and may print the two best-fitting Λ of the
+minimum class (F9: shapes ≈ 6, artifacts ≈ 24) **labelled as a property of the fit, not as a fitted
+parameter**; **T10's prose** may never write that Λ is independent of image type — only that no
+second Λ was fitted, and why. `decisions.md` **O8**.
 
 ## 9. Tasks, in order
 
