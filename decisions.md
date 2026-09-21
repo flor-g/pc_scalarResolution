@@ -737,10 +737,28 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ## O. Open decisions
 
-### O1. What fixes δ, and so θ_L
-- Status: Open (since 2026-09-07)
-- Appendix A derives θ_L from a just-noticeable difference, σ(−θ_L) = δ/2, with n = 1/δ. What fixes δ
-  is not settled. The implementation takes n = 10.
+### O1. What fixes the scale's resolution, and so θ_L
+- Status: **Settled 2026-09-21** as far as this phase goes, and **dissolved for the next one**.
+- Decided by: the **user** (2026-09-21), in two parts.
+  1. **This phase does not answer it, and does not need to.** The question is what fixes the
+     resolution for a predicate whose atoms are unstable, and no such predicate is a modelled case
+     here (the modelled classes are the two absolute ones, R17/S-2). The implementation stipulates
+     n = 10, and §5.2's instantiation n = 4, and both are stipulations, said to be such.
+  2. **A later phase does not fix it at all.** The resolution is **not a parameter to be chosen**:
+     it is a **read-out of a learned θ_L**, recovered by Eq. (A5), n = (e^{θ_L} + 1)/2. This phase
+     cannot learn θ_L, because Eq. (A4)'s gradient vanishes identically while ε_y ≡ 0 (φ_L is
+     clamped); unclamping the utterance level is what sets θ_L running, and the resolution is then
+     whatever the learned threshold implies, per predicate. Stated as the position for the next
+     phase, not as a result of this one.
+- **Naming, decided in the same breath.** δ and n are **the same quantity** (n = 1/δ), and δ is
+  **our own name, not Xiang et al.'s** — their models are LG, QF and ST, and none of them uses it.
+  So the dissertation keeps **one name, n**, with a two-part gloss: the atoms a counting predicate
+  resolves, and the distinguishable steps of a scale where no count exists, in which case n need not
+  be an integer. Eq. (A6)'s separate δ form goes. Tasks: `procedure_records/resolution_naming.md`
+  (N0–N8). The clash with the **delta read-out** (A16, B7) is a second reason: "delta" already names
+  the posterior of the construction.
+- Appendix A derives θ_L from the scale's resolution, ς(−θ_L) = 1/2n (Eq. A5). The implementation
+  takes n = 10.
 - Findings added later: 2026-09-15 (agent), **this decision is consequential, not cosmetic.** Probing
   n while holding everything else fixed (O10, `procedure_records/side_quests_mirror_and_granularity.md`
   F9) crosses criterion readings: under N(0,1) the q shift criterion for *some* is unmet at
