@@ -316,7 +316,32 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: A9 and R10 (the reason θ\* stays the commitment is now stated, not merely
   asserted); I3, whose 1e-9 becomes an instance of the mechanism rather than a numerical detail;
   O3's deferred settling-cost discussion; the planned §5.3.
-- Tasks: `procedure_records/tolerance_halting.md` §7 (HA0–HA8), **blocked on Q-HA1 and Q-HA2**.
+- **The position in full, the user's six points (2026-09-21), with the measured form of each.**
+  1. **Halting depends on tolerance and on nothing else.** No second stopping rule, and **no guard**:
+     a guard would need knowledge of the trajectory's shape beyond the unit's local input, which the
+     architecture denies it. (Where the flow halts is fixed jointly by the tolerance and by the flow
+     the configuration produces; what the hypothesis says is that the **mechanism** is tolerance
+     alone.)
+  2. **No theoretical commitment to any tolerance.** Results are offered at **1e-1**, an ad hoc value
+     for demonstration.
+  3. **Early halt under the flat prior at Λ = 8** is an implication of a coarse tolerance. **Measured
+     boundary: from 1e-3 upward**, where the row halts in one update at θ_u = 0.0005 and never
+     leaves the tempered control; at 3e-4 it still reaches 26.89. (The user's "above 1e-2" is
+     conservative by an order of magnitude; the effect begins at 1e-3.)
+  4. **Early halt under every Part D prior at Λ = 8** is an implication of a coarser one. **Measured
+     boundary: at 1 and above**, where all four halt in one update; Beta(3,1) already does at 3e-1.
+     Halting in one update is not the same as never leaving the start: only the flat row does the
+     latter.
+  5. **The fast loop need not share the slow loop's tolerance.** Coarsening it changes no verdict and
+     little runtime (H7), so it is inconsequential and no discussion is spent on it. **The
+     implementation keeps 1e-9** (I3).
+  6. **Because no value is committed to, the model's predictions are reported in closed form** unless
+     otherwise specified. This is what keeps every reported result independent of the ad hoc
+     quantity, and it is position 1 restated.
+- Evidence for points 3 and 4: block 5 of `audits/2026-09-21-tolerance-halting/output.txt`.
+- Tasks: `procedure_records/tolerance_halting.md` §7 (HA0–HA8). **Q-HA1 and Q-HA2 are answered:**
+  `learn_theta_u` halts by the committed tolerance, every realizable θ_u is reported at it, and the
+  two rules that locate today's realizable values stop defining one.
 
 ### A18. The inventory holds at least {χ_y, ker χ_y}; antonymy is not a model primitive
 - Status: Settled

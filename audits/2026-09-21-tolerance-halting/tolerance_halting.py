@@ -254,3 +254,33 @@ print("    (an integrated demonstration is what Code Cell 2b runs for three rows
 print("     notebook's whole baseline is about 250 s, so a row costing minutes is not")
 print("     affordable there, and one costing hours is not affordable at all.)")
 print("\nDONE (4)")
+
+# ------------------------------------- 5. where the early-halt boundaries actually are
+# Added 2026-09-21 to state the user's points 3 and 4 exactly: at which tolerance does a
+# Lambda = 8 row halt in ONE update, and at which does it never leave the start?
+block("(5) LAMBDA = 8: THE EARLY-HALT BOUNDARIES, TOLERANCE BY TOLERANCE")
+TOLS = (1e-4, 3e-4, 1e-3, 3e-3, 1e-2, 3e-2, 1e-1, 3e-1, 1.0, 3.0)
+rows = {}
+for name, specification in part_d_priors().items():
+    prior, overrides = (specification if isinstance(specification, tuple)
+                        else (specification, {}))
+    probe = net.respawn(base_prior=prior, lexical_strength=8.0, **overrides)
+    rows[name] = (probe, flow_halts(probe, tolerances=TOLS, cap=300_000),
+                  probe.learned_theta_u())
+print(f"    {'tol':>7}  " + "  ".join(f"{n:>20}" for n in rows))
+for tol in TOLS:
+    cells = []
+    for name, (probe, halts, star) in rows.items():
+        updates, theta = halts[tol]
+        cells.append(f"{theta:>8.4f} / {('cap' if updates is None else str(updates)):>5} upd")
+    print(f"    {tol:>7.0e}  " + "  ".join(f"{c:>20}" for c in cells))
+print(f"    {'theta*':>7}  " + "  ".join(f"{star:>20.2f}" for _, (_, _, star) in rows.items()))
+print()
+for name, (probe, halts, star) in rows.items():
+    one = [t for t in TOLS if halts[t][0] == 1]
+    stuck = [t for t in TOLS if abs(halts[t][1]) < 0.01]
+    print(f"      {name:<12} halts in ONE update from tol = "
+          + (f"{min(one):.0e}" if one else "never")
+          + "   |theta_halt| < 0.01 (never leaves the tempered control) from tol = "
+          + (f"{min(stuck):.0e}" if stuck else "never"))
+print("\nDONE (5)")

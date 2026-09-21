@@ -174,4 +174,24 @@ TOLERANCE AS THE HALTING MECHANISM OF Eq. (20) -- audit, 2026-09-21
      notebook's whole baseline is about 250 s, so a row costing minutes is not
      affordable there, and one costing hours is not affordable at all.)
 
+(5) LAMBDA = 8: THE EARLY-HALT BOUNDARIES, TOLERANCE BY TOLERANCE
+-----------------------------------------------------------------
+        tol              gaussian                  flat            skewed low           skewed high
+      1e-04  -25.8856 / 28316 upd   38.7945 / 97123 upd  -14.1686 /  7295 upd   38.6575 / 69755 upd
+      3e-04  -23.0360 / 11755 upd   26.8913 / 22520 upd  -13.6055 /  4135 upd   30.6141 / 20949 upd
+      1e-03  -18.7306 /  3560 upd    0.0005 /     1 upd  -12.2858 /  1736 upd   22.5245 /  5021 upd
+      3e-03  -14.5936 /  1037 upd    0.0005 /     1 upd  -10.4172 /   628 upd   16.4996 /  1287 upd
+      1e-02  -10.5879 /   245 upd    0.0005 /     1 upd   -8.0734 /   173 upd   11.4632 /   280 upd
+      3e-02   -7.6886 /    64 upd    0.0005 /     1 upd   -6.0734 /    49 upd    8.0950 /    69 upd
+      1e-01   -5.2852 /    15 upd    0.0005 /     1 upd   -4.3233 /    13 upd    5.5135 /    16 upd
+      3e-01   -4.0217 /     6 upd    0.0005 /     1 upd   -3.2046 /     5 upd    0.1770 /     1 upd
+      1e+00   -0.3409 /     1 upd    0.0005 /     1 upd   -0.4231 /     1 upd    0.1770 /     1 upd
+      3e+00   -0.3409 /     1 upd    0.0005 /     1 upd   -0.4231 /     1 upd    0.1770 /     1 upd
+     theta*                -28.44               5950.63                -14.51                 55.01
+
+      gaussian     halts in ONE update from tol = 1e+00   |theta_halt| < 0.01 (never leaves the tempered control) from tol = never
+      flat         halts in ONE update from tol = 1e-03   |theta_halt| < 0.01 (never leaves the tempered control) from tol = 1e-03
+      skewed low   halts in ONE update from tol = 1e+00   |theta_halt| < 0.01 (never leaves the tempered control) from tol = never
+      skewed high  halts in ONE update from tol = 3e-01   |theta_halt| < 0.01 (never leaves the tempered control) from tol = never
+
 DONE

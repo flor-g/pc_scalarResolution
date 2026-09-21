@@ -170,6 +170,17 @@ criterion, and bisection on fractions of θ\*) stop being how a realizable θ_u 
 guard**, on the principle that a guard needs knowledge of the trajectory's shape that the system
 does not have. **The slow-start halt is therefore a prediction and is stated as one** (H5).
 
+**2026-09-21, the position in six points (`decisions.md` A19).** Halting depends on tolerance only,
+with no guard; no tolerance is committed to, and 1e-1 is offered as an ad hoc demonstration value;
+the two early-halt implications are stated at their measured boundaries (block 5: the flat row at
+Λ = 8 from 1e-3, every Part D prior at Λ = 8 from 1); the fast loop keeps 1e-9 and no argument is
+spent on it; and predictions are reported in closed form.
+
+**Two corrections the measurement forced, both told to the user.** Their point 3 said "above 1e-2":
+the flat row is already stuck at θ_u = 0.0005 from **1e-3**, an order of magnitude finer. Their
+point 4 said "above 1": all four priors halt in one update **at 1**, and Beta(3,1) at 3e-1. Neither
+correction changes the position; both change where its boundary is drawn.
+
 **What still divides the reported from the demonstrated.** A19's third part stands: the paper's
 results are at θ\*, which is what keeps them independent of the ad hoc tolerance. What the tolerance
 now fixes is the **realizable** rows — demonstrations that the dynamics reach the verdict — and they
