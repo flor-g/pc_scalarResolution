@@ -447,7 +447,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         class (e): Code Cell D prints them (U3, `23bdf23`), and the audit is named as the derivation.
       - **Not done, and not U13's:** the outline bodies whose budgets moved under R1–R17 but whose
         text U9–U12 did not touch (§3.4, §4.3, §5.1, §5.2, §5.5, §5.6). The table's note flags them.
-- [x] **U14. Close the change** (2026-09-21). One logical change per commit throughout; every task
+- [x] **U14. Close the change** (2026-09-21, commit `a580599`). One logical change per commit throughout; every task
       line above carries its hash. The closing checklist of `agent.md` §6, item by item:
       - **Bogacz.** One new operation in the change, Eq. (D5), and it has Eq. (9)'s status, an
         instance under restriction (A3, D3). No divergence entry is needed.
