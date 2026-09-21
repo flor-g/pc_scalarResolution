@@ -6,7 +6,9 @@ Working record for the change the user opened on 2026-09-21, after closing the �
 **Task IDs here are `N0`–`N8`.** `T0`–`T16` (`scale_classes_hypothesis.md`) are live at the same
 time; the prefixes keep them apart.
 
-**Status, 2026-09-21: not started. N1 is blocked on the one question in §4.**
+**Status, 2026-09-21: the plan is approved and nothing is implemented.** Q-N1 is answered by the
+user — option (i), Eq. (A6) goes — so N0–N8 are unblocked, and the user's instruction is
+**"Don't start implementing yet"**: no task below begins without their word.
 
 ---
 
@@ -63,7 +65,10 @@ Nothing else computes with it: no code reads a δ variable, and no printed numbe
 
 ## 4. What must be settled before any edit (blocking)
 
-- **Q-N1. Does Eq. (A6) go, or stay restated in n?**
+- **Q-N1. Does Eq. (A6) go, or stay restated in n? — ANSWERED by the user 2026-09-21: option (i),
+  the agent's recommendation. Eq. (A6) goes; Appendix A runs (A1)–(A5); nothing renumbers.** The two
+  candidate readings of the resolution (constant in s, constant in ζ) are kept as a noted fact with
+  our position reserved, as N1 sets out.
   - **(i) (recommended) It goes.** Its content moves into a paragraph under Eq. (A5): n need not be
     an integer; where the predicate counts, n is its atoms; where it does not, n is the number of
     distinguishable steps of the scale, and Eq. (A5) is read with a real n. Appendix A then runs
@@ -73,7 +78,8 @@ Nothing else computes with it: no code reads a δ variable, and no printed numbe
     is the duplication the decision removes.
   - **(iii) It stays as is.** Rejected by the decision.
 
-Everything else in §5 follows from the answer and needs no further decision.
+Everything else in §5 follows from the answer and needs no further decision. **No question is
+outstanding**; what the list waits on is the user's go-ahead to start.
 
 ---
 
