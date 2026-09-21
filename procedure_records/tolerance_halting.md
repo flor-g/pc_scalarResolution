@@ -126,6 +126,64 @@ Adopting the proposal touches an interpretive commitment, so under `agent.md` §
 
 ## 6. Status
 
-**2026-09-21: measured, nothing adopted, nothing implemented.** The audit is committed; no notebook,
-outline or decision entry has been changed on the strength of it. `decisions.md` A9, A11, I3, O3 and
-`thesis_outline/revisions.md` R9, R10 are the entries that would move, and none has been touched.
+**2026-09-21: the user took position 1** — θ\* stays the commitment, the mechanism is tolerance, and
+the tolerance is ad hoc, so nothing reported may depend on it. Recorded as `decisions.md` **A19**
+and `revisions.md` **R22**; A9 and R10 are unchanged, which is the point of the position. The user's
+scope line: *"besides changing the notebook codes for halt and the halting description, we don't
+need to change anything else"*. Tasks below; **nothing is implemented**.
+
+---
+
+## 7. Tasks (HA0–HA8), and the two questions that block them
+
+**Blocking, because each decides whether stored output moves.**
+
+- **Q-HA1. How does `learn_theta_u` halt?** Today it runs a fixed `num_updates` and stops there,
+  which is the arbitrary cap A19 replaces.
+  - **(i) (recommended) The tolerance is an explicit argument with no default**, and `num_updates`
+    stays as a guard against a flow that never meets it. Call sites pass a tolerance only where a
+    halt is being demonstrated; the cells that report θ\* do not call the flow at all. **No stored
+    output moves**, and the code says what A19 says.
+  - **(ii) A default tolerance.** Then every existing call halts by it, the SLOW PARAMETER block's
+    "0.0000 → −7.567163 over 60 updates" line changes, and a default value is exactly the ad hoc
+    quantity A19 says results must not depend on.
+- **Q-HA2. What happens to the two "realizable" θ_u the evaluation already reports** — the
+  criterion-stopped one-update rows (7.8161, 7.9926, 13.3749) and `criterion_threshold`'s bisection
+  on fractions of θ\*?
+  - **(i) (recommended) Keep both, relabelled.** They are demonstrations that the conjunction is
+    reached early in the flow and integrable there, not predictions at a halted θ_u. Under A19 the
+    prose says so, and says that neither stopping rule is the halting mechanism: one is the
+    evaluator's criterion, the other needs θ\*.
+    the halting account is about where the flow would stop, not about how these rows were located.
+  - **(ii) Recompute them at a tolerance.** Rejected by A19's third part: the rows would then depend
+    on the ad hoc quantity.
+  - **(iii) Drop them.** They are §4.6's evidence and Text cell 4's demonstration that the verdict
+    does not wait for θ\*; dropping them would cost that.
+
+**Tasks, once both are answered.**
+
+- [ ] **HA0. Checkpoint** (`agent.md` §4.2), before any code cell is touched.
+- [ ] **HA1. `code cell 1`, `learn_theta_u`** under Q-HA1: the halting rule, its docstring stating
+      that the flow halts when its own update falls below the tolerance, and that the value is ad
+      hoc (A19). **Coupling 9 fires** — E1 carries the same def with its relay argument, so the edit
+      is applied to E1's own version, not lifted over it.
+- [ ] **HA2. `infer`'s docstring and I3.** The 1e-9 is the same mechanism at the fast timescale, not
+      a numerical detail; it stays above the roundoff floor (F34) and keeps its value. No behaviour
+      changes.
+- [ ] **HA3. Text cell 3 §7 or §8.5**, where Eq. (20) is introduced: one passage on halting by
+      tolerance, θ\* as the asymptote the commitment names, and the ad hoc status of the value.
+      Under B10/C7 the cell takes no position on what that means for the brain.
+- [ ] **HA4. Appendix B and Text cell 4's realizability block**: the relabelling Q-HA2 settles.
+- [ ] **HA5. Couplings and numbering.** 5 (no new tag unless HA3 adds one), 6, 9 (HA1), and E3's
+      prefixes; the ToC only if a heading moves.
+- [ ] **HA6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: the baseline, unchanged
+      under Q-HA1(i) — main 0 errors, 8 figures, 14/14; appendix_E 0 errors, 5 figures, E2 18/18,
+      E3 PASS — with any departure reported rather than explained away.
+- [ ] **HA7. The outline.** §5.3 (planned) states the halting account and rests its cost argument on
+      H2–H4; §5.5 Limits and §3.4 carry a clause if HA3 introduces notation they use. `revisions.md`
+      R22's site entries.
+- [ ] **HA8. Commit**, one logical change per commit, hashes recorded above.
+
+**What stays untouched, by the user's scope line:** every reported number, A9, R10, the θ\* tables,
+the plane, and §§4.1–4.5. The audit's H2–H4 are evidence for the discussion, not new results to
+print, and they stay class (e) unless a cell is later asked to print them.

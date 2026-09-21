@@ -287,6 +287,37 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   `delta_readout_report` in Code Cell 2.
 - Evidence: `procedure_records/d9_delta_readout.md` F1-F4.
 
+### A19. Halting is by tolerance; the tolerance is ad hoc, and nothing reported depends on it
+- Status: Settled
+- Decided by: the **user** (2026-09-21), position 1 of the three the audit put to them.
+- Decision, in three parts.
+  1. **The mechanism is tolerance.** A flow halts when its own update falls below a tolerance. The
+     fast loop already works this way (`infer`, I3); the slow flow of Eq. (20) is to be described,
+     and coded, the same way: halt when |Δθ_u| < tol.
+  2. **θ\* stays the commitment, unchanged** (A9, R10). This is the position the project already
+     held; the audit supplies the mechanism that R10 said was missing, and does not move the
+     commitment.
+  3. **The tolerance itself is ad hoc, and no reported result may depend on it.** Why a computer
+     program needs one is that numbers are not represented exactly; whether a living organism needs
+     one for the same reason is **not a claim this study makes**. It is also not in scope to
+     stipulate a tolerance representative of the brain, and a tolerance need not be uniform across
+     inference tasks. What can be argued is that a representative tolerance is almost certainly
+     **greater than 1e-9**, so a real system halts **earlier** than the flow's asymptote.
+- **Evidence** (`procedure_records/tolerance_halting.md`, findings H1–H7; audit
+  `audits/2026-09-21-tolerance-halting/`): the rule is self-contained, using only |Δθ_u| and never
+  θ\*; at Λ = 512 every Part D verdict is unchanged for tolerances from 1e-9 to 1; the plane keeps
+  33 of 121 and agrees with θ\* in 121 of 121 cells; and 4λ_max(H) falls from about 9e6 to about
+  1e4. Two cautions: a coarse tolerance can halt at a slow **start** (H5), and a tolerance near 1e-9
+  never fires in any plausible number of exposures (H6).
+- **What follows for reporting.** Results stay at θ\*, which is what makes them independent of the
+  ad hoc quantity. A tolerance-halted θ_u is not a reported configuration, and any row shown at one
+  is labelled as a demonstration of the dynamics, not as a prediction.
+- Bogacz status: none. Halting is a property of the flow's stopping rule, not of a message.
+- Depends on it: A9 and R10 (the reason θ\* stays the commitment is now stated, not merely
+  asserted); I3, whose 1e-9 becomes an instance of the mechanism rather than a numerical detail;
+  O3's deferred settling-cost discussion; the planned §5.3.
+- Tasks: `procedure_records/tolerance_halting.md` §7 (HA0–HA8), **blocked on Q-HA1 and Q-HA2**.
+
 ### A18. The inventory holds at least {χ_y, ker χ_y}; antonymy is not a model primitive
 - Status: Settled
 - Decided by: the **user** (2026-09-21), closing O8's ensemble half.
