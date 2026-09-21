@@ -481,8 +481,10 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
 
       **The change is closed.** U4's retitle of Appendix D was **confirmed by the user on
       2026-09-21**, so nothing from this change is left hanging. What it does not touch is the
-      standing list of open decisions in `decisions.md` (O1, O2, O4, O8, O9, O10, O13, O14) and
-      `revisions.md` §7, whose Q1–Q8 are all resolved. Next is **T0–T13** of `procedure_records/scale_classes_hypothesis.md`.
+      standing list of open decisions in `decisions.md`, which the user worked through on
+      2026-09-21: O4 deleted, O9 settled, O10, O13 and O14 addressed, leaving **O1, O2 and O8**
+      (and O3, still open by the user's own earlier choice). `revisions.md` §7's Q1–Q8 are all
+      resolved. Next is **T0–T13** of `procedure_records/scale_classes_hypothesis.md`.
 
 ---
 
