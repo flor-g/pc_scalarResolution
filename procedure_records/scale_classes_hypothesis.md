@@ -261,6 +261,39 @@ boundary left where n puts it.
   prediction whatever θ_A does. Whether that survives the separation depends on which θ gains which
   row of A, which is undetermined. It is the one obstacle the rank test does not touch.
 
+**F20 (2026-09-21, for O8). The paradigm detail, read off the paper itself.** Checked against
+Xiang, Kennedy, Xu & Leffel (2022), *Semantics and Pragmatics* 15(9), Secs. 2.1.1, 2.2.1 and 2.3.1
+(PDF from semprag.org; not copied into the repository).
+
+- **Experiment 2 (truth value).** 48 image sets, each paired separately with each member of an
+  antonym pair = 96 items. Artifact and shape items were run on **two separate groups**. The items
+  "were distributed in a latin-square fashion such that the same participant did not see both
+  adjectives that were paired to the same image set", and "each participant, therefore, only saw 24
+  trials total".
+- **Experiment 3 (posterior degrees).** "The image sets and adjectives used for this experiment, as
+  well as the procedure to pair together the images and adjectives and to distribute them among
+  participants, were identical to Experiment 2." Separate groups again (67 shape, 68 artifact).
+- **So no participant heard both members of a pair about the same images.** Whether a participant
+  met both members across *different* image sets is not stated: each pair was used for two image
+  sets, and the paper constrains only the same-image-set case.
+- **Experiment 1 (priors) used no adjective at all** — "Which of these is the most likely?", one
+  choice per image set, no adjective mentioned. The by-item prior is therefore **adjective-free**,
+  which is how the audit uses it; the by-adjective figure averages items for visualization only.
+  Scale position 1 is the least and 5 the most of the property, which is the authors' own coding and
+  is what "in the adjective's own orientation" means.
+- **A lexical detail that does not disturb the ensemble.** A few adjectives sit in more than one
+  pair (*short* with *long* and with *tall*; *straight* with *bent* and with *curved*), so the
+  partner is not a function of the adjective alone. In this phase's representation it makes no
+  difference: any minimum-standard partner of a maximum-standard entry is its complement whatever
+  the word is, because the ensemble is fixed by class and one θ, not by lexical identity.
+
+**What F20 settles, and what it does not.** It removes one justification and leaves the conclusion
+standing, for the reason the user gave on 2026-09-21: *presence in the inventory follows from
+exposure in the experiment, but not the converse* — a participant not shown *plain* in the
+experiment has still met it elsewhere. So {χ, 1 − χ} **cannot be argued from experimental exposure**,
+since the latin square denies it; it is argued, if at all, from the **inventory a speaker of English
+has**, which the experiment neither creates nor limits. §5.2 must say it that way.
+
 ## 6. What is open
 
 - **O13** (new): whether H1 and H2 are adopted, and if so what fixes Λ. Nothing was changed.

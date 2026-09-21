@@ -952,6 +952,17 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   2. **Λ outside the fitted setting:** a configuration holds its own stated Λ and **reports the
      leak** (B6: headroom before shifts), rather than raising Λ per configuration until the entry
      holds or restricting comparisons to held entries.
+- **The user's principle, 2026-09-21, which governs how the ensemble may be argued.** What the
+  inventory contains is **independent of what a participant met in one experiment**: presence in the
+  inventory follows from exposure in the experiment, but **not the converse**. An adjective absent
+  from a participant's trials is still in their lexicon. So no ensemble claim may rest on the
+  experimental design, in either direction.
+- **Checked 2026-09-21 (F20 in the scale-classes record).** Xiang et al.'s Experiments 2 and 3
+  distribute the 96 items by latin square "such that the same participant did not see both
+  adjectives that were paired to the same image set", 24 trials each, artifact and shape on separate
+  groups; Experiment 1 elicits the priors with **no adjective at all**. So the {χ, 1 − χ} ensemble
+  **cannot be argued from exposure in the experiment**; by the principle above it does not need to
+  be, and it is argued instead from the inventory a speaker has.
 - **Still open, and now scoped by phase (2026-09-21).** What ensemble a predicate heard with **no**
   antonym carries, and whether the paradigm's {χ, 1 − χ} may be stipulated generally. The user has
   asked to look at this closely before deciding, because the complement relation is a property of
