@@ -379,3 +379,17 @@ is the user's.
   ruled out. The outline should draw that line explicitly, or the two will be confused.
 - **Not diagnosed:** why the settling time crosses from ~27 to >1000 simulated time units. No
   claim about the cause goes anywhere until it is.
+
+- **H11. The printed cost extrapolation to θ\* is unsupported above the boundary** (2026-09-21).
+  Code Cell 2b prints, for each end-to-end row, *"the same inference at theta_u\* = 1521.5 would be
+  4.99e+08 steps, about 6.3 h"* (and 4.85e8 / 6.1 h, 4.28e8 / 5.5 h). That number is
+  `steps_per_rate * star_rate`, i.e. the **linear** 219·λ model, extrapolated from λ ≈ 1.8e2 to
+  λ ≈ 2.3e6 — four orders of magnitude, across the boundary H9 measures at λ ≈ 2e3, above which the
+  integration does not converge at all. At θ\* the step cap alone is 8000·λ ≈ 1.85e10 steps, about
+  230 h, and the run would end at the cap rather than at a fixed point.
+  **The direction of the claim is unharmed and in fact strengthened** — θ\* is further out of reach
+  than the notebook says, not nearer — so §4.6's argument and the outline's line (`revisions.md`
+  line 449: "4.28e8 steps, hours, at a separation of 7.9e6") survive in substance. But the *number*
+  is a linear extrapolation through a regime change and may not be printed as a measurement. Either
+  it is replaced by the cap (a lower bound on the steps, with non-convergence stated) or the claim
+  is made qualitatively. **Not yet changed**; it is part of HA4b.
