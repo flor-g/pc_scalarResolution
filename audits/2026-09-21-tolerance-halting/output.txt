@@ -1,0 +1,135 @@
+TOLERANCE AS THE HALTING MECHANISM OF Eq. (20) -- audit, 2026-09-21
+
+(0) SELF-CHECKS
+---------------
+    gradient at theta_u =    0.0: rebuilt -6.81865270   Code Cell 2 -6.81865270   difference 0.0e+00
+    gradient at theta_u =    1.0: rebuilt +41.46825414   Code Cell 2 +41.46825414   difference 2.8e-14
+    gradient at theta_u =   -5.0: rebuilt -2.22304518   Code Cell 2 -2.22304518   difference 5.8e-15
+    gradient at theta_u =   12.5: rebuilt +0.27709068   Code Cell 2 +0.27709068   difference 0.0e+00
+    INTEGRATED rather than closed form, at theta_u = 0: -6.81865270
+    INTEGRATED rather than closed form, at theta_u* = -28.4375: +0.00000000   (zero at the maximizer, by Eq. B2)
+    one update, Beta(1,1) at Lambda = 512: theta_u -> 7.816128   (Code Cell 2b prints 7.816128)
+    one update, Beta(3,1) at Lambda = 512: theta_u -> 7.992595   (Code Cell 2b prints 7.992595)
+    one update, Beta(64,1) at Lambda = 512: theta_u -> 13.374852   (Code Cell 2b prints 13.374852)
+
+(1) HALTING BY TOLERANCE, PART D'S ROWS AT LAMBDA = 8
+-----------------------------------------------------
+    theta_u* is the asymptote of this same flow. 4*lambda_max(H) is the separation
+    commitment 7 demands at that theta_u (Eq. 28); it is the cost that grows.
+
+      gaussian     theta_u* =     -28.44   shift +0.0008  upper 0.0025  both False  4*lambda = 3.24e+03
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09      399373     -28.4375    1.0000    +0.0008   0.0025   False   3.24e+03
+           1e-06      166063     -28.4038    0.9988    +0.0008   0.0025   False   3.24e+03
+           1e-04       28316     -25.8856    0.9103    +0.0008   0.0025   False   2.69e+03
+           1e-02         245     -10.5879    0.3723    +0.0008   0.0025   False   4.56e+02
+           1e-01          15      -5.2852    0.1859    +0.0010   0.0026   False   1.20e+02
+           1e+00           1      -0.3409    0.0120    +0.0140   0.0156   False   8.46e+00
+
+      flat         theta_u* =    5950.63   shift +0.0295  upper 0.0799  both False  4*lambda = 1.42e+08
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09       > cap      82.6051    0.0139    +0.0300   0.0804   False   2.73e+04
+           1e-06       > cap      82.6051    0.0139    +0.0300   0.0804   False   2.73e+04
+           1e-04       97123      38.7945    0.0065    +0.0306   0.0810   False   6.03e+03
+           1e-02           1       0.0005    0.0000    +0.0854   0.1357   False   8.00e+00
+           1e-01           1       0.0005    0.0000    +0.0854   0.1357   False   8.00e+00
+           1e+00           1       0.0005    0.0000    +0.0854   0.1357   False   8.00e+00
+
+      skewed low   theta_u* =     -14.51   shift +0.0004  upper 0.0005  both False  4*lambda = 8.50e+02
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09       48723     -14.5079    1.0000    +0.0004   0.0005   False   8.50e+02
+           1e-06       23567     -14.5043    0.9997    +0.0004   0.0005   False   8.49e+02
+           1e-04        7295     -14.1686    0.9766    +0.0004   0.0005   False   8.11e+02
+           1e-02         173      -8.0734    0.5565    +0.0004   0.0005   False   2.69e+02
+           1e-01          13      -4.3233    0.2980    +0.0004   0.0006   False   8.28e+01
+           1e+00           1      -0.4231    0.0292    +0.0045   0.0047   False   8.72e+00
+
+      skewed high  theta_u* =      55.01   shift +0.0421  upper 0.1788  both False  4*lambda = 1.21e+04
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09       > cap      54.8817    0.9977    +0.0421   0.1788   False   1.21e+04
+           1e-06     1401828      54.5492    0.9917    +0.0421   0.1788   False   1.19e+04
+           1e-04       69755      38.6575    0.7028    +0.0426   0.1794   False   5.99e+03
+           1e-02         280      11.4632    0.2084    +0.0476   0.1844   False   5.34e+02
+           1e-01          16       5.5135    0.1002    +0.0564   0.1931   False   1.30e+02
+           1e+00           1       0.1770    0.0032    +0.1087   0.2454   False   8.13e+00
+
+(1) HALTING BY TOLERANCE, PART D'S ROWS AT LAMBDA = 512
+-------------------------------------------------------
+    theta_u* is the asymptote of this same flow. 4*lambda_max(H) is the separation
+    commitment 7 demands at that theta_u (Eq. 28); it is the cost that grows.
+
+      gaussian     theta_u* =    1580.81   shift +0.0071  upper 0.0088  both False  4*lambda = 1.00e+07
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09       > cap     601.1339    0.3803    +0.0071   0.0088   False   1.45e+06
+           1e-06       > cap     601.1339    0.3803    +0.0071   0.0088   False   1.45e+06
+           1e-04     1226080     538.1690    0.3404    +0.0071   0.0088   False   1.16e+06
+           1e-02        3042     129.4674    0.0819    +0.0071   0.0088   False   6.71e+04
+           1e-01          13      61.1065    0.0387    +0.0072   0.0088   False   1.49e+04
+           1e+00           3      60.0836    0.0380    +0.0072   0.0088   False   1.44e+04
+
+      flat         theta_u* =    1521.48   shift -0.0146  upper 0.0357  both True   4*lambda = 9.26e+06
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09       > cap     599.5744    0.3941    -0.0146   0.0357    True   1.44e+06
+           1e-06       > cap     599.5744    0.3941    -0.0146   0.0357    True   1.44e+06
+           1e-04     1215831     536.0597    0.3523    -0.0146   0.0357    True   1.15e+06
+           1e-02        3089     129.5823    0.0852    -0.0146   0.0358    True   6.72e+04
+           1e-01          61      61.2717    0.0403    -0.0145   0.0358    True   1.50e+04
+           1e+00           3      54.4290    0.0358    -0.0145   0.0359    True   1.19e+04
+
+      skewed low   theta_u* =    1589.49   shift +0.0089  upper 0.0091  both False  4*lambda = 1.01e+07
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09       > cap     600.7191    0.3779    +0.0089   0.0091   False   1.44e+06
+           1e-06       > cap     600.7191    0.3779    +0.0089   0.0091   False   1.44e+06
+           1e-04     1226073     537.7456    0.3383    +0.0089   0.0091   False   1.16e+06
+           1e-02        3023     129.2486    0.0813    +0.0090   0.0091   False   6.68e+04
+           1e-01           3      61.3835    0.0386    +0.0090   0.0091   False   1.51e+04
+           1e+00           3      61.3835    0.0386    +0.0090   0.0091   False   1.51e+04
+
+      skewed high  theta_u* =    1499.37   shift -0.0955  upper 0.0413  both True   4*lambda = 8.99e+06
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09       > cap     599.6436    0.3999    -0.0954   0.0413    True   1.44e+06
+           1e-06       > cap     599.6436    0.3999    -0.0954   0.0413    True   1.44e+06
+           1e-04     1213301     536.0042    0.3575    -0.0954   0.0413    True   1.15e+06
+           1e-02        3111     129.8517    0.0866    -0.0954   0.0414    True   6.75e+04
+           1e-01          77      61.3728    0.0409    -0.0953   0.0414    True   1.51e+04
+           1e+00           3      52.0653    0.0347    -0.0953   0.0415    True   1.09e+04
+
+      delta (all)  theta_u* =    1407.77   shift -0.5217  upper 0.4351  both True   4*lambda = 7.93e+06
+       tolerance     updates   theta_halt   /theta*      shift    upper    both   4*lambda
+           1e-09       > cap     656.9522    0.4667    -0.5217   0.4352    True   1.73e+06
+           1e-06       > cap     656.9522    0.4667    -0.5217   0.4352    True   1.73e+06
+           1e-04     1319526     600.0550    0.4262    -0.5217   0.4352    True   1.44e+06
+           1e-02        3657     149.8553    0.1064    -0.5215   0.4353    True   8.98e+04
+           1e-01         173      71.0893    0.0505    -0.5213   0.4355    True   2.02e+04
+           1e+00           7      34.6953    0.0246    -0.5208   0.4361    True   4.82e+03
+
+(2) THE PLANE: BOTH q CRITERIA AT THE HALTED theta_u, AGAINST theta_u*
+----------------------------------------------------------------------
+    at each cell's own theta_u*: both criteria in 33 of 121 cells
+    tolerance    1e-09: both in  33 of 121   agreeing with theta_u* in 121 of 121   (tolerance reached within 200,000 updates in   1)
+    tolerance    1e-06: both in  33 of 121   agreeing with theta_u* in 121 of 121   (tolerance reached within 200,000 updates in   2)
+    tolerance    1e-04: both in  33 of 121   agreeing with theta_u* in 121 of 121   (tolerance reached within 200,000 updates in  20)
+    tolerance    1e-02: both in  33 of 121   agreeing with theta_u* in 121 of 121   (tolerance reached within 200,000 updates in 121)
+    tolerance    1e-01: both in  33 of 121   agreeing with theta_u* in 121 of 121   (tolerance reached within 200,000 updates in 121)
+    tolerance    1e+00: both in  33 of 121   agreeing with theta_u* in 121 of 121   (tolerance reached within 200,000 updates in 121)
+
+(3) THE FAST LOOP'S TOLERANCE: DOES A COARSER ONE MOVE THE VERDICT?
+-------------------------------------------------------------------
+    default network (Gaussian prior, Lambda = 8), at theta_u = 1 (a control) and at
+    the theta_u one update of Eq. (20) reaches from 0.
+
+      theta_u = 1.0000
+      tol   1e-09: steps     513  max|phi_S - phi_S*| 5.16e-10  shift +0.0098  upper 0.0114  both False
+      tol   1e-06: steps     358  max|phi_S - phi_S*| 5.22e-07  shift +0.0098  upper 0.0114  both False
+      tol   1e-04: steps     255  max|phi_S - phi_S*| 5.19e-05  shift +0.0098  upper 0.0114  both False
+      tol   1e-03: steps     203  max|phi_S - phi_S*| 5.28e-04  shift +0.0098  upper 0.0114  both False
+      tol   1e-02: steps     152  max|phi_S - phi_S*| 5.15e-03  shift +0.0098  upper 0.0114  both False
+
+      theta_u = -0.3409
+      tol   1e-09: steps     347  max|phi_S - phi_S*| 1.37e-10  shift +0.0140  upper 0.0156  both False
+      tol   1e-06: steps     242  max|phi_S - phi_S*| 1.32e-07  shift +0.0140  upper 0.0156  both False
+      tol   1e-04: steps     171  max|phi_S - phi_S*| 1.38e-05  shift +0.0140  upper 0.0156  both False
+      tol   1e-03: steps     136  max|phi_S - phi_S*| 1.36e-04  shift +0.0140  upper 0.0156  both False
+      tol   1e-02: steps     101  max|phi_S - phi_S*| 1.34e-03  shift +0.0140  upper 0.0156  both False
+
+DONE
