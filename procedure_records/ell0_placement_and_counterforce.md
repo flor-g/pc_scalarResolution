@@ -278,7 +278,7 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         the appendix's own close. Its "assymetry" typo is corrected in the same sentence.
       - **Appendix retitled**, "why emission is exclusion" → "why emission is exclusion, and where
         ℓ₀ enters", since the appendix now answers two questions about the same map. **Agent
-        decision, named to the user.** Text cell 3's two references to Appendix D stay accurate (one
+        decision, named to the user, and confirmed by the user 2026-09-21.** Text cell 3's two references to Appendix D stay accurate (one
         already says it derives "ℓ₀'s place here"); cell 0's ToC row still reads "(D1)–(D4)" and
         carries the old title, which **U5** fixes.
       - **One number was quoted before it was printed**, and Code Cell D was corrected rather than
@@ -479,9 +479,10 @@ Code before prose (`agent.md` §5.3). P-1 to P-10 are answered (§11), so U3 onw
         this entry is the record that the tasks were prose-only and that no notebook was executed
         for them.
 
-      **The change is closed.** Open items it leaves: the user has not confirmed U4's retitle of
-      Appendix D, and `revisions.md` §7's older questions (Q2's residue, Q7's remainder) are
-      untouched by it. Next is **T0–T13** of `procedure_records/scale_classes_hypothesis.md`.
+      **The change is closed.** U4's retitle of Appendix D was **confirmed by the user on
+      2026-09-21**, so nothing from this change is left hanging. What it does not touch is the
+      standing list of open decisions in `decisions.md` (O1, O2, O4, O8, O9, O10, O13, O14) and
+      `revisions.md` §7, whose Q1–Q8 are all resolved. Next is **T0–T13** of `procedure_records/scale_classes_hypothesis.md`.
 
 ---
 
