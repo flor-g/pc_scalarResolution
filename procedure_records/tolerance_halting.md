@@ -107,9 +107,13 @@ pieces and checks it against the notebook's:
   513 → 152 Euler steps. So "tolerance halts the fast loop" is already true and costs nothing to
   say; the claim that does work is the one about the **slow** flow.
 
-- **H8. What a committed tolerance costs, measured 2026-09-21** (block 4 of the audit, added after
-  the user chose to define `learn_theta_u` by the tolerance itself). Steps are scaled from Code Cell
-  2b's integrated delta-like row (39,035 steps at λ = 180.9), since dt = τ_state/(8λ):
+- **H8. WITHDRAWN 2026-09-21 by H9 — the cost columns below are wrong; do not quote them.** They
+  price a row by scaling the *settling* step count and never price the *flow*, which is where the
+  cost actually is once halting makes the flow long. The θ_halt and update columns are correct and
+  are superseded in the more careful form of H10. Kept for the record of what was claimed.
+  *(Original text:)* What a committed tolerance costs, measured 2026-09-21 (block 4 of the audit,
+  added after the user chose to define `learn_theta_u` by the tolerance itself). Steps are scaled
+  from Code Cell 2b's integrated delta-like row (39,035 steps at λ = 180.9), since dt = τ_state/(8λ):
 
   | tolerance | Λ = 512: θ_halt | updates | an integrated row | Λ = 8: θ_halt |
   |---|---|---|---|---|
