@@ -632,3 +632,39 @@ the choice is the user's.
   gap is 1.57e-10, so the check has 64× of unused room and would not notice an integrator
   regression of fifty-fold. At m = 4 it would. **The scale-free form is a stricter test everywhere
   except where the constant currently fails outright.**
+
+- **H17. The two relay checks, measured** (2026-09-21, `relay_threshold_sweep.py`), closing H15's
+  unmeasured corner. Thresholds today: relay gradient **1e-12**, lagged **1e-9**.
+
+  | net | θ_u | λ | tol | relay grad | /tol | lagged | /tol | min F step |
+  |---|---|---|---|---|---|---|---|---|
+  | Λ=8 | 5.29 | 30.0 | 1.65e-10 | 1.04e-14 | 0.00 | 2.85e-12 | 0.02 | −4.1e-10 |
+  | Λ=8 | 28.44 | 810.8 | 4.46e-09 | 3.35e-15 | 0.00 | 8.46e-12 | 0.00 | −1.7e-13 |
+  | Λ=512 | 13.37 | 180.8 | 9.94e-10 | 3.07e-12 | 0.00 | 1.54e-10 | 0.16 | −3.5e-10 |
+  | Λ=512 | 34.70 | 1206.1 | 6.63e-09 | 5.95e-12 | 0.00 | 1.04e-09 | 0.16 | −3.5e-10 |
+
+  **Both are safe where they actually run, and both would fail at Λ = 512.** `check_specification`
+  runs at Λ = 8, where the relay gradient keeps 100–300× headroom and the lagged check 118×. At
+  Λ = 512 the relay gradient is **3.07e-12 against its 1e-12** and the lagged check reaches
+  **1.04e-9 against its 1e-9** — both already over.
+
+  **They are brittle in different variables, which matters for the fix.**
+  - The **relay gradient is not tolerance-linked at all** (ratio 0.00 throughout). It is roundoff on
+    a summation-order difference, and it scales with the *gradient's own magnitude*, hence with Λ:
+    1e-14 at Λ = 8 against 3e-12 at Λ = 512, at comparable θ_u. `m·tolerance` would not fix it; its
+    scale-free form is relative — `|relay − columns| / |gradient|`.
+  - The **lagged check is tolerance-linked**, at a stable 0.16·tol within a Λ. Two runs each
+    stopping within their own tolerance differ by a fraction of it, so `< m'·tolerance` with
+    m' = 1 fits it with 6× to spare.
+  - **`worst_lagged_step > -1e-9` is thin**: −4.1e-10 at Λ = 8, θ_u = 5.29, only **2.4× headroom**,
+    and not monotone in θ_u (−1.7e-13 at θ_u = 28.44), so it looks noisy rather than scaling. Worth
+    watching; no fix proposed.
+
+  **Not in scope for this change**, since neither fails where it runs — recorded so the next θ_u or
+  Λ that reaches them does not find this unmeasured.
+
+- **H18. m is capped at 2 by the user (2026-09-21):** *"under no circumstance will we consider
+  m > 2, because the complexity would be too high to be plausible."* Measured gap/tol is
+  **0.95 to 1.002**, so **m = 2** clears the worst observed case by very nearly a factor of two.
+  The cap is satisfiable; it leaves no room to absorb a case with a materially larger ratio, so the
+  dense-scale nets are checked before m is fixed.

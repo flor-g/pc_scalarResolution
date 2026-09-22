@@ -1,0 +1,7 @@
+tolerance = k * lambda_max(H), k = 5.5e-12;  thresholds today: relay 1e-12, lagged 1e-9
+
+   net  theta_u   lambda        tol   relay grad     /tol      lagged    /tol   min F step
+   L=8     5.29     30.0   1.65e-10     1.04e-14     0.00    2.85e-12    0.02     -4.1e-10
+   L=8    28.44    810.8   4.46e-09     3.35e-15     0.00    8.46e-12    0.00     -1.7e-13
+ L=512    13.37    180.8   9.94e-10     3.07e-12     0.00    1.54e-10    0.16     -3.5e-10
+ L=512    34.70   1206.1   6.63e-09     5.95e-12     0.00    1.04e-09    0.16     -3.5e-10
