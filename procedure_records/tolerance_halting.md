@@ -721,3 +721,45 @@ the choice is the user's.
   **0.95 to 1.002**, so **m = 2** clears the worst observed case by very nearly a factor of two.
   The cap is satisfiable; it leaves no room to absorb a case with a materially larger ratio, so the
   dense-scale nets are checked before m is fixed.
+
+---
+
+## 10. HA9: the flow is integrated twice per row (2026-09-21, user approved)
+
+**The finding.** After HA6, `realizability_report` integrates Eq. (20)'s flow to its halt for each
+end-to-end row (printed: **80.61 s**, **75.19 s**, **145.24 s** at Λ = 512), and then
+`delta_readout_report` integrates *the same flow again*, from the same start with the same
+arguments, purely to arrive at the same θ_u for its "realizable" row. At one update — what the
+criterion-stop used to give — this cost nothing and nobody noticed. At 3 to 7 updates climbing to
+θ_u ≈ 54 it is about **300 s**, roughly a quarter of the run's whole increase.
+
+**Why it is safe to remove, and what it is not.** What the delta read-out *demonstrates* is the
+**settling** at that θ_u — Eqs. (18)–(19) integrated, which is what its `"integrated"` tag marks —
+not the flow that reached it. The flow has already been integrated, in the block above, and
+`realizability_report` records where it landed in `row["run"]["theta_u"]`. Taking that value is
+therefore not a substitution of closed form for dynamics: it is **the value the integrated flow
+actually reached**, reused instead of recomputed. (`halt_by_tolerance`'s closed-form value agrees
+with it to better than 1e-13, but `row["run"]["theta_u"]` is preferred precisely because it is the
+integrated one.)
+
+**Prediction: no printed number moves.** `learn_theta_u` is deterministic and both calls start from
+the same respawned network with the same arguments, so the second run reproduces the first exactly.
+The only expected difference is runtime. **If any number does move, that is a finding about
+determinism and is reported, not absorbed.**
+
+- [x] **HA9a** done 2026-09-21. Three lines in `delta_readout_report`, mirrored into E2.
+- [x] **HA9b** done. **The prediction held: no printed number moved.** All 69 lines of the
+      function's own output matched the stored copy exactly. The two lines the first comparison
+      flagged were an artifact of it running past the end of the function into Code Cell 2b's own
+      printing — checked by confirming that header appears nowhere in Code Cell 2's source, rather
+      than assumed. Measured: `delta_readout_report` **184.0 s** against about 485 s before, with
+      `realizability_report` unchanged at 527.8 s.
+- [x] **HA9c** done. **main: 0 errors, 8 figures, 14/14, 839 s** (from 1154 s, −315 s).
+      **appendix_E: 0 errors, 5 figures, 18/18, E3 PASS both cells, 1961 s** (from 2516 s, −555 s).
+      E3's counts unchanged at 221 and 261 identical lines with the same pattern.
+      **Verified that nothing but runtime moved**, by diffing every stored output line against
+      `bc3a261`: Code Cell 2b's output is **300 lines before and after**, and the only differences
+      are the wall-clock seconds and µs/step inside `cost:` lines (26.06 → 25.38 s, 45 → 44 µs/step
+      and so on). **Every step count is byte-identical** — 574,120, 527,295, 242,163 — as are all
+      reported quantities. Those `cost:` lines are what `agent.md` §5.2 calls machine quantities and
+      what E3 skips for that reason.
