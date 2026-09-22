@@ -101,7 +101,7 @@
     "\\tag{E4a}$$\n",
     "\n",
     "Eq. (E4a) is why no prediction moves: the left side is what the network now computes and the right\n",
-    "side is what Eq. (20) computed. Code Cell E2 measures the gap at $1.84\\times10^{-15}$. Only the\n",
+    "side is what Eq. (20) computed. Code Cell E2 measures the gap at $1.90\\times10^{-15}$. Only the\n",
     "right side is nonlocal, so it is the architecture and not the arithmetic that had to change.\n",
     "\n",
     "### The new constraint\n",
@@ -187,10 +187,10 @@
    "execution_count": 1,
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T19:44:16.490693Z",
-     "iopub.status.busy": "2026-09-22T19:44:16.490506Z",
-     "iopub.status.idle": "2026-09-22T19:44:17.140357Z",
-     "shell.execute_reply": "2026-09-22T19:44:17.139928Z"
+     "iopub.execute_input": "2026-09-22T18:04:52.268433Z",
+     "iopub.status.busy": "2026-09-22T18:04:52.268334Z",
+     "iopub.status.idle": "2026-09-22T18:04:52.924178Z",
+     "shell.execute_reply": "2026-09-22T18:04:52.923838Z"
     }
    },
    "outputs": [],
@@ -1343,10 +1343,10 @@
    "execution_count": 2,
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T19:44:17.143211Z",
-     "iopub.status.busy": "2026-09-22T19:44:17.143092Z",
-     "iopub.status.idle": "2026-09-22T19:47:42.584969Z",
-     "shell.execute_reply": "2026-09-22T19:47:42.584525Z"
+     "iopub.execute_input": "2026-09-22T18:04:52.927125Z",
+     "iopub.status.busy": "2026-09-22T18:04:52.927013Z",
+     "iopub.status.idle": "2026-09-22T18:08:15.210503Z",
+     "shell.execute_reply": "2026-09-22T18:08:15.210061Z"
     }
    },
    "outputs": [
@@ -3484,10 +3484,10 @@
    "id": "e5adf51e",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T19:47:42.586199Z",
-     "iopub.status.busy": "2026-09-22T19:47:42.586105Z",
-     "iopub.status.idle": "2026-09-22T19:59:08.704913Z",
-     "shell.execute_reply": "2026-09-22T19:59:08.704459Z"
+     "iopub.execute_input": "2026-09-22T18:08:15.211813Z",
+     "iopub.status.busy": "2026-09-22T18:08:15.211718Z",
+     "iopub.status.idle": "2026-09-22T18:19:32.064021Z",
+     "shell.execute_reply": "2026-09-22T18:19:32.063590Z"
     }
    },
    "outputs": [
@@ -3662,7 +3662,13 @@
       "  holds at a |theta_u| of a few units, which the flow passes on its first\n",
       "  updates, well below where it halts. theta_u* lies orders of magnitude\n",
       "  beyond both, and it is theta_u* that this integrator cannot reach at all.\n",
-      "\n",
+      "\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
       "  RUN, NOTHING IN CLOSED FORM: the \"flat\" row, 3 update(s) of Eq. (20) to its halt, then Eqs. (18)-(19)\n",
       "  integrated at the theta_u they reach.\n"
      ]
@@ -3676,7 +3682,7 @@
       "    Eqs. (18)-(19) at theta_u = 54.4290: lambda_max(H) = 2964.5, tau_error <= 8.43e-05\n",
       "    conjunction off the INTEGRATED fixed point: shift for \"some\" = -0.0145 (< 0: True), P(all-region | \"some\") = 0.0359 (< 1/2: True)\n",
       "    both q criteria met by the integrated run: True; max |phi_S - phi_S*| against Eqs. (15)-(16) = 2e-08\n",
-      "    cost: 574120 Euler steps, 25.49 s (44 us/step) on the machine that ran this, the 3 update(s) of Eq. (20) a further 77.68 s\n",
+      "    cost: 574120 Euler steps, 25.23 s (44 us/step) on the machine that ran this, the 3 update(s) of Eq. (20) a further 75.81 s\n",
       "    cost: the same inference at theta_u* = 1521.5 would be 4.48e+08 steps, about 5.5 h, at a separation of 9.3e+06\n",
       "    (so the conjunction is demonstrated in the dynamics here, and the closed\n",
       "     form is what reports it at theta_u*, not what establishes it)\n",
@@ -3707,8 +3713,8 @@
       "    Eqs. (18)-(19) at theta_u = 52.0653: lambda_max(H) = 2712.8, tau_error <= 9.22e-05\n",
       "    conjunction off the INTEGRATED fixed point: shift for \"some\" = -0.0953 (< 0: True), P(all-region | \"some\") = 0.0415 (< 1/2: True)\n",
       "    both q criteria met by the integrated run: True; max |phi_S - phi_S*| against Eqs. (15)-(16) = 1e-08\n",
-      "    cost: 527295 Euler steps, 23.32 s (44 us/step) on the machine that ran this, the 3 update(s) of Eq. (20) a further 70.76 s\n",
-      "    cost: the same inference at theta_u* = 1499.4 would be 4.37e+08 steps, about 5.4 h, at a separation of 9.0e+06\n",
+      "    cost: 527295 Euler steps, 22.84 s (43 us/step) on the machine that ran this, the 3 update(s) of Eq. (20) a further 69.73 s\n",
+      "    cost: the same inference at theta_u* = 1499.4 would be 4.37e+08 steps, about 5.3 h, at a separation of 9.0e+06\n",
       "    (so the conjunction is demonstrated in the dynamics here, and the closed\n",
       "     form is what reports it at theta_u*, not what establishes it)\n",
       "\n"
@@ -3738,8 +3744,8 @@
       "    Eqs. (18)-(19) at theta_u = 34.6953: lambda_max(H) = 1205.8, tau_error <= 2.07e-04\n",
       "    conjunction off the INTEGRATED fixed point: shift for \"some\" = -0.5208 (< 0: True), P(all-region | \"some\") = 0.4361 (< 1/2: True)\n",
       "    both q criteria met by the integrated run: True; max |phi_S - phi_S*| against Eqs. (15)-(16) = 7e-09\n",
-      "    cost: 242163 Euler steps, 10.67 s (44 us/step) on the machine that ran this, the 7 update(s) of Eq. (20) a further 136.11 s\n",
-      "    cost: the same inference at theta_u* = 1407.8 would be 3.98e+08 steps, about 4.9 h, at a separation of 7.9e+06\n",
+      "    cost: 242163 Euler steps, 10.52 s (43 us/step) on the machine that ran this, the 7 update(s) of Eq. (20) a further 135.90 s\n",
+      "    cost: the same inference at theta_u* = 1407.8 would be 3.98e+08 steps, about 4.8 h, at a separation of 7.9e+06\n",
       "    (so the conjunction is demonstrated in the dynamics here, and the closed\n",
       "     form is what reports it at theta_u*, not what establishes it)\n",
       "\n"
@@ -4292,10 +4298,10 @@
    "execution_count": 4,
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T19:59:08.706152Z",
-     "iopub.status.busy": "2026-09-22T19:59:08.706074Z",
-     "iopub.status.idle": "2026-09-22T20:13:54.214883Z",
-     "shell.execute_reply": "2026-09-22T20:13:54.214445Z"
+     "iopub.execute_input": "2026-09-22T18:19:32.065127Z",
+     "iopub.status.busy": "2026-09-22T18:19:32.065039Z",
+     "iopub.status.idle": "2026-09-22T18:34:16.576107Z",
+     "shell.execute_reply": "2026-09-22T18:34:16.575621Z"
     }
    },
    "outputs": [
@@ -4512,10 +4518,10 @@
    "id": "3bd4fffa",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T20:13:54.216170Z",
-     "iopub.status.busy": "2026-09-22T20:13:54.216097Z",
-     "iopub.status.idle": "2026-09-22T20:15:16.063683Z",
-     "shell.execute_reply": "2026-09-22T20:15:16.063227Z"
+     "iopub.execute_input": "2026-09-22T18:34:16.577211Z",
+     "iopub.status.busy": "2026-09-22T18:34:16.577140Z",
+     "iopub.status.idle": "2026-09-22T18:35:38.205991Z",
+     "shell.execute_reply": "2026-09-22T18:35:38.205622Z"
     }
    },
    "outputs": [
@@ -4764,9 +4770,7 @@
     "\n",
     "Text cell 3 §§1–3, 5, 6, 8.1–8.3, 8.5, 8.6, 9.1–9.3; Appendix A in full; Appendix B's\n",
     "Eqs. (B1)–(B3), the standing requirement $\\langle\\mu_u,\\sum_y c_y\\rangle\\neq0$, the sign argument and\n",
-    "$\\theta_u^\\ast=-28.4375$; Appendix B's Alternatives section in full; Appendix C; Appendix D;\n",
-    "Appendix F, which runs the closed forms of Eqs. (15)-(16) at $n=4$ and reaches no claim the relay\n",
-    "bears on; Text\n",
+    "$\\theta_u^\\ast=-28.4375$; Appendix B's Alternatives section in full; Appendix C; Appendix D; Text\n",
     "cells 4, 4b, 5 and 6, and every number in Code Cells 2 and 2b. Code Cell E3 checks the last of these\n",
     "directly."
    ]
