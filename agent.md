@@ -256,7 +256,35 @@ or use as a default, and to every number the prose quotes.
 
 - **Every number quoted in prose is computed by explicit code and printed by a code cell**
   (decision C6). A number computed off-notebook, or only by a script in a change record, is class
-  (e) until a cell prints it.
+  (e) until a cell prints it. **A number that WAS printed can stop being printed** — when a
+  constant is re-keyed or a block rewritten, prose that quoted the old value is now class (e) and
+  factually wrong besides. Sweep for it rather than trusting the change record: three such numbers
+  survived into 2026-09-22 undetected, two quoting the fixed `1e-9` tolerance that I3 replaced, and
+  one an E4a gap that had drifted 1.90e-15 → 1.84e-15.
+
+  ```python
+  # C6 sweep: measured-looking numbers in a notebook's markdown that no cell prints
+  import json, re
+  nb = json.load(open(NOTEBOOK))
+  out = "\n".join("".join("".join(o.get("text", [])) for o in c.get("outputs", [])
+                           if o.get("output_type") == "stream") for c in nb["cells"])
+  have = {abs(float(m.group())) for m in
+          re.finditer(r"-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?", out.replace(",", ""))}
+  ok = lambda v: any(abs(v - h) <= 2e-2 * max(abs(v), abs(h)) for h in have)
+  for i, c in enumerate(nb["cells"]):
+      if c["cell_type"] != "markdown": continue
+      for line in "".join(c["source"]).splitlines():
+          if re.search(r"Bogacz|\\tag|§", line): continue      # his numbers, tags, section refs
+          for m in re.finditer(r"(?<![\w.])(\d*\.\d{3,}|\d+(?:\.\d+)?[eE][-+]?\d+)", line):
+              v = abs(float(m.group(1)))
+              if not ok(v): print(i, m.group(1), line.strip()[:90])
+  ```
+
+  Two things about that check, both learned by getting them wrong. **Keep the match tolerance
+  loose** (2%, not 0.5%): prose legitimately rounds, and `4.76e-06` quoted as `4.8e-6` or
+  `13377.69` as `13378` is correct practice, not a violation — a tight tolerance reports these and
+  the real findings drown. And **`\times10^{-n}` must be read as part of the number**, or the
+  mantissa is checked alone and every scientific-notation quote looks unsourced.
 - **Three objects must never be conflated, in code names, labels, or prose:** q_lit, the literal
   listener (θ_u = 0 **and** σ_S → ∞, field ℓ₀ − φ_L); the tempered control (θ_u = 0 at the model's σ,
   field ½(ℓ₀ − φ_L), which is also the model's start); and the model (learned θ\*). "The control"

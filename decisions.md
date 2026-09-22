@@ -782,6 +782,17 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - The old note that the state was "two orders inside the specification checks' 1e-8" was optimistic
   even then: 1e-9 against 1e-8 is one order, not two.
 
+- **Prose that quoted the old tolerance, found and fixed 2026-09-22.** Re-keying the tolerance left
+  three live quotations of the fixed-1e-9 regime, none caught when I3 was applied:
+  **Text cell 4** said the two integrated rows agree with Eqs. (15)-(16) "to 1.0e-9 and 9.9e-10"
+  (now 4.5e-09 and 1.2e-09); **Text cell 6** said the two integrable cells agree "to 9.95e-10,
+  which is the tolerance the integration stops at" (now 1.48e-09); and `revisions.md` §8's source
+  table still listed 9.98e-10. Both notebook passages now also say **why** the figure differs
+  between rows — the tolerance is keyed to lambda_max(H), so it is a property of what is being
+  integrated rather than a constant — which is what stops the number going stale the same way
+  again. `agent.md` §3.3 gains a C6 sweep for exactly this failure: a number that *was* printed and
+  silently stopped being printed.
+
 ### I4. dt = τ_ε/2 with τ_ε from `fast_time_constant()`
 - Status: Settled
 - Decided by: agent, implementing A11 (2026-09-11); not recorded as separately confirmed
