@@ -159,7 +159,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Status: Settled
 - Decided by: not recorded (settled 2026-09-07)
 - Decision: A is a fixed profile matrix, one projection per word-form unit; θ_L the scalar gain,
-  fixed by σ(−θ_L) = δ/2 (Appendix A).
+  fixed by σ(−θ_L) = 1/2n (Eq. A5, Appendix A).
 - Theoretical reason: θ_L is semantic, the only parameter in both the generative map and the
   observation model, which identifies it.
 - Implementational reason: none.
@@ -907,7 +907,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   n while holding everything else fixed (O10, `procedure_records/side_quests_mirror_and_granularity.md`
   F9) crosses criterion readings: under N(0,1) the q shift criterion for *some* is unmet at
   n = 2…20 and met at n = 50, and under Beta(3,1) the q position and mode position criteria are
-  unmet at n = 2, 3 and met at n ≥ 4. So what fixes δ also fixes which side of a crossing the
+  unmet at n = 2, 3 and met at n ≥ 4. So what fixes *n* also fixes which side of a crossing the
   reported criteria sit on. n enters only through θ_L = log(2n − 1); K does not track it (I6).
 
 ### O2. The exposure distribution p(y) is uniform, and the paper says so
@@ -1207,7 +1207,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      separated pair.
   4. **But the reported criteria cross with n**, which is the substantive answer: see the dated
      finding under O1.
-- **Needed to decide:** O1 first. Until what fixes δ is settled, every criterion reading carries an
+- **Needed to decide:** O1 first. Until what fixes *n* is settled, every criterion reading carries an
   unquantified dependence on a number nothing fixes.
 - **Depends on it:** O1; Text cell 4 Parts C and D; Text cell 6's plane; every criterion reading.
 - Evidence: as O9. Class (e) until a cell prints it (C6).
@@ -1300,14 +1300,15 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   similar to endpoint(s)+*some*." Record: `procedure_records/scale_classes_hypothesis.md`.
 - **What it would change.** Λ and θ_L are two independently fixed quantities of Text cell 3 §3
   (A5 gives θ_L its denotation through n; §3 item 6 fixes Λ = 8 "if not said otherwise"). H1 makes
-  Λ a **function of how stably the predicate fixes** n, or δ in the gradable case of Eq. (A6). That
+  Λ a **function of how stably the predicate fixes** n — a count where the predicate has atoms, a
+  step count where it has none, one name either way since N1 (O1). That
   is a new dependency between two fixed quantities, and it would give the Λ axis of the Λ×α plane a
   linguistic reading it does not now have: a position on it would be a property of the expression.
 - **H2 needs no new machinery.** In each adjective's own orientation Eq. (A1) already supplies the
   three entries: maximum-standard absolute = *all*, minimum-standard absolute = *some*, and the
   antonym the expression is paired with is that entry's complement (for *some* it is *no*, for
   *all* it is Appendix C §4's O corner). A relative adjective needs one thing the model does not
-  have: a cut at a context threshold t that is neither endpoint nor δ/2, so **t would be a second
+  have: a cut at a context threshold t that is neither endpoint nor 1/2n, so **t would be a second
   quantity beside θ_L**, and Appendix A's identification argument (θ_L A W X(θ_L) = I, "θ_L enters
   twice") is stated for a θ_L that is both the gain and the cut. That is the structural cost of H2.
 - **What is measured** (record F1-F13, `audits/2026-09-17-scale-classes/`). Instantiating the five
@@ -1669,7 +1670,7 @@ the ones an argument rests on.
   7.06e-9) and the counts of decreasing F steps (six, fifty-eight, worst −8.35), which appear in
   reach.md's prose and in no recorded script.
 - One line of arithmetic from a formula on the page, listed for completeness and not counted:
-  log 64 = 4.16; (e⁶ + 1)/2 = 202.21 with θ_L = 5.99894 and 6.00389; δ > 0.004945; the stiffness
+  log 64 = 4.16; (e⁶ + 1)/2 = 202.21 with θ_L = 5.99894 and 6.00389; the stiffness
   ratios and largest dt in the *Integration cost* table; +0.0075 per unit in Text cell 5 §3.
 
 **E8. The mask sharpness is used but never defined.** Class (a), incomplete.

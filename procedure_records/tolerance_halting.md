@@ -836,16 +836,20 @@ determinism and is reported, not absorbed.**
 **Batched deliberately**: each needs a re-execution of both notebooks (~50 minutes), so they wait
 for a pass that has another reason to run. None of them affects a computed value.
 
-- [ ] **HA10a.** `learn_theta_u`'s docstring, both notebooks: *"This study commits to halting BY a
+- [x] **HA10a** — done 2026-09-22.
+      *(orig:)* **HA10a.** `learn_theta_u`'s docstring, both notebooks: *"This study commits to halting BY a
       tolerance, not to any particular tolerance"* → offers it as a direction, with a pointer to
       D12's unsettled violation. Comment only; no behaviour.
-- [ ] **HA10b.** The `DEMONSTRATION_TOLERANCE` comment block, both notebooks: same phrase, same
+- [x] **HA10b** — done.
+      *(orig:)* **HA10b.** The `DEMONSTRATION_TOLERANCE` comment block, both notebooks: same phrase, same
       fix.
-- [ ] **HA10c.** `theta_u_learning_probe`'s **printed** line, *"That value is AD HOC. The
+- [x] **HA10c** — done. The printed lines now state two facts and no position: the flow stopped at this tolerance, which is ad hoc; θ\* above is Eq. (B2)'s closed form, computed without one.
+      *(orig:)* **HA10c.** `theta_u_learning_probe`'s **printed** line, *"That value is AD HOC. The
       commitment is that halting is BY a tolerance, not that it takes any particular value, so what
       is PREDICTED is theta_u\* above."* **This one is a defect independent of the demotion**: it
       is a position stated in the notebook's own output, which **B10/C7 forbids** — the notebooks
       report measurements and take no position. The agent introduced it at HA4a and should not
       have. It becomes a description of what the code does (the flow halts at this tolerance; θ\*
       is what the closed form reports) with the interpretation left to the paper.
-- [ ] **HA10d.** Re-execute both, confirm 14/14, 18/18, E3 PASS, and that only these lines move.
+- [x] **HA10d** — done, in one pass shared with N6. main 14/14 in 837 s, appendix_E 18/18 and E3 PASS in 1872 s. Diffed against `bc97d29`: the ONLY non-timing output changes are HA10c's three lines becoming two, N2's heading and δ line, and E3's counts following mechanically (222 → 221 recorded, 221 → 220 identical). No verdict and no reported quantity moved.
+      *(orig:)* **HA10d.** Re-execute both, confirm 14/14, 18/18, E3 PASS, and that only these lines move.

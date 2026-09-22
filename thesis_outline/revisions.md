@@ -627,7 +627,7 @@ answers half of O8 for this paradigm.
   Λ ordering of F6; and (iv) the one interaction, with its size named as a shortfall rather than a
   match. Whether to state any of it is Q7, and whether H1 and H2 are adopted at all is O13.
 - **Costs to weigh under O13.** H2's open-scale half needs a cut t that is neither endpoint nor
-  δ/2, so t joins θ_L as a quantity of the entry, and Appendix A's identification argument ("θ_L
+  1/2n, so t joins θ_L as a quantity of the entry, and Appendix A's identification argument ("θ_L
   enters twice") is written for a θ_L that is both the gain and the cut. H1 makes Λ a function of
   atomicity, which gives the Λ axis of the plane a linguistic reading (a position on it becomes a
   property of the expression — worth §4.5) but couples two quantities Text cell 3 §3 now fixes

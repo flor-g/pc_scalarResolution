@@ -416,6 +416,10 @@ Stop, report, and wait when:
   restating the argument.
 - Settled naming and framing conventions are in `decisions.md` section C. The ones most often
   broken: no Gricean reference frame; θ_L, not β; F is maximized; the three objects of §3.3.
+- **One quantity, one name.** Where two symbols would denote the same quantity, the dissertation
+  keeps one. The scale's resolution is **n** and never δ (O1): a count where the predicate has
+  atoms, the number of distinguishable steps where it has none. "Delta" is reserved for the delta
+  read-out (A16, B7) and the delta-like prior.
 
 ---
 

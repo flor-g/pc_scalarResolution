@@ -227,8 +227,10 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   requires a threshold $\theta_L>0$ (Eq. A1). Declaring $\varsigma(-\theta_L)=1/2n$ gives it a
   denotation: **$n$ is the number of atoms the predicate resolves** (Eq. A5), the threshold sits at
   half a Voronoi cell, and the entries exclude precisely the states outside the cell each anchors.
-  Where no atom count exists, the same declaration reads $\varsigma(-\theta_L)=\delta/2$ for a
-  just-noticeable difference $\delta$ (Eq. A6). $n$ is the size of the space §5.1's search runs
+  Where no atom count exists the declaration is unchanged and so is the name: $n$ is then the
+  number of distinguishable steps the scale affords, the reciprocal of a just-noticeable
+  difference, and need not be an integer. The two cases differ in where $n$ comes from, not in the
+  formula (O1). $n$ is the size of the space §5.1's search runs
   over, and §5.2 turns the same quantity into a prediction.
 - **The chain terminates in utility.** $g_S$ carries the utility state into the situation field
   through a fixed profile matrix $B$ (Eq. 10; Eq. E2 at the relay), and carries nothing else:

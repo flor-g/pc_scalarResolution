@@ -18,16 +18,18 @@ user's: `decisions.md` O8 and O13, and `thesis_outline/revisions.md` Q7.
 
 ## 2. What the hypothesis says in the model's own quantities
 
-- **Atomicity** is *n* (Eq. A5) or the resolution δ = 1/n (Eq. A6). Appendix A leaves open what
-  fixes δ for a predicate with no atoms, and says so.
+- **Atomicity** is *n* (Eq. A5) — a count where the predicate has atoms, and otherwise the number
+  of distinguishable steps the scale affords, which need not be an integer. One name and one
+  formula since N1 (O1); the separate δ form of Eq. (A6) is gone. Appendix A leaves open what fixes
+  *n* for a predicate with no atoms, and says so.
 - **Lexical strength** is Λ, and the model already carries that name for it: Text cell 3 §2's
   inventory reads "Λ | lexical strength, a scalar of g_y(φ_L)", and §3 item 6 says Λ → ∞ recovers a
   hard truth-conditional constraint while finite Λ makes it soft.
-- So **H1 makes Λ a function of how stably the predicate fixes δ**, coupling two quantities the
+- So **H1 makes Λ a function of how stably the predicate fixes *n***, coupling two quantities the
   model currently fixes independently (A5's θ_L and Λ). That is a new dependency, hence O13.
 - **H2** says the classes are these entries of Eq. (A1), in each adjective's own orientation:
   maximum-standard absolute = *all*, minimum-standard absolute = *some*, relative = a cut at a
-  context threshold *t* anchored by neither endpoint nor δ.
+  context threshold *t* anchored by neither endpoint nor *n*.
 
 ## 3. The instantiation
 
@@ -411,7 +413,7 @@ None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed
   which loses F6 and most of F4. The agent's reading is that (i) is the only option that leaves the
   rest of the paper's standards intact, but the choice is the user's.
 - **S-2. Does the relative class enter at all?** A relative adjective's cut *t* is neither an
-  endpoint nor δ/2, so it is a quantity of the entry that Text cell 3 §2's inventory does not have,
+  endpoint nor 1/2n, so it is a quantity of the entry that Text cell 3 §2's inventory does not have,
   and Appendix A's identification argument is written for a θ_L that is both the gain of Eq. (A2)
   and the cut of Eq. (A1). Options: declare *t* (which opens A5 and Appendix A's "θ_L enters
   twice"); or restrict §5.2 and Appendix F to the two absolute classes, losing H2's open-scale half

@@ -6,9 +6,15 @@ Working record for the change the user opened on 2026-09-21, after closing the �
 **Task IDs here are `N0`–`N8`.** `T0`–`T16` (`scale_classes_hypothesis.md`) are live at the same
 time; the prefixes keep them apart.
 
-**Status, 2026-09-21: the plan is approved and nothing is implemented.** Q-N1 is answered by the
-user — option (i), Eq. (A6) goes — so N0–N8 are unblocked, and the user's instruction is
-**"Don't start implementing yet"**: no task below begins without their word.
+**Status, 2026-09-22: APPLIED**, in one execution pass shared with `tolerance_halting.md`'s HA10.
+Q-N1 was answered by the user — option (i), Eq. (A6) goes.
+**A correction to this record's own site table.** S1–S8 listed eight sites and **missed six**: five
+live uses of δ in `decisions.md` (σ(−θ_L) = δ/2 at the A-series; "until what fixes δ is settled";
+"or δ in the gradable case of Eq. (A6)"; "neither endpoint nor δ/2"; and **δ > 0.004945 in the
+source-trace list**, a number N2 stops printing) and one in `revisions.md` ("neither endpoint nor
+δ/2"). All six were found by a sweep after N7 and fixed. The lesson for the next naming change is
+that a site table built by searching the notebooks and the outline will miss the decision record
+itself.
 
 ---
 
@@ -88,8 +94,10 @@ outstanding**; what the list waits on is the user's go-ahead to start.
 Code before prose (`agent.md` §5.3). The only code here is one comment and one printed line, but
 S2's line changes Code Cell A's output, so both notebooks are re-executed (N6).
 
-- [ ] **N0. Checkpoint** (`agent.md` §4.2). Record `git rev-parse --short HEAD`.
-- [ ] **N1. Appendix A (S1), markdown.** Under Q-N1(i): Eq. (A6) is removed and its content folded
+- [x] **N0. Checkpoint** — clean tree at `bc97d29`.
+      *(orig:)* **N0. Checkpoint** (`agent.md` §4.2). Record `git rev-parse --short HEAD`.
+- [x] **N1. Appendix A (S1)** — done. Eq. (A6) and every δ removed; the gradable case folded under Eq. (A5) as *the same formula, a different source for n*; the open part replaced by O1's decision — this phase stipulates n and models no unstable-atom predicate, the two candidate readings are stated with the position reserved, and a later phase reads n off a learned θ_L rather than fixing it.
+      *(orig:)* **N1. Appendix A (S1), markdown.** Under Q-N1(i): Eq. (A6) is removed and its content folded
       into Eq. (A5)'s discussion — the two-part gloss of n, the non-integer reading, the grid cap
       stated once as n < 202.21, and the observation that a counting predicate and a gradable one
       differ in where n comes from and not in the formula. **The open-part paragraph is replaced by
@@ -98,24 +106,31 @@ S2's line changes Code Cell A's output, so both notebooks are re-executed (N6).
       reserved (Entry 3b); and the position for the next phase is stated — n is not a parameter to
       fix but a **read-out of a learned θ_L** by Eq. (A5), which Eq. (A4) says this phase cannot
       learn while φ_L is clamped. No verdict on which reading is right.
-- [ ] **N2. Code Cell A (S2).** The δ line goes; the n cap stays. The block heading becomes
+- [x] **N2. Code Cell A (S2)** — done; heading now *(Eq. A5)* and the δ cap line dropped.
+      *(orig:)* **N2. Code Cell A (S2).** The δ line goes; the n cap stays. The block heading becomes
       *Eqs. (A5)* rather than *(A5-A6)*. No number that any prose quotes is removed except 0.004945,
       which N1 removes from the prose in the same change.
-- [ ] **N3. `code cell 1` (S3) and E1 (S4).** One comment, mirrored. **Coupling 9 fires**: the two
+- [x] **N3. `code cell 1` (S3) and E1 (S4)** — done, mirrored; coupling 9 verified by AST.
+      *(orig:)* **N3. `code cell 1` (S3) and E1 (S4).** One comment, mirrored. **Coupling 9 fires**: the two
       cells stay source-identical in this comment, and E1's relay arguments are untouched.
-- [ ] **N4. ToC (S5).** Appendix A's row → (A1)–(A5), derived from the cell's own tags, not typed.
+- [x] **N4. ToC (S5)** — (A1)–(A5); all 74 links resolve.
+      *(orig:)* **N4. ToC (S5).** Appendix A's row → (A1)–(A5), derived from the cell's own tags, not typed.
       Re-check that all 74 links resolve.
-- [ ] **N5. Couplings.** 5 (equation numbers: (A6) removed, nothing renumbered, no body tag moves),
+- [x] **N5. Couplings** — verified: tags 61 → 60, exactly {A6} removed, the remaining sequence identical so nothing renumbered; no anchor changed; E3's prefixes untouched.
+      *(orig:)* **N5. Couplings.** 5 (equation numbers: (A6) removed, nothing renumbered, no body tag moves),
       6 (anchors), 9 (N3), and E3's prefixes untouched.
-- [ ] **N6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
+- [x] **N6. Executed** (shared with HA10d): main 0 errors, 8 figures, 14/14, 837 s; appendix_E 0 errors, 5 figures, 18/18, E3 PASS both, 1872 s. Only the expected lines moved.
+      *(orig:)* **N6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
       14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS. The only stored-output change should
       be Code Cell A's two lines and `cost:` lines.
-- [ ] **N7. Prose and records.** `sections_3-6.md` §3.3 (S6) drops the δ clause and states the
+- [x] **N7. Prose and records** — done, plus the six missed sites above. `agent.md` §5.5 gains a general rule rather than a one-off: *one quantity, one name* — the resolution is n and never δ, "delta" being reserved for the delta read-out and the delta-like prior.
+      *(orig:)* **N7. Prose and records.** `sections_3-6.md` §3.3 (S6) drops the δ clause and states the
       two-part gloss of n in one sentence; `scale_classes_hypothesis.md` §2 (S7) reads n for δ, which
       also makes H1's wording match S-4's n = 4; `decisions.md` O1's 2026-09-15 finding (S8) reads n;
       `agent.md` §5.5's naming list gains the one-name rule if it is the kind of clash that list
       records.
-- [ ] **N8. Commit**, one logical change per commit, hashes recorded above.
+- [x] **N8. Commit** — done.
+      *(orig:)* **N8. Commit**, one logical change per commit, hashes recorded above.
 
 **Sequencing note (2026-09-21).** `procedure_records/exposure_stipulation.md` (X0–X5, decision O2)
 is approved and waiting too. It touches cells 16 and 4 where this list touches 14, 15, 5, 0 and E1,
