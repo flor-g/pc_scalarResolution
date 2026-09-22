@@ -92,6 +92,39 @@ Each of these has broken at least once.
    restart with their letter (A1..., B1..., C1..., D1..., E1...). Bogacz is cited by his own numbers,
    which interleave with ours (6, 7, 11 collide). Inserting a numbered display into the body shifts
    every later number: ask the user first. Unnumbered displays are the established alternative.
+   **Check BOTH directions.** Removing a tag is the easy half; the half that gets missed is whether
+   anything still *cites* it. Verify `cited` ⊆ `defined`, not only that the tag list is what it
+   should be — a deleted equation leaves dangling references that no renumbering check sees, and a
+   mirror check (coupling 9) cannot see them either, because the two notebooks carry the same stale
+   text. Bogacz's numbers are cited by his own scheme, so a citation only counts as ours when it is
+   not preceded by "Bogacz". (Added 2026-09-22: decision N deleted Eq. (A6) on 2026-09-21 and the
+   coupling was recorded as verified — "tags 61 → 60, exactly {A6} removed, nothing renumbered" —
+   while four live citations survived, two of them in `code cell 1` and its E1 mirror.)
+
+   The defined set is the **union over both notebooks**: `appendix_E.ipynb` defines only E-tags and
+   cites main's (A1), (B2), (C1) and the body's by design, so checking it alone reports every one of
+   those as dangling and the check gets ignored.
+
+   ```python
+   # dangling-reference check: run after any tag is added or removed
+   import json, re
+   def read(p):
+       src = "\n".join("".join(c["source"]) for c in json.load(open(p))["cells"])
+       return src, set(re.findall(r"\\tag\{([A-F]?\d+)\}", src))
+   pairs = [read("main.ipynb"), read("appendix_E.ipynb")]
+   defined = pairs[0][1] | pairs[1][1]
+   for src, _ in pairs:
+       cited = set()
+       for m in re.finditer(r"(?<!Bogacz )Eqs?\.?\s*\(?([A-F]?\d+)\)?"
+                            r"(?:\s*[-–]\s*\(?([A-F]?\d+)\)?)?", src):
+           cited |= {g for g in m.groups() if g}
+       print(sorted(x for x in cited - defined if not x.isdigit()))   # must be []
+   ```
+
+   A bare integer left over is Bogacz's (he is cited as "Bogacz Eq. 54", and 42, 50-61 and 71 are
+   his); a leftover carrying a letter is ours and is a real dangling reference. The same check over
+   `thesis_outline/*.md` is worth running by eye when an appendix equation is deleted, since the
+   outline cites them too — that is where two of the four A6 citations were.
 6. **Anchors and the table of contents.** Every link target is an explicit inline anchor inside the
    heading (`### <a id="..." name="..."></a>Title`). Code cells cannot hold anchors, so `code1`..
    `code4` sit at the end of the markdown cell above. When a heading moves or is added, add its

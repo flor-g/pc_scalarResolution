@@ -119,6 +119,31 @@ S2's line changes Code Cell A's output, so both notebooks are re-executed (N6).
 - [x] **N5. Couplings** — verified: tags 61 → 60, exactly {A6} removed, the remaining sequence identical so nothing renumbered; no anchor changed; E3's prefixes untouched.
       *(orig:)* **N5. Couplings.** 5 (equation numbers: (A6) removed, nothing renumbered, no body tag moves),
       6 (anchors), 9 (N3), and E3's prefixes untouched.
+
+  **N5 WAS INCOMPLETE — found 2026-09-22 by an audit the user asked for, and fixed the same day.**
+  The check recorded above verified the **supply** side only: that the A6 tag was gone and nothing
+  renumbered. It never asked the other question, whether anything still **cites** (A6). Four live
+  citations survived the change:
+  | Site | Text |
+  |---|---|
+  | `main.ipynb` cell 5, `code cell 1` docstring | "denotation (Eqs. A5-A6)" |
+  | `appendix_E.ipynb` cell 2, E1 | the same, mirrored |
+  | `thesis_outline/sections_3-6.md` scope-tier table | "Eqs. (A5)–(A6)" |
+  | `thesis_outline/sections_3-6.md` §5.2 setup bullet | "(Eq. A6)" |
+
+  The first two are a **second** A6 reference inside the same docstring N3 edited: S3 recorded one
+  comment ("1/delta for a JND delta (Eq. A6, Appendix A)") as the site, that one was removed, and
+  this one was not surveyed. N3's own verification, "coupling 9 by AST", compares the two notebooks
+  **to each other**, so a defect identical in both copies passes. The last two were never in the
+  S1–S8 table at all, which recorded §3.3 (S6) as the outline's only δ site — the same survey gap
+  that produced the six missed δ sites N7 had to clean up.
+
+  Fixed: all four now read Eq. (A5), and §5.2's sentence is rewritten to N's own position — the
+  gradable case is *the same* Eq. (A5) read with a real n, not a different equation.
+  `agent.md` coupling 5 now requires the `cited` ⊆ `defined` direction and carries a check that
+  spans both notebooks. **Lesson:** a mirror check cannot catch a defect that is mirrored, and a
+  removal check cannot catch what still points at what was removed.
+
 - [x] **N6. Executed** (shared with HA10d): main 0 errors, 8 figures, 14/14, 837 s; appendix_E 0 errors, 5 figures, 18/18, E3 PASS both, 1872 s. Only the expected lines moved.
       *(orig:)* **N6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
       14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS. The only stored-output change should

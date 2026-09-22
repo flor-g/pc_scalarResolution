@@ -354,7 +354,7 @@ and §4.1 and §4.4 need it.
   settings is 3.19e-2 (not 3.6e-15), and Δ_some's spread across the six μ_u settings collapses to
   +0.0008 to +0.0009 (Text cell 5 Part B). Either label the instance as a control and say what it
   controls for, or take the instance from the learned model: the φ_S contrasts across Part D's
-  priors agree to 3.6e-14 at a shared θ_u (a control) and differ by 0.0575 at each prior's own θ\*.
+  priors agree to 5.3e-15 at a shared θ_u (a control) and differ by 0.0575 at each prior's own θ\*.
 
 - **New bullet at the end, R25 (S-8/T15, applied 2026-09-22): the second guard, that the verdicts
   are relative to n.** About 90 words, raising §4.2 from 170 to 260 and the total to 3,610. Says:
@@ -1251,7 +1251,7 @@ concentration keeps the bare α everywhere, including both notebooks, which neve
 
 | Numbers | Source |
 |---|---|
-| θ\*, q_H, Δ, tempering/utility, conditions per prior; the 3.6e-14 / 0.0575 contrasts | `main.ipynb` Code Cell 2, BASE WORLD PRIOR SWEEP |
+| θ\*, q_H, Δ, tempering/utility, conditions per prior; the 5.3e-15 / 0.0575 contrasts | `main.ipynb` Code Cell 2, BASE WORLD PRIOR SWEEP |
 | 2.126, 6.5, 26, 34.695, 1205.8, 242,163, −0.5208, 0.4361, 3.98e8, 7.9e6, 4,823 | Code Cell 2b, REALIZABILITY block (step and time figures on `cost:` lines). 4,823 is 4 × 1205.8. **Updated 2026-09-21**: the realizable θ_u is the halted one, not the criterion-stopped 13.3749. |
 | 4.547e-13, 12.1, 0.74/0.81/1.82 floors, λ = 2199 | Code Cell 2b, THE ROUNDOFF FLOOR block — the floor per unit of λ_max(H) at three λ, the margin the keyed tolerance holds, and what a fixed 1e-9 would have bought there (decision I3, revised) |
 | 1.00, 1.00, 0.04, 1.00 × the stopping tolerance | Code Cell 2, Part A — the specification checks, which compare in multiples of the tolerance rather than against a constant (`TOLERANCE_MARGIN`) |
@@ -1259,7 +1259,7 @@ concentration keeps the bare α everywhere, including both notebooks, which neve
 | 33, band, floors, 59 of 121, 0.100–4.250, 2.0–20.1, 3.5e4–3.6e7, D spread | Code Cell 4, `plane_summary`; Text cell 6 |
 | 1.9890 / 2.9334 / 4.3102 | Code Cell 4, `override_threshold` |
 | 3.19e-2, +0.0008 to +0.0009 | Code Cell 3, `mu_u_probe` |
-| 9.98e-10, 4.6e-14, tails 1.7e-3 / 3.3e-6 | Code Cell 2, Part A |
+| 4.45e-09 / 4.46e-09, 4.6e-14, tails 1.7e-3 / 3.3e-6 | Code Cell 2, Part A. **Corrected 2026-09-22**: the first was 9.98e-10 while the stopping tolerance was a fixed 1e-9; I3 now keys it to lambda_max(H), so Part A reports in multiples of a tolerance that moves. |
 | 404.8, Eq. (28) table | Text cell 4, *Integration cost and conditioning* |
 | F15 (not within 0.1% after 5,000 updates), 145/145 | `procedure_records/theta_u_learned_reach.md` (recorded scripts, not a cell) |
 | Exposure-only θ\* (−11.2844, −44.1766, −65.7004, −28.4375) | Code Cell B, ALTERNATIVE SPACES |

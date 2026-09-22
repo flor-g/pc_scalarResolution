@@ -70,7 +70,7 @@ reader should weigh is recorded as a fact with our position reserved.
 | Binary branching per level, and $m=1$ (App. C §§2, 5) | §5.1 | Makes the alternatives level tractable and local |
 | Non-locality of normalization across word forms (App. A) | §5.1 | The obstacle binarity removes |
 | The relay, Eqs. (E1)–(E6) | §3.4, §5.5 | Locality at $m>1$, and the cost it carries |
-| $\theta_L$ as predicate granularity, Eqs. (A5)–(A6) | §3.3, §5.1–§5.2 | Sets the search's resolution; the closed/open prediction |
+| $\theta_L$ as predicate granularity, Eq. (A5) | §3.3, §5.1–§5.2 | Sets the search's resolution; the closed/open prediction |
 | $m$ = threshold count and the parity argument (App. C) | §3.5, §5.1–§5.2 | Fixes dimension; the mechanism behind §5.2 |
 | Closed vs open scale, extreme-favouring (new, §5.2) | §5.2 | Second empirical anchor; connects to Xiang et al. |
 | Strict concavity, unique fixed point, closed forms | §3.4, §4.3 | Makes the dynamics a testable implementation claim |
@@ -606,8 +606,9 @@ remain, and naming them is the point of saying so:
 ## 5.2 Scale structure: a second prediction (about 400 words)
  
 - **The setup.** §3.3 fixes $\theta_L$ by the predicate's own resolution: at a scale endpoint the
-  threshold is supplied by the scale itself (Eq. A5), while a predicate with no endpoint to anchor
-  to must take its threshold from elsewhere (Eq. A6), and Appendix A leaves open what fixes it. In
+  threshold is supplied by the scale itself, while a predicate with no endpoint to anchor to must
+  take its resolution from elsewhere — the same Eq. (A5), read with a real $n$ rather than an integer
+  one — and Appendix A leaves open what fixes it. In
   the terms of the gradable-adjective literature, maximum-standard absolute adjectives have closed
   scales and conventional endpoint standards, while relative adjectives have open scales and
   context-dependent thresholds (Kennedy, 2007; Xiang, Kennedy, Xu & Leffel, 2022).
