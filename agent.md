@@ -446,9 +446,15 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
   committing anything. A full-file output diff against the last commit (§4.2) is what catches it.
 - **Baseline as of 2026-09-22, after T0-T13:** `main.ipynb` 0 errors, 8 figures (2 in Code Cell 2,
   3 in Code Cell 2b, 3 in Code Cell 4), 14/14 specification checks, **about 855 s**;
-  `appendix_E.ipynb` 0 errors, 5 figures, E2 18/18, E3 PASS on both cells (Code Cell 2: 203 lines
-  identical, 1 changed, 4 inserted; Code Cell 2b: 234 identical, none changed), about 710 s. Any
-  departure from the **counts** is a finding, reported with the output, not explained away.
+  `appendix_E.ipynb` 0 errors, 5 figures, E2 18/18, E3 PASS on both cells (Code Cell 2: **220** lines
+  identical, 0 deleted, 1 changed, 4 inserted; Code Cell 2b: **261** identical, nothing else),
+  **about 1,860 s**. Any departure from the **counts** is a finding, reported with the output, not
+  explained away.
+  **E3's line counts grow with the cells they diff, and the 2026-09-14 figures (203 and 234) were
+  left behind.** What E3 actually asserts is the *shape* — 0 deleted and 0 changed beyond the pass
+  count, the 4 insertions being the checks the relay adds — and that shape has never moved.
+  Re-measure the totals when Code Cell 2 or 2b gains a printed line; treat a change in the shape as
+  the finding.
   **The runtime is not a check.** main's was "about 250 s" from 2026-09-14 until it was measured
   again on 2026-09-22 and came back 855 s, with the counts unchanged: the cells added since (Code
   Cell A's 80-row sweep, Code Cell B's ray report, Code Cell 4's grid caveat, Code Cell F) account
