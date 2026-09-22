@@ -191,6 +191,20 @@ Adopting the proposal touches an interpretive commitment, so under `agent.md` §
 
 ## 6. Status
 
+> **STATUS CHANGED 2026-09-22: the hypothesis is DEMOTED from a commitment to a direction**
+> (`decisions.md` **A19**, **D12**). Everything below stands as the record of what was decided and
+> measured; what changed is its standing in the paper. The reason is the **fast** loop's tolerance,
+> keyed to λ_max(H) by the revised I3: a global spectral quantity, a locality problem **of the same
+> kind as D4**, and not licensed by it, since D4 is itself an instance only under restriction and
+> its quantitative bound is ours (F14). The violation is unsettled, so the paper admits it and
+> offers halting-by-tolerance as a direction that **could** resolve the halting problem.
+> **Two things the demotion does not concede.** The halting problem is real for the organism as
+> well as the simulation, so the agent's proposal that it is an artefact of the batched uniform
+> ensemble was **rejected** by the user as a complete account (it survives as context in D12, on
+> Bogacz's own remark that parameters never converge). And the **slow** rule |Δθ_u| < tol is clean
+> — it reads only the magnitude of the update the plasticity rule already forms — so the paper says
+> which loop carries the debt rather than demoting both alike.
+
 **2026-09-21: the user took position 1** — θ\* stays the commitment, the mechanism is tolerance, and
 the tolerance is ad hoc, so nothing reported may depend on it. Recorded as `decisions.md` **A19**
 and `revisions.md` **R22**; A9 and R10 are unchanged, which is the point of the position. The user's
@@ -811,3 +825,25 @@ determinism and is reported, not absorbed.**
   audit for the numbers, adding the 3.5–5% observation. No notebook change and no re-execution: a
   matched comparison is not printed anywhere, precisely because `DEMONSTRATION_TOLERANCE` is keyed
   to Λ, and printing one would have cost a ~50 minute re-run for a single footnote.
+
+
+---
+
+## 11. HA10: the notebook sites the demotion touches (batched, 2026-09-22)
+
+**Batched deliberately**: each needs a re-execution of both notebooks (~50 minutes), so they wait
+for a pass that has another reason to run. None of them affects a computed value.
+
+- [ ] **HA10a.** `learn_theta_u`'s docstring, both notebooks: *"This study commits to halting BY a
+      tolerance, not to any particular tolerance"* → offers it as a direction, with a pointer to
+      D12's unsettled violation. Comment only; no behaviour.
+- [ ] **HA10b.** The `DEMONSTRATION_TOLERANCE` comment block, both notebooks: same phrase, same
+      fix.
+- [ ] **HA10c.** `theta_u_learning_probe`'s **printed** line, *"That value is AD HOC. The
+      commitment is that halting is BY a tolerance, not that it takes any particular value, so what
+      is PREDICTED is theta_u\* above."* **This one is a defect independent of the demotion**: it
+      is a position stated in the notebook's own output, which **B10/C7 forbids** — the notebooks
+      report measurements and take no position. The agent introduced it at HA4a and should not
+      have. It becomes a description of what the code does (the flow halts at this tolerance; θ\*
+      is what the closed form reports) with the interpretation left to the paper.
+- [ ] **HA10d.** Re-execute both, confirm 14/14, 18/18, E3 PASS, and that only these lines move.
