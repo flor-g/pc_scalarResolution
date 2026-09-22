@@ -1,0 +1,28 @@
+========================================================================================================
+5.  THE THREE BELIEFS PER (CLASS, IMAGE TYPE), at Lambda = 48 (the best shared value).
+    q_lit is the literal listener ell_0 - phi_L; 'tempered' is theta_u = 0, a control;
+    'model' is theta_u*. R^2 is within that cell only, so compare DOWN a column, not across.
+========================================================================================================
+    class         image        n     q_lit R2  tempered R2     model R2  data mean    q_lit mean tempered mean    model mean  mean theta_u*
+    absolute_max  shape       15        0.995        0.995        0.995       4.92          5.00          5.00          5.00         1840.3
+    absolute_max  artifact    16        0.990        0.990        0.990       4.83          5.00          5.00          5.00         1659.0
+    absolute_min  shape       11        0.271        0.222        0.058       3.59          3.44          3.64          4.56         -871.0
+    absolute_min  artifact    12        0.044        0.305        0.880       4.42          3.36          3.58          4.74         1604.7
+
+========================================================================================================
+6.  WHICH BELIEF EACH CONDITION'S DATA SIT NEAREST, in mean scale position.
+========================================================================================================
+    absolute_max  shape      data 4.92 | q_lit 5.00 (off by +0.08), tempered 5.00 (off by +0.08), model 5.00 (off by +0.08)  ->  nearest: TEMPERED
+    absolute_max  artifact   data 4.83 | q_lit 5.00 (off by +0.17), tempered 5.00 (off by +0.17), model 5.00 (off by +0.17)  ->  nearest: TEMPERED
+    absolute_min  shape      data 3.59 | q_lit 3.44 (off by +0.16), tempered 3.64 (off by +0.04), model 4.56 (off by +0.97)  ->  nearest: TEMPERED
+    absolute_min  artifact   data 4.42 | q_lit 3.36 (off by +1.06), tempered 3.58 (off by +0.84), model 4.74 (off by +0.32)  ->  nearest: MODEL
+
+========================================================================================================
+7.  DOES A PER-IMAGE-TYPE Lambda REACH WHAT THE LEVELS REACH? Best Lambda per cell, with
+    the best R^2 any of the three beliefs reaches in that cell at ANY Lambda on the ladder.
+========================================================================================================
+    class         image                 best model            best q_lit
+    absolute_max  shape          0.995 at Lambda 4     0.995 at Lambda 4
+    absolute_max  artifact       0.991 at Lambda 8     0.990 at Lambda 8
+    absolute_min  shape          0.231 at Lambda 2    0.271 at Lambda 48
+    absolute_min  artifact      0.880 at Lambda 48    0.044 at Lambda 48

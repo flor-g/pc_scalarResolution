@@ -72,7 +72,7 @@ reader should weigh is recorded as a fact with our position reserved.
 | The relay, Eqs. (E1)–(E6) | §3.4, §5.5 | Locality at $m>1$, and the cost it carries |
 | $\theta_L$ as predicate granularity, Eq. (A5) | §3.3, §5.1–§5.2 | Sets the search's resolution; the closed/open prediction |
 | $m$ = threshold count and the parity argument (App. C) | §3.5, §5.1–§5.2 | Fixes dimension; the mechanism behind §5.2 |
-| Scale class against Xiang et al.: H1 and H2, match and mismatch (§5.2, App. F) | §5.2 | Second empirical anchor. **Reported, not adopted** — the open-scale half of H2 is stated and left untested (O14) |
+| Scale class against Xiang et al.: H1 and H2, match and mismatch (§5.2, App. F) | §5.2 | Second empirical anchor. **Reported; neither adopted nor rejected**, because the comparison runs at one resolution and under commitments a later phase may drop (O13). The open-scale half of H2 is stated and left untested (O14) |
 | Strict concavity, unique fixed point, closed forms | §3.4, §4.3 | Makes the dynamics a testable implementation claim |
  
 **Tier B — recorded as a fact, position reserved.** One or two sentences each, no verdict, in §5.5
@@ -106,7 +106,8 @@ in §5.5; the weight-transport accounting of § E.2.
 Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R1) → 3,200 (S-6) →
 **3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet) → **3,610**
 (§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard) → **3,760** (§5.2 raised 400 → 550 on
-2026-09-22 at T10, under S-6's standing permission for this section). The "was" column is the 2,400 allocation this outline was written to.
+2026-09-22 at T10, under S-6's standing permission for this section) → **3,880** (§5.2 550 → 650 and
+§6 165 → 185 the same day, for R27's reservation on H1). The "was" column is the 2,400 allocation this outline was written to.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
@@ -124,15 +125,15 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 | 4.4 The five priors | 220 | **285** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,400** | |
+| **5. Discussion** | 705 | **1,500** | |
 | 5.1 What an alternatives level would have to supply | 390 | **350** | The specification, and what is left undone |
-| 5.2 Scale structure: two hypotheses, and where the model matches | 200 | **550** | H1 and H2 against Xiang et al. (R16, R17); raised from 400 on 2026-09-22 at T10 — the section gained the scope exclusion (O14), the ensemble constraint (X7) and the instinct |
+| 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **650** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10 (the scope exclusion, the ensemble constraint, the instinct), then → 650 on 2026-09-22 for **R27**: why no position is taken on H1, and what the maximum class does not identify |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
-| **6. Conclusion** | 150 | **165** | |
-| **Total** | **2,400** | **3,760** | |
+| **6. Conclusion** | 150 | **185** | |
+| **Total** | **2,400** | **3,880** | |
 
 **What this table does not do.** §§3.6, 4.6, 5.3 and 5.4 are new sections whose content is planned
 in `revisions.md` §5 and whose bodies are not written in this outline yet; Limits and Predictions
@@ -604,7 +605,7 @@ remain, and naming them is the point of saying so:
   alternatives computation in the present model — $\varphi_L$ is a function of the observed
   utterance alone, $g_S$ reaches the belief only through $\varphi_u$, and no term in Eq. (13)
   involves any unobserved utterance — and they settle nothing about human processing.
-## 5.2 Scale structure: two hypotheses, and where the model matches (about 550 words)
+## 5.2 Scale structure: two hypotheses, and what the comparison shows (about 650 words)
 
 Written against Code Cell F's executed output (Appendix F). Every number below is printed there;
 every number attributed to Xiang et al. is cited and printed by no cell (S-5). **No sentence in this
@@ -621,8 +622,19 @@ section says what any mismatch is due to** (R16).
   how stably the predicate fixes $n$, which couples two quantities §3.3 fixes independently.
   **H2:** open-scale adjectives behave like *some*, complete-scale adjectives like
   endpoint(s) + *some* — a map from scale class onto an entry of Eq. (A1), read in the adjective's
-  own orientation. Neither is adopted here. The section states them, reports the comparison, and
-  stops.
+  own orientation. **Neither is adopted, and neither is rejected.** The section states them, reports
+  the comparison, and stops.
+- **Why no position is taken, stated rather than left to inference.** A hypothesis about the lexicon
+  is not settled by a fit statistic on one experiment at one resolution, and **what is measured here
+  is bound to this phase**. The comparison runs at a single $n$, so the quantity H1 is *about* — how
+  stably a predicate fixes its resolution — does not vary across the classes compared; what
+  distinguishes them here is which entry of Eq. (A1) they carry, and reading that as a difference in
+  atomicity is an interpretation of the result, not the result. And the architecture this phase
+  commits to is one the dissertation itself expects to change: §5.1 proposes a level this model does
+  not have, and the instinct below doubts the single $\theta_L$ that fixes both endpoints. **A match
+  or a mismatch obtained under commitments a later phase may drop is evidence about this phase.**
+  H1 is posed because of what it would mean for how the model develops, and it is left open on
+  purpose.
 - **What is instantiated, and the half that is not.** Five scale positions are the five Voronoi
   cells of $n=4$, so $\theta_L=\log 7$; the default $n=10$ of §4 is untouched. **H2's open-scale
   half is not tested.** A relative adjective's cut is a context threshold that neither endpoint
@@ -644,7 +656,12 @@ section says what any mismatch is due to** (R16).
   from $6$ to the ladder's top at $2048$ is within $0.005$ of the best, consistent with the hard
   entry of the $\Lambda\to\infty$ limit. The minimum class **requires a finite $\Lambda$**: its fit
   rises to $0.434$ and falls away on both sides, to $0.351$ by $\Lambda=2048$, with the optimum
-  bracketed between $32$ and $48$. That contrast is H1's content. The utility level is what earns
+  bracketed between $32$ and $48$. **That contrast runs in H1's direction, and it is weaker evidence
+  than it looks.** The maximum class's *threshold* is not identified by these data at all: its fit
+  stays between $0.989$ and $0.993$ for every cut from $\zeta=-1.0$ to $+4.0$, and its literal,
+  tempered and settled beliefs agree to three decimals. What that class establishes is a lower bound
+  on $\Lambda$ and nothing above it — not that its threshold is endpoint-anchored, which is read in
+  from the scale structure rather than measured. The utility level is what earns
   the minimum class's fit — the literal listener reaches $0.103$ against the model's $0.434$, a gain
   of $0.331$, while on the maximum class it reaches $0.992$ against $0.993$, so that class is fitted
   by its entry alone. And the image-type difference has the right sign and the right home: $-0.18$
@@ -672,8 +689,10 @@ section says what any mismatch is due to** (R16).
   alone.** A parity argument in the family of Appendix C's, not a fitted trend.
   *(Numerical note for the notebook, not the prose: the midpoint cut sits on a node, half-weighted;
   left unweighted the grid reads $0.0194$, the node's own mass. Report the parity, not the artifact.)*
-- **Calibrate the claim.** $\Lambda$ is fitted and labelled as fitted; nothing else here is, and a
-  ladder **brackets** an optimum rather than locating it. §4.2's second guard applies here too: the
+- **Calibrate the claim, in both directions.** $\Lambda$ is fitted and labelled as fitted; nothing
+  else here is, and a ladder **brackets** an optimum rather than locating it. The section must not
+  credit H1 with more than the ordering it shows, and must not treat the residual as telling against
+  it either. §4.2's second guard applies here too: the
   denotation $n$ that fixes $\theta_L$ is stipulated, and §4's readings move with it — this section
   runs at $n=4$ because the authors' scale has five positions, a choice about their paradigm and not
   a discovery about the predicates.
@@ -726,9 +745,10 @@ section says what any mismatch is due to** (R16).
 - **The lexical strength of a class, from its scale structure (§5.2).** A predicate anchored at its
   scale's own endpoint should behave as a hard entry — its fit putting no upper bound on $\Lambda$ —
   while one whose threshold depends on something the scale does not supply should require a finite
-  one. That is the shape of H1 the measurement supports, and it is testable on any class with an
-  elicited prior and a degree estimate. **Stated as a prediction of H1, which the dissertation
-  reports on and does not adopt.** What is *not* predicted here is the old §5.2 trend — the monotone
+  one. That is the ordering the measurement of §5.2 shows, and it is testable on any class with an
+  elicited prior and a degree estimate. **Stated as a prediction of H1, on which the dissertation
+  takes no position** — it neither adopts nor rejects it, for the reason §5.2 gives: the comparison
+  runs at one resolution and under commitments a later phase may drop. What is *not* predicted here is the old §5.2 trend — the monotone
   rise in the utility level's contribution as the cut approaches the endpoint, and its reversal under
   a sharp prior — which is withdrawn.
 ---
@@ -751,12 +771,15 @@ section says what any mismatch is due to** (R16).
    proposes a design for it — resolution as a negative search branching binarily at each level,
    which keeps the dimension at one, the plasticity local, and the generative map affine enough to
    inherit the convergence proof — but does not derive its algebra, and says so in §5.1.
-4. Independently, the same threshold semantics distinguishes scale classes by the entry each carries
-   and by the lexical strength each requires. Run on Xiang et al.'s (2022) own items, the class
-   anchored at its scale's endpoint is fitted almost exactly and puts no upper bound on $\Lambda$,
-   while the class whose threshold sits a resolution step inside the other endpoint requires a finite
-   one and is where this model, like every model in their paper, is weakest. That comparison is
-   reported, and no account of the residual is offered.
+4. Independently, the same threshold semantics distinguishes scale classes by the entry each
+   carries. Run on Xiang et al.'s (2022) own items, the class whose entry is fixed at the scale's own
+   endpoint is fitted almost exactly and puts no upper bound on $\Lambda$, while the class whose
+   threshold sits a resolution step inside the other endpoint requires a finite one and is where this
+   model, like every model in their paper, is weakest. **That ordering runs in the direction the
+   atomicity hypothesis of §5.2 predicts, and the dissertation takes no position on that hypothesis**
+   — the comparison runs at a single resolution, and under architectural commitments §5.1 and §5.2
+   themselves put in doubt, so what it establishes is a fact about this phase. The residual is
+   reported and not explained.
 ---
  
 ## Sources for §5.2

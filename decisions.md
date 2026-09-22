@@ -1433,6 +1433,44 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   **What does not change: the entry is still not adopted.** The paper states H1 and H2, reports this
   comparison, and makes no claim about what any mismatch is due to (R16). Whether Λ becomes a
   function of anything is still the user's, and still open.
+- **Finding, 2026-09-22 (two probes, `audits/2026-09-22-o13-options/`). O13 STAYS OPEN, and the
+  entry now records why a fit statistic cannot close it.** Class (e); no cell prints any of it and
+  none of it reaches prose.
+  1. **H1's independent variable does not vary in Appendix F.** Both classes run at n = 4, so
+     θ_L = log 7 enters χ_all and χ_some at the same magnitude. What separates them there is **which
+     entry they carry**; reading that as a difference in atomicity is an interpretation of the
+     result, not the result. H1 was therefore never tested by Appendix F and could not have been —
+     testing it needs predicates differing in n.
+  2. **A shared Λ costs 0.001 of R², and that is about identifiability, not about H1.** The classes
+     do not want the same Λ: the maximum class's admissible band is Λ 6 → 2048 and the minimum
+     class's is 32 → 48, and a shared value works because the first **contains** the second's
+     optimum. The ordering runs in H1's direction.
+  3. **The maximum class identifies almost nothing.** R² between 0.989 and 0.993 for every cut from
+     ζ = −1.0 to +4.0, and q_lit, tempered and model agreeing to three decimals. It fixes a lower
+     bound on Λ and nothing above it, and does **not** establish that its threshold is
+     endpoint-anchored. §5.2 was softened for this (**R27**).
+  4. **The minimum class splits by image type into opposite regimes, and no Λ repairs it.** At
+     Λ = 48, min/shape reads q_lit 0.271, tempered 0.222, model 0.058 with θ_u\* ≈ −871;
+     min/artifact reads 0.044, 0.305, **0.880** with θ_u\* ≈ +1605. Over the whole Λ ladder the best
+     the model reaches on min/shape is 0.231, below q_lit's 0.271 — so the per-image-type Λ declined
+     at S-9 **would not have worked either**. Where a mechanism claim would start, and it stops
+     here: R16 bars §5.2 from characterizing the mismatch, and this bears on exposure (O2,
+     Appendix B) rather than on lexical strength.
+- **Why no position is taken, and this is the part to carry (the user, 2026-09-22).** The agent
+  proposed answering (a) "no" on the strength of item 2. The user rejected it: *"H1 is posed simply
+  because it sheds light on how we want to develop the model in subsequent phases… it is a bit rash
+  to commit to a position that rejects H1 completely at this phase. At the end of the day, we don't
+  even know if the match or mismatch at this current phase will persist for a implemention of future
+  phase."* **The model does not need to adopt or reject H1 to be this phase's model**, and H1 is
+  currently **partially supported**: the ordering holds, the mechanism is not isolated. A further
+  reason the agent should have weighed: the minimum class's misfit sits exactly where **O14** expects
+  the architecture to change — its entry is the one whose threshold is a resolution step inside the
+  *other* endpoint, the boundary the instinct assigns to θ_A once the two thresholds separate.
+  Rejecting H1 on min-class evidence would reject it on the strength of the part of the model that is
+  slated to be rebuilt. **The dissertation states this reservation explicitly** rather than leaving
+  it to inference: §5.2's *Why no position is taken* bullet, its *Calibrate the claim* bullet (which
+  now guards both directions), §5.6's prediction bullet, §6 item 4, the scope-tier row, and
+  Appendix F's opening.
 - **Needed to decide:** the user's, on three things. (a) Whether Λ becomes a function of anything,
   or stays a fixed quantity with the classes distinguished by their entries alone. (b) If it does,
   what fixes it — the record shows the data want it to vary with the object's familiarity as well as
