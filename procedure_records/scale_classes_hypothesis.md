@@ -612,7 +612,17 @@ both regenerate the ToC, so whichever runs second re-checks cell indices before 
       **As specified:** **T6. Couplings.** Confirm none fires: E3 diffs Code Cells 2 and 2b only; `code cell 1` is
       unchanged so coupling 9 is quiet; no new printing call in Code Cell 2 or 2b, so coupling 7 is
       quiet. Check whether `appendix_E.ipynb` §E.3 ("claims in main restated") needs a line.
-- [ ] **T7. Execute** main, then appendix_E, by `agent.md` §5.1. Acceptance: main 0 errors,
+- [x] **T7. Execute** — done 2026-09-22, `6e3326e`. main **0 errors, 8 figures, 14/14, 855 s**;
+      appendix_E **0 errors, 5 figures, E2 18/18, E3 PASS on both cells, 1,860 s**. Execution counts
+      run 1–10 and 1–5 with no gaps (the §5.1 interrupted-run check). **Diffed against T0's
+      `ae2f414`: every difference in either notebook is a `cost:` line, which E3 drops by design,
+      and the only new cell is Code Cell F.** Two departures from the recorded baseline, both
+      bookkeeping rather than defects, and both fixed in `agent.md` §5.1: main's runtime was "about
+      250 s" from 2026-09-14 and is 855 s with every count unchanged, the cells added since
+      accounting for it; and E3's line counts are 220 and 261 where the baseline said 203 and 234,
+      because Code Cells 2 and 2b have gained printed lines. **What E3 asserts is the shape** — 0
+      deleted, 1 changed (the pass count), 4 inserted — and that has never moved.
+      **As specified:** **T7. Execute** main, then appendix_E, by `agent.md` §5.1. Acceptance: main 0 errors,
       8 figures, 14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS on both cells. Record the
       new runtime. Diff every other cell's stored output against T0: only the two new cells may
       differ.
@@ -661,7 +671,13 @@ both regenerate the ToC, so whichever runs second re-checks cell indices before 
       **As specified:** **T12. revisions.md.** Mark the §5.2 entry and Q7 closed by this change; update §8's source
       table so the numbers point at Code Cell F rather than at the audit; clear the audit from the
       class (e) list.
-- [ ] **T13. Commit**, one logical change per commit, hashes recorded on each task line above.
+- [x] **T13. Commit** — done 2026-09-22, five commits, one logical change each:
+      `c170067` T1 (the data file and what its hash does not certify) · `fc53a3e` T10–T12 (§5.2
+      rewritten, the old prediction withdrawn from §5.2, §5.6 and §6 item 4) · `282f5ac` T8–T9 (the
+      records, and the absent-data defect) · `ee03438` (E3's drifted baseline counts) · `6e3326e`
+      T2–T7 (the two cells, executed and verified). The notebooks went in one commit because E3's
+      verification spans both and `agent.md` §4.3 forbids committing half a coupling.
+      Checkpoint `ae2f414`; the list was written at `acabb7e`, with U0–U14 and T14–T16 in between.
 
 **Added 2026-09-21 at the user's request (decision O10). Blocked on S-8.**
 
@@ -693,7 +709,21 @@ both regenerate the ToC, so whichever runs second re-checks cell indices before 
       question has any prose site" for side quest 2. `thesis_outline/revisions.md`: a site entry and
       a §8 source row.
 
-## 10. Prose sites, to be written only after T2 and T7
+## 10. Prose sites — **ALL WRITTEN 2026-09-22.** The list is closed.
+
+- `sections_3-6.md` §5.2: **rewritten** (T10), 400 → 550 words, retitled.
+- `sections_3-6.md` the scope-tier row and the word table: **updated**; the table adds up at every
+  level.
+- `background_sections.md` §1.7: **F12's backwards bullet replaced and Q3b softened** (T11).
+- The fourth site was the one nearly missed. "Anything in §5.4, §5.6 or §6 item 4 that leans on the
+  old §5.2 prediction" turned out to be **two live sentences**, not a formality: §5.6's prediction
+  bullet, and **§6 item 4**, which stated the withdrawn prediction in the conclusion —
+  "an endpoint-orientation asymmetry between closed- and open-scale predicates, sharpest where prior
+  knowledge is weakest". Both rewritten. §5.4 is unwritten and gains nothing. The lesson for a later
+  change: **a withdrawn prediction survives in the conclusion**, where nothing that checks numbers
+  will find it, because it is stated without any.
+
+### The original list
 
 - `sections_3-6.md` §5.2 (lines 436–477): the rewrite.
 - `sections_3-6.md` line 60 (scope tier) and the word table (lines 81–103).
