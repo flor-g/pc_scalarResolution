@@ -749,6 +749,12 @@ Pre-populated from the audit (2026-09-11). New entries are appended during T0–
     ⟨ε_S, r⟩ where main forms Σ_j φ_u,j⟨ε_S, b_j⟩: mathematically identical, different summation
     order, so the gradient at θ_u = 0 comes out 267.49704880934354 against 267.49704880934377 and the
     θ_u after one update differs by **1.07e-14**.
+  - **NOTE ADDED 2026-09-21 (H12, `procedure_records/tolerance_halting.md`): the band below is the
+    floor AT THIS theta_u, not the floor.** The floor is **4.547e-13 x lambda_max(H)**, flat to four
+    significant figures from theta_u = 13.4 to 61.3, and 8.2e-11 to 1.6e-10 is what that gives at
+    the lambda of this run. F34's conclusion is unaffected and in fact generalized; what it
+    licensed - a single fixed tolerance above the band - is what did not survive, and I3 is revised
+    accordingly.
   - **That difference is amplified because the stopping test sits on a floor.** `infer` stops when
     max|derivative| < 1e-10 for 10 consecutive steps. Over the last 2,000 steps the derivative is not
     decaying: it hops between ULP-quantized values in a band of about **8.2e-11 to 1.6e-10** (observed

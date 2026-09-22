@@ -332,9 +332,20 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      boundary: at 1 and above**, where all four halt in one update; Beta(3,1) already does at 3e-1.
      Halting in one update is not the same as never leaving the start: only the flat row does the
      latter.
-  5. **The fast loop need not share the slow loop's tolerance.** Coarsening it changes no verdict and
-     little runtime (H7), so it is inconsequential and no discussion is spent on it. **The
-     implementation keeps 1e-9** (I3).
+  5. **The fast loop need not share the slow loop's tolerance** — but it is NOT inconsequential,
+     and this point is **revised 2026-09-21**. As written it said coarsening the fast tolerance
+     changes no verdict and little runtime (H7), so no discussion was owed it and the
+     implementation would keep 1e-9. H7 was measured at **Λ = 8**, where the roundoff floor is
+     three orders below the tolerance and nothing does move. At the θ_u the halting flow reaches at
+     **Λ = 512** the fixed 1e-9 is what decides whether a configuration can be integrated at all
+     (H12): the floor is 4.547e-13·λ_max(H), so a constant tolerance loses its margin as θ_u grows
+     and falls below the floor above λ = 2177, where the test can never fire. **I3 is therefore
+     revised** to `DERIVATIVE_TOLERANCE_PER_RATE · λ_max(H)`, and 1e-9 survives as what that
+     returns at the λ I3 was calibrated at. H7 is not wrong; it was measured where the question
+     does not arise.
+     **The parallel is worth the paper's notice:** this point's own reasoning — that what a
+     tolerance *means* depends on the case — is the same as R23's hypothesis for the slow loop, at
+     the other timescale.
   6. **Because no value is committed to, the model's predictions are reported in closed form** unless
      otherwise specified. This is what keeps every reported result independent of the ad hoc
      quantity, and it is position 1 restated.
@@ -712,12 +723,29 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: run time.
 - Evidence needed: that no verdict depends on the threshold's exact value. Not recorded.
 
-### I3. Stopping tolerance 1e-9
-- Status: Settled; supersedes 1e-10
-- Decided by: user (2026-09-13, T11)
+### I3. Stopping tolerance = DERIVATIVE_TOLERANCE_PER_RATE x lambda_max(H)
+- Status: **Revised 2026-09-21** (user). Was a fixed 1e-9 from 2026-09-13 (T11), which superseded
+  1e-10. The *principle* is unchanged and is the whole reason for the revision.
+- Decided by: user (2026-09-21), on the measurements in `procedure_records/tolerance_halting.md`
+  H12-H18
 - Implementational reason: 1e-10 sat inside the roundoff floor, so step counts were decided by
-  roundoff (F34). At 1e-9 step counts are reproducible and the settled state is accurate to about
-  1e-9, two orders inside the specification checks' 1e-8.
+  roundoff (F34); a tolerance must sit **above** that floor. What was not known in 2026-09-13 is
+  that **the floor is not a constant**: it is 4.547e-13·λ_max(H), flat to four significant figures
+  from θ_u = 13.4 to 61.3. So a fixed tolerance keeps a shrinking margin — 12.2 floors at λ = 181,
+  1.8 at λ = 1206, none above λ = 2177 — and F34's own pathology returns: at λ = 1206 the stopping
+  step already moved **31 steps** under a change in θ_u of one part in 1e15. Keying the tolerance
+  to λ_max(H) holds the margin fixed at 12.1 everywhere, and the drift measures **0**.
+- The old constant is not discarded but derived: 5.5e-12·λ_max is 1e-9 at λ = 182.
+- λ_max(H) is not a quantity from outside the system. `fast_time_constant` already computes it, and
+  the architecture's timescale commitment is stated in terms of it (τ_error ≤ τ_state/(4λ_max(H))),
+  so if this keying were illegitimate, D4 would be too.
+- Consequence for the checks: the settled state is accurate to **about the tolerance**, hence
+  scaling with λ, so the specification checks can no longer use a constant either. They compare
+  against `TOLERANCE_MARGIN` = 2 multiples of the tolerance actually used (user's cap, H18),
+  replacing three fixed 1e-8 thresholds that had 2.2x headroom at the evaluation network and failed
+  outright at θ_u = 52. Measured ratios: 1.00, 1.00, 1.00, 0.04.
+- The old note that the state was "two orders inside the specification checks' 1e-8" was optimistic
+  even then: 1e-9 against 1e-8 is one order, not two.
 
 ### I4. dt = τ_ε/2 with τ_ε from `fast_time_constant()`
 - Status: Settled

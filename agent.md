@@ -373,7 +373,11 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
 - Sign counts over the plane use the 1e-12 zero band (F24).
 - A fixed point from a closed form states that it is one, and names the configurations where the
   dynamics were actually integrated and how closely they agreed.
-- Stopping tolerances sit above the roundoff floor (F34, decision I3).
+- Stopping tolerances sit above the roundoff floor (F34, decision I3), and **the floor is
+  not a constant**: it is 4.547e-13 x lambda_max(H), so the tolerance is keyed to
+  lambda_max(H) too (`DERIVATIVE_TOLERANCE_PER_RATE`). Any threshold checked against a
+  quantity that the tolerance bounds is therefore expressed in MULTIPLES of the tolerance
+  actually used, never as a constant of its own (`TOLERANCE_MARGIN`).
 
 ### 5.3 Change records for multi-step work
 

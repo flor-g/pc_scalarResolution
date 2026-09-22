@@ -302,12 +302,30 @@ the pre-decision wording.
       `TypeError` until they name a tolerance, so **neither notebook executes between HA1 and
       HA4.** This is deliberate — a default would have hidden exactly the quantity A19 refuses to
       commit to — and it is why HA1's commit says `Verified: not run`.
-- [ ] **HA2. `infer`'s docstring and I3.** The 1e-9 is the same mechanism at the fast timescale, not
-      a numerical detail; it stays above the roundoff floor (F34) and keeps its value. No behaviour
-      changes.
-- [ ] **HA3. Text cell 3 §7 or §8.5**, where Eq. (20) is introduced: one passage on halting by
-      tolerance, θ\* as the asymptote the commitment names, and the ad hoc status of the value.
-      Under B10/C7 the cell takes no position on what that means for the brain.
+- [x] **HA2. `infer`'s docstring and I3** — done 2026-09-21. **The task as written is void**: it
+      said the 1e-9 "keeps its value" and "no behaviour changes", which H12 refuted. What was done:
+      `infer`'s docstring in both notebooks carries the floor law and the keyed tolerance;
+      `decisions.md` **I3 is rewritten** as `DERIVATIVE_TOLERANCE_PER_RATE x lambda_max(H)`, keeping
+      its 2026-09-13 reasoning as the *reason for* the revision rather than against it, and noting
+      that its old claim of "two orders inside the checks' 1e-8" was one order even then;
+      `decisions.md` **A19 point 5 is revised** — the fast loop's tolerance is *not* inconsequential,
+      H7 having been measured at Λ = 8 where the question does not arise; **F34 is annotated** in
+      `theta_u_learned_reach.md` to say its 8.2e-11–1.6e-10 band is the floor *at that θ_u* and the
+      law is 4.547e-13·λ_max(H), so F34's conclusion generalizes while the single fixed tolerance it
+      licensed does not; and **`agent.md` §5.2's rule** now states that the floor scales, so the
+      tolerance does, and that any threshold bounding a tolerance-linked quantity is expressed in
+      multiples of the tolerance rather than as a constant.
+- [x] **HA3. Text cell 3 §8.5** — done 2026-09-21. Three paragraphs replace the old one, whose
+      stated reason for not reaching θ\* was "a run of the length the evaluation can afford" — the
+      pre-A19 framing, in which a fixed update count was the stopping rule. Now: **how the flow
+      stops** (|Δθ_u| < tol, the only rule, reading the unit's own last step and nothing about the
+      trajectory; the fast subsystem stopping the same way at its own timescale, with a tolerance
+      scaling as λ_max(H)); **the value is ad hoc and what is reported does not use it** (θ\* as the
+      asymptote carrying no tolerance, a flow-derived θ_u labelled realizable and carrying its
+      tolerance on its face); and **two consequences stated as consequences** — a plausible
+      tolerance halts well short of θ\*, and a slow start halts at once at the tempered control.
+      Per B10/C7 the cell takes no position on whether a living system needs a tolerance for the
+      reason a floating-point computation does; it says only that this study does not fix one.
 - [ ] **HA4. Appendix B and Text cell 4's realizability block**: the recomputation Q-HA2 settles.
       Every realizable θ_u is the tolerance-halted one, reported at the demonstration tolerance and
       labelled with it; the fact that the conjunction is met well before the halt moves into prose,
