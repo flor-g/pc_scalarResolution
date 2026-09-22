@@ -362,15 +362,50 @@ the pre-decision wording.
         where the time goes**, which is exactly the assumption H8 got backwards. At Λ = 512 only
         `delta (all)` is inside the gate; `flat` and `skewed high` print the not-run-end-to-end
         line with their λ and the reason.
-        **Still open in HA4:** the prose half — Appendix B and Text cell 4's realizability
-        passage — which describes what these rows are. Not started.
-- [ ] **HA5. Couplings and numbering.** 5 (no new tag unless HA3 adds one), 6, 9 (HA1), and E3's
-      prefixes; the ToC only if a heading moves.
-- [ ] **HA6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
-      14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS. **Stored output moves here** (Q-HA1's
-      consequence), so the acceptance is no longer "the baseline, unchanged": the expected departures
-      are the realizable rows, the SLOW PARAMETER block's update line, and `cost:` lines. Any other
-      departure — above all in the θ\* tables or the plane — is reported, not explained away.
+  - [x] **HA4c. The prose half**, done 2026-09-21. Written AFTER execution, not before: the
+        passages carry ~25 numbers that the tolerance change moves, and C6 makes a number class (e)
+        until a cell prints it, so writing them from the audit first would have been two passes and
+        four C6 violations. **Appendix B**: the 60-update run to θ_u = −7.567 and "an integration of
+        affordable length does not arrive" are replaced by the halt (15 updates, θ_u = −5.285227,
+        gradient −1.997) and the division of labour — θ\* the tolerance-free asymptote, a
+        flow-derived θ_u *realizable* and carrying its tolerance. **Text cell 4**: the tolerance
+        paragraphs ("made badly at first" → "got wrong twice, in the same way"); the gate as a
+        wall-clock budget at 3e3, with every Λ = 512 row integrated at its halt though none at θ\*;
+        and the end-to-end rows as halts (54.429, 52.065, 34.695 after 3, 3, 7 updates) with the
+        conjunction's early arrival moved into its own sentence as a fact about the shape of the
+        update. 4λ now quoted at three scales: 12–46 at the thresholds, 4.8e3–1.5e4 at the halts,
+        7.9e6–9.3e6 at θ\*.
+        **A C6 violation in the agent's own first draft, caught and fixed:** it quoted the floor
+        coefficient, the old tolerance's margins, the 31-step drift and the crossing λ, all from the
+        audit. Rather than trim the argument, the floor block now **prints** the coefficient
+        (4.547e-13, 4.547e-13, 4.548e-13 at three λ) and the counterfactual — what a fixed 1e-9
+        would have bought there (0.74, 0.81, 1.82 floors, the first two **below** the floor) and the
+        λ at which it equals the floor (2199). The notebook now justifies its own tolerance rule.
+- [x] **HA5. Couplings and numbering** — done 2026-09-21. Coupling 5 quiet (no equation tag added
+      or moved); 6 quiet (no anchor added; Text cell 3's `tc3-8-5` anchors verified intact);
+      **coupling 9 verified by AST**: `learn_theta_u`, `halt_by_tolerance` and
+      `demonstration_tolerance` are source-identical across main and E1/E2, and all five new
+      constants are present in both. `infer` differs, **correctly** — E1's carries the relay — and a
+      line-by-line diff confirms the difference is the relay, the spectral guard and pre-existing
+      formatting, while the three tolerance lines are identical. **E3 PASS on both cells.** ToC
+      untouched: no heading moved.
+- [x] **HA6. Executed** 2026-09-21 (`agent.md` §5.1), main twice (the second time to print the
+      floor coefficient the prose needed). **main: 0 errors, 8 figures, 14/14, 1154 s.
+      appendix_E: 0 errors, 5 figures, 18/18, E3 PASS on both cells, 2516 s.**
+      **Departures from the recorded baseline, reported not explained away.** Runtime: 250 s → 1154 s
+      and 710 s → 2516 s, because three Λ = 512 rows are integrated end to end where one was, and
+      the flow itself is now integrated to its halt (the flat row: 80.6 s of flow against 26.4 s of
+      settling). E3's counts move because the cells print more lines — Code Cell 2 goes 203 → **221**
+      identical and Code Cell 2b 234 → **261**, while the *pattern* the baseline records is
+      unchanged: 1 changed (the pass count) and 4 inserted (the checks the relay adds) in Code Cell
+      2, nothing at all in 2b. Step counts fall everywhere the tolerance coarsens: an inference at
+      θ_u\* takes **138,390–138,398** steps against 148,081–148,104, about 6.5% fewer.
+      **C6 swept over every markdown cell of both notebooks.** Three numbers were stale *because of
+      this change* — φ_u\* at the realizable θ_u ([+71.1166,−39.1606] → **[+27.6730,−15.2423]**),
+      φ_S\*'s extremes there (139.18/−852.64 → **140.50/−856.51**), and the θ_u\* step count — all
+      three fixed. **Eight pre-existing C6 violations were found and are NOT this change's**: cell
+      10's 0.2122 and cell 12's 0.0095, 0.0445, 0.1512, 0.5477, 4096, 0.0002 and 13378, identical
+      before and after. Reported to the user; not touched here.
 - [ ] **HA7. The outline.** §5.3 (planned) states the halting account and rests its cost argument on
       H2–H4; §5.5 Limits and §3.4 carry a clause if HA3 introduces notation they use. `revisions.md`
       R22's site entries.
