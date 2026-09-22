@@ -148,6 +148,19 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   there is still no interior maximizer, and the constructor still refuses it — on float equality,
   which catches only the exact case, and that is now known to be enough.
 
+- **Finding, 2026-09-22 (Appendix F, block F.9; `audits/2026-09-22-theta-u-sign/`). Real elicited
+  priors reach the ray.** The degenerate ray was known to be reachable by varying n at the
+  stipulated μ_u (2026-09-22, Code Cell B). It is also reached by **data**: among Xiang et al.'s 96
+  items, the minimum class under artifacts contains an item with ⟨μ_u, Σ_y c_y⟩ = 0.3364 and
+  θ_u\* = +29123.3, and the maximum class under artifacts one at 0.2900 with |θ_u\*| = 966.7 at
+  Λ = 8. **Harmless for the same reason as before** — φ_S\* has one two-sided limit (Eq. 24), and
+  block F.9 prints the settled field within 4.9e-03 of it — but it has one reporting consequence
+  that bit once: **|θ_u\*| diverges near the ray, so a MEAN of θ_u\* over items is not a usable
+  statistic.** The agent reported a sign flip between two conditions on the strength of such a mean;
+  the medians are −720.9 and −769.8, the same sign. Quote medians and sign counts. **No prose site**
+  (the user, 2026-09-22): this is a fact about the dataset, not about the architecture, and
+  Appendix B already rests on the two-sided limit rather than on any margin.
+
 ### A6. Every σ fixed at 1; no precision learning
 - Status: Settled
 - Decided by: not recorded
@@ -1456,6 +1469,31 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      at S-9 **would not have worked either**. Where a mechanism claim would start, and it stops
      here: R16 bars §5.2 from characterizing the mismatch, and this bears on exposure (O2,
      Appendix B) rather than on lexical strength.
+- **Finding, 2026-09-22 (second pass): the sign flip was not real, and what replaced it is.**
+  The agent reported that θ_u\* takes opposite signs in the two image conditions of the minimum
+  class (−871 against +1605) and offered it as the mismatch's mechanism. **Both halves were wrong.**
+  (i) Those were **means** of a quantity whose sign varies item by item and whose magnitude diverges
+  near Appendix B's ray: 11 of 12 artifact items are negative, median −769.8, and the mean is
+  positive only because one near-ray item reaches +29123.3. By median the two conditions agree in
+  sign (−720.9, −769.8). (ii) The sign could not have reached the belief in any case: the settled
+  field is within 4.9e-03 of Eq. (24)'s limit, that limit is the same from either sign, and scoring
+  it instead changes no R² in the third decimal. **What survives, and is now printed (block F.9):**
+  - **Eq. (F3).** The ensemble is {χ, ker χ}, so Σ_y φ_L,y = Λ·1 and the Λ term cancels against
+    BᵀW1 = 0, leaving **Σ_y c_y = 2BᵀWℓ₀** (exact to 7.4e-13 over four Λ and all 54 scored items).
+    So **θ_u\*'s sign is fixed by the prior alone — independent of Λ and of which entry was
+    uttered.** An architectural result, new, following from A18's ensemble and Appendix C §2.
+  - **The amplification's reach.** Eq. (24) doubles the span(B) component, displacing the read-out
+    up the scale by **+1.12** under shapes and **+1.39** under artifacts — near-constant — while the
+    data are displaced +0.16 and +1.06; in the maximum class both are within 0.02 of zero.
+- **R16's bar on §5.2 is relaxed, once, by the user (2026-09-22).** *"The R16 bar on section 5.2 is
+  a soft one, so we might consider promoting a mechanism claim to be included by section 5.2 if it
+  is sufficently plausible."* Applied as **R27's successor R28**: §5.2 now states that **we think**
+  the near-constant displacement is the cause of the minimum class's misfit — the **one** causal
+  statement the section makes, in "we think" form, and explicitly as a belief about **this phase**,
+  since the class it concerns is the one whose threshold O14 would reassign to θ_A. Everything else
+  in §5.2 is still reported and not explained, and the hedge is protected: §§5.1, 5.6 and 6 may not
+  restate it as established. **B10/C7 is untouched** — the notebook prints the quantities and
+  Appendix F §6 describes them, and no cell or appendix says what the mismatch is due to.
 - **Why no position is taken, and this is the part to carry (the user, 2026-09-22).** The agent
   proposed answering (a) "no" on the strength of item 2. The user rejected it: *"H1 is posed simply
   because it sheds light on how we want to develop the model in subsequent phases… it is a bit rash

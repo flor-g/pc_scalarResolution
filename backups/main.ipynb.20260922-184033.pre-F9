@@ -85,14 +85,13 @@
     "|  | &emsp;[4. What the exclusion convention settles, and what it leaves](#appd-4) |  |\n",
     "|  | &emsp;[5. Where $\\ell_0$ enters](#appd-5) | (D5)–(D7) |\n",
     "| 21 | [**Code cell D.** The numbers Appendix D quotes. **Evaluation**](#coded) |  |\n",
-    "| 22 | [**Appendix F.** Two hypotheses about scale class, against Xiang et al. (2022)](#appf) | **(F1)–(F3)** |\n",
+    "| 22 | [**Appendix F.** Two hypotheses about scale class, against Xiang et al. (2022)](#appf) | **(F1)–(F2)** |\n",
     "|  | &emsp;[1. The two hypotheses](#appf-1) | (F1) |\n",
     "|  | &emsp;[2. What is instantiated, and what is not](#appf-2) |  |\n",
     "|  | &emsp;[3. What is measured](#appf-3) | (F2) |\n",
     "|  | &emsp;[4. What matches](#appf-4) |  |\n",
     "|  | &emsp;[5. What does not match](#appf-5) |  |\n",
-    "|  | &emsp;[6. How far the utility level reaches](#appf-6) | (F3) |\n",
-    "|  | &emsp;[7. The parity of the two entries, at this resolution](#appf-7) |  |\n",
+    "|  | &emsp;[6. The parity of the two entries, at this resolution](#appf-6) |  |\n",
     "| 23 | [**Code cell F.** The numbers Appendix F quotes. **Evaluation**](#codef) |  |\n",
     "| 24 | [**References**](#references) |  |"
    ]
@@ -845,10 +844,10 @@
    "execution_count": 1,
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:41:14.350740Z",
-     "iopub.status.busy": "2026-09-22T22:41:14.350609Z",
-     "iopub.status.idle": "2026-09-22T22:41:15.155907Z",
-     "shell.execute_reply": "2026-09-22T22:41:15.155160Z"
+     "iopub.execute_input": "2026-09-22T19:29:28.064461Z",
+     "iopub.status.busy": "2026-09-22T19:29:28.064206Z",
+     "iopub.status.idle": "2026-09-22T19:29:28.878495Z",
+     "shell.execute_reply": "2026-09-22T19:29:28.878052Z"
     }
    },
    "outputs": [],
@@ -2457,10 +2456,10 @@
    "execution_count": 2,
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:41:15.159172Z",
-     "iopub.status.busy": "2026-09-22T22:41:15.159069Z",
-     "iopub.status.idle": "2026-09-22T22:43:48.421245Z",
-     "shell.execute_reply": "2026-09-22T22:43:48.420949Z"
+     "iopub.execute_input": "2026-09-22T19:29:28.881275Z",
+     "iopub.status.busy": "2026-09-22T19:29:28.881175Z",
+     "iopub.status.idle": "2026-09-22T19:31:58.483233Z",
+     "shell.execute_reply": "2026-09-22T19:31:58.482750Z"
     }
    },
    "outputs": [
@@ -4595,10 +4594,10 @@
    "id": "3ed95146",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:43:48.422739Z",
-     "iopub.status.busy": "2026-09-22T22:43:48.422644Z",
-     "iopub.status.idle": "2026-09-22T22:55:36.919436Z",
-     "shell.execute_reply": "2026-09-22T22:55:36.918949Z"
+     "iopub.execute_input": "2026-09-22T19:31:58.484518Z",
+     "iopub.status.busy": "2026-09-22T19:31:58.484420Z",
+     "iopub.status.idle": "2026-09-22T19:43:35.583706Z",
+     "shell.execute_reply": "2026-09-22T19:43:35.583278Z"
     }
    },
    "outputs": [
@@ -4787,8 +4786,8 @@
       "    Eqs. (18)-(19) at theta_u = 54.4290: lambda_max(H) = 2964.5, tau_error <= 8.43e-05\n",
       "    conjunction off the INTEGRATED fixed point: shift for \"some\" = -0.0145 (< 0: True), P(all-region | \"some\") = 0.0359 (< 1/2: True)\n",
       "    both q criteria met by the integrated run: True; max |phi_S - phi_S*| against Eqs. (15)-(16) = 2e-08\n",
-      "    cost: 574120 Euler steps, 26.46 s (46 us/step) on the machine that ran this, the 3 update(s) of Eq. (20) a further 79.74 s\n",
-      "    cost: the same inference at theta_u* = 1521.5 would be 4.48e+08 steps, about 5.7 h, at a separation of 9.3e+06\n",
+      "    cost: 574120 Euler steps, 25.48 s (44 us/step) on the machine that ran this, the 3 update(s) of Eq. (20) a further 78.80 s\n",
+      "    cost: the same inference at theta_u* = 1521.5 would be 4.48e+08 steps, about 5.5 h, at a separation of 9.3e+06\n",
       "    (so the conjunction is demonstrated in the dynamics here, and the closed\n",
       "     form is what reports it at theta_u*, not what establishes it)\n",
       "\n"
@@ -4818,8 +4817,8 @@
       "    Eqs. (18)-(19) at theta_u = 52.0653: lambda_max(H) = 2712.8, tau_error <= 9.22e-05\n",
       "    conjunction off the INTEGRATED fixed point: shift for \"some\" = -0.0953 (< 0: True), P(all-region | \"some\") = 0.0415 (< 1/2: True)\n",
       "    both q criteria met by the integrated run: True; max |phi_S - phi_S*| against Eqs. (15)-(16) = 1e-08\n",
-      "    cost: 527295 Euler steps, 23.88 s (45 us/step) on the machine that ran this, the 3 update(s) of Eq. (20) a further 73.41 s\n",
-      "    cost: the same inference at theta_u* = 1499.4 would be 4.37e+08 steps, about 5.5 h, at a separation of 9.0e+06\n",
+      "    cost: 527295 Euler steps, 23.26 s (44 us/step) on the machine that ran this, the 3 update(s) of Eq. (20) a further 72.12 s\n",
+      "    cost: the same inference at theta_u* = 1499.4 would be 4.37e+08 steps, about 5.4 h, at a separation of 9.0e+06\n",
       "    (so the conjunction is demonstrated in the dynamics here, and the closed\n",
       "     form is what reports it at theta_u*, not what establishes it)\n",
       "\n"
@@ -4849,8 +4848,8 @@
       "    Eqs. (18)-(19) at theta_u = 34.6953: lambda_max(H) = 1205.8, tau_error <= 2.07e-04\n",
       "    conjunction off the INTEGRATED fixed point: shift for \"some\" = -0.5208 (< 0: True), P(all-region | \"some\") = 0.4361 (< 1/2: True)\n",
       "    both q criteria met by the integrated run: True; max |phi_S - phi_S*| against Eqs. (15)-(16) = 7e-09\n",
-      "    cost: 242163 Euler steps, 10.96 s (45 us/step) on the machine that ran this, the 7 update(s) of Eq. (20) a further 142.04 s\n",
-      "    cost: the same inference at theta_u* = 1407.8 would be 3.98e+08 steps, about 5.0 h, at a separation of 7.9e+06\n",
+      "    cost: 242163 Euler steps, 11.08 s (46 us/step) on the machine that ran this, the 7 update(s) of Eq. (20) a further 139.83 s\n",
+      "    cost: the same inference at theta_u* = 1407.8 would be 3.98e+08 steps, about 5.1 h, at a separation of 7.9e+06\n",
       "    (so the conjunction is demonstrated in the dynamics here, and the closed\n",
       "     form is what reports it at theta_u*, not what establishes it)\n",
       "\n"
@@ -5766,10 +5765,10 @@
    "execution_count": 4,
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:55:36.920817Z",
-     "iopub.status.busy": "2026-09-22T22:55:36.920741Z",
-     "iopub.status.idle": "2026-09-22T22:55:37.044109Z",
-     "shell.execute_reply": "2026-09-22T22:55:37.043729Z"
+     "iopub.execute_input": "2026-09-22T19:43:35.585043Z",
+     "iopub.status.busy": "2026-09-22T19:43:35.584970Z",
+     "iopub.status.idle": "2026-09-22T19:43:35.705450Z",
+     "shell.execute_reply": "2026-09-22T19:43:35.705042Z"
     }
    },
    "outputs": [
@@ -6867,10 +6866,10 @@
    "execution_count": 5,
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:55:37.045471Z",
-     "iopub.status.busy": "2026-09-22T22:55:37.045400Z",
-     "iopub.status.idle": "2026-09-22T22:55:41.219793Z",
-     "shell.execute_reply": "2026-09-22T22:55:41.219307Z"
+     "iopub.execute_input": "2026-09-22T19:43:35.706798Z",
+     "iopub.status.busy": "2026-09-22T19:43:35.706723Z",
+     "iopub.status.idle": "2026-09-22T19:43:39.840580Z",
+     "shell.execute_reply": "2026-09-22T19:43:39.840132Z"
     }
    },
    "outputs": [
@@ -8063,10 +8062,10 @@
    "id": "6e492975",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:55:41.220969Z",
-     "iopub.status.busy": "2026-09-22T22:55:41.220859Z",
-     "iopub.status.idle": "2026-09-22T22:55:41.254359Z",
-     "shell.execute_reply": "2026-09-22T22:55:41.254062Z"
+     "iopub.execute_input": "2026-09-22T19:43:39.841772Z",
+     "iopub.status.busy": "2026-09-22T19:43:39.841661Z",
+     "iopub.status.idle": "2026-09-22T19:43:39.875418Z",
+     "shell.execute_reply": "2026-09-22T19:43:39.875063Z"
     }
    },
    "outputs": [
@@ -8731,10 +8730,10 @@
    "id": "f2503001",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:55:41.255442Z",
-     "iopub.status.busy": "2026-09-22T22:55:41.255377Z",
-     "iopub.status.idle": "2026-09-22T22:55:42.989646Z",
-     "shell.execute_reply": "2026-09-22T22:55:42.989221Z"
+     "iopub.execute_input": "2026-09-22T19:43:39.876494Z",
+     "iopub.status.busy": "2026-09-22T19:43:39.876427Z",
+     "iopub.status.idle": "2026-09-22T19:43:41.608086Z",
+     "shell.execute_reply": "2026-09-22T19:43:41.607667Z"
     }
    },
    "outputs": [
@@ -9328,10 +9327,10 @@
    "id": "c6958929",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:55:42.990904Z",
-     "iopub.status.busy": "2026-09-22T22:55:42.990825Z",
-     "iopub.status.idle": "2026-09-22T22:55:43.068156Z",
-     "shell.execute_reply": "2026-09-22T22:55:43.067745Z"
+     "iopub.execute_input": "2026-09-22T19:43:41.609424Z",
+     "iopub.status.busy": "2026-09-22T19:43:41.609324Z",
+     "iopub.status.idle": "2026-09-22T19:43:41.687295Z",
+     "shell.execute_reply": "2026-09-22T19:43:41.686824Z"
     }
    },
    "outputs": [
@@ -10024,10 +10023,10 @@
    "id": "622f8083",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:55:43.069425Z",
-     "iopub.status.busy": "2026-09-22T22:55:43.069352Z",
-     "iopub.status.idle": "2026-09-22T22:55:43.520084Z",
-     "shell.execute_reply": "2026-09-22T22:55:43.519601Z"
+     "iopub.execute_input": "2026-09-22T19:43:41.688543Z",
+     "iopub.status.busy": "2026-09-22T19:43:41.688468Z",
+     "iopub.status.idle": "2026-09-22T19:43:42.123668Z",
+     "shell.execute_reply": "2026-09-22T19:43:42.123261Z"
     }
    },
    "outputs": [
@@ -10605,38 +10604,7 @@
     "\n",
     "---\n",
     "\n",
-    "### <a id=\"appf-6\" name=\"appf-6\"></a>6. How far the utility level reaches\n",
-    "\n",
-    "Two facts about $\\theta_u^\\ast$ in this configuration, both printed in block F.9.\n",
-    "\n",
-    "**Its sign is a property of the prior alone.** The ensemble is $\\{\\chi,\\ker\\chi\\}$ and\n",
-    "$\\chi+\\ker\\chi=\\mathbf 1$, so $\\sum_y\\varphi_{L,y}=\\Lambda\\mathbf 1$ and the $\\Lambda$ term\n",
-    "cancels against $B^{\\mathsf T}W\\mathbf 1=0$ (App. C §2):\n",
-    "\n",
-    "$$\\sum_y c_y=B^{\\mathsf T}W(2\\ell_0-\\Lambda\\mathbf 1)=2B^{\\mathsf T}W\\ell_0 .\n",
-    "\\tag{F3}$$\n",
-    "\n",
-    "Eq. (B2) gives $\\theta_u^\\ast$ the sign of $\\langle\\mu_u,\\sum_y c_y\\rangle$, so **that sign is\n",
-    "independent of $\\Lambda$ and of which entry was uttered** — it is fixed by $\\ell_0$. Verified to\n",
-    "$7.4\\times10^{-13}$ over four $\\Lambda$ and all 54 scored items.\n",
-    "\n",
-    "**The sign varies item by item, and a mean over items does not report it.** $|\\theta_u^\\ast|$\n",
-    "diverges near Appendix B's degenerate ray, so one near-ray item dominates an average: in the minimum\n",
-    "class under artifacts, 11 of 12 items have $\\theta_u^\\ast<0$ and the median is $-769.8$, while the\n",
-    "mean is $+1604.7$ because one item reaches $+29123.3$. Block F.9 reports medians and sign counts.\n",
-    "\n",
-    "**Where the field has reached Eq. (24)'s limit, the sign cannot reach the read-out**, since that\n",
-    "limit is the same from either sign and the gap to it falls as $1/|\\theta_u|$. In the minimum class\n",
-    "the settled field is within $4.9\\times10^{-3}$ of the limit, and scoring the limit instead of the\n",
-    "settled field changes no $R^2$ in the third decimal.\n",
-    "\n",
-    "**What the amplification does.** Eq. (24) doubles the $\\operatorname{span}B$ component of\n",
-    "$\\ell_0-\\varphi_L$, which displaces the read-out up the scale. Measured from the literal listener,\n",
-    "in mean scale position, that displacement is $+1.12$ under shapes and $+1.39$ under artifacts, while\n",
-    "the data are displaced $+0.16$ and $+1.06$. In the maximum class both are within $0.02$ of zero.\n",
-    "These are reported here; §5.2 is where the dissertation says what it makes of them.\n",
-    "\n",
-    "### <a id=\"appf-7\" name=\"appf-7\"></a>7. The parity of the two entries, at this resolution\n",
+    "### <a id=\"appf-6\" name=\"appf-6\"></a>6. The parity of the two entries, at this resolution\n",
     "\n",
     "Appendix C §5 argues from parity that the extreme-favouring axis is the even coordinate. At $n=4$\n",
     "the two absolute entries' loadings $\\kappa_y=B^{\\mathsf T}W\\chi_y$ make that concrete: their tilt\n",
@@ -10658,10 +10626,10 @@
    "id": "3188564a",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-09-22T22:55:43.521429Z",
-     "iopub.status.busy": "2026-09-22T22:55:43.521333Z",
-     "iopub.status.idle": "2026-09-22T22:55:43.892106Z",
-     "shell.execute_reply": "2026-09-22T22:55:43.891707Z"
+     "iopub.execute_input": "2026-09-22T19:43:42.125035Z",
+     "iopub.status.busy": "2026-09-22T19:43:42.124942Z",
+     "iopub.status.idle": "2026-09-22T19:43:42.429710Z",
+     "shell.execute_reply": "2026-09-22T19:43:42.429359Z"
     }
    },
    "outputs": [
@@ -10745,15 +10713,15 @@
       "          48     0.992     0.434\n",
       "          64     0.992     0.424\n",
       "          96     0.992     0.391\n",
-      "         128     0.992     0.376\n",
-      "         256     0.992     0.360\n",
-      "         512     0.992     0.352\n"
+      "         128     0.992     0.376\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
+      "         256     0.992     0.360\n",
+      "         512     0.992     0.352\n",
       "        2048     0.992     0.351\n",
       "    best on this ladder: max Lambda 8 (R^2 0.993),  min Lambda 48 (R^2 0.434)\n",
       "    a ladder BRACKETS an optimum rather than locating it. The rungs within 0.005 of\n",
@@ -10803,45 +10771,7 @@
       "  the maximum and minimum entries differ in the even (width) coordinate alone.\n",
       "  a cut at the midpoint of the log-odds scale carries no even component at all: width 1.2e-17\n",
       "  (the node on the cut is half-weighted, as Sec. 5.2's numerical note requires;\n",
-      "   left unweighted the grid reads it as 0.0194.)\n",
-      "\n",
-      "====================================================================================================\n",
-      "F.9  HOW FAR THE UTILITY LEVEL REACHES, AND WHAT FIXES theta_u*'s SIGN.\n",
-      "====================================================================================================\n",
-      "  (a) The ensemble is {chi, ker chi} and chi + ker chi = 1, so sum_y phi_L,y = Lambda * 1\n",
-      "      and the Lambda term cancels against B^T W 1 = 0 (Appendix C Sec. 2):\n",
-      "          sum_y c_y = B^T W (2 ell_0 - Lambda * 1) = 2 B^T W ell_0.\n",
-      "      Eq. (B2) gives theta_u* the sign of <mu_u, sum_y c_y>, so THAT SIGN IS A PROPERTY\n",
-      "      OF THE PRIOR ALONE -- independent of Lambda and of which entry was uttered.\n",
-      "      B^T W 1 = [0.0, -0.0]\n",
-      "      max |sum_y c_y - 2 B^T W ell_0| over 4 Lambda x 54 items: 7.4e-13\n",
-      "\n",
-      "  (b) theta_u* per condition. The SIGN VARIES ITEM BY ITEM and |theta_u*| diverges near\n",
-      "      Appendix B's degenerate ray, so a MEAN over items is not a usable statistic here;\n",
-      "      the median and the sign counts are reported instead.\n",
-      "    class         image       neg  pos      median        mean  max |theta_u*|  min |<mu,sum c>|\n",
-      "    absolute_max  shape         1   14        46.4        57.8           440.7            0.5969\n",
-      "    absolute_max  artifact     10    6       -22.0        52.7           966.7            0.2900\n",
-      "    absolute_min  shape        11    0      -720.9      -871.0          2025.0            4.8498\n",
-      "    absolute_min  artifact     11    1      -769.8      1604.7         29123.3            0.3364\n",
-      "\n",
-      "  (c) Whether the sign reaches the belief. Eq. (24)'s limit is the same from either sign,\n",
-      "      and the gap to it falls as 1/|theta_u|. Where the settled field has reached the\n",
-      "      limit, the read-out cannot depend on the sign.\n",
-      "    class         image       max |settled - Eq24|   R2 settled   R2 at Eq24\n",
-      "    absolute_max  shape                    2.6e-02        0.995        0.995\n",
-      "    absolute_max  artifact                 6.9e-02        0.991        0.991\n",
-      "    absolute_min  shape                    4.9e-03        0.058        0.058\n",
-      "    absolute_min  artifact                 2.2e-03        0.880        0.880\n",
-      "\n",
-      "  (d) What the amplification does to the read-out, against what the data do. Eq. (24)\n",
-      "      doubles the span(B) component of ell_0 - phi_L; the displacement it produces is\n",
-      "      measured from the literal listener, in mean scale position.\n",
-      "    class         image        model - q_lit   data - q_lit   model - data\n",
-      "    absolute_max  shape                -0.00          -0.08          +0.08\n",
-      "    absolute_max  artifact             -0.02          -0.15          +0.13\n",
-      "    absolute_min  shape                +1.12          +0.16          +0.97\n",
-      "    absolute_min  artifact             +1.39          +1.06          +0.32\n"
+      "   left unweighted the grid reads it as 0.0194.)\n"
      ]
     }
    ],
@@ -10993,23 +10923,6 @@
     "\n",
     "def by_class(cls, img_type=None):\n",
     "    return [k for k in SCORED if k[3] == cls and (img_type is None or k[2] == img_type)]\n",
-    "\n",
-    "\n",
-    "def settled_field(cls, cells, lam):\n",
-    "    \"\"\"The settled phi_S, its network and its theta_u*, rather than only the cell masses.\"\"\"\n",
-    "    net = appendix_f_network.respawn(base_prior=elicited_prior(cells), lexical_strength=lam)\n",
-    "    phi_L, complement = entry_fields(net, ENTRY_OF_CLASS[cls])\n",
-    "    theta_u = field_stationary_maximizer(net, [phi_L, complement])\n",
-    "    return net, field_fixed_point(net, phi_L, theta_u), theta_u, phi_L\n",
-    "\n",
-    "\n",
-    "def amplification_limit(net, phi_L):\n",
-    "    \"\"\"Eq. (24): phi_S* -> (1/2)(I + B B^T W)(ell_0 - phi_L) as |theta_u| -> infinity.\n",
-    "\n",
-    "    The limit is the SAME from either sign of theta_u (Appendix B), so where the settled field\n",
-    "    has reached it, theta_u*'s sign cannot reach the read-out.\"\"\"\n",
-    "    f = net.base_log_prior - phi_L\n",
-    "    return 0.5 * (f + torch.mv(net.basis, net.project(f)))\n",
     "\n",
     "\n",
     "def appendix_f_report():\n",
@@ -11281,91 +11194,6 @@
     "    print(\"  (the node on the cut is half-weighted, as Sec. 5.2's numerical note requires;\")\n",
     "    print(\"   left unweighted the grid reads it as \"\n",
     "          f\"{float(appendix_f_network.project((_zeta_F < 0.0).to(_zeta_F.dtype))[1]):.4f}.)\")\n",
-    "\n",
-    "    print()\n",
-    "    print(\"=\" * 100)\n",
-    "    print(\"F.9  HOW FAR THE UTILITY LEVEL REACHES, AND WHAT FIXES theta_u*'s SIGN.\")\n",
-    "    print(\"=\" * 100)\n",
-    "    print(\"  (a) The ensemble is {chi, ker chi} and chi + ker chi = 1, so sum_y phi_L,y = Lambda * 1\")\n",
-    "    print(\"      and the Lambda term cancels against B^T W 1 = 0 (Appendix C Sec. 2):\")\n",
-    "    print(\"          sum_y c_y = B^T W (2 ell_0 - Lambda * 1) = 2 B^T W ell_0.\")\n",
-    "    print(\"      Eq. (B2) gives theta_u* the sign of <mu_u, sum_y c_y>, so THAT SIGN IS A PROPERTY\")\n",
-    "    print(\"      OF THE PRIOR ALONE -- independent of Lambda and of which entry was uttered.\")\n",
-    "    print(f\"      B^T W 1 = {[round(float(x), 12) for x in appendix_f_network.project(torch.ones_like(_zeta_F))]}\")\n",
-    "    worst = 0.0\n",
-    "    for cls in CLASSES_F:\n",
-    "        for lam in (2.0, 8.0, 48.0, 512.0):\n",
-    "            for k in by_class(cls):\n",
-    "                net, _, _, phi_L = settled_field(cls, xiang_items[k][\"prior\"], lam)\n",
-    "                chi = exclusion_indicator(ENTRY_OF_CLASS[cls], net.zeta, net.theta_L)\n",
-    "                total = (net.project(net.base_log_prior - lam * chi)\n",
-    "                         + net.project(net.base_log_prior - lam * (1.0 - chi)))\n",
-    "                worst = max(worst, float((total - 2.0 * net.project(net.base_log_prior))\n",
-    "                                         .abs().max()))\n",
-    "    print(f\"      max |sum_y c_y - 2 B^T W ell_0| over 4 Lambda x {len(SCORED)} items: {worst:.1e}\")\n",
-    "\n",
-    "    print()\n",
-    "    print(\"  (b) theta_u* per condition. The SIGN VARIES ITEM BY ITEM and |theta_u*| diverges near\")\n",
-    "    print(\"      Appendix B's degenerate ray, so a MEAN over items is not a usable statistic here;\")\n",
-    "    print(\"      the median and the sign counts are reported instead.\")\n",
-    "    print(f\"    {'class':<14}{'image':<10}{'neg':>5}{'pos':>5}{'median':>12}{'mean':>12}\"\n",
-    "          f\"{'max |theta_u*|':>16}{'min |<mu,sum c>|':>18}\")\n",
-    "    for cls in CLASSES_F:\n",
-    "        for img in (\"shape\", \"artifact\"):\n",
-    "            keys = by_class(cls, img)\n",
-    "            thetas, couplings_seen = [], []\n",
-    "            for k in keys:\n",
-    "                net, _, th, _ = settled_field(cls, xiang_items[k][\"prior\"], FITTED_LAMBDA[cls])\n",
-    "                thetas.append(th)\n",
-    "                couplings_seen.append(abs(2.0 * float(net.dot(net.mu_u,\n",
-    "                                                              net.project(net.base_log_prior)))))\n",
-    "            order = sorted(thetas)\n",
-    "            mid = (order[len(order) // 2] if len(order) % 2\n",
-    "                   else 0.5 * (order[len(order) // 2 - 1] + order[len(order) // 2]))\n",
-    "            print(f\"    {cls:<14}{img:<10}{sum(1 for t in thetas if t < 0):>5}\"\n",
-    "                  f\"{sum(1 for t in thetas if t > 0):>5}{mid:>12.1f}\"\n",
-    "                  f\"{sum(thetas)/len(thetas):>12.1f}{max(abs(t) for t in thetas):>16.1f}\"\n",
-    "                  f\"{min(couplings_seen):>18.4f}\")\n",
-    "\n",
-    "    print()\n",
-    "    print(\"  (c) Whether the sign reaches the belief. Eq. (24)'s limit is the same from either sign,\")\n",
-    "    print(\"      and the gap to it falls as 1/|theta_u|. Where the settled field has reached the\")\n",
-    "    print(\"      limit, the read-out cannot depend on the sign.\")\n",
-    "    print(f\"    {'class':<14}{'image':<10}{'max |settled - Eq24|':>22}{'R2 settled':>13}\"\n",
-    "          f\"{'R2 at Eq24':>13}\")\n",
-    "    for cls in CLASSES_F:\n",
-    "        for img in (\"shape\", \"artifact\"):\n",
-    "            keys = by_class(cls, img)\n",
-    "            gap, ps, pl, obs = 0.0, [], [], []\n",
-    "            for k in keys:\n",
-    "                item = xiang_items[k]\n",
-    "                net, phi_S, _, phi_L = settled_field(cls, item[\"prior\"], FITTED_LAMBDA[cls])\n",
-    "                lim = amplification_limit(net, phi_L)\n",
-    "                gap = max(gap, float((phi_S - lim).abs().max()))\n",
-    "                ms, ml = cell_masses(net, phi_S), cell_masses(net, lim)\n",
-    "                for i in range(5):\n",
-    "                    if item[\"observed\"][i]:\n",
-    "                        ps.append(ms[i]); pl.append(ml[i]); obs.append(item[\"data\"][i])\n",
-    "            print(f\"    {cls:<14}{img:<10}{gap:>22.1e}{r_squared(ps, obs):>13.3f}\"\n",
-    "                  f\"{r_squared(pl, obs):>13.3f}\")\n",
-    "\n",
-    "    print()\n",
-    "    print(\"  (d) What the amplification does to the read-out, against what the data do. Eq. (24)\")\n",
-    "    print(\"      doubles the span(B) component of ell_0 - phi_L; the displacement it produces is\")\n",
-    "    print(\"      measured from the literal listener, in mean scale position.\")\n",
-    "    print(f\"    {'class':<14}{'image':<10}{'model - q_lit':>16}{'data - q_lit':>15}\"\n",
-    "          f\"{'model - data':>15}\")\n",
-    "    for cls in CLASSES_F:\n",
-    "        for img in (\"shape\", \"artifact\"):\n",
-    "            keys = by_class(cls, img)\n",
-    "            q = d = m = 0.0\n",
-    "            for k in keys:\n",
-    "                item = xiang_items[k]\n",
-    "                net, phi_S, _, phi_L = settled_field(cls, item[\"prior\"], FITTED_LAMBDA[cls])\n",
-    "                q += mean_position(cell_masses(net, net.base_log_prior - phi_L)) / len(keys)\n",
-    "                m += mean_position(cell_masses(net, phi_S)) / len(keys)\n",
-    "                d += mean_position(item[\"data\"]) / len(keys)\n",
-    "            print(f\"    {cls:<14}{img:<10}{m - q:>+16.2f}{d - q:>+15.2f}{m - d:>+15.2f}\")\n",
     "\n",
     "\n",
     "appendix_f_report()"

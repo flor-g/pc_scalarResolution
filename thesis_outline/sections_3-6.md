@@ -107,7 +107,8 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 **3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet) → **3,610**
 (§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard) → **3,760** (§5.2 raised 400 → 550 on
 2026-09-22 at T10, under S-6's standing permission for this section) → **3,880** (§5.2 550 → 650 and
-§6 165 → 185 the same day, for R27's reservation on H1). The "was" column is the 2,400 allocation this outline was written to.
+§6 165 → 185 the same day, for R27's reservation on H1) → **4,030** (§5.2 650 → 800 the same day,
+for R28's mechanism and its one hedged causal statement). The "was" column is the 2,400 allocation this outline was written to.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
@@ -125,15 +126,15 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 | 4.4 The five priors | 220 | **285** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,500** | |
+| **5. Discussion** | 705 | **1,650** | |
 | 5.1 What an alternatives level would have to supply | 390 | **350** | The specification, and what is left undone |
-| 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **650** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10 (the scope exclusion, the ensemble constraint, the instinct), then → 650 on 2026-09-22 for **R27**: why no position is taken on H1, and what the maximum class does not identify |
+| 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **800** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **3,880** | |
+| **Total** | **2,400** | **4,030** | |
 
 **What this table does not do.** §§3.6, 4.6, 5.3 and 5.4 are new sections whose content is planned
 in `revisions.md` §5 and whose bodies are not written in this outline yet; Limits and Predictions
@@ -605,7 +606,7 @@ remain, and naming them is the point of saying so:
   alternatives computation in the present model — $\varphi_L$ is a function of the observed
   utterance alone, $g_S$ reaches the belief only through $\varphi_u$, and no term in Eq. (13)
   involves any unobserved utterance — and they settle nothing about human processing.
-## 5.2 Scale structure: two hypotheses, and what the comparison shows (about 650 words)
+## 5.2 Scale structure: two hypotheses, and what the comparison shows (about 800 words)
 
 Written against Code Cell F's executed output (Appendix F). Every number below is printed there;
 every number attributed to Xiang et al. is cited and printed by no cell (S-5). **No sentence in this
@@ -672,6 +673,32 @@ section says what any mismatch is due to** (R16).
   $+0.41$ measured against $+0.44$ and $+0.22$ modelled. And the model displaces belief further from
   the elicited prior than the data do in both conditions ($+3.37$ against $+2.40$ under shapes,
   $+2.43$ against $+2.11$ under artifacts). **Reported, and not explained.**
+- **How far the utility level reaches, and what fixes $\theta_u^\ast$'s sign (App. F §6, F.9).**
+  Two facts, both printed. First, the ensemble is $\{\chi,\ker\chi\}$, so
+  $\sum_y\varphi_{L,y}=\Lambda\mathbf 1$ and the $\Lambda$ term cancels against
+  $B^{\mathsf T}W\mathbf 1=0$, leaving $\sum_y c_y=2B^{\mathsf T}W\ell_0$ (Eq. F3, exact to
+  $7.4\times10^{-13}$). Since Eq. (B2) gives $\theta_u^\ast$ the sign of
+  $\langle\mu_u,\sum_y c_y\rangle$, **that sign is fixed by the prior alone — independent of
+  $\Lambda$ and of which entry was uttered.** Second, it does not follow that the sign reaches the
+  belief: in the minimum class the settled field is within $4.9\times10^{-3}$ of Eq. (24)'s limit,
+  which is **the same from either sign**, and scoring that limit instead changes no $R^2$ in the
+  third decimal. *(Note for the notebook: $|\theta_u^\ast|$ diverges near Appendix B's degenerate
+  ray, so a mean over items is not a usable statistic — 11 of 12 artifact items in the minimum class
+  have $\theta_u^\ast<0$, median $-769.8$, while the mean is $+1604.7$ on one item's $+29123.3$.
+  Quote medians.)*
+- **What the amplification does, and what we think it is the cause of.** Eq. (24) doubles the
+  $\operatorname{span}B$ component of $\ell_0-\varphi_L$, displacing the read-out up the scale.
+  Measured from the literal listener, that displacement is $+1.12$ under shapes and $+1.39$ under
+  artifacts — **near-constant** — while the data are displaced $+0.16$ and $+1.06$. In the maximum
+  class both are within $0.02$ of zero. **We think this near-constant displacement is the cause of
+  the minimum class's misfit**: the amplification the utility level supplies is close to insensitive
+  to the manipulation the experiment actually ran, so it overshoots by $+0.97$ where the data barely
+  move and by $+0.32$ where they move nearly as far.
+  **Say it as a belief about this phase, and not more.** It is the one causal statement §5.2 makes,
+  and it is made under the reservation above: the class it concerns is the one whose threshold sits
+  a resolution step inside the *other* endpoint — the boundary §5.2's own instinct would reassign to
+  $\theta_A$ — so whether the account survives an architecture with two thresholds is not something
+  this phase can show. It is offered as what we currently think, not as a result.
 - **What the comparison is worth.** Xiang et al. find that Bayesian pragmatics models what is
   *communicated* well but threshold judgments poorly, especially for absolute adjectives, and
   conclude that Bayesian reasoning must be combined with the semantic conventions governing
@@ -692,7 +719,8 @@ section says what any mismatch is due to** (R16).
 - **Calibrate the claim, in both directions.** $\Lambda$ is fitted and labelled as fitted; nothing
   else here is, and a ladder **brackets** an optimum rather than locating it. The section must not
   credit H1 with more than the ordering it shows, and must not treat the residual as telling against
-  it either. §4.2's second guard applies here too: the
+  it either. The one causal statement above is hedged on purpose and stays hedged: it is what we
+  think, about this phase, and nothing in §5.1, §5.6 or §6 may restate it as established. §4.2's second guard applies here too: the
   denotation $n$ that fixes $\theta_L$ is stipulated, and §4's readings move with it — this section
   runs at $n=4$ because the authors' scale has five positions, a choice about their paradigm and not
   a discovery about the predicates.

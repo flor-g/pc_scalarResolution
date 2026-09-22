@@ -1,0 +1,62 @@
+====================================================================================================
+1.  WHY THE SIGN IS NOT A PROPERTY OF THE ENTRY.  The ensemble is {chi, ker chi} and
+    chi + ker chi = 1 exactly, so sum_y phi_L,y = Lambda * 1 and
+        sum_y c_y = B^T W (2 ell_0 - Lambda * 1) = 2 B^T W ell_0,
+    because B^T W 1 = 0 (the basis is orthogonal to the constant). Eq. (B2) gives theta_u*
+    the sign of <mu_u, sum c>, so THAT SIGN IS FIXED BY THE PRIOR ALONE -- independent of
+    Lambda and of which entry was uttered.
+====================================================================================================
+    B^T W 1 = [0.0, -0.0]
+    max |sum_y c_y  -  2 B^T W ell_0| over 4 Lambda x 2 classes x 6 items: 5.04e-13
+
+====================================================================================================
+2.  THE SIGN PER CONDITION, and whether it moves with Lambda. <mu_u, sum c> = 2<mu_u, B^T W ell_0>.
+====================================================================================================
+    class         image        n   mean <mu,sum c>  items < 0   sgn @ L=2  sgn @ L=48 sgn @ L=512
+    absolute_max  shape       15            9.4182          1       mixed       mixed       mixed
+    absolute_max  artifact    16           -4.2923         10       mixed       mixed       mixed
+    absolute_min  shape       11          -16.6043         11           -           -           -
+    absolute_min  artifact    12          -11.1370         11       mixed       mixed       mixed
+
+====================================================================================================
+3.  BUT DOES THE SIGN REACH THE BELIEF?  Eq. (24)'s limit is the SAME from both signs, and
+    the gap falls as 1/|theta_u|. If the model already sits at that limit, the sign is a
+    red herring and the difference between conditions is in ell_0 - phi_L, not in theta_u.
+====================================================================================================
+    class         image       mean |theta_u*|   max |model - Eq24|   model R2   Eq24 R2  q_lit R2
+    absolute_max  shape                2578.0             2.82e-03      0.995     0.995     0.995
+    absolute_max  artifact             5507.8             2.42e-03      0.990     0.990     0.990
+    absolute_min  shape                 871.0             4.91e-03      0.058     0.058     0.271
+    absolute_min  artifact             3249.2             2.21e-03      0.880     0.880     0.044
+
+====================================================================================================
+4.  WHAT THE LIMIT ACTUALLY DOES.  Eq. (24) doubles the span(B) component of ell_0 - phi_L
+    and halves nothing else. Mean scale position of the field's read-out at each stage.
+====================================================================================================
+    class         image        prior   q_lit    Eq24   model    data   q_lit->Eq24   Eq24 vs data
+    absolute_max  shape         4.32    5.00    5.00    5.00    4.92         +0.00          +0.08
+    absolute_max  artifact      3.52    5.00    5.00    5.00    4.83         +0.00          +0.17
+    absolute_min  shape         1.19    3.44    4.56    4.56    3.59         +1.12          +0.97
+    absolute_min  artifact      2.31    3.36    4.74    4.74    4.42         +1.39          +0.32
+
+====================================================================================================
+5.  THE MEAN theta_u* WAS A MEANINGLESS STATISTIC.  Sign varies ITEM BY ITEM, and near the
+    degenerate ray |theta_u*| blows up, so one item can dominate an average of a quantity
+    whose sign is not constant. Median and sign counts instead, at Lambda = 48.
+====================================================================================================
+    class         image       neg  pos  mean theta_u*      median  min <mu,sum c> max |theta_u*|
+    absolute_max  shape         1   14         1840.3      1243.5          0.5969        16282.3
+    absolute_max  artifact     10    6         1659.0      -674.9          0.2900        33571.7
+    absolute_min  shape        11    0         -871.0      -720.9          4.8498         2025.0
+    absolute_min  artifact     11    1         1604.7      -769.8          0.3364        29123.3
+
+====================================================================================================
+6.  THE MECHANISM THAT DOES REACH THE BELIEF.  Eq. (24) doubles the span(B) component, which
+    displaces the read-out UP the scale by a near-constant amount. The data are displaced by
+    very different amounts. Displacement from q_lit, in mean scale position.
+====================================================================================================
+    class         image        model - q_lit   data - q_lit   overshoot
+    absolute_max  shape                +0.00          -0.08       +0.08
+    absolute_max  artifact             +0.00          -0.17       +0.17
+    absolute_min  shape                +1.12          +0.16       +0.97
+    absolute_min  artifact             +1.39          +1.06       +0.32
