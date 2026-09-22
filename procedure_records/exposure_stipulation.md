@@ -7,9 +7,11 @@ ensemble's **weights**) and, from the same day, **A18** and **O8**'s ensemble ha
 **Task IDs here are `X0`–`X8`.** `N0`–`N8` (`resolution_naming.md`) and `T0`–`T16`
 (`scale_classes_hypothesis.md`) are live at the same time; the prefixes keep them apart.
 
-**Status, 2026-09-21: approved, nothing implemented.** No question is outstanding. The user's
-standing instruction on the N list — do not start implementing — is taken to cover this one too
-until they say otherwise.
+**Status, 2026-09-22: APPLIED.** All nine tasks closed; commit recorded at X5 below. Markdown
+only, so no coupling fired and neither notebook was re-executed — verified rather than assumed
+(X4). One correction to this record's own site table: Y2's pointer said "Text cell 3 §3, item 3",
+but the σ sentence and the "exposure ensemble" clause are in Text cell 3's **preamble** items 3 and
+6, not in §3, whose item 3 is the utility basis $B$.
 
 ---
 
@@ -68,20 +70,26 @@ here is printed, so C6 does not arise and neither notebook is re-executed for th
 
 ## 4. Tasks, in order
 
-- [ ] **X0. Checkpoint** (`agent.md` §4.2). Record `git rev-parse --short HEAD`.
-- [ ] **X1. Appendix B (Y1).** The stipulation, the σ parallel, the later-phase note, and the
+- [x] **X0. Checkpoint** — clean tree at `f64d32e` (2026-09-22).
+      *(original:)* **X0. Checkpoint** (`agent.md` §4.2). Record `git rev-parse --short HEAD`.
+- [x] **X1. Appendix B (Y1)** — done. The stipulation and the σ parallel sit with the prior-over-utterances sentence; the asymmetry went to the per-presentation passage instead, since that is the place it would be felt. No claim about how far a non-uniform p(y) moves θ\*.
+      *(original:)* **X1. Appendix B (Y1).** The stipulation, the σ parallel, the later-phase note, and the
       asymmetry of §2 in one short passage. It does **not** claim how far a non-uniform p(y) would
       move θ_u\*; that was option (d) and was not adopted. Position reserved (composition guide
       Entry 3b).
-- [ ] **X2. Text cell 3 §3 (Y2).** One sentence beside item 3, in item 3's own register, and the
+- [x] **X2. Text cell 3, preamble items 3 and 6 (Y2)** — done; see the site correction above.
+      *(original:)* **X2. Text cell 3 §3 (Y2).** One sentence beside item 3, in item 3's own register, and the
       "uniform at this phase" clause in item 6. No new equation and no new notation: p(y) is already
       named in Appendix B, and if the sentence needs it here it is defined at first use.
-- [ ] **X3. The outline (Y3, Y4) and `revisions.md` (Y5).** Written after X1 and X2, so the paper's
+- [x] **X3. The outline (Y3, Y4) and `revisions.md` (Y5)** — done: §5.6's exposure prediction now reads as one about departures from a stipulated uniform, §5.5 Limits carries both stipulations, and **R24** records the change.
+      *(original:)* **X3. The outline (Y3, Y4) and `revisions.md` (Y5).** Written after X1 and X2, so the paper's
       wording follows the notebook's.
-- [ ] **X4. Couplings.** None is expected to fire: markdown only, no tag added, no anchor added,
+- [x] **X4. Couplings** — confirmed, not assumed: three markdown cells changed and no code cell; equation tags 61 → 61 with none added or removed; no anchor added or removed; stored outputs 41 → 41. So couplings 5, 6 and 9 are quiet, E3 cannot fire, the ToC is unaffected and **no execution is needed**.
+      *(original:)* **X4. Couplings.** None is expected to fire: markdown only, no tag added, no anchor added,
       `code cell 1` untouched, E3 unaffected. Confirm rather than assume, and confirm the ToC needs
       no change (no heading and no equation range moves).
-- [ ] **X5. Commit.** One logical change per commit, hashes recorded above. **No execution**, so the
+- [x] **X5. Commit** — done.
+      *(original:)* **X5. Commit.** One logical change per commit, hashes recorded above. **No execution**, so the
       message says `Verified: not run`, with the reason.
 
 **Sequencing note.** If this list runs in the same pass as `resolution_naming.md` N0–N8, X1 and X2
@@ -101,19 +109,22 @@ one; under §5.1's proposed level, with at most two entries per level, it become
 instead — and that is compatible with O14, since complementarity is **within** a level and O14's
 asymmetry is **across** levels.
 
-- [ ] **X6. Appendix B and Appendix D.** Appendix B's ensemble passage says what the ensemble
+- [x] **X6. Appendix B and Appendix D** — done. Appendix D §2 takes the membership stipulation, beside Eq. (D2) where ker is defined and where ker E_all = {1} makes the point; Appendix B states membership beside weighting.
+      *(original:)* **X6. Appendix B and Appendix D.** Appendix B's ensemble passage says what the ensemble
       contains, beside X1's sentence on how it is weighted, so membership and weights are stated
       together and both are labelled as this phase's stipulations. Appendix D §2, which already
       defines ker and tabulates where it escapes the family, gains the one sentence that the
       inventory holds {χ, ker χ} for any entry — it is the notation's home, and the E_all row is the
       case that makes the point.
-- [ ] **X7. §5.1 and §5.2.** §5.1's cascade is already written ⟨E_some, ker E_some⟩ and
+- [x] **X7. §5.1 and §5.2** — done. §5.1's cascade is connected to A18 in one clause. §5.2's half went **into T10's task line** rather than into §5.2's prose, because T10 rewrites that section wholesale and prose written now would be overwritten; the constraint is therefore where the writer will read it.
+      *(original:)* **X7. §5.1 and §5.2.** §5.1's cascade is already written ⟨E_some, ker E_some⟩ and
       ⟨E_all, ker E_all⟩; one clause connects it to A18 so the design and the commitment read as one
       claim. §5.2 states the ensemble as the inventory's, **not** as the experiment's: F20 shows the
       latin square denies the exposure reading, and the user's principle is that inventory follows
       from exposure but not conversely. It also says that ant coincides with ker for these absolute
       classes in this phase, with no thesis about antonymy.
-- [ ] **X8. Records.** `decisions.md` A18 and O8 are written (2026-09-21); `revisions.md` gains the
+- [x] **X8. Records** — done: R24 in `revisions.md`, the wording constraint on `scale_classes_hypothesis.md` T10, and this block.
+      *(original:)* **X8. Records.** `decisions.md` A18 and O8 are written (2026-09-21); `revisions.md` gains the
       site entries for X6 and X7; `scale_classes_hypothesis.md` T2's block 1 and T10's prose carry
       the wording constraint of X7.
 

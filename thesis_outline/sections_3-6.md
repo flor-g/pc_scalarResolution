@@ -516,7 +516,9 @@ remaining obligations answerable rather than open.
   binarily, and the comparison it invites is $O(n)$ against $O(\log n)$ in the granularity — which
   at $n=10$, let alone $202$, is not a distinction without a difference.
 - **The inventory at any one level is binary.** In place of a flat $\{$*no*, *some*, *all*$\}$, the
-  same three-way partition is reached by a cascade of two complementary oppositions: at the
+  same three-way partition is reached by a cascade of two complementary oppositions — which is the
+  design reading of the commitment Appendix D §2 states, that the inventory holds at least
+  $\{\chi,\ker\chi\}$ for any entry $\chi$: at the
   utterance level $\langle E_{\textit{some}},\ \ker E_{\textit{some}}\rangle$, and then, on the
   domain that leaves, $\langle E_{\textit{all}},\ \ker E_{\textit{all}}\rangle$ with the kernel
   taken relative to that domain. Appendix D's Eq. (D2) already supplies the kernel relation.
@@ -653,11 +655,19 @@ remain, and naming them is the point of saying so:
 - $m=2$ is necessary at a flat inventory; **sufficiency is open**.
 - Multidimensional semantics with sharp lexical boundaries is a declared non-compatibility.
 - Not learned: $\Lambda$, $\theta_L$, $B$, $\mu_u$, the inventory.
+- **Two stipulations of this phase, labelled as such and not built otherwise.** Results are
+  reported at **uniform exposure** — $p(y)$ is not a variable of the implementation but is implicit
+  in the batched sum, and no frequency-bearing version is built. And the inventory is taken to hold
+  at least $\{\chi,\ker\chi\}$ for any entry; membership follows from exposure somewhere, not
+  from exposure in a given experiment.
 - Tier B facts recorded here, position reserved.
 ## 5.6 Predictions (about 60 words, was §5.4)
  
 - **Exposure frequency should shift strengthening.** $\theta_u^\ast$ is set by
-  $3\,\mathbb E_{p(y)}[c_y]$, so non-uniform exposure to the inventory moves it. No analogue in RSA.
+  $3\,\mathbb E_{p(y)}[c_y]$, so non-uniform exposure to the inventory moves it. **This is a
+  prediction about departures from a stipulated uniform**, which is what makes it a prediction at
+  all: uniform $p(y)$ is this phase's stipulation (Appendix B), not a result, and the model is not
+  run at any other exposure. No analogue in RSA.
 - **Granularity should shift the override threshold**, $\Lambda_{\mathrm{crit}}\approx\alpha\log2n$.
 - **Scales providing interior cuts should partition the log-odds coordinate near-uniformly**, with
   *most* at $\zeta=0$ the confirming instance; ⟨*some*, *most*, *all*⟩ is where the search thesis of

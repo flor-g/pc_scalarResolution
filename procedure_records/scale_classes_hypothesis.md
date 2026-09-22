@@ -530,7 +530,15 @@ both regenerate the ToC, so whichever runs second re-checks cell indices before 
       configuration; the treatment of Λ; *t*, if it enters; the data file and its provenance;
       O13's status. Quantity-trace (register E) entries for every quantity Code Cell F prints, each
       assigned a class under §3.3. O8 gains the pointer.
-- [ ] **T10. §5.2 prose**, written against the executed output, not before. §5.2 goes to about 400 words and the §§3–6 total to 3,200 (S-6). Confirm the instinct sentence's placement with the user. Also
+- [ ] **T10. §5.2 prose**, written against the executed output, not before.
+      **Wording constraint from X7 (`exposure_stipulation.md`, applied 2026-09-22).** §5.2 states
+      the ensemble as **the inventory's, not the experiment's**. F20 records that Xiang et al.'s
+      latin square denies the exposure reading — no participant saw both adjectives of an image set
+      — and the user's principle is that presence in the inventory follows from exposure somewhere
+      but **not** conversely, so what a participant was shown constrains nothing about membership.
+      §5.2 may also say that for these absolute classes, in this phase, $\mathrm{ant}$ coincides
+      with $\ker$; it may **not** advance a thesis about antonymy, which is a lexical accident of
+      two words sharing a scale and is not an involution (A18). §5.2 goes to about 400 words and the §§3–6 total to 3,200 (S-6). Confirm the instinct sentence's placement with the user. Also
       the §5.2 row of the word table in `sections_3-6.md` lines 81–103 and its scope-tier row at
       line 60.
 - [ ] **T11. Background §1.7.** The prior-manipulation bullet (F12), and the Q3b sentence softened
