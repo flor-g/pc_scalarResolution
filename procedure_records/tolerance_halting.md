@@ -519,3 +519,52 @@ the choice is the user's.
   So §9's option 2 is restated: **`derivative_tolerance = max(1e-9, k·λ_max(H))`**, k a few
   multiples of 4.55e-13. Below θ_u ≈ 46.6 the `max` returns 1e-9 and **no printed step count moves**.
   Still the user's decision (I3).
+
+- **H14. AUDIT of `derivative_tolerance = k·λ_max(H)`** (2026-09-21, `scaled_fast_tolerance.py`,
+  `scaled_fast_tolerance_output.txt`), run at the user's request. Margin = k / 4.547e-13 is how far
+  above the roundoff floor the test sits; today's 1e-9 is a margin of **12.2 at λ = 180.8** and
+  **1.8 at λ = 1206**, which is the whole problem — the margin shrinks as λ grows and vanishes at
+  λ = 2177.
+
+  **1. It converges everywhere, including where 1e-9 cannot.** θ_u = 52.07 and 61.27 run to the cap
+  today; at every k tested they converge.
+
+  **2. Cost stays linear and is slightly cheaper.** Steps per unit λ: 216–220 today, **181–224**
+  across all k and θ_u. Nothing blows up.
+
+  **3. The fixed point is as accurate as the tolerance**, which is the real trade. At k = 5.5e-12:
+  |φ_S − φ_S\*| runs 1.6e-10 (θ_u = 5.29) to 2.1e-8 (θ_u = 61.27), against 9.5e-10 to 1.0e-9 today
+  where today works at all. Still four orders below anything reported (results carry 4 decimals).
+
+  **4. Reproducibility IMPROVES — the opposite of the expected risk.** F34's pathology is a
+  tolerance inside the roundoff band making the stopping step depend on which roundoff-level sample
+  lands below it. Nudging θ_u by one part in 1e15:
+
+  | θ_u | 1e-9 (today) | k = 2.0e-12 | k = 5.5e-12 | k = 2.0e-11 |
+  |---|---|---|---|---|
+  | 34.70 | **31 steps** | 1 | **0** | **0** |
+  | 13.37 | −1 | 1 | **0** | **0** |
+
+  Today's fixed tolerance is *already* drifting at θ_u = 34.70, where its margin is down to 1.8.
+  The scaled rule holds the margin constant and the drift goes to zero. **I3's own goal is better
+  served by the scaled rule than by the constant it chose.**
+
+  **5. What constrains k from above: Part A.** `check_specification` asserts
+  `max(worst_state, worst_utility) < 1e-8` and `worst_dense < 1e-8` for integrated-against-closed-form
+  agreement. Since the gap equals the tolerance, at the default net's θ_u\* = −28.44 (λ = 810.8):
+
+  | k | margin | tolerance there | gap | against Part A's 1e-8 |
+  |---|---|---|---|---|
+  | 2.0e-12 | 4.4 | 1.62e-9 | 1.6e-9 | passes, 6× headroom, but 1-step drift |
+  | **5.5e-12** | **12.1** | **4.46e-9** | **4.5e-9** | **passes, 2.2× headroom, no drift** |
+  | 2.0e-11 | 44.0 | 1.62e-8 | 1.6e-8 | **FAILS** |
+
+  **6. Every stored step count moves**, in both directions — at Λ = 8, θ_u = 5.29 the scaled rule is
+  *stricter* than 1e-9 (margin 73 today) and takes 5,879 steps against 5,450. So this is a full
+  re-execution of both notebooks, not a localized change.
+
+  **Recommendation: k = 5.5e-12**, because it is not a new choice — it is *today's margin at the
+  θ_u I3 was calibrated at*, made scale-free. **One caveat to carry:** Part A's own 1e-8 thresholds
+  are then fixed constants sitting above a gap that scales with λ, which is the same mistake one
+  level up. If the rule is adopted, those thresholds should scale too, or the headroom will shrink
+  again as soon as a larger θ_u is integrated.
