@@ -287,9 +287,30 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   `delta_readout_report` in Code Cell 2.
 - Evidence: `procedure_records/d9_delta_readout.md` F1-F4.
 
-### A19. Halting is by tolerance; the tolerance is ad hoc, and nothing reported depends on it
-- Status: Settled
-- Decided by: the **user** (2026-09-21), position 1 of the three the audit put to them.
+### A19. Halting by tolerance: a proposed direction, not a commitment
+- Status: **DEMOTED 2026-09-22 by the user, from a commitment to a direction.** Settled as of
+  2026-09-21 in everything below; what changed is its *standing*, not its content.
+- **Why the demotion (user, 2026-09-22).** The fast loop's tolerance, as this project now defines
+  it, is keyed to λ_max(H) (I3, revised), and **that is a locality problem of the same kind as
+  D4** — a quantitative dependence on a global spectral quantity, inside an assumption Bogacz makes
+  only qualitatively. **The violation is not settled.** So the paper does not present
+  halting-by-tolerance as a commitment. It **admits the locality problem** and offers the
+  hypothesis as **a direction pointed to as a potential resolution of the halting problem**, which
+  is what D12 records.
+- **What the demotion does not concede.** The halting problem itself is **real for the organism as
+  well as for the simulation** (the user, 2026-09-22), so it may not be written off as an artefact
+  of batching or of the deterministic uniform ensemble. The agent had proposed that framing on the
+  strength of Bogacz's own remark that parameters never converge under trial-by-trial updating;
+  the user rejected it as a complete account. The Bogacz reading still belongs in D12 as context,
+  not as a dissolution of the problem.
+- **An asymmetry to preserve in the wording.** The locality problem is in the **fast** loop's
+  tolerance, because that one is keyed to λ_max(H). The **slow** rule, |Δθ_u| < tol, reads only the
+  magnitude of the update the plasticity rule already forms and carries no such debt. The paper
+  should say which of the two is clean rather than treating them as equally unsettled; the
+  demotion follows from the fast loop's debt, and the parallel between the timescales is what the
+  debt is the price of.
+- Decided by: the **user** (2026-09-21), position 1 of the three the audit put to them; **demoted
+  by the user 2026-09-22**.
 - Decision, in three parts.
   1. **The mechanism is tolerance.** A flow halts when its own update falls below a tolerance. The
      fast loop already works this way (`infer`, I3); the slow flow of Eq. (20) is to be described,
@@ -1387,6 +1408,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 procedure of `agent.md` §3.2, reading `Bogacz_2017_Free_Energy_Tutorial.md`. The scripts and their
 output are in `audits/2026-09-13/`; V1 to V4 below refer to `verify_output.txt` there. Every
 verdict is the agent's reading and has not been confirmed by the user.
+**Extended 2026-09-22** with D12, the two rows on halting, which the 2026-09-13 audit predates.
 
 ### Verdict per operation
 
@@ -1407,6 +1429,8 @@ verdict is the agent's reading and has not been confirmed by the user.
 | θ_u(0) = 0 | A10 | No counterpart | the tutorial is silent on initial values |
 | Initial state of `infer` | φ_S = ℓ₀, φ_u = μ_u, ε = 0 | Instance | his Exercises 2–3 start φ at the prior mean and ε at 0 |
 | Timescale bound | commitment 7, §8.3 | Instance under restriction | D4 |
+| Halting a flow by a tolerance | Eq. (20), `infer` | **Divergence, UNSETTLED** (Bogacz has no halting rule: his parameters never converge) | D12 |
+| The fast tolerance keyed to λ_max(H) | `DERIVATIVE_TOLERANCE_PER_RATE`, I3 | **Divergence, UNSETTLED** — a locality problem of the same kind as D4, and not licensed by it | D12 |
 | Closed-form fixed points and θ\* | Eqs. (15)–(16), (B2), `settle` | Surrogate | D7 |
 | Euler step, stopping rule, horizon | `infer` | Surrogate | dt = τ_ε/2; max\|derivative\| < 1e-9 for 10 steps; max_time 1000 (I3, I4, I9). His exercises use a fixed Δt and horizon |
 | g_y, and the θ_L gradient (inactive) | Eqs. (A2)–(A4) | Map: instance. Gradient: divergence (locality), stated in Appendix A (A17) | D10 |
@@ -1477,6 +1501,39 @@ registered, and contradicted by the prose. **Flagged to the user.** Eq. (A4),
 neurons. By Appendix B's own criterion for Eq. (B4) that sum is not local, yet Appendix A calls
 Eq. (A4) "local on the same terms as Eq. (20)". No reported result depends on it: Eq. (A4) vanishes
 while φ_L is clamped.
+
+**D12. Halting by a tolerance, and the fast tolerance's dependence on λ_max(H).**
+**Divergence, UNSETTLED** — entered 2026-09-22 at the user's instruction (A19's demotion).
+
+- **What Bogacz says about parameter convergence** (read 2026-09-22 per `agent.md` §3.2, before
+  citing him either way). He states that the parameters **never converge**, because they are
+  updated after each observation and successive observations differ; what he offers in place of
+  convergence is the value at which the *expected* change vanishes, the neighbourhood the parameter
+  is likely to occupy. He also contrasts parameter updating, nudged a little each trial, with state
+  inference, driven to a free-energy optimum. So **Bogacz has no halting rule and no halting
+  problem**: nothing arrives, and nothing needs stopping.
+- **Why we have one.** This phase stipulates a uniform exposure ensemble over three utterances (O2)
+  and batches the gradient across it, so every update is identical in expectation *and in fact*.
+  That determinism turns his random walk into a monotone approach to θ\*, which never arrives, and
+  a stopping question follows. **This is a divergence with an identified cause**, and it is worth
+  stating as such.
+- **What it does NOT license.** The agent inferred from this that the halting problem is an
+  artefact of batching and would dissolve under trial-by-trial sampling. **The user rejected that
+  on 2026-09-22**: halting is a problem for the organism as well as for the simulation. The Bogacz
+  reading is context for the divergence, not a dissolution of it.
+- **The unsettled violation.** `infer`'s stopping tolerance is keyed to λ_max(H)
+  (`DERIVATIVE_TOLERANCE_PER_RATE`, I3 revised), because the roundoff floor it must sit above is
+  4.547e-13·λ_max(H) rather than a constant. λ_max(H) is a **global spectral quantity**. The
+  agent's defence — that D4's timescale bound τ_ε ≤ τ_φ/(4λ_max(H)) already requires it — is
+  weaker than it first appears, because **D4 is itself an instance only under restriction**: Bogacz
+  assumes fast error nodes qualitatively and the quantitative bound is ours (F14). So this keying
+  does not inherit a settled licence; it inherits an unpaid one, **of the same kind**. Both debts
+  are one debt.
+- **Consequence for the paper.** Halting-by-tolerance is presented as a **direction that could
+  resolve the halting problem**, with the locality violation admitted, not as a commitment. The
+  slow rule |Δθ_u| < tol is clean and can be said to be; the fast keying is not.
+- **Not resolved. No verdict is claimed here**, and this entry is the agent's reading of Bogacz on
+  parameter convergence plus the user's decision of 2026-09-22.
 
 **D11. The error-unit rate at σ ≠ 1.** Divergence of rate only, not exercised. `infer` integrates
 τ_ε ε̇ = r/σ − ε, where his Eq. (54) is ε̇ = r − Σε: the fixed points agree and the relaxation
