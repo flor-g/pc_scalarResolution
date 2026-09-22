@@ -1,7 +1,7 @@
 Sections 3 6 outline · MD
 # Outline for the proposal, evaluation, and discussion sections
  
-Scope: §§3–6, approximately 3,450 words (`revisions.md` §3: R1, S-6 and P-3). Written against
+Scope: §§3–6, approximately 3,520 words (`revisions.md` §3: R1, S-6, P-3, and the 2026-09-22 raise of §5.5 for A19). Written against
 `main.ipynb` (Text cells 1–6, Code Cells 1–4, Appendices A–D with Code Cells A–D, Eqs. (1)–(41))
 and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
  
@@ -104,7 +104,7 @@ in §5.5; the weight-transport accounting of § E.2.
 ## Word allocation
 
 Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R1) → 3,200 (S-6) →
-**3,450** (P-3). The "was" column is the 2,400 allocation this outline was written to.
+**3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet). The "was" column is the 2,400 allocation this outline was written to.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
@@ -127,10 +127,10 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 | 5.2 Scale structure: a second prediction | 200 | **400** | H1 and H2 against Xiang et al. (R16, R17) |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
-| 5.5 Limits (was 5.3) | 65 | **80** | Convergence status, linear-Gaussian caveat, the relay's cost |
+| 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
 | **6. Conclusion** | 150 | **165** | |
-| **Total** | **2,400** | **3,450** | |
+| **Total** | **2,400** | **3,520** | |
 
 **What this table does not do.** §§3.6, 4.6, 5.3 and 5.4 are new sections whose content is planned
 in `revisions.md` §5 and whose bodies are not written in this outline yet; Limits and Predictions

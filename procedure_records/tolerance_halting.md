@@ -788,3 +788,26 @@ determinism and is reported, not absorbed.**
       and so on). **Every step count is byte-identical** — 574,120, 527,295, 242,163 — as are all
       reported quantities. Those `cost:` lines are what `agent.md` §5.2 calls machine quantities and
       what E3 skips for that reason.
+
+- **H19. R23's first evidence was cherry-picked across priors; corrected 2026-09-22**
+  (`lambda_and_tolerance.py`, `lambda_and_tolerance_output.txt`). The footnote's draft said *"the
+  same 1e-1 halts the Λ = 8 flow after 15 updates and the Λ = 512 flow only after 61 to 173"*. The
+  15 is the **gaussian** prior at Λ = 8; the 61–173 are **flat, skewed high and delta** at Λ = 512.
+  Matched by prior at 1e-1 the counts are 15 → 13, 1 → 61, 13 → 3, 16 → 77, 3 → 173: **two of five
+  fall**, because prior-specific slow starts (H5) dominate at that tolerance. The agent wrote the
+  draft; the error is its own, not the user's.
+
+  **What the matched data does support, and it is stronger:**
+  - at **tol = 1, every one of the five priors takes three times as many updates at Λ = 512** than
+    at Λ = 8 (1 → 3, and 3 → 7 for the delta-like row) — uniform, no selection possible;
+  - at **tol = 1e-2** the rows that are not slow-started go up **11 to 17 fold** (245 → 3042,
+    173 → 3023, 280 → 3111);
+  - and the sharper observation, which the user chose for the footnote: **at Λ = 512 the flow halts
+    at 3.5% to 5% of θ\* under every prior and across a tenfold change of tolerance** (0.0347 to
+    0.0505), while at Λ = 8 the same tolerances land anywhere from **0% to 30%**. At large Λ the
+    tolerance barely moves where the flow lands.
+
+  **The user's decision (2026-09-22):** state the claim qualitatively in the footnote and cite the
+  audit for the numbers, adding the 3.5–5% observation. No notebook change and no re-execution: a
+  matched comparison is not printed anywhere, precisely because `DEMONSTRATION_TOLERANCE` is keyed
+  to Λ, and printing one would have cost a ~50 minute re-run for a single footnote.
