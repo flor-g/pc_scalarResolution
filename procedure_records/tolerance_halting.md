@@ -568,3 +568,67 @@ the choice is the user's.
   are then fixed constants sitting above a gap that scales with λ, which is the same mistake one
   level up. If the rule is adopted, those thresholds should scale too, or the headroom will shrink
   again as soon as a larger θ_u is integrated.
+
+- **H15. THE SWEEP: which fixed thresholds are brittle** (2026-09-21, `threshold_sweep.py`,
+  `threshold_sweep_output.txt`), at the user's request. 43 small numeric thresholds were extracted
+  from both notebooks' code cells and each classified by whether the quantity it bounds scales with
+  λ_max(H) or θ_u. Measured at k = 5.5e-12:
+
+  | net | θ_u | λ | tol | \|φ−φ\*\| | Eq17 id_1 | Eq17 id_2 | \|1−q mass\| | min dF step |
+  |---|---|---|---|---|---|---|---|---|
+  | Λ=8 | 5.29 | 30.0 | 1.65e-10 | 1.57e-10 | 1.57e-10 | 3.28e-11 | 2.22e-16 | −2.3e-13 |
+  | Λ=8 | 28.44 | 810.8 | 4.46e-09 | 4.45e-09 | 4.45e-09 | 1.73e-10 | 2.22e-16 | −1.7e-13 |
+  | Λ=512 | 13.37 | 180.8 | 9.94e-10 | 9.89e-10 | 9.88e-10 | 8.95e-11 | 2.22e-16 | — |
+  | Λ=512 | 34.70 | 1206.1 | 6.63e-09 | 6.64e-09 | 6.63e-09 | 2.22e-10 | 2.22e-16 | — |
+  | Λ=512 | 52.07 | 2713.3 | 1.49e-08 | **1.49e-08** | **1.49e-08** | 3.41e-10 | 1.11e-16 | — |
+
+  **BRITTLE — two quantities, three assertions.** `|φ − φ*|` and Eq. (17)'s first identity both
+  track the tolerance to within 1% (ratio 0.95–1.00), so both scale as k·λ_max while their
+  thresholds are a fixed **1e-8**:
+  - `max(worst_state, worst_utility) < 1e-8` — "fixed point matches Eqs. (15)-(16)";
+  - `worst_identity_1 < 1e-8` — "Eq. (17) eps_S = -eps_L";
+  - `worst_dense < 1e-8` — the dense-scale variant of the first.
+
+  **They already fail at θ_u = 52.07**, where the gap is 1.49e-8. Part A passes today only because
+  it runs at the default net's θ_u\* = −28.44 (λ = 810.8), gap 4.45e-9, **2.2× headroom**. The
+  break-even is λ_max = 1e-8/k = 1818, i.e. θ_u ≈ 42.6.
+
+  **NOT brittle, measured rather than assumed:**
+  - `worst_identity_2 < 1e-8` (Eq. 17's second identity) — grows, but far slower than the
+    tolerance: 3.3e-11 → 3.4e-10 while the tolerance grows 90-fold. 29× headroom at θ_u = 52.07.
+    It carries an explicit `theta_u *` factor, so this was the one expected to be worst; it is not.
+  - `worst_q_mass < 1e-10` — flat at 2.22e-16, six orders of headroom.
+  - `worst_monotone > -1e-9` — −2.3e-13 to −1.7e-13, no growth over the range tested, four orders
+    of headroom. Its comment calls it "roundoff at the fixed point", which made it a suspect.
+  - `spread < 1e-5` and `worst_gradient < 1e-4` are already *relative* quantities. `spread`'s own
+    comment concedes θ_u-dependence ("about 1e-6 relative at theta_u\*... at theta_u = 1 the same
+    estimate agrees to 1e-10"), so it is the next one to watch, but it is not in the tolerance's
+    chain.
+  - The remaining thresholds (basis orthonormality 1e-10, normalization guards 1e-12, parity and
+    collision tests 1e-9, grid-convergence `tail < 5e-3`) bound structural quantities that do not
+    depend on the tolerance.
+  - **Not swept:** `appendix_E`'s relay checks `worst_relay_gradient < 1e-12` and
+    `worst_lagged < 1e-9`. They compare the same gradient formed in a different summation order, so
+    their residual plausibly scales with term magnitude and therefore with θ_u. They were not
+    measured here and should be before the change lands.
+
+- **H16. What the `< 1e-8` fix costs.** Replace the fixed constant with the scale-free question the
+  check is actually asking — *did the integration land within a few multiples of the tolerance it
+  was asked to achieve?*
+
+  1. **`infer` must return its tolerance.** It returns `dt` and `tau_error` but not
+     `derivative_tolerance`. One key, in `code cell 1` and E1 (**coupling 9**).
+  2. **Three assertions become `< m * tolerance`** in main cell 7 and their three mirrors in E
+     cell 3, with the detail strings reporting the **ratio** so the margin is visible rather than
+     implied. Measured gap/tol ∈ [0.95, 1.00], so m = 4 leaves 4× headroom.
+  3. **`worst_dense` needs per-run normalization.** It maxes over a ladder of dense-scale grids,
+     each with its own λ and so its own tolerance; it must accumulate `max(gap / tol)`, not
+     `max(gap)`.
+  4. **Re-execution**, since every detail string prints numbers that move.
+  5. **Unmeasured:** whether gap/tol stays ≈ 1 on the dense-scale nets. It should be checked before
+     m is fixed.
+
+  **A benefit worth weighing in.** The fixed 1e-8 is *slack* at low θ_u — at θ_u = 5.29 the actual
+  gap is 1.57e-10, so the check has 64× of unused room and would not notice an integrator
+  regression of fifty-fold. At m = 4 it would. **The scale-free form is a stricter test everywhere
+  except where the constant currently fails outright.**

@@ -1,0 +1,12 @@
+tolerance = k * lambda_max(H), k = 5.5e-12
+
+  net  theta_u   lambda       tol  |phi-phi*|   Eq17 id_1   Eq17 id_2  |1-q mass|  min dF step
+  L=8     5.29     30.0  1.65e-10    1.57e-10    1.57e-10    3.28e-11    2.22e-16     -2.3e-13
+  L=8    28.44    810.8  4.46e-09    4.45e-09    4.45e-09    1.73e-10    2.22e-16     -1.7e-13
+L=512    13.37    180.8  9.94e-10    9.89e-10    9.88e-10    8.95e-11    2.22e-16            -
+L=512    34.70   1206.1  6.63e-09    6.64e-09    6.63e-09    2.22e-10    2.22e-16            -
+L=512    52.07   2713.3  1.49e-08    1.49e-08    1.49e-08    3.41e-10    1.11e-16            -
+
+Fixed thresholds these are checked against (main cell 7 / E cell 3):
+  |phi - phi*|  < 1e-8      Eq17 id_1 < 1e-8      Eq17 id_2 < 1e-8
+  |1 - q mass|  < 1e-10     min dF step > -1e-9
