@@ -638,6 +638,11 @@ remain, and naming them is the point of saying so:
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
   reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
   objective is not concave. The same division as in Bogacz.
+- **Halting is by tolerance, and no tolerance is committed to.** The flow of Eq. (20) stops when its
+  own update falls below one; the value is ad hoc, so results are reported at $\theta_u^\ast$, the
+  asymptote, which carries none. Where a realizable $\theta_u$ is quoted it carries the tolerance
+  it halted at. Two implications are owned rather than hedged: a plausible tolerance halts far short
+  of $\theta_u^\ast$, and a slow start halts at once at the tempered control (§5.3).
 - The model is linear-Gaussian while $\varphi_L$ is clamped, so the recurrent dynamics are an
   implementation claim rather than a computational necessity.
 - The relay secures locality at the cost of a fourth timescale scaling as $\theta_u^{-2}$ (Eq. E6).

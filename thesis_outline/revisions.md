@@ -102,7 +102,7 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R18 | **The Λ–ℓ₀ counterforce is stated as a commitment.** Under a strong Λ the q shift criterion is met under more priors, and the mechanism is that Λ and ℓ₀ counteract each other. The reader is told that this is a **choice not forced by construction**: ℓ₀ could have been placed at g_S, which would not have let the two counteract as directly. The reasons given are (a) putting ℓ₀ at g_S is messy node-wise and leaves the architecture less clean, and (b) it is intuitive to hypothesize that the world prior and lexical strength have counteractive dynamics. §§3–4 also say whether the commitment has a parallel in RSA. `decisions.md` **A3** is confirmed, not reopened. Tasks U0–U14 and the blocking decisions P-1 to P-7: `procedure_records/ell0_placement_and_counterforce.md`. | user (2026-09-17) |
 | R19 | **The RSA projection parallel is stated, with an explicit warning.** The paper says that the utility level reads a **linear projection of the same log quantity** S₁ reads, log L₀(s|u). The background **foreshadows** the similarity. Both places warn the reader explicitly that, mathematically, **a projection does not imply an equivalence**, and that forgetting the difference is dangerous. The warning has an exact form: BᵀW1 = 0, so the coupling is rank 2 and blind to the constant direction — the one the normalizer lives in (G10 of the record). The coupling is constant-invariant; **the model is not** (§9.1, no flat direction). | user (2026-09-17) |
 | R23 | **A footnote to §5.3 states the hypothesis that a case's representative tolerance scales with that case's Λ**, and the notebook demonstrates at two named ad hoc values, 1e-1 at Λ = 8 and 1 at Λ = 512. What motivates it is measured, not assumed: a *fixed absolute* tolerance does not buy the same thing at different lexical strengths, because the gradient of Eq. (20) grows with Λ — the same 1e-1 halts the Λ = 8 flow after 15 updates and the Λ = 512 flow only after 61 to 173. The footnote is careful on three points. (i) It is a **hypothesis, not a fit**: two demonstration values are named, nothing is interpolated between them, and no functional form is claimed (the notebook raises on an unlisted Λ rather than guessing). (ii) It is **not** the relative tolerance |Δθ| < tol·|θ| that A19 rejects as a guard — Λ is a standing property of the configuration, fixed before the flow starts, whereas |θ| is where the trajectory has got to; keying to the first is a stipulation about the case, keying to the second would be the system reading its own trajectory. (iii) It does **not** rest on any claim that integration cost is super-linear in Λ; that claim was made in error and withdrawn (H9 of `procedure_records/tolerance_halting.md`). | user (2026-09-21) |
-| R22 | **The paper states that halting is by tolerance** (`decisions.md` **A19**). The flow halts when its own update falls below a tolerance; θ\* stays the commitment (R10 unchanged); the tolerance is **ad hoc**, so no reported result depends on it, and the paper declines both to claim that an organism needs a tolerance for a computer's reason and to stipulate a value representative of the brain. What it argues is that a representative tolerance is almost certainly greater than 1e-9, so a real system halts earlier than the asymptote. §5.3 rests on the measured agreement (H2–H4 of `procedure_records/tolerance_halting.md`): the verdicts at a halted θ_u are the verdicts at θ\*, at 1e-4 of the cost. | user (2026-09-21) |
+| R22 | **The paper states that halting is by tolerance** (`decisions.md` **A19**). The flow halts when its own update falls below a tolerance; θ\* stays the commitment (R10 unchanged); the tolerance is **ad hoc**, so no reported result depends on it, and the paper declines both to claim that an organism needs a tolerance for a computer's reason and to stipulate a value representative of the brain. What it argues is that a representative tolerance is almost certainly greater than 1e-9, so a real system halts earlier than the asymptote. §5.3 rests on the measured agreement (H2–H4 of `procedure_records/tolerance_halting.md`): the verdicts at a halted θ_u are the verdicts at θ\*, at about **1e-3** of the cost. **Corrected 2026-09-21**: this row first said 1e-4, which overstates it by an order of magnitude — the separation 4λ goes 9.3e6 at θ\* to 1.19e4 at the halt, and the step count 4.48e8 to 5.74e5, both ratios near 1/780. | user (2026-09-21) |
 | R21 | **RSA's speaker-optimality parameter is written α_rsa throughout the dissertation** (Q8). The bare α stays the concentration of the prior Beta(α,1), as `main.ipynb` and `sections_3-6.md` §§4.5 and 5.2 write it, so Eq. (41)'s Λ_crit ≈ α log 2n is unambiguous where §1.3 cites it. Applied to `background_sections.md` §1.2 (the S₁ equation and its gloss) and §1.3; the notebooks never use α in the RSA sense, so none of them changes. | user (2026-09-21) |
 | R20 | **Every verdict is reworked on the Λ = 512 data.** The conjunction holds under three of five priors, not none and not one, and the q position criterion under all five, so no prior meets the shift criterion alone. Sites V1–V13 and the three choices this opens (P-8 to P-10) are in the record §§9–10. §4.5's opposing floors are untouched and are where the trade-off claim is now sourced. The notebooks are **not** verdict sites (B10/C7). | user (2026-09-17) |
 
@@ -445,9 +445,19 @@ Evidence for §5.3, reported without interpretation:
 
 - Under the delta-like prior the conjunction first holds at |θ_u| = 2.126, where λ_max(H) = 6.5
   and commitment 7 demands a separation 4λ = 26. Eq. (20) from 0 passes that θ_u in one update.
-- The integrated run (39,035 Euler steps at the θ_u = 13.3749 that update reaches) gives
-  Δ_some = −0.5182 and q_H = 0.4386. There λ_max(H) = 180.9, a separation of about 724.
-- The same inference at θ\* = 1407.77 would take 4.28e8 steps, hours, at a separation of 7.9e6.
+- **Updated 2026-09-21 (A19, HA4):** the realizable θ_u is no longer the one that update reaches.
+  It is where the flow **halts**, its own update having fallen below the tolerance — the only
+  stopping rule the model has. Under the delta-like prior at Λ = 512 that is θ_u = **34.695** after
+  **7** updates, and the integrated run there (**242,163** Euler steps) gives Δ_some = **−0.5208**
+  and q_H = **0.4361**, both criteria met. λ_max(H) = **1205.8**, a separation of **4,823**. The
+  superseded figures — 39,035 steps at θ_u = 13.3749, Δ_some = −0.5182, q_H = 0.4386, λ = 180.9 —
+  came from stopping the flow on the evaluator's own criterion, which A19 no longer counts as
+  locating a realizable θ_u.
+- The same inference at θ\* = 1407.77 would take **3.98e8** steps, about **5.0 hours**, at a
+  separation of 7.9e6. (Was "4.28e8 steps, hours". The step count moved because the stopping
+  tolerance is now keyed to λ_max(H); the *claim* is unchanged and the figure is now a within-regime
+  extrapolation rather than one across the convergence boundary a fixed tolerance created — see
+  H9/H11/H12 of `procedure_records/tolerance_halting.md`.)
 - The Eq. (20) flow from 0 is not integrable to θ\*: it is not within 0.1% of θ\* after 5,000
   updates (F15). That θ\* is reached rests on the closed form and the monotone rise.
 
@@ -815,45 +825,69 @@ operation Appendix A says would not be local and §5.1 says binarity absorbs.
 
 ### Item 2. Settling cost, halting, and the plausibility commitment (§5.3, about 170 words)
 
-The cost sense keeps the name "realizability" (O7, settled). The content, per R9 and R10:
+The cost sense keeps the name "realizability" (O7, settled). The content, per R9 and R10.
+
+> **Revised 2026-09-21 by `decisions.md` A19.** When this item was written, no self-contained
+> halting mechanism was known and the section's argument was built around that gap. There is one:
+> **halting is by tolerance**, and it is implemented (`procedure_records/tolerance_halting.md`
+> HA1–HA9). The bullets below are updated where that changes them and marked where it does not.
+> **R10 is unchanged in its conclusion and changed in its reason** — θ\* stays the commitment, but
+> now because the tolerance is *ad hoc*, not because no mechanism exists.
 
 - **What halts, and on which timescale.** The claim concerns the slow flow of Eq. (20), which
   ascends F̃ toward θ\* (Eq. B2), the value A9 commits the model's θ_u to. Since θ_u is an exposure
   statistic across trials (A14), "halting" here is the end of plasticity across exposures, not the
   end of one inference. (Within an inference the fast subsystem settles at whatever θ_u the slow
-  flow currently carries, by §8.1. The code's stopping tolerance there is a numerical surrogate, I3,
-  and is not the halting in question.)
+  flow currently carries, by §8.1.) **Revised:** the fast subsystem's stopping tolerance is no
+  longer a mere numerical surrogate set beside the real question. It is **the same mechanism at the
+  other timescale**, and I3 is revised to key it to λ_max(H), because the roundoff floor it must sit
+  above is not a constant. That the same kind of rule ends both loops is part of what §5.3 says, not
+  an implementation aside.
 - **Why the maximizer does not halt the flow.** A flow halts where its gradient vanishes, at θ\*.
   From θ_u(0) = 0 the flow rises monotonically toward θ\* but is not within 0.1% of it after 5,000
   updates (F15): F̃ flattens toward its asymptote, so the flow approaches without arriving. Nothing
-  in F̃ stops it earlier.
+  **in F̃** stops it earlier — which is the point, because what stops it is not in F̃.
+- **What does halt it (A19, new).** The flow halts when **its own update falls below a tolerance**.
+  The rule is self-contained in the way the old ad hoc stopping rules were not: it reads the size of
+  the step the unit has just taken and nothing else — no closed form, and nothing about the shape of
+  the trajectory, to which the unit has no access (H1). No guard is attached, on the user's
+  principle that a guard would require exactly the knowledge of its own trajectory the commitment
+  denies the system. **The value is ad hoc**: the paper commits to halting *by* a tolerance, not to
+  any tolerance, and declines both to claim an organism needs one for a computer's reason and to
+  stipulate a value representative of a brain. Two implications follow and are stated as such:
+  a plausible tolerance halts **far short of θ\***, and where the flow *starts* slowly the same rule
+  halts it **at once**, leaving the belief at the tempered control (H5).
 - **Why that matters: cost rises while the verdict stands still.** Commitment 7 ties the error
   units' speed to λ_max(H), which grows as θ_u². Under the delta-like prior the conjunction holds
   from the first update on, at a separation of 26 where it first holds. Every later update leaves the
-  verdict as it is and makes each later inference costlier: about 724 at θ_u = 13.37, rising toward
-  7.9e6 at θ\*. Across the 33 both-condition cells of the plane, the separation needed where the
+  verdict as it is and makes each later inference costlier: **4,823 at the θ_u = 34.695 where the
+  flow halts**, rising toward 7.9e6 at θ\*. (Was "about 724 at θ_u = 13.37", the criterion-stopped
+  value A19 retires.) Across the 33 both-condition cells of the plane, the separation needed where the
   conjunction first holds is at most about 80 (4 × 20.1), against 4 × (3.5e4 to 3.6e7) at θ\*.
-- **Consequence without the alternatives level.** A mechanism outside F̃ must stop or slow the flow.
-  It is not a term of F̃, and its locality and its standing against Bogacz (2017) would both need
-  arguing (a new entry in the divergence register). Check the tutorial's own remarks on parameter
-  convergence before citing it either way (agent.md §3.2).
-- **Why θ\* stays the commitment (R10; the paper's explanation goes here).**
-  - The mathematical model predicts θ\* as the value at which the slow flow halts.
-  - The simulation exposes a cost problem, and no self-contained halting mechanism for it has been
-    determined.
-  - The lower θ_u values the evaluation reports are ad hoc: each is located using θ\* already known
-    in closed form. A simulated system should be assumed agnostic to that value, so none of them can
-    yet be adopted as the commitment.
-
-  Code Cell 2 shows the dependence concretely (checked 2026-09-13):
-  - the threshold (2.126) is a bisection on fractions of θ\*, and the run is attempted only where
-    the conjunction already holds at θ\*;
-  - the one-update θ_u (13.3749) is computed without θ\*, but the flow is stopped there by Part C's
-    criterion. That criterion is a statistic of the read-out q against q_lit, computed outside the
-    network: an evaluator's stopping rule, not one the simulated system has.
-
-  So these values measure what the verdict needs. The model's commitment remains θ\*, and the
-  missing halting mechanism is an open problem of the simulation.
+- **Consequence without the alternatives level.** A mechanism outside F̃ must stop or slow the
+  flow. **It has been supplied and it is a tolerance** — not a term of F̃, exactly as this bullet
+  anticipated. What it still owes is the argument this bullet asks for: its locality (it reads one
+  scalar the unit already has, so this looks cheap to make) and its standing against Bogacz (2017),
+  which needs a divergence-register entry. Check the tutorial's own remarks on parameter convergence
+  before citing it either way (agent.md §3.2). **Not yet written.**
+- **Why θ\* stays the commitment (R10; the paper's explanation goes here). The conclusion stands;
+  the reason is now the opposite of what it was.**
+  - The mathematical model predicts θ\* as the value the slow flow ascends toward. It is the
+    **asymptote**, and it carries no tolerance.
+  - **Formerly:** no self-contained halting mechanism had been determined, and every lower θ_u the
+    evaluation reported was located using θ\* already known in closed form — by bisecting fractions
+    of it, or by stopping the flow on Part C's criterion, a statistic of q against q_lit computed
+    outside the network. A simulated system must be assumed agnostic to θ\*, so none of those could
+    be adopted.
+  - **Now:** a mechanism exists and is implemented, and the halted θ_u never mentions θ\*. What
+    keeps θ\* as the commitment is no longer the absence of a mechanism but the **ad hoc status of
+    the tolerance**: a result reported at a halted θ_u would carry a number this study declines to
+    fix, so predictions are reported in closed form at the asymptote, which carries none.
+  - The two old stopping rules are **retained and relabelled**, not deleted. θ_crit = 2.126 and the
+    one-update arrival still measure *where the conjunction is first met*, which the evaluation
+    reports as a fact about the **shape of the update** and explicitly not as a halting rule.
+    A realizable θ_u is now the halted one, and it is reported with the tolerance it halted at on
+    its face.
 - **With the level.** Under R9, what §5.3 has to claim for the alternatives level concerns the slow
   flow, not how one inference ends. Either the level's slow objective has a maximizer its flow
   reaches, or its verdict does not depend on growing a gain whose cost grows with it. Neither is
@@ -1202,7 +1236,9 @@ concentration keeps the bare α everywhere, including both notebooks, which neve
 | Numbers | Source |
 |---|---|
 | θ\*, q_H, Δ, tempering/utility, conditions per prior; the 3.6e-14 / 0.0575 contrasts | `main.ipynb` Code Cell 2, BASE WORLD PRIOR SWEEP |
-| 2.126, 6.5, 26, 13.3749, 180.9, 39,035, −0.5182, 0.4386, 4.28e8, 7.9e6 | Code Cell 2, REALIZABILITY block (step and time figures on `cost:` lines). The separation of about 724 is 4 × 180.9. |
+| 2.126, 6.5, 26, 34.695, 1205.8, 242,163, −0.5208, 0.4361, 3.98e8, 7.9e6, 4,823 | Code Cell 2b, REALIZABILITY block (step and time figures on `cost:` lines). 4,823 is 4 × 1205.8. **Updated 2026-09-21**: the realizable θ_u is the halted one, not the criterion-stopped 13.3749. |
+| 4.547e-13, 12.1, 0.74/0.81/1.82 floors, λ = 2199 | Code Cell 2b, THE ROUNDOFF FLOOR block — the floor per unit of λ_max(H) at three λ, the margin the keyed tolerance holds, and what a fixed 1e-9 would have bought there (decision I3, revised) |
+| 1.00, 1.00, 0.04, 1.00 × the stopping tolerance | Code Cell 2, Part A — the specification checks, which compare in multiples of the tolerance rather than against a constant (`TOLERANCE_MARGIN`) |
 | Peaks, the cell of *all*, grids 201/401/801 | Code Cell 2, THE DELTA READ-OUT block |
 | 33, band, floors, 59 of 121, 0.100–4.250, 2.0–20.1, 3.5e4–3.6e7, D spread | Code Cell 4, `plane_summary`; Text cell 6 |
 | 1.9890 / 2.9334 / 4.3102 | Code Cell 4, `override_threshold` |

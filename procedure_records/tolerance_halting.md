@@ -406,9 +406,34 @@ the pre-decision wording.
       three fixed. **Eight pre-existing C6 violations were found and are NOT this change's**: cell
       10's 0.2122 and cell 12's 0.0095, 0.0445, 0.1512, 0.5477, 4096, 0.0002 and 13378, identical
       before and after. Reported to the user; not touched here.
-- [ ] **HA7. The outline.** §5.3 (planned) states the halting account and rests its cost argument on
-      H2–H4; §5.5 Limits and §3.4 carry a clause if HA3 introduces notation they use. `revisions.md`
-      R22's site entries.
+- [x] **HA7. The outline** — done 2026-09-21/22.
+      **`revisions.md` Item 2 (§5.3's plan) revised in six places**, because A19 falsified the
+      premise the section was built on. It was written around the *absence* of a halting mechanism;
+      one now exists. Changed: the fast loop's tolerance is no longer "a numerical surrogate... not
+      the halting in question" but the same mechanism at the other timescale (I3 revised); a new
+      bullet states what halts the flow, that no guard is attached and why, the ad hoc status of the
+      value, and the two implications; the cost figure 724 at θ_u = 13.37 becomes **4,823 at the
+      halted θ_u = 34.695**; the "consequence without the alternatives level" bullet is marked as
+      **answered in part** — the mechanism was supplied, the locality and Bogacz-divergence argument
+      it asks for is still owed and unwritten.
+      **R10's bullet keeps its conclusion and reverses its reason.** θ\* stays the commitment not
+      because no mechanism exists but because **the tolerance is ad hoc**. The two old stopping
+      rules are recorded as retained and relabelled — they measure where the conjunction is first
+      met, a fact about the shape of the update — not deleted.
+      **Two stale numbers fixed** (H11): the evidence block's "4.28e8 steps, hours" → **3.98e8,
+      about 5.0 hours**, and the realizable run's 39,035 steps at θ_u = 13.3749 → **242,163 at
+      34.695**, with Δ_some −0.5182 → **−0.5208** and q_H 0.4386 → **0.4361**. §8's source-trace
+      table follows, and gains two rows for the roundoff-floor quantities and Part A's ratios.
+      **R22 corrected**: it claimed the halted verdicts come "at 1e-4 of the cost". Measured, both
+      the separation (9.3e6 → 1.19e4) and the step count (4.48e8 → 5.74e5) are near **1/780**, so it
+      is about **1e-3** — the row overstated it by an order of magnitude.
+      **`sections_3-6.md` §5.5 Limits** gains a halting bullet. **§3.4 needs nothing**: HA3
+      introduced no notation, only prose.
+      **Flagged to the user, not decided:** (i) §5.5's bullet list now runs about 199 words against
+      a drafted-section budget of 80, and it carried six topics before this seventh; (ii) R23's
+      footnote quotes "61 to 173 updates at Λ = 512 under 1e-1", which is an audit figure — the
+      notebook demonstrates Λ = 512 at tolerance 1, so the paper will need either a source line or a
+      different illustration.
 - [ ] **HA8. Commit**, one logical change per commit, hashes recorded above.
 
 **What stays untouched, by the user's scope line:** A9, R10, the θ\* tables, the plane, and
