@@ -110,9 +110,22 @@ Output of all five scripts: `audits/2026-09-15-side-quests/output.txt`.
   −1082.011 at n = 2, +2510.809 at n = 3, +5950.626 at n = 10, −3322.896 at n = 11: it is not
   monotone and **not bounded**. Eq. (B2)'s two roots have the constant product −S/σ_u, so θ_u\*
   diverges exactly where ⟨μ_u, Σ_y c_y⟩ vanishes, and that coupling changes sign twice along the
-  ladder. This is **Appendix B's degenerate ray, reached by varying n alone**, and
-  `theta_u_stationary_points` guards only exact zero, so nothing flagged it. The rank and m = 2
+  ladder. This is **Appendix B's degenerate ray, reached by varying n alone**. The rank and m = 2
   results of F7 are untouched. Code Cell A now prints the coupling beside θ_u\*.
+- **F7's qualification corrected the same day, 2026-09-22.** As first written it added "and
+  `theta_u_stationary_points` guards only exact zero, so nothing flagged it". **That was wrong on
+  both halves.** Appendix B states the requirement exactly — "what Eq. (B2) actually needs is
+  ⟨μ_u, Σ_y c_y⟩ ≠ 0, which is strictly stronger" — and the large θ_u\* values were already
+  printed by Code Cell 2 and Code Cell 4 and quoted in the appendix (−557.67 to +12228.42;
+  +5950.63 under flat at Λ = 8), so there was no C6 violation and no undocumented hazard. The
+  agent overstated a documented feature as an oversight. **What actually stood**, and is now in
+  Appendix B and A5: the appendix's −40.9119 is the *default* configuration's margin quoted as a
+  general reassurance, the ray is reachable by varying **n** with μ_u fixed (its framing is about
+  μ_u's orientation), and the large values are **poles** rather than points in a continuum. **And
+  the ray is harmless**, for a reason the appendix did not state: φ_S\* converges to one limit as
+  |θ_u| → ∞ from both signs (2.290e-06 apart at 1e6, gap ∝ 1/|θ_u|), so the readings cross it
+  continuously — measured at n = 8…15 under flat at Λ = 8, both q readings monotone and neither
+  criterion changing status. Printed by `degenerate_ray_report`, Code Cell B.
 - **F8 (n = 2 is not degenerate; n = 1 is).** At n = 2, θ_L = 1.0986, the cell of s = 0 is
   s ≤ 0.25 and the cell of s = 1 is s ≥ 0.75, χ_some ≠ χ_all, and 19 grid nodes lie strictly
   between the thresholds. The two thresholds stay distinct, so the span is unchanged. Degeneracy is

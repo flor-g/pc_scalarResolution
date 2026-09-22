@@ -359,6 +359,17 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
 
 - Use `.venv/bin/python`. **Never pipe the runner to `tail` or `head`**: the pipeline reports their
   exit status, so a failed run looks like success. Read the runner's own `RUNNER OK` line.
+- **The runner writes the notebook back from the state it READ, so never edit a notebook while it
+  is running.** `nbformat.read` happens at the first line and `nbformat.write` at the last; any edit
+  made in between — including a markdown-only edit that needs no execution — is silently overwritten
+  when the run finishes. Either wait, or stop the run, edit, and start again. **Verify the edit is
+  still there afterwards**; the loss leaves no error and no trace in the runner's output.
+  (Learned 2026-09-22, on Appendix B's cell 16.)
+- **A stopped run leaves the notebook INCONSISTENT, not unchanged.** Killing the runner can still
+  write, giving a file whose early cells carry fresh outputs, the interrupted cell none, and the
+  later cells outputs stale from the previous run — with no error anywhere. After any interrupted
+  run, check `execution_count` across the code cells and re-execute in full before trusting or
+  committing anything. A full-file output diff against the last commit (§4.2) is what catches it.
 - **Baseline as of 2026-09-14, after B9:** `main.ipynb` 0 errors, 8 figures (2 in Code Cell 2,
   3 in Code Cell 2b, 3 in Code Cell 4), 14/14 specification checks, about 250 s;
   `appendix_E.ipynb` 0 errors, 5 figures, E2 18/18, E3 PASS on both cells (Code Cell 2: 203 lines

@@ -133,6 +133,20 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: instance; his Eq. (25) diverges identically at v_p = 0, an unstated premise there.
 - Depends on it: A9, A10.
 - Rejected, do not revisit: a hyperprior on θ_u; folding θ_u into B; deriving μ_u as an ensemble mean.
+- **Finding, 2026-09-22 (Code Cell B, `degenerate_ray_report`): the ray is reachable without
+  touching μ_u, and it is harmless.** c_y = BᵀW(ℓ₀ − φ_L,y) depends on ℓ₀ and, through φ_L,y, on
+  θ_L, so the coupling moves with the base prior and with n at the stipulated μ_u = 1. Appendix B's
+  −**40.9119** is the **default** prior's margin, not a bound: under *flat* at Λ = 8, n = 10 — a row
+  **Code Cell 2 prints** — the coupling is **+0.0594**, and varying n alone carries it through zero
+  between n = 10 and n = 11. The requirement as previously stated, being about μ_u's *orientation*,
+  did not suggest that route. **Nothing is threatened**, and Appendix B now rests on the reason
+  rather than on the margin: Eq. (B2)'s roots have the constant product −S/σ_u, so near the ray
+  θ_u\* is merely large and about to change sign through infinity, while φ_S\* converges to **one**
+  limit as |θ_u| → ∞ **from both signs** (the branches agree to 2.290e-06 at |θ_u| = 1e6, the gap
+  falling like 1/|θ_u|). The readings therefore cross continuously: across the sign change both q
+  readings for *some* move monotonically and neither criterion changes status. Exactly on the ray
+  there is still no interior maximizer, and the constructor still refuses it — on float equality,
+  which catches only the exact case, and that is now known to be enough.
 
 ### A6. Every σ fixed at 1; no precision learning
 - Status: Settled
@@ -1205,7 +1219,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   to −7.593e-07, against −9.546e-02 for *skewed high* at Λ = 512. **The crossings do move with
   Λ**, so granularity and lexical strength are not separable. Under the **flat** prior at Λ = 8,
   θ_u\* is unbounded along the ladder: it passes through **Appendix B's degenerate ray**, which is
-  therefore reachable by varying n alone.
+  therefore reachable by varying n alone — harmlessly, for the reason A5 now records.
 - Decided by: the measurement is the agent's, raised by the user alongside O9; same record.
 - **The question.** The implementation takes n = 10 (O1). Would three atoms, or exactly two, change
   essential results, and is the model degenerate at two?
