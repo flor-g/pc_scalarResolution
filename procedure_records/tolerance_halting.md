@@ -340,7 +340,8 @@ the pre-decision wording.
       tolerance halts well short of θ\*, and a slow start halts at once at the tempered control.
       Per B10/C7 the cell takes no position on whether a living system needs a tolerance for the
       reason a floating-point computation does; it says only that this study does not fix one.
-- [ ] **HA4. Appendix B and Text cell 4's realizability block**: the recomputation Q-HA2 settles.
+- [x] **HA4. Appendix B and Text cell 4's realizability block** — closed 2026-09-21 by HA4a, HA4b
+      and HA4c below; the recomputation Q-HA2 settles.
       Every realizable θ_u is the tolerance-halted one, reported at the demonstration tolerance and
       labelled with it; the fact that the conjunction is met well before the halt moves into prose,
       on H8's numbers. C6 applies — each quoted number is printed by the cell that reports it.
@@ -448,7 +449,8 @@ the pre-decision wording.
       footnote quotes "61 to 173 updates at Λ = 512 under 1e-1", which is an audit figure — the
       notebook demonstrates Λ = 512 at tolerance 1, so the paper will need either a source line or a
       different illustration.
-- [ ] **HA8. Commit**, one logical change per commit, hashes recorded above.
+- [x] **HA8. Commit** — done throughout, one logical change per commit, hashes on each task line.
+      The A19 change closed at `a582bb8` (2026-09-22); **HA10 remains batched**.
 
 **What stays untouched, by the user's scope line:** A9, R10, the θ\* tables, the plane, and
 §§4.1–4.5. The audit's H2–H4 are evidence for the discussion, not new results to print, and they
