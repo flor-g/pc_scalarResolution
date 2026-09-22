@@ -82,6 +82,37 @@ choices, positions 1..5):
 | relative | shape | .007 | .018 | .049 | .174 | .752 | 5 | 4.65 |
 | relative | artifact | .052 | .026 | .054 | .186 | .681 | 5 | 4.42 |
 
+**F1 is internally inconsistent, and F3–F5 were scored against absent data. Both corrected
+2026-09-22 at T1/T2; `decisions.md` E16 carries the record.**
+
+Two faults, one in the table above and one in the audit that produced it.
+
+1. **F1's two `shape` rows were renormalized and their mean positions were not.** One image set,
+   `curved_greenline`, drew **no** Experiment 3 response at all, for both of its adjectives — so the
+   maximum class's shape row averages over 15 items of 16 and the minimum class's over 11 of 12, and
+   both fall short of summing to 1 (0.9375 and 0.9167). Whoever wrote F1 divided the five cells by
+   that sum but left `mean position` alone. The cell values above are therefore right *as
+   normalized profiles*; the two mean positions are not. Corrected: maximum/shape is **4.92**, not
+   4.61, and minimum/shape is **3.59**, not 3.29. The other four rows were never affected.
+2. **The audit scored the model against those 10 rows as measured zeros**, which is a comparison
+   against nothing. Dropping them changes the headline numbers materially:
+
+   | | audit (F3–F5) | corrected, printed by Code Cell F |
+   |---|---|---|
+   | maximum class R² | 0.953 | **0.993** |
+   | minimum class R² | 0.401 | **0.434** |
+   | q_lit, maximum | 0.952 | **0.992** |
+   | q_lit, minimum | 0.092 | **0.103** |
+   | minimum class image-type difference, measured | −1.13 | **−0.83** |
+
+   The maximum class crosses from below the published ST (.98) and QF (.97) values to above them, so
+   this is not a rounding matter. **Every number F3–F5, F8–F10 record is superseded** by Code Cell F's
+   output; what the findings *say* survives, since each contrast keeps its direction.
+
+Note also that the fitted Λ of the minimum class moves from 32 to **48** once the absent rows go —
+but the ladder only brackets it between 32 and 48, and Code Cell F prints the bracket rather than
+the argmax alone.
+
 **F2. H2's class-to-entry map is the one the data show.** Each class's profile is the profile of the
 entry H2 assigns it: the maximum class is concentrated in the top cell; the minimum class is spread
 over every cell but the bottom one, which is exactly what {ζ ≤ −θ_L} excludes; the relative class
@@ -494,13 +525,35 @@ U0–U14. T0–T13 follow it. The two lists touch no common cell — that change
 Code Cell D and §§3–4, this one adds Appendix F and rewrites §5.2 — but both renumber nothing and
 both regenerate the ToC, so whichever runs second re-checks cell indices before T4/U5.
 
-- [ ] **T0. Checkpoint.** `git status` clean, record `git rev-parse --short HEAD`. The tree is clean
+- [x] **T0. Checkpoint.** — done 2026-09-22 at `ae2f414`; tree clean but for three untracked backups.
+      (The list was written at `acabb7e`; the U0–U14 change and T14–T16 landed in between.)
+      **As specified:** **T0. Checkpoint.** `git status` clean, record `git rev-parse --short HEAD`. The tree is clean
       at `acabb7e` as this list is written.
-- [ ] **T1. The data file** (S-3 settled: yes). Add the derived aggregate under a new `data/xiang_2022/`
+- [x] **T1. The data file** — done 2026-09-22. `data/xiang_2022/` holds `xiang_items.csv` (sha256
+      `c23d930d…`, 480 rows, 96 items), `README.md` with the OSF node, the four source files, the
+      smoothing rule, CC-BY and the hash, and `check_data.py`, which verifies the hash and reprints
+      the six empirical class profiles. **The derivation script does not exist and could not be
+      written:** the four OSF files were never vendored and the 2026-09-17 derivation kept only its
+      result. The user settled this the same day — ship the aggregate with its provenance — so the
+      README says plainly that the hash pins the file and certifies nothing about the derivation
+      (`decisions.md` A20). Running the check exposed a defect in the record: **F1's table below is
+      internally inconsistent**, its two `shape` rows renormalized while their mean positions were
+      not. See the correction under §5.
+      **As specified:** **T1. The data file** (S-3 settled: yes). Add the derived aggregate under a new `data/xiang_2022/`
       with `README.md` giving the OSF node, the four source files, the derivation, the licence and a
       sha256 per file; add the derivation script beside it. Acceptance: the README's hashes match,
       and a fresh read of the file reproduces the six class profiles in §5 F1 above.
-- [ ] **T2. Code Cell F** (S-1 to S-7 settled). A new code cell printing every number §5.2 will quote,
+- [x] **T2. Code Cell F** — done 2026-09-22, cell 23 of `main.ipynb`, 8 blocks, 130 lines of output,
+      0.3 s. All eight blocks as specified, with three departures forced by what was found:
+      **(i)** the relative class carries no prediction anywhere (S-2/O14), so block 6's
+      "between-class gaps" is maximum against minimum and block 3's "overall" pools the two absolute
+      classes; **(ii)** the fitted Λ of the minimum class is **48**, not the audit's 32, once the
+      absent item is dropped, and the cell prints the **bracket** (32 to 48) rather than presenting
+      the argmax as located — R25's lesson applied again; **(iii)** every helper takes *fields*
+      rather than utterance names, because `ker χ_all` is a field no utterance names, and block 1
+      checks both against `closed_form_fixed_point` and `theta_u_stationary_points` (0.0e+00 on
+      each). `code cell 1` untouched, coupling 9 quiet, no figure, no `cost:` line needed.
+      **As specified:** **T2. Code Cell F** (S-1 to S-7 settled). A new code cell printing every number §5.2 will quote,
       and nothing else. Its blocks:
       1. **Configuration and self-checks.** n = 4, θ_L = log 7, the five cells and their boundaries;
          the three entries of Eq. (A1) in the adjective's own orientation and the complement that
@@ -525,34 +578,66 @@ both regenerate the ToC, so whichever runs second re-checks cell indices before 
       9 does not fire; no figure, so the figure baseline is unchanged; any wall-clock line goes
       behind `cost:` (coupling 3). Acceptance: the cell prints every number the drafted §5.2 quotes,
       and no number in §5.2 is absent from it.
-- [ ] **T3. Appendix F markdown cell.** Heading with anchor `appf`, the `codef` anchor at its end.
+- [x] **T3. Appendix F markdown cell.** — done 2026-09-22, cell 22, anchors `appf`, `appf-1`…`appf-6`
+      and `codef` at its end; Eqs. (F1)–(F2). Six sections: the two hypotheses, what is instantiated
+      and what is not, what is measured, what matches, what does not, and the parity at n = 4. No
+      sentence says what any mismatch is due to.
+      **As specified:** **T3. Appendix F markdown cell.** Heading with anchor `appf`, the `codef` anchor at its end.
       Content: H1 and H2 as stated by the user; the instantiation (five positions = five Voronoi
       cells at n = 4, the three entries, the complement ensemble); what is measured and how R² is
       computed; then match and mismatch, reported and not explained. Displays, if any, numbered F1,
       F2 … (appendix letters restart, so the body's (1)–(41) is untouched and no renumbering
       question arises). No sentence about what the mismatch is due to.
-- [ ] **T4. Structure.** Insert the two cells after Code Cell D (index 21), before References, which
+- [x] **T4. Structure.** — done 2026-09-22. Inserted after Code Cell D at 22 and 23; References moved
+      to 24; 23 → 25 cells. ToC regenerated with the eight new rows.
+      **As specified:** **T4. Structure.** Insert the two cells after Code Cell D (index 21), before References, which
       becomes index 24; cell count 23 → 25. Regenerate the ToC (cell 0) with rows for 22 and 23 and
       the moved References row. Acceptance: every ToC link resolves and every index in it is right.
-- [ ] **T5. References.** Add Xiang, Kennedy, Xu & Leffel (2022), and Kennedy (2007) if §5.2 names
+- [x] **T5. References.** — done 2026-09-22. Kennedy (2007) and Xiang et al. (2022) added to the
+      notebook's References in alphabetical position. **The pending Leffel-versus-Xiang check is
+      decided: the manuscript is dropped.** The published 2022 article reports the shapes/artifacts
+      contrast itself, so it is cited alone, in `background_sections.md` §1.7 and its reference
+      list, and in `sections_3-6.md` §5.2 and its sources.
+      **As specified:** **T5. References.** Add Xiang, Kennedy, Xu & Leffel (2022), and Kennedy (2007) if §5.2 names
       the open-scale class it does not model, APA 7th, in alphabetical position. The pending
       Leffel-versus-Xiang check (`background_sections.md` line 612) is decided here. Their LG/QF/ST
       and hybrid R² values are cited in the prose and printed by no cell (S-5).
-- [ ] **T6. Couplings.** Confirm none fires: E3 diffs Code Cells 2 and 2b only; `code cell 1` is
+- [x] **T6. Couplings.** — done 2026-09-22. None of the nine fires: Code Cells 2 and 2b untouched
+      (1, 7), the new cell's prefix is `# === Code Cell F:` and not E3's two (2), no wall-clock line
+      (3), main executed before appendix_E (4), the dangling-reference check returns `[]` on both
+      notebooks with F1 and F2 defined (5), anchors added and ToC regenerated (6), no stdout tee (8),
+      `code cell 1` untouched (9). **One new coupling was needed and is recorded as coupling 10:**
+      Code Cell F is the only cell in either notebook that reads a file, by a path relative to the
+      project folder. E.3 gains Appendix F in its *Unaffected* list.
+      **As specified:** **T6. Couplings.** Confirm none fires: E3 diffs Code Cells 2 and 2b only; `code cell 1` is
       unchanged so coupling 9 is quiet; no new printing call in Code Cell 2 or 2b, so coupling 7 is
       quiet. Check whether `appendix_E.ipynb` §E.3 ("claims in main restated") needs a line.
 - [ ] **T7. Execute** main, then appendix_E, by `agent.md` §5.1. Acceptance: main 0 errors,
       8 figures, 14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS on both cells. Record the
       new runtime. Diff every other cell's stored output against T0: only the two new cells may
       differ.
-- [ ] **T8. agent.md.** §1's `main.ipynb` cell map (23 → 25 cells, the new rows, References at 24)
+- [x] **T8. agent.md.** — done 2026-09-22. §1's cell map 23 → 25 with rows for 22, 23 and References
+      at 24; §2 gains coupling 10 (the data-file path) and a loud dependency (Code Cell F reads
+      `evaluation_network` from Code Cell 2); §5.1's baseline updated.
+      **As specified:** **T8. agent.md.** §1's `main.ipynb` cell map (23 → 25 cells, the new rows, References at 24)
       and §5.1's baseline. §2 needs no new coupling if T6 holds; if Code Cell F reads the data file,
       add a coupling for that path.
-- [ ] **T9. decisions.md.** New entries or amendments for whatever S-1 to S-5 settle: the n = 4
+- [x] **T9. decisions.md.** — done 2026-09-22. New **A20** (n = 4, the fitted Λ and its scope, the
+      data file and what its hash does and does not certify, the relative class's exclusion, the
+      bracket). New register-E entry **E16**, classing every quantity Code Cell F prints and
+      recording the absent-item defect. **O13 rewritten**: its audit numbers are marked superseded
+      and the printed values take their place. **O8** gains the pointer to what Code Cell F builds.
+      **As specified:** **T9. decisions.md.** New entries or amendments for whatever S-1 to S-5 settle: the n = 4
       configuration; the treatment of Λ; *t*, if it enters; the data file and its provenance;
       O13's status. Quantity-trace (register E) entries for every quantity Code Cell F prints, each
       assigned a class under §3.3. O8 gains the pointer.
-- [ ] **T10. §5.2 prose**, written against the executed output, not before.
+- [x] **T10. §5.2 prose** — done 2026-09-22, written against the executed output. 400 → **550 words**
+      (§§3–6 total → 3,760), retitled *Scale structure: two hypotheses, and where the model matches*.
+      The old prediction (the monotone trend in the cut's position, reversing under a sharp prior) is
+      withdrawn per F13; the parity paragraph is kept and restated at n = 4. X7's wording constraint
+      honoured. **The instinct sits at the close of §5.2, pointing back to §5.1** — the user's choice
+      of site, 2026-09-22. Scope-tier row and word table updated; both add up.
+      **As specified:** **T10. §5.2 prose**, written against the executed output, not before.
       **Wording constraint from X7 (`exposure_stipulation.md`, applied 2026-09-22).** §5.2 states
       the ensemble as **the inventory's, not the experiment's**. F20 records that Xiang et al.'s
       latin square denies the exposure reading — no participant saw both adjectives of an image set
@@ -563,10 +648,17 @@ both regenerate the ToC, so whichever runs second re-checks cell indices before 
       two words sharing a scale and is not an involution (A18). §5.2 goes to about 400 words and the §§3–6 total to 3,200 (S-6). Confirm the instinct sentence's placement with the user. Also
       the §5.2 row of the word table in `sections_3-6.md` lines 81–103 and its scope-tier row at
       line 60.
-- [ ] **T11. Background §1.7.** The prior-manipulation bullet (F12), and the Q3b sentence softened
+- [x] **T11. Background §1.7.** — done 2026-09-22. F12's backwards bullet replaced: the manipulation
+      is stated as novel versus familiar objects, with the elicited priors' actual direction given
+      (artifacts are the **less** categorical). Q3b softened from "§5.2 answers it" to "§5.2 takes it
+      up", with the reason.
+      **As specified:** **T11. Background §1.7.** The prior-manipulation bullet (F12), and the Q3b sentence softened
       per the 2026-09-14 entry. `background_sections.md` line numbers are one lower than
       revisions.md cites, after R8.
-- [ ] **T12. revisions.md.** Mark the §5.2 entry and Q7 closed by this change; update §8's source
+- [x] **T12. revisions.md.** — done 2026-09-22. The §5.2 entry and **Q7 both marked CLOSED**, each
+      keeping its old assessment beneath as the record; §8's source row now points at Code Cell F and
+      says which audit numbers stay class (e) and reach no prose; §3's budget → 3,760; **R26** added.
+      **As specified:** **T12. revisions.md.** Mark the §5.2 entry and Q7 closed by this change; update §8's source
       table so the numbers point at Code Cell F rather than at the audit; clear the audit from the
       class (e) list.
 - [ ] **T13. Commit**, one logical change per commit, hashes recorded on each task line above.

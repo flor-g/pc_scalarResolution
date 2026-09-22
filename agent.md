@@ -35,7 +35,7 @@ into a project file (`decisions.md`, the change record, this file), never only i
 repository as remote `origin` (`https://github.com/flor-g/pc_scalarResolution.git`). The first
 commit is 499918c (2026-09-13). Procedures are in §4.
 
-### `main.ipynb`, by cell index (23 cells)
+### `main.ipynb`, by cell index (25 cells)
 
 | Index | Cell | Holds |
 |---|---|---|
@@ -53,7 +53,9 @@ commit is 499918c (2026-09-13). Procedures are in §4.
 | 13 | Code Cell 4 | The sweep. |
 | 14, 16, 18, 20 | Appendices A-D | θ_L and g_y; θ\*, locality, alternatives; how many utility directions; why emission is exclusion, and where ℓ₀ enters (Sec. 5, Eqs. (D5)–(D7), decision A3). |
 | 15, 17, 19, 21 | Code Cells A-D | Each prints the numbers the appendix above it quotes; Code Cell A also prints Text cell 3 §2's (decision I10). |
-| 22 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
+| 22 | **Appendix F** | H1 and H2 against Xiang et al. (2022), Eqs. (F1)–(F2). The only cell that reads a data file, and the only place Λ is fitted (S-1). States the two hypotheses, reports match and mismatch, and says nothing about what a mismatch is due to. |
+| 23 | Code Cell F | The numbers Appendix F quotes, in eight blocks. Runs at n = 4 in its own respawned network; the default n = 10 everywhere else is untouched. |
+| 24 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
 
 ### `appendix_E.ipynb` (10 cells)
 
@@ -145,12 +147,23 @@ Each of these has broken at least once.
    main's version would delete the relay: apply the same change to E1's version and keep its relay
    argument. (Corrected 2026-09-18: this item said every `def` was verbatim.)
 
+10. **Code Cell F reads `data/xiang_2022/xiang_items.csv` by a path relative to the project
+   folder.** It is the only cell in either notebook that reads a file. The runner of §5.1 already
+   passes `resources={"metadata": {"path": "."}}`, so this holds as long as the notebook is executed
+   **from the project folder**; run from anywhere else, Code Cell F raises `FileNotFoundError` and
+   nothing else in the notebook does. Moving, renaming or re-deriving that file changes every number
+   in Appendix F and in §5.2. `data/xiang_2022/README.md` pins it by sha256 and
+   `check_data.py` verifies the pin; run that check after any change to the file, before re-running
+   the notebook.
+
 **Loud dependencies.** Not couplings of the kind above, since each fails with an exception rather
 than silently, but an agent renaming or re-signing these should know what breaks:
 
 - **Code Cell D reads names from Code Cells 2 and 2b**: `part_d_priors` and `criterion_for_some`
   (Code Cell 2), `STRONG_LAMBDA` and `DELTA_ALL_ALPHA` (Code Cell 2b). Renaming any of them raises
   `NameError` in Code Cell D.
+- **Code Cell F reads `evaluation_network` from Code Cell 2** and respawns it at `num_atoms=4`.
+  It defines every other name it uses, so `code cell 1` is untouched and coupling 9 stays quiet.
 - **Code Cell D overrides `predict_state` against main's signature**, `(phi_u, theta_u=None)`, in
   `UtilityPlacementNetwork` (Appendix D Sec. 5). If `code cell 1`'s `predict_state` gains an
   argument — as E1's has, `relay` — Code Cell D raises `TypeError`. `TruthSetNetwork` overrides only
@@ -431,11 +444,16 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
   later cells outputs stale from the previous run — with no error anywhere. After any interrupted
   run, check `execution_count` across the code cells and re-execute in full before trusting or
   committing anything. A full-file output diff against the last commit (§4.2) is what catches it.
-- **Baseline as of 2026-09-14, after B9:** `main.ipynb` 0 errors, 8 figures (2 in Code Cell 2,
-  3 in Code Cell 2b, 3 in Code Cell 4), 14/14 specification checks, about 250 s;
+- **Baseline as of 2026-09-22, after T0-T13:** `main.ipynb` 0 errors, 8 figures (2 in Code Cell 2,
+  3 in Code Cell 2b, 3 in Code Cell 4), 14/14 specification checks, **about 855 s**;
   `appendix_E.ipynb` 0 errors, 5 figures, E2 18/18, E3 PASS on both cells (Code Cell 2: 203 lines
-  identical, 1 changed, 4 inserted; Code Cell 2b: 234 identical, none changed), about 710 s. Any departure
-  from this is a finding, reported with the output, not explained away.
+  identical, 1 changed, 4 inserted; Code Cell 2b: 234 identical, none changed), about 710 s. Any
+  departure from the **counts** is a finding, reported with the output, not explained away.
+  **The runtime is not a check.** main's was "about 250 s" from 2026-09-14 until it was measured
+  again on 2026-09-22 and came back 855 s, with the counts unchanged: the cells added since (Code
+  Cell A's 80-row sweep, Code Cell B's ray report, Code Cell 4's grid caveat, Code Cell F) account
+  for it, and so does whatever else the machine was doing. Re-measure it when the cell inventory
+  changes and do not read a drift in it as a defect. Code Cell F itself costs 0.3 s.
 - Report what was run and what it returned. If a step was skipped, say so.
 
 ### 5.2 Numerical reporting

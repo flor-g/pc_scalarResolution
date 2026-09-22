@@ -428,6 +428,39 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   `audits/2026-09-13-scale-structure/` (|θ\*| 4.6 to 91 across candidate ensembles, verdicts
   unchanged in what was tested). Tasks: `procedure_records/exposure_stipulation.md` X6–X8.
 
+### A20. Appendix F's configuration: n = 4, a fitted Λ, and one data file
+- Status: **Settled 2026-09-22**, implementing S-1, S-3, S-4, S-5 and S-7 of
+  `procedure_records/scale_classes_hypothesis.md` §8. Printed by **Code Cell F**; nothing in it
+  reaches any other cell.
+- Decided by: the **user** (2026-09-17 for S-1 to S-7; 2026-09-22 for the data file's form).
+- **n = 4 is a setting, class (a).** Xiang et al. elicit on a five-point scale, and Eq. (A1) reads a
+  predicate resolving n atoms as a Voronoi partition, so n = 4 makes the model's five cells their
+  five positions and θ_L = log 7. Appendix F respawns its own network at that n; **the default
+  n = 10 of every other cell is untouched**, and Code Cell F prints θ_u\* = −28.4375 for the default
+  inventory to show it.
+- **Λ is fitted in Appendix F and nowhere else in this project, class (c) with a stated scope.**
+  H1 is a claim *about* Λ, so a comparison holding Λ fixed could not bear on it. Every place Code
+  Cell F prints a Λ it labels it fitted. **One Λ per class, not one per (class, image type)** (O8,
+  S-9): the second fit is declined rather than argued against, and no prose may write that Λ is
+  independent of image type.
+- **A ladder brackets an optimum; it does not locate one.** Code Cell F prints, per class, the rungs
+  within 0.005 of the best, which is the width the ladder resolves: the maximum class spans Λ = 6 to
+  the ladder's top at 2048, the minimum class Λ = 32 to 48. The same lesson as F9's under O10.
+- **The relative class is not modelled** (O14). Its 40 items stay in the data file and take no
+  prediction; the model quantities cover the 56 absolute items.
+- **The data file, class (d) with provenance.** `data/xiang_2022/xiang_items.csv`, the derived
+  96-item aggregate, sha256 pinned in its README and checked by `check_data.py` beside it. It is the
+  only file either notebook reads (`agent.md` §2 coupling 10). **The step from the authors' four OSF
+  files to this aggregate is documented but not re-runnable here:** the derivation was performed
+  once in the 2026-09-17 audit and only its result was kept. The user settled this 2026-09-22 —
+  ship the aggregate with its provenance rather than re-derive it — so the hash pins the file
+  against drift and certifies nothing about the derivation.
+- **No published statistic is printed by any cell** (S-5). Code Cell F prints this model's own
+  predictions and our own statistics of them; the values Xiang et al. report for their own models
+  are cited in §5.2's prose.
+- **One item is scored nowhere.** The image set `curved_greenline` drew no Experiment 3 response at
+  all, for both of its adjectives — 2 of the 56 modelled items, 10 of the 280 rows. See **E16**.
+
 ### A17. Eq. (A4) is stated as non-local; the relay and the alternatives level are named, not derived
 - Status: Settled; resolves D10
 - Decided by: user (2026-09-13)
@@ -1160,6 +1193,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   a definition, and not transported (O9's pattern). That the inventory contains the pair at all is
   this phase's stipulation, labelled as one (O2).
 - **O8 is therefore settled in both halves.** Nothing in it blocks T0–T13.
+- **Implemented 2026-09-22 (T2).** The ensemble {χ, ker χ} is what Code Cell F builds for each
+  class, and the cell states in its own docstring that for *some* the kernel **is** the entry for
+  *no* exactly, while for *all* it is a field no utterance names — architectural, not lexical
+  (A18). Appendix F §2 says the ensemble is the **inventory's**, never the experiment's.
 - **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
 - **Finding, 2026-09-17** (record `procedure_records/scale_classes_hypothesis.md`, raised under
   O13). **The ensemble question has an answer wherever the predicate is tested against an antonym.**
@@ -1355,8 +1392,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   have: a cut at a context threshold t that is neither endpoint nor 1/2n, so **t would be a second
   quantity beside θ_L**, and Appendix A's identification argument (θ_L A W X(θ_L) = I, "θ_L enters
   twice") is stated for a θ_L that is both the gain and the cut. That is the structural cost of H2.
-- **What is measured** (record F1-F13, `audits/2026-09-17-scale-classes/`). Instantiating the five
-  scale positions of Xiang, Kennedy, Xu & Leffel (2022) as the five Voronoi cells of n = 4:
+- **What is measured — SUPERSEDED 2026-09-22 by Code Cell F; see the printed values below.** The
+  list that follows is the 2026-09-17 audit's, kept for the record. Two things changed when the
+  measurement entered a cell (T2): the relative class is no longer modelled (O14), and the audit had
+  scored the model against 10 rows of an item that drew no Experiment 3 response at all (E16).
+  Instantiating the five scale positions of Xiang, Kennedy, Xu & Leffel (2022) as the five Voronoi
+  cells of n = 4:
   1. **H2's class-to-entry map is the one their data show**, class by class (F2).
   2. On their own 96 items with their own elicited priors, the model's posterior-degree R² is 0.81
      overall against their LG 0.78 and QF 0.82, and by class 0.95 / 0.40 / 0.80 (max / min / rel)
@@ -1372,6 +1413,26 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   5. What the model does not reproduce: the minimum class moves the belief up from the prior by the
      same ~2.1 positions in both conditions, and at fixed θ\* the model moves it to a place, not by
      a displacement (F10).
+- **What Code Cell F prints (2026-09-22, T2/T7). These are the values O13 now carries**, and they
+  leave class (e): the audit's numbers above do not.
+  1. **H2's class-to-entry map is still the one their data show** for the two absolute classes.
+  2. **By class, on the two absolute classes at one fitted Λ each:** maximum **0.993** at Λ = 8,
+     minimum **0.434** at Λ = 48, pooled **0.819** over 270 scored rows. The literal listener gives
+     **0.992** and **0.103**, so the utility level earns **+0.331** of R² on the minimum class and
+     **+0.001** on the maximum one — that class is fitted by its entry alone.
+  3. **H1's ordering survives in the form "a finite Λ is required".** The maximum class is within
+     0.005 of its best from Λ = 6 to the ladder's top at 2048: these data put **no upper bound** on
+     its lexical strength. The minimum class has an interior optimum, bracketed between Λ = 32
+     and 48, falling to 0.351 by Λ = 2048.
+  4. **The image-type difference**: measured **−0.83** in the minimum class, model **−0.18** — the
+     sign and about a fifth of the size. In the maximum class, +0.09 and +0.03.
+  5. **Where they part**: the minimum class's profile peaks at position 3 under shapes and the
+     model's at position 5; the between-class gap is +1.33 / +0.41 measured against +0.44 / +0.22
+     modelled; and the model displaces further from the elicited prior than the data do in both
+     conditions (+3.37 against +2.40 under shapes, +2.43 against +2.11 under artifacts).
+  **What does not change: the entry is still not adopted.** The paper states H1 and H2, reports this
+  comparison, and makes no claim about what any mismatch is due to (R16). Whether Λ becomes a
+  function of anything is still the user's, and still open.
 - **Needed to decide:** the user's, on three things. (a) Whether Λ becomes a function of anything,
   or stays a fixed quantity with the classes distinguished by their entries alone. (b) If it does,
   what fixes it — the record shows the data want it to vary with the object's familiarity as well as
@@ -1379,8 +1440,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   adjective's cut t enters the model at all, which is what H2's open-scale half requires.
 - **Depends on it:** `sections_3-6.md` §5.2 and §5.4, `background_sections.md` §1.7, revisions.md
   Q7; the reading of the Λ axis in Text cell 6 and Code Cell 4; A5's θ_L and §3 item 6's Λ = 8.
-- Evidence: `audits/2026-09-17-scale-classes/output.txt` and `xiang_items_output.txt`. Class (e)
-  under `agent.md` §3.3 until a cell prints it (C6); no cell does.
+- Evidence: **Code Cell F of `main.ipynb`** (2026-09-22), which is now the source of record;
+  `audits/2026-09-17-scale-classes/output.txt` and `xiang_items_output.txt` are the superseded
+  audit. Everything the paper quotes is printed by the cell, so C6 is satisfied; what remains only
+  in the audit — the relative class's fit, the m = 3/m = 4 comparison, the per-image-type Λ — stays
+  class (e) and reaches no prose.
 - **Finding, 2026-09-17 (later the same day).** The user has directed how §5.2 presents this, which
   narrows O13 without closing it: "state both H1 and H2, then report where the model's prediction
   match Xiang's data as well as where it doesn't. Refrain from making any claims on the nature of
@@ -1809,3 +1873,35 @@ Appendix D Sec. 5, §3.2, §3.3 and §4.1 quotes is printed by this block.
   fixed-θ_u controls is unaffected.
 - Bogacz status: Eq. (D5) has Eq. (9)'s, an instance under restriction (A3, D3), so §3.2 registers
   no new divergence.
+
+**E16. The quantities Code Cell F adds (2026-09-22, tasks T2 and T9).** Classed by the agent.
+Nothing here is class (e): every number Appendix F and §5.2 quote is printed by this cell.
+- The five Voronoi cells at n = 4, θ_L = log 7, the cell boundaries, and each class's entry χ_y with
+  its kernel: **class (a)**, Eqs. (A1) and (A5) evaluated at a setting. n = 4 is A20's setting; the
+  default n = 10 is untouched and the cell prints its θ_u\* = −28.4375 to show it.
+- The elicited prior pushed onto the grid, and the uniform-prior push-forward check
+  (0.1927, 0.2003, 0.2139, 0.2003, 0.1927): **class (a)** in the field, with the departure from 1/5
+  reported as the grid's rather than corrected.
+- Each item's model profile at θ_u\*, and the literal listener's at the same Λ: **class (a)**, the
+  fields of Eqs. (15)–(16) and `literal_fixed_point`'s baseline, read out in cells.
+- Mean scale position, peak cell, and the class profiles: **class (b)**, summaries of the read-out
+  in the authors' own coordinate.
+- R² of Eq. (F2), by class and pooled, for the model and for q_lit: **class (b)**. It is a statistic
+  of the model *against* data, which is why the data file has to be present (A20).
+- **The fitted Λ per class, and the Λ ladder**: **class (c), a control with a scope**. Λ is fitted
+  here and nowhere else in the project, because H1 is a claim about Λ; every printed Λ is labelled
+  fitted. What the ladder yields is a bracket, not a location, and the cell prints the bracket.
+- κ_y = BᵀWχ_y for *all* and *some* at n = 4, their identical tilt (differing by 0.0e+00), their
+  opposite width (summing to 0.0e+00), and the midpoint cut's 1.2e-17 width: **class (a)**,
+  Appendix C §5's parity argument evaluated at this n. The unweighted 0.0194 is printed beside it
+  and labelled as the node's own mass, not a property of the cut.
+- **A defect in the source audit, corrected here.** One image set, `curved_greenline`, drew no
+  Experiment 3 response at all, for both of its adjectives. `audits/2026-09-17-scale-classes/`
+  scored the model against those 10 rows as measured zeros, which is a comparison against nothing.
+  Dropping them moves the maximum class's R² from 0.953 to **0.993** and the minimum class's from
+  0.401 to **0.434** — the maximum class crossing from below the published ST and QF values to above
+  them — and the minimum class's measured image-type difference from −1.13 to **−0.83**. Code Cell F
+  drops them and prints both row counts, 155 and 115. **Every number O13 recorded from that audit is
+  superseded**; O13 now carries the printed values.
+- Bogacz status: no new operation. The cell evaluates Eqs. (15)–(16) and (B2) at a setting, so §3.2
+  registers no new divergence.
