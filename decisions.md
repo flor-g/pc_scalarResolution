@@ -943,7 +943,20 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Tasks: `procedure_records/exposure_stipulation.md` (X0–X5).
 
 ### O3. The outline pointer for the cost of realizability
-- Status: Open, by the user's choice
+- Status: **Settled 2026-09-22** (user). The condition this was left open on is met: the settling-cost
+  argument now has a destination. `thesis_outline/revisions.md` §5 Item 2 specifies **§5.3
+  (Realizability, halting, and the plausibility commitment)** with content — the cost that rises
+  while the verdict stands still, what halts the flow, why θ\* stays the commitment, and A19's
+  demotion with D12's unsettled locality violation.
+- **What is settled is the question, not the wording.** The pointers **stay bare** and that is now
+  the ruling rather than a holding position: Text cell 4's *"left where it is posed, in the
+  background outline, and not pursued in this notebook"* and Appendix A's equivalent do not gain a
+  section number, because **§5.3's body is still unwritten** and the notebooks do not cite thesis
+  sections that do not yet exist. When §5.3 is drafted, giving the pointers a number is an ordinary
+  editorial step, not a reopening of this decision.
+- **What closing it costs, stated plainly:** nothing is verified by this. The destination is a
+  specification, not a section, and the argument §5.3 will make still owes the locality case D12
+  records as unsettled.
 - The complexity point (seconds of settling are an implausible cost) belongs to the outline's
   hypothesized alternative representation level (`sections_3-5_outline.md` 3.4, 3.4.3, 5.3). The
   pointer from `main.ipynb` stays bare until the background outline is finalized (reach.md A11).
