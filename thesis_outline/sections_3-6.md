@@ -1,7 +1,7 @@
 Sections 3 6 outline · MD
 # Outline for the proposal, evaluation, and discussion sections
  
-Scope: §§3–6, approximately 3,520 words (`revisions.md` §3: R1, S-6, P-3, and the 2026-09-22 raise of §5.5 for A19). Written against
+Scope: §§3–6, approximately 3,610 words (`revisions.md` §3: R1, S-6, P-3, and the two 2026-09-22 raises — §5.5 for A19, §4.2 for R25). Written against
 `main.ipynb` (Text cells 1–6, Code Cells 1–4, Appendices A–D with Code Cells A–D, Eqs. (1)–(41))
 and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
  
@@ -104,7 +104,8 @@ in §5.5; the weight-transport accounting of § E.2.
 ## Word allocation
 
 Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R1) → 3,200 (S-6) →
-**3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet). The "was" column is the 2,400 allocation this outline was written to.
+**3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet) → **3,610**
+(§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard). The "was" column is the 2,400 allocation this outline was written to.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
@@ -115,14 +116,14 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 | 3.4 State units, error units, and what is local | 210 | **230** | Concavity, closed forms, the relay; commitment 7; $\theta_u$ learned |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
 | 3.6 Two read-outs (new) | — | **100** | `revisions.md` §5, item 1 |
-| **4. Evaluation** | 745 | **1,020** | |
+| **4. Evaluation** | 745 | **1,110** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
-| 4.2 The criterion, and how to read the statistics | 170 | 170 | The conjunction; the softmax-nonlinearity guard |
+| 4.2 The criterion, and how to read the statistics | 170 | **260** | The conjunction; the softmax-nonlinearity guard; **the $n$ guard** (raised from 170 on 2026-09-22, S-8/T15) |
 | 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
 | 4.4 The five priors | 220 | **285** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,180** | |
+| **5. Discussion** | 705 | **1,250** | |
 | 5.1 What an alternatives level would have to supply | 390 | **350** | The specification, and what is left undone |
 | 5.2 Scale structure: a second prediction | 200 | **400** | H1 and H2 against Xiang et al. (R16, R17) |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
@@ -130,7 +131,7 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
 | **6. Conclusion** | 150 | **165** | |
-| **Total** | **2,400** | **3,520** | |
+| **Total** | **2,400** | **3,610** | |
 
 **What this table does not do.** §§3.6, 4.6, 5.3 and 5.4 are new sections whose content is planned
 in `revisions.md` §5 and whose bodies are not written in this outline yet; Limits and Predictions
@@ -336,7 +337,7 @@ Three beliefs, all internal to the model:
 State once, plainly, that RSA and wRSA are **analytic baselines and are not implemented**, so no
 quantitative comparison is offered or implied.
  
-## 4.2 The criterion, and how to read the statistics (about 170 words)
+## 4.2 The criterion, and how to read the statistics (about 260 words)
  
 - Scalar strengthening is taken to be the conjunction of two conditions on the all-region mass under
   *some*: $q_H<q_{\mathrm{lit}}$, the network lowering the mass the entry and prior already assign;
@@ -356,6 +357,13 @@ quantitative comparison is offered or implied.
   while $\Delta_{\textit{some}}$ varies by more than a fifth of its own size across six $\mu_u$
   settings. Any claim about a contrast between utterances must be checked against $\varphi_S$
   directly.
+- **A second guard: the verdicts are relative to $n$.** $\theta_L=\log(2n-1)$ fixes the cell of
+  *all*, and $n=10$ is stipulated (Appendix A), not measured. Across both lexical strengths and all
+  four base priors, the q shift criterion changes status somewhere on a sweep of $n$, and *where* it
+  changes depends on $\Lambda$ — granularity and lexical strength are not separable in what the
+  tables below report. Two cautions attach. A sweep **brackets** a change rather than locating it;
+  and a change of status may be the sign flip of a quantity already decayed to $10^{-7}$, which is
+  not the finding that a flip at $10^{-1}$ is. Appendix A prints the sweep.
 ## 4.3 The specification holds (about 70 words)
  
 Brief, and reported as a table rather than argued. The closed forms are exact to
@@ -481,7 +489,7 @@ contrast (R20, P-10).
   between $3.5\times10^{4}$ and $3.6\times10^{7}$. §4.6 takes it up.
 ---
  
-# 5. Discussion (about 1,180 words)
+# 5. Discussion (about 1,250 words)
  
 ## 5.1 What an alternatives level would have to supply (about 350 words)
  
@@ -636,8 +644,9 @@ remain, and naming them is the point of saying so:
   inferred, sitting inside a free-energy inference.
 - **Calibrate the claim.** The model was not fitted to these data and no fit is offered; what is
   offered is that a qualitative interaction the model derives from scale structure alone matches one
-  the literature reports. Say that, and no more.
-## 5.5 Limits (about 80 words, was §5.3)
+  the literature reports. Say that, and no more. §4.2's second guard applies here as well: the
+  denotation $n$ that fixes $\theta_L$ is stipulated, and §4's readings move with it.
+## 5.5 Limits (about 150 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
   reduced objective plus convergence to a stationary point guaranteed only **locally**, since that

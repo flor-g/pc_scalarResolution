@@ -438,7 +438,7 @@ None of these is the agent's to decide (`agent.md` §3.1, §5.4). Each is listed
 - **S-7. Does §5.2 keep its parity paragraph?** The κ parity result survives (2026-09-14 finding 6)
   but belongs to the old prediction, not to H1/H2. Keep, move to Appendix C, or drop.
 
-**Raised 2026-09-21, not yet answered — S-8.** The user asked that **how the evaluation varies with
+**Raised 2026-09-21, SETTLED 2026-09-22 — S-8.** The user asked that **how the evaluation varies with
 n** be reported in the notebook and in the paper, the finding currently sitting in
 `procedure_records/side_quests_mirror_and_granularity.md` (F6–F10, decision **O10**). Two things are
 the user's to settle:
@@ -453,6 +453,26 @@ the user's to settle:
    Eq. (A5) is where n gets its denotation, and a sweep of n against the two priors already reported,
    at Λ = 8 and at Λ = 512, so the paper can say whether the crossings move with Λ (the side quest
    did not check, and §4.4 now reports at Λ = 512).
+
+**Both recommendations taken, 2026-09-22, with one widening.** (a) §4.2 carries it, as a second
+guard beside the softmax-nonlinearity guard, with a clause in §5.2's *Calibrate the claim* bullet;
+(b) Code Cell A prints it. The widening: the sweep runs **all four `BASE_WORLD_PRIORS`**, not the
+two the side quest used, because the two were `gaussian` and `skewed high` under ad-hoc names and
+the inconsistency was itself a `agent.md` §5.5 violation. It cost nothing — the block runs in
+under 0.1 s — and it is what exposed the degenerate-ray crossing under `flat` (F7 qualified).
+
+**The budget moved.** S-8 estimated 60 words in §4 and 15 in §5.2. §4.2 took about **90**, because
+the finding grew two qualifications the estimate did not anticipate (bracketing, and magnitude), and
+a third result (non-separability from Λ) that the side quest had listed as unchecked. §4.2 goes
+170 → 260 and the §§3–6 total 3,520 → 3,610, recorded as **R25** in `revisions.md`.
+
+**One instruction overrode part of T14 as written.** The user, 2026-09-22: *"We want q-shift,
+q-position, mode shift, and mode position status to be explicitly printed for every (n, Lambda,
+ell_0) combination. Whether there is a flip or not is to be clarified in text, not the printed
+report."* T14's acceptance clause "the crossings of F9 are **printed** rather than described" is
+therefore **superseded**: the report prints per-row *statuses*, and the crossings are described in
+Appendix A's prose and in §4.2. The first draft of the block violated this (it carried crossing
+language in its header and docstring) and was rewritten.
 
 **Settled 2026-09-21 — S-9. One fitted Λ per class, not per (class, image type).** The user's
 reason: a constrained model should carry as few fitted quantities as possible. Fitting per image
@@ -553,17 +573,29 @@ both regenerate the ToC, so whichever runs second re-checks cell indices before 
 
 **Added 2026-09-21 at the user's request (decision O10). Blocked on S-8.**
 
-- [ ] **T14. Print how the evaluation varies with n.** The cell S-8 settles prints, for the priors
+- [x] **T14. Print how the evaluation varies with n.** — done 2026-09-22, `2068268`. The cell S-8 settles prints, for the priors
       and lexical strengths S-8 fixes: θ_L = log(2n − 1) at each n, θ_u\*, the two q criteria and the
       two mode criteria for *some*, and the κ separation of F10. Acceptance: the numbers of F7–F10
       that the prose will quote are reproduced by the cell (they are class (e) until then), the
       crossings of F9 are printed rather than described, and no figure is added unless S-8 asks for
       one. n = 1 stays rejected by the constructor (F8).
-- [ ] **T15. The prose**, at the site S-8 settles: n = 10 is a stipulation (O1), not a neutral choice
+      **As executed:** 80 rows (n × Λ × all four base priors), each printing θ_L,
+      ⟨μ_u, Σc⟩, θ_u\*, the q shift, P(all∣*some*), the mode step and the **status of all four
+      criteria**; then the κ ladder (F10) and the n = 1 refusal (F8). Two defects in the pre-existing
+      block were fixed on the way: the mode shift was measured against the **tempered** fixed point
+      rather than **ℓ_0**, disagreeing with Code Cells 2 and 4 (`agent.md` §5.5); and the q shift was
+      printed to four decimals, so a status change appeared between two numbers both shown as
+      0.0000. F7 is qualified and F9 extended in the side-quest record.
+- [x] **T15. The prose** — done 2026-09-22. As specified: at the site S-8 settles; n = 10 is a stipulation (O1), not a neutral choice
       of units; the criteria's readings cross with n; m = 2 and the rank results do not move (F7);
       n = 2 is not degenerate and n = 1 is (F8). Written against T14's output. Whether this entails
       anything about O1 is **not** claimed here.
-- [ ] **T16. Records.** `decisions.md`: O10 gains the pointer to the printed source and its numbers
+      **As executed:** §4.2's second guard (about 90 words) and a clause in §5.2. The phrase "the
+      criteria's readings **cross** with n" is **not** used: per the user's 2026-09-22 instruction
+      and F9-extended, the prose says which criteria *change status* where, that a sweep brackets
+      rather than locates the change, and that one such change is a sign flip at −7.593e-07. The
+      O1 non-claim is honoured and stated in both `decisions.md` O1 and R25.
+- [x] **T16. Records.** — done 2026-09-22. `decisions.md`: O10 gains the pointer to the printed source and its numbers
       leave class (e); O1 gains a line that the reporting exists, since F9 is what makes it
       consequential. `procedure_records/side_quests_mirror_and_granularity.md` §4 loses "neither
       question has any prose site" for side quest 2. `thesis_outline/revisions.md`: a site entry and

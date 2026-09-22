@@ -909,6 +909,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   n = 2…20 and met at n = 50, and under Beta(3,1) the q position and mode position criteria are
   unmet at n = 2, 3 and met at n ≥ 4. So what fixes *n* also fixes which side of a crossing the
   reported criteria sit on. n enters only through θ_L = log(2n − 1); K does not track it (I6).
+- **The reporting exists, 2026-09-22 (T14–T16).** That this decision is consequential is no longer
+  a record-only finding: **Code Cell A** prints all four criteria at every (n, Λ, ℓ_0), Appendix A
+  states it, and §4.2 carries it into the paper as a guard on how the verdicts are read, with a
+  clause in §5.2. This is why O1 must be **labelled a stipulation wherever n is used** — n = 10 in
+  the implementation, n = 4 in §5.2's instantiation — and it is the reason the label is not
+  cosmetic. What the reporting does **not** do is bear on part 1 or part 2 of this decision: it
+  says the choice matters, not what should fix it (T15's constraint).
 
 ### O2. The exposure distribution p(y) is uniform, and the paper says so
 - Status: **Settled 2026-09-21**
@@ -1181,12 +1188,24 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   prints it (C6).
 
 ### O10. Does the number of atoms n change what the evaluation reports?
-- Status: **Addressed 2026-09-21** (user: "O10–O14 already had been addressed"). The measurement
-  below is the answer and is not reopened. **One task it leaves:** the finding lives only in
-  `procedure_records/side_quests_mirror_and_granularity.md`, and the user asked that how the
-  evaluation varies with n be **reported in both the notebook and the paper** — tasks **T14–T16**
-  of `procedure_records/scale_classes_hypothesis.md`, with the placement question **S-8** there.
-  Until a cell prints them, these numbers are class (e) under `agent.md` §3.3.
+- Status: **Settled 2026-09-22.** Addressed 2026-09-21 (user: "O10–O14 already had been
+  addressed"); the remaining task, that how the evaluation varies with n be **reported in both the
+  notebook and the paper**, is discharged by **T14–T16** (`scale_classes_hypothesis.md`), the
+  placement settled at **S-8**.
+- **Printed source, so these numbers are no longer class (e).** `granularity_report` in
+  **Code Cell A** of `main.ipynb` prints, for every (n, Λ, ℓ_0) — the ladder
+  n ∈ {2,3,4,5,10,15,20,50,100,201} × Λ ∈ {8, 512} × all four `BASE_WORLD_PRIORS`, 80 rows —
+  θ_L, ⟨μ_u, Σc⟩, θ_u\*, the q shift and P(all∣*some*), the mode step, and the **status of all
+  four criteria**; then the κ separation and rank ladder, and the n = 1 refusal.
+  **Paper site:** §4.2's second guard, with a clause in §5.2 (`thesis_outline/sections_3-6.md`).
+  **Notebook prose:** Appendix A, *What n does to what the evaluation reports*.
+- **What the wider sweep changed in the finding itself** (F7 qualified, F9 extended, 2026-09-22):
+  the "crossings" of F9 are **threshold-test status changes**, they are **bracketed and not
+  located** by a ladder, and one of them — N(0,1) at Λ = 8 — is the sign flip of a q shift decayed
+  to −7.593e-07, against −9.546e-02 for *skewed high* at Λ = 512. **The crossings do move with
+  Λ**, so granularity and lexical strength are not separable. Under the **flat** prior at Λ = 8,
+  θ_u\* is unbounded along the ladder: it passes through **Appendix B's degenerate ray**, which is
+  therefore reachable by varying n alone.
 - Decided by: the measurement is the agent's, raised by the user alongside O9; same record.
 - **The question.** The implementation takes n = 10 (O1). Would three atoms, or exactly two, change
   essential results, and is the model degenerate at two?

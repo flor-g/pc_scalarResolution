@@ -105,6 +105,14 @@ Output of all five scripts: `audits/2026-09-15-side-quests/output.txt`.
   rank 2 modulo the constant, so by Eq. (C2) there are still two thresholds and **m = 2 stays
   exactly right**. θ_u\* moves smoothly and keeps its sign: −32.5731 at n = 2 to −19.1884 at
   n = 100.
+- **F7 qualified, 2026-09-22 (T14).** The smoothness clause is a property of **N(0,1)**, not of the
+  model. Sweeping all four `BASE_WORLD_PRIORS`, θ_u\* under the **flat** prior at Λ = 8 runs
+  −1082.011 at n = 2, +2510.809 at n = 3, +5950.626 at n = 10, −3322.896 at n = 11: it is not
+  monotone and **not bounded**. Eq. (B2)'s two roots have the constant product −S/σ_u, so θ_u\*
+  diverges exactly where ⟨μ_u, Σ_y c_y⟩ vanishes, and that coupling changes sign twice along the
+  ladder. This is **Appendix B's degenerate ray, reached by varying n alone**, and
+  `theta_u_stationary_points` guards only exact zero, so nothing flagged it. The rank and m = 2
+  results of F7 are untouched. Code Cell A now prints the coupling beside θ_u\*.
 - **F8 (n = 2 is not degenerate; n = 1 is).** At n = 2, θ_L = 1.0986, the cell of s = 0 is
   s ≤ 0.25 and the cell of s = 1 is s ≥ 0.75, χ_some ≠ χ_all, and 19 grid nodes lie strictly
   between the thresholds. The two thresholds stay distinct, so the span is unchanged. Degeneracy is
@@ -118,6 +126,30 @@ Output of all five scripts: `audits/2026-09-15-side-quests/output.txt`.
 
   So n = 10 is not a neutral choice of units: it sits on one side of two crossings under a prior
   the notebook runs. This makes **O1 consequential** rather than cosmetic.
+- **F9 extended and qualified, 2026-09-22 (T14, Code Cell A).** The sweep now covers all four
+  `BASE_WORLD_PRIORS` at Λ = 8 **and** Λ = 512 — 80 rows — and every row prints all four criteria.
+  F9's own readings all survive. Three things it did not say, and the prose must:
+  1. **Magnitude.** F9 wrote "crosses at n = 50" under N(0,1) without the size of what crosses. The
+     q shift there falls **+1.017e-01** at n = 2 → **+2.966e-06** at n = 20 → **−7.593e-07** at
+     n = 50: the change of status is the **sign flip of a quantity decayed five orders of
+     magnitude**, not a substantive change in what the model reports. Contrast *skewed high* at
+     Λ = 512, where the same criterion changes status at **−9.546e-02**. These are not findings of
+     equal weight and F9 presented them as one kind.
+  2. **A ladder brackets, it does not locate.** "Crosses at n = 50" means *not met at 20, met at
+     50*; the change lies somewhere in (20, 50]. No rung measures where it happens.
+  3. **The crossings do move with Λ**, which §4 listed as unchecked. The q shift criterion changes
+     at n = 50 under three priors at Λ = 8 and by n = 15 or n = 10 under all four at Λ = 512; the
+     q position criterion, met at every rung under N(0,1) at Λ = 8, fails at n ≤ 5 at Λ = 512.
+     **Granularity and lexical strength are not separable** in what the evaluation reports.
+
+  Two further facts the wider sweep produced. The **mode shift** criterion is met in **one row of
+  the eighty** (*skewed low*, Λ = 8, n = 201): the peak of φ_S\* otherwise sits above ℓ_0's peak
+  whatever the q criteria say. And **q position and mode position agree in 79 of 80 rows**,
+  disagreeing only at *flat*, Λ = 8, n = 2.
+- **A measurement limit found at T14.** χ_y is a threshold on the grid, so two n whose
+  θ_L = log(2n − 1) fall between the same two grid nodes give the **same network but for θ_L**:
+  n = 12 and n = 13 return byte-identical rows. n is resolved only as finely as the grid resolves
+  θ_L. No rung of the published ladder collides, so nothing printed is affected.
 - **F10 (separation is best near n = 15).** The minimum κ separation over the three utterances rises
   from 0.70917 at n = 2 to a maximum **1.49027 at n = 15**, and falls to 0.05999 at n = 201. The
   implementation's n = 10 gives 1.44196, near the peak.
@@ -145,7 +177,11 @@ Output of all five scripts: `audits/2026-09-15-side-quests/output.txt`.
 - Side quest 1 measured θ_u\*, φ_S\*, φ_u\* and the two q criteria. It has **not** run the mirrored
   inventory through Part D's four priors, the Λ×α plane, or the mode criteria, and has not asked
   what a principled μ_u for a mirrored scale would be.
-- Side quest 2 measured n at the default Λ = 8 under two priors. It has **not** swept n against Λ,
-  nor checked whether the crossings of F9 move with Λ, nor looked at n's effect in Text cell 4b's
-  Λ = 512 configuration.
-- Neither question has any prose site, because neither has entered a notebook.
+- ~~Side quest 2 measured n at the default Λ = 8 under two priors. It has **not** swept n against
+  Λ, nor checked whether the crossings of F9 move with Λ, nor looked at n's effect in Text cell 4b's
+  Λ = 512 configuration.~~ **Closed 2026-09-22 by T14**: Code Cell A's `granularity_report` sweeps
+  n against all four base priors at Λ = 8 and Λ = 512, printing all four criteria per row. The
+  crossings **do** move with Λ (F9 extended, point 3).
+- Side quest 1 still has no prose site, because it has not entered a notebook. **Side quest 2 now
+  has one**: Appendix A's markdown cell reports it in the notebook, and §4.2 of
+  `thesis_outline/sections_3-6.md` carries it in the paper with a clause in §5.2 (S-8, T15).
