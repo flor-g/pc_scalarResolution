@@ -72,7 +72,7 @@ reader should weigh is recorded as a fact with our position reserved.
 | The relay, Eqs. (E1)–(E6) | §3.4, §5.5 | Locality at $m>1$, and the cost it carries |
 | $\theta_L$ as predicate granularity, Eq. (A5) | §3.3, §5.1–§5.2 | Sets the search's resolution; the closed/open prediction |
 | $m$ = threshold count and the parity argument (App. C) | §3.5, §5.1–§5.2 | Fixes dimension; the mechanism behind §5.2 |
-| Closed vs open scale, extreme-favouring (new, §5.2) | §5.2 | Second empirical anchor; connects to Xiang et al. |
+| Scale class against Xiang et al.: H1 and H2, match and mismatch (§5.2, App. F) | §5.2 | Second empirical anchor. **Reported, not adopted** — the open-scale half of H2 is stated and left untested (O14) |
 | Strict concavity, unique fixed point, closed forms | §3.4, §4.3 | Makes the dynamics a testable implementation claim |
  
 **Tier B — recorded as a fact, position reserved.** One or two sentences each, no verdict, in §5.5
@@ -105,7 +105,8 @@ in §5.5; the weight-transport accounting of § E.2.
 
 Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R1) → 3,200 (S-6) →
 **3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet) → **3,610**
-(§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard). The "was" column is the 2,400 allocation this outline was written to.
+(§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard) → **3,760** (§5.2 raised 400 → 550 on
+2026-09-22 at T10, under S-6's standing permission for this section). The "was" column is the 2,400 allocation this outline was written to.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
@@ -123,15 +124,15 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 | 4.4 The five priors | 220 | **285** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,250** | |
+| **5. Discussion** | 705 | **1,400** | |
 | 5.1 What an alternatives level would have to supply | 390 | **350** | The specification, and what is left undone |
-| 5.2 Scale structure: a second prediction | 200 | **400** | H1 and H2 against Xiang et al. (R16, R17) |
+| 5.2 Scale structure: two hypotheses, and where the model matches | 200 | **550** | H1 and H2 against Xiang et al. (R16, R17); raised from 400 on 2026-09-22 at T10 — the section gained the scope exclusion (O14), the ensemble constraint (X7) and the instinct |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
 | **6. Conclusion** | 150 | **165** | |
-| **Total** | **2,400** | **3,610** | |
+| **Total** | **2,400** | **3,760** | |
 
 **What this table does not do.** §§3.6, 4.6, 5.3 and 5.4 are new sections whose content is planned
 in `revisions.md` §5 and whose bodies are not written in this outline yet; Limits and Predictions
@@ -603,50 +604,87 @@ remain, and naming them is the point of saying so:
   alternatives computation in the present model — $\varphi_L$ is a function of the observed
   utterance alone, $g_S$ reaches the belief only through $\varphi_u$, and no term in Eq. (13)
   involves any unobserved utterance — and they settle nothing about human processing.
-## 5.2 Scale structure: a second prediction (about 400 words)
- 
-- **The setup.** §3.3 fixes $\theta_L$ by the predicate's own resolution: at a scale endpoint the
-  threshold is supplied by the scale itself, while a predicate with no endpoint to anchor to must
-  take its resolution from elsewhere — the same Eq. (A5), read with a real $n$ rather than an integer
-  one — and Appendix A leaves open what fixes it. In
-  the terms of the gradable-adjective literature, maximum-standard absolute adjectives have closed
-  scales and conventional endpoint standards, while relative adjectives have open scales and
-  context-dependent thresholds (Kennedy, 2007; Xiang, Kennedy, Xu & Leffel, 2022).
-- **The mechanism, which rests on parity before it rests on measurement.** By §3.5 the even/width
-  column is the axis along which mass moves between centre and extremes. **An entry whose threshold
-  sits at the midpoint of the log-odds scale has no even component at all**: $\chi=\mathbb
-  1[\zeta<0]$ is the constant plus a purely odd function, and the basis is orthogonal to the
-  constant by construction (App. C §2), so its width loading is exactly zero. Moving the cut
-  off-centre is what gives it one. That much is a parity argument in the family of Appendix C's,
-  not a fitted trend. The measured ratios of width loading to tilt loading then quantify the
-  growth: $0.219$ at $s=0.73$, $0.633$ at $s=0.95$, $1.07$ at $s=0.99$. **A mid-scale threshold is
-  invisible to the extreme-favouring axis; an endpoint-anchored one loads it heavily.**
-  *(Numerical note for the notebook, not the prose: on the grid the midpoint ratio reads $0.013$
-  rather than $0$, and the sign flips with the strict-versus-inclusive inequality — the cut sits on
-  a node. Half-weighting that node returns $0$ to machine precision. Report the parity result, not
-  the artifact.)*
-- **The prediction, in two parts.** Under a flat prior, the utility level's own contribution to
-  posterior degree rises monotonically as the threshold approaches the endpoint, from $+0.034$ at
-  $s=0.50$ to $+0.070$ at $s=0.98$ (and from $+0.047$ to $+0.099$ at $\theta_u^\ast$). And the
-  contribution decays as prior knowledge sharpens, reversing sign for mid-scale thresholds while
-  remaining positive for endpoint-anchored ones: under a Gaussian prior of precision 2 it is
-  $-0.005$ at $s=0.50$ against $+0.020$ at $s=0.98$. So the model predicts **endpoint-oriented
-  interpretation for closed-scale predicates, proportional prior-tracking for open-scale ones, and
-  an interaction in which the endpoint orientation is sharpest where prior knowledge is weakest.**
-- **The empirical fit.** This is the reported profile. Maximum-standard absolute adjectives elicit
-  categorical responses concentrated near the scalar maximum, relative adjectives a roughly constant
-  increase across scale positions, and the difference is most dramatic in the impoverished-prior
-  (geometric shapes) condition rather than the rich-prior (familiar artifacts) one
-  (Leffel, Xiang & Kennedy, 2017; Xiang et al., 2022). Xiang et al. further find that Bayesian
-  pragmatics models what is *communicated* well ($R^2=0.78$–$0.82$) but threshold judgments poorly
-  ($R^2=0.36$–$0.63$), especially for absolute adjectives, and conclude that Bayesian reasoning must
-  be combined with the semantic conventions governing thresholds. **That is the architecture this
-  model already has**: $\theta_L$ is a semantic convention, fixed by the predicate rather than
-  inferred, sitting inside a free-energy inference.
-- **Calibrate the claim.** The model was not fitted to these data and no fit is offered; what is
-  offered is that a qualitative interaction the model derives from scale structure alone matches one
-  the literature reports. Say that, and no more. §4.2's second guard applies here as well: the
-  denotation $n$ that fixes $\theta_L$ is stipulated, and §4's readings move with it.
+## 5.2 Scale structure: two hypotheses, and where the model matches (about 550 words)
+
+Written against Code Cell F's executed output (Appendix F). Every number below is printed there;
+every number attributed to Xiang et al. is cited and printed by no cell (S-5). **No sentence in this
+section says what any mismatch is due to** (R16).
+
+- **The setup.** §3.3 fixes $\theta_L$ by the predicate's own resolution, $\theta_L=\log(2n-1)$: at
+  a scale endpoint the threshold is supplied by the scale itself, while a predicate with no endpoint
+  to anchor to must take its resolution from elsewhere, and Appendix A leaves open what fixes it.
+  In the terms of the gradable-adjective literature, maximum- and minimum-standard absolute
+  adjectives have closed scales and conventional endpoint standards, while relative adjectives have
+  open scales and context-dependent thresholds (Kennedy, 2007; Xiang, Kennedy, Xu & Leffel, 2022).
+- **The two hypotheses, stated as hypotheses.** **H1:** scalar expressions whose atomicity is
+  unstable carry weaker lexical strength — in this model's quantities, $\Lambda$ as a function of
+  how stably the predicate fixes $n$, which couples two quantities §3.3 fixes independently.
+  **H2:** open-scale adjectives behave like *some*, complete-scale adjectives like
+  endpoint(s) + *some* — a map from scale class onto an entry of Eq. (A1), read in the adjective's
+  own orientation. Neither is adopted here. The section states them, reports the comparison, and
+  stops.
+- **What is instantiated, and the half that is not.** Five scale positions are the five Voronoi
+  cells of $n=4$, so $\theta_L=\log 7$; the default $n=10$ of §4 is untouched. **H2's open-scale
+  half is not tested.** A relative adjective's cut is a context threshold that neither endpoint
+  supplies, and this phase fixes both endpoints with the one $\theta_L$, so the relative class is
+  not modelled and its items carry no prediction. $\Lambda$ is **fitted**, per class, here and
+  nowhere else in the dissertation — H1 is a claim about $\Lambda$, so a comparison holding it fixed
+  could not bear on H1 at all. One $\Lambda$ per class and not one per image type: the second fit is
+  declined, and nothing here says $\Lambda$ is independent of image type.
+- **The ensemble is the inventory's, not the experiment's.** Each entry is paired with its own
+  kernel, $\{\chi,\ker\chi\}$, which for these two classes coincides with the antonym the
+  experiment used. That coincidence follows from one $\theta_L$ fixing both endpoints; it is not a
+  thesis about antonymy, and membership in the inventory follows from having met an entry somewhere,
+  not from having met it in this experiment — the authors' latin square in fact shows no participant
+  both adjectives of an image set.
+- **Where the model matches.** H2's class-to-entry map is the one the data show: the maximum class's
+  measured mass sits in the top cell ($0.960$ under shapes, $0.929$ under artifacts) and the minimum
+  class's spreads over every cell but the bottom one, which is what $\{\zeta\le-\theta_L\}$ excludes.
+  The maximum class is fitted at $R^2=0.993$, and **puts no upper bound on $\Lambda$** — every value
+  from $6$ to the ladder's top at $2048$ is within $0.005$ of the best, consistent with the hard
+  entry of the $\Lambda\to\infty$ limit. The minimum class **requires a finite $\Lambda$**: its fit
+  rises to $0.434$ and falls away on both sides, to $0.351$ by $\Lambda=2048$, with the optimum
+  bracketed between $32$ and $48$. That contrast is H1's content. The utility level is what earns
+  the minimum class's fit — the literal listener reaches $0.103$ against the model's $0.434$, a gain
+  of $0.331$, while on the maximum class it reaches $0.992$ against $0.993$, so that class is fitted
+  by its entry alone. And the image-type difference has the right sign and the right home: $-0.18$
+  against a measured $-0.83$ in the minimum class, $+0.03$ against $+0.09$ in the maximum.
+- **Where it does not.** The minimum class is the residual: $R^2=0.434$ against $0.993$, and its
+  measured profile peaks at position 3 under shapes where the model's peaks at position 5. The
+  image-type difference is about a fifth of the measured size. The between-class gap is $+1.33$ and
+  $+0.41$ measured against $+0.44$ and $+0.22$ modelled. And the model displaces belief further from
+  the elicited prior than the data do in both conditions ($+3.37$ against $+2.40$ under shapes,
+  $+2.43$ against $+2.11$ under artifacts). **Reported, and not explained.**
+- **What the comparison is worth.** Xiang et al. find that Bayesian pragmatics models what is
+  *communicated* well but threshold judgments poorly, especially for absolute adjectives, and
+  conclude that Bayesian reasoning must be combined with the semantic conventions governing
+  thresholds. **That is the architecture this model already has**: $\theta_L$ is a semantic
+  convention, fixed by the predicate rather than inferred, sitting inside a free-energy inference.
+  Their own models' $R^2$ are cited for comparison and printed by no cell; note that every model in
+  their paper is weakest on the minimum class, this one included, as they say themselves.
+- **The parity result, restated at this resolution (S-7).** By §3.5 the even/width column is the
+  axis along which mass moves between centre and extremes. **An entry whose threshold sits at the
+  midpoint of the log-odds scale has no even component at all**: $\chi=\mathbb 1[\zeta<0]$ is a
+  constant plus a purely odd function, and the basis is orthogonal to the constant by construction
+  (App. C §2), so its width loading is $1.2\times10^{-17}$. Moving the cut off-centre is what gives
+  it one. At $n=4$: **the two absolute entries' tilts are identical, differing by
+  $0.0\times10^{0}$, and their widths sum to $0.0\times10^{0}$ — they differ in the even coordinate
+  alone.** A parity argument in the family of Appendix C's, not a fitted trend.
+  *(Numerical note for the notebook, not the prose: the midpoint cut sits on a node, half-weighted;
+  left unweighted the grid reads $0.0194$, the node's own mass. Report the parity, not the artifact.)*
+- **Calibrate the claim.** $\Lambda$ is fitted and labelled as fitted; nothing else here is, and a
+  ladder **brackets** an optimum rather than locating it. §4.2's second guard applies here too: the
+  denotation $n$ that fixes $\theta_L$ is stipulated, and §4's readings move with it — this section
+  runs at $n=4$ because the authors' scale has five positions, a choice about their paradigm and not
+  a discovery about the predicates.
+- **The instinct, stated once, as an instinct.** The symmetry the parity paragraph states — both
+  endpoints fixed by the one $\theta_L$ — is a commitment of this phase, and it may be the wrong
+  one. The instinct is that separating the lexical level's threshold from an alternatives level's,
+  $\theta_L$ inferring the boundary of $0$ and $\theta_A$ the boundary of $1$, would give the
+  relative class's midpoint $t$ something to be a property of. **No promise is attached**: the
+  algebra is not derived, the phase is not built, and nothing above is claimed to follow from it.
+  §5.1 is where an alternatives level is specified; $\theta_A$ is named here and not there, because
+  naming it among what that level "would have to supply" would turn an instinct into an obligation.
 ## 5.5 Limits (about 150 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
@@ -685,8 +723,14 @@ remain, and naming them is the point of saying so:
   *most* at $\zeta=0$ the confirming instance; ⟨*some*, *most*, *all*⟩ is where the search thesis of
   §5.1 is testable, and §5.1's dimension argument already covers that cascade, its three levels
   being complementary pairs on their own domains.
-- **The scale-structure interaction of §5.2**, tested on degree estimates rather than truth-value
-  judgments.
+- **The lexical strength of a class, from its scale structure (§5.2).** A predicate anchored at its
+  scale's own endpoint should behave as a hard entry — its fit putting no upper bound on $\Lambda$ —
+  while one whose threshold depends on something the scale does not supply should require a finite
+  one. That is the shape of H1 the measurement supports, and it is testable on any class with an
+  elicited prior and a degree estimate. **Stated as a prediction of H1, which the dissertation
+  reports on and does not adopt.** What is *not* predicted here is the old §5.2 trend — the monotone
+  rise in the utility level's contribution as the cut approaches the endpoint, and its reversal under
+  a sharp prior — which is withdrawn.
 ---
  
 # 6. Conclusion (about 165 words)
@@ -707,8 +751,12 @@ remain, and naming them is the point of saying so:
    proposes a design for it — resolution as a negative search branching binarily at each level,
    which keeps the dimension at one, the plasticity local, and the generative map affine enough to
    inherit the convergence proof — but does not derive its algebra, and says so in §5.1.
-4. Independently, the same threshold semantics predicts an endpoint-orientation asymmetry between
-   closed- and open-scale predicates, sharpest where prior knowledge is weakest.
+4. Independently, the same threshold semantics distinguishes scale classes by the entry each carries
+   and by the lexical strength each requires. Run on Xiang et al.'s (2022) own items, the class
+   anchored at its scale's endpoint is fitted almost exactly and puts no upper bound on $\Lambda$,
+   while the class whose threshold sits a resolution step inside the other endpoint requires a finite
+   one and is where this model, like every model in their paper, is weakest. That comparison is
+   reported, and no account of the residual is offered.
 ---
  
 ## Sources for §5.2
@@ -716,9 +764,6 @@ remain, and naming them is the point of saying so:
 - Xiang, M., Kennedy, C., Xu, W., & Leffel, T. (2022). Pragmatic reasoning and semantic convention:
   A case study on gradable adjectives. *Semantics and Pragmatics, 15*(9).
   https://doi.org/10.3765/sp.15.9
-- Leffel, T., Xiang, M., & Kennedy, C. (2017). *Interpreting gradable adjectives in context: Domain
-  distribution vs. scalar representation* [Manuscript]. **Check whether the published 2022 article
-  reports the shapes/artifacts contrast in the same terms before citing the manuscript.**
 - Ronai, E., & Xiang, M. (2024). What could have been said? Alternatives and variability in
   pragmatic inferences. *Journal of Memory and Language, 136*, 104507.
 - Kennedy, C. (2007). Vagueness and grammar: The semantics of relative and absolute gradable
@@ -731,15 +776,15 @@ citations for a structurally bounded alternative set.
  
 ## Open items
  
-1. **The §5.2 magnitudes are not yet in the notebook.** The *mechanism* no longer depends on them:
-   the midpoint's zero width loading is a parity result (App. C §2), and §5.2 now leads with it. But
-   the off-centre loading ratios, the utility contributions to posterior degree, and the sign
-   reversal under a sharp prior are genuine measurements, computed from the closed forms
-   (Eqs. 15–16) and validated by reproducing every published quantity — the Appendix B $c_y$ table,
-   the Eq. (30) offset, the basis shapes, and all five rows of the Part D table with its
-   tempering/utility decomposition. A probe cell has been drafted; run it before the prose quotes
-   them. If time runs out, §5.2 survives on the parity argument plus a qualitative statement of the
-   interaction.
+1. ~~The §5.2 magnitudes are not yet in the notebook.~~ **CLOSED 2026-09-22 (T2, T7).** Every number
+   §5.2 quotes is printed by **Code Cell F** (Appendix F, cells 22–23 of `main.ipynb`), and a C6
+   sweep over the rewritten section returns none without a printed source. The magnitudes are not
+   the ones this item meant: the off-centre loading ratios, the utility contributions to posterior
+   degree and the sign reversal under a sharp prior belonged to the prediction that F13 withdrew.
+   What survives is the parity result, now restated at $n=4$ against printed $\kappa$, and what
+   replaces the rest is the class comparison against Xiang et al.'s own items. The "drafted probe"
+   was never found in the project or on the Desktop and is not needed.
+
 2. **The background is being rewritten** under the three-question frame (Q1 locality; Q2 not one
    pass; Q3 algorithmic-level peculiarities). The plan is `claude/background_revision_plan.md`
    (Revision 4) and the rewritten outline is `background_sections_outline.md`. Two consequences for

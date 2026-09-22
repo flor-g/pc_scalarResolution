@@ -103,6 +103,7 @@ Fifth and sixth messages (O7; recorded in full in `procedure_records/o7_renaming
 | R19 | **The RSA projection parallel is stated, with an explicit warning.** The paper says that the utility level reads a **linear projection of the same log quantity** S₁ reads, log L₀(s|u). The background **foreshadows** the similarity. Both places warn the reader explicitly that, mathematically, **a projection does not imply an equivalence**, and that forgetting the difference is dangerous. The warning has an exact form: BᵀW1 = 0, so the coupling is rank 2 and blind to the constant direction — the one the normalizer lives in (G10 of the record). The coupling is constant-invariant; **the model is not** (§9.1, no flat direction). | user (2026-09-17) |
 | R24 | **Both of this phase's ensemble stipulations are stated and labelled** (`decisions.md` **O2** for the weights, **A18** for the membership). *Weights*: $p(y)$ is uniform, which is the same move as fixing every σ at 1 — a quantity the phase does not model set to the value that treats every utterance alike, and which makes the ensemble vanish from Eq. (B2). The paper does not measure how far a non-uniform $p(y)$ would move θ\*; it claims only that it would, which is what makes §5.6's exposure prediction a prediction **about departures from a stipulated uniform**. One asymmetry is stated rather than smoothed: σ is a variable with a default, so a precision-bearing phase changes defaults, whereas $p(y)$ is not a variable at all but implicit in the batched sum, so a frequency-bearing phase adds a weight vector — and Appendix B's per-presentation check is the one place that would feel it. *Membership*: the inventory holds at least $\{\chi,\ker\chi\}$ for any entry; an antonym is never needed to define one, ker is an involution where antonymy is not, and the pair is present whether or not a word lexicalizes the second member (ker E_all = {1}, the O corner). Membership follows from exposure **somewhere**, not from exposure in a given experiment, and the converse does not hold. Sites: Appendix B, Appendix D §2, Text cell 3's preamble items 3 and 6, §5.1's cascade, §5.5 Limits, §5.6 Predictions, and a wording constraint on §5.2 carried by `scale_classes_hypothesis.md` T10. Markdown only — no coupling fires and no cell is re-executed. | user (2026-09-21), applied 2026-09-22 |
 | R25 | **§4.2 gains a second guard: the evaluation's verdicts are relative to n** (`decisions.md` **O1**, **O10**; S-8, tasks T14–T16 of `scale_classes_hypothesis.md`). θ_L = log(2n − 1) fixes the cell of *all*, and n = 10 is a stipulation, not a measurement. Code Cell A's `granularity_report` now prints all four criteria at every (n, Λ, ℓ_0) — 80 rows over n ∈ {2,3,4,5,10,15,20,50,100,201}, Λ ∈ {8, 512} and all four `BASE_WORLD_PRIORS` — and the q shift criterion changes status somewhere on the sweep in every one of the eight (Λ, ℓ_0) blocks, while **where** it changes depends on Λ: **granularity and lexical strength are not separable** in what §4 reports. Two cautions the prose must carry, neither visible in a status column: a ladder **brackets** a change rather than locating it, and a status change may be the sign flip of a quantity already decayed to −7.593e-07 (N(0,1) at Λ = 8) as against −9.546e-02 (*skewed high* at Λ = 512) — not findings of equal weight. Sites: §4.2 (about 90 words, 170 → 260, total → 3,610), a clause in §5.2's *Calibrate the claim* bullet, Appendix A's markdown cell, and Code Cell A. **Not claimed:** anything about what should fix n; O1's two parts stand. | user (2026-09-21, "that cost … worth reporting… they need to be mentioned in the paper"; scope set at S-8), applied 2026-09-22 |
+| R26 | **§5.2 is rewritten against Code Cell F, and Appendix F is added** (`decisions.md` **A20**, **O13**, **O14**; S-1 to S-9, tasks T0–T13 of `scale_classes_hypothesis.md`). Two new cells in `main.ipynb` (22, 23; cell count 23 → 25), one new data file (`data/xiang_2022/`, the only file either notebook reads), and §5.2 at 400 → **550 words** (total → 3,760). §5.2 states H1 and H2 as hypotheses and adopts neither, reports match and mismatch, and **says nothing about what any mismatch is due to** (R16). Λ is fitted per class — here and nowhere else in the dissertation, because H1 is a claim about Λ — and the ladder is reported as a **bracket**, not a location (R25's lesson, applied again). The relative class is **not modelled**, so H2's open-scale half is stated and left untested, and the instinct about separating θ_L from θ_A closes the section with no promise attached (O14; site confirmed by the user, 2026-09-22). **Two corrections carried:** the source audit had scored the model against 10 rows of an item with no Experiment 3 data, which moves the maximum class's R² 0.953 → **0.993** and the minimum class's 0.401 → **0.434** (`decisions.md` E16); and F12's backwards prior-manipulation sentence is fixed here and in background §1.7. Sites: §5.2, the scope-tier row, the word table, background §1.7, the References of both the notebook and the outline (Kennedy 2007; Xiang et al. 2022, the Leffel et al. manuscript dropped at T5). | user (2026-09-17, "state both H1 and H2… refrain from making any claims on the nature of this mismatch"; S-1 to S-9), applied 2026-09-22 |
 | R23 | **A footnote to §5.3 states the hypothesis that a case's representative tolerance scales with that case's Λ**, and the notebook demonstrates at two named ad hoc values, 1e-1 at Λ = 8 and 1 at Λ = 512. **The footnote states the claim qualitatively and cites the audit for numbers** (`audits/2026-09-21-tolerance-halting/lambda_and_tolerance.py`), because nothing in the notebooks prints a *matched* comparison — the Λ = 8 table reports updates at 1e-1 and the Λ = 512 table at 1, which is the keying itself. What the audit shows, matched by prior: at a fixed tolerance of 1 **every** prior takes three times as many updates at Λ = 512 as at Λ = 8, and at 1e-2 the rows that are not slow-started take eleven to seventeen times as many. The sharper form, and the one the footnote should lead with: **at Λ = 512 the flow halts at between 3.5% and 5% of θ\* under every prior and across a tenfold change of tolerance, while at Λ = 8 the same tolerances land anywhere from 0% to 30%** — so at large Λ the tolerance barely moves where the flow lands. The footnote is careful on four points. (i) It is a **hypothesis, not a fit**: two demonstration values are named, nothing is interpolated, no functional form is claimed, and the notebook raises on an unlisted Λ rather than guessing. (ii) It is **not** the relative tolerance |Δθ| < tol·|θ| that A19 rejects as a guard — Λ is a standing property of the configuration, fixed before the flow starts, whereas |θ| is where the trajectory has got to. (iii) It does **not** rest on any claim that integration cost is super-linear in Λ; that claim was the agent's error and is withdrawn (H9). (iv) It does **not** rest on the comparison the first draft gave — "the same 1e-1 halts the Λ = 8 flow after 15 updates and the Λ = 512 flow only after 61 to 173" — which set the gaussian prior at Λ = 8 against three *different* priors at Λ = 512. Matched by prior, two of the five go **down** at 1e-1, because prior-specific slow starts (H5) dominate at that tolerance. **Corrected 2026-09-22.** | user (2026-09-21), evidence corrected 2026-09-22 |
 | R22 | **The paper OFFERS halting by tolerance as a direction, not a commitment** (`decisions.md` **A19**, demoted 2026-09-22; **D12**). The flow halts when its own update falls below a tolerance; θ\* stays the commitment (R10 unchanged); the tolerance is **ad hoc**, so no reported result depends on it. **The paper admits an unsettled locality violation and presents the hypothesis as a direction that could resolve the halting problem**: the *fast* loop's tolerance is keyed to λ_max(H), a global spectral quantity, which is a problem of the same kind as D4 and is not licensed by it, since D4 is itself an instance only under restriction. The *slow* rule |Δθ_u| < tol carries no such debt — it reads only the magnitude of the update the plasticity rule already forms — and the paper says which of the two is clean rather than treating them alike. The halting problem itself is **not** written off as an artefact of batching: it is real for the organism as well as the simulation (user, 2026-09-22), and Bogacz's own remark that parameters never converge is context in D12, not a dissolution. Beyond that, and the paper declines both to claim that an organism needs a tolerance for a computer's reason and to stipulate a value representative of the brain. What it argues is that a representative tolerance is almost certainly greater than 1e-9, so a real system halts earlier than the asymptote. §5.3 rests on the measured agreement (H2–H4 of `procedure_records/tolerance_halting.md`): the verdicts at a halted θ_u are the verdicts at θ\*, at about **1e-3** of the cost. **Corrected 2026-09-21**: this row first said 1e-4, which overstates it by an order of magnitude — the separation 4λ goes 9.3e6 at θ\* to 1.19e4 at the halt, and the step count 4.48e8 to 5.74e5, both ratios near 1/780. | user (2026-09-21) |
 | R21 | **RSA's speaker-optimality parameter is written α_rsa throughout the dissertation** (Q8). The bare α stays the concentration of the prior Beta(α,1), as `main.ipynb` and `sections_3-6.md` §§4.5 and 5.2 write it, so Eq. (41)'s Λ_crit ≈ α log 2n is unambiguous where §1.3 cites it. Applied to `background_sections.md` §1.2 (the S₁ equation and its gloss) and §1.3; the notebooks never use α in the RSA sense, so none of them changes. | user (2026-09-21) |
@@ -159,7 +160,7 @@ Two further findings that change the outline as much as the headline does:
   says that the maximizer of F supplies a halting mechanism. So item 2 is new material, not a
   correction of existing text.
 
-## 3. Word allocation at 3,000, raised to 3,200 on 2026-09-17 (S-6), then to 3,450 the same day (P-3), then to 3,520 on 2026-09-22 (§5.5, for A19), then to 3,610 the same day (§4.2, for S-8/T15's n guard)
+## 3. Word allocation at 3,000, raised to 3,200 on 2026-09-17 (S-6), then to 3,450 the same day (P-3), then to 3,520 on 2026-09-22 (§5.5, for A19), then to 3,610 the same day (§4.2, for S-8/T15's n guard), then to 3,760 the same day (§5.2, for T10)
 
 | Section | Was | Now | What the change pays for |
 |---|---:|---:|---|
@@ -177,7 +178,7 @@ Two further findings that change the outline as much as the headline does:
 | 4.4 The five priors (retitled) | 220 | **285** | New table with tempering/utility split; the Cremers parallel on q (R7); R20/P-10: the Λ = 512 table with Λ = 8 as a one-line contrast, and P-9's two counts |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | Conjunction thresholds across the band; the V under both read-outs (R14); P-8: the opposing floors are now where the trade-off claim is sourced |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | 100 | The evidence item 2 rests on |
-| **5. Discussion** | **705** | **1,250** | (the 980 written here on 2026-09-17 was stale: it predated §5.2's 200 → 400; 1,180 was stale in turn, predating §5.5's 80 → 150 on 2026-09-22 — corrected the same day. The grand total was right both times; this subtotal was not.) |
+| **5. Discussion** | **705** | **1,400** | (the 980 written here on 2026-09-17 was stale: it predated §5.2's 200 → 400; 1,180 was stale in turn, predating §5.5's 80 → 150 on 2026-09-22 — corrected the same day. The grand total was right both times; this subtotal was not. Raised again to 1,400 on 2026-09-22 for §5.2's 400 → 550 at T10.) |
 | 5.1 What an alternatives level would have to supply | 390 | 350 | Complexity-led; the q-normalization link added, the Cremers bullet moved out (R7), lines 329–338 removed (R14) |
 | 5.2 Scale structure: a second prediction | 200 | **400** | R16/R17: H1 and H2 stated; the instantiation; the parity of the two entries; match and mismatch; the O14 sentence. The user raised the budget rather than trim §5.1 (S-6). |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | 170 | Item 2 |
@@ -500,7 +501,29 @@ Evidence for §5.3, reported without interpretation:
   (−11.2844, −44.1766, −65.7004, −28.4375) are printed by Code Cell B, *ALTERNATIVE SPACES*.
 - **Lines 432–435, standing qualification.** Survives.
 
-### §5.2 (lines 436–477): re-examined 2026-09-14
+### §5.2: **CLOSED 2026-09-22 by T0–T13** (re-examined 2026-09-14, rewritten at T10)
+
+**The rewrite is applied.** §5.2 is now *Scale structure: two hypotheses, and where the model
+matches*, 400 → **550 words** (§3's budget rises to 3,760). Every number it quotes is printed by
+**Code Cell F** of `main.ipynb` (Appendix F, cells 22–23), so none of it is class (e) any more, and
+the audit below is no longer a source the prose cites. What the rewrite carries: H1 and H2 stated as
+hypotheses and not adopted; the relative class **not modelled**, so H2's open-scale half is stated
+and left untested (O14); Λ fitted per class, for H1 alone, with the ladder reported as a **bracket**;
+match and mismatch reported with **no sentence about what any mismatch is due to** (R16); the
+ensemble stated as the inventory's, never the experiment's (X7/F20); the parity paragraph kept and
+restated at n = 4 (S-7); and the instinct at the close, pointing back to §5.1 (the user's choice of
+site, 2026-09-22). The old prediction — the monotone trend in the cut's position and its reversal
+under a sharp prior — is **gone**, per F13.
+
+**Two corrections the rewrite had to make**, both recorded in `decisions.md` E16:
+- The 2026-09-17 audit scored the model against 10 rows of an item that drew **no** Experiment 3
+  response. Dropping them moves the maximum class's R² from 0.953 to **0.993** and the minimum
+  class's from 0.401 to **0.434**, and the measured image-type difference from −1.13 to **−0.83**.
+- F12's backwards prior-manipulation sentence is fixed here and in background §1.7 (T11).
+
+The re-examination that follows is kept as the record of how §5.2 got here.
+
+#### The 2026-09-14 re-examination (superseded above)
 
 **Source.** `audits/2026-09-13-scale-structure/` (script and `output.txt`).
 - The audit uses Code Cell 1's closed form (agreement 0.0), and recovers θ\* = −28.4375 for the
@@ -736,17 +759,22 @@ Content in §5 below, items 2 and 3.
   Q7's and untouched.
 - **Add a clause** for item 3 of §5 below (not posable at the computational level), if §6's budget
   allows.
-- **Item 4 (lines 517–518). Depends on Q7.** It says the threshold semantics predicts "an
-  endpoint-orientation asymmetry … sharpest where prior knowledge is weakest". Under the learned
-  model the weak-prior half holds under the flat prior. The sharp-prior half rests on entries that
-  are overridden at Λ = 8.
+- **Item 4. RESOLVED 2026-09-22 at T10, with Q7.** It said the threshold semantics predicts "an
+  endpoint-orientation asymmetry … sharpest where prior knowledge is weakest" — the old §5.2
+  prediction, whose sharp-prior half rested on entries overridden at Λ = 8 and whose open-scale term
+  names a class the model does not carry (O14). **Rewritten**: the classes are distinguished by the
+  entry each carries and by the lexical strength each requires, the endpoint-anchored class putting
+  no upper bound on Λ and the other requiring a finite one, with the residual reported and not
+  explained. §5.6's corresponding prediction bullet is rewritten the same way.
 
 ### Open items (lines 539–569)
 
-- **Open item 1 (lines 541–549). Rewrite.**
-  - Its "validated by reproducing every published quantity" predates learned θ_u.
-  - The drafted probe it mentions cannot be found.
-  - It is replaced by Q7 and O8, plus a printing task once §5.2's numbers are rebuilt.
+- **Open item 1 (lines 541–549). CLOSED 2026-09-22 at T2/T7.** It said "the §5.2 magnitudes are not
+  yet in the notebook". They are: Code Cell F prints every one, and the C6 sweep over the rewritten
+  §5.2 returns no number without a printed source. The magnitudes themselves are not the old ones —
+  the loading ratios and utility contributions went with the withdrawn prediction (F13) — and what
+  replaces them is the class comparison. The drafted probe it mentions was never found and is not
+  needed.
 - **Line 552.** `background_sections_outline.md` is now `background_sections.md`.
 - **Add.** A pointer to this file.
 
@@ -1202,7 +1230,20 @@ projection "collapses a contrast between exclusion sets". The cost sense keeps "
 unchanged, so §5.3 may use the word in that sense. It still says, per R10, that a realizable θ_u is
 located by the evaluator.
 
-### Q7. How to rebuild §5.2's prediction (answered by the user 2026-09-17 as R16; see the §5.2 entry in §4 and `procedure_records/scale_classes_hypothesis.md` §§7–10)
+### Q7. How to rebuild §5.2's prediction — **CLOSED 2026-09-22** (answered by the user 2026-09-17 as R16; implemented by T0–T13)
+
+**All four choices are now made, and made against printed output.** *What the prediction is stated
+on:* E_q over the five cells, the statistic Xiang et al. collect. *Which mechanism:* neither of the
+two originally on offer — the section reports that the utility level is required off the endpoint
+and not at it (+0.331 of R² on the minimum class, +0.001 on the maximum), and offers no account of
+the residual. *How the sharp-prior half is posed:* it is not posed at all; the old prediction is
+withdrawn (F13), and what replaces it is the class comparison on the elicited priors. *The
+empirical-fit paragraph:* rewritten, with the Leffel et al. (2017) manuscript dropped in favour of
+the published article (T5). The remaining "still the user's" below is answered too: §5.2 **is**
+stated, the numbers **may** be quoted because Code Cell F prints them, and the five-position
+configuration the notebooks lacked is now Appendix F's n = 4.
+
+#### The 2026-09-17 assessment (kept as the record)
 
 The re-examination is §4's §5.2 entry. It leaves four choices, all interpretive and all the user's:
 - **What the prediction is stated on.** E_q[s], as §5.2 does now; the delta read-out's mode; or both,
@@ -1264,7 +1305,7 @@ concentration keeps the bare α everywhere, including both notebooks, which neve
 | F15 (not within 0.1% after 5,000 updates), 145/145 | `procedure_records/theta_u_learned_reach.md` (recorded scripts, not a cell) |
 | Exposure-only θ\* (−11.2844, −44.1766, −65.7004, −28.4375) | Code Cell B, ALTERNATIVE SPACES |
 | §5.2's re-examination: contributions, leaks, loadings, illustrative θ\* | `audits/2026-09-13-scale-structure/output.txt` (an audit script, not a cell) |
-| The scale classes against Xiang et al. (2022): R² by class, Λ per class, the image-type effect, the class profiles | `audits/2026-09-17-scale-classes/` (audit scripts, not cells; class (e) until a cell prints them) |
+| The scale classes against Xiang et al. (2022): the class profiles by image type, R² by class and pooled for the model and q_lit, the Λ ladder per class and its bracket, the image-type difference, the between-class gaps, the displacement from the elicited prior, and the κ parity at n = 4 | `main.ipynb` **Code Cell F**, `appendix_f_report` (printed since T2/T7, 2026-09-22; **no longer class (e)**). Reads `data/xiang_2022/xiang_items.csv` — the only file either notebook reads (`agent.md` §2 coupling 10). Two absolute classes only: the relative class is not modelled (O14). The superseding audit, `audits/2026-09-17-scale-classes/`, is kept as the derivation and is **not** a source the prose cites; what remains only there — the relative class's fit, the m = 3/m = 4 comparison, the per-image-type Λ — stays class (e) and reaches no prose. |
 | Where ℓ₀ enters: the two couplings, the 2BᵀWℓ₀ identity, BᵀW1 and the constant component, the σ-limit table, Part D under both placements at Λ = 8 and 512 | `main.ipynb` **Code Cell D**, *Sec. 5: where ell_0 enters* (printed since U3, 2026-09-17; no longer class (e)). The audit that established them, `audits/2026-09-17-ell0-placement/`, is kept as the derivation and is not the source the prose cites. |
 | Q2's Part D and Λ = 512 rows: the modes, the mode shift in s and in grid steps, the two mode criteria | `main.ipynb` Code Cells 2 and 2b, the mode criteria block |
 | Q2's plane counts (67, 59, 13 against 74, 59, 33), the 35 disagreeing cells, the four unmoved modes, the 5.6e-5 gap, and the V under both read-outs | Code Cell 4, `plane_summary` |

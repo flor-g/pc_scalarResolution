@@ -354,18 +354,27 @@ project's "scalar vagueness resolution" keyword.*
   - Degree semantics: a gradable predicate relates a degree to a threshold.
   - **Maximum-standard absolute adjectives have closed scales and conventional endpoint standards;
     relative adjectives have open scales and context-dependent thresholds** (Kennedy, 2007).
-  - The empirical profile: absolute adjectives elicit categorical responses concentrated near the
-    scalar maximum, relative adjectives a roughly constant increase across scale positions, and the
-    difference is most dramatic in the impoverished-prior (geometric shapes) condition rather than
-    the rich-prior (familiar artifacts) one (Leffel, Xiang & Kennedy, 2017; Xiang, Kennedy, Xu &
-    Leffel, 2022).
+  - The empirical profile: maximum-standard absolute adjectives elicit categorical responses
+    concentrated near the scalar maximum, minimum-standard ones responses spread over every
+    non-minimal position, and relative adjectives a roughly constant increase across scale positions
+    (Xiang, Kennedy, Xu & Leffel, 2022).
+  - **The contrast is between novel and familiar objects, and it is not a contrast in prior
+    sharpness.** The between-class difference is larger for the geometric shapes than for the
+    familiar artifacts. But the shape condition is impoverished in *world knowledge*, not in prior
+    **concentration**: Xiang et al. report that the elicited priors for artifacts are the **less**
+    categorical ones (9:19), and their own elicited priors bear it out. State the manipulation as
+    novel versus familiar, and say which way the elicited priors actually go — an earlier draft of
+    this bullet and of §5.2 had it backwards.
   - Xiang et al.'s own conclusion: Bayesian pragmatics models what is *communicated* well
     (\(R^2=.78\)–\(.82\)) but threshold judgments poorly (\(R^2=.36\)–\(.63\)), especially for
     absolute adjectives, so Bayesian reasoning must be combined with the semantic conventions
     governing thresholds.
 - **State Q3b as the open question this leaves:** *what mechanism produces endpoint orientation?*
-  **Do not answer it here.** §5.2 answers it from the parity structure of the utility basis, and the
-  background's job is to make the question askable.
+  **Do not answer it here**, and do not promise an answer later: §5.2 **takes it up**. Parity fixes
+  an entry's width loading, but the contribution that is actually measured is carried by the tilt,
+  and under learning the prior's width enters too — so "§5.2 answers it from the parity structure of
+  the utility basis" claims more than §5.2 can carry. The background's job is to make the question
+  askable.
 - **Connection to make explicit:** quantifiers and gradable adjectives share a scale structure, which
   is what licenses §3.2's treatment of the world state as a proportion on a dense scale rather than
   a finite set of categories.
@@ -649,7 +658,7 @@ Kratzer, A., & Shimoyama, J. (2002). Indeterminate pronouns: The view from Japan
  
 Lassiter, D., & Goodman, N. D. (2017). Adjectival vagueness in a Bayesian model of interpretation. *Synthese, 194*(10), 3801-3836. https://doi.org/10.1007/s11229-015-0786-1 **[Verify pages and DOI; and whether Xiang et al. (2022) build their LG model on this paper or on Lassiter & Goodman (2013, SALT 23).]**
  
-Leffel, T., Xiang, M., & Kennedy, C. (2017). *Interpreting gradable adjectives in context: Domain distribution vs. scalar representation* [Manuscript]. **[Check whether Xiang et al. (2022) reports the shapes/artifacts contrast in the same terms; if so, cite the article and drop the manuscript.]**
+
  
 Levinson, S. C. (2000). *Presumptive meanings: The theory of generalized conversational implicature*. MIT Press.
  
@@ -720,4 +729,6 @@ Gu, S. (2026b). *Scalar implicature as predictive coding (discrete state space)*
 **Verification, before the prose cites them:** Furutachi & Hofer (2026), Schlegel et al. (2024),
 Spratling (2013) exact title and venue; the MICrONS primary consortium paper rather than press
 coverage; Gutzmann (2021) page or article number; Sauerland (2012) issue and pages; Cremers, Wilcox
-& Spector (2023) volume and article number; Leffel et al. (2017) against Xiang et al. (2022).
+& Spector (2023) volume and article number. **Leffel et al. (2017) is resolved (T5, 2026-09-22):
+the published article reports the shapes/artifacts contrast itself, so the manuscript is dropped and
+Xiang et al. (2022) is cited alone.**
