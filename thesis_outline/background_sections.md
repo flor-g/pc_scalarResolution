@@ -565,8 +565,8 @@ arriving from the FEP literature finds the absence stated rather than having to 
      that commitment seen at the circuit level.
   3. **The connectome-scale gap** is why no general circuit-level claim is made. A complete,
      synapse-resolved connectome exists for the fly (Schlegel et al., 2024) and for a cubic
-     millimetre of mouse cortex; none exists for any circuit plausibly responsible for scalar
-     implicature or vagueness resolution, in any organism.
+     millimetre of mouse visual cortex (MICrONS Consortium, 2025); none exists for any circuit
+     plausibly responsible for scalar implicature or vagueness resolution, in any organism.
 - **Close on claim level, not on apology.** The model is a predictive coding model at the
   **algorithmic** level and makes no general circuit-level claim — **with one exception that should
   be named rather than swallowed: Appendix E's relay is a circuit-level proposal**, modest but
@@ -612,7 +612,7 @@ Clifton, C., Jr., & Dube, C. (2010). Embedded implicatures observed: A comment o
  
 Colombo, M., & Wright, C. (2021). First principles in the life sciences: The free-energy principle, organicism, and mechanism. *Synthese, 198*(Suppl. 14), S3463-S3488. https://doi.org/10.1007/s11229-018-01932-w
  
-Cremers, A., Wilcox, E., & Spector, B. (2023). Exhaustivity and anti-exhaustivity in the RSA framework: Testing the effect of prior beliefs. *Cognitive Science, 47*(3), e13286. **[Verify volume, issue, article number.]**
+Cremers, A., Wilcox, E. G., & Spector, B. (2023). Exhaustivity and anti-exhaustivity in the RSA framework: Testing the effect of prior beliefs. *Cognitive Science, 47*(5), e13286. https://doi.org/10.1111/cogs.13286
  
 Degen, J., Tessler, M. H., & Goodman, N. D. (2015). Wonky worlds: Listeners revise world knowledge when utterances are odd. In D. C. Noelle et al. (Eds.), *Proceedings of the 37th Annual Meeting of the Cognitive Science Society* (pp. 548-553). Cognitive Science Society.
  
@@ -630,7 +630,7 @@ Friston, K. J. (2010). The free-energy principle: A unified brain theory? *Natur
  
 Friston, K., Mattout, J., Trujillo-Barreto, N., Ashburner, J., & Penny, W. (2007). Variational free energy and the Laplace approximation. *NeuroImage, 34*(1), 220-234. https://doi.org/10.1016/j.neuroimage.2006.08.035
  
-Furutachi, S., & Hofer, S. B. (2026). **[Verify exact title and venue — literature-landscape treatment of predictive coding and the free-energy principle among competing accounts of cortical computation.]**
+Furutachi, S., & Hofer, S. B. (2026). Rethinking predictive processing. *Annual Review of Neuroscience, 49*, 471-494. https://doi.org/10.1146/annurev-neuro-102124-031410
  
 Geurts, B., & Pouscoulous, N. (2009). Embedded implicatures?!? *Semantics and Pragmatics, 2*, Article 4, 1-34. https://doi.org/10.3765/sp.2.4
  
@@ -640,9 +640,9 @@ Goodman, N. D., & Stuhlmüller, A. (2013). Knowledge and implicature: Modeling l
  
 Grice, H. P. (1975). Logic and conversation. In P. Cole & J. L. Morgan (Eds.), *Syntax and semantics: Speech acts* (Vol. 3, pp. 41-58). Academic Press.
  
-Griffiths, T. L., Lieder, F., & Goodman, N. D. (2015). Rational use of cognitive resources: Levels of analysis between the computational and the algorithmic. *Topics in Cognitive Science, 7*(2), 217-229. **[Verify pages and DOI.]**
+Griffiths, T. L., Lieder, F., & Goodman, N. D. (2015). Rational use of cognitive resources: Levels of analysis between the computational and the algorithmic. *Topics in Cognitive Science, 7*(2), 217-229. https://doi.org/10.1111/tops.12142
  
-Gutzmann, D. (2021). Semantics vs. pragmatics. In D. Gutzmann, L. Matthewson, C. Meier, H. Rullmann, & T. E. Zimmermann (Eds.), *The Wiley Blackwell companion to semantics*. Wiley. **[Verify page or article number.]**
+Gutzmann, D. (2021). Semantics vs. pragmatics. In D. Gutzmann, L. Matthewson, C. Meier, H. Rullmann, & T. E. Zimmermann (Eds.), *The Wiley Blackwell companion to semantics* (pp. 1-31). Wiley. https://doi.org/10.1002/9781118788516.sem049 **[Year unresolved: Crossref records the chapter and the volume as 2020 (online); the print volume is dated 2021. Pick one and use it for every Companion chapter cited.]**
  
 Ippolito, M. (2010). Embedded implicatures? Remarks on the debate between globalist and localist theories. *Semantics and Pragmatics, 3*, Article 5, 1-15. https://doi.org/10.3765/sp.3.5
  
@@ -658,7 +658,7 @@ Kogo, N., & Trengove, C. (2015). Is predictive coding theory articulated enough 
  
 Kratzer, A., & Shimoyama, J. (2002). Indeterminate pronouns: The view from Japanese. In Y. Otsu (Ed.), *Proceedings of the 3rd Tokyo Conference on Psycholinguistics* (pp. 1-25). Hituzi Syobo.
  
-Lassiter, D., & Goodman, N. D. (2017). Adjectival vagueness in a Bayesian model of interpretation. *Synthese, 194*(10), 3801-3836. https://doi.org/10.1007/s11229-015-0786-1 **[Verify pages and DOI; and whether Xiang et al. (2022) build their LG model on this paper or on Lassiter & Goodman (2013, SALT 23).]**
+Lassiter, D., & Goodman, N. D. (2017). Adjectival vagueness in a Bayesian model of interpretation. *Synthese, 194*(10), 3801-3836. https://doi.org/10.1007/s11229-015-0786-1 **[Volume, issue, pages and DOI verified 2026-09-22 against Crossref. Still open: whether Xiang et al. (2022) build their LG model on this paper or on Lassiter & Goodman (2013, SALT 23) — that is a question about their paper, not about this entry.]**
  
 
  
@@ -666,11 +666,13 @@ Levinson, S. C. (2000). *Presumptive meanings: The theory of generalized convers
  
 Lewis, A. G., & Bastiaansen, M. (2015). A predictive coding framework for rapid neural dynamics during sentence-level language comprehension. *Cortex, 68*, 155-168. https://doi.org/10.1016/j.cortex.2015.02.014
  
-Lieder, F., & Griffiths, T. L. (2020). Resource-rational analysis: Understanding human cognition as the optimal use of limited computational resources. *Behavioral and Brain Sciences, 43*, e1. **[Verify article number and DOI.]**
+Lieder, F., & Griffiths, T. L. (2020). Resource-rational analysis: Understanding human cognition as the optimal use of limited computational resources. *Behavioral and Brain Sciences, 43*, Article e1. https://doi.org/10.1017/S0140525X1900061X
  
 Magri, G. (2011). Another argument for embedded scalar implicatures based on oddness in downward-entailing environments. *Semantics and Pragmatics, 4*, Article 6, 1-51. https://doi.org/10.3765/sp.4.6
  
 Marr, D. (1982). *Vision: A computational investigation into the human representation and processing of visual information*. W. H. Freeman.
+ 
+MICrONS Consortium. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. *Nature, 640*, 435-447. https://doi.org/10.1038/s41586-025-08790-w
  
 Millidge, B., Seth, A., & Buckley, C. L. (2021). Predictive coding: A theoretical and experimental review. *arXiv:2107.12979*.
  
@@ -684,11 +686,11 @@ Rooth, M. (1985). *Association with focus* [Doctoral dissertation, University of
  
 Rooth, M. (1992). A theory of focus interpretation. *Natural Language Semantics, 1*(1), 75-116. https://doi.org/10.1007/BF02342617
  
-Sauerland, U. (2012). The computation of scalar implicatures: Pragmatic, lexical or grammatical? *Language and Linguistics Compass, 6*. https://doi.org/10.1002/lnc3.321 **[Verify issue and page range.]**
+Sauerland, U. (2012). The computation of scalar implicatures: Pragmatic, lexical or grammatical? *Language and Linguistics Compass, 6*(1), 36-49. https://doi.org/10.1002/lnc3.321
  
-Schlegel, P., et al. (2024). **[Verify exact title and venue — the FlyWire whole-brain connectome proofreading/cell-typing paper; ~139,000 neurons, ~15.1 million synapses.]**
+Schlegel, P., Yin, Y., Bates, A. S., Dorkenwald, S., Eichler, K., Brooks, P., Han, D. S., Gkantia, M., Dos Santos, M., Munnelly, E. J., Badalamente, G., Serrano Capdevila, L., Sane, V. A., Pleijzier, M. W., Tamimi, I. F. M., Dunne, C. R., Salgarella, I., Javier, A., Fang, S., … Jefferis, G. S. X. E. (2024). Whole-brain annotation and multi-connectome cell typing of *Drosophila*. *Nature, 634*, 139-152. https://doi.org/10.1038/s41586-024-07686-5
  
-Spratling, M. W. (2013). **[Verify exact title and venue — Marr-levels framing of predictive-coding claims.]**
+Spratling, M. W. (2013). Distinguishing theory from implementation in predictive coding accounts of brain function. *Behavioral and Brain Sciences, 36*(3), 231-232. https://doi.org/10.1017/S0140525X12002178
  
 Walsh, K. S., McGovern, D. P., Clark, A., & O'Connell, R. G. (2020). Evaluating the neurophysiological evidence for predictive processing as a model of perception. *Annals of the New York Academy of Sciences, 1464*(1), 242-268. https://doi.org/10.1111/nyas.14321
  
@@ -730,9 +732,29 @@ Gu, S. (2026b). *Scalar implicature as predictive coding (discrete state space)*
 - [ ] §2.4 expanded to carry locality as a thesis
 - [ ] §2.6 rewritten to the staging warrant
 - [ ] §1.3 merge; §1.4 trim; §1.8 rewritten; §2.7's claim-level close
-**Verification, before the prose cites them:** Furutachi & Hofer (2026), Schlegel et al. (2024),
-Spratling (2013) exact title and venue; the MICrONS primary consortium paper rather than press
-coverage; Gutzmann (2021) page or article number; Sauerland (2012) issue and pages; Cremers, Wilcox
-& Spector (2023) volume and article number. **Leffel et al. (2017) is resolved (T5, 2026-09-22):
-the published article reports the shapes/artifacts contrast itself, so the manuscript is dropped and
-Xiang et al. (2022) is cited alone.**
+**Verification: DONE 2026-09-22, all of it.** Every entry below was checked against Crossref's
+registered metadata, not against memory or press coverage.
+
+- **Corrected.** *Cremers, Wilcox & Spector (2023)* was cited as issue **3**; it is **47(5)**, and
+  the second author is **Wilcox, E. G.** *Sauerland (2012)* gained its issue and pages, **6(1),
+  36-49**.
+- **Resolved from a bare marker.** *Furutachi & Hofer (2026)*, "Rethinking predictive processing",
+  *Annual Review of Neuroscience, 49*, 471-494. *Schlegel et al. (2024)*, "Whole-brain annotation
+  and multi-connectome cell typing of *Drosophila*", *Nature, 634*, 139-152 — note the **published
+  title differs from the preprint's**, which is why this one was worth checking. *Spratling (2013)*,
+  "Distinguishing theory from implementation in predictive coding accounts of brain function",
+  *Behavioral and Brain Sciences, 36*(3), 231-232 — a commentary, and exactly the Marr-levels
+  framing §2.7 cites it for.
+- **Confirmed unchanged.** *Lassiter & Goodman (2017)*, *Synthese, 194*(10), 3801-3836, and its DOI.
+  *Griffiths, Lieder & Goodman (2015)*, *Topics in Cognitive Science, 7*(2), 217-229; DOI added.
+  *Lieder & Griffiths (2020)*, *Behavioral and Brain Sciences, 43*, Article e1; DOI added.
+- **Added.** The **MICrONS Consortium (2025)** primary paper, *Nature, 640*, 435-447, now cited in
+  §2.7 where "a cubic millimetre of mouse cortex" previously stood with no source at all.
+- **Still open, and both are questions about other people's papers rather than about these
+  entries.** *Gutzmann*: Crossref dates the chapter and the Companion **2020** (online) while the
+  print volume is **2021** — pick one and use it for every Companion chapter. And whether Xiang et
+  al. (2022) build their LG model on *Lassiter & Goodman (2017)* or on *Lassiter & Goodman (2013,
+  SALT 23)*, which needs their paper, not a registry.
+- **Leffel et al. (2017)** was resolved earlier (T5, 2026-09-22): the published article reports the
+  shapes/artifacts contrast itself, so the manuscript is dropped and Xiang et al. (2022) cited
+  alone.
