@@ -55,10 +55,11 @@ is therefore a Z-conditional number; its H1 sentence is not.
 **The criterion's form decides its truncation sensitivity** — but the first reading of *why* was
 wrong and is corrected here. It is **not** that a wider interval holds more mass: the settled field
 stays normalizable (negative ζ² coefficient at every Z measured) and the top node's share is ~0, so
-nothing piles at the cut. **B is orthonormalized on the grid, so the settled field's own shape moves
+nothing piles at the cut. **B is orthonormalized on the grid, so φ_S\*'s own shape moves
 with Z.** Fitting φ_S\* to a quadratic, its peak runs 1.70, 2.39, 2.78, 3.17, 3.61, 4.24 over
 Z = 5, 6, 6.5, 7, 7.5, 8 and **crosses θ_L = 2.944 between Z = 6.5 and 7 — exactly where q_H passes
-½**. §4.4 and §4.5 read an **absolute position** on that field; Appendix F scores **R² over
+½**. That peak is the peak of φ_S\*, which Eq. (12) makes q's mode too, so neither read-out
+escapes it. §4.4 and §4.5 read a mass above a fixed cut; Appendix F scores **R² over
 five-cell profiles across items**, which reads **agreement of shape** and is invariant to it.
 
 **The dependence sits below the criterion.** Eq. (24)'s limit is ½(I + P)f with **P = BBᵀW, the

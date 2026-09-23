@@ -122,9 +122,9 @@ and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been ap
 | 3.4 State units, error units, and what is local | 210 | **290** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied) |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
 | 3.6 Two read-outs (new) | — | **100** | `revisions.md` §5, item 1 |
-| **4. Evaluation** | 745 | **1,350** | |
+| **4. Evaluation** | 745 | **1,375** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
-| 4.2 The criterion, and how to read the statistics | 170 | **430** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17) |
+| 4.2 The criterion, and how to read the statistics | 170 | **455** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17) |
 | 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
 | 4.4 The five priors | 220 | **355** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6 |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
@@ -137,7 +137,7 @@ and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been ap
 | 5.5 Limits (was 5.3) | 65 | **300** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,590** | |
+| **Total** | **2,400** | **4,615** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -398,7 +398,7 @@ Three beliefs, all internal to the model:
 State once, plainly, that RSA and wRSA are **analytic baselines and are not implemented**, so no
 quantitative comparison is offered or implied.
  
-## 4.2 The criterion, and how to read the statistics (about 430 words)
+## 4.2 The criterion, and how to read the statistics (about 455 words)
  
 - Scalar strengthening is taken to be the conjunction of two conditions on the all-region mass under
   *some*: $q_H<q_{\mathrm{lit}}$, the network lowering the mass the entry and prior already assign;
@@ -434,15 +434,18 @@ quantitative comparison is offered or implied.
     `decisions.md` E17 measure it and are **class (e)**. Quote no number from them, and do not let
     the sentence imply one has been quoted. Giving this end printed evidence means a cell that
     varies $Z$, which is why the guard is qualitative here.)*
-  - *How $Z$ reaches the verdict, and the one thing not to say.* Not by clipping a tail: the
-    settled field stays normalizable and nothing piles at the cut. $B$ is orthonormalized under the
-    grid's own measure, so **the settled field's peak moves with $Z$**, and once that peak sits
-    above $\theta_L$ the conjunction cannot hold. **State the implication in that direction only.**
-    A peak below $\theta_L$ does *not* deliver the conjunction: the first condition fails on its
-    own in most configurations, and it is the more fragile of the two. So the conjunction is **not**
-    a claim about where the peak sits, and §3.6's mode read-out is no robust substitute for it,
-    both moving with $Z$. §5.2's comparison is untouched, $R^2$ over profiles reading agreement of
-    shape across items rather than an absolute position.
+  - *How $Z$ reaches the verdict, and the one thing not to say.* Not by clipping a tail:
+    $\varphi_S^\ast$ stays normalizable and nothing piles at the cut. $B$ is orthonormalized under
+    the grid's own measure, so **the peak of $\varphi_S^\ast$ moves with $Z$** — the same peak
+    Text cell 4 reports, which Eq. (12) makes $q$'s mode as well, so this is a fact about the
+    settled field and not about a choice of read-out. Once that peak sits above $\theta_L$ the
+    conjunction cannot hold. **State the implication in that direction only.** A peak below
+    $\theta_L$ does *not* deliver the conjunction: the first condition fails on its own in most
+    configurations, and it is the more fragile of the two. So the conjunction is **not** a claim
+    about where the peak sits, and §3.6's delta read-out is no substitute for it, both moving
+    together. *(Writer's note: Text cell 4 reports that peak in $s$ and $\theta_L$ is a threshold
+    in $\zeta$; convert once, or the two look like different quantities.)* §5.2's comparison is
+    untouched, $R^2$ over profiles reading agreement of shape across items.
   Two further cautions attach. A sweep **brackets** a change rather than locating it; and a change
   of status may be the sign flip of a quantity already decayed to $10^{-7}$, which is not the
   finding that a flip at $10^{-1}$ is.
@@ -993,16 +996,17 @@ what it costs and what is still owed.
   bound's, and not licensed by it (D12). The **slow** rule carries no such debt. Two implications
   are owned rather than hedged: a plausible tolerance halts far short of $\theta_u^\ast$, and a
   slow start halts at once at the tempered control (§5.3).
-- **The state space is truncated, and the criteria read absolute positions on a field the
-  truncation reshapes.** $\zeta$ ranges over $\mathbb R$; the grid carries $[-Z,Z]$, and $Z$ is
-  stipulated with only a lower bound from the semantics, $\theta_L<Z$ (Text cell 3 §1, which
-  separates it from $K$: refining $K$ converges, $Z$ has nothing to converge to). **The mechanism
-  is not a clipped tail.** $B$ is orthonormalized under the grid's own measure, so the settled
-  field's peak moves with $Z$, and a peak above $\theta_L$ is enough to fail the conjunction —
-  sufficient, not equivalent, the first condition failing on its own in most configurations.
-  §4.5's band moves with it; §5.2's $R^2$ does not, reading agreement of shape across items rather
-  than an absolute position. **The general form: a statistic reading an absolute position on the
-  settled field inherits the stipulation, one reading agreement of shape does not.** And the
+- **The state space is truncated, and the truncation reshapes $\varphi_S^\ast$ itself.** $\zeta$
+  ranges over $\mathbb R$; the grid carries $[-Z,Z]$, and $Z$ is stipulated with only a lower bound
+  from the semantics, $\theta_L<Z$ (Text cell 3 §1, which separates it from $K$: refining $K$
+  converges, $Z$ has nothing to converge to). **The mechanism is not a clipped tail.** $B$ is
+  orthonormalized under the grid's own measure, so the **peak of $\varphi_S^\ast$** moves with $Z$,
+  and a peak above $\theta_L$ is enough to fail the conjunction — sufficient, not equivalent, the
+  first condition failing on its own in most configurations. That peak is $q$'s mode too (Eq. 12),
+  so neither read-out escapes it. §4.5's band moves with $Z$; §5.2's $R^2$ does not, reading
+  agreement of shape across items. **The general form: a mass above a fixed cut, and the peak's own
+  location, both move with the half-width; a statistic comparing shapes across items does not.**
+  And the
   dependence sits **below** the criterion: Eq. (24)'s limit doubles the field's component in
   $\operatorname{span}\{\zeta,\zeta^2\}$, a projection taken in $L^2([-Z,Z])$, so
   **reformulating the criterion cannot remove it** — only a projection under a fixed reference

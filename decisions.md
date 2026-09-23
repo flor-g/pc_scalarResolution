@@ -2082,11 +2082,13 @@ a number from it.
 - **Why they differ, and the first reading of it was wrong.** It is **not** that a wider interval
   holds more mass: the settled field stays normalizable (its ζ² coefficient is negative at every Z
   measured) and the top node's share is ~0, so nothing piles at the cut. **B is orthonormalized on
-  the grid, so the settled field's own shape moves with Z**: fitting φ_S\* to a quadratic, its peak
+  the grid, so **φ_S\*'s own shape moves with Z**: fitting it to a quadratic, its peak
   runs 1.70, 2.39, 2.78, 3.17, 3.61, 4.24 over Z = 5 to 8 and **crosses θ_L = 2.944 between Z = 6.5
-  and 7, which is exactly where q_H passes ½**. The general form is that a statistic reading an
-  **absolute position** on that field carries the stipulation while one reading **agreement of
-  shape** does not. Appendix F scores R² over profiles across items, which reads agreement of shape;
+  and 7, which is exactly where q_H passes ½**. That peak is the peak of φ_S\*, which Eq. (12) makes
+  q's mode as well, so neither read-out escapes it; the notebook reports it in s while θ_L is a
+  threshold in ζ. **The general form: a mass above a fixed cut, and the peak's own location, both
+  move with the half-width; a statistic comparing shapes across items does not.** Appendix F scores
+  R² over profiles across items, which is the second kind;
   it runs at Z − θ_L = 4.05, inside the region where the conjunction is already at zero cells, and
   is unaffected there.
 - **The dependence sits below the criterion, which is why reformulating the criterion cannot remove
