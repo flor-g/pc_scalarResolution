@@ -2195,7 +2195,9 @@ a number from it.
 - **The dependence sits below the criterion, which is why reformulating the criterion cannot remove
   it.** Eq. (24)'s limit is ½(I + P)f with **P = BBᵀW the W-orthogonal projection onto
   span{ζ, ζ²}**. P depends on that span and on the measure, not on which orthonormal basis of the
-  span the code builds: rotating B by an arbitrary orthogonal Q moves Pf by 3.4e-13. **P itself
+  span the code builds: rotating B by an arbitrary orthogonal Q moves Pf by 2.3e-13 (seeded
+  2026-09-23; the figure quoted before that was from an unseeded draw and moved between runs).
+  **P itself
   moves with Z**, because the projection is taken in L²([−Z, Z]) — projecting the *same* field,
   Pf at ζ = −3, −1, 0, 1, 3, 5 shifts by +53.5, −9.8, −20.5, −17.8, +7.8 and **+80.8** between
   Z = 6 and Z = 8. So what "the ζ and ζ² components of the field" *means* is truncation-dependent,
@@ -2212,7 +2214,10 @@ a number from it.
   only **13**. Every row whose peak sits above θ_L fails
   the conjunction (6 of 6), and many rows whose peak is below it fail anyway, because the *first*
   condition q_H < q_lit fails independently — it is the more fragile of the two, collapsing
-  113 → 77 → 25 → 5 → 0 over Z against the second's 76 → 59 → 48 → 25 → 14. **The conjunction is
+  113 → **74 → 24 → 0** → 0 over Z against the second's 76 → 59 → 48 → 25 → 14 (corrected
+  2026-09-23; see the finding below). By Z = 7 the shift criterion is met in **no cell of the plane**
+  while the position criterion still holds in 25, so **the position criterion is the more robust of
+  the two under the half-width**, not the less. **The conjunction is
   therefore not "a claim about where the peak sits"**; the peak is the channel Z acts through, and
   the two must not be identified.
 - **§4.5's 20-cell gap between the two read-outs moves too, and the part the section argues from
@@ -2234,6 +2239,20 @@ a number from it.
   with, which §4.4 has none of); project under a fixed reference measure (removes the dependence,
   breaks BᵀWB = I). **Answer: no.** The agent's recommendation was the same, on the ground that the
   dependence sits below the criterion, so reformulating relocates it rather than removing it.
+- **Finding, 2026-09-23: this entry's first-condition series was counted by the wrong rule, and
+  the audit is now reconciled with the notebook cell by cell.** The audit read the q shift criterion
+  met in **77** cells at Z = 6 where Code Cell 4 prints **74**. Every other column already agreed
+  exactly: 59, 33, 67, 13, 20. The cause is the rule and not the grid, the audit having run at the
+  notebook's own Z = 6 and K = 101. Code Cell 4 reads the shift's sign through **I5's zero band of
+  1e-12**; the audit's `criterion()` read a bare `q - lit < 0`. The three cells are all α = 1024
+  with q = q_lit = 1.000000 and shifts of −1.1e−16, −6.7e−16 and −4.0e−13, differences of equal
+  numbers where the prior has overridden the entry, which is what I5's band exists to exclude.
+  **None of the three meets the q position criterion**, so the conjunction counted 33 under either
+  rule and nothing this entry argues from ever moved. The notebook is right and the error was
+  confined to one column. `criterion()` now applies the band, the audit's **block 8** prints the
+  reconciliation, and block 3's first column reads 113, 74, 24, 0, 0. Block 7 is unchanged. The
+  random rotation of block 6 is seeded as well, so two consecutive runs of the script are
+  byte-identical, which it was not before.
 - **Settled by the user, 2026-09-23: Z does not need printed evidence.** The Z half of §4.2's guard
   stays qualitative and no cell is added to sweep the half-width. The audit remains class (e) and
   the guard quotes no number from it. **This is the disposition, not a holding position** — do not

@@ -23,6 +23,18 @@ exec(ARCH, globals())
 NODES = lambda Z: int(round(2 * Z / 0.12)) + 1
 
 
+# Code Cell 4 reads the shift's sign through a zero band of 1e-12 (decision I5):
+# where the prior overrides the entry every utterance settles on the same belief and
+# the shifts are differences of equal numbers, so a bare sign test counts roundoff.
+# This audit's first version omitted the band and so reported the q shift criterion
+# met in 3 cells more than the notebook at Z = 6, 77 against Code Cell 4's 74. All
+# three are alpha = 1024 with q = q_lit = 1.000000 and shifts of -1.1e-16, -6.7e-16
+# and -4.0e-13, and none of them meets the q position criterion, which is why the
+# conjunction counted 33 either way. The band is applied here so that every column
+# is the notebook's own quantity.
+ROUNDOFF = 1e-12
+
+
 def criterion(net):
     """Text cell 4 Part C's two q criteria for "some", at the learned theta_u*."""
     up = (net.zeta >= net.theta_L).to(net.dtype)
@@ -30,7 +42,8 @@ def criterion(net):
     star = net.learned_theta_u()
     belief = net.read_out(net.closed_form_fixed_point("some", theta_u=star)[0])
     q = float((net.weights * belief * up).sum())
-    return star, lit, q, (q - lit < 0.0), (q < 0.5)
+    shift = q - lit
+    return star, lit, q, (abs(shift) >= ROUNDOFF and shift < 0.0), (q < 0.5)
 
 
 def block_1():
@@ -157,6 +170,10 @@ def block_5():
                                              base_prior=BASE_WORLD_PRIORS["flat"])
         f = net.base_log_prior - net.lexical_field("some")
         Pf = net.basis @ (net.basis.T @ (net.weights * f))
+        # Seeded, so the figure below is reproducible. Unseeded it moved between runs
+        # (2.3e-13, 3.4e-13, 1.7e-13 on three of them), which is the scale of the
+        # result rather than the result, and E17 had quoted one of those digits.
+        torch.manual_seed(0)
         Q, _ = torch.linalg.qr(torch.randn(2, 2, dtype=net.dtype))
         B2 = net.basis @ Q
         Pf2 = B2 @ (B2.T @ (net.weights * f))
@@ -259,8 +276,63 @@ def block_7():
     print("     two read-outs agree.")
 
 
+def block_8():
+    """Why this audit once read 77 where Code Cell 4 prints 74, settled 2026-09-23.
+
+    Run at the notebook's own half-width and node count, so the only thing that can
+    differ is the rule. It is I5's zero band: Code Cell 4 reads the shift's sign as
+    sign(shift) < 0 with a band of 1e-12, this audit's first version read q - lit < 0.
+    """
+    print("=" * 100)
+    print("  8. THE 77 AGAINST 74, AT Z = 6. The band of decision I5, and nothing else.")
+    print("     Z = 6.0, K = 101: the notebook's own grid, so only the counting rule differs")
+    print("=" * 100)
+    alphas = [2.0 ** k for k in range(11)]
+    lambdas = [2.0 ** k for k in range(1, 12)]
+    bare = banded = second = both_bare = both_banded = 0
+    differing = []
+    for a in alphas:
+        for L in lambdas:
+            net = LexicalPredictiveCodingNetwork(
+                num_nodes=101, grid_half_width=6.0, lexical_strength=L,
+                base_prior=beta_world_prior(a, 1.0))
+            up = (net.zeta >= net.theta_L).to(net.dtype)
+            lit = float((net.weights * net.read_out(
+                net.literal_fixed_point("some")) * up).sum())
+            q = float((net.weights * net.read_out(net.closed_form_fixed_point(
+                "some", theta_u=net.learned_theta_u())[0]) * up).sum())
+            shift = q - lit
+            c1_bare = shift < 0.0
+            c1_band = abs(shift) >= ROUNDOFF and shift < 0.0
+            c2 = q < 0.5
+            bare += c1_bare; banded += c1_band; second += c2
+            both_bare += c1_bare and c2; both_banded += c1_band and c2
+            if c1_bare != c1_band:
+                differing.append((a, L, shift, q, lit, c2))
+    print(f"     q shift criterion, bare sign test q - lit < 0 : {bare}")
+    print(f"     q shift criterion, with I5's 1e-12 band       : {banded}"
+          "   <- Code Cell 4 prints 74")
+    print(f"     q position criterion                          : {second}"
+          "   <- Code Cell 4 prints 59")
+    print(f"     conjunction, bare {both_bare} / banded {both_banded}"
+          "                    <- Code Cell 4 prints 33")
+    print(f"     the {len(differing)} cells the rules disagree on, all saturated:")
+    print(f"       {'alpha':>7}{'Lambda':>8}{'shift':>12}{'q':>11}{'q_lit':>11}"
+          f"{'q position':>12}")
+    for a, L, s, q, lit, c2 in differing:
+        print(f"       {a:>7.0f}{L:>8.0f}{s:>12.1e}{q:>11.6f}{lit:>11.6f}"
+              f"{('met' if c2 else 'not met'):>12}")
+    print("     Every one is a difference of equal numbers where the prior has overridden")
+    print("     the entry, which is what I5's band exists to exclude, and none meets the q")
+    print("     position criterion, so the conjunction counted 33 under either rule and")
+    print("     nothing this audit argues from ever moved. The notebook is right. Block 3's")
+    print("     first column now carries the band, and its series runs 113, 74, 24, 0, 0.")
+
+
 if __name__ == "__main__":
     print("GRID HALF-WIDTH AUDIT, 2026-09-23. Class (e): no cell prints any of this.")
     print(f"torch {torch.__version__}, dtype {DTYPE}. Notebook default Z = 6.0, K = 101.")
     print()
     block_1(); block_2(); block_3(); block_4(); block_5(); block_6(); block_7()
+    print()
+    block_8()

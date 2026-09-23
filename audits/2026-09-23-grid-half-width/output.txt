@@ -41,9 +41,9 @@ torch 2.13.0, dtype torch.float64. Notebook default Z = 6.0, K = 101.
 ====================================================================================================
      Z  Z-theta_L   first  second   BOTH   band Lambda   band alpha
    5.0      2.056     113      76     68        4-2048       1-1024
-   6.0      3.056      77      59     33       64-2048        1-128
-   6.5      3.556      25      48      5      512-2048         8-32
-   7.0      4.056       5      25      0             -            -
+   6.0      3.056      74      59     33       64-2048        1-128
+   6.5      3.556      24      48      5      512-2048         8-32
+   7.0      4.056       0      25      0             -            -
    8.0      5.056       0      14      0             -            -
      Z = 6 returns 33 of 121 with least Lambda 64 over alpha 1 to 128, which is
      what Sec. 4.5 reports: the sweep is computing the notebook's own quantity.
@@ -71,7 +71,7 @@ torch 2.13.0, dtype torch.float64. Notebook default Z = 6.0, K = 101.
 ====================================================================================================
    Z = 6: max |Pf - P'f| under an arbitrary rotation of B = 2.3e-13  (P is basis-independent)
             Pf at zeta = -3,-1,0,1,3,5: -115.70, +64.75, +120.70, +158.12, +176.08, +110.35
-   Z = 8: max |Pf - P'f| under an arbitrary rotation of B = 2.6e-13  (P is basis-independent)
+   Z = 8: max |Pf - P'f| under an arbitrary rotation of B = 1.1e-13  (P is basis-independent)
             Pf at zeta = -3,-1,0,1,3,5: -62.16, +54.97, +100.16, +140.35, +183.92, +191.14
             change from Z = 6:          +53.54, -9.78, -20.54, -17.77, +7.84, +80.79
      The projection is taken in L^2([-Z, Z]), so what 'the zeta and zeta^2 components
@@ -117,3 +117,22 @@ torch 2.13.0, dtype torch.float64. Notebook default Z = 6.0, K = 101.
      so the left arm existing only under q survives and no missing level follows.
      CAUTION: a gap of 0 at Z >= 7 means BOTH conjunctions are empty, not that the
      two read-outs agree.
+
+====================================================================================================
+  8. THE 77 AGAINST 74, AT Z = 6. The band of decision I5, and nothing else.
+     Z = 6.0, K = 101: the notebook's own grid, so only the counting rule differs
+====================================================================================================
+     q shift criterion, bare sign test q - lit < 0 : 77
+     q shift criterion, with I5's 1e-12 band       : 74   <- Code Cell 4 prints 74
+     q position criterion                          : 59   <- Code Cell 4 prints 59
+     conjunction, bare 33 / banded 33                    <- Code Cell 4 prints 33
+     the 3 cells the rules disagree on, all saturated:
+         alpha  Lambda       shift          q      q_lit  q position
+          1024       4    -1.1e-16   1.000000   1.000000     not met
+          1024     512    -6.7e-16   1.000000   1.000000     not met
+          1024    1024    -4.0e-13   1.000000   1.000000     not met
+     Every one is a difference of equal numbers where the prior has overridden
+     the entry, which is what I5's band exists to exclude, and none meets the q
+     position criterion, so the conjunction counted 33 under either rule and
+     nothing this audit argues from ever moved. The notebook is right. Block 3's
+     first column now carries the band, and its series runs 113, 74, 24, 0, 0.

@@ -64,7 +64,7 @@ five-cell profiles across items**, which reads **agreement of shape** and is inv
 
 **The dependence sits below the criterion.** Eq. (24)'s limit is ½(I + P)f with **P = BBᵀW, the
 W-orthogonal projection onto span{ζ, ζ²}**. P is basis-independent — rotating B by an arbitrary
-orthogonal Q moves Pf by 3.4e-13 — and **P itself moves with Z**, because the projection is taken in
+orthogonal Q moves Pf by 2.3e-13 — and **P itself moves with Z**, because the projection is taken in
 L²([−Z, Z]): projecting the same field, Pf at ζ = −3, −1, 0, 1, 3, 5 shifts by +53.5, −9.8, −20.5,
 −17.8, +7.8 and **+80.8** between Z = 6 and Z = 8. What "the ζ and ζ² components of the field" means
 is truncation-dependent, and the amplification doubles that component. **No reformulation of the
@@ -78,12 +78,35 @@ is what ties the utility basis to the truncation.
 criterion's own left-hand side. Over 32 configurations (four priors × Λ ∈ {8, 512} × Z ∈ {5,6,7,8}),
 it and the q conjunction agree in only **13**. A peak above θ_L always fails the
 conjunction (6 of 6), but many rows with the peak below it fail anyway, through the first condition
-q_H < q_lit — the more fragile of the two, collapsing 113 → 77 → 25 → 5 → 0 against the second's
-76 → 59 → 48 → 25 → 14. **The conjunction is not "a claim about where the peak sits."**
+q_H < q_lit — the more fragile of the two, collapsing 113 → 74 → 24 → 0 → 0 against the second's
+76 → 59 → 48 → 25 → 14. **The conjunction is not "a claim about where the peak sits."** And the
+difference is not marginal: by Z = 7 the shift criterion is met in **no cell of the plane** while
+the position criterion still holds in 25, so **the position criterion is the more robust of the two
+under the half-width**, not the less.
 
 The clinching evidence is that **Appendix F runs at n = 4, so Z − θ_L = 4.05 — already inside the
 region where the main evaluation's conjunction has collapsed to zero cells — and Appendix F is fine
 there.** Same grid, same truncation, different statistic, opposite robustness.
+
+## The 77 against 74, settled 2026-09-23 (block 8)
+
+**The first version of this audit read the q shift criterion met in 77 cells at Z = 6 where Code
+Cell 4 prints 74.** Everything else agreed exactly: 59, 33, 67, 13, 20. The cause is the rule, not
+the grid. Code Cell 4 reads the shift's sign through **I5's zero band of 1e-12**, this audit's
+`criterion()` read a bare `q - lit < 0`. The three cells are all α = 1024 with q = q_lit = 1.000000
+and shifts of −1.1e−16, −6.7e−16 and −4.0e−13 — differences of equal numbers where the prior has
+overridden the entry, which is exactly what I5's band exists to exclude. **None of the three meets
+the q position criterion**, so the conjunction counted 33 under either rule and nothing this audit
+argues from ever moved.
+
+**The notebook is right, the audit was wrong, and the error was confined to one column.**
+`criterion()` now applies the band, so every column here is the notebook's own quantity. Block 3's
+first column changes from 113, 77, 25, 5, 0 to **113, 74, 24, 0, 0**. Block 7 is unchanged.
+
+**Also fixed: the rotation was unseeded.** Block 6's `max |Pf - P'f|` came from an unseeded random
+Q and moved between runs (2.3e-13, 3.4e-13, 1.7e-13 on three of them), which is the scale of the
+result and not the result. It is seeded now, and two consecutive runs of the whole script are
+byte-identical. E17 had quoted one of the unseeded digits, 3.4e-13; the seeded figure is 2.3e-13.
 
 ## §4.5's gap between the two read-outs
 
