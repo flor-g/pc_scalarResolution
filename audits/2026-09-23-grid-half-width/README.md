@@ -85,6 +85,19 @@ The clinching evidence is that **Appendix F runs at n = 4, so Z − θ_L = 4.05 
 region where the main evaluation's conjunction has collapsed to zero cells — and Appendix F is fine
 there.** Same grid, same truncation, different statistic, opposite robustness.
 
+## §4.5's gap between the two read-outs
+
+Block 7 sweeps the plane on both conjunctions. **Z = 6 returns 33 (q), 13 (delta), gap 20, delta a
+strict subset**, and its least α at which the mode shift criterion is met anywhere is **16** — which
+are §4.5's own figures and its "never met at α ≤ 8". Both are Z = 6 figures: the gap runs
+**31, 20, 4, 0, 0** and the least α runs **8, 16, 32, 32, 128** over Z = 5, 6, 6.5, 7, 8.
+
+**What survives is what §4.5 argues from.** The delta conjunction is a **strict subset** of the q
+conjunction at every half-width, with **0 reversals in all 605 cells**, so the two read-outs part
+only in q's favour, the left arm exists only under q, and R14's instruction to derive no evidence
+for a missing level from the V is untouched. **Caution:** the gap reaching 0 at Z ≥ 7 means *both*
+conjunctions are empty there, not that the read-outs have come to agree.
+
 ## What this leaves
 
 Not "the results are wrong". §4.4 and §4.5 carry an **unstated condition on Z − θ_L** that decision

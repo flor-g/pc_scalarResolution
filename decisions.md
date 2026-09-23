@@ -2114,6 +2114,16 @@ a number from it.
   113 → 77 → 25 → 5 → 0 over Z against the second's 76 → 59 → 48 → 25 → 14. **The conjunction is
   therefore not "a claim about where the peak sits"**; the peak is the channel Z acts through, and
   the two must not be identified.
+- **§4.5's 20-cell gap between the two read-outs moves too, and the part the section argues from
+  does not.** Sweeping the plane on both conjunctions — q shift ∧ q position against mode shift ∧
+  mode position — Z = 6 returns **33 (q), 13 (delta), gap 20, delta a strict subset**, which is what
+  §4.5 and R12/R14 report, and its least α at which the mode shift criterion is met anywhere is
+  **16**, which is that section's "never met at α ≤ 8". Both are Z = 6 figures: the gap runs
+  **31, 20, 4, 0, 0** and the least α runs **8, 16, 32, 32, 128** over Z = 5, 6, 6.5, 7, 8.
+  **Robust: the delta conjunction is a strict subset of the q conjunction at every Z, with 0
+  reversals in all 605 cells**, so the left arm existing only under q stands, and so does R14's
+  instruction to derive no evidence for a missing level from the V. **Caution:** a gap of 0 at
+  Z ≥ 7 means *both* conjunctions are empty, not that the read-outs agree.
 - **Depends on it:** §§4.4, 4.5, 4.6 and §6 item 3 through the conjunction; §4.2's guard, widened
   2026-09-23; I6, which was an empty entry and now carries this as its evidence.
 - **Not taken here.** Whether the criterion's *form* should change — an absolute mass threshold over

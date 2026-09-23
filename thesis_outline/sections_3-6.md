@@ -122,12 +122,12 @@ and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been ap
 | 3.4 State units, error units, and what is local | 210 | **290** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied) |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
 | 3.6 Two read-outs (new) | — | **100** | `revisions.md` §5, item 1 |
-| **4. Evaluation** | 745 | **1,400** | |
+| **4. Evaluation** | 745 | **1,490** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
 | 4.2 The criterion, and how to read the statistics | 170 | **480** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17) |
 | 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
 | 4.4 The five priors | 220 | **355** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6 |
-| 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
+| 4.5 The plane, and where both conditions hold | 165 | **345** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
 | **5. Discussion** | 705 | **1,910** | |
 | 5.1 What an alternatives level would have to supply | 390 | **390** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that |
@@ -137,7 +137,7 @@ and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been ap
 | 5.5 Limits (was 5.3) | 65 | **300** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,640** | |
+| **Total** | **2,400** | **4,730** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -551,7 +551,7 @@ contrast (R20, P-10).
     answer different questions, §3.6 says which.
 - **One sentence pointing to §4.6:** the conjunction is shown in the integrated dynamics, not only
   in closed form, for all three rows that meet it (Code Cell 2b).
-## 4.5 The plane, and where both conditions hold (about 255 words)
+## 4.5 The plane, and where both conditions hold (about 345 words)
  
 - **The conjunction is not confined to Part D's rows.** Sweeping lexical strength against prior
   concentration on the limit family $\mathrm{Beta}(\alpha,1)$, both conditions hold together in
@@ -578,7 +578,14 @@ contrast (R20, P-10).
   is shared from $\alpha=32$, at $\Lambda=8\alpha$; the left arm exists only under $q$, since the
   mode shift criterion is never met at $\alpha\le8$; and the two conjunctions part in 20 cells, all
   of them met under $q$ alone. Report the V as a result, and derive no evidence for a missing level
-  from it.
+  from it. **Say which half of that is $Z$-conditional** (§4.2's guard). **Robust:** the delta
+  conjunction is a strict subset of the q conjunction at every half-width swept, with no reversal,
+  so the two read-outs part only in $q$'s favour, the left arm exists only under $q$, and the
+  instruction just given stands on that and not on the count. **Not robust:** the figure **20** and
+  the boundary $\alpha\le8$ are both $Z=6$ figures, and both move. *(Writer's note: at a wider
+  grid the gap reaches zero because **both** conjunctions empty, not because the read-outs agree.
+  Never report a zero gap as agreement. The measurements are class (e), so quote no number from
+  them beyond the two this section already prints.)*
 - **The override law, the exchange rate of §3.2's contest.** $\Lambda_{\mathrm{crit}}\approx\alpha\log2n$
   (Eq. 41), linear in prior concentration with a slope fixed by the predicate's granularity alone:
   the rate at which lexical strength must grow to hold the entry against a sharper $\ell_0$.

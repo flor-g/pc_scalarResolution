@@ -212,8 +212,55 @@ def block_6():
     print("   the mode position criterion is the statistic that reads it directly.")
 
 
+def block_7():
+    print()
+    print("=" * 100)
+    print("  7. SECTION 4.5's 20-CELL GAP between the q and delta conjunctions, under Z.")
+    print("     q conjunction  = q shift AND q position;  delta = mode shift AND mode position")
+    print("=" * 100)
+    alphas = [2.0 ** k for k in range(11)]
+    lambdas = [2.0 ** k for k in range(1, 12)]
+    print("{:>6}{:>9}{:>13}{:>7}{:>10}{:>9}{:>9}{:>15}".format(
+        "Z", "q conj", "delta conj", "gap", "d-not-q", "mshift", "mpos", "least alpha ms"))
+    for Z in (5.0, 6.0, 6.5, 7.0, 8.0):
+        Q = D = gap = rev = ms = mp = 0
+        ms_by_alpha = {}
+        for a in alphas:
+            hit = 0
+            for L in lambdas:
+                try:
+                    net = LexicalPredictiveCodingNetwork(
+                        num_nodes=NODES(Z), grid_half_width=Z, lexical_strength=L,
+                        base_prior=beta_world_prior(a, 1.0))
+                    _, lit, q, c1, c2 = criterion(net)
+                    phi = net.closed_form_fixed_point(
+                        "some", theta_u=net.learned_theta_u())[0]
+                except Exception:
+                    continue
+                k = int(torch.argmax(phi))
+                k0 = int(torch.argmax(net.base_log_prior))
+                shift = k < k0                                  # mode shift
+                pos = float(net.zeta[k]) < net.theta_L          # mode position
+                qc, dc = (c1 and c2), (shift and pos)
+                Q += qc; D += dc; ms += shift; mp += pos; hit += shift
+                gap += (qc and not dc)
+                rev += (dc and not qc)
+            ms_by_alpha[a] = hit
+        first = [a for a in alphas if ms_by_alpha[a] > 0]
+        print("{:>6g}{:>9}{:>13}{:>7}{:>10}{:>9}{:>9}{:>15}".format(
+            Z, Q, D, gap, rev, ms, mp, ("%g" % first[0]) if first else "none"))
+    print("     Z = 6 returns 33 / 13 / 20 with the delta conjunction a strict subset, which is")
+    print("     what Sec. 4.5 reports, and its least alpha for the mode shift criterion is 16 --")
+    print("     that section's 'never met at alpha <= 8'. Both figures are Z = 6 figures: the gap")
+    print("     runs 31, 20, 4, 0, 0 and the least alpha runs 8, 16, 32, 32, 128.")
+    print("     ROBUST: delta is a strict subset of q at every Z, 0 reversals in all 605 cells,")
+    print("     so the left arm existing only under q survives and no missing level follows.")
+    print("     CAUTION: a gap of 0 at Z >= 7 means BOTH conjunctions are empty, not that the")
+    print("     two read-outs agree.")
+
+
 if __name__ == "__main__":
     print("GRID HALF-WIDTH AUDIT, 2026-09-23. Class (e): no cell prints any of this.")
     print(f"torch {torch.__version__}, dtype {DTYPE}. Notebook default Z = 6.0, K = 101.")
     print()
-    block_1(); block_2(); block_3(); block_4(); block_5(); block_6()
+    block_1(); block_2(); block_3(); block_4(); block_5(); block_6(); block_7()
