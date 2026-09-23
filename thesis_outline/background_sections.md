@@ -640,6 +640,8 @@ Goodman, N. D., & Stuhlmüller, A. (2013). Knowledge and implicature: Modeling l
  
 Grice, H. P. (1975). Logic and conversation. In P. Cole & J. L. Morgan (Eds.), *Syntax and semantics: Speech acts* (Vol. 3, pp. 41-58). Academic Press.
  
+Griffiths, T. L., Lieder, F., & Goodman, N. D. (2015). Rational use of cognitive resources: Levels of analysis between the computational and the algorithmic. *Topics in Cognitive Science, 7*(2), 217-229. **[Verify pages and DOI.]**
+ 
 Gutzmann, D. (2021). Semantics vs. pragmatics. In D. Gutzmann, L. Matthewson, C. Meier, H. Rullmann, & T. E. Zimmermann (Eds.), *The Wiley Blackwell companion to semantics*. Wiley. **[Verify page or article number.]**
  
 Ippolito, M. (2010). Embedded implicatures? Remarks on the debate between globalist and localist theories. *Semantics and Pragmatics, 3*, Article 5, 1-15. https://doi.org/10.3765/sp.3.5
@@ -663,6 +665,8 @@ Lassiter, D., & Goodman, N. D. (2017). Adjectival vagueness in a Bayesian model 
 Levinson, S. C. (2000). *Presumptive meanings: The theory of generalized conversational implicature*. MIT Press.
  
 Lewis, A. G., & Bastiaansen, M. (2015). A predictive coding framework for rapid neural dynamics during sentence-level language comprehension. *Cortex, 68*, 155-168. https://doi.org/10.1016/j.cortex.2015.02.014
+ 
+Lieder, F., & Griffiths, T. L. (2020). Resource-rational analysis: Understanding human cognition as the optimal use of limited computational resources. *Behavioral and Brain Sciences, 43*, e1. **[Verify article number and DOI.]**
  
 Magri, G. (2011). Another argument for embedded scalar implicatures based on oddness in downward-entailing environments. *Semantics and Pragmatics, 4*, Article 6, 1-51. https://doi.org/10.3765/sp.4.6
  

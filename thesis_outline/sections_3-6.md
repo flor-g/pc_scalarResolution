@@ -897,6 +897,35 @@ what it costs and what is still owed.
   from $\tilde{\mathcal F}$'s flattening, which is an argument, not a measurement.)*
 ---
  
+## 5.4 What an algorithmic account makes posable (about 120 words)
+
+- **The claim.** Every question the three sections above turn on is **not posable at the
+  computational level**. A computational theory states a goal and is silent on resources and
+  representation, so the questions do not have wrong answers there — they have no answers, because
+  they cannot be asked. Four instances, each naming where it arose:
+  - **There is one posterior**, so there is **no choice between a delta and a normalized read-out**,
+    and none of §3.6's costs is incurred by anything.
+  - **$\theta_u^\ast$ is the answer however long the flow takes toward it**, so the gap §5.3 makes
+    its subject — between where the verdict is reached and where learning would stop — does not open.
+  - **There is no computation whose end could be asked about**, so halting is not a question about a
+    theory of that kind, and a tolerance is not a candidate answer to it.
+  - **The $\tfrac12$ tempering has no counterpart.** It comes from representing the utility level
+    at finite $\sigma_S$, and §4.4 has to decompose $\Delta$ around it; a theory that fixes only
+    the posterior has nothing there to decompose.
+- **What that licenses, stated as an extension and not a new thesis.** The background's opening
+  defines an algorithmic-level peculiarity as **a pattern the computational goal does not entail**.
+  These four extend it by one step: **a question the computational level cannot pose**. Say that the
+  definition extends; do not restate it as a second claim.
+- **The counterargument, which should be raised here rather than left to a reader.**
+  Resource-rational analysis brings costs into a computational-level analysis (Griffiths, Lieder &
+  Goodman, 2015; Lieder & Griffiths, 2020), which looks like a direct denial. It is not: **it prices
+  a process, and so still needs one specified.** The questions are posable there **because an
+  algorithm has been supplied** — which is this section's point, arrived at from the other side.
+- **Guard, and it is the whole risk of the section.** Do not say the computational level is
+  **wrong**, and do not say these questions **refute RSA**. Neither follows, and both are the
+  natural misreading: the claim is about what a level can be asked, not about what is true.
+---
+ 
 ## 5.5 Limits (about 150 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the

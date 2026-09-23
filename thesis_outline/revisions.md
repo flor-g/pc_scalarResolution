@@ -1043,7 +1043,30 @@ The cost sense keeps the name "realizability" (O7, settled). The content, per R9
   current outline contains a settling-cost argument: §5.1's complexity case is about branching,
   not settling time. This section becomes the pointer's target. The pointer itself stays bare (O3).
 
-### Item 3. What an algorithmic account makes posable (§5.4, about 120 words)
+### Item 3. What an algorithmic account makes posable — **WRITTEN 2026-09-22** (§5.4, about 120 words)
+
+**The body is now in `sections_3-6.md`**, between §5.3 and §5.5, at its allocated 120 words — no
+budget change. **With it, every section of §§3–6 has a body**: 3.1–3.6, 4.1–4.6, 5.1–5.6, and 6.
+
+Each of the four instances now names where it arose, so the section reads as a consequence of §§3.6,
+4.4 and 5.3 rather than as a free-standing thesis: one posterior so no choice of read-out (§3.6);
+θ\* is the answer however long the flow takes, so §5.3's gap does not open; no computation whose end
+could be asked about, so a tolerance is not a candidate answer; and the ½ tempering has no
+counterpart, so there is nothing for §4.4's decomposition of Δ to decompose.
+
+The extension of the background's definition — from "a pattern the computational goal does not
+entail" to "a question the computational level cannot pose" — is written **as an extension and not
+as a second claim**, per the plan. The resource-rational counterargument is raised in the section
+rather than left to a reader, with the answer that it prices a process and so still needs one
+specified. The guard is stated as the section's whole risk: the computational level is not called
+**wrong**, and these questions are not said to **refute RSA**.
+
+**Two references added** to `background_sections.md`'s list, marked **[verify]** as §6 of this file
+directs: Griffiths, Lieder & Goodman (2015) and Lieder & Griffiths (2020). Both were misfiled on
+first insertion and corrected; the list is now in alphabetical order throughout, checked
+programmatically.
+
+#### The plan, as written
 
 - **Claim.** Each question above is **not posable** at the computational level (R5). A
   computational theory specifies the posterior and is silent on resources and representation. So:
