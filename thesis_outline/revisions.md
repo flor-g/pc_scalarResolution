@@ -1621,6 +1621,40 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 13. Z1–Z6: the half-width, printed (2026-09-23)
+
+**The user reopened E17's second ruling.** That ruling was that the Z end of §4.2's guard takes no
+printed evidence. It is superseded, on the entry rather than by editing it, and the guard is now
+sourced at both ends.
+
+**Where each block went, and the rule that put it there.** Each cell reports the Z dependence of
+**its own** statistic. That is what keeps this from being one sprawling block in whichever cell was
+convenient.
+
+| Task | Site | What was applied | Status |
+|---|---|---|---|
+| **Z1** | `main.ipynb` Code Cell A | `half_width_report`: the four criteria over Z in {5, 6, 7, 8, 10} at fixed node spacing, for two priors at two lexical strengths, with the peak of phi_S\* in s beside them; then Code Cell 4's 121-cell plane recounted at each Z, including the two baseline-conditioned counts. **The Z = 6 rows reproduce Code Cell 4's own printed counts**, which is the block's check | APPLIED |
+| **Z2** | `main.ipynb` Code Cell 2 and `appendix_E.ipynb` E2 | `check_specification` gains "Sec. 1 Z is not an accuracy parameter": E[s] spread over the Z ladder at fixed spacing against the K ladder's tail. The other half of Text cell 3 §1's claim, beside the half already there. Mirrored verbatim (I7) | APPLIED |
+| **Z3** | `main.ipynb` Code Cell F | **F.10**: R² per class at every half-width, the control for Z1. Rebuilds only the Voronoi node masks per grid; its Z = 6.0 row must reproduce F.3's model column | APPLIED |
+| **Z4** | Appendix A's markdown | A closing subsection: the cell of *all* has two ends, n fixes the lower and Z the upper; what the second ladder shows, with the peak as the mechanism; the two cautions of the n ladder carried over, plus the new one about conditioned counts. Takes no position (B10), no dashes as sentence punctuation (C5) | APPLIED |
+| **Z5** | §4.2, §4.5, §5.2, §5.5 | §4.2's Z bullet stops saying the end has no printed evidence; §4.5 says 15 and 9 are Z = 6 figures and why they cannot be otherwise; §5.5 quotes the peak's climb; §5.2 gains F.10's control and marks the minimum class's bracket as a default-grid figure | APPLIED |
+| **Z6** | `decisions.md` E17, I6, I10, B12 | E17 records the supersession; I6 gains printed evidence and still fails its class; I10 records where each block went and why; **B12's rationale is corrected** | APPLIED |
+
+**The correction this turned up, and it is the reason to have printed it.** B12 recorded that the
+strongest reason for §12's rewrite was that a position-led claim survives a wider grid. **That is
+false of the counts the claim quotes.** The bare position count does survive, 76, 59, 48, 25, 12
+against the shift's 113, 74, 24, 0, 0; but the **conditioned** counts run 32, 15, 0, 0, 0 and
+22, 9, 0, 0, 0, no better than the conjunction's 68, 33, 0, 0, 0. And they cannot be better:
+carrying a criterion the baseline fails entails a shift, so a conditioned count is bounded above by
+the shift count. **Nothing written relied on it**, because the Z argument was class (e) and appeared
+in no section, so the rewrite stands on the grounds it was argued on. The entry is corrected and
+§4.5 now states the Z conditionality of its own two numbers.
+
+**The honest summary to carry forward:** conditioning on the baseline buys the argument and costs
+the robustness. §4.5 reports both halves.
+
+---
+
 ## 12. CR1–CR5: the constructive claim, led by the position criterion (2026-09-23)
 
 **The call the user made.** Sec. 11's closing note left one thing open: whether to make the position

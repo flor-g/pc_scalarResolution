@@ -507,14 +507,16 @@ quantitative comparison is offered or implied.
     q shift criterion changes status somewhere on a sweep of $n$, and *where* it changes depends on
     $\Lambda$ — granularity and lexical strength are not separable in what the tables below report.
     Appendix A prints that sweep.
-  - *The $Z$ end, which none does.* $Z$ is held at its default throughout both notebooks, so this
-    half of the guard has **no printed evidence** and the section states it without one:
-    §4.5's conjunction moves with $Z-\theta_L$ as it moves with $n$, which is the same dependence
-    reached from the other end. *(Writer's note: `audits/2026-09-23-grid-half-width/` and
-    `decisions.md` E17 measure it and are **class (e)**. Quote no number from them, and do not let
-    the sentence imply one has been quoted. The user settled on 2026-09-23 that this end needs
-    **no** printed evidence: no cell sweeps $Z$, and the guard stays qualitative by decision
-    rather than by default. Do not carry it as an outstanding task.)*
+  - *The $Z$ end, which a cell now prints too.* Appendix A's half-width ladder runs the same four
+    criteria over $Z\in\{5,6,7,8,10\}$ at fixed node spacing, beside its ladder in $n$, and
+    Code Cell 4's plane is recounted at each. **The guard is symmetric and both halves are
+    sourced.** The figure to give is the one that makes the point in a line: under the flat prior
+    at $\Lambda=512$ both q criteria are met at $Z=5$ and $6$ and neither from $Z=7$, while the
+    peak of $\varphi_S^\ast$ climbs $0.8516$, $0.9168$, $0.9597$, $0.9862$, $0.9981$ in $s$ and
+    crosses the cell's start at $0.9500$ between $Z=6$ and $7$. *(Writer's note: this supersedes
+    the 2026-09-23 ruling that the $Z$ end takes no printed evidence, which the user reopened the
+    same day. `decisions.md` E17 records the supersession, and the audit stays class (e) for
+    anything the cell does not print.)*
   - *How $Z$ reaches the verdict, and the one thing not to say.* Not by clipping a tail:
     $\varphi_S^\ast$ stays normalizable and nothing piles at the cut. $B$ is orthonormalized under
     the grid's own measure, so **the peak of $\varphi_S^\ast$ moves with $Z$** — the same peak
@@ -678,6 +680,16 @@ it, so the reader sees the rows before being told which one carries weight.
   which this architecture does the work itself is bounded on both sides, and by different things**.
   *(Writer's note: these are the counts that survive §4.4's rule that nothing is shown by a
   criterion its own baseline meets. Do not restate the rule here; §4.4 states it and §5.1 uses it.)*
+- **And say in the same breath that 15 and 9 are $Z=6$ figures**, because they are the claim's own
+  numbers and §4.2's guard bears on them hardest. Appendix A's ladder counts them **32, 15, 0, 0, 0**
+  and **22, 9, 0, 0, 0** over $Z\in\{5,6,7,8,10\}$. **They are no more robust to the half-width than
+  the conjunction is**, and they cannot be: carrying a criterion the baseline fails entails a shift,
+  so each is bounded above by the shift count, which is already $0$ by $Z=7$. State that as the
+  reason rather than leaving the pattern to look like a coincidence. What survives a wider grid is
+  the **bare** position count, $76, 59, 48, 25, 12$ against the shift's $113, 74, 24, 0, 0$, and
+  that is a count the baseline is doing the work in — which is exactly what §4.4's rule bars from
+  carrying a claim. **The honest summary: conditioning on the baseline buys the argument and costs
+  the robustness, and both halves are reported here.**
 - **The conjunction is not confined to Part D's rows.** Sweeping lexical strength against prior
   concentration on the limit family $\mathrm{Beta}(\alpha,1)$, both conditions hold together in
   **33 of 121 cells**, in a band running from $(\alpha,\Lambda)=(1,512)$ to $(128,2048)$. Text
@@ -1044,7 +1056,13 @@ section says what any mismatch is due to** (R16).
   from $6$ to the ladder's top at $2048$ is within $0.005$ of the best, consistent with the hard
   entry of the $\Lambda\to\infty$ limit. The minimum class **requires a finite $\Lambda$**: its fit
   rises to $0.434$ and falls away on both sides, to $0.351$ by $\Lambda=2048$, with the optimum
-  bracketed between $32$ and $48$. **That contrast runs in H1's direction, and it is weaker evidence
+  bracketed between $32$ and $48$. **Two sentences on the half-width, now that Code Cell F prints
+  the control (F.10).** The maximum class's $R^2$ reads $0.993$ at every half-width on the ladder;
+  the minimum class's moves between $0.397$ and $0.434$ and the pooled figure between $0.762$ and
+  $0.827$. So **H1's content survives the half-width and the minimum class's bracket is a
+  default-grid figure**, which is the contrast §4.2's guard predicts: a statistic scoring agreement
+  of shape across items moves by hundredths where a mass above a fixed cut changes status
+  outright. **That contrast runs in H1's direction, and it is weaker evidence
   than it looks.** The maximum class's *threshold* is not identified by these data at all: its fit
   stays between $0.989$ and $0.993$ for every cut from $\zeta=-1.0$ to $+4.0$, and its literal,
   tempered and settled beliefs agree to three decimals. What that class establishes is a lower bound
@@ -1235,7 +1253,10 @@ what it costs and what is still owed.
   orthonormalized under the grid's own measure, so the **peak of $\varphi_S^\ast$** moves with $Z$.
   That peak is $\zeta_{k^\ast}$, so **§3.6's mode position criterion, $\zeta_{k^\ast}<\theta_L$,
   moves with $Z$ by definition**, and where it fails the conjunction fails too — sufficient, not
-  equivalent, the first condition failing on its own in most configurations. The same peak is $q$'s
+  equivalent, the first condition failing on its own in most configurations. Appendix A's ladder
+  prints it: under the flat prior at $\Lambda=512$ the peak climbs $0.8516$ to $0.9981$ in $s$ over
+  $Z\in\{5,10\}$ and crosses the cell's start between $Z=6$ and $7$, which is where both q criteria
+  stop being met. The same peak is $q$'s
   mode (Eq. 12), so neither read-out escapes it. §4.5's band moves with $Z$; §5.2's $R^2$ does not, reading
   agreement of shape across items. **The general form: a mass above a fixed cut, and the peak's own
   location, both move with the half-width; a statistic comparing shapes across items does not.**

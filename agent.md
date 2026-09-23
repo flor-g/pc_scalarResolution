@@ -412,7 +412,7 @@ A single hand edit to one prose sentence is low-risk. When unsure, make a checkp
   <area>: <what changed, in one line>
 
   Why: <decision, task, or finding IDs, e.g. A9, T3, F24; or "user request">
-  Verified: main 0 errors, 6 figures, 14/14; appendix_E 0 errors, 3 figures, E2 18/18, E3 PASS
+  Verified: main 0 errors, 8 figures, 15/15; appendix_E 0 errors, 5 figures, E2 19/19, E3 PASS
   ```
 
   Write `Verified: not run` when nothing was executed. Add any attribution line your own harness

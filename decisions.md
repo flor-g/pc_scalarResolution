@@ -877,13 +877,21 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   the q shift criterion is met in all 15 and the mode shift criterion in all 9. Alpha runs 16 to
   128 over the q count and 32 to 128 over the mode count. Part D's instance is the delta-like row
   of Code Cell 2b: q_lit 0.9568 to q_H 0.4351, peak 0.9852 inside to 0.9468 outside.
-- **Why the rewrite was taken, recorded because the strongest reason cannot be written down.**
-  The audit of E17 shows the shift criterion emptying faster than the position criterion under the
-  half-width, 113, 74, 24, 0, 0 against 76, 59, 48, 25, 14, so a position-led claim is the one that
-  survives a wider grid. **That evidence is class (e) and the user settled on 2026-09-23 that the Z
-  end takes no printed evidence**, so it appears in no section and must not be smuggled into one.
-  What the prose argues from is B11's reasons, which are printed: read-out invariance, and the
-  position criterion being stated on the object the construction represents.
+- **Why the rewrite was taken, and a correction to the first version of this entry
+  (2026-09-23, same day).** This entry first recorded that the strongest reason was Z robustness:
+  the shift criterion empties faster than the position criterion under the half-width, 113, 74, 24,
+  0, 0 against 76, 59, 48, 25, 12, so a position-led claim would be the one surviving a wider grid.
+  **That reason is wrong, and the cell added for Z shows it.** Those are the *bare* counts. The
+  counts this claim actually quotes are conditioned on the baseline failing, and they run **32, 15,
+  0, 0, 0** and **22, 9, 0, 0, 0** over Z = 5, 6, 7, 8, 10, which is no better than the
+  conjunction's 68, 33, 0, 0, 0. **Nor could it have been**: carrying a criterion the baseline fails
+  entails a shift, so a conditioned count is bounded above by the shift count, and the shift count
+  is already 0 by Z = 7. What survives a wider grid is the bare position count, and that is the one
+  A16's rule bars from carrying a claim, since the baseline is doing the work in it.
+  **The rewrite stands on the grounds it was argued on**, none of which was Z: B11's reasons, which
+  are printed, and the guard that nothing is shown by a criterion its own baseline meets. The
+  Z argument was never in any section, so nothing written has to change; what changes is this
+  entry, and Sec. 4.5 now states that 15 and 9 are Z = 6 figures.
 - Not claimed: that the conjunction is abandoned. Sec. 4.2's criterion is unchanged and the
   unconditioned counts are still reported, in the same paragraph.
 
@@ -1092,6 +1100,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   its own class's requirement**, which is recorded rather than repaired: the verdicts are reported
   under §4.2's widened guard instead.
 - Findings added later:
+  - **2026-09-23, later the same day: this entry now has printed evidence, and it still fails its
+    class.** Appendix A's cell prints the four criteria and Code Cell 4's plane at Z = 5, 6, 7, 8,
+    10, and Code Cell 2's specification check prints the contrast with K. So the class (d)
+    requirement is now *testable from the notebook* rather than only from an audit, and the test
+    comes back the same way: the conjunction runs 68, 33, 0, 0, 0 over the ladder. **The constant's
+    failure is documented in the notebook itself**, which is the useful outcome; the entry is not
+    repaired by it and the verdicts stay reported under §4.2's guard.
   - 2026-09-23 (E17). What the verdicts track is **Z − θ_L**, the *all*-cell's width in log-odds,
     not Z and not n separately, so this entry and §4.2's n guard are one question. Appendix F's
     claims are unaffected because R² over profiles is a correlation; §§4.4–4.5's are affected
@@ -1129,6 +1144,17 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   E.1 quotes that E2 does not print are printed by Code Cell E4.
 - Implementational reason: additions to Code Cell 2 go inside existing functions, so Code Cell
   E3's replay needs no new calls; each addition is mirrored into E2 verbatim.
+- Findings added later:
+  - **2026-09-23: the half-width's numbers, and where each went.** Three cells gained blocks, on
+    the rule that each reports the Z dependence of its **own** statistic. Code Cell A takes the four
+    criteria and Code Cell 4's plane, because Appendix A already owns the cell of *all* from the
+    n end and the guard is one interval with two ends. Code Cell 2's `check_specification` takes
+    the K-against-Z contrast, because the K half of Text cell 3 Sec. 1's claim was already a check
+    there and this is its other half; it is mirrored into E2 (I7) and both notebooks were
+    re-executed. Code Cell F takes F.10, because R² is its statistic and the machinery for it is
+    there. Code Cells A and F are not mirrored, so E3's replay is unaffected by either.
+  - **F.10 carries its own check**: it rebuilds only the Voronoi node masks per grid, and its
+    Z = 6.0 row must reproduce F.3's model column, which is how a wrong rebuild would show.
 
 ### I11. Code Cell 2b, its mirror, and how E3 finds both
 - Status: Settled
@@ -2343,3 +2369,16 @@ a number from it.
   stays qualitative and no cell is added to sweep the half-width. The audit remains class (e) and
   the guard quotes no number from it. **This is the disposition, not a holding position** — do not
   reopen it as an outstanding task.
+- **SUPERSEDED the same day by the user, who reopened it: Z is printed.** The ruling above stands
+  as the record of what was decided and is no longer the disposition. Appendix A's cell gained a
+  half-width ladder beside its ladder in n, running the same four criteria and recounting Code
+  Cell 4's plane at each Z; Code Cell 2's specification check gained the K-against-Z contrast; and
+  Code Cell F gained F.10, R² at every half-width. **What those cells print is no longer class (e)**
+  and §4.2's guard is sourced at both ends. The audit keeps its class for everything the cells do
+  not print, which is most of this entry: the mechanism blocks, the projection measurements, the
+  32-configuration agreement count and the Appendix F brackets. Recorded as Z1-Z6 of
+  `thesis_outline/revisions.md` §13.
+- **And the reopening corrected B12.** The counts printed at other half-widths show that the
+  baseline-conditioned counts empty as fast as the conjunction does, which is the opposite of the
+  Z robustness B12 first recorded as its reason. See B12's own correction; nothing in any section
+  had relied on it.
