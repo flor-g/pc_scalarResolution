@@ -709,29 +709,56 @@ Gu, S. (2026b). *Scalar implicature as predictive coding (discrete state space)*
 ---
  
 # Drafting checklist
- 
+
+**ALL THIRTEEN ITEMS WERE ALREADY DONE. Audited and ticked 2026-09-22**, item by item against the
+file rather than from the change record — the boxes had gone stale, some of them long ago (§1.7 was
+written and then edited again at T11 while its box stood unticked). The evidence for each tick is
+given beside it, so nobody has to re-derive it. **Nothing was written to satisfy this audit; only
+the boxes changed.**
+
 **Tier 1 — the background is wrong without these.**
- 
-- [ ] §2.5 cut to the scope statement (the previous 300-word precision subsection describes a
-      mechanism this architecture does not have)
-- [ ] Opening rewritten with the three questions and the RSA level contrast
-- [ ] Closing bridge rewritten — the old question asked whether the muted prior effect emerges when
-      confidence in the prior is learnable
-- [ ] §2.3's mapping paragraph corrected (the state is continuous, not a discrete softmax)
-- [ ] The old "testable payoff" bullet cut — it promised a quantitative wRSA comparison that §4.1
-      explicitly disclaims, on a quantity (prior entropy) the model does not have
-- [ ] §1.4's trailing two-utility line deleted
+
+- [x] §2.5 cut to the scope statement (the previous 300-word precision subsection describes a
+      mechanism this architecture does not have) — *§2.5 is 60 words and carries the note
+      "Replaces the previous draft's 300-word precision subsection".*
+- [x] Opening rewritten with the three questions and the RSA level contrast — *the Opening is
+      "three questions, and the level they are asked at", in three moves, with the level distinction
+      fixed by the RSA contrast rather than by definition.*
+- [x] Closing bridge rewritten — the old question asked whether the muted prior effect emerges when
+      confidence in the prior is learnable — *that question is gone; the bridge now restates the
+      three questions and carries the standing qualification §5.1 leans on.*
+- [x] §2.3's mapping paragraph corrected (the state is continuous, not a discrete softmax) —
+      *§2.3 says "Replace the mapping paragraph entirely… The state is continuous".*
+- [x] The old "testable payoff" bullet cut — *"testable payoff" and "prior entropy" now appear
+      nowhere in the file outside this checklist line.*
+- [x] §1.4's trailing two-utility line deleted — *the only surviving occurrence of
+      "alternative-sensitive"/"world-sensitive" in §1.4 is inside the **Delete:** instruction that
+      names the line, so the line itself is gone. The instruction stays, because the prose pass
+      still has to honour it.*
+
 **Tier 2 — a question goes unsupported without these.**
- 
-- [ ] §1.5 pasted and edited (drafted above)
-- [ ] §1.7 written — without it Q3b has no background and §5.2's literature is uncited
-- [ ] §1.6 written — without it §5.1's conventionalized/computed distinction lands cold
+
+- [x] §1.5 pasted and edited (drafted above) — *§1.5 is marked "— DRAFTED" and "Prose, not an
+      outline. Edit directly."*
+- [x] §1.7 written — *§1.7 exists at about 190 words, and was revised again at T11 (2026-09-22) to
+      fix F12's backwards prior-manipulation bullet and soften Q3b.*
+- [x] §1.6 written — *§1.6 "Alternatives: where they come from, and what bounds them", about 180
+      words.*
+
 **Tier 3 — improvements.**
- 
-- [ ] §2.2 three commitments
-- [ ] §2.4 expanded to carry locality as a thesis
-- [ ] §2.6 rewritten to the staging warrant
-- [ ] §1.3 merge; §1.4 trim; §1.8 rewritten; §2.7's claim-level close
+
+- [x] §2.2 three commitments — *§2.2 is "Three commitments of the canonical framework".*
+- [x] §2.4 expanded to carry locality as a thesis — *§2.4 is 330 words and says so: "the previous
+      draft's 250 words were thinner than the load it bears".*
+- [x] §2.6 rewritten to the staging warrant — *§2.6 carries "Note the warrant: the claim is about
+      **staging**, not about message direction".*
+- [x] §1.3 merge; §1.4 trim; §1.8 rewritten; §2.7's claim-level close — *§1.3 says "Merges the
+      previous draft's §1.3 and §1.4"; §1.4 stands at 360 words; §1.8 is "Part I synthesis: three
+      questions, and an impasse"; §2.7 closes on "Close on claim level, not on apology".*
+
+**What this leaves.** The background outline is complete as an outline. What it does **not** claim
+is that the background *prose* is written: §1.5 is the only section drafted as prose, and the rest
+are specifications for it. That distinction is what the ticks mean.
 **Verification: DONE 2026-09-22, all of it.** Every entry below was checked against Crossref's
 registered metadata, not against memory or press coverage.
 

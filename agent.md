@@ -490,6 +490,27 @@ the pattern of `procedure_records/theta_u_learned_reach.md`:
 
 **Code before prose.** Prose is rewritten against outputs that exist, never against expected ones.
 
+**Bookkeeping goes stale silently, and three kinds of it did by 2026-09-22.** None was a defect in
+the work; all three misled about what was left to do, which is worse than it sounds when the next
+session is deciding what to pick up.
+
+- **Checklists in outline files.** `background_sections.md`'s 13-item drafting checklist stood
+  entirely unticked while every item had been done — §1.7 was written, and then revised again at
+  T11, with its box still open. **Tick the box in the same pass that lands the work**, and when
+  auditing an old checklist, check each item against the file rather than against the change record.
+- **Section word totals against the word table.** Three section headings in `sections_3-6.md`
+  disagreed with the table they are kept in step with (§4 said 1,020 against 1,110; §5 1,250 against
+  1,650; §6 165 against 185). A heading is a second copy of a number and drifts like any other.
+  **Re-check every heading whenever a budget moves**; the table itself should also add up at
+  section, subsection and total level.
+- **"Not yet written" notes in plans.** `revisions.md` §5 item 2 said a divergence-register entry
+  for the halting tolerance was "**Not yet written**" after it had been written as D12. **Before
+  carrying a plan's gap into prose, check whether it is still a gap.**
+
+The cheap general rule: **a plan describes what was true when it was written.** Verify its claims
+about the repository's state before acting on them, exactly as `decisions.md` entries are verified
+before being cited.
+
 ### 5.4 Stop and ask the user
 
 Stop, report, and wait when:
