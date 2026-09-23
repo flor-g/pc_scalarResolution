@@ -306,7 +306,7 @@ row). §§3.6, 4.6, 5.3 and 5.4 are listed in the table but have no bodies yet; 
 - **Not a reopening.** Every finding behind this block is a reason **for** A3 as it stands
   (`agent.md` §3.1); A3 gains a dated amendment (U2) and stays settled.
 
-### §3.4 (lines 166–196)
+### §3.4 (lines 166–196) — **APPLIED 2026-09-22 at BG13**
 
 - **Line 170.** τ_ε ≪ τ_φ ≪ τ_θ → τ_ε ≤ τ_φ/(4 λ_max(H)) ≪ τ_φ ≪ τ_θ (A11, Text cell 3
   commitment 7). The bound is critical damping of the stiffest mode and scales as θ_u⁻².
@@ -314,8 +314,13 @@ row). §§3.6, 4.6, 5.3 and 5.4 are listed in the table but have no bodies yet; 
   - θ_u is learned per configuration and starts at θ_u(0) = 0. There the network is the
     **tempered control**, not q_lit (A10, C3).
   - Strict concavity secures convergence of the fast subsystem at every θ_u the slow flow passes
-    through, but conditioning governs whether that convergence is reachable: condition number about
+    through, but conditioning governs whether that convergence is reachable: **stiffness ratio**
     (1+θ_u²)/2, 404.8 at the Gaussian θ\*. This sentence sets up §4.6 and §5.3.
+    **Corrected at BG13: this entry said "condition number" and the quantity is not one.** What
+    Code Cell 2 prints under that value is the *stiffness ratio*, Eq. (28)'s φ_u rate over the
+    constant φ_S rate; at that θ\* λ_max(H) = 810.69 against an Eq. (28) rate of 809.69, so it is
+    not λ_max/λ_min. Use the notebook's name — a plan that misnames a printed quantity will put the
+    wrong word in the prose, and C6 checks the value, not the label.
 - **Lines 193–196, the relay's cost. Rewrite per F26.** Under commitment 7 the relay adds no
   stability requirement of its own. It needs only τ_r ≤ τ_ε, and the reason is monotone F, not
   oscillation. It inherits θ_u⁻² from τ_ε rather than carrying its own. Eq. (E6) keeps ≤, with the
@@ -1578,12 +1583,20 @@ after Fox and Strogatz before Spratling.
   R28** — the Σ_y c_y = 2BᵀWℓ₀ identity.
 - **BG12.** §6's optional §1.8 clause is written against the pre-R14 numbering: "the questions of
   §5.3 are not posable" should read **§5.4**.
-- **BG13, and it is not a background task.** `sections_3-6.md` **§3.4 carries the same three
+- **BG13 — APPLIED 2026-09-22, and it was not a background task.** `sections_3-6.md` **§3.4 carries the same three
   unapplied items** as BG4–BG5: the τ ordering at line 275, the missing θ_u(0) = 0 and
   conditioning additions (condition number ≈ (1+θ_u²)/2, 404.8 at the Gaussian θ\*), and the
   relay's cost at lines 298–299, which still reads "a third lag in the loop can oscillate" where
   F26 says the reason is monotone F and the relay carries no θ_u⁻² of its own. §4 above specifies
   all three under "§3.4 (lines 166–196)".
+  **Applied.** §3.4 goes 230 → **290** and the total to **4,270**; §5.5's relay line now says the
+  fourth timescale *inherits* θ_u⁻² rather than imposing its own, with O6's exception named; and
+  §3.4 points at background §2.7, which closes on the same correction, so the two documents now
+  agree about what the relay's speed does and does not commit the model to.
+  **Two things found while applying it.** The plan misnamed the stiffness ratio (above). And the
+  word table's closing note still said §§4.6, 5.3 and 5.4 were unwritten — it went stale **within
+  the same day** those three were written, at `aa4340b`, `8639640` and `0fb1547`. Every subsection
+  of §§3–6 now has a body, and the note says so.
 
 ---
 

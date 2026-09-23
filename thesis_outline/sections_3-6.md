@@ -109,15 +109,17 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 2026-09-22 at T10, under S-6's standing permission for this section) → **3,880** (§5.2 550 → 650 and
 §6 165 → 185 the same day, for R27's reservation on H1) → **4,030** (§5.2 650 → 800 the same day,
 for R28's mechanism and its one hedged causal statement) → **4,210** (§5.6 60 → 130 the same day:
-it carries four predictions and R27 had added the H1 reservation to the fourth without raising it). The "was" column is the 2,400 allocation this outline was written to.
+it carries four predictions and R27 had added the H1 reservation to the fourth without raising it)
+→ **4,270** (§3.4 230 → 290 the same day, at **BG13**: commitment 7 in its exact form, conditioning,
+and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been applied). The "was" column is the 2,400 allocation this outline was written to.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
-| **3. The proposed architecture** | 800 | **1,085** | |
+| **3. The proposed architecture** | 800 | **1,145** | |
 | 3.1 What the model must do | 90 | 90 | Four design requirements |
 | 3.2 A continuous world state and a soft lexicon | 160 | **270** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
 | 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
-| 3.4 State units, error units, and what is local | 210 | **230** | Concavity, closed forms, the relay; commitment 7; $\theta_u$ learned |
+| 3.4 State units, error units, and what is local | 210 | **290** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied) |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
 | 3.6 Two read-outs (new) | — | **100** | `revisions.md` §5, item 1 |
 | **4. Evaluation** | 745 | **1,180** | |
@@ -135,11 +137,12 @@ it carries four predictions and R27 had added the H1 reservation to the fourth w
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,210** | |
+| **Total** | **2,400** | **4,270** | |
 
-**What this table does not do.** **§3.6 is written** (2026-09-22, `revisions.md` §5 item 1);
-**§§4.6, 5.3 and 5.4 are not** — their content is planned in `revisions.md` §5 and §4's §4.6 entry,
-and their budgets are carried here against bodies that do not yet exist. Limits and Predictions keep
+**What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
+`revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
+until BG13 corrected it — it had gone stale within the same day they were written.* Every
+subsection of §§3–6 now has a body. Limits and Predictions keep
 their text under their new numbers, §5.5 and §5.6. Bodies rewritten to their new budgets: §§3.2,
 3.3, 4.1, 4.4, 4.5 and 6 (tasks U9–U12), plus §5.2 (T10, R27, R28) and §3.6; the rest carry the new
 figure against text still written to the old one. **Every section heading's figure was checked
@@ -268,13 +271,18 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   the model is constant-invariant. Code Cell D prints both facts (Appendix D Sec. 5). About 45 words
   in the paper; the normalizer sentence is the agent's addition to R19 and the first to cut if the
   bullet overruns.
-## 3.4 State units, error units, and what is local (about 230 words)
+## 3.4 State units, error units, and what is local (about 290 words)
  
 - Error units relax toward their residuals and state units ascend $\mathcal F$ (Eqs. 18–19), both
   instances of Bogacz's Eqs. (53)–(54). The slow parameter follows his own gradient under
-  $\tau_\varepsilon\ll\tau_\varphi\ll\tau_\theta$. There is no learning rate and none is required:
-  the constant of proportionality is a time constant of the kind the error and state units already
-  carry.
+  $\tau_\varepsilon\le\tau_\varphi/(4\lambda_{\max}(H))\ll\tau_\varphi\ll\tau_\theta$ —
+  **a commitment and not merely an ordering** (Text cell 3, commitment 7; A11). The bound is
+  critical damping of the stiffest mode; it is **ours rather than Bogacz's**, which is what makes it
+  something to answer for in §5.3; and since $\lambda_{\max}(H)$ grows as $\theta_u^2$ it tightens
+  as $\theta_u^{-2}$. What it secures is the **monotone** rise of $\mathcal F$, not convergence —
+  the next bullet gets convergence from concavity instead, and the two should not be run together.
+  There is no learning rate and none is required: the constant of proportionality is a time constant
+  of the kind the error and state units already carry.
 - **Why the dynamics are a claim and not an assumption.** $\mathcal F$ is strictly concave in
   $(\varphi_S,\varphi_u)$ for *every* $\theta_u$ and *every* $\Lambda$ (Eq. 21), and Eq. (22) lifts
   this to arbitrary $B$ and arbitrary $m$. So there is a unique global maximum and the closed forms
@@ -284,6 +292,21 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   $\varphi_L$ is clamped, the recurrent dynamics are a claim about **neural implementation**, the
   status they have in Bogacz's own linear examples, and the closed forms are what make that claim
   testable.
+- **$\theta_u$ is learned, and where its flow starts is worth one sentence.** It belongs to the
+  configuration, so every respawned network re-learns it, and the flow of Eq. (20) starts at
+  $\theta_u(0)=0$ — one start shared by every configuration (A10, C3). **There the network is the
+  tempered control, not the literal listener** (§4.1 names both), which is why §4's readings are
+  displacements from a baseline the model passes *through* rather than one stipulated beside it.
+- **Concavity is not the whole story; conditioning decides what is reachable.** Strict concavity
+  secures convergence of the fast subsystem at *every* $\theta_u$ the slow flow passes through and
+  says nothing about the cost of arriving. The **stiffness ratio** — Eq. (28)'s $\varphi_u$ rate
+  over the constant $\varphi_S$ rate — is $(1+\theta_u^2)/2$, which is $404.8$ at the Gaussian
+  prior's $\theta_u^\ast$. Slow-parameter learning and fast-subsystem conditioning are therefore
+  coupled, and this is the sentence §4.6 and §5.3 are built on.
+  *(Writer's note: the printed name is **stiffness ratio**. `revisions.md` §4's §3.4 entry called it
+  a condition number and it is not one — at that $\theta_u^\ast$, $\lambda_{\max}(H)=810.69$
+  against Eq. (28)'s rate of $809.69$, so the ratio is not $\lambda_{\max}/\lambda_{\min}$. Use
+  the notebook's name; Text cell 4's *Integration cost and conditioning* prints the table.)*
 - **Locality, and the relay that secures it.** The ranking inverts against expectation: Bogacz's
   free matrix $\Theta$ is local without comment, and our scalar restriction $\theta_u B$ is what
   needs defending, because tying $K\times m$ entries to one scalar is weight sharing. At $m=1$ the
@@ -295,10 +318,14 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   (Eq. E4) — pre times post, at any $m$. **The sum is relocated, not removed**: out of the
   plasticity rule, where a synapse would have had to read other neurons, and into a dendrite, where
   summing one's own afferents is what local computation permits. Eq. (E4a) shows the two forms are
-  the same number, so no prediction moves. The cost is a fourth timescale, $\tau_r\ll\tau_\varepsilon$
-  with $\tau_r\lesssim\theta_u^{-2}$ (Eqs. E5–E6): a third lag in the loop can oscillate where two
-  cannot, and the stronger the learned gain, the faster the relay must be. State that as a
-  commitment with empirical content, not as bookkeeping.
+  the same number, so no prediction moves. The cost is a fourth timescale — and **under commitment 7
+  it is an ordering rather than a requirement the relay carries of its own**:
+  $\tau_r\le\tau_\varepsilon$ (Eq. E6, which keeps the weak inequality), for **monotone
+  $\mathcal F$ and not against oscillation** (F26). A relay no slower than the error units inherits
+  their $\theta_u^{-2}$ scaling without a separate one; the scaling has moved, not disappeared.
+  State the exception rather than smoothing it: at equality $\mathcal F$ is monotone under *some*
+  only (O6). **The empirical content sits in commitment 7's separation, not in the relay's speed**
+  — background §2.7 closes on the same correction.
 ## 3.5 Two choices the scale forces (about 140 words)
  
 Neither of the following is chosen. Both are consequences of the lexicon's threshold structure.
@@ -947,7 +974,9 @@ what it costs and what is still owed.
   slow start halts at once at the tempered control (§5.3).
 - The model is linear-Gaussian while $\varphi_L$ is clamped, so the recurrent dynamics are an
   implementation claim rather than a computational necessity.
-- The relay secures locality at the cost of a fourth timescale scaling as $\theta_u^{-2}$ (Eq. E6).
+- The relay secures locality at the cost of a fourth timescale, $\tau_r\le\tau_\varepsilon$
+  (Eq. E6), which **inherits** $\theta_u^{-2}$ from the error units rather than imposing its own
+  (F26); at equality $\mathcal F$ is monotone under *some* only (O6).
 - $m=2$ is necessary at a flat inventory; **sufficiency is open**.
 - Multidimensional semantics with sharp lexical boundaries is a declared non-compatibility.
 - Not learned: $\Lambda$, $\theta_L$, $B$, $\mu_u$, the inventory.
