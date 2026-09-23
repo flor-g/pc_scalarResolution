@@ -432,8 +432,9 @@ quantitative comparison is offered or implied.
     §4.5's conjunction moves with $Z-\theta_L$ as it moves with $n$, which is the same dependence
     reached from the other end. *(Writer's note: `audits/2026-09-23-grid-half-width/` and
     `decisions.md` E17 measure it and are **class (e)**. Quote no number from them, and do not let
-    the sentence imply one has been quoted. Giving this end printed evidence means a cell that
-    varies $Z$, which is why the guard is qualitative here.)*
+    the sentence imply one has been quoted. The user settled on 2026-09-23 that this end needs
+    **no** printed evidence: no cell sweeps $Z$, and the guard stays qualitative by decision
+    rather than by default. Do not carry it as an outstanding task.)*
   - *How $Z$ reaches the verdict, and the one thing not to say.* Not by clipping a tail:
     $\varphi_S^\ast$ stays normalizable and nothing piles at the cut. $B$ is orthonormalized under
     the grid's own measure, so **the peak of $\varphi_S^\ast$ moves with $Z$** — the same peak

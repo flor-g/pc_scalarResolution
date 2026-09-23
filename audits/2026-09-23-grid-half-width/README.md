@@ -108,5 +108,7 @@ reason and no evidence, while `agent.md` §3.3 makes the half-width a class (d) 
 §4.2 already carries half of the right guard — it says the verdicts are relative to *n* and that the
 q shift criterion changes status somewhere on a sweep of n. Since θ_L = log(2n−1), that guard and
 this finding are one fact seen from two ends, and §4.2 now states it as the width of the cell.
-Reconsidering the criterion's *form* — an absolute mass threshold over a truncated cell is the
-fragile object — is a B-series architectural question and is **not** taken here.
+**Settled by the user, 2026-09-23.** The criterion's form does **not** change: the dependence sits
+below it, in a projection taken under the grid's own measure, so reformulating relocates it rather
+than removing it. And $Z$ needs **no** printed evidence — no cell sweeps the half-width, this audit
+stays class (e), and §4.2's guard stays qualitative by decision rather than by default.

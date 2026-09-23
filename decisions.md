@@ -2126,5 +2126,14 @@ a number from it.
   Z ≥ 7 means *both* conjunctions are empty, not that the read-outs agree.
 - **Depends on it:** §§4.4, 4.5, 4.6 and §6 item 3 through the conjunction; §4.2's guard, widened
   2026-09-23; I6, which was an empty entry and now carries this as its evidence.
-- **Not taken here.** Whether the criterion's *form* should change — an absolute mass threshold over
-  a truncated cell is the fragile object — is a B-series question for the user.
+- **Settled by the user, 2026-09-23: the criterion's form does not change.** The options and their
+  costs were put to them — report the peak instead (no robustness, the peak is what moves); state
+  the criterion on φ_S contrasts (real invariance, but it stops being a claim about belief mass and
+  the RSA comparison goes with it); a shape-agreement statistic (Z-robust but needs data to agree
+  with, which §4.4 has none of); project under a fixed reference measure (removes the dependence,
+  breaks BᵀWB = I). **Answer: no.** The agent's recommendation was the same, on the ground that the
+  dependence sits below the criterion, so reformulating relocates it rather than removing it.
+- **Settled by the user, 2026-09-23: Z does not need printed evidence.** The Z half of §4.2's guard
+  stays qualitative and no cell is added to sweep the half-width. The audit remains class (e) and
+  the guard quotes no number from it. **This is the disposition, not a holding position** — do not
+  reopen it as an outstanding task.
