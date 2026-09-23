@@ -144,8 +144,73 @@ def block_4():
     print("     location and the minimum class's R^2.")
 
 
+def block_5():
+    print()
+    print("=" * 100)
+    print("  5. THE DEPENDENCE SITS BELOW THE CRITERION. Eq. (24)'s limit is 0.5(I + P)f with")
+    print("     P = B B^T W, the W-orthogonal projection onto span{zeta, zeta^2}.")
+    print("=" * 100)
+    ref = None
+    for Z in (6.0, 8.0):
+        net = LexicalPredictiveCodingNetwork(num_nodes=NODES(Z), grid_half_width=Z,
+                                             lexical_strength=512.0,
+                                             base_prior=BASE_WORLD_PRIORS["flat"])
+        f = net.base_log_prior - net.lexical_field("some")
+        Pf = net.basis @ (net.basis.T @ (net.weights * f))
+        Q, _ = torch.linalg.qr(torch.randn(2, 2, dtype=net.dtype))
+        B2 = net.basis @ Q
+        Pf2 = B2 @ (B2.T @ (net.weights * f))
+        idx = [int(torch.argmin((net.zeta - v).abs())) for v in (-3., -1., 0., 1., 3., 5.)]
+        vals = [float(Pf[k]) for k in idx]
+        print(f"   Z = {Z:g}: max |Pf - P'f| under an arbitrary rotation of B = "
+              f"{float((Pf - Pf2).abs().max()):.1e}  (P is basis-independent)")
+        print(f"            Pf at zeta = -3,-1,0,1,3,5: " + ", ".join(f"{v:+.2f}" for v in vals))
+        if ref is None:
+            ref = vals
+        else:
+            print(f"            change from Z = 6:          "
+                  + ", ".join(f"{b - a:+.2f}" for a, b in zip(ref, vals)))
+    print("     The projection is taken in L^2([-Z, Z]), so what 'the zeta and zeta^2 components")
+    print("     of the field' MEANS is truncation-dependent, and the amplification doubles that")
+    print("     component. No reformulation of the criterion removes this. Removing it needs a")
+    print("     fixed reference measure, which breaks B^T W B = I -- assumed by Eq. (B2).")
+
+
+def block_6():
+    print()
+    print("=" * 100)
+    print("  6. THE PEAK-CROSSING IS SUFFICIENT FOR FAILURE, NOT EQUIVALENT TO IT")
+    print("=" * 100)
+    agree = total = 0
+    rows = []
+    for prior in ("flat", "gaussian", "skewed high", "skewed low"):
+        for lam in (8.0, 512.0):
+            for Z in (5., 6., 7., 8.):
+                net = LexicalPredictiveCodingNetwork(num_nodes=NODES(Z), grid_half_width=Z,
+                                                     lexical_strength=lam,
+                                                     base_prior=BASE_WORLD_PRIORS[prior])
+                star, lit, q, c1, c2 = criterion(net)
+                phi = net.closed_form_fixed_point("some", theta_u=star)[0]
+                peak = float(net.zeta[int(torch.argmax(phi))])
+                below = peak < net.theta_L
+                agree += (below == (c1 and c2))
+                total += 1
+                if not below:
+                    rows.append((prior, lam, Z, peak, c1 and c2))
+    print(f"   'peak < theta_L' and the q conjunction agree in {agree} of {total} configurations")
+    print(f"   (four priors x Lambda in {{8, 512}} x Z in {{5,6,7,8}}).")
+    print("   Every row whose peak sits ABOVE theta_L fails the conjunction:")
+    for prior, lam, Z, peak, both in rows:
+        print(f"     {prior:<12} Lambda {lam:>5g}  Z {Z:g}  peak {peak:>6.3f} > theta_L  "
+              f"conjunction {'Y' if both else 'n'}")
+    print("   Many rows whose peak is below it fail anyway, through the FIRST condition")
+    print("   q_H < q_lit, which is the more fragile of the two (block 3: 113, 77, 25, 5, 0")
+    print("   against the second's 76, 59, 48, 25, 14). The conjunction is therefore NOT")
+    print("   'a claim about where the peak sits'; the peak is the channel Z acts through.")
+
+
 if __name__ == "__main__":
     print("GRID HALF-WIDTH AUDIT, 2026-09-23. Class (e): no cell prints any of this.")
     print(f"torch {torch.__version__}, dtype {DTYPE}. Notebook default Z = 6.0, K = 101.")
     print()
-    block_1(); block_2(); block_3(); block_4()
+    block_1(); block_2(); block_3(); block_4(); block_5(); block_6()

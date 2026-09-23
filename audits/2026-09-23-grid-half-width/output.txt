@@ -64,3 +64,34 @@ torch 2.13.0, dtype torch.float64. Notebook default Z = 6.0, K = 101.
      at every Z. R^2 is a correlation over item x position rows, so inflating the
      top cell uniformly across items barely moves it. What moves is the bracket's
      location and the minimum class's R^2.
+
+====================================================================================================
+  5. THE DEPENDENCE SITS BELOW THE CRITERION. Eq. (24)'s limit is 0.5(I + P)f with
+     P = B B^T W, the W-orthogonal projection onto span{zeta, zeta^2}.
+====================================================================================================
+   Z = 6: max |Pf - P'f| under an arbitrary rotation of B = 5.7e-13  (P is basis-independent)
+            Pf at zeta = -3,-1,0,1,3,5: -115.70, +64.75, +120.70, +158.12, +176.08, +110.35
+   Z = 8: max |Pf - P'f| under an arbitrary rotation of B = 1.4e-13  (P is basis-independent)
+            Pf at zeta = -3,-1,0,1,3,5: -62.16, +54.97, +100.16, +140.35, +183.92, +191.14
+            change from Z = 6:          +53.54, -9.78, -20.54, -17.77, +7.84, +80.79
+     The projection is taken in L^2([-Z, Z]), so what 'the zeta and zeta^2 components
+     of the field' MEANS is truncation-dependent, and the amplification doubles that
+     component. No reformulation of the criterion removes this. Removing it needs a
+     fixed reference measure, which breaks B^T W B = I -- assumed by Eq. (B2).
+
+====================================================================================================
+  6. THE PEAK-CROSSING IS SUFFICIENT FOR FAILURE, NOT EQUIVALENT TO IT
+====================================================================================================
+   'peak < theta_L' and the q conjunction agree in 13 of 32 configurations
+   (four priors x Lambda in {8, 512} x Z in {5,6,7,8}).
+   Every row whose peak sits ABOVE theta_L fails the conjunction:
+     flat         Lambda   512  Z 7  peak  3.171 > theta_L  conjunction n
+     flat         Lambda   512  Z 8  peak  4.271 > theta_L  conjunction n
+     gaussian     Lambda   512  Z 8  peak  3.669 > theta_L  conjunction n
+     skewed high  Lambda   512  Z 7  peak  3.171 > theta_L  conjunction n
+     skewed high  Lambda   512  Z 8  peak  4.271 > theta_L  conjunction n
+     skewed low   Lambda   512  Z 8  peak  3.789 > theta_L  conjunction n
+   Many rows whose peak is below it fail anyway, through the FIRST condition
+   q_H < q_lit, which is the more fragile of the two (block 3: 113, 77, 25, 5, 0
+   against the second's 76, 59, 48, 25, 14). The conjunction is therefore NOT
+   'a claim about where the peak sits'; the peak is the channel Z acts through.

@@ -58,9 +58,25 @@ stays normalizable (negative ζ² coefficient at every Z measured) and the top n
 nothing piles at the cut. **B is orthonormalized on the grid, so the settled field's own shape moves
 with Z.** Fitting φ_S\* to a quadratic, its peak runs 1.70, 2.39, 2.78, 3.17, 3.61, 4.24 over
 Z = 5, 6, 6.5, 7, 7.5, 8 and **crosses θ_L = 2.944 between Z = 6.5 and 7 — exactly where q_H passes
-½**. Both q criteria and §3.6's mode criterion therefore fail together. §4.4 and §4.5 read an
-**absolute position** on that field; Appendix F scores **R² over five-cell profiles across items**,
-which reads **agreement of shape** and is invariant to it.
+½**. §4.4 and §4.5 read an **absolute position** on that field; Appendix F scores **R² over
+five-cell profiles across items**, which reads **agreement of shape** and is invariant to it.
+
+**The dependence sits below the criterion.** Eq. (24)'s limit is ½(I + P)f with **P = BBᵀW, the
+W-orthogonal projection onto span{ζ, ζ²}**. P is basis-independent — rotating B by an arbitrary
+orthogonal Q moves Pf by 3.4e-13 — and **P itself moves with Z**, because the projection is taken in
+L²([−Z, Z]): projecting the same field, Pf at ζ = −3, −1, 0, 1, 3, 5 shifts by +53.5, −9.8, −20.5,
+−17.8, +7.8 and **+80.8** between Z = 6 and Z = 8. What "the ζ and ζ² components of the field" means
+is truncation-dependent, and the amplification doubles that component. **No reformulation of the
+criterion removes this**; it changes only whether a statistic is sensitive to it. Removing it needs
+the projection taken under a fixed reference measure rather than the quadrature one, which breaks
+BᵀWB = I, assumed by Eq. (B2)'s closed form — the orthonormality that makes the closed forms exact
+is what ties the utility basis to the truncation.
+
+**Sufficient, not equivalent.** Over 32 configurations (four priors × Λ ∈ {8, 512} × Z ∈ {5,6,7,8}),
+"peak < θ_L" and the q conjunction agree in only **13**. A peak above θ_L always fails the
+conjunction (6 of 6), but many rows with the peak below it fail anyway, through the first condition
+q_H < q_lit — the more fragile of the two, collapsing 113 → 77 → 25 → 5 → 0 against the second's
+76 → 59 → 48 → 25 → 14. **The conjunction is not "a claim about where the peak sits."**
 
 The clinching evidence is that **Appendix F runs at n = 4, so Z − θ_L = 4.05 — already inside the
 region where the main evaluation's conjunction has collapsed to zero cells — and Appendix F is fine

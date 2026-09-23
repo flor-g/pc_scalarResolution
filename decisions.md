@@ -2084,11 +2084,31 @@ a number from it.
   measured) and the top node's share is ~0, so nothing piles at the cut. **B is orthonormalized on
   the grid, so the settled field's own shape moves with Z**: fitting φ_S\* to a quadratic, its peak
   runs 1.70, 2.39, 2.78, 3.17, 3.61, 4.24 over Z = 5 to 8 and **crosses θ_L = 2.944 between Z = 6.5
-  and 7, which is exactly where q_H passes ½**. So both q criteria and §3.6's mode criterion fail
-  together, and the general form is that a statistic reading an **absolute position** on that field
-  carries the stipulation while one reading **agreement of shape** does not. Appendix F scores R²
-  over profiles across items, which reads agreement of shape; it runs at Z − θ_L = 4.05, inside the
-  region where the conjunction is already at zero cells, and is unaffected there.
+  and 7, which is exactly where q_H passes ½**. The general form is that a statistic reading an
+  **absolute position** on that field carries the stipulation while one reading **agreement of
+  shape** does not. Appendix F scores R² over profiles across items, which reads agreement of shape;
+  it runs at Z − θ_L = 4.05, inside the region where the conjunction is already at zero cells, and
+  is unaffected there.
+- **The dependence sits below the criterion, which is why reformulating the criterion cannot remove
+  it.** Eq. (24)'s limit is ½(I + P)f with **P = BBᵀW the W-orthogonal projection onto
+  span{ζ, ζ²}**. P depends on that span and on the measure, not on which orthonormal basis of the
+  span the code builds: rotating B by an arbitrary orthogonal Q moves Pf by 3.4e-13. **P itself
+  moves with Z**, because the projection is taken in L²([−Z, Z]) — projecting the *same* field,
+  Pf at ζ = −3, −1, 0, 1, 3, 5 shifts by +53.5, −9.8, −20.5, −17.8, +7.8 and **+80.8** between
+  Z = 6 and Z = 8. So what "the ζ and ζ² components of the field" *means* is truncation-dependent,
+  and the amplification doubles that component. Reformulating the criterion changes only whether a
+  statistic is sensitive to this; it does not remove it. Removing it would need the projection taken
+  under a fixed reference measure instead of the quadrature one, which breaks **BᵀWB = I** —
+  assumed by Eq. (B2)'s closed form. *The orthonormality that makes the closed forms exact is the
+  same thing that ties the utility basis to the truncation.*
+- **The peak-crossing is sufficient for failure, not equivalent to it, and the first write-up of
+  this entry overstated it.** Across 32 configurations (four priors × Λ ∈ {8, 512} × Z ∈ {5,6,7,8}),
+  "peak < θ_L" and the q conjunction agree in only **13**. Every row whose peak sits above θ_L fails
+  the conjunction (6 of 6), and many rows whose peak is below it fail anyway, because the *first*
+  condition q_H < q_lit fails independently — it is the more fragile of the two, collapsing
+  113 → 77 → 25 → 5 → 0 over Z against the second's 76 → 59 → 48 → 25 → 14. **The conjunction is
+  therefore not "a claim about where the peak sits"**; the peak is the channel Z acts through, and
+  the two must not be identified.
 - **Depends on it:** §§4.4, 4.5, 4.6 and §6 item 3 through the conjunction; §4.2's guard, widened
   2026-09-23; I6, which was an empty entry and now carries this as its evidence.
 - **Not taken here.** Whether the criterion's *form* should change — an absolute mass threshold over
