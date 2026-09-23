@@ -162,7 +162,7 @@ Two further findings that change the outline as much as the headline does:
   says that the maximizer of F supplies a halting mechanism. So item 2 is new material, not a
   correction of existing text.
 
-## 3. Word allocation at 3,000, raised to 3,200 on 2026-09-17 (S-6), then to 3,450 the same day (P-3), then to 3,520 on 2026-09-22 (§5.5, for A19), then to 3,610 the same day (§4.2, for S-8/T15's n guard), then to 3,760 the same day (§5.2, for T10), then to 3,880 the same day (§5.2 and §6, for R27), then to 4,030 the same day (§5.2, for R28)
+## 3. Word allocation at 3,000, raised to 3,200 on 2026-09-17 (S-6), then to 3,450 the same day (P-3), then to 3,520 on 2026-09-22 (§5.5, for A19), then to 3,610 the same day (§4.2, for S-8/T15's n guard), then to 3,760 the same day (§5.2, for T10), then to 3,880 the same day (§5.2 and §6, for R27), then to 4,030 the same day (§5.2, for R28), then to 4,100 (§4.4, for item 1's delta read-out results once §3.6 existed)
 
 | Section | Was | Now | What the change pays for |
 |---|---:|---:|---|
@@ -173,7 +173,7 @@ Two further findings that change the outline as much as the headline does:
 | 3.4 State units, error units, and what is local | 210 | 230 | Commitment 7 in exact form; θ_u learned, starting at the tempered control; conditioning |
 | 3.5 Two choices the scale forces | 140 | 140 | |
 | 3.6 Two read-outs (new) | — | 100 | Item 1 |
-| **4. Evaluation** | **745** | **1,110** | |
+| **4. Evaluation** | **745** | **1,180** | |
 | 4.1 What is compared | 100 | **140** | Naming (literal listener, tempered control); R18: q_lit is a fixed point only because ℓ₀ sits in g_L |
 | 4.2 The criterion, and how to read the statistics | 170 | **260** | R25's n guard |
 | 4.3 The specification holds | 90 | 70 | Trimmed to fund §4.5 (R14) |
@@ -346,8 +346,9 @@ and §4.1 and §4.4 need it.
 - **Lines 222–225 (2026-09-17, R18).** The sentence that q_lit "is a fixed point of this network rather than an external construction" is true **because** ℓ₀ sits in g_L (A3). Under the g_S placement ℓ₀ − φ_L is reachable at no σ, so the sentence that removes the "built to be beaten" objection would not be available. Add the dependency in a clause and point to §3.2.
 - **2026-09-18, applied by U10.** The A3 clause, the two renamings, "where learning starts", and
   DEC5's one sentence, with a writer's note that it does not contradict §3.2 (the L₀ identification
-  holds only as Λ → ∞, a limit and not a setting). **Not applied:** the line 230 pointer to §3.6,
-  which does not exist in the outline yet. Heading 100 → 140 (P-3).
+  holds only as Λ → ∞, a limit and not a setting). Heading 100 → 140 (P-3). **The line 230 pointer
+  to §3.6 is APPLIED, 2026-09-22**, §3.6 now existing: the bullet reads "q_H, the settled belief
+  read through q".
 
 ### §4.2 (lines 234–253)
 
@@ -416,8 +417,10 @@ of contrast, retitled "The five priors", heading 220 → 285.
   Gaussian θ\*, and the Eq. (24) limit on the delta-like row. The claim that every θ\* at Λ = 512
   sits in Eq. (24)'s saturation is Text cell 4b's prose and is **not** carried, since no cell prints
   it for the four diffuse rows.
-- **Not applied:** item 1's delta read-out results, which need §3.6 to define the mode criteria
-  first. The §4.6 pointer is one sentence, pointing to a section still to be written.
+- **APPLIED 2026-09-22**, §3.6 now defining the read-outs: item 1's delta read-out results are in
+  §4.4, each with its Λ named, and with the guard that neither read-out is the corrected version of
+  the other. §4.4 285 → 355. The §4.6 pointer is still one sentence pointing to a section not yet
+  written.
 
 ### §4.5 (lines 298–317)
 
@@ -784,7 +787,34 @@ Content in §5 below, items 2 and 3.
 
 ## 5. The new material
 
-### Item 1. The two read-outs (§3.6, about 100 words; results in §4.4; link in §5.1, about 40 words)
+### Item 1. The two read-outs — **§3.6 WRITTEN 2026-09-22; results applied in §4.4** (about 100 words; link in §5.1, about 40 words)
+
+**§3.6 now exists** in `sections_3-6.md`, between §3.5 and §4: the delta at the settled state and
+$q$, each with what it assumes, supplies and costs; the shared mode; that tempering is invisible to
+the delta, so the tempering/utility confound in $\Delta$ is a property of $q$; and the forward link
+to §5.1 (the normalizer is a normalization across a represented set). No number is quoted in it —
+the results belong to §4.4.
+
+**The two entries that were blocked on it are applied.** §4.1's last bullet now reads "$q_H$, the
+settled belief read through $q$", pointing to §3.6. And §4.4 gains item 1's delta read-out results,
+with **each configuration named**, since the two read-outs are reported at different $\Lambda$:
+Part D's four diffuse priors at $\Lambda=8$ (peaks $0.5000\to0.5890$, $0.5000\to0.6726$,
+$0.2535\to0.3274$, $0.7465\to0.8429$, all moving **up** the scale while the utility contribution to
+all-region $q$-mass is negative — the read-outs disagreeing in direction); the mode position
+criterion already met by $\ell_0$ alone on those four, the cell of *all* starting at $s=0.9500$;
+and the delta-like row at $\Lambda=512$, the one place the model moves the peak out, $0.9852$
+inside to $0.9468$ outside, stable on grids of 201, 401 and 801 nodes. §4.4 285 → **355**, §4
+1,110 → **1,180**, total → **4,100**.
+
+**Three stale section-heading totals were found and fixed in passing**: §4 said 1,020 against the
+table's 1,110, §5 said 1,250 against 1,650, and §6 said 165 against 185. Every heading now agrees
+with the word table, and the table adds up at every level. The §5 and §6 figures were this session's
+own (R27/R28); §4's predates it.
+
+**Still open from this item:** the §5.1 link of about 40 words. §3.6 now supplies the sentence it
+would point at.
+
+#### The plan, as written
 
 **The delta at the settled state** (Bogacz §3, Eq. 34; A16).
 

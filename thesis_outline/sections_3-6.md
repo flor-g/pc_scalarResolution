@@ -119,11 +119,11 @@ for R28's mechanism and its one hedged causal statement). The "was" column is th
 | 3.4 State units, error units, and what is local | 210 | **230** | Concavity, closed forms, the relay; commitment 7; $\theta_u$ learned |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
 | 3.6 Two read-outs (new) | — | **100** | `revisions.md` §5, item 1 |
-| **4. Evaluation** | 745 | **1,110** | |
+| **4. Evaluation** | 745 | **1,180** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
 | 4.2 The criterion, and how to read the statistics | 170 | **260** | The conjunction; the softmax-nonlinearity guard; **the $n$ guard** (raised from 170 on 2026-09-22, S-8/T15) |
 | 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
-| 4.4 The five priors | 220 | **285** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism |
+| 4.4 The five priors | 220 | **355** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6 |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
 | **5. Discussion** | 705 | **1,650** | |
@@ -134,13 +134,16 @@ for R28's mechanism and its one hedged causal statement). The "was" column is th
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,030** | |
+| **Total** | **2,400** | **4,100** | |
 
-**What this table does not do.** §§3.6, 4.6, 5.3 and 5.4 are new sections whose content is planned
-in `revisions.md` §5 and whose bodies are not written in this outline yet; Limits and Predictions
-keep their text under their new numbers, §5.5 and §5.6. Only the headings of §§3.2, 3.3, 4.1, 4.4,
-4.5 and 6 have bodies rewritten to their new budgets (tasks U9–U12); the rest carry the new figure
-against text still written to the old one.
+**What this table does not do.** **§3.6 is written** (2026-09-22, `revisions.md` §5 item 1);
+**§§4.6, 5.3 and 5.4 are not** — their content is planned in `revisions.md` §5 and §4's §4.6 entry,
+and their budgets are carried here against bodies that do not yet exist. Limits and Predictions keep
+their text under their new numbers, §5.5 and §5.6. Bodies rewritten to their new budgets: §§3.2,
+3.3, 4.1, 4.4, 4.5 and 6 (tasks U9–U12), plus §5.2 (T10, R27, R28) and §3.6; the rest carry the new
+figure against text still written to the old one. **Every section heading's figure was checked
+against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
+agree, and the check is worth repeating whenever a budget moves.
 
 # 3. The proposed architecture (about 1,085 words)
  
@@ -314,7 +317,34 @@ Neither of the following is chosen. Both are consequences of the lexicon's thres
   centre and the extremes. Every result in §4.4 and §5.2 turns on which of the two an entry loads.
 ---
  
-# 4. Evaluation (about 1,020 words)
+## 3.6 Two read-outs (about 100 words)
+
+The settled state is a pair of fields. Turning it into a statement about belief takes a read-out,
+and the model admits two. Which one is in force decides what a result means, so the choice is stated
+here rather than assumed.
+
+- **The delta at the settled state** (Bogacz §3; `decisions.md` A16). *Assumes* the posterior is a
+  point mass at $(\varphi_S^\ast,\varphi_u^\ast)$ — the Laplace commitment the construction
+  inherits, background §2.2 commitment 3. *Supplies* the settled vector itself, with **no
+  normalization**, so the read-out is local. *Does not supply* masses or expectations: neither
+  condition of §4.2's criterion has a direct analogue under it, and the nearest is the Voronoi cell
+  that the peak of $\varphi_S^\ast$ falls in (App. A).
+- **$q$** (Eq. 12; A13, A16). *Assumes* $\varphi_S$ codes unnormalized log-weights over the scale.
+  *Supplies* a normalized density, and with it every mass statistic and the RSA comparison — which
+  is why **both conditions of the criterion are stated on $q$**. *Costs* three things, and they
+  should be named together: the normalizer $\sum_j w_j e^{\varphi_{S,j}}$ sums across every node,
+  so no unit could form it from its own afferents; it sits outside the dynamics and takes no part in
+  Eq. (20); and nothing in the architecture dictates it.
+- **What they share, and where they part.** The **mode is shared**: the exponential and the
+  normalizer are monotone, so the peak of $\varphi_S^\ast$ is also $q$'s mode. What differs is
+  what needs the normalizer — and, with it, tempering. Halving $\varphi_S$ does not move its peak,
+  so **the tempering/utility confound in $\Delta$ is a property of $q$**, not of the settled state.
+  §4.4 reports where the two read-outs agree in direction and where they do not.
+- **The link forward.** $q$'s normalizer is a normalization across a represented set — the operation
+  App. A shows would not be local, and the one §5.1 argues binarity absorbs.
+---
+ 
+# 4. Evaluation (about 1,180 words)
  
 ## 4.1 What is compared (about 140 words)
  
@@ -336,7 +366,7 @@ Three beliefs, all internal to the model:
   third quantity and not the baseline, and it holds the temperature fixed so that the utility level's
   own contribution can be read off. It is also where learning starts: Eq. (20) runs from
   $\theta_u(0)=0$.
-- $q_H$, the settled belief.
+- $q_H$, **the settled belief read through $q$** — §3.6 gives the read-out and what it costs.
 State once, plainly, that RSA and wRSA are **analytic baselines and are not implemented**, so no
 quantitative comparison is offered or implied.
  
@@ -378,7 +408,7 @@ a step: $1.6\times10^{-3}$ under the hard mask against $1.8\times10^{-6}$ under 
 the smooth mask serving as the control that identifies which of the two is model and which is
 quadrature. Code Cell E3 checks that the relay reproduces every one of these numbers.
  
-## 4.4 The five priors (about 285 words)
+## 4.4 The five priors (about 355 words)
  
 **This is the section the argument turns on.** It reports Text cell 4b's rows: all five priors at
 $\Lambda=512$, each at its own learned $\theta_u^\ast$, with $\Lambda=8$ entering as a one-line
@@ -442,6 +472,24 @@ contrast (R20, P-10).
   couplings share their tilt coordinate and differ only in width, and doubling a negative width
   coordinate lowers both tails, the all-region among them. Eq. (24)'s limit gives that row's
   $-0.5217$, and so does its own $\theta_u^\ast$.
+- **Under the other read-out (§3.6), the same rows say something different — and the configuration
+  has to be named each time, because the two read-outs are reported at different $\Lambda$.**
+  - *Part D's four diffuse priors, at $\Lambda=8$ and each at its own $\theta_u^\ast$* (Code
+    Cell 2). The peak of $\varphi_S^\ast$ under *some* sits **up** the scale of $\ell_0$'s peak
+    under every one of them — $0.5000\to0.5890$, $0.5000\to0.6726$, $0.2535\to0.3274$,
+    $0.7465\to0.8429$ — while the utility level's contribution to all-region $q$-mass is negative
+    under each. **The two read-outs disagree in direction**, and §3.6 says why that is possible:
+    halving does not move a peak, so what the mode registers is the utility level's own doing.
+  - *The mode position criterion is already met by $\ell_0$ alone* on those four: the cell of
+    *all* starts at $s=0.9500$, and every one of the four priors peaks outside it before the model
+    is run. Nothing is shown by a criterion its own baseline meets.
+  - *The delta-like prior, at $\Lambda=512$* (Code Cell 2b), is the one row where the model moves
+    the peak out: $0.9852$ **inside** the cell to $0.9468$ **outside** it, one node below
+    $\theta_L$. It stays outside on grids of $201$, $401$ and $801$ nodes, so it is not a
+    discretization artefact.
+  - **Report both read-outs and derive nothing from their agreement.** Where they agree the reading
+    is not doubled, and where they disagree neither is the corrected version of the other; they
+    answer different questions, §3.6 says which.
 - **One sentence pointing to §4.6:** the conjunction is shown in the integrated dynamics, not only
   in closed form, for all three rows that meet it (Code Cell 2b).
 ## 4.5 The plane, and where both conditions hold (about 255 words)
@@ -492,7 +540,7 @@ contrast (R20, P-10).
   between $3.5\times10^{4}$ and $3.6\times10^{7}$. §4.6 takes it up.
 ---
  
-# 5. Discussion (about 1,250 words)
+# 5. Discussion (about 1,650 words)
  
 ## 5.1 What an alternatives level would have to supply (about 350 words)
  
@@ -781,7 +829,7 @@ section says what any mismatch is due to** (R16).
   a sharp prior — which is withdrawn.
 ---
  
-# 6. Conclusion (about 165 words)
+# 6. Conclusion (about 185 words)
  
 1. A field-valued world state on a dense scale, with a soft lexical entry competing additively
    against the world prior in the same log-density — a placement of the prior the architecture
