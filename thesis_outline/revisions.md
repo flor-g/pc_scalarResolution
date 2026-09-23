@@ -1621,6 +1621,45 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 12. CR1–CR5: the constructive claim, led by the position criterion (2026-09-23)
+
+**The call the user made.** Sec. 11's closing note left one thing open: whether to make the position
+criterion the headline of the constructive claim. **Taken.** Recorded as `decisions.md` **B12**,
+which changes no criterion and no measurement.
+
+**What made it writable.** The honest position-led claim conditions on the baseline failing, and no
+cell printed that count. **CR1 prints it**, so the claim is C6-clean; without it the rewrite would
+have rested on a number a reader could not find.
+
+| Task | Site | What was applied | Status |
+|---|---|---|---|
+| **CR1** | `main.ipynb` Code Cell 4 (`plane_summary`) | Stores `prior_mode_outside` beside `mode_outside`, and prints, of the 121 cells: q_lit holds at least half the all-region in **77** and the settled belief holds less than half in **15** of those; ell_0 peaks inside the cell in **66** and phi_S\* outside it in **9** of those; the 9 a subset of the 15; the shift criteria met in all 15 and all 9; the alpha ranges. Not mirrored, so `appendix_E.ipynb` is untouched | APPLIED |
+| **CR2** | Central claim | Leads with what the network carries where its baseline does not, in Part D's one row and on the plane. The unconditioned counts follow in their own paragraph, marked as counts the prior does part of the work in | APPLIED |
+| **CR3** | §4.4 (415 → 470) | The section turns on the delta-like row, said after the table rather than before it. New bullet: under the other four priors neither quantity had anywhere to move | APPLIED |
+| **CR4** | §4.5 (370 → 420) | CR1's counts as the section's leading bullet, with the band bounded on one side by the prior meeting the criterion unaided and on the other by α = 256. The floors bullet now names the **second** floor as binding, and says a drain keyed to the alternative lowers the first and so would not extend this architecture's own region | APPLIED |
+| **CR5** | §6 item 3 (225 → 250) and the Tier A row | The conclusion follows the claim's order | APPLIED |
+
+**What did not move, checked rather than assumed.**
+
+- **No criterion changed.** B2, B8 and C7 stand; §4.2 is untouched apart from its existing pointers.
+- **R2 stands, and PP10's ordering is unaffected.** The rewrite makes the criterion carry more, not
+  the case for the alternatives level. §4.5 now says the level's drain lowers the *first* floor and
+  so would not extend the region the constructive claim lives in, which is R2's point reached from
+  the other end.
+- **The background needed nothing.** §1.3's redeployment already reads §4.5 the way this rewrite
+  does — "the strengthened reading stays a majority under a concentrated prior only above a floor in
+  lexical strength, and that floor rises with the concentration" is the second floor, and §1.3
+  already flags it forward to §5.1's drain. It quotes no count, and BG7 keeps it that way.
+- **§5.2 and Appendix F are untouched**, R² over profiles being read-out independent.
+- **The notebooks take no position** (B10). CR1 prints counts and names no verdict.
+
+**The reason not written down.** The strongest reason for the rewrite is that the shift criterion
+empties faster than the position criterion under the half-width (E17: 113, 74, 24, 0, 0 against
+76, 59, 48, 25, 14). **That is class (e) and the user settled that the Z end takes no printed
+evidence**, so it is in B12 and in no section. Do not let it leak into §4.5.
+
+---
+
 ## 11. PP1–PP8: two positions the outline did not yet state (2026-09-23)
 
 **Where this came from.** The user named two positions the dissertation takes and asked that they be

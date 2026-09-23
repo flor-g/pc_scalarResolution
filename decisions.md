@@ -845,6 +845,47 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     differences between conditions; they do not deliver the literal listener.
   - Applied in `thesis_outline/sections_3-6.md` Sec. 5.1 (the frame and the fourth bullet) and the
     central claim, as PP10 of `revisions.md` Sec. 11.
+- **2026-09-23: the third clause is now the constructive claim's lead, under B12.** B11 stays the
+  reading; B12 is what the paper does with it, and the measurement that made it quotable.
+
+### B12. The constructive claim leads with the position criterion, baseline cells left out
+- Status: Settled for the paper. It changes **no criterion and no measurement**: B2, B8 and C7 stand
+  as written, and the notebooks take no position (B10).
+- Decided by: user (2026-09-23), approving the rewrite after the reach of it was set out
+- Decision: the constructive claim of `thesis_outline/sections_3-6.md` states first **what the
+  network carries where its own baseline does not already carry it** — the all-region out of the
+  majority, and the settled field's peak out of the cell of *all* — and states the unconditioned
+  counts (three of five priors, 33 cells, and the delta read-out's one prior and 13 cells) after
+  them, marked as counts in which the prior is doing part of the work. Sec. 4.4 turns on the
+  delta-like row, Sec. 4.5 leads with the two conditioned counts, and Sec. 6 item 3 follows.
+- Theoretical reason: B11 and the guard carried with it. Where the baseline already meets a
+  criterion, nothing is shown by the model meeting it; four of the five priors already meet both
+  position criteria through ell_0 alone, at either lexical strength. Conditioning on the baseline
+  failing is that guard turned into a positive measurement, and it also settles the objection that
+  the position criterion is cheap: it is not met unaided in these cells, and past alpha = 256 it is
+  not reachable at all.
+- Implementational reason: the counts were not printed, so C6 barred them from prose.
+  `plane_summary` now stores `prior_mode_outside` beside `mode_outside` and prints both counts
+  (see the finding below). Code Cell 4 is not mirrored into `appendix_E.ipynb`, so E2, E3 and E4
+  are untouched and only `main.ipynb` was re-executed.
+- Bogacz status: not an operation; reported statistics of Eqs. (12), (15)-(16) as in B2 and B8.
+- Depends on it: the central claim, Sec. 4.4's opening and its delta-like bullet, Sec. 4.5's
+  leading bullet and its floors bullet, Sec. 6 item 3, the Tier A row for the criterion.
+- Evidence (Code Cell 4, printed 2026-09-23): of the 121 cells, q_lit holds at least half the
+  all-region in 77 and the settled belief holds less than half in 15 of those; ell_0 peaks inside
+  the cell of *all* in 66 and phi_S\* peaks outside it in 9 of those; the 9 are a subset of the 15;
+  the q shift criterion is met in all 15 and the mode shift criterion in all 9. Alpha runs 16 to
+  128 over the q count and 32 to 128 over the mode count. Part D's instance is the delta-like row
+  of Code Cell 2b: q_lit 0.9568 to q_H 0.4351, peak 0.9852 inside to 0.9468 outside.
+- **Why the rewrite was taken, recorded because the strongest reason cannot be written down.**
+  The audit of E17 shows the shift criterion emptying faster than the position criterion under the
+  half-width, 113, 74, 24, 0, 0 against 76, 59, 48, 25, 14, so a position-led claim is the one that
+  survives a wider grid. **That evidence is class (e) and the user settled on 2026-09-23 that the Z
+  end takes no printed evidence**, so it appears in no section and must not be smuggled into one.
+  What the prose argues from is B11's reasons, which are printed: read-out invariance, and the
+  position criterion being stated on the object the construction represents.
+- Not claimed: that the conjunction is abandoned. Sec. 4.2's criterion is unchanged and the
+  unconditioned counts are still reported, in the same paragraph.
 
 ---
 

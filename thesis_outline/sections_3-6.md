@@ -1,7 +1,7 @@
 Sections 3 6 outline · MD
 # Outline for the proposal, evaluation, and discussion sections
  
-Scope: §§3–6, approximately **5,160 words**, which is what this file's own word table sums to and
+Scope: §§3–6, approximately **5,290 words**, which is what this file's own word table sums to and
 the figure to trust (`revisions.md` §3 is the historical plan; the raises are listed above the table). Written against
 `main.ipynb` (Text cells 1–6, Code Cells 1–4, Appendices A–D with Code Cells A–D, Eqs. (1)–(41))
 and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
@@ -22,17 +22,31 @@ rather than assumed: the utility level amplifies the observed entry's own low-ra
 the prior–lexicon net (Eqs. 23–24), under a gain $\theta_u$ whose value is fixed by cross-trial
 exposure rather than by anything about the current trial.
  
-**Constructive claim.** The architecture meets the two-condition criterion of §4.2. At a lexical
-strength that holds every entry against each of the five priors ($\Lambda=512$), both conditions hold
-under three of the five priors, the three with the most prior mass on the all-region, and the
-second holds under all five, so among these priors the two conditions are nested (§4.4). **Those are
-figures under $q$.** Under the delta read-out, which §3.6 argues is the one this construction
-motivates, the conjunction holds under the delta-like prior alone and in 13 of the 121 cells: what
-survives the change of read-out is the position criterion, and what does not is the shift. Across
-the plane of lexical strength against prior concentration both hold in 33 of 121 cells, in a band
-whose shape two opposed floors set: as the prior sharpens, the first condition's floor in $\Lambda$
-falls and the second's rises (§4.5). The case for a level representing within-trial competition
-among alternatives therefore does not rest on the criterion failing (R2). It rests on what such a
+**Constructive claim.** Say what the network carries before saying how often, because a count is
+only worth something once the baseline is out of it. **Where the prior leaves the all-region in the
+majority, the network takes it out; where the prior puts the settled field's peak inside the cell
+of *all*, the network carries it outside.** Both are §4.2's position criterion, read through the
+two read-outs of §3.6, and Part D's delta-like prior is the case in a single row:
+$q_{\mathrm{lit}}=0.9568$ against $q_H=0.4351$, and a peak at $s=0.9852$ inside the cell against
+$0.9468$ outside it (§4.4). Across the plane, $q_{\mathrm{lit}}$ holds at least half the all-region
+in 77 of the 121 cells and the settled belief holds less than half in **15** of those;
+$\ell_0$ peaks inside the cell in 66 cells and $\varphi_S^\ast$ peaks outside it in **9** of those,
+the 9 a subset of the 15 (§4.5). **In every one of those cells the shift criterion is met as well**,
+which the cell counts rather than the prose asserts: where the network changes the position
+verdict it meets both criteria, and it does so under either read-out.
+
+The unconditioned counts belong in the claim too, and only with what they include. Both conditions
+hold under three of the five priors at $\Lambda=512$, the three with the most prior mass on the
+all-region, and the second under all five, so among those priors they are nested (§4.4); across the
+plane both hold in 33 of 121 cells, in a band whose shape two opposed floors set, the first
+condition's falling in $\Lambda$ as the prior sharpens and the second's rising (§4.5). Under the
+delta read-out the same two counts are the delta-like prior alone and 13 cells, since **what
+survives the change of read-out is the position criterion and what does not is the shift** (§3.6's
+position). **Each of these is a count in which the baseline is doing part of the work**, which is
+why they stand after the paragraph above and not in place of it.
+
+The case for a level representing within-trial competition among alternatives therefore does not
+rest on the criterion failing (R2). It rests on what such a
 level would save:
 - branching logarithmic in the predicate's granularity;
 - one dimension per level, so plasticity is local without the relay;
@@ -78,7 +92,7 @@ reader should weigh is recorded as a fact with our position reserved.
 | Result | Where | Why it is load-bearing |
 |---|---|---|
 | Amplification mechanism, Eqs. (23)–(24) | §3.5, §4.4 | It is what produces the effect, and it is measured |
-| The two-condition criterion and its results | §4.2–§4.5 | The verdict, and the evidence that the conjunction is reachable |
+| The two-condition criterion and its results | §4.2–§4.5 | The verdict. **Carried as the position criterion with the baseline's own cells left out** (§4.4's one row; §4.5's 15 and 9), with the unconditioned counts reported beside them |
 | Conventionalization of $\theta_u^\ast$ by exposure (App. B) | §3.4, §5.1 | The position the architecture commits to |
 | The four construction obligations (Text cell 3; §8; App. B) | §5.1 | Turns the gap into a specification |
 | Binary branching per level, and $m=1$ (App. C §§2, 5) | §5.1 | Makes the alternatives level tractable and local |
@@ -129,7 +143,7 @@ it carries four predictions and R27 had added the H1 reservation to the fourth w
 → **4,270** (§3.4 230 → 290 the same day, at **BG13**: commitment 7 in its exact form, conditioning,
 and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been applied) → **5,060**
 (2026-09-23, the two positions of §11 of `revisions.md`: §3.6 100 → 190, §4.2 480 → 525, §4.4 355 → 415,
-§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225) → **5,160** (the same day, §5.1 460 → 560 at PP10). The "was" column is the 2,400 allocation this outline was written to.
+§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225) → **5,160** (the same day, §5.1 460 → 560 at PP10) → **5,290** (the same day, the constructive claim's rewrite at §12 of `revisions.md`: §4.4 415 → 470, §4.5 370 → 420, §6 225 → 250). The "was" column is the 2,400 allocation this outline was written to.
 
 **The running chain above does not reconcile with the rows, and the rows are what to trust.** Before
 this entry the chain read 4,270 while the rows summed to 4,730: four raises were applied to rows
@@ -146,12 +160,12 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 3.4 State units, error units, and what is local | 210 | **290** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied) |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
 | 3.6 Two read-outs (new) | — | **190** | `revisions.md` §5, item 1; **+90 on 2026-09-23 for the position that the delta read-out is the one the construction motivates, and the four things it does not license** (§11 of `revisions.md`, PP1) |
-| **4. Evaluation** | 745 | **1,620** | |
+| **4. Evaluation** | 745 | **1,725** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
 | 4.2 The criterion, and how to read the statistics | 170 | **525** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17); **+45 the same day for which read-out the criterion is written in** (PP2) |
 | 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
-| 4.4 The five priors | 220 | **415** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
-| 4.5 The plane, and where both conditions hold | 165 | **370** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
+| 4.4 The five priors | 220 | **470** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
+| 4.5 The plane, and where both conditions hold | 165 | **420** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
 | **5. Discussion** | 705 | **2,080** | |
 | 5.1 What an alternatives level would have to supply | 390 | **560** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5); **+100 the same day for the order of the two motivations, and why the conjecture stays second** (PP10) |
@@ -160,8 +174,8 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
 | 5.5 Limits (was 5.3) | 65 | **300** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
-| **6. Conclusion** | 150 | **225** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **5,160** | |
+| **6. Conclusion** | 150 | **250** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
+| **Total** | **2,400** | **5,290** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -430,7 +444,7 @@ here rather than assumed.
   App. A shows would not be local, and the one §5.1 argues binarity absorbs.
 ---
  
-# 4. Evaluation (about 1,620 words)
+# 4. Evaluation (about 1,725 words)
  
 ## 4.1 What is compared (about 140 words)
  
@@ -534,11 +548,14 @@ which of the two is model and which is quadrature. (The coarse $51$–$401$ spre
 is the $O(h)$ step artefact, which is why the tail is what is tested.) Code Cell E3 checks that the
 relay reproduces every one of these numbers.
  
-## 4.4 The five priors (about 415 words)
+## 4.4 The five priors (about 470 words)
  
-**This is the section the argument turns on.** It reports Text cell 4b's rows: all five priors at
-$\Lambda=512$, each at its own learned $\theta_u^\ast$, with $\Lambda=8$ entering as a one-line
-contrast (R20, P-10).
+**This is the section the argument turns on, and since 2026-09-23 it turns on one row of it.**
+It reports Text cell 4b's rows: all five priors at $\Lambda=512$, each at its own learned
+$\theta_u^\ast$, with $\Lambda=8$ entering as a one-line contrast (R20, P-10). **The delta-like row
+is the one the constructive claim rests on**, for the reason the baseline bullet below gives, and
+the other four are reported rather than relied on. Write the table first and that sentence after
+it, so the reader sees the rows before being told which one carries weight.
  
 | prior | $\theta_u^\ast$ | $P_0$(all-region) | $q_{\mathrm{lit}}$ | $q_H$ | $\Delta_{\textit{some}}$ | tempering | utility | first | second |
 |---|---|---|---|---|---|---|---|---|---|
@@ -635,10 +652,32 @@ contrast (R20, P-10).
   - **Report both read-outs and derive nothing from their agreement.** Where they agree the reading
     is not doubled, and where they disagree neither is the corrected version of the other; they
     answer different questions, §3.6 says which.
+- **The row the constructive claim rests on, stated once and plainly.** Under the delta-like prior
+  the baseline starts with *all* in the majority and with its own peak inside the cell, and the
+  network moves both: $q_{\mathrm{lit}}=0.9568$ to $q_H=0.4351$, and a peak at $s=0.9852$ inside the
+  cell to $0.9468$ outside it, one node below $\theta_L$. **Under the other four priors neither
+  quantity had anywhere to move**: $q_{\mathrm{lit}}$ is already below $\tfrac12$ and $\ell_0$
+  already peaks outside the cell, so those rows report what the model does to a belief that already
+  meets both position criteria. That is the whole of the asymmetry, and it is why "three of five"
+  and "five of five" are reported counts rather than the result. §4.5 gives the same measurement on
+  the plane, where it is a count and not a single row.
 - **One sentence pointing to §4.6:** the conjunction is shown in the integrated dynamics, not only
   in closed form, for all three rows that meet it (Code Cell 2b).
-## 4.5 The plane, and where both conditions hold (about 370 words)
+## 4.5 The plane, and where both conditions hold (about 420 words)
  
+- **What the network carries, with the cells its baseline already holds left out (Code Cell 4).**
+  Lead with this, because it is the plane's version of §4.4's one row and it is what the
+  constructive claim quotes. Of the 121 cells, $q_{\mathrm{lit}}$ holds at least half the
+  all-region in **77**, and in **15** of those the settled belief holds less than half. $\ell_0$
+  peaks inside the cell of *all* in **66**, and in **9** of those $\varphi_S^\ast$ peaks outside it.
+  The 9 are a subset of the 15, which is the same containment §3.6's two read-outs show everywhere
+  else. **The shift criterion is met in all 15 and in all 9**, and the cell prints that rather than
+  the prose deducing it. Both counts sit at $\alpha$ from 16 to 128 under $q$ and 32 to 128 under
+  the mode, between the region where the prior meets the criterion unaided and the region past
+  $\alpha=256$ where the criterion is unreachable at any $\Lambda$ on this grid — so **the band in
+  which this architecture does the work itself is bounded on both sides, and by different things**.
+  *(Writer's note: these are the counts that survive §4.4's rule that nothing is shown by a
+  criterion its own baseline meets. Do not restate the rule here; §4.4 states it and §5.1 uses it.)*
 - **The conjunction is not confined to Part D's rows.** Sweeping lexical strength against prior
   concentration on the limit family $\mathrm{Beta}(\alpha,1)$, both conditions hold together in
   **33 of 121 cells**, in a band running from $(\alpha,\Lambda)=(1,512)$ to $(128,2048)$. Text
@@ -654,7 +693,12 @@ contrast (R20, P-10).
   $\alpha=8$ to $64$, $256$, $512$ and $1024$ at $\alpha=16$, $32$, $64$ and $128$, and past
   $\alpha=256$ it is unreachable on this grid. The floors cross between $\alpha=8$ and $\alpha=16$.
   **This is the claim that prior concentration buys the first condition and spends the second, and
-  it is sourced here, on the floors.** It is a property of the plane and not of Part D's rows: at
+  it is sourced here, on the floors.** **And with the position criterion carrying the constructive
+  claim, the second floor is the binding one**: it is what closes the band at $\alpha=256$ and so
+  what bounds the 15 and the 9 above. Say so, and say what follows in §5.1: a drain keyed to the
+  alternative lowers the *first* floor, so it would not extend the region this architecture's own
+  result lives in. The level is not what the constructive claim needs, which is R2's point reached
+  from the other end. It is a property of the plane and not of Part D's rows: at
   $\Lambda=512$ both floors lie at or below 512 from $\alpha=1$ to $64$, which is why those rows do
   not show the tension (§4.4). "Under every prior tested" is not written anywhere; §5.1 and §6
   point here.
@@ -1238,7 +1282,7 @@ what it costs and what is still owed.
   a sharp prior — which is withdrawn.
 ---
  
-# 6. Conclusion (about 225 words)
+# 6. Conclusion (about 250 words)
  
 1. A field-valued world state on a dense scale, with a soft lexical entry competing additively
    against the world prior in the same log-density — a placement of the prior the architecture
@@ -1247,12 +1291,14 @@ what it costs and what is still owed.
 2. That network moves belief mass away from the *all* reading without representing any alternative,
    by amplifying the observed entry's own projection under a gain fixed by exposure. The effect
    therefore does not by itself diagnose a within-trial alternatives computation.
-3. The network also meets both conditions the criterion imposes: under three of five priors at a
-   lexical strength that holds every entry, across a band of the plane, and within two updates of
-   learning. **Those are counts under $q$**; read through the delta read-out of §3.6, which the
-   dissertation argues is the one the construction motivates, the conjunction narrows to the
-   delta-like prior and to 13 cells. What survives the change of read-out is the position criterion
-   and not the shift, and §5.1 reads that division as keyed to the level this architecture lacks.
+3. Where the prior leaves the all-region in the majority the network takes it out, and where the
+   prior peaks inside the cell of *all* the network carries the peak outside it: in a single row of
+   §4.4, and in 15 and 9 of the 121 cells of §4.5, under the two read-outs respectively. In every
+   one of those the shift criterion is met as well. The unconditioned counts are three of five
+   priors and 33 cells under $q$, and the delta-like prior and 13 cells under the delta read-out
+   §3.6 argues for — counts in which the prior is doing part of the work, which is why the
+   conditioned ones lead. **What survives the change of read-out is the position criterion and not
+   the shift**, and §5.1 reads that division as keyed to the level this architecture lacks.
    What a level representing competition among alternatives would change is what the
    network pays for that. On the plane the first condition's floor falls as the prior sharpens and
    the second's rises (§4.5), and a drain keyed to the alternative would not raise the second; and
