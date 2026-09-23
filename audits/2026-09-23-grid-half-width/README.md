@@ -52,10 +52,15 @@ is therefore a Z-conditional number; its H1 sentence is not.
 
 ## Why the two differ, which is the usable part
 
-**The criterion's form decides its truncation sensitivity.** §4.4 and §4.5 apply *absolute* tests to
-q-mass over {ζ ≥ θ_L}, an interval of length Z − θ_L: inflate the interval and the mass follows.
-Appendix F scores **R² over five-cell profiles across items**, a correlation, invariant to scale and
-offset, so inflating the top cell uniformly across items barely moves it.
+**The criterion's form decides its truncation sensitivity** — but the first reading of *why* was
+wrong and is corrected here. It is **not** that a wider interval holds more mass: the settled field
+stays normalizable (negative ζ² coefficient at every Z measured) and the top node's share is ~0, so
+nothing piles at the cut. **B is orthonormalized on the grid, so the settled field's own shape moves
+with Z.** Fitting φ_S\* to a quadratic, its peak runs 1.70, 2.39, 2.78, 3.17, 3.61, 4.24 over
+Z = 5, 6, 6.5, 7, 7.5, 8 and **crosses θ_L = 2.944 between Z = 6.5 and 7 — exactly where q_H passes
+½**. Both q criteria and §3.6's mode criterion therefore fail together. §4.4 and §4.5 read an
+**absolute position** on that field; Appendix F scores **R² over five-cell profiles across items**,
+which reads **agreement of shape** and is invariant to it.
 
 The clinching evidence is that **Appendix F runs at n = 4, so Z − θ_L = 4.05 — already inside the
 region where the main evaluation's conjunction has collapsed to zero cells — and Appendix F is fine

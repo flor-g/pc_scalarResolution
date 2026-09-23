@@ -2079,10 +2079,16 @@ a number from it.
   unbounded in Λ, the minimum class with an interior optimum — holds at Z = 5, 6, 7, 8 alike, as do
   the maximum class's R² and the image-type signs. The minimum class's bracket and R² move. §5.2's
   H1 sentence is therefore safe and its "bracketed between 32 and 48" is not.
-- **Why they differ, which is the usable part.** §§4.4–4.5 apply *absolute* tests to q-mass over an
-  interval of length Z − θ_L; Appendix F scores R² over profiles across items, a correlation, which
-  is invariant to scale and offset. Appendix F runs at Z − θ_L = 4.05, inside the region where the
-  main evaluation's conjunction is already at zero cells, and is unaffected there.
+- **Why they differ, and the first reading of it was wrong.** It is **not** that a wider interval
+  holds more mass: the settled field stays normalizable (its ζ² coefficient is negative at every Z
+  measured) and the top node's share is ~0, so nothing piles at the cut. **B is orthonormalized on
+  the grid, so the settled field's own shape moves with Z**: fitting φ_S\* to a quadratic, its peak
+  runs 1.70, 2.39, 2.78, 3.17, 3.61, 4.24 over Z = 5 to 8 and **crosses θ_L = 2.944 between Z = 6.5
+  and 7, which is exactly where q_H passes ½**. So both q criteria and §3.6's mode criterion fail
+  together, and the general form is that a statistic reading an **absolute position** on that field
+  carries the stipulation while one reading **agreement of shape** does not. Appendix F scores R²
+  over profiles across items, which reads agreement of shape; it runs at Z − θ_L = 4.05, inside the
+  region where the conjunction is already at zero cells, and is unaffected there.
 - **Depends on it:** §§4.4, 4.5, 4.6 and §6 item 3 through the conjunction; §4.2's guard, widened
   2026-09-23; I6, which was an empty entry and now carries this as its evidence.
 - **Not taken here.** Whether the criterion's *form* should change — an absolute mass threshold over
