@@ -1032,6 +1032,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   section number, because **§5.3's body is still unwritten** and the notebooks do not cite thesis
   sections that do not yet exist. When §5.3 is drafted, giving the pointers a number is an ordinary
   editorial step, not a reopening of this decision.
+- **Ruling, 2026-09-22 (the user): an outline body does NOT count as drafted.** §5.3's body was
+  written into `thesis_outline/sections_3-6.md` on 2026-09-22 (revisions.md §5 item 2), and the
+  agent asked whether that met the condition above. It does not: **"drafted" means the prose, not
+  the outline entry specifying it.** The pointers therefore **stay bare** — Text cell 4's "left
+  where it is posed, in the background outline, and not pursued in this notebook" and Appendix A's
+  equivalent are unchanged, and no cell cites a §5.3. The condition is unchanged and still stands;
+  what is now settled is what satisfies it. Revisit when §5.3 exists as prose.
 - **What closing it costs, stated plainly:** nothing is verified by this. The destination is a
   specification, not a section, and the argument §5.3 will make still owes the locality case D12
   records as unsettled.

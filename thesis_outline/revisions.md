@@ -952,6 +952,11 @@ budget change. It carries every bullet below, with three corrections the plan ne
 Every figure was verified against the stored output first: 26, 4,823, 34.695, 7.9e6, 33, 80,
 3.5e4, 3.6e7, 2.126.
 
+**O3, settled 2026-09-22: an outline body does not count as drafted, so the pointers stay bare.**
+The user's ruling — "doesn't count as drafted. yet." — means "drafted" is the **prose**, not the
+outline entry specifying it. `main.ipynb` is untouched; revisit when §5.3 exists as prose. The
+question as it was put:
+
 **One consequence for the user (O3).** O3 left `main.ipynb`'s pointers bare — Text cell 4's "left
 where it is posed, in the background outline" and Appendix A's equivalent — on the ground that
 **§5.3's body was unwritten** and the notebooks do not cite thesis sections that do not exist, and
