@@ -129,15 +129,15 @@ and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been ap
 | 4.4 The five priors | 220 | **355** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6 |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,760** | |
+| **5. Discussion** | 705 | **1,850** | |
 | 5.1 What an alternatives level would have to supply | 390 | **390** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that |
 | 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **800** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
-| 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
+| 5.5 Limits (was 5.3) | 65 | **240** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,385** | |
+| **Total** | **2,400** | **4,475** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -974,7 +974,7 @@ what it costs and what is still owed.
   natural misreading: the claim is about what a level can be asked, not about what is true.
 ---
  
-## 5.5 Limits (about 150 words, was §5.3)
+## 5.5 Limits (about 240 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
   reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
@@ -988,6 +988,14 @@ what it costs and what is still owed.
   bound's, and not licensed by it (D12). The **slow** rule carries no such debt. Two implications
   are owned rather than hedged: a plausible tolerance halts far short of $\theta_u^\ast$, and a
   slow start halts at once at the tempered control (§5.3).
+- **The state space is truncated, and both q criteria are absolute masses over a truncated
+  region.** $\zeta$ ranges over $\mathbb R$; the grid carries $[-Z,Z]$, and $Z$ is stipulated with
+  only a lower bound from the semantics, $\theta_L<Z$ (Text cell 3 §1, which separates it from $K$:
+  refining $K$ converges, $Z$ has nothing to converge to). So §4.2's criteria are read over an
+  interval of extent $Z-\theta_L$ whose **both** ends are stipulated, and §4.5's band moves with it.
+  §5.2's comparison does not, $R^2$ over profiles being invariant to that extent — which is the
+  general point: **an absolute mass over a stipulated region inherits the stipulation; a
+  correlation does not.** Owned rather than hedged, under §4.2's guard.
 - The model is linear-Gaussian while $\varphi_L$ is clamped, so the recurrent dynamics are an
   implementation claim rather than a computational necessity.
 - The relay secures locality at the cost of a fourth timescale, $\tau_r\le\tau_\varepsilon$
