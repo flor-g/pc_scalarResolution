@@ -927,7 +927,40 @@ operation Appendix A says would not be local and §5.1 says binarity absorbs.
     not derived.
   - The first condition, a difference against q_lit, has no such binary form.
 
-### Item 2. Settling cost, halting, and the plausibility commitment (§5.3, about 170 words)
+### Item 2. Settling cost, halting, and the plausibility commitment — **WRITTEN 2026-09-22** (§5.3, about 170 words)
+
+**The body is now in `sections_3-6.md`**, between §5.2 and §5.5, at its allocated 170 words — no
+budget change. It carries every bullet below, with three corrections the plan needed:
+
+- **"Not yet written" is stale.** The plan's *Consequence without the alternatives level* bullet
+  said the tolerance's standing against Bogacz "needs a divergence-register entry… **Not yet
+  written**". It is written: **D12**, entered 2026-09-22, including the reading of the tutorial on
+  parameter convergence that `agent.md` §3.2 requires before citing him either way. §5.3 states its
+  content — **Bogacz has no halting rule and no halting problem**, his parameters never converging
+  because each observation differs; the problem is ours because this phase batches a uniform
+  ensemble, making every update identical in fact as well as in expectation. §5.3 also carries the
+  guard: that is a divergence with an identified cause, **not a dissolution of it**.
+- **F15's figures are cut, as at §4.6.** "Not within 0.1% of θ\* after 5,000 updates" is class (e)
+  — no cell prints either number, and I8 is superseded by C6/I10. §5.3 makes the same point from
+  **F̃'s flattening toward its asymptote**, which is an argument rather than a measurement, and a
+  writer's note records the cut.
+- **The asymmetry is stated, not softened.** §5.3 says the **fast** keying to λ_max(H) is the
+  unsettled one and the **slow** rule |Δθ_u| < tol is clean, rather than demoting both loops alike,
+  and gives D12's reason: the timescale bound that would license the keying is **ours, not
+  Bogacz's**, so the debt is inherited unpaid and of the same kind.
+
+Every figure was verified against the stored output first: 26, 4,823, 34.695, 7.9e6, 33, 80,
+3.5e4, 3.6e7, 2.126.
+
+**One consequence for the user (O3).** O3 left `main.ipynb`'s pointers bare — Text cell 4's "left
+where it is posed, in the background outline" and Appendix A's equivalent — on the ground that
+**§5.3's body was unwritten** and the notebooks do not cite thesis sections that do not exist, and
+recorded that giving them a number "is an ordinary editorial step, not a reopening of this decision"
+once it was drafted. **The body now exists.** The step is a markdown-only edit to two cells in
+`main.ipynb` and needs no re-run; it has not been taken, because whether an outline body counts as
+"drafted" for that purpose is the user's to say.
+
+#### The plan, as written
 
 The cost sense keeps the name "realizability" (O7, settled). The content, per R9 and R10.
 

@@ -831,6 +831,72 @@ section says what any mismatch is due to** (R16).
   algebra is not derived, the phase is not built, and nothing above is claimed to follow from it.
   §5.1 is where an alternatives level is specified; $\theta_A$ is named here and not there, because
   naming it among what that level "would have to supply" would turn an instinct into an obligation.
+## 5.3 Realizability, halting, and the plausibility commitment (about 170 words)
+
+The cost sense keeps the name **realizability** (O7). §4.6 supplies the evidence; this section says
+what it costs and what is still owed.
+
+- **What halts, and on which timescale.** The claim is about the **slow** flow of Eq. (20), which
+  ascends $\tilde{\mathcal F}$ toward $\theta_u^\ast$. Since $\theta_u$ is an exposure statistic
+  across trials, halting here is **the end of plasticity across exposures, not the end of one
+  inference** — within an inference the fast subsystem settles at whatever $\theta_u$ the slow flow
+  currently carries. Say that once; the two are otherwise easy to conflate.
+- **Why the maximizer does not stop it.** A flow halts where its gradient vanishes, at
+  $\theta_u^\ast$. $\tilde{\mathcal F}$ flattens toward its asymptote, so the flow **approaches
+  without arriving**, and nothing *in* $\tilde{\mathcal F}$ stops it earlier. That is the point:
+  what stops it is not in $\tilde{\mathcal F}$.
+- **What does halt it.** The flow stops when **its own update falls below a tolerance**. The rule is
+  self-contained in the way the old stopping rules were not: it reads the size of the step the unit
+  has just taken and nothing else — no closed form, and nothing about the shape of a trajectory the
+  unit has no access to. No guard is attached, because a guard would need exactly the knowledge of
+  its own trajectory that this denies the system. **The value is ad hoc**, so what is offered is
+  halting *by* a tolerance, not any particular tolerance; the dissertation declines both to claim an
+  organism needs one for a computer's reason and to stipulate a value representative of a brain.
+  Two implications, owned rather than hedged: a plausible tolerance halts **far short of**
+  $\theta_u^\ast$, and where the flow starts slowly the same rule halts it **at once**, leaving the
+  belief at the tempered control.
+- **A direction, not a commitment — and the reason is a violation we have not settled (D12).** The
+  **fast** loop's tolerance is keyed to $\lambda_{\max}(H)$, a global spectral quantity, because
+  the roundoff floor it must clear is not a constant. The defence that the timescale bound already
+  requires that quantity is weaker than it looks: **that bound is itself ours and not Bogacz's**, so
+  the keying inherits an unpaid licence of the same kind rather than a settled one. The **slow**
+  rule $|\Delta\theta_u|<\mathrm{tol}$ carries no such debt, and §5.3 says which of the two is
+  clean rather than demoting both alike.
+- **Where Bogacz stands, since it cuts against the obvious reading.** He has **no halting rule and
+  no halting problem**: his parameters never converge, being updated after each observation with
+  successive observations differing, and he offers the value at which the *expected* change vanishes
+  in place of convergence. The problem is ours because this phase batches a uniform ensemble, making
+  every update identical in fact as well as in expectation, which turns his random walk into a
+  monotone approach. **State the cause; do not treat it as a dissolution.** Halting is a problem for
+  the organism as much as for the simulation, and a divergence with an identified cause is still a
+  divergence.
+- **Cost rises while the verdict stands still.** Commitment 7 ties the error units' speed to
+  $\lambda_{\max}(H)$, which grows as $\theta_u^2$. Under the delta-like prior the conjunction
+  holds from the first update, at a demanded separation of $26$; every later update leaves the
+  verdict as it is and makes each later inference costlier — $4{,}823$ where the flow halts, rising
+  toward $7.9\times10^{6}$ at $\theta_u^\ast$. Across the plane's 33 both-condition cells the
+  separation needed where the conjunction first holds is at most about $80$, against
+  $4\times(3.5\times10^{4}$ to $3.6\times10^{7})$ at $\theta_u^\ast$.
+- **Why $\theta_u^\ast$ stays the commitment, the conclusion unchanged and the reason reversed.**
+  It is the **asymptote**, and it carries no tolerance. It used to stand because no self-contained
+  halting mechanism was known. It now stands because the tolerance is **ad hoc**: a result reported
+  at a halted $\theta_u$ would carry a number this study declines to fix, so predictions are given
+  in closed form at the asymptote. The two old stopping rules are **retained and relabelled**, not
+  deleted — $\theta_{\mathrm{crit}}=2.126$ and the one-update arrival still measure *where the
+  conjunction is first met*, a fact about the shape of the update and explicitly not a halting rule.
+- **With the level, and what is not derived.** What the alternatives level would have to claim
+  concerns the slow flow, not how one inference ends: either its slow objective has a maximizer its
+  flow reaches, or its verdict does not depend on growing a gain whose cost grows with it.
+  **Neither is derived.** §5.1's one-dimension-per-level result is where an argument would start.
+- **Neural plausibility, which is what this all answers to.** Commitment 7's separation, and tens of
+  thousands of Euler steps per inference even where the conjunction first holds, are the cost the
+  plausibility commitment has to answer for. This section is the argument `main.ipynb`'s *Integration
+  cost and conditioning* defers to the outline, and the target O3's bare pointers were waiting on.
+  *(Writer's note: F15's sharper figure — not within $0.1\%$ of $\theta_u^\ast$ after $5{,}000$
+  updates — is **class (e)**, as at §4.6; no cell prints it. The approach-without-arrival is stated
+  from $\tilde{\mathcal F}$'s flattening, which is an argument, not a measurement.)*
+---
+ 
 ## 5.5 Limits (about 150 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
