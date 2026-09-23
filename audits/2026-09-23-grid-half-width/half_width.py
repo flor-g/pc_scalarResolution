@@ -179,7 +179,9 @@ def block_5():
 def block_6():
     print()
     print("=" * 100)
-    print("  6. THE PEAK-CROSSING IS SUFFICIENT FOR FAILURE, NOT EQUIVALENT TO IT")
+    print("  6. 'peak < theta_L' IS THE MODE POSITION CRITERION (Text cell 4: zeta_k* < theta_L,")
+    print("     met when the mode lies outside the cell of 'all'). It is SUFFICIENT for the q")
+    print("     conjunction to fail when it is NOT met, and not equivalent to it.")
     print("=" * 100)
     agree = total = 0
     rows = []
@@ -197,7 +199,7 @@ def block_6():
                 total += 1
                 if not below:
                     rows.append((prior, lam, Z, peak, c1 and c2))
-    print(f"   'peak < theta_L' and the q conjunction agree in {agree} of {total} configurations")
+    print(f"   the mode position criterion and the q conjunction agree in {agree} of {total}")
     print(f"   (four priors x Lambda in {{8, 512}} x Z in {{5,6,7,8}}).")
     print("   Every row whose peak sits ABOVE theta_L fails the conjunction:")
     for prior, lam, Z, peak, both in rows:
@@ -206,7 +208,8 @@ def block_6():
     print("   Many rows whose peak is below it fail anyway, through the FIRST condition")
     print("   q_H < q_lit, which is the more fragile of the two (block 3: 113, 77, 25, 5, 0")
     print("   against the second's 76, 59, 48, 25, 14). The conjunction is therefore NOT")
-    print("   'a claim about where the peak sits'; the peak is the channel Z acts through.")
+    print("   'a claim about where the peak sits'; the peak is the channel Z acts through, and")
+    print("   the mode position criterion is the statistic that reads it directly.")
 
 
 if __name__ == "__main__":

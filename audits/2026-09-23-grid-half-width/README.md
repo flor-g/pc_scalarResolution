@@ -73,8 +73,10 @@ the projection taken under a fixed reference measure rather than the quadrature 
 BᵀWB = I, assumed by Eq. (B2)'s closed form — the orthonormality that makes the closed forms exact
 is what ties the utility basis to the truncation.
 
-**Sufficient, not equivalent.** Over 32 configurations (four priors × Λ ∈ {8, 512} × Z ∈ {5,6,7,8}),
-"peak < θ_L" and the q conjunction agree in only **13**. A peak above θ_L always fails the
+**Sufficient, not equivalent.** "peak < θ_L" is **Text cell 4's mode position criterion verbatim**,
+ζ_{k\*} < θ_L, met when the mode lies outside the cell of *all* — so the half-width moves that
+criterion's own left-hand side. Over 32 configurations (four priors × Λ ∈ {8, 512} × Z ∈ {5,6,7,8}),
+it and the q conjunction agree in only **13**. A peak above θ_L always fails the
 conjunction (6 of 6), but many rows with the peak below it fail anyway, through the first condition
 q_H < q_lit — the more fragile of the two, collapsing 113 → 77 → 25 → 5 → 0 against the second's
 76 → 59 → 48 → 25 → 14. **The conjunction is not "a claim about where the peak sits."**

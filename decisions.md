@@ -2104,8 +2104,11 @@ a number from it.
   assumed by Eq. (B2)'s closed form. *The orthonormality that makes the closed forms exact is the
   same thing that ties the utility basis to the truncation.*
 - **The peak-crossing is sufficient for failure, not equivalent to it, and the first write-up of
-  this entry overstated it.** Across 32 configurations (four priors × Λ ∈ {8, 512} × Z ∈ {5,6,7,8}),
-  "peak < θ_L" and the q conjunction agree in only **13**. Every row whose peak sits above θ_L fails
+  this entry overstated it.** "peak < θ_L" is not a quantity invented here: it is **Text cell 4's
+  mode position criterion verbatim**, ζ_{k\*} < θ_L, met when the mode lies outside the cell of
+  *all*. So what the half-width moves is that criterion's own left-hand side. Across 32
+  configurations (four priors × Λ ∈ {8, 512} × Z ∈ {5,6,7,8}), it and the q conjunction agree in
+  only **13**. Every row whose peak sits above θ_L fails
   the conjunction (6 of 6), and many rows whose peak is below it fail anyway, because the *first*
   condition q_H < q_lit fails independently — it is the more fragile of the two, collapsing
   113 → 77 → 25 → 5 → 0 over Z against the second's 76 → 59 → 48 → 25 → 14. **The conjunction is
