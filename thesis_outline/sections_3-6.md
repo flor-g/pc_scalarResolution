@@ -1011,13 +1011,12 @@ what it costs and what is still owed.
  
 ## Sources for §5.2
  
-- Xiang, M., Kennedy, C., Xu, W., & Leffel, T. (2022). Pragmatic reasoning and semantic convention:
-  A case study on gradable adjectives. *Semantics and Pragmatics, 15*(9).
-  https://doi.org/10.3765/sp.15.9
-- Ronai, E., & Xiang, M. (2024). What could have been said? Alternatives and variability in
-  pragmatic inferences. *Journal of Memory and Language, 136*, 104507.
-- Kennedy, C. (2007). Vagueness and grammar: The semantics of relative and absolute gradable
-  adjectives. *Linguistics and Philosophy, 30*, 1–45.
+**The entries live in `background_sections.md`'s reference list, which is the dissertation's only
+one** (BG10, 2026-09-22): Xiang, Kennedy, Xu and Leffel (2022), Ronai and Xiang (2024), and
+Kennedy (2007). They were duplicated here, and the duplicate had drifted — Kennedy's issue number
+was missing from it. **This file keeps no entries of its own**; what follows is the note about
+where the §5.1 citations went, which is a drafting instruction and not a list.
+
 Citations redeployed into §5.1: Rooth (1985, 1992) and Kratzer & Shimoyama (2002) make the
 alternative set depend on context rather than on the uttered expression; Katzir (2007) and
 Fox & Spector (2018) treat competition as resolved by, rather than generative of, what is produced.

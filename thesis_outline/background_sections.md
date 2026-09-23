@@ -1,8 +1,10 @@
 Background sections outline · MD
 # Outline for the dissertation background
  
-**Rewritten 2026-09-11** under the three-question frame, per
-`claude/background_revision_plan.md` (Revision 4). The previous version motivated a model that
+**Rewritten 2026-09-11** under the three-question frame (Revision 4). *That plan file,
+`claude/background_revision_plan.md`, is **not in the repository** and was never tracked; the live
+plan for this document is `thesis_outline/revisions.md` **§6**, with the open tasks in **§10**.
+Pointer corrected at BG8, 2026-09-22.* The previous version motivated a model that
 learns confidence in the prior; this architecture performs no precision inference, and the question
 it answers is a different one. Nothing from the precision/wonkiness arc survives except as contrast.
  
@@ -631,14 +633,28 @@ arriving from the FEP literature finds the absence stated rather than having to 
 ---
  
 # Reference list
+
+**Scope: the whole dissertation.** This is the only reference list either outline keeps —
+`sections_3-6.md` has none of its own — and it covers the background, §§3–6, **and the appendices
+as `main.ipynb` and `appendix_E.ipynb` carry them**. A work cited anywhere in the dissertation has
+an entry here. Each notebook keeps its own References cell for its own text — `main.ipynb` cell 24,
+`appendix_E.ipynb` cell 9 (`agent.md` §1, coupling 11). **BG10** reconciled the three on
+2026-09-22, 50 entries to 64: eight works that lived only in main's cell and six only in
+appendix_E's were folded in here. *Two divergences left standing, both wanting one pass across all
+three: Friston is "Friston, K." for 2005 and "Friston, K. J." for 2007-2010, and the notebooks set
+page ranges with en dashes where this list uses hyphens.*
  
 Aitchison, L., & Lengyel, M. (2017). With or without you: Predictive coding and Bayesian inference in the brain. *Current Opinion in Neurobiology, 46*, 219-227. https://doi.org/10.1016/j.conb.2017.08.010
+ 
+Åström, K. J., & Murray, R. M. (2008). *Feedback systems: An introduction for scientists and engineers*. Princeton University Press.
  
 Bastos, A. M., Usrey, W. M., Adams, R. A., Mangun, G. R., Fries, P., & Friston, K. J. (2012). Canonical microcircuits for predictive coding. *Neuron, 76*(4), 695-711. https://doi.org/10.1016/j.neuron.2012.10.038
  
 Bogacz, R. (2017). A tutorial on the free-energy framework for modelling perception and learning. *Journal of Mathematical Psychology, 76*, 198-211. https://doi.org/10.1016/j.jmp.2015.11.003
  
 Chemla, E., & Spector, B. (2011). Experimental evidence for embedded scalar implicatures. *Journal of Semantics, 28*(3), 359-400. https://doi.org/10.1093/jos/ffq023
+ 
+Chierchia, G. (2004). Scalar implicatures, polarity phenomena, and the syntax/pragmatics interface. In A. Belletti (Ed.), *Structures and beyond: The cartography of syntactic structures* (Vol. 3, pp. 39-103). Oxford University Press.
  
 Chierchia, G. (2017). Scalar implicatures and their interface with grammar. *Annual Review of Linguistics, 3*, 245-264. https://doi.org/10.1146/annurev-linguistics-011516-033846
  
@@ -650,15 +666,23 @@ Colombo, M., & Wright, C. (2021). First principles in the life sciences: The fre
  
 Cremers, A., Wilcox, E. G., & Spector, B. (2023). Exhaustivity and anti-exhaustivity in the RSA framework: Testing the effect of prior beliefs. *Cognitive Science, 47*(5), e13286. https://doi.org/10.1111/cogs.13286
  
+Danskin, J. M. (1967). *The theory of max-min and its application to weapons allocation problems*. Springer. https://doi.org/10.1007/978-3-642-46092-0
+ 
+Davey, B. A., & Priestley, H. A. (2002). *Introduction to lattices and order* (2nd ed.). Cambridge University Press. https://doi.org/10.1017/CBO9780511809088
+ 
 Degen, J., Tessler, M. H., & Goodman, N. D. (2015). Wonky worlds: Listeners revise world knowledge when utterances are odd. In D. C. Noelle et al. (Eds.), *Proceedings of the 37th Annual Meeting of the Cognitive Science Society* (pp. 548-553). Cognitive Science Society.
  
 Feldman, H., & Friston, K. J. (2010). Attention, uncertainty, and free-energy. *Frontiers in Human Neuroscience, 4*, Article 215. https://doi.org/10.3389/fnhum.2010.00215
+ 
+Ferguson, K. A., & Cardin, J. A. (2020). Mechanisms underlying gain modulation in the cortex. *Nature Reviews Neuroscience, 21*(2), 80-92. https://doi.org/10.1038/s41583-019-0253-y
  
 Fox, D., & Spector, B. (2018). Economy and embedded exhaustification. *Natural Language Semantics, 26*(1), 1-50. https://doi.org/10.1007/s11050-017-9139-6
  
 Frank, M. C., & Goodman, N. D. (2012). Predicting pragmatic reasoning in language games. *Science, 336*(6084), 998. https://doi.org/10.1126/science.1218633
  
 Franke, M. (2011). Quantity implicatures, exhaustive interpretation, and rational conversation. *Semantics and Pragmatics, 4*, Article 1, 1-82. https://doi.org/10.3765/sp.4.1
+ 
+Friston, K. (2005). A theory of cortical responses. *Philosophical Transactions of the Royal Society B: Biological Sciences, 360*(1456), 815-836. https://doi.org/10.1098/rstb.2005.1622
  
 Friston, K. J. (2008). Hierarchical models in the brain. *PLOS Computational Biology, 4*(11), e1000211. https://doi.org/10.1371/journal.pcbi.1000211
  
@@ -667,6 +691,10 @@ Friston, K. J. (2010). The free-energy principle: A unified brain theory? *Natur
 Friston, K., Mattout, J., Trujillo-Barreto, N., Ashburner, J., & Penny, W. (2007). Variational free energy and the Laplace approximation. *NeuroImage, 34*(1), 220-234. https://doi.org/10.1016/j.neuroimage.2006.08.035
  
 Furutachi, S., & Hofer, S. B. (2026). Rethinking predictive processing. *Annual Review of Neuroscience, 49*, 471-494. https://doi.org/10.1146/annurev-neuro-102124-031410
+ 
+Gazdar, G. (1979). *Pragmatics: Implicature, presupposition, and logical form*. Academic Press.
+ 
+Geurts, B. (2010). *Quantity implicatures*. Cambridge University Press.
  
 Geurts, B., & Pouscoulous, N. (2009). Embedded implicatures?!? *Semantics and Pragmatics, 2*, Article 4, 1-34. https://doi.org/10.3765/sp.2.4
  
@@ -678,7 +706,11 @@ Grice, H. P. (1975). Logic and conversation. In P. Cole & J. L. Morgan (Eds.), *
  
 Griffiths, T. L., Lieder, F., & Goodman, N. D. (2015). Rational use of cognitive resources: Levels of analysis between the computational and the algorithmic. *Topics in Cognitive Science, 7*(2), 217-229. https://doi.org/10.1111/tops.12142
  
+Grossberg, S. (1987). Competitive learning: From interactive activation to adaptive resonance. *Cognitive Science, 11*(1), 23-63.
+ 
 Gutzmann, D. (2021). Semantics vs. pragmatics. In D. Gutzmann, L. Matthewson, C. Meier, H. Rullmann, & T. E. Zimmermann (Eds.), *The Wiley Blackwell companion to semantics* (pp. 1-31). Wiley. https://doi.org/10.1002/9781118788516.sem049 **[Year unresolved: Crossref records the chapter and the volume as 2020 (online); the print volume is dated 2021. Pick one and use it for every Companion chapter cited.]**
+ 
+Horn, L. R. (1972). *On the semantic properties of logical operators in English* [Unpublished doctoral dissertation]. University of California, Los Angeles.
  
 Ippolito, M. (2010). Embedded implicatures? Remarks on the debate between globalist and localist theories. *Semantics and Pragmatics, 3*, Article 5, 1-15. https://doi.org/10.3765/sp.3.5
  
@@ -704,13 +736,15 @@ Lewis, A. G., & Bastiaansen, M. (2015). A predictive coding framework for rapid 
  
 Lieder, F., & Griffiths, T. L. (2020). Resource-rational analysis: Understanding human cognition as the optimal use of limited computational resources. *Behavioral and Brain Sciences, 43*, Article e1. https://doi.org/10.1017/S0140525X1900061X
  
+Lillicrap, T. P., Cownden, D., Tweed, D. B., & Akerman, C. J. (2016). Random synaptic feedback weights support error backpropagation for deep learning. *Nature Communications, 7*, Article 13276. https://doi.org/10.1038/ncomms13276
+ 
 Magri, G. (2011). Another argument for embedded scalar implicatures based on oddness in downward-entailing environments. *Semantics and Pragmatics, 4*, Article 6, 1-51. https://doi.org/10.3765/sp.4.6
  
 Marr, D. (1982). *Vision: A computational investigation into the human representation and processing of visual information*. W. H. Freeman.
  
 MICrONS Consortium. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. *Nature, 640*, 435-447. https://doi.org/10.1038/s41586-025-08790-w
  
-Millidge, B., Seth, A., & Buckley, C. L. (2021). Predictive coding: A theoretical and experimental review. *arXiv:2107.12979*.
+Millidge, B., Seth, A., & Buckley, C. L. (2021). *Predictive coding: A theoretical and experimental review*. arXiv. https://doi.org/10.48550/arXiv.2107.12979
  
 Potts, C., Lassiter, D., Levy, R., & Frank, M. C. (2016). Embedded implicatures as pragmatic inferences under compositional lexical uncertainty. *Journal of Semantics, 33*(4), 755-802. https://doi.org/10.1093/jos/ffv012
  
@@ -722,11 +756,17 @@ Rooth, M. (1985). *Association with focus* [Doctoral dissertation, University of
  
 Rooth, M. (1992). A theory of focus interpretation. *Natural Language Semantics, 1*(1), 75-116. https://doi.org/10.1007/BF02342617
  
+Sauerland, U. (2004). Scalar implicatures in complex sentences. *Linguistics and Philosophy, 27*(3), 367-391. https://doi.org/10.1023/B:LING.0000023378.71748.db
+ 
 Sauerland, U. (2012). The computation of scalar implicatures: Pragmatic, lexical or grammatical? *Language and Linguistics Compass, 6*(1), 36-49. https://doi.org/10.1002/lnc3.321
  
 Schlegel, P., Yin, Y., Bates, A. S., Dorkenwald, S., Eichler, K., Brooks, P., Han, D. S., Gkantia, M., Dos Santos, M., Munnelly, E. J., Badalamente, G., Serrano Capdevila, L., Sane, V. A., Pleijzier, M. W., Tamimi, I. F. M., Dunne, C. R., Salgarella, I., Javier, A., Fang, S., … Jefferis, G. S. X. E. (2024). Whole-brain annotation and multi-connectome cell typing of *Drosophila*. *Nature, 634*, 139-152. https://doi.org/10.1038/s41586-024-07686-5
  
+Sherman, S. M., & Guillery, R. W. (1998). On the actions that one nerve cell can have on another: Distinguishing "drivers" from "modulators". *Proceedings of the National Academy of Sciences, 95*(12), 7121-7126. https://doi.org/10.1073/pnas.95.12.7121
+ 
 Spratling, M. W. (2013). Distinguishing theory from implementation in predictive coding accounts of brain function. *Behavioral and Brain Sciences, 36*(3), 231-232. https://doi.org/10.1017/S0140525X12002178
+ 
+Strogatz, S. H. (1994). *Nonlinear dynamics and chaos: With applications to physics, biology, chemistry, and engineering*. Addison-Wesley.
  
 Walsh, K. S., McGovern, D. P., Clark, A., & O'Connell, R. G. (2020). Evaluating the neurophysiological evidence for predictive processing as a model of perception. *Annals of the New York Academy of Sciences, 1464*(1), 242-268. https://doi.org/10.1111/nyas.14321
  

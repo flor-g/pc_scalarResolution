@@ -1154,7 +1154,9 @@ table's commitment 3 row at line 391).
     scale position), so the claim survives; its explanation does not. State it as a contrast between
     novel and familiar objects, and say which way the elicited priors actually go.
 - **§1.8 synthesis (lines 337–352).** Optional. One clause that the traditions share a
-  computational-level framing under which the questions of §5.3 are not posable.
+  computational-level framing under which the questions of **§5.4** are not posable. *(Was "§5.3",
+  written before R14's renumbering moved Limits to §5.5 and gave §5.4 to the posability argument;
+  corrected at BG12, 2026-09-22.)*
 - **Lines 368–373, §2.1 claim levels.** The algorithmic claim now carries commitment 7, whose
   measured separation is a plausibility liability. One sentence, pointing to §5.3.
 - **Line 392, §2.2 table, commitment 3.**
@@ -1541,7 +1543,24 @@ bullets and the check caught it. Sweep both.
 
 ---
 
-### Tier 2 — bookkeeping
+### Tier 2 — bookkeeping — **BG8–BG12 APPLIED 2026-09-22**
+
+**BG10 was larger than this block said.** The estimate was eight works to fold in, from
+`main.ipynb` cell 24. `appendix_E.ipynb` **cell 9 is a third reference list**, and six more lived
+only there — Åström & Murray (2008), Ferguson & Cardin (2020), Grossberg (1987), Lillicrap et al.
+(2016), Sherman & Guillery (1998), Strogatz (1994). The dissertation's list went **50 entries to
+64**, its scope is now declared at its head, and `agent.md` §2 carries the three-way division as
+**coupling 11**. `sections_3-6.md`'s "Sources for §5.2" block is now a pointer rather than three
+duplicated entries — and the duplicate had already drifted, Kennedy (2007) having lost its issue
+number there. Two divergences are left standing and named in both places: Friston as
+"Friston, K." against "Friston, K. J.", and en dashes against hyphens in page ranges.
+
+**Sort Å as A.** The APA rule folds diacritics, so Åström files between Aitchison and Bastos. A
+naive byte comparison files it after Zimmermann and will report a false positive; the order check
+must normalize before comparing. Two real misplacements were caught the same way, Ferguson filed
+after Fox and Strogatz before Spratling.
+
+
 
 - **BG8.** `background_sections.md` line 4 cites `claude/background_revision_plan.md`, which does
   not exist. Same class as the dangling pointers fixed in open item 2 at `ecb7ae6`.

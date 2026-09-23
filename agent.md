@@ -53,7 +53,7 @@ commit is 499918c (2026-09-13). Procedures are in §4.
 | 13 | Code Cell 4 | The sweep. |
 | 14, 16, 18, 20 | Appendices A-D | θ_L and g_y; θ\*, locality, alternatives; how many utility directions; why emission is exclusion, and where ℓ₀ enters (Sec. 5, Eqs. (D5)–(D7), decision A3). |
 | 15, 17, 19, 21 | Code Cells A-D | Each prints the numbers the appendix above it quotes; Code Cell A also prints Text cell 3 §2's (decision I10). |
-| 22 | **Appendix F** | H1 and H2 against Xiang et al. (2022), Eqs. (F1)–(F2). The only cell that reads a data file, and the only place Λ is fitted (S-1). States the two hypotheses, reports match and mismatch, and says nothing about what a mismatch is due to. |
+| 22 | **Appendix F** | H1 and H2 against Xiang et al. (2022), Eqs. (F1)–(F3). The only cell that reads a data file, and the only place Λ is fitted (S-1). States the two hypotheses, reports match and mismatch, and says nothing about what a mismatch is due to. |
 | 23 | Code Cell F | The numbers Appendix F quotes, in eight blocks. Runs at n = 4 in its own respawned network; the default n = 10 everywhere else is untouched. |
 | 24 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
 
@@ -155,6 +155,19 @@ Each of these has broken at least once.
    in Appendix F and in §5.2. `data/xiang_2022/README.md` pins it by sha256 and
    `check_data.py` verifies the pin; run that check after any change to the file, before re-running
    the notebook.
+
+11. **Three reference lists, with a declared division of labour.** `main.ipynb` cell 24 and
+   `appendix_E.ipynb` cell 9 are each a **notebook's** list, for that notebook's own text.
+   `thesis_outline/background_sections.md`'s is the **dissertation's**, and it is the only one
+   either outline keeps — `sections_3-6.md` has none — so it covers the background, §§3–6 *and*
+   the appendices as both notebooks carry them. A new citation in a notebook therefore needs an
+   entry in **two** lists, that notebook's and the dissertation's; a new citation in either outline
+   needs one in the dissertation's alone. None of the three errors when it falls behind: a missing
+   entry is silent until someone reads for it. Reconciled at **BG10**, 2026-09-22 — 50 entries to
+   **64**, folding in eight works that lived only in main's cell 24 and six only in appendix_E's,
+   and giving Millidge et al. appendix_E's DOI form. Two divergences left standing, both wanting
+   one pass across all three: Friston is "Friston, K." for 2005 and "Friston, K. J." for 2007-2010,
+   and the notebooks set page ranges with en dashes where the outline uses hyphens.
 
 **Loud dependencies.** Not couplings of the kind above, since each fails with an exception rather
 than silently, but an agent renaming or re-signing these should know what breaks:
