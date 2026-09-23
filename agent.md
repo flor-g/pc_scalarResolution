@@ -384,6 +384,28 @@ A single hand edit to one prose sentence is low-risk. When unsure, make a checkp
   commit a state in which E3 fails unless the message says so.
 - **Notebook outputs are committed.** E3 reads them as evidence. Never add an output-stripping
   filter (nbstripout or similar), and never clear outputs to shrink a diff.
+- **Verify the edits landed before writing the message that claims them.** A commit message is a
+  claim about the diff, and three times on 2026-09-23 it was false: a script edited several sites,
+  asserted each substitution **inside** its mutation loop, hit one pattern that had been rewrapped,
+  raised, and never reached its single write at the end. Every earlier in-memory edit was discarded.
+  The file is left untouched, nothing errors, and the commit goes out describing changes that are
+  not in it. Once this happened inside the very commit that was correcting the previous instance.
+
+  Two rules, and they are cheap:
+
+  ```python
+  # validate EVERY pattern first, mutate only after, write once
+  for site, old, _ in EDITS:
+      assert text[site].count(old) == 1, (site, old[:60], text[site].count(old))
+  for site, old, new in EDITS:
+      text[site] = text[site].replace(old, new)
+  ```
+
+  Then **read back what you just wrote** and check each edit is present, by a string that only the
+  new text contains. `git diff --stat` is not enough: it shows that *something* changed, not that
+  the thing you meant changed. Notebook sources are stored as line lists, so a pattern spanning a
+  line break must be matched with flexible whitespace or against the exact wrapping; **a line you
+  rewrapped earlier in the same session will not match the string you wrote before rewrapping it.**
 - **Message format:**
 
   ```
