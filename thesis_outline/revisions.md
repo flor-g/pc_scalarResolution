@@ -1447,3 +1447,116 @@ concentration keeps the bare α everywhere, including both notebooks, which neve
 - `composition guide.md` line 3 names `sections_3-5_outline.md` and `background_sections_outline.md`.
 - `decisions.md` B2 (line 275), O3 (line 456) and E4 (line 659) cite `sections_3-5_outline.md`. A
   dated finding under O3 records the new file and the missing target (item 2).
+
+---
+
+## 10. BG1–BG13: the background to a draftable state (2026-09-22)
+
+**Why this block exists.** §6 above is the background's revision plan, and **six of its items were
+never applied**. The drafting checklist at the foot of `background_sections.md` says the outline is
+"complete as an outline" because it audits a *different* list — the Revision-4 rewrite tiers of
+2026-09-11 — and nothing cross-checked it against §6. The lesson is the one §3.3 of `agent.md`
+already carries in another form: **a checklist certifies the list it was written against and
+nothing else.** Before calling either outline draftable, read this file's own task blocks.
+
+**What was checked, and what came back clean.** Every `§X.Y` cross-reference in the background
+resolves (22 of them, across the outline and background namespaces); the reference list is
+alphabetical with 50 entries and no orphans; and **C6 is not at risk** — the background quotes no
+model number except §1.3's counts of the anti-exhaustive direction, which match §4.4 exactly,
+including the direction of §4.5's two opposing floors. Every section has a body.
+
+---
+
+### Tier 1 — §6's unapplied items
+
+Each is specified in §6 above; the entry here gives the current text so the site is unambiguous.
+
+| Task | Site | What stands now | What §6 directs |
+|---|---|---|---|
+| **BG1** | Opening, move 3 | closes at "a pattern the computational goal does not entail it" | add the **"not posable"** clause and a forward pointer to **§5.4**. §5.4 opens by extending the Opening's definition, so the extension has to be prepared here |
+| **BG2** | §2.1, claim levels | three levels; the exception points to §2.7 | one sentence: the algorithmic claim carries **commitment 7**, whose measured separation is a plausibility liability (→ §5.3) |
+| **BG3** | §2.2, commitment 3 row | "linear-Gaussian … hence what §5.5 records as a limit" | add that the Laplace/delta commitment is what makes the delta at φ_S\* the construction's posterior (item 1) |
+| **BG4** | §2.4, last bullet | "Appendix E pays a fourth timescale to keep it at m>1" | per **F26**: under commitment 7 the relay adds **no stability requirement of its own** — it needs only τ_r ≤ τ_ε, and inherits θ_u⁻² from τ_ε rather than carrying it |
+| **BG5** | §2.6, timescale separation | τ_ε ≪ τ_φ ≪ τ_θ | **τ_ε ≤ τ_φ/(4 λ_max(H)) ≪ τ_φ ≪ τ_θ** (A11, commitment 7); add that θ_u is learned and its flow starts at θ_u(0) = 0, which is the **tempered control** and not q_lit (A10, C3); carry BG4's wording to the "Appendix E adds a fourth timescale" line |
+| **BG6** | §2.7, close | "it carries a testable consequence in the required speed of the relay" | §6 calls this **stale in so many words**. What a slow relay breaks is monotone F, not oscillation; the implementational commitment with content is commitment 7's separation itself |
+
+**BG1 and BG2 are missing content, not stale content.** "Commitment 7" appears nowhere in the
+background, though §§3.4, 4.6 and 5.3 all rest on it and §2.6 is its natural home.
+
+---
+
+### BG7 — the word table, under the user's ruling
+
+**Ruling (user, 2026-09-22): the budget is expanded so the contents fit.** The background's total
+follows what the sections have to carry; nothing is trimmed to preserve a number. This is R8's
+successor for the background and the same call the user made at P-3 for `sections_3-6.md`.
+
+Three discrepancies are determinate now, and two sections are underbudgeted:
+
+- **The stated target drops the Opening.** 3,670 = Part I 2,110 + Part II 1,440 + Closing 120, with
+  the Opening's 220 simply absent from the sum.
+- **Part I's header is 20 words above its own subsections**, which total 2,090.
+- **§1.3's beats need 440, not 415.** Beats 1–3 are 150 + 175 + 90 = 415 exactly; **R19's
+  projection-parallel bullet (25 words) sits outside them and was never budgeted** — U11 raised
+  Beat 2 by 75 and §1.3 by 75, and R19 came in separately. Part II sums correctly at 1,440.
+- **§2.5 carries 153 outline words against a 60-word budget** (ratio 2.5, the file's worst after
+  §1.3): the precision-weighting scope statement, and a position-reserved sentence on Walsh et al.
+  (2020) citing Kogo and Trengove (2015). This is §5.6's failure repeated — a section given a
+  minimum budget and then handed a second move.
+
+| Section | Now | Proposed | What the increase pays for |
+|---|---:|---:|---|
+| Opening | 220 | **245** | BG1 |
+| 1.3 | 415 | **440** | R19's unbudgeted bullet |
+| 2.1 | 210 | **235** | BG2 |
+| 2.2 | 230 | **245** | BG3 |
+| 2.5 | 60 | **110** | the two moves the outline already specifies |
+| 2.6 | 220 | **250** | BG5's θ_u(0) sentence |
+| 2.7 | 200 | **210** | BG6 |
+| **Part I** | 2,110 | **2,115** | subsections, summed rather than asserted |
+| **Part II** | 1,440 | **1,570** | |
+| **Closing** | 120 | 120 | |
+| **Total** | 3,670 | **4,050** | Opening included this time |
+
+BG4 and BG6 are rewrites in place and carry their own small increments above. **Re-sum the table
+when BG1–BG6 are drafted**; the numbers above are allocations, not measurements.
+
+---
+
+### Tier 2 — bookkeeping
+
+- **BG8.** `background_sections.md` line 4 cites `claude/background_revision_plan.md`, which does
+  not exist. Same class as the dangling pointers fixed in open item 2 at `ecb7ae6`.
+- **BG9.** `composition guide.md` line 3 still names `sections_3-5_outline.md` and
+  `background_sections_outline.md`. §9 above has recorded this since 2026-09-13 and it was never
+  fixed; it matters now, because that guide governs the drafting pass.
+- **BG10. The reference list's scope is undeclared.** It serves `sections_3-6.md` too — that file
+  has no list of its own — but it omits the **eight works cited only in `main.ipynb` cell 24**:
+  Chierchia (2004), Danskin (1967), Davey & Priestley (2002), Friston (2005), Gazdar (1979),
+  Geurts (2010), Horn (1972), Sauerland (2004). Note Sauerland is a *different* work from the
+  background's Sauerland (2012). `sections_3-6.md` §6 also carries its own partial "Sources for
+  §5.2" block, where Kennedy (2007) is given without its issue number. Decide what the list is,
+  state it at its head, and fold the strays in.
+- **BG11.** `agent.md` line 56 describes Appendix F as "Eqs. (F1)–(F2)". **Eq. (F3) was added at
+  R28** — the Σ_y c_y = 2BᵀWℓ₀ identity.
+- **BG12.** §6's optional §1.8 clause is written against the pre-R14 numbering: "the questions of
+  §5.3 are not posable" should read **§5.4**.
+- **BG13, and it is not a background task.** `sections_3-6.md` **§3.4 carries the same three
+  unapplied items** as BG4–BG5: the τ ordering at line 275, the missing θ_u(0) = 0 and
+  conditioning additions (condition number ≈ (1+θ_u²)/2, 404.8 at the Gaussian θ\*), and the
+  relay's cost at lines 298–299, which still reads "a third lag in the loop can oscillate" where
+  F26 says the reason is monotone F and the relay carries no θ_u⁻² of its own. §4 above specifies
+  all three under "§3.4 (lines 166–196)".
+
+---
+
+**A correction to the readiness verdict of 2026-09-22.** `sections_3-6.md` was reported draftable
+on the strength of a C6 sweep, cross-reference and equation-tag resolution, citation coverage and a
+balanced word table. **Those checks do not read this file's task blocks**, which is how BG13 was
+missed. The verdict stands for everything it tested and does not extend to §4 and §6 above.
+
+**Also stale, and outside this block.** §3's word-allocation table has a running header ending at
+4,100 while its **Total** row still reads 3,610 and its §5 subtotal reads 1,650 against rows
+summing to 1,250. `sections_3-6.md`'s own table was corrected to **4,210** at `9694ffc` and
+`ecb7ae6`; this one is the historical plan and was not. Treat `sections_3-6.md` as the authority
+and either re-sum §3 or mark it historical.

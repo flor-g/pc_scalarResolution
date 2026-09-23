@@ -281,6 +281,17 @@ or use as a default, and to every number the prose quotes.
   3.3e-06. They survived a further five commits of prose work before a readiness check found them.
   The outline quotes the same numbers as the notebooks and goes stale the same way.
 
+- **A checklist certifies the list it was written against and nothing else.** The drafting
+  checklist at the foot of `thesis_outline/background_sections.md` was audited item by item on
+  2026-09-22 and every box ticked with its evidence, which is why the background was reported
+  "complete as an outline". It audits the Revision-4 rewrite tiers of 2026-09-11. **Six items of
+  `revisions.md` §6 — that file's own revision plan for the background — had never been applied**,
+  and one of them, the §2.7 relay-speed close, is called stale in §6 in so many words. The same
+  gap put three unapplied items in `sections_3-6.md` §3.4 past a readiness pass that checked C6,
+  cross-references, equation tags, citations and the word table, and read no task block at all.
+  **Before calling any outline draftable, read `revisions.md`'s §4 and §6 site by site.** The tasks
+  are BG1–BG13, in that file's §10.
+
   ```python
   # C6 sweep: measured-looking numbers in a notebook's markdown that no cell prints
   import json, re
