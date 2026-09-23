@@ -774,12 +774,52 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - A number computed off-notebook, or only by a script recorded in a change record, does not count
   as sourced. Supersedes the allowance of I8.
 
+### C5a. Section references inside the notebooks
+- Decided by: **agent, pending user confirmation (2026-09-22)**
+- **Decision.** A reference of the form §N.M means a *headed subsection* of Text cell 3, of which
+  only §§8.1-8.6 and §§9.1-9.3 exist. It does **not** mean "item M of the numbered list in §N".
+  Three sites used it that way and are rewritten: Text cell 4's "(§3.3)" for the utility basis,
+  which is item 3 of §3, and Appendix D's two "§4.2" for g_L, which is item 2 of §4. They now read
+  "Text cell 3 §3, item 3" and "Text cell 3 §4, item 2".
+- **Theoretical reason:** none; this is notation.
+- **Implementational reason:** composition guide Entry 5c. The notation was never declared, and it
+  collides with the real subsection numbering, so a reader who follows §4.2 finds no §4.2 and cannot
+  tell whether the reference or their reading is wrong.
+- **Bogacz status:** not applicable. His own §5.1 is cited as "his §5.1" and is unaffected.
+- **Depends on it:** Text cell 4 Part C, Appendix D §§3 and 5.
+- **Evidence:** Text cell 3 carries anchors tc3-1..tc3-9 plus tc3-8-1..8-6 and tc3-9-1..9-3, and no
+  §3.3 or §4.2 appears anywhere in that cell.
+
 ### C5. Reader-facing text
 - Decided by: not recorded (set 2026-09-07); punctuation 2026-09-08; spacing and numbering chosen by
   the user 2026-09-09
 - No changelog prose or references to earlier versions. No dashes as sentence punctuation. Every
   list loose. Equation numbering scheme as in `agent.md` §2.5. Code comments short, pointing to the
   markdown.
+- **Finding, 2026-09-22: this entry regresses silently, and had.** The 2026-09-08 pass took the
+  notebooks to zero dashes as sentence punctuation. An edit pass on 2026-09-22 found **35 em dashes**
+  in `main.ipynb`'s markdown (cells 4, 6, 12, 14, 16, 20, 22) and **50 ASCII ` -- `** across both
+  notebooks' code, plus **six changelog sites** in the mirrored comment blocks of Code Cell 2 and E2
+  ("THAT FAILURE IS FIXED", "used to be enough", "briefly was not", "the boundary still exists").
+  Nothing errors when this drifts and no check covered it, so it accumulated across every cell
+  written since. **Sweep for it whenever prose is added**, with the three counts below; every list
+  was still loose and no trailing whitespace had returned, so those halves of the entry held.
+
+  ```python
+  # C5 sweep: sentence dashes and changelog prose in a notebook
+  import json, re
+  nb = json.load(open(NOTEBOOK))
+  whole = "\n".join("".join(c["source"]) for c in nb["cells"])
+  print("em dashes", whole.count("\u2014"),
+        "| ' -- '", len(re.findall(r"(?<= )--(?= )", whole)),
+        "| changelog", len(re.findall(r"used to be|no longer (?:is|marks)|briefly was not"
+                                      r"|an earlier version|still exists|was described as", whole)))
+  ```
+
+  Two cautions learned applying it. A replacement is **chosen per site** (colon, comma, semicolon,
+  parentheses, or a recast), never global. And five of the ASCII sites sit inside `print` strings, so
+  fixing them **changes stored output and needs both notebooks re-executed**; the other forty-five
+  are comments and docstrings and do not.
 
 ---
 
@@ -1032,6 +1072,14 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   section number, because **§5.3's body is still unwritten** and the notebooks do not cite thesis
   sections that do not yet exist. When §5.3 is drafted, giving the pointers a number is an ordinary
   editorial step, not a reopening of this decision.
+- **Finding, 2026-09-22: the notebook was citing two thesis sections anyway.** This entry's
+  principle is general ("the notebooks do not cite thesis sections that do not yet exist"), and an
+  edit pass found two sites past it, both written before the ruling landed: Appendix B's *alternative
+  spaces* section, "Under the level **§5.1** proposes", and Appendix F §5's close, "**§5.2** is where
+  the dissertation says what it makes of them". Both are now bare, naming the level and the
+  dissertation without a number. **The ruling reads as being about Text cell 4's and Appendix A's
+  pointers, and it is not** — it governs every thesis-section reference in either notebook, so check
+  all of them, not the two the entry names.
 - **Ruling, 2026-09-22 (the user): an outline body does NOT count as drafted.** §5.3's body was
   written into `thesis_outline/sections_3-6.md` on 2026-09-22 (revisions.md §5 item 2), and the
   agent asked whether that met the condition above. It does not: **"drafted" means the prose, not
