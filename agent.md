@@ -490,6 +490,29 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
   Cell A's 80-row sweep, Code Cell B's ray report, Code Cell 4's grid caveat, Code Cell F) account
   for it, and so does whatever else the machine was doing. Re-measure it when the cell inventory
   changes and do not read a drift in it as a defect. Code Cell F itself costs 0.3 s.
+- **Both notebooks are nbformat 4.5, and every cell carries an `id`.** Bumped from 4.0 on
+  2026-09-23. They had declared 4.0 while carrying ids on 8 of main's 25 cells and 2 of
+  appendix_E's 10 — ids are valid only from 4.5, so **neither file validated against the version it
+  declared**. The installed `nbformat` (5.11.1) writes 4.5 by default, which is where the stray ids
+  came from and why stripping them would not have held: the next save in VS Code or Jupyter puts
+  them back. Bumping instead makes ids required-and-present, and gives the nbdime drivers in
+  `.gitattributes` stable cell identity to match on. `normalize()` from `nbformat.validator`
+  assigns the missing ones and leaves existing ids alone:
+
+  ```python
+  import nbformat
+  from nbformat.validator import normalize
+  nb = nbformat.read(path, as_version=4)
+  nb.nbformat_minor = 5
+  _, nb = normalize(nb, version=4, version_minor=5)
+  nbformat.write(nb, path)
+  ```
+
+  The bump touches nothing else: 17 and 8 new `"id":` lines plus the version field, with sources and
+  outputs byte-identical, so it needs **no re-execution**. The runner's read/write round-trip keeps
+  4.5, and E3 is unaffected because it reads `main.ipynb` with plain `json.load` and matches cells by
+  source prefix (`# === Code Cell 2:`, `# === Code Cell 2b:`), never by id. **Do not let a notebook
+  fall back to 4.0**; check `nbformat_minor` after any tool other than `runnb.py` writes one.
 - Report what was run and what it returned. If a step was skipped, say so.
 
 ### 5.2 Numerical reporting
