@@ -399,14 +399,18 @@ quantitative comparison is offered or implied.
   not the finding that a flip at $10^{-1}$ is. Appendix A prints the sweep.
 ## 4.3 The specification holds (about 70 words)
  
-Brief, and reported as a table rather than argued. The closed forms are exact to
-$6.0\times10^{-11}$ against the integrated dynamics; the fixed-point identities of Eq. (17) hold;
-the Hessian is negative definite across $\theta_u$; the relaxation rate is independent of
+Brief, and reported as a table rather than argued. The closed forms agree with the integrated
+dynamics to $4.45\times10^{-9}$ — **quoted as $1.00$ times the stopping tolerance, not as an
+absolute**, because I3 keys that tolerance to $\lambda_{\max}(H)$, so the figure is a property of
+what is being integrated and moves between rows. The fixed-point identities of Eq. (17) hold; the
+Hessian is negative definite across $\theta_u$; the relaxation rate is independent of
 $\varphi_L$; the analytic messages agree with finite differences. Grid refinement is tested on the
 **tail** of the sequence rather than on two coarse grids, because the rate is set by the entry being
-a step: $1.6\times10^{-3}$ under the hard mask against $1.8\times10^{-6}$ under a smooth one, with
-the smooth mask serving as the control that identifies which of the two is model and which is
-quadrature. Code Cell E3 checks that the relay reproduces every one of these numbers.
+a step: $|401-801|$ in $\mathbb E[s]$ is $1.7\times10^{-3}$ under the hard mask against
+$3.3\times10^{-6}$ under a smooth one, with the smooth mask serving as the control that identifies
+which of the two is model and which is quadrature. (The coarse $51$–$401$ spread, $1.1\times10^{-2}$,
+is the $O(h)$ step artefact, which is why the tail is what is tested.) Code Cell E3 checks that the
+relay reproduces every one of these numbers.
  
 ## 4.4 The five priors (about 355 words)
  

@@ -273,7 +273,13 @@ or use as a default, and to every number the prose quotes.
   constant is re-keyed or a block rewritten, prose that quoted the old value is now class (e) and
   factually wrong besides. Sweep for it rather than trusting the change record: three such numbers
   survived into 2026-09-22 undetected, two quoting the fixed `1e-9` tolerance that I3 replaced, and
-  one an E4a gap that had drifted 1.90e-15 → 1.84e-15.
+  one an E4a gap that had drifted 1.90e-15 → 1.84e-15. **Sweep the outline too, not only the
+  notebooks.** The 2026-09-22 sweep covered `main.ipynb` and `appendix_E.ipynb` and stopped there;
+  `thesis_outline/sections_3-6.md` §4.3 kept three more of the same I3 casualties — a closed-form
+  agreement quoted as an absolute 6.0e-11 where Part A now reports 4.45e-09 = 1.00 × a tolerance
+  that moves, and two grid-refinement figures, 1.6e-3 and 1.8e-6, against a printed 1.7e-03 and
+  3.3e-06. They survived a further five commits of prose work before a readiness check found them.
+  The outline quotes the same numbers as the notebooks and goes stale the same way.
 
   ```python
   # C6 sweep: measured-looking numbers in a notebook's markdown that no cell prints
