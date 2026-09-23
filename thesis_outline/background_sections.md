@@ -10,16 +10,19 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
  
 ## Scale and argumentative shape
  
-- **Target length: approximately 3,670 words.**
-- **Opening (about 220 words).** The explanandum; the three questions the dissertation answers; and
+- **Target length: approximately 4,050 words.** Raised from 3,670 on 2026-09-22 under BG7: the
+  budget follows what the sections have to carry, and is not trimmed to preserve a number (the
+  user's ruling, R8's successor for the background). The old figure also **omitted the Opening**,
+  summing Part I, Part II and the bridge alone.
+- **Opening (about 245 words).** The explanandum; the three questions the dissertation answers; and
   Marr's levels, fixed by contrast with RSA.
 - **Part I — What scalar resolution is asked to explain, and why the existing division does not
-  settle it (about 2,110 words).** Establishes two things §§3–6 need and one they dissolve: that
+  settle it (about 2,115 words).** Establishes two things §§3–6 need and one they dissolve: that
   every existing account computes strengthening over a *represented alternative set*; that the
   accounts deriving it *from the prior* carry a documented liability; and that the debates over
   which level a pattern belongs to share a presupposition about staging.
 - **Part II — Predictive coding, its commitments, and the constraint that generates the answers
-  (about 1,440 words).** Only the parts the model uses, organized around the framework's three
+  (about 1,570 words).** Only the parts the model uses, organized around the framework's three
   commitments, with locality carrying the most weight because it is Q1's answer.
 - **Closing bridge (about 120 words).** The three questions restated, and the standing qualification.
 ### Terminological corrections carried through the dissertation
@@ -34,7 +37,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
   documents agree.
 ---
  
-# Opening: three questions, and the level they are asked at (about 220 words)
+# Opening: three questions, and the level they are asked at (about 245 words)
  
 - **Main claim to establish:** Scalar interpretation is a test case for theories of inference
   because the listener must integrate lexical meaning, alternatives, assumptions about the speaker,
@@ -60,7 +63,13 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
      the quantities are represented, or what any one unit may see. **An algorithmic-level theory
      specifies representations and a process running under those constraints**: message passing,
      state and error units, locality, a basis of fixed dimension. A pattern is an algorithmic-level
-     peculiarity **when the computational goal does not entail it**.
+     peculiarity **when the computational goal does not entail it**. §5.4 extends that definition
+     by one step, and the clause belongs here rather than there: a question can fail to be
+     **posable** at the computational level at all — not answered wrongly, but unaskable, because a
+     theory that fixes only the goal supplies nothing for the question to be about. Name the
+     extension in a clause and leave its instances to §5.4. **Never write that the computational
+     level is wrong, or that such a question refutes RSA**; neither follows, and both are the
+     natural misreading.
 - **Evidence and citations:** Marr (1982) for the levels; Spratling (2013) and Aitchison and Lengyel
   (2017) for the observation that predictive-coding and Bayesian claims are routinely pitched a
   level above their evidence. The classical derivation begins with Gricean Quantity reasoning
@@ -74,7 +83,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
   as it is named as one.
 ---
  
-# Part I. What scalar resolution is asked to explain, and why the existing division does not settle it (about 2,110 words)
+# Part I. What scalar resolution is asked to explain, and why the existing division does not settle it (about 2,115 words)
  
 ## 1.1 Scalar implicature and the target explanandum (about 200 words)
  
@@ -141,7 +150,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
 - **Counterargument to cut:** the "RSA is already recursive, so why add another iterative mechanism?"
   exchange. It defended the superseded precision thesis and serves nothing now.
 - **Transition:** The dependency on \(P(s)\) creates a specific and documented failure.
-## 1.3 Strengthening derived from the prior, and its two liabilities (about 415 words)
+## 1.3 Strengthening derived from the prior, and its two liabilities (about 440 words)
  
 *Merges the previous draft's §1.3 and §1.4 and promotes the Cremers material out of §1.5. The
 section's function has changed: it is no longer the setup for a wonkiness mechanism, but the first
@@ -398,9 +407,9 @@ project's "scalar vagueness resolution" keyword.*
   single density rather than in sequence.
 ---
  
-# Part II. Predictive coding, its commitments, and the constraint that generates the answers (about 1,440 words)
+# Part II. Predictive coding, its commitments, and the constraint that generates the answers (about 1,570 words)
  
-## 2.1 FEP, generative models, and Bayesian model inversion (about 210 words)
+## 2.1 FEP, generative models, and Bayesian model inversion (about 235 words)
  
 - **Main claim to establish:** The free-energy principle provides a variational formulation of how an
   adaptive system can maintain a generative model and infer hidden causes of observations;
@@ -417,6 +426,16 @@ project's "scalar vagueness resolution" keyword.*
   could implement it); and a **neurally-implemented circuit** claim (a mapping onto cell types,
   layers, connectivity). The dissertation makes claims at the first two and declines the third,
   **with one named exception** — §2.7 gives the reason and the exception.
+- **One sentence on what the algorithmic claim costs, because it is not free.** That claim carries
+  the architecture's **commitment 7** (§3.4) — one of the model's *own* commitments, numbered in
+  its own list, and **not** one of §2.2's three canonical ones; say which list once, here, because
+  the two are otherwise a numbering trap. The error units are held to
+  \(\tau_\varepsilon\le\tau_\varphi/(4\lambda_{\max}(H))\), a separation that tightens as
+  \(\theta_u^2\), and what it secures is the *monotone* rise of \(\mathcal F\) rather than
+  convergence. It is **measured**, not assumed, and §5.3 prices it as a liability of the
+  plausibility claim rather than as a detail of the schedule. One sentence and a forward pointer:
+  the background defines neither \(H\) nor \(\theta_u\), and §2.6 is where the ordering it
+  sharpens is stated.
 - **Counterargument/qualification:** do not equate this mapping with RSA's social recursion.
   Bidirectional generative/inference flow is not nested reasoning about a speaker reasoning about a
   listener. The proposal borrows RSA's likelihood structure while using predictive-coding dynamics
@@ -424,7 +443,7 @@ project's "scalar vagueness resolution" keyword.*
 - **Scope caveat:** FEP is a broad principle, not a language-specific theory. It constrains the form
   of inference and learning; it does not supply scalar alternatives or lexical semantics
   (Colombo & Wright, 2021).
-## 2.2 Three commitments of the canonical framework (about 230 words)
+## 2.2 Three commitments of the canonical framework (about 245 words)
  
 *New, and the backbone of Part II: §§2.3–2.5 develop one commitment each, and §2.7's caveats attach
 to them rather than floating free.*
@@ -435,7 +454,7 @@ to them rather than floating free.*
 |---|---|---|---|
 | **1. A unified objective** | One functional — variational free energy — is minimized by perception, learning and action alike (Friston, 2008, 2010) | State inference and parameter learning fall out of one quantity, and the same objective yields both sets of dynamics | Taken. It is what makes the strict concavity of §3.4 and the closed forms meaningful rather than incidental, and §4.3 tests them |
 | **2. Local computation and local plasticity** | A unit updates from its own afferents; a synapse updates from the activities it connects (Bogacz, 2017) | That the algorithm could be carried by neurons at all | Taken as a **design constraint on the build**, and treated as generative. **This is the dissertation's answer to the first question** |
-| **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.5 records as a limit |
+| **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.5 records as a limit. It is also what makes the delta at the settled state a **posterior** rather than a summary of one, which is what lets §3.6 offer it as a read-out at all |
  
 - **The scoping sentence.** No measurement shows that cortex minimizes one objective rather than
   several; locality is a desideratum imported from what neurons plausibly can do rather than a
@@ -499,7 +518,9 @@ in Part II; the previous draft's 250 words were thinner than the load it bears.*
   as optional.
 - **The move that makes the first question a thesis rather than a methodological note.** Locality is
   **generative**: §3.5 derives the utility basis dimension from it, §5.1 derives binary branching
-  from it, and Appendix E pays a fourth timescale to keep it at \(m>1\). Say here that the
+  from it, and Appendix E buys it back at \(m>1\) with a relay, at the cost of a fourth
+  timescale — which under commitment 7 is an **ordering**, \(\tau_r\le\tau_\varepsilon\), and
+  not a stability requirement the relay carries of its own (F26). Say here that the
   dissertation treats an implementation constraint as a *source of structure*, and that Part I's
   three questions will be answered from it.
 - **Potential neural support, kept proportionate:** canonical-microcircuit proposals associate
@@ -507,9 +528,10 @@ in Part II; the previous draft's 250 words were thinner than the load it bears.*
   language-focused work has proposed related beta/gamma dynamics during sentence comprehension
   (Lewis & Bastiaansen, 2015). **Label these as circuit-level claims the dissertation does not itself
   make**, per §2.1's three-way vocabulary.
-## 2.5 What this architecture does not use (about 60 words)
+## 2.5 What this architecture does not use (about 110 words)
  
-*Replaces the previous draft's 300-word precision subsection. Kept as its own heading so a reader
+*Raised 60 → 110 at BG7: the 60 was a minimum budget handed a second move, which repeats §5.6's
+failure. Replaces the previous draft's 300-word precision subsection. Kept as its own heading so a reader
 arriving from the FEP literature finds the absence stated rather than having to infer it.*
  
 - Precision weighting is the standard mechanism by which a predictive-coding model modulates the
@@ -521,19 +543,29 @@ arriving from the FEP literature finds the absence stated rather than having to 
   argued to make the framework flexible enough to accommodate findings after the fact (Walsh et al.,
   2020, citing Kogo & Trengove, 2015). Dropping precision inference **sidesteps that concern for the
   model built here rather than resolving it**, and is a scope narrowing, not a rebuttal.
-## 2.6 Timescales, bidirectional flow, and joint settlement (about 220 words)
+## 2.6 Timescales, bidirectional flow, and joint settlement (about 250 words)
  
 *This is the dissertation's answer to the second question. Note the warrant: the claim is about
 **staging**, not about message direction.*
  
-- **Timescale separation.** \(\tau_\varepsilon \ll \tau_\varphi \ll \tau_\theta\): error units relax
-  toward their residuals, state units ascend the objective, and the slow parameter follows Bogacz's
-  own gradient. Bogacz (2017) distinguishes rapidly changing neural activities representing inferred
-  states and errors from synaptic parameters encoding learned regularities.
+- **Timescale separation, and it is a commitment rather than an ordering.**
+  \(\tau_\varepsilon\le\tau_\varphi/(4\lambda_{\max}(H))\ll\tau_\varphi\ll\tau_\theta\):
+  error units relax toward their residuals, state units ascend the objective, and the slow parameter
+  follows Bogacz's own gradient. Bogacz (2017) distinguishes rapidly changing neural activities
+  representing inferred states and errors from synaptic parameters encoding learned regularities,
+  and the bound on \(\tau_\varepsilon\) is **ours and not his** (§2.1, commitment 7): it is
+  critical damping of the stiffest mode, it tightens as \(\theta_u^2\), and what it secures is
+  the monotone rise of \(\mathcal F\), not convergence — which §5.5 records and §5.3 prices.
   - **There is no learning rate and none is required:** the constant of proportionality is a time
     constant of the kind the error and state units already carry. Worth one sentence, because it is
     where the model differs from a fitted network.
-  - Appendix E adds a fourth timescale; mention, do not develop.
+  - **The slow parameter is learned, and its flow starts at \(\theta_u(0)=0\)** — one start
+    shared by every configuration, and there the network is the **tempered control** rather than
+    the literal listener (§4.1 names both). Worth one sentence: it is why §4's readings are
+    displacements from a control the model passes through, and not from a baseline stipulated
+    beside it.
+  - Appendix E adds a fourth timescale, ordered \(\tau_r\le\tau_\varepsilon\) as in §2.4;
+    mention, do not develop.
 - **Bidirectional flow.** Predictions descend the chain and errors ascend it, and every intermediate
   level is both predicted and predicting.
 - **The consequence for staging, which is the point of the subsection.** Because the lexical field
@@ -548,7 +580,7 @@ arriving from the FEP literature finds the absence stated rather than having to 
 - **Counterargument/qualification:** updating the slow parameter once per utterance is closer to
   empirical-Bayes parameter learning than to a fully derived canonical predictive-coding circuit.
   The methods section specifies the schedule.
-## 2.7 Limits, and the level of the claim (about 200 words)
+## 2.7 Limits, and the level of the claim (about 210 words)
  
 - **Main claim to establish:** The framework's standing is contested in ways that bear on any model
   built in it, and the dissertation's own claims are scoped by level rather than hedged by label.
@@ -570,8 +602,12 @@ arriving from the FEP literature finds the absence stated rather than having to 
 - **Close on claim level, not on apology.** The model is a predictive coding model at the
   **algorithmic** level and makes no general circuit-level claim — **with one exception that should
   be named rather than swallowed: Appendix E's relay is a circuit-level proposal**, modest but
-  genuinely implementational, and it carries a testable consequence in the required speed of the
-  relay. The model is linear-Gaussian while the lexical field is clamped, which is what makes the
+  genuinely implementational. **Its content is not the relay's speed.** Under commitment 7 the
+  relay's requirement collapses into the ordering \(\tau_r\le\tau_\varepsilon\) and binds
+  nothing further (F26), and what a slower relay breaks is the monotone rise of \(\mathcal F\) —
+  a transient, not a failure to converge. The implementational commitment carrying empirical content
+  is **commitment 7's separation itself**, which grows as \(\theta_u^2\) and which §5.3 prices.
+  The model is linear-Gaussian while the lexical field is clamped, which is what makes the
   closed forms exact and the implementation claim testable.
 - **Do not hedge the generative model.** The continuous log-odds state, the exclusion-set lexical
   representation, utility as the terminating level, unit variances, and the two-dimensional utility

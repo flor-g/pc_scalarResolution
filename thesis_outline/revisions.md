@@ -1467,7 +1467,20 @@ including the direction of §4.5's two opposing floors. Every section has a body
 
 ---
 
-### Tier 1 — §6's unapplied items
+### Tier 1 — §6's unapplied items — **ALL SIX APPLIED 2026-09-22**
+
+**BG1–BG6 and BG7 are closed** (commit recorded below). The table stays as the record of what each
+site said before. Two things worth carrying forward:
+
+- **A numbering trap was found while applying BG2.** The background now names two lists of
+  "commitments" — §2.2's three canonical ones and the architecture's own, of which commitment 7 is
+  the timescale bound. §2.1 states which list it is drawing on, once, and §2.7's "parallel in form
+  to §2.2's three" refers to a third. **Do not renumber either list without sweeping the other.**
+- **Nothing measured entered the background.** BG4–BG6 state commitment 7 and the relay symbolically
+  — \(\tau_\varepsilon\le\tau_\varphi/(4\lambda_{\max}(H))\), \(\tau_r\le\tau_\varepsilon\),
+  growth as \(\theta_u^2\) — and quote none of F26's measurements. C6 exposure is still nil, and
+  the background should stay that way: §§4 and 5 are where the numbers live.
+
 
 Each is specified in §6 above; the entry here gives the current text so the site is unambiguous.
 
@@ -1485,7 +1498,7 @@ background, though §§3.4, 4.6 and 5.3 all rest on it and §2.6 is its natural 
 
 ---
 
-### BG7 — the word table, under the user's ruling
+### BG7 — the word table, under the user's ruling — **APPLIED 2026-09-22**
 
 **Ruling (user, 2026-09-22): the budget is expanded so the contents fit.** The background's total
 follows what the sections have to carry; nothing is trimmed to preserve a number. This is R8's
@@ -1520,6 +1533,11 @@ Three discrepancies are determinate now, and two sections are underbudgeted:
 
 BG4 and BG6 are rewrites in place and carry their own small increments above. **Re-sum the table
 when BG1–BG6 are drafted**; the numbers above are allocations, not measurements.
+
+**Applied, and the table now balances at every level** — 245 + 2,115 + 1,570 + 120 = **4,050**, with
+both Part headers equal to their own subsections. **Each budget has two sites**, the bullet in
+*Scale and argumentative shape* and the section heading itself; the first pass changed only the
+bullets and the check caught it. Sweep both.
 
 ---
 
