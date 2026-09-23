@@ -609,12 +609,14 @@ contrast (R20, P-10).
     $\theta_u$. The four diffuse priors' peaks move *up*, to $0.9072$, $0.9168$, $0.8966$ and
     $0.9168$ from $0.5000$, $0.5000$, $0.2535$ and $0.7465$. So **under the read-out §3.6 prefers
     the conjunction holds under the delta-like prior alone, where under $q$ it holds under three of
-    the five.** Say it in the same breath as the q count and never on its own. *(Writer's note:
-    the **8 rows are 5 priors and 3 repeats** at a realizable $\theta_u$, so "one of five" is read
-    off the printed verdict columns rather than printed as a count — which is why the sentence
-    above names the prior instead of quoting a tally. Code Cell 2b prints its q counts over distinct
-    priors and its mode counts over rows; a one-line addition to `delta_readout_report` would print
-    the mode counts over priors too, and until it does, C6 is met by naming the row.)*
+    the five.** Say it in the same breath as the q count and never on its own. *(Writer's note: the **8 rows
+    are 5 priors and 3 repeats** at a realizable $\theta_u$, so a count over rows is not a count
+    over priors. Since 2026-09-23 the cell prints **both**: over the five distinct priors, one row
+    each at its own $\theta_u^\ast$, **the mode shift criterion under 1, the mode position criterion
+    under 5, both under 1, against the q criteria's 3, 5 and 3** — the same form the q blocks above
+    use, so either count may be quoted (C6). It also prints that each repeat carries the same four
+    verdicts as its own $\theta_u^\ast$ row. Naming the prior is still the better sentence, because
+    it says *which*.)*
   - *The mode position criterion is already met by $\ell_0$ alone* on those four: the cell of
     *all* starts at $s=0.9500$, and every one of the four priors peaks outside it before the model
     is run. Nothing is shown by a criterion its own baseline meets. **The same holds at

@@ -672,12 +672,17 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     and B11.** Both are printed; neither is new code.
     - *The five priors at Lambda = 512, from Code Cell 2b's mode block.* The mode position
       criterion is met in all 8 printed rows and the mode shift criterion in 2 (the delta-like
-      prior at theta_u\* and at its realizable theta_u). **Those two counts are printed; the counts
-      over distinct priors are not** — the 8 rows are 5 priors and 3 repeats at a realizable
-      theta_u, so "mode position 5 of 5, mode shift 1 of 5, against q's 5 and 3" is read off the
-      printed verdict columns. The prose names the prior instead of quoting that tally (C6); a
-      one-line addition to `delta_readout_report` would print the mode counts over priors as the
-      cell already prints its q counts. The four diffuse priors' peaks
+      prior at theta_u\* and at its realizable theta_u). The 8 rows are 5 priors and 3 repeats at a
+      realizable theta_u, so a count over rows is not a count over priors. **Both are now printed**
+      (see the 2026-09-23 code finding below): over the five distinct priors, one row each at its
+      own theta_u\*, **mode shift 1, mode position 5, both 1, against q's 3, 5 and 3**.
+  - **2026-09-23, the code change that closed the C6 gap this finding opened.**
+    `delta_readout_report` keeps the four verdicts per row and prints a second tally over distinct
+    priors beside the row tally, in the same form the q blocks use, plus a line giving how many rows
+    repeat a prior at a realizable theta_u and whether each repeat carries the same four verdicts as
+    its theta_u\* row (it does, in both cells). The addition sits inside the existing function, so
+    I10's rule holds and Code Cell E3's replay needs no new call; it is mirrored verbatim into E2
+    (I7). Both notebooks re-executed. The four diffuse priors' peaks
       move **up**, to 0.9072, 0.9168, 0.8966 and 0.9168 from mode(ell_0) 0.5000, 0.5000, 0.2535 and
       0.7465, so **the delta-like prior is the only row at either Lambda whose baseline starts
       inside the cell of *all***, and the only one where meeting the mode position criterion is the
