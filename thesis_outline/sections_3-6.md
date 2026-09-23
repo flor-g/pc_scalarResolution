@@ -540,6 +540,36 @@ contrast (R20, P-10).
   between $3.5\times10^{4}$ and $3.6\times10^{7}$. §4.6 takes it up.
 ---
  
+## 4.6 What the verdict needs, against what $\theta_u^\ast$ costs (about 100 words)
+
+**Evidence for §5.3, reported without interpretation.** Every row is the delta-like prior at
+$\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
+
+- **The conjunction arrives early.** It first holds at $|\theta_u|=2.126$, where
+  $\lambda_{\max}(H)=6.5$ and commitment 7 demands a separation $4\lambda=26$. Eq. (20) from
+  $\theta_u=0$ passes that value **in one update**. Whatever makes this row expensive, it is not
+  the conjunction.
+- **What the flow actually reaches is where it halts** — its own update having fallen below the
+  tolerance, the only stopping rule the model has, and an **ad hoc** value (A19). That is
+  $\theta_u=34.695$, after $7$ updates. The integrated run there ($242{,}163$ Euler steps) gives
+  $\Delta_{\textit{some}}=-0.5208$ and $q_H=0.4361$: **both criteria met, in the dynamics and not
+  only in closed form.** There $\lambda_{\max}(H)=1205.8$, a demanded separation of $4{,}823$.
+- **What $\theta_u^\ast$ would cost.** The same inference at $\theta_u^\ast=1407.77$ would take
+  $3.98\times10^{8}$ steps at a separation of $7.9\times10^{6}$ — hours on the machine that ran it.
+  Quote the step count and the separation, not the wall clock: the hours sit on a `cost:` line and
+  move with the machine (`agent.md` §5.2).
+- **And $\theta_u^\ast$ is not what the flow reaches.** Code Cell 2b says so in its own output:
+  $\theta_u^\ast$ lies orders of magnitude beyond both the conjunction's threshold and the halt,
+  and **this integrator does not reach it at all**. That $\theta_u^\ast$ *is* the maximizer rests
+  on the closed form and the monotone rise, not on an integration.
+  *(Writer's note, not for the paper: the sharper statement — not within $0.1\%$ of
+  $\theta_u^\ast$ after $5{,}000$ updates, F15 of `procedure_records/theta_u_learned_reach.md` —
+  is **class (e)**. No cell prints it, and I8, which once licensed recorded scripts as sources, is
+  superseded by C6 and I10. Do not reinstate those figures unless a cell prints them.)*
+- **Report, and stop.** §5.3 is where the cost is interpreted, and §5.5 is where the tolerance's own
+  locality debt (D12) is admitted. This section states neither.
+---
+ 
 # 5. Discussion (about 1,690 words)
  
 ## 5.1 What an alternatives level would have to supply (about 390 words)

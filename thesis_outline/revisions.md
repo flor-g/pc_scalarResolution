@@ -419,8 +419,8 @@ of contrast, retitled "The five priors", heading 220 → 285.
   it for the four diffuse rows.
 - **APPLIED 2026-09-22**, §3.6 now defining the read-outs: item 1's delta read-out results are in
   §4.4, each with its Λ named, and with the guard that neither read-out is the corrected version of
-  the other. §4.4 285 → 355. The §4.6 pointer is still one sentence pointing to a section not yet
-  written.
+  the other. §4.4 285 → 355. **The §4.6 pointer now points at a section that exists** (written
+  2026-09-22).
 
 ### §4.5 (lines 298–317)
 
@@ -457,7 +457,26 @@ of contrast, retitled "The five priors", heading 220 → 285.
   slopes match Eq. (41) to within **4.1%**, not 4% (ratio 1.041 at θ_L = 1). The V refers to the
   delta read-out's criteria by §3.6 and R12, which §3.6 must define when it is written.
 
-### §4.6 What the verdict needs, against what θ\* costs (new, about 100 words)
+### §4.6 What the verdict needs, against what θ\* costs — **WRITTEN 2026-09-22** (about 100 words)
+
+**The body is now in `sections_3-6.md`**, between §4.5 and §5, at its allocated 100 words — no
+budget change. It carries the four items below, with two departures from the plan as written:
+
+- **F15's figures are cut.** "Not within 0.1% of θ\* after 5,000 updates" is **class (e)**: no cell
+  prints either number, and **I8 — which once licensed recorded scripts as sources — is superseded
+  by C6 and I10**. The point survives on what Code Cell 2b prints in its own output, that θ\* lies
+  orders of magnitude beyond both the conjunction's threshold and the halt and that the integrator
+  does not reach it at all; that θ\* *is* the maximizer rests on the closed form and the monotone
+  rise. A writer's note in §4.6 records the cut so the figures are not reinstated.
+- **The wall clock is not quoted as a number.** "About 5.0 hours" sits on a `cost:` line and moves
+  with the machine (runs this session printed 4.8, 5.0 and 5.1 h for the same 3.98e8 steps).
+  §4.6 quotes the **step count and the separation**, and says "hours on the machine that ran it",
+  per `agent.md` §5.2.
+
+Every other figure was verified against the stored output before it was written in: 2.126, 6.5, 26,
+34.695, 7 updates, 242,163, −0.5208, 0.4361, 1205.8, 4,823, 3.98e8, 7.9e6, 1407.77.
+
+#### The plan, as written
 
 Evidence for §5.3, reported without interpretation:
 
