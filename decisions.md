@@ -774,22 +774,6 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - A number computed off-notebook, or only by a script recorded in a change record, does not count
   as sourced. Supersedes the allowance of I8.
 
-### C5a. Section references inside the notebooks
-- Decided by: **agent, pending user confirmation (2026-09-22)**
-- **Decision.** A reference of the form §N.M means a *headed subsection* of Text cell 3, of which
-  only §§8.1-8.6 and §§9.1-9.3 exist. It does **not** mean "item M of the numbered list in §N".
-  Three sites used it that way and are rewritten: Text cell 4's "(§3.3)" for the utility basis,
-  which is item 3 of §3, and Appendix D's two "§4.2" for g_L, which is item 2 of §4. They now read
-  "Text cell 3 §3, item 3" and "Text cell 3 §4, item 2".
-- **Theoretical reason:** none; this is notation.
-- **Implementational reason:** composition guide Entry 5c. The notation was never declared, and it
-  collides with the real subsection numbering, so a reader who follows §4.2 finds no §4.2 and cannot
-  tell whether the reference or their reading is wrong.
-- **Bogacz status:** not applicable. His own §5.1 is cited as "his §5.1" and is unaffected.
-- **Depends on it:** Text cell 4 Part C, Appendix D §§3 and 5.
-- **Evidence:** Text cell 3 carries anchors tc3-1..tc3-9 plus tc3-8-1..8-6 and tc3-9-1..9-3, and no
-  §3.3 or §4.2 appears anywhere in that cell.
-
 ### C5. Reader-facing text
 - Decided by: not recorded (set 2026-09-07); punctuation 2026-09-08; spacing and numbering chosen by
   the user 2026-09-09
@@ -820,6 +804,18 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   parentheses, or a recast), never global. And five of the ASCII sites sit inside `print` strings, so
   fixing them **changes stored output and needs both notebooks re-executed**; the other forty-five
   are comments and docstrings and do not.
+- **Finding, 2026-09-22: §N.M means a headed subsection, and three sites used it for a list item.**
+  Text cell 3's headed subsections are §§1-9 with §§8.1-8.6 and §§9.1-9.3 beneath them; there is no
+  §3.3 and no §4.2. Three references used §N.M for "item M of the numbered list in §N" instead:
+  Text cell 4 Part C's "(§3.3)" for the utility basis, item 3 of §3, and Appendix D §§3 and 5's two
+  "§4.2" for g_L, item 2 of §4. The content was right and the pointer was unfollowable, which is
+  composition guide Entry 5c: the notation was never declared and it collides with the real
+  subsection numbering, so a reader who follows §4.2 finds nothing and cannot tell whether the
+  reference or their reading is at fault. All three now read "Text cell 3 §N, item M".
+  **This is the agent's reading of an undeclared convention, not the user's ruling** (agent.md
+  §3.1); it is recorded here rather than as its own entry because reader-facing text is what C5
+  covers, and because there is no C5a in the ID scheme. Bogacz's own sections keep the "his §5.1"
+  form and are untouched.
 
 ---
 
