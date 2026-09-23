@@ -800,6 +800,51 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     criteria.
 - Guard carried with it wherever it is stated: **where the baseline already meets a criterion,
   nothing is shown by the model meeting it.**
+- **Fourth clause, added by the user 2026-09-23: what the conjecture is worth as motivation.**
+  - **The complexity saving is the primary motivation for the alternatives level, and R2 stands**
+    unchanged. The reason is epistemic: the saving is derived from the construction and depends on
+    no prior data, so it survives a change of data.
+  - **The conjecture is the secondary motivation.** The measurements show the shift criterion is
+    inconsistent *in this model*, which has no within-trial competition; "inconsistent without
+    within-trial competition" is the conjecture, not the measurement.
+  - **A shift after the level is built would be welcome, not required.** No obligation of Sec. 5.1
+    is contingent on it.
+  - **Whether scalar implicature must entail a shift beyond a position change is not settled, and
+    the obstacle is what the quantity is rather than what instruments reach** (the user asked for
+    this to be verified; the agent's verification is the finding below). The reason the shift is
+    wanted is in the first instance introspective, which is a real datum about the explanandum and
+    not one that outranks a motivation needing no datum at all.
+- **Finding, 2026-09-23 (agent): the verification the user asked for, and the one narrowing it
+  needs.** The claim checked was that the quantitative evidence which would establish whether
+  scalar implicature must entail a shift is beyond elicitation or current technology.
+  - **Upheld in the form that does the work.** The shift compares two distributions over the scale
+    with the prior held fixed. The settled belief is elicitable (Xiang et al., 2022, whose graded
+    five-point judgments this dissertation already runs against; Chemla & Spector, 2011, for graded
+    interpretation judgments as a method). The prior is elicitable (Degen, Tessler & Goodman, 2015;
+    Cremers, Wilcox & Spector, 2023). **The literal listener is not.** It is defined by holding the
+    prior and the truth conditions fixed while removing the pragmatic computation, and no
+    behavioural condition instantiates that: a "literal" condition in the literature manipulates the
+    speaker's epistemic state, which changes the inference rather than suspending it, and returns a
+    rate rather than a distribution over the scale. Geurts & Pouscoulous (2009) show how far a
+    measured rate moves with the task it is collected in. In every probabilistic account that has
+    one, the literal listener is computed from an elicited prior and a stipulated semantics, which
+    is what it is here too (A3, B1, Sec. 4.1: q_lit is a fixed point of this network).
+  - **Two things strengthen it.** Degen et al.'s *Wonky worlds* shows the prior is revised by the
+    utterance, so "held fixed across both" is not innocent even where the prior is measured. And a
+    reported literal-versus-pragmatic gap is a model output compared with data, not a measured
+    difference of two belief states.
+  - **The narrowing.** Do not write "beyond any current technology". A literal *reading* can be
+    manipulated experimentally, and the objection to those designs is not precision but that the
+    condition is a different pragmatic state, not the absence of one. The durable claim is that
+    **the baseline is a modelling construct rather than an observable**, so any empirical shift
+    claim is relative to a stipulated semantics and an elicited prior. This is stronger than an
+    instrument claim, which would invite waiting for better instruments; no advance changes what
+    the quantity is.
+  - **Not claimed:** that the shift is unmeasurable in principle, or that studies using an
+    ignorant-speaker or task manipulation are uninformative. They are informative about interpretive
+    differences between conditions; they do not deliver the literal listener.
+  - Applied in `thesis_outline/sections_3-6.md` Sec. 5.1 (the frame and the fourth bullet) and the
+    central claim, as PP10 of `revisions.md` Sec. 11.
 
 ---
 

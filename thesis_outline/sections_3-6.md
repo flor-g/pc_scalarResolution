@@ -1,7 +1,7 @@
 Sections 3 6 outline · MD
 # Outline for the proposal, evaluation, and discussion sections
  
-Scope: §§3–6, approximately **5,060 words**, which is what this file's own word table sums to and
+Scope: §§3–6, approximately **5,160 words**, which is what this file's own word table sums to and
 the figure to trust (`revisions.md` §3 is the historical plan; the raises are listed above the table). Written against
 `main.ipynb` (Text cells 1–6, Code Cells 1–4, Appendices A–D with Code Cells A–D, Eqs. (1)–(41))
 and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
@@ -49,6 +49,10 @@ level would save:
 the absent level would supply** — with neither standing as the criterion of strengthening on its
 own, which is why §4.2 takes the conjunction. It is argued from §4.5's opposed floors and §4.4's
 rows, under the guard §4.2 sets on $n$ and $Z$, and nothing here measures a level that is not built.
+**It is the second motivation and not the first.** The case for the level is the complexity it
+saves (R2), which is derived from the construction and needs no datum; the conjecture is about what
+*this* architecture cannot deliver, and whether strengthening must be a shift at all rests on a
+baseline that is a construct in every account that has one (§5.1). Do not let the order slip.
 
 **Such a level is compatible with this architecture; it is specified here and not
 built.** What the dissertation contributes in its place is that specification: the construction the
@@ -125,7 +129,7 @@ it carries four predictions and R27 had added the H1 reservation to the fourth w
 → **4,270** (§3.4 230 → 290 the same day, at **BG13**: commitment 7 in its exact form, conditioning,
 and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been applied) → **5,060**
 (2026-09-23, the two positions of §11 of `revisions.md`: §3.6 100 → 190, §4.2 480 → 525, §4.4 355 → 415,
-§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225). The "was" column is the 2,400 allocation this outline was written to.
+§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225) → **5,160** (the same day, §5.1 460 → 560 at PP10). The "was" column is the 2,400 allocation this outline was written to.
 
 **The running chain above does not reconcile with the rows, and the rows are what to trust.** Before
 this entry the chain read 4,270 while the rows summed to 4,730: four raises were applied to rows
@@ -149,15 +153,15 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 4.4 The five priors | 220 | **415** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
 | 4.5 The plane, and where both conditions hold | 165 | **370** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,980** | |
-| 5.1 What an alternatives level would have to supply | 390 | **460** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5) |
+| **5. Discussion** | 705 | **2,080** | |
+| 5.1 What an alternatives level would have to supply | 390 | **560** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5); **+100 the same day for the order of the two motivations, and why the conjecture stays second** (PP10) |
 | 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **800** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
 | 5.5 Limits (was 5.3) | 65 | **300** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **225** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **5,060** | |
+| **Total** | **2,400** | **5,160** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -721,14 +725,20 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   locality debt (D12) is admitted. This section states neither.
 ---
  
-# 5. Discussion (about 1,980 words)
+# 5. Discussion (about 2,080 words)
  
-## 5.1 What an alternatives level would have to supply (about 460 words)
+## 5.1 What an alternatives level would have to supply (about 560 words)
  
 **Frame the section as a specification, not a concession.** The claim is not that this architecture
 excludes within-trial competition. It is that adding a level is a construction with four stated
 obligations, that the present results discharge part of each, and that the architecture's own
 results point at which design is the tractable one.
+
+**And state the order of the motivations in the frame, because the section carries two and they are
+not of equal weight.** **The complexity saving leads**, and it leads for an epistemic reason rather
+than a rhetorical one: it is derived from the construction and needs no datum to be true, so it
+survives a change of data. R2 rests the level on it and **R2 stands**. The conjecture about
+consistent shift is the **second** motivation, and the bullet below says what keeps it second.
  
 - **What the criterion adds to the case, and where it is sourced (P-8).** The case for the level is
   the complexity it saves (R2; the design below). The criterion adds one thing the level would
@@ -780,6 +790,50 @@ results point at which design is the tractable one.
      sits outside the cell of *all* while $0.5615$ of the mass sits inside it. That row is §4.2's
      guard on $n$ made concrete, and it is why 3 is written as a reading of the measurements rather
      than as a property of the criteria.
+- **What weight that conjecture carries, and why it does not outrank the complexity argument.**
+  Put this immediately after the conjecture, or a reader who has just read it will take it for the
+  case. Four moves.
+  1. **The conjecture is about this architecture, and the prose should say so.** What §§4.4 and 4.5
+     show is that the shift criterion is inconsistent **in this model**, which has no within-trial
+     competition. The step from there to *inconsistent without within-trial competition* is the
+     conjecture, not the measurement: one architecture is one architecture. Write the model-relative
+     version. Nothing in this section needs the stronger one.
+  2. **A shift would be welcome, not required.** Say the hope plainly: a level carrying the
+     alternative would be expected to deliver the shift too, and that would be a result worth
+     having. It is not a condition on the design, and no obligation below is contingent on it.
+  3. **Why it cannot be promoted, and the obstacle is not instrument precision.** The shift is a
+     **comparison of two distributions over the scale**, the settled belief against the literal
+     listener, with the prior held fixed across both. Two of those three quantities can be asked
+     for and the third cannot.
+     - *The settled belief can.* Xiang et al. (2022) elicit graded judgments over a five-point
+       scale, which is the measurement §5.2 already runs against, and Chemla and Spector (2011)
+       establish graded interpretation judgments as a method.
+     - *The prior can*, and Degen, Tessler and Goodman (2015) and Cremers, Wilcox and Spector
+       (2023) elicit it precisely to drive a prediction. Note the complication in the same breath:
+       *Wonky worlds* shows the prior is **revised by the utterance**, so "held fixed across both"
+       is not an innocent premise even where the prior is measured.
+     - *The literal listener cannot.* It is defined by holding the prior and the truth conditions
+       fixed while removing the pragmatic computation, and **no behavioural condition instantiates
+       that**. Where the literature supplies a "literal" condition it manipulates the speaker's
+       epistemic state, which changes the inference rather than suspending it, and what it returns
+       is a **rate**, not a distribution over the scale. Geurts and Pouscoulous (2009) show how far
+       the measured rate moves with the task the judgment is collected in. In the probabilistic
+       accounts the literal listener is **computed**, from an elicited prior and a stipulated
+       semantics, which is exactly what it is here: §4.1 says $q_{\mathrm{lit}}$ is a fixed point of
+       this network rather than an external construction, and that is a virtue **inside** the model
+       and the reason it has no counterpart outside one.
+     **State the conclusion as a claim about what the quantity is, not about what instruments
+     reach.** The position criterion is one distribution against a threshold, both of which a person
+     can be asked for. The shift criterion is stated against a baseline that is a construct in every
+     account that has one, so any empirical claim of the form *strengthening is a shift* is relative
+     to a stipulated semantics and an elicited prior. Written that way the point does not expire;
+     written as a limit of current methods it invites "wait for better methods".
+  4. **And say where the wanting comes from, in one sentence and without contempt for it.** That
+     strengthening should be a shift and not only a position is, in the first instance, something we
+     introspect: hearing *some*, one takes oneself to have moved **away from** *all*, not merely to
+     have landed below it. That is a real datum about the explanandum and it is the source of the
+     framing the background sets out. It is also not the kind of thing that outranks a motivation
+     needing no datum at all, which is move 1 of the frame and the whole of R2.
 **The design: resolution as a negative search.** State the position, because it is what makes the
 remaining obligations answerable rather than open.
  
