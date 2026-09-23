@@ -12,7 +12,8 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
  
 ## Scale and argumentative shape
  
-- **Target length: approximately 4,050 words.** Raised from 3,670 on 2026-09-22 under BG7: the
+- **Target length: approximately 4,090 words.** Raised from 4,050 on 2026-09-23 (§2.2, for what
+  commitment 3 is a commitment *about*; PP7 of `revisions.md` §11). Raised from 3,670 on 2026-09-22 under BG7: the
   budget follows what the sections have to carry, and is not trimmed to preserve a number (the
   user's ruling, R8's successor for the background). The old figure also **omitted the Opening**,
   summing Part I, Part II and the bridge alone.
@@ -24,7 +25,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
   accounts deriving it *from the prior* carry a documented liability; and that the debates over
   which level a pattern belongs to share a presupposition about staging.
 - **Part II — Predictive coding, its commitments, and the constraint that generates the answers
-  (about 1,570 words).** Only the parts the model uses, organized around the framework's three
+  (about 1,610 words).** Only the parts the model uses, organized around the framework's three
   commitments, with locality carrying the most weight because it is Q1's answer.
 - **Closing bridge (about 120 words).** The three questions restated, and the standing qualification.
 ### Terminological corrections carried through the dissertation
@@ -409,7 +410,7 @@ project's "scalar vagueness resolution" keyword.*
   single density rather than in sequence.
 ---
  
-# Part II. Predictive coding, its commitments, and the constraint that generates the answers (about 1,570 words)
+# Part II. Predictive coding, its commitments, and the constraint that generates the answers (about 1,610 words)
  
 ## 2.1 FEP, generative models, and Bayesian model inversion (about 235 words)
  
@@ -445,7 +446,7 @@ project's "scalar vagueness resolution" keyword.*
 - **Scope caveat:** FEP is a broad principle, not a language-specific theory. It constrains the form
   of inference and learning; it does not supply scalar alternatives or lexical semantics
   (Colombo & Wright, 2021).
-## 2.2 Three commitments of the canonical framework (about 245 words)
+## 2.2 Three commitments of the canonical framework (about 285 words)
  
 *New, and the backbone of Part II: §§2.3–2.5 develop one commitment each, and §2.7's caveats attach
 to them rather than floating free.*
@@ -456,7 +457,7 @@ to them rather than floating free.*
 |---|---|---|---|
 | **1. A unified objective** | One functional — variational free energy — is minimized by perception, learning and action alike (Friston, 2008, 2010) | State inference and parameter learning fall out of one quantity, and the same objective yields both sets of dynamics | Taken. It is what makes the strict concavity of §3.4 and the closed forms meaningful rather than incidental, and §4.3 tests them |
 | **2. Local computation and local plasticity** | A unit updates from its own afferents; a synapse updates from the activities it connects (Bogacz, 2017) | That the algorithm could be carried by neurons at all | Taken as a **design constraint on the build**, and treated as generative. **This is the dissertation's answer to the first question** |
-| **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.5 records as a limit. It is also what makes the delta at the settled state a **posterior** rather than a summary of one, which is what lets §3.6 offer it as a read-out at all |
+| **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.5 records as a limit. It is also what makes the delta at the settled state a **posterior** rather than a summary of one, which is what lets §3.6 offer it as a read-out at all — and §3.6 goes further and prefers it, on the bullet below |
  
 - **The scoping sentence.** No measurement shows that cortex minimizes one objective rather than
   several; locality is a desideratum imported from what neurons plausibly can do rather than a
@@ -469,6 +470,14 @@ to them rather than floating free.*
   are Gaussian. A non-Gaussian generative model would not yield subtractive error units at all.
   **Cross-refer forward to §2.7's negative-firing-rate problem**, which is the same issue seen at the
   circuit level.
+- **And what commitment 3 is a commitment *about*, which §3.6 turns into a choice of read-out.**
+  Gaussian, or Laplace-approximated as such, is a claim about **representational cost** before it is
+  a claim about algebra: an arbitrary density over a state space has to be carried value by value,
+  a Gaussian by two numbers, and the framework's wager is that a system of this kind pays the second
+  price and not the first. One sentence here, with the forward pointer, because **§3.6's position on
+  the two read-outs rests on it**: a read-out that needs the whole field normalized across the state
+  space asks for the object this commitment says is not represented. Keep it to the commitment's own
+  motivation. The argument from it belongs to §3.6, and nothing measured enters the background (BG7).
 ## 2.3 Variational free energy: the objective actually minimized (about 190 words)
  
 *Commitment 1 in detail. Shortened from the previous draft's 300 words, since §2.2 now introduces

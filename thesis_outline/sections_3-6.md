@@ -1,7 +1,8 @@
 Sections 3 6 outline · MD
 # Outline for the proposal, evaluation, and discussion sections
  
-Scope: §§3–6, approximately 3,610 words (`revisions.md` §3: R1, S-6, P-3, and the two 2026-09-22 raises — §5.5 for A19, §4.2 for R25). Written against
+Scope: §§3–6, approximately **5,060 words**, which is what this file's own word table sums to and
+the figure to trust (`revisions.md` §3 is the historical plan; the raises are listed above the table). Written against
 `main.ipynb` (Text cells 1–6, Code Cells 1–4, Appendices A–D with Code Cells A–D, Eqs. (1)–(41))
 and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
  
@@ -24,7 +25,10 @@ exposure rather than by anything about the current trial.
 **Constructive claim.** The architecture meets the two-condition criterion of §4.2. At a lexical
 strength that holds every entry against each of the five priors ($\Lambda=512$), both conditions hold
 under three of the five priors, the three with the most prior mass on the all-region, and the
-second holds under all five, so among these priors the two conditions are nested (§4.4). Across
+second holds under all five, so among these priors the two conditions are nested (§4.4). **Those are
+figures under $q$.** Under the delta read-out, which §3.6 argues is the one this construction
+motivates, the conjunction holds under the delta-like prior alone and in 13 of the 121 cells: what
+survives the change of read-out is the position criterion, and what does not is the shift. Across
 the plane of lexical strength against prior concentration both hold in 33 of 121 cells, in a band
 whose shape two opposed floors set: as the prior sharpens, the first condition's floor in $\Lambda$
 falls and the second's rises (§4.5). The case for a level representing within-trial competition
@@ -39,6 +43,12 @@ level would save:
 - and, on the plane, a drain keyed to the alternative rather than to prior mass on the all-region,
   which would not carry the second condition's floor up as the first's falls (§4.5's floors; argued
   in §5.1, not measured).
+
+**How the two criteria are read.** §5.1 states the reading, as a conjecture and not a measurement:
+**the position criterion is what this architecture supplies natively, and consistent shift is what
+the absent level would supply** — with neither standing as the criterion of strengthening on its
+own, which is why §4.2 takes the conjunction. It is argued from §4.5's opposed floors and §4.4's
+rows, under the guard §4.2 sets on $n$ and $Z$, and nothing here measures a level that is not built.
 
 **Such a level is compatible with this architecture; it is specified here and not
 built.** What the dissertation contributes in its place is that specification: the construction the
@@ -103,7 +113,9 @@ in §5.5; the weight-transport accounting of § E.2.
  
 ## Word allocation
 
-Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R1) → 3,200 (S-6) →
+**This table is the authority.** `revisions.md` §3 is the historical plan it grew out of, and that
+file's own closing note says so: its Total and its §5 subtotal have not been re-summed since 2026-09-22.
+2,400 → 3,000 (R1) → 3,200 (S-6) →
 **3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet) → **3,610**
 (§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard) → **3,760** (§5.2 raised 400 → 550 on
 2026-09-22 at T10, under S-6's standing permission for this section) → **3,880** (§5.2 550 → 650 and
@@ -111,33 +123,41 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 for R28's mechanism and its one hedged causal statement) → **4,210** (§5.6 60 → 130 the same day:
 it carries four predictions and R27 had added the H1 reservation to the fourth without raising it)
 → **4,270** (§3.4 230 → 290 the same day, at **BG13**: commitment 7 in its exact form, conditioning,
-and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been applied). The "was" column is the 2,400 allocation this outline was written to.
+and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been applied) → **5,060**
+(2026-09-23, the two positions of §11 of `revisions.md`: §3.6 100 → 190, §4.2 480 → 525, §4.4 355 → 415,
+§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225). The "was" column is the 2,400 allocation this outline was written to.
+
+**The running chain above does not reconcile with the rows, and the rows are what to trust.** Before
+this entry the chain read 4,270 while the rows summed to 4,730: four raises were applied to rows
+without being appended here (§4.2, §4.4, §4.5 and §5.5), and which raise accounts for which part of
+the 460 cannot be recovered from this file. **The subtotals and the Total are re-summed from the
+rows and agree with them**; the chain is a record of raises with gaps in it. Treat it as history.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
-| **3. The proposed architecture** | 800 | **1,145** | |
+| **3. The proposed architecture** | 800 | **1,235** | |
 | 3.1 What the model must do | 90 | 90 | Four design requirements |
 | 3.2 A continuous world state and a soft lexicon | 160 | **270** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
 | 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
 | 3.4 State units, error units, and what is local | 210 | **290** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied) |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
-| 3.6 Two read-outs (new) | — | **100** | `revisions.md` §5, item 1 |
-| **4. Evaluation** | 745 | **1,490** | |
+| 3.6 Two read-outs (new) | — | **190** | `revisions.md` §5, item 1; **+90 on 2026-09-23 for the position that the delta read-out is the one the construction motivates, and the four things it does not license** (§11 of `revisions.md`, PP1) |
+| **4. Evaluation** | 745 | **1,620** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
-| 4.2 The criterion, and how to read the statistics | 170 | **480** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17) |
+| 4.2 The criterion, and how to read the statistics | 170 | **525** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17); **+45 the same day for which read-out the criterion is written in** (PP2) |
 | 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
-| 4.4 The five priors | 220 | **355** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6 |
-| 4.5 The plane, and where both conditions hold | 165 | **345** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
+| 4.4 The five priors | 220 | **415** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
+| 4.5 The plane, and where both conditions hold | 165 | **370** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,910** | |
-| 5.1 What an alternatives level would have to supply | 390 | **390** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that |
+| **5. Discussion** | 705 | **1,980** | |
+| 5.1 What an alternatives level would have to supply | 390 | **460** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5) |
 | 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **800** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
 | 5.5 Limits (was 5.3) | 65 | **300** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
-| **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,730** | |
+| **6. Conclusion** | 150 | **225** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
+| **Total** | **2,400** | **5,060** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -149,7 +169,7 @@ figure against text still written to the old one. **Every section heading's figu
 against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
 agree, and the check is worth repeating whenever a budget moves.
 
-# 3. The proposed architecture (about 1,085 words)
+# 3. The proposed architecture (about 1,235 words)
  
 ## 3.1 What the model must do (about 90 words)
  
@@ -345,7 +365,7 @@ Neither of the following is chosen. Both are consequences of the lexicon's thres
   centre and the extremes. Every result in §4.4 and §5.2 turns on which of the two an entry loads.
 ---
  
-## 3.6 Two read-outs (about 100 words)
+## 3.6 Two read-outs (about 190 words)
 
 The settled state is a pair of fields. Turning it into a statement about belief takes a read-out,
 and the model admits two. Which one is in force decides what a result means, so the choice is stated
@@ -368,11 +388,45 @@ here rather than assumed.
   what needs the normalizer — and, with it, tempering. Halving $\varphi_S$ does not move its peak,
   so **the tempering/utility confound in $\Delta$ is a property of $q$**, not of the settled state.
   §4.4 reports where the two read-outs agree in direction and where they do not.
+- **The position, and it is taken rather than reserved.** Both read-outs are reported, and the
+  dissertation holds that **the delta read-out is the better defined of the two and the one this
+  construction motivates**. Three reasons, in ascending order of weight.
+  1. *It is congruous with the construction.* Every cost the bullet above charges $q$ is a cost the
+     delta does not carry. It needs no sum across nodes; it is what the dynamics settle to rather
+     than an operation laid on top of them; and the architecture dictates it where it dictates
+     nothing about $q$ (`decisions.md` A16).
+  2. *The practical reasons are already on the page.* Halving does not move a peak, so the delta
+     does not see the tempering at all and carries none of the tempering/utility confound that
+     $\Delta$ has under $q$. What it registers is the utility level's own doing.
+  3. **The representational reason, which is the one to lead with.** Background §2.2's commitment 3
+     is not a convenience of the algebra. It is the claim that a system of this kind does not carry
+     a posterior as a distribution over states but as a **small number of parameters, a mode and a
+     variance**, and on a dense scale the two are nowhere near each other in cost: a value at every
+     node against two numbers. A read-out that needs the whole field normalized across every node
+     therefore asks the system for exactly the object the commitment says it cannot afford. That is
+     why $q$ is a convention of the literature compared with rather than a statement the model makes
+     about itself, and it is the reason to give first.
+- **Four things the position does not license.** State them in the same place, or the position
+  reads as licensing all four.
+  1. **The criterion stays on $q$** (§4.2). Strengthening is stated as a mass in the accounts this
+     dissertation answers to, the delta supplies no mass, and comparability is the whole reason $q$
+     is kept (A16). A preference about which read-out the *architecture* motivates is not a
+     preference about which read-out the *criterion* is written in.
+  2. **Nothing is derived from the two agreeing** (R14, and §4.4's closing instruction). A
+     preference is not a tie-breaker: where they part, the delta result is not the corrected version
+     of the $q$ one, because the two answer different questions.
+  3. **The position narrows what is reported, and the narrowing is stated where the figures are.**
+     Under the delta read-out's own two criteria the conjunction holds under the **delta-like prior
+     alone** rather than under three of the five (§4.4), and in **13** of the 121 cells rather than
+     33 (§4.5). Taking the delta read-out as the better motivated one is not free, and §§4.4 and
+     4.5 say so in their own voice rather than leaving it to be inferred here.
+  4. **It buys no escape from §4.2's guard.** The mode is shared between the read-outs, so the
+     position criterion moves with $Z$ and with $n$ whichever read-out states it.
 - **The link forward.** $q$'s normalizer is a normalization across a represented set — the operation
   App. A shows would not be local, and the one §5.1 argues binarity absorbs.
 ---
  
-# 4. Evaluation (about 1,180 words)
+# 4. Evaluation (about 1,620 words)
  
 ## 4.1 What is compared (about 140 words)
  
@@ -398,7 +452,7 @@ Three beliefs, all internal to the model:
 State once, plainly, that RSA and wRSA are **analytic baselines and are not implemented**, so no
 quantitative comparison is offered or implied.
  
-## 4.2 The criterion, and how to read the statistics (about 480 words)
+## 4.2 The criterion, and how to read the statistics (about 525 words)
  
 - Scalar strengthening is taken to be the conjunction of two conditions on the all-region mass under
   *some*: $q_H<q_{\mathrm{lit}}$, the network lowering the mass the entry and prior already assign;
@@ -411,6 +465,14 @@ quantitative comparison is offered or implied.
   follows the probabilistic accounts (Frank & Goodman, 2012; Goodman & Stuhlmüller, 2013;
   Goodman & Frank, 2016). The criterion is a stipulation about how such an effect would have to show
   up *in this model*, and every verdict is relative to it.
+- **Which read-out the criterion is written in, and why that is not the read-out the dissertation
+  prefers.** Both conditions are stated on $q$, because a mass above a cut is what the probabilistic
+  accounts state strengthening in and the delta read-out supplies no mass (§3.6). **§3.6
+  nonetheless holds the delta read-out to be the better motivated one**, and the two sit together
+  without strain: $q$ is the read-out this criterion is *comparable* in, the delta is the read-out
+  the construction *commits* to, and §§4.4 and 4.5 report the criteria of both. What the preference
+  costs in reported results is stated there, not here, and §5.1 is where the two criteria are
+  interpreted. This section reports them.
 - **A guard the reader needs before the first table.** These statistics are $q$-masses taken after
   the read-out's exponential, so they are nonlinear in $\varphi_S$ and do not inherit invariances
   the $\varphi_S$ contrasts have. Measured instance: $\mu_u$ and $\ell_0$ move no $\varphi_S$
@@ -468,7 +530,7 @@ which of the two is model and which is quadrature. (The coarse $51$–$401$ spre
 is the $O(h)$ step artefact, which is why the tail is what is tested.) Code Cell E3 checks that the
 relay reproduces every one of these numbers.
  
-## 4.4 The five priors (about 355 words)
+## 4.4 The five priors (about 415 words)
  
 **This is the section the argument turns on.** It reports Text cell 4b's rows: all five priors at
 $\Lambda=512$, each at its own learned $\theta_u^\ast$, with $\Lambda=8$ entering as a one-line
@@ -540,9 +602,26 @@ contrast (R20, P-10).
     $0.7465\to0.8429$ — while the utility level's contribution to all-region $q$-mass is negative
     under each. **The two read-outs disagree in direction**, and §3.6 says why that is possible:
     halving does not move a peak, so what the mode registers is the utility level's own doing.
+  - *The same five priors at $\Lambda=512$*, which Code Cell 2b prints beside the q criteria and
+    beside this section's own table, so the two read-outs can be read at one lexical strength for
+    once. The cell prints **the mode position criterion met in all 8 of its rows and the mode shift
+    criterion in 2**, those two being the delta-like prior at $\theta_u^\ast$ and at its realizable
+    $\theta_u$. The four diffuse priors' peaks move *up*, to $0.9072$, $0.9168$, $0.8966$ and
+    $0.9168$ from $0.5000$, $0.5000$, $0.2535$ and $0.7465$. So **under the read-out §3.6 prefers
+    the conjunction holds under the delta-like prior alone, where under $q$ it holds under three of
+    the five.** Say it in the same breath as the q count and never on its own. *(Writer's note:
+    the **8 rows are 5 priors and 3 repeats** at a realizable $\theta_u$, so "one of five" is read
+    off the printed verdict columns rather than printed as a count — which is why the sentence
+    above names the prior instead of quoting a tally. Code Cell 2b prints its q counts over distinct
+    priors and its mode counts over rows; a one-line addition to `delta_readout_report` would print
+    the mode counts over priors too, and until it does, C6 is met by naming the row.)*
   - *The mode position criterion is already met by $\ell_0$ alone* on those four: the cell of
     *all* starts at $s=0.9500$, and every one of the four priors peaks outside it before the model
-    is run. Nothing is shown by a criterion its own baseline meets.
+    is run. Nothing is shown by a criterion its own baseline meets. **The same holds at
+    $\Lambda=512$**, where Code Cell 2b prints the same four $\ell_0$ modes, so **the delta-like
+    prior is the only row in either cell whose baseline starts inside the cell of *all***, and the
+    only row where meeting the mode position criterion is the model's doing rather than the prior's.
+    §5.1's reading of the two criteria rests on this bullet as much as on the counts.
   - *The delta-like prior, at $\Lambda=512$* (Code Cell 2b), is the one row where the model moves
     the peak out: $0.9852$ **inside** the cell to $0.9468$ **outside** it, one node below
     $\theta_L$. It stays outside on grids of $201$, $401$ and $801$ nodes, so it is not a
@@ -552,7 +631,7 @@ contrast (R20, P-10).
     answer different questions, §3.6 says which.
 - **One sentence pointing to §4.6:** the conjunction is shown in the integrated dynamics, not only
   in closed form, for all three rows that meet it (Code Cell 2b).
-## 4.5 The plane, and where both conditions hold (about 345 words)
+## 4.5 The plane, and where both conditions hold (about 370 words)
  
 - **The conjunction is not confined to Part D's rows.** Sweeping lexical strength against prior
   concentration on the limit family $\mathrm{Beta}(\alpha,1)$, both conditions hold together in
@@ -578,12 +657,15 @@ contrast (R20, P-10).
   minimum at $\alpha=8$ and $16$. Under the delta read-out's two criteria (§3.6; R12) the right arm
   is shared from $\alpha=32$, at $\Lambda=8\alpha$; the left arm exists only under $q$, since the
   mode shift criterion is never met at $\alpha\le8$; and the two conjunctions part in 20 cells, all
-  of them met under $q$ alone. Report the V as a result, and derive no evidence for a missing level
+  of them met under $q$ alone. **Give the delta conjunction its own count and not only the
+  difference**: it holds in **13** of the 121 cells against $q$'s 33, and §3.6's position makes 13
+  the figure this dissertation's preferred read-out returns. Report both, and do not let the
+  preference quietly promote one of the two numbers. Report the V as a result, and derive no evidence for a missing level
   from it. **Say which half of that is $Z$-conditional** (§4.2's guard). **Robust:** the delta
   conjunction is a strict subset of the q conjunction at every half-width swept, with no reversal,
   so the two read-outs part only in $q$'s favour, the left arm exists only under $q$, and the
-  instruction just given stands on that and not on the count. **Not robust:** the figure **20** and
-  the boundary $\alpha\le8$ are both $Z=6$ figures, and both move. *(Writer's note: at a wider
+  instruction just given stands on that and not on the count. **Not robust:** the figures **13** and
+  **20** and the boundary $\alpha\le8$ are all $Z=6$ figures, and all move. *(Writer's note: at a wider
   grid the gap reaches zero because **both** conjunctions empty, not because the read-outs agree.
   Never report a zero gap as agreement. The measurements are class (e), so quote no number from
   them beyond the two this section already prints.)*
@@ -637,9 +719,9 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   locality debt (D12) is admitted. This section states neither.
 ---
  
-# 5. Discussion (about 1,760 words)
+# 5. Discussion (about 1,980 words)
  
-## 5.1 What an alternatives level would have to supply (about 390 words)
+## 5.1 What an alternatives level would have to supply (about 460 words)
  
 **Frame the section as a specification, not a concession.** The claim is not that this architecture
 excludes within-trial competition. It is that adding a level is a construction with four stated
@@ -657,6 +739,45 @@ results point at which design is the tractable one.
   $\alpha=1$ to $64$, and Part D's rows show no tension (§4.4). The earlier bullet reading the
   pattern as pointing at an absent level is withdrawn (R14), and the anti-exhaustive parallel now
   lives in §4.4 as a parallel, not as corroboration (R7).
+- **The two criteria are keyed to different parts of the construction, and this is the
+  dissertation's reading of them.** State it as a conjecture, argued and not measured, and under
+  §4.2's guard: both criteria are stated over the cell of *all*, and that cell is stipulated at both
+  ends. Five moves, in this order.
+  1. **Consistent shift is what an alternatives level would supply.** The shift criterion is met
+     here only where the prior already puts mass on the all-region. It is the fragile one of the two
+     under the five priors (§4.4); it is where the read-outs part, in 35 of the 121 cells and in
+     half of Code Cell 2b's 8 rows, that cell printing the shift criteria agreeing in 4 of 8 and the
+     position criteria in 8, against **no** cell of the plane where the position criteria part;
+     and its floor falls with prior concentration where the other's rises (§4.5). A drain keyed to
+     the *alternative* rather than to prior mass is what would detach it from the prior, which is
+     the argument the floors already carry. **The conjecture is that this architecture cannot
+     deliver consistent shift because it lacks that level, not because the effect is absent.**
+     Nothing here measures what such a level would do, and the sentence says so.
+  2. **Shift does not stand as the criterion of scalar strengthening on its own**, and this is not a
+     retreat from 1. A shift that leaves *all* the most probable single outcome is movement without
+     resolution (§4.2), so the dissertation does not fall back on the shift alone when the position
+     criterion is the one its architecture supplies, and does not treat the shift's fragility as
+     the finding.
+  3. **Position is mostly what this architecture instantiates.** Two reasons, of different kinds.
+     *It is stated on the object the construction represents*: a mode is what commitment 3 says the
+     system carries (§3.6), so "where the settled field peaks, relative to the cell of *all*" is a
+     question this architecture answers natively, in either read-out — which is why the two position
+     criteria agree in every cell of the plane and in every row of Code Cells 2 and 2b, with the
+     single exception move 5 names. *The shift criterion is not like that*: it is a difference
+     between two normalized masses taken against a baseline, and the fourth qualification in the
+     list below already says binarity does not remove that and no level carries it as one unit. So the criterion this architecture supplies natively is position, and the criterion that
+     needs machinery beyond it is shift.
+  4. **The guard, in the same breath, because 3 overstates without it.** Where the baseline already
+     meets the position criterion nothing is shown by the model meeting it (§4.4), and that is
+     every prior but the delta-like one, at both lexical strengths; the delta-like row is the one
+     where the model carries the peak out. At the sharp end of the plane the criterion is not met at all, its floor
+     rising past reach beyond $\alpha=256$ (§4.5). **So the claim is that position is where this
+     architecture does its work, not that meeting it is common or cheap.**
+  5. **And the agreement of the two position criteria is measured, not proved.** Appendix A's sweep
+     holds one printed row where they part: the flat prior at $\Lambda=8$ and $n=2$, where the mode
+     sits outside the cell of *all* while $0.5615$ of the mass sits inside it. That row is §4.2's
+     guard on $n$ made concrete, and it is why 3 is written as a reading of the measurements rather
+     than as a property of the criteria.
 **The design: resolution as a negative search.** State the position, because it is what makes the
 remaining obligations answerable rather than open.
  
@@ -1061,7 +1182,7 @@ what it costs and what is still owed.
   a sharp prior — which is withdrawn.
 ---
  
-# 6. Conclusion (about 185 words)
+# 6. Conclusion (about 225 words)
  
 1. A field-valued world state on a dense scale, with a soft lexical entry competing additively
    against the world prior in the same log-density — a placement of the prior the architecture
@@ -1072,7 +1193,11 @@ what it costs and what is still owed.
    therefore does not by itself diagnose a within-trial alternatives computation.
 3. The network also meets both conditions the criterion imposes: under three of five priors at a
    lexical strength that holds every entry, across a band of the plane, and within two updates of
-   learning. What a level representing competition among alternatives would change is what the
+   learning. **Those are counts under $q$**; read through the delta read-out of §3.6, which the
+   dissertation argues is the one the construction motivates, the conjunction narrows to the
+   delta-like prior and to 13 cells. What survives the change of read-out is the position criterion
+   and not the shift, and §5.1 reads that division as keyed to the level this architecture lacks.
+   What a level representing competition among alternatives would change is what the
    network pays for that. On the plane the first condition's floor falls as the prior sharpens and
    the second's rises (§4.5), and a drain keyed to the alternative would not raise the second; and
    learning has no end short of a maximizer the slow flow never reaches. This dissertation specifies that level and

@@ -164,6 +164,12 @@ Two further findings that change the outline as much as the headline does:
 
 ## 3. Word allocation at 3,000, raised to 3,200 on 2026-09-17 (S-6), then to 3,450 the same day (P-3), then to 3,520 on 2026-09-22 (§5.5, for A19), then to 3,610 the same day (§4.2, for S-8/T15's n guard), then to 3,760 the same day (§5.2, for T10), then to 3,880 the same day (§5.2 and §6, for R27), then to 4,030 the same day (§5.2, for R28), then to 4,100 (§4.4, for item 1's delta read-out results once §3.6 existed)
 
+**HISTORICAL, and settled as such 2026-09-23.** This table is the plan the allocation grew out of,
+not the live budget. Its Total and its §5 subtotal were never re-summed (the block at the foot of
+§10 found this and left the choice open); `sections_3-6.md`'s own word table is **the authority**,
+and that file now says so in its own voice. Do not update this table. Read it for what each raise
+was for.
+
 | Section | Was | Now | What the change pays for |
 |---|---:|---:|---|
 | **3. The proposed architecture** | **800** | **1,085** | |
@@ -1609,4 +1615,61 @@ missed. The verdict stands for everything it tested and does not extend to §4 a
 4,100 while its **Total** row still reads 3,610 and its §5 subtotal reads 1,650 against rows
 summing to 1,250. `sections_3-6.md`'s own table was corrected to **4,210** at `9694ffc` and
 `ecb7ae6`; this one is the historical plan and was not. Treat `sections_3-6.md` as the authority
-and either re-sum §3 or mark it historical.
+and either re-sum §3 or mark it historical. **Closed 2026-09-23: §3 is marked historical**, in a
+note under its own heading, and `sections_3-6.md`'s table now claims the authority rather than
+deferring to §3 (the two files had been pointing at each other).
+
+---
+
+## 11. PP1–PP8: two positions the outline did not yet state (2026-09-23)
+
+**Where this came from.** The user named two positions the dissertation takes and asked that they be
+clarified in the outline. Both are **paper** positions: `decisions.md` B10 keeps positions out of the
+notebooks, and **neither notebook is touched by this block**. The positions are recorded as
+`decisions.md` A16's 2026-09-23 findings (position 1) and as the new entry **B11** (position 2).
+
+**Position 1, in the user's terms.** Both read-outs are reported, and the delta read-out is the
+better defined of the two and the more congruous with the predictive-coding construction. Besides
+its alignment with the construction and the practical reasons already demonstrated, **the major
+philosophical reason is that it is implausible that the system represents the posterior as a
+full-fledged distribution over possible states** — which is also the foundational motivation of the
+Gaussian machinery the construction commits to: a distribution carried as two numbers, a mode and a
+variance, against one carried value by value.
+
+**Position 2, in the user's terms.** Under guarding premises on *n*: consistent shift is conjectured
+to be a consequence of the alternatives level this implementation lacks; shift cannot stand as the
+criterion of scalar strengthening independent of position; and position is mostly a consequence of
+the architecture this implementation instantiates.
+
+**What applying them cost, and it should not be buried.** Position 1 **narrows the reported
+results**. The headline counts are q figures: three of five priors, 33 of 121 cells. Under the
+read-out the dissertation now argues for, the conjunction holds under **one** of the five priors and
+in **13** cells. That is stated in §§4.4, 4.5, the central claim and §6 rather than left to a reader
+to work out, and the two positions fit together there: what survives the change of read-out is the
+position criterion, which is position 2's subject.
+
+| Task | Site | What was applied | Status |
+|---|---|---|---|
+| **PP1** | `sections_3-6.md` §3.6 (100 → 190) | The position itself, with its three reasons in ascending order of weight, and **four things it does not license**: the criterion stays on q; nothing is derived from the read-outs agreeing (R14); the position narrows the results, and §§4.4 and 4.5 say so in their own voice; and it buys no escape from §4.2's Z and n guard | APPLIED |
+| **PP2** | `sections_3-6.md` §4.2 (480 → 525) | Which read-out the criterion is written in, and why that is not the read-out the dissertation prefers. q is what the criterion is *comparable* in; the delta is what the construction *commits* to. Forward pointer to §5.1 for the interpretation | APPLIED |
+| **PP3** | `sections_3-6.md` §4.4 (355 → 415) | The five priors' delta criteria **at Λ = 512**, from Code Cell 2b, so the two read-outs are readable at one lexical strength: mode position 5 of 5, mode shift 1 of 5, the four diffuse peaks moving up. And the baseline guard extended to Λ = 512: the delta-like prior is the only row at either Λ whose baseline starts inside the cell of *all* | APPLIED |
+| **PP4** | `sections_3-6.md` §4.5 (345 → 370) | The delta conjunction's **own** count, 13 of 121, not only the 20-cell difference | APPLIED |
+| **PP5** | `sections_3-6.md` §5.1 (390 → 460) | Position 2, as five moves: the conjecture; that shift does not stand alone; that position is what the architecture supplies natively, with the reason; **the guard that keeps the third from overstating** (where the baseline already meets a criterion, nothing is shown by the model meeting it; and past α = 256 the criterion is unreachable); and that the position criteria's agreement is measured, not proved | APPLIED |
+| **PP6** | `sections_3-6.md` central claim and §6 (185 → 225) | Both positions where the headline figures are, so the q counts are not read as the dissertation's own preferred ones | APPLIED |
+| **PP7** | `background_sections.md` §2.2 (245 → 285; Part II 1,570 → 1,610; target 4,050 → 4,090) | What commitment 3 is a commitment **about**: representational cost, which is what §3.6's position rests on. Kept to the commitment's own motivation, with nothing measured entering the background (BG7) | APPLIED |
+| **PP8** | `decisions.md` A16, B8, **B11** | A16 gains the position and its four limits; B8 gains the Λ = 512 tally and the one printed row where the two position criteria part; B11 is position 2's entry | APPLIED |
+
+**A measurement found while applying PP5, and it corrects a hedge.** B8's evidence says the two
+position criteria coincide in every cell of the plane and in every Part D row, and Q2 of this file
+hedged that this was "measured, not proved" and "could part under a prior or grid not tested here".
+**They do part, in one printed row**: Appendix A's sweep, flat prior at Λ = 8 and n = 2, where the
+mode sits outside the cell of *all* while 0.5615 of the mass sits inside it. At n = 2 the cell is
+s ≥ 0.75, wide enough to hold a majority below the peak. The hedge is now a fact, it is §4.2's n
+guard made concrete, and §5.1 states position 2's third clause as a reading of the measurements
+because of it.
+
+**What this block did not do, and the one thing left for the user.** The central claim still leads
+with the q counts and adds the delta counts beside them. **Making the position criterion the
+headline of the constructive claim is a larger rewrite and was not undertaken**: it would change
+what §§4.4, 4.5, 5.1 and 6 are arranged around, and that is the user's call, not a consequence of
+the two positions as stated.

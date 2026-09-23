@@ -313,6 +313,35 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: Text cell 3 §4 item 5; Text cell 4 Part C, Part D, Reporting statistics;
   `delta_readout_report` in Code Cell 2.
 - Evidence: `procedure_records/d9_delta_readout.md` F1-F4.
+- Findings added later:
+  - **2026-09-23, the user takes a position this entry left open.** A16 settles what each read-out
+    *is*; it does not say which one the dissertation prefers. The user's ruling: **both are
+    reported, and the delta read-out is the better defined of the two and the more congruous with
+    the predictive-coding construction.** Three reasons, the third the one to lead with.
+    1. Congruence with the construction: it needs no sum across nodes, it is what the dynamics
+       settle to rather than an operation laid on top of them, and the architecture dictates it
+       where it dictates nothing about q.
+    2. The practical reasons already recorded here and in B8: halving does not move a peak, so the
+       delta does not see the tempering and carries none of the tempering/utility confound.
+    3. **The representational reason.** The Gaussian machinery of background 2.2's commitment 3 is
+       a claim about representational cost before it is a claim about algebra: it is too costly for
+       a system of this kind to carry a posterior as a full distribution over states, and cheap to
+       carry one as a mode and a variance. That is the foundational motivation of the machinery
+       the construction commits to, so a read-out needing the whole field normalized across every
+       node asks for the object the commitment says is not represented.
+  - **What the position does not license, recorded with it (agent, from the user's statement).**
+    (a) The criterion stays stated on q, because strengthening is a mass in the accounts compared
+    with and the delta supplies no mass; this entry's own "kept for comparison" is the reason.
+    (b) Nothing is derived from the two read-outs agreeing (R14): a preference is not a tie-breaker.
+    (c) The position **narrows** what is reported, and the narrowing is stated where the figures
+    are: under the delta read-out's two criteria the conjunction holds under one of the five priors
+    rather than three, and in 13 of 121 cells rather than 33 (B8's evidence; Code Cells 2b and 4).
+    (d) It buys no escape from the Z and n guard of `thesis_outline/sections_3-6.md` 4.2, the mode
+    being shared between the read-outs.
+  - **Applied to** `thesis_outline/sections_3-6.md` 3.6 (the position and the four limits), 4.2
+    (which read-out the criterion is written in), 4.4, 4.5, the central claim and 6; and
+    `thesis_outline/background_sections.md` 2.2 (what commitment 3 is a commitment about). **The
+    notebooks are untouched: B10 keeps positions out of them.**
 
 ### A19. Halting by tolerance: a proposed direction, not a commitment
 - Status: **DEMOTED 2026-09-22 by the user, from a commitment to a direction.** Settled as of
@@ -639,6 +668,29 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
       prose, under C7's names and B10's stance.
     - Every number in this entry's *Evidence* and in the F4 and F5 findings above is therefore printed
       by a cell, and the numbers Q2 and Q6 of `thesis_outline/revisions.md` quote are sourced (C6).
+  - **2026-09-23, two measurements read off the executed notebooks for `thesis_outline` 4.4, 5.1
+    and B11.** Both are printed; neither is new code.
+    - *The five priors at Lambda = 512, from Code Cell 2b's mode block.* The mode position
+      criterion is met in all 8 printed rows and the mode shift criterion in 2 (the delta-like
+      prior at theta_u\* and at its realizable theta_u). **Those two counts are printed; the counts
+      over distinct priors are not** — the 8 rows are 5 priors and 3 repeats at a realizable
+      theta_u, so "mode position 5 of 5, mode shift 1 of 5, against q's 5 and 3" is read off the
+      printed verdict columns. The prose names the prior instead of quoting that tally (C6); a
+      one-line addition to `delta_readout_report` would print the mode counts over priors as the
+      cell already prints its q counts. The four diffuse priors' peaks
+      move **up**, to 0.9072, 0.9168, 0.8966 and 0.9168 from mode(ell_0) 0.5000, 0.5000, 0.2535 and
+      0.7465, so **the delta-like prior is the only row at either Lambda whose baseline starts
+      inside the cell of *all***, and the only one where meeting the mode position criterion is the
+      model's doing rather than the prior's.
+    - *The position criteria do part, in exactly one printed row.* This entry's evidence says they
+      coincide in every cell of the plane and in Part D's rows, and `revisions.md` Q2 hedges that
+      this is "measured, not proved". **Appendix A's sweep contains the row that breaks it**: the
+      flat prior at Lambda = 8 and n = 2, theta_L = 1.0986, where the mode position criterion is met
+      and the q position criterion is not, P(all-region) = 0.5615. The cell of *all* at n = 2 is
+      s >= 0.75, wide enough to hold a majority of the mass below the peak. The hedge is now a fact,
+      and it is the n guard of `sections_3-6.md` 4.2 made concrete.
+  - **2026-09-23: how the paper reads these two criteria is B11**, not this entry. B8 stays a
+    definition.
 
 ### B10. The notebooks report the conditions and take no position on what counts as strengthening
 - Status: Settled
@@ -699,6 +751,50 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     claim re-scoped to three of five priors at Λ = 512. Nothing here changes a settled decision.
   - 2026-09-14: **all of the above confirmed by the user**, together with the change record's T1
     implementation choices and the S-7 reading. The user added B10.
+
+### B11. The two criteria are keyed to different parts of the construction
+- Status: Settled as the **paper's** position, and stated there as a conjecture. It is an
+  interpretation of B2's and B8's criteria, and changes neither. The notebooks take no position
+  (B10) and are untouched.
+- Decided by: user (2026-09-23)
+- Decision: under guarding premises on n (and, by the same guard, on Z):
+  - **Consistent shift is conjectured to be a consequence of an alternatives level**, which this
+    implementation lacks. The shift criterion is met here only where the prior already puts mass on
+    the all-region; it is the fragile one of the two under the five priors; it is where the two
+    read-outs part; and its floor in Lambda falls with prior concentration where the position
+    criterion's rises. A drain keyed to the alternative rather than to prior mass is what would
+    detach it from the prior.
+  - **Shift does not stand as the criterion of scalar strengthening independent of position.** The
+    conjunction of B2 stands; the fragility of the shift is not itself the finding, and the paper
+    does not fall back on the shift alone.
+  - **Position is mostly a consequence of the architecture this implementation instantiates.** A
+    mode is what commitment 3 says the system carries, so where the settled field peaks relative to
+    the cell of *all* is a question this architecture answers natively, in either read-out. A shift
+    is a difference of two normalized masses against a baseline, which binarity does not remove and
+    no single level carries as one unit (the fourth qualification of `sections_3-6.md` 5.1).
+- Theoretical reason: the two criteria are stated on different objects. One reads the settled
+  field's own peak; the other compares two read-out masses against a baseline. A16's position on
+  the read-outs and A17's locality argument both bear on which of the two the construction supplies.
+- Implementational reason: none. **No level is built, and nothing measures what one would do.**
+- Bogacz status: not an operation.
+- Depends on it: `thesis_outline/sections_3-6.md` 5.1 (the five-move bullet), the central claim,
+  4.2's pointer, 4.4's baseline bullet, 4.5 and 6.
+- Evidence, all printed and all recorded under B8:
+  - the plane, Code Cell 4: the shift criteria disagree in 35 of 121 cells, the position criteria in
+    none; the position criterion holds in 59 cells under both read-outs, the shift in 74 (q) and
+    67 (mode);
+  - Code Cell 2b: the read-outs' shift criteria disagree in 4 of 8 rows, their position criteria in
+    none; mode position 5 of 5 priors, mode shift 1 of 5;
+  - Code Cell 2b's baseline columns: four of the five priors already meet the position criterion
+    through ell_0 alone, so the claim is sourced on the delta-like row and on the plane's band, not
+    on Part D's diffuse rows;
+  - Code Cell 4's floors: past alpha = 256 the position criterion is unreachable on the grid, so
+    meeting it is neither common nor cheap;
+  - Appendix A: one row where the two position criteria part (flat, Lambda = 8, n = 2), which is
+    why the third clause is stated as a reading of the measurements and not as a property of the
+    criteria.
+- Guard carried with it wherever it is stated: **where the baseline already meets a criterion,
+  nothing is shown by the model meeting it.**
 
 ---
 
