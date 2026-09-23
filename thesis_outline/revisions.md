@@ -787,7 +787,7 @@ Content in §5 below, items 2 and 3.
 
 ## 5. The new material
 
-### Item 1. The two read-outs — **§3.6 WRITTEN 2026-09-22; results applied in §4.4** (about 100 words; link in §5.1, about 40 words)
+### Item 1. The two read-outs — **CLOSED 2026-09-22.** §3.6 written, results applied in §4.4, link written in §5.1
 
 **§3.6 now exists** in `sections_3-6.md`, between §3.5 and §4: the delta at the settled state and
 $q$, each with what it assumes, supplies and costs; the shared mode; that tempering is invisible to
@@ -811,8 +811,21 @@ table's 1,110, §5 said 1,250 against 1,650, and §6 said 165 against 185. Every
 with the word table, and the table adds up at every level. The §5 and §6 figures were this session's
 own (R27/R28); §4's predates it.
 
-**Still open from this item:** the §5.1 link of about 40 words. §3.6 now supplies the sentence it
-would point at.
+**The §5.1 link is written (R4).** It sits after §5.1's "binarity removes the obstacle at the
+generative map" bullet, which is where the section already argues that binarity absorbs
+normalization; the link makes that concrete for the criterion itself.
+$q_H(\textit{all}\mid\textit{some})<\tfrac12$ is a **sign on one opposition** — exactly
+$\langle E_{\textit{all}},\ \ker E_{\textit{all}}\rangle$, which one level of the cascade
+carries — so a level holding it as a log-odds unit would report the second condition with no
+normalization across the scale. **All four qualifications are stated with it** (the A17 pattern):
+the log-odds cancels the global normalizer but still sums within each cell; the saving is complete
+only if the level's *state* is that unit; whether $\varphi_a$ equals $q$'s cell log-odds belongs to
+the $g_a$ algebra already declared underived, and is **not a fifth obligation**; and **the first
+condition has no binary form at all**, being a difference against $q_{\mathrm{lit}}$. So the saving
+reaches one of the two conditions, and the section says which. §5.1 350 → **390**, §5 → **1,690**,
+total → **4,140**.
+
+**Item 1 is closed.** Nothing from it remains.
 
 #### The plan, as written
 

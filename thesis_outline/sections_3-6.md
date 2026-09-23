@@ -126,15 +126,15 @@ for R28's mechanism and its one hedged causal statement). The "was" column is th
 | 4.4 The five priors | 220 | **355** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6 |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,650** | |
-| 5.1 What an alternatives level would have to supply | 390 | **350** | The specification, and what is left undone |
+| **5. Discussion** | 705 | **1,690** | |
+| 5.1 What an alternatives level would have to supply | 390 | **390** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that |
 | 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **800** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,100** | |
+| **Total** | **2,400** | **4,140** | |
 
 **What this table does not do.** **§3.6 is written** (2026-09-22, `revisions.md` §5 item 1);
 **§§4.6, 5.3 and 5.4 are not** — their content is planned in `revisions.md` §5 and §4's §4.6 entry,
@@ -540,9 +540,9 @@ contrast (R20, P-10).
   between $3.5\times10^{4}$ and $3.6\times10^{7}$. §4.6 takes it up.
 ---
  
-# 5. Discussion (about 1,650 words)
+# 5. Discussion (about 1,690 words)
  
-## 5.1 What an alternatives level would have to supply (about 350 words)
+## 5.1 What an alternatives level would have to supply (about 390 words)
  
 **Frame the section as a specification, not a concession.** The claim is not that this architecture
 excludes within-trial competition. It is that adding a level is a construction with four stated
@@ -616,6 +616,27 @@ remaining obligations answerable rather than open.
   preserves §8.6's first condition, so the global convergence proof extends by Eq. (22)'s own
   argument. **This is the good branch of the trade**: an affine alternatives level keeps the proof,
   and binarity is what lets it perform the comparison anyway.
+- **And the criterion's second condition is binary already (§3.6, R4).** This is where the previous
+  bullet stops being about the generative map and starts being about what §4 actually reports.
+  §3.6's cost of $q$ is its normalizer, which sums across every node. But
+  $q_H(\textit{all}\mid\textit{some})<\tfrac12$ says only that the **log-odds of the all-region
+  against its complement is negative** — a sign on a single opposition, and precisely the opposition
+  $\langle E_{\textit{all}},\ \ker E_{\textit{all}}\rangle$ that one level of the cascade above
+  carries. **A level carrying that opposition as one log-odds unit would report the second condition
+  as that unit's sign, with no normalization across the scale at all.**
+- **The qualification, in the same place, on the pattern of A17.** Say all four; the claim is worth
+  less without them.
+  1. A log-odds of two cell masses cancels the *global* normalizer but **still sums within each
+     cell**, so the saving is partial, not total.
+  2. It is complete only if the level's state **is** that log-odds unit, rather than something a
+     read-out computes from a field.
+  3. Whether $\varphi_a$'s value equals $q$'s cell log-odds is part of the $g_a$ algebra this
+     section already declares underived — it is **not a fifth obligation**, but a consequence the
+     four below would settle.
+  4. **The first condition has no such binary form.** It is a difference against
+     $q_{\mathrm{lit}}$, which is two normalized quantities compared, and nothing in binarity
+     removes that. So the saving reaches one of the two conditions, and the section says which.
+
 **What this dissertation does not derive, stated plainly.** The design above places the
 order-reversing involution at a new alternatives-level map $g_a$ rather than at $g_L$ — **lowercase
 because the level's state $\varphi_a$ has the same type as $\chi$**, an indicator selecting a
