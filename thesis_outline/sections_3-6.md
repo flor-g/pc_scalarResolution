@@ -108,7 +108,8 @@ Kept in step with `revisions.md` §3, which is the authority: 2,400 → 3,000 (R
 (§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard) → **3,760** (§5.2 raised 400 → 550 on
 2026-09-22 at T10, under S-6's standing permission for this section) → **3,880** (§5.2 550 → 650 and
 §6 165 → 185 the same day, for R27's reservation on H1) → **4,030** (§5.2 650 → 800 the same day,
-for R28's mechanism and its one hedged causal statement). The "was" column is the 2,400 allocation this outline was written to.
+for R28's mechanism and its one hedged causal statement) → **4,210** (§5.6 60 → 130 the same day:
+it carries four predictions and R27 had added the H1 reservation to the fourth without raising it). The "was" column is the 2,400 allocation this outline was written to.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
@@ -126,15 +127,15 @@ for R28's mechanism and its one hedged causal statement). The "was" column is th
 | 4.4 The five priors | 220 | **355** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6 |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **1,690** | |
+| **5. Discussion** | 705 | **1,760** | |
 | 5.1 What an alternatives level would have to supply | 390 | **390** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that |
 | 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **800** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
-| 5.6 Predictions (was 5.4) | 50 | **60** | Exposure; granularity; the midpoint cut; the timescale separation |
+| 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,140** | |
+| **Total** | **2,400** | **4,210** | |
 
 **What this table does not do.** **§3.6 is written** (2026-09-22, `revisions.md` §5 item 1);
 **§§4.6, 5.3 and 5.4 are not** — their content is planned in `revisions.md` §5 and §4's §4.6 entry,
@@ -574,7 +575,7 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   locality debt (D12) is admitted. This section states neither.
 ---
  
-# 5. Discussion (about 1,690 words)
+# 5. Discussion (about 1,760 words)
  
 ## 5.1 What an alternatives level would have to supply (about 390 words)
  
@@ -956,7 +957,7 @@ what it costs and what is still owed.
   at least $\{\chi,\ker\chi\}$ for any entry; membership follows from exposure somewhere, not
   from exposure in a given experiment.
 - Tier B facts recorded here, position reserved.
-## 5.6 Predictions (about 60 words, was §5.4)
+## 5.6 Predictions (about 130 words, was §5.4)
  
 - **Exposure frequency should shift strengthening.** $\theta_u^\ast$ is set by
   $3\,\mathbb E_{p(y)}[c_y]$, so non-uniform exposure to the inventory moves it. **This is a
@@ -1034,10 +1035,13 @@ citations for a structurally bounded alternative set.
    replaces the rest is the class comparison against Xiang et al.'s own items. The "drafted probe"
    was never found in the project or on the Desktop and is not needed.
 
-2. **The background is being rewritten** under the three-question frame (Q1 locality; Q2 not one
-   pass; Q3 algorithmic-level peculiarities). The plan is `claude/background_revision_plan.md`
-   (Revision 4) and the rewritten outline is `background_sections_outline.md`. Two consequences for
-   this document, both already applied above: §5.1's sub-bullet on alternative-sensitive versus
+2. ~~The background is being rewritten.~~ **DONE, and the pointers here were dangling
+   (2026-09-22).** The rewrite under the three-question frame (Q1 locality; Q2 not one pass; Q3
+   algorithmic-level peculiarities) is complete: the outline is `thesis_outline/background_sections.md`,
+   whose 13-item drafting checklist is fully ticked. The two files this item used to name —
+   `claude/background_revision_plan.md` and `background_sections_outline.md` — **do not exist**;
+   the second is one of the superseded Desktop drafts `agent.md` §1 lists as not maintained. Two
+   consequences for this document, both applied long since: §5.1's sub-bullet on alternative-sensitive versus
    world-sensitive utility is deleted rather than redirected, since the model has one utility level;
    and the background now introduces Levinson (2000), Rooth, Kratzer & Shimoyama, Katzir,
    Fox & Spector, Kennedy (2007) and Xiang et al. (2022) before §5.1 and §5.2 use them.
