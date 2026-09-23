@@ -122,9 +122,9 @@ and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been ap
 | 3.4 State units, error units, and what is local | 210 | **290** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied) |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
 | 3.6 Two read-outs (new) | — | **100** | `revisions.md` §5, item 1 |
-| **4. Evaluation** | 745 | **1,180** | |
+| **4. Evaluation** | 745 | **1,295** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
-| 4.2 The criterion, and how to read the statistics | 170 | **260** | The conjunction; the softmax-nonlinearity guard; **the $n$ guard** (raised from 170 on 2026-09-22, S-8/T15) |
+| 4.2 The criterion, and how to read the statistics | 170 | **375** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17) |
 | 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
 | 4.4 The five priors | 220 | **355** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6 |
 | 4.5 The plane, and where both conditions hold | 165 | **255** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41) |
@@ -137,7 +137,7 @@ and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been ap
 | 5.5 Limits (was 5.3) | 65 | **150** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **185** | |
-| **Total** | **2,400** | **4,270** | |
+| **Total** | **2,400** | **4,385** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -398,7 +398,7 @@ Three beliefs, all internal to the model:
 State once, plainly, that RSA and wRSA are **analytic baselines and are not implemented**, so no
 quantitative comparison is offered or implied.
  
-## 4.2 The criterion, and how to read the statistics (about 260 words)
+## 4.2 The criterion, and how to read the statistics (about 375 words)
  
 - Scalar strengthening is taken to be the conjunction of two conditions on the all-region mass under
   *some*: $q_H<q_{\mathrm{lit}}$, the network lowering the mass the entry and prior already assign;
@@ -418,13 +418,29 @@ quantitative comparison is offered or implied.
   while $\Delta_{\textit{some}}$ varies by more than a fifth of its own size across six $\mu_u$
   settings. Any claim about a contrast between utterances must be checked against $\varphi_S$
   directly.
-- **A second guard: the verdicts are relative to $n$.** $\theta_L=\log(2n-1)$ fixes the cell of
-  *all*, and $n=10$ is stipulated (Appendix A), not measured. Across both lexical strengths and all
-  four base priors, the q shift criterion changes status somewhere on a sweep of $n$, and *where* it
-  changes depends on $\Lambda$ — granularity and lexical strength are not separable in what the
-  tables below report. Two cautions attach. A sweep **brackets** a change rather than locating it;
-  and a change of status may be the sign flip of a quantity already decayed to $10^{-7}$, which is
-  not the finding that a flip at $10^{-1}$ is. Appendix A prints the sweep.
+- **A second guard: the verdicts are relative to the *all*-cell's width, not to $n$ alone.** Both
+  q criteria are stated on the mass of an interval. $\theta_L=\log(2n-1)$ fixes that interval's
+  lower end and the grid's half-width $Z$ cuts off its upper, so what the criteria are stated over
+  has length $Z-\theta_L$ — and **both ends are stipulated, neither measured**: $n=10$ by
+  Appendix A, $Z=6$ by `decisions.md` I6, which fixes only $\theta_L<Z$ and nothing more.
+  - *The $n$ end, which a cell prints.* Across both lexical strengths and all four base priors the
+    q shift criterion changes status somewhere on a sweep of $n$, and *where* it changes depends on
+    $\Lambda$ — granularity and lexical strength are not separable in what the tables below report.
+    Appendix A prints that sweep.
+  - *The $Z$ end, which none does.* $Z$ is held at its default throughout both notebooks, so this
+    half of the guard has **no printed evidence** and the section states it without one:
+    §4.5's conjunction moves with $Z-\theta_L$ as it moves with $n$, which is the same dependence
+    reached from the other end. *(Writer's note: `audits/2026-09-23-grid-half-width/` and
+    `decisions.md` E17 measure it and are **class (e)**. Quote no number from them, and do not let
+    the sentence imply one has been quoted. Giving this end printed evidence means a cell that
+    varies $Z$, which is why the guard is qualitative here.)*
+  - *What the two ends together mean, stated once.* An absolute mass threshold over an interval
+    whose length is stipulated inherits that stipulation. §5.2's comparison is untouched by it
+    because $R^2$ over profiles is a correlation, invariant to the interval's size; the conjunction
+    is not.
+  Two further cautions attach. A sweep **brackets** a change rather than locating it; and a change
+  of status may be the sign flip of a quantity already decayed to $10^{-7}$, which is not the
+  finding that a flip at $10^{-1}$ is.
 ## 4.3 The specification holds (about 70 words)
  
 Brief, and reported as a table rather than argued. The closed forms agree with the integrated

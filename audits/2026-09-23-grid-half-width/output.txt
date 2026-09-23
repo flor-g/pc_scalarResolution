@@ -1,0 +1,66 @@
+GRID HALF-WIDTH AUDIT, 2026-09-23. Class (e): no cell prints any of this.
+torch 2.13.0, dtype torch.float64. Notebook default Z = 6.0, K = 101.
+
+====================================================================================================
+  1. THE MECHANISM: q_H tracks Eq. (24)'s limit, so this is not numerical
+     flat prior, n = 10, Lambda = 512, spacing held at 0.12
+====================================================================================================
+     Z  Z-theta_L  nodes   theta_u*    q_lit      q_H  q at Eq(24)      leak  both
+     5      2.056     84     1261.7   0.0487   0.0000       0.0000  2.4e-183     Y
+     6      3.056    101     1521.5   0.0504   0.0357       0.0357  6.2e-177     Y
+   6.5      3.556    109     1636.7   0.0509   0.3020       0.3019  3.5e-174     n
+     7      4.056    118     1737.5   0.0493   0.6689       0.6689  3.1e-172     n
+   7.5      4.556    126     1839.4   0.0492   0.9274       0.9273  2.3e-170     n
+     8      5.056    134     1958.3   0.0554   0.9985       0.9985  4.7e-168     n
+     9      6.056    151     2135.7   0.0527   1.0000       1.0000  2.0e-166     n
+    10      7.056    168     2303.3   0.0500   1.0000       1.0000  1.8e-165     n
+    12      9.056    201     2645.4   0.0528   1.0000       1.0000  5.2e-165     n
+     q_H equals Eq. (24)'s limit to four decimals at every Z: the model is on its
+     own amplification asymptote, and that limit's shape is set by B, which is
+     zeta and zeta^2 orthonormalized on [-Z, Z]. The entry never leaks, and q_lit
+     is flat, so the utility level alone carries this.
+
+====================================================================================================
+  2. THE DRIVER IS Z - theta_L, NOT Z: narrowing the cell again restores the
+     conjunction at a wider grid.  flat prior, Lambda = 512
+====================================================================================================
+     Z      n   theta_L  Z-theta_L   theta_u*    q_lit      q_H  both
+     6     10    2.9444      3.056     1521.5   0.0504   0.0357     Y
+     8     10    2.9444      5.056     1958.3   0.0554   0.9985     n
+     8     20    3.6636      4.336     1827.3   0.0267   0.3063     n
+     8     50    4.5951      3.405     1623.6   0.0100   0.0000     Y
+     8     74    4.9904      3.010     1530.8   0.0069   0.0000     Y
+    10    400    6.6834      3.317     1578.8   0.0012   0.0000     Y
+    12   3000    8.6993      3.301     1557.0   0.0002   0.0000     Y
+     The verdict tracks the cell width, not Z and not n separately. It is not an
+     exact invariant of Z - theta_L on these rows and is not claimed to be.
+
+====================================================================================================
+  3. SECTION 4.5's PLANE, swept whole at five half-widths.  Beta(alpha,1),
+     alpha = 2^0..2^10, Lambda = 2^1..2^11, 121 cells
+====================================================================================================
+     Z  Z-theta_L   first  second   BOTH   band Lambda   band alpha
+   5.0      2.056     113      76     68        4-2048       1-1024
+   6.0      3.056      77      59     33       64-2048        1-128
+   6.5      3.556      25      48      5      512-2048         8-32
+   7.0      4.056       5      25      0             -            -
+   8.0      5.056       0      14      0             -            -
+     Z = 6 returns 33 of 121 with least Lambda 64 over alpha 1 to 128, which is
+     what Sec. 4.5 reports: the sweep is computing the notebook's own quantity.
+
+====================================================================================================
+  4. APPENDIX F, Code Cell 23 re-run verbatim at four half-widths (n = 4)
+====================================================================================================
+     Z  Z-theta_L   best on ladder / rungs within 0.005 / model image-type diff
+   5.0      3.054   max Lambda 8 (R^2 0.993),  min Lambda 96 (R^2 0.418)
+                    max Lambda 6 to 2048;  min Lambda 64 to 96;  model diff max +0.03, min -0.14
+   6.0      4.054   max Lambda 8 (R^2 0.993),  min Lambda 48 (R^2 0.434)
+                    max Lambda 6 to 2048;  min Lambda 32 to 48;  model diff max +0.03, min -0.18
+   7.0      5.054   max Lambda 8 (R^2 0.993),  min Lambda 24 (R^2 0.448)
+                    max Lambda 6 to 2048;  min Lambda 24 to 24;  model diff max +0.04, min -0.19
+   8.0      6.054   max Lambda 8 (R^2 0.993),  min Lambda 24 (R^2 0.455)
+                    max Lambda 6 to 2048;  min Lambda 24 to 24;  model diff max +0.04, min -0.20
+     H1's content -- max unbounded in Lambda, min with an interior optimum -- holds
+     at every Z. R^2 is a correlation over item x position rows, so inflating the
+     top cell uniformly across items barely moves it. What moves is the bracket's
+     location and the minimum class's R^2.

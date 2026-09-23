@@ -887,6 +887,28 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 ### I6. Grid K = 101, half-width 6; world state in ζ = logit s
 - Status: Settled
 - Decided by: not recorded
+- Decision: the world state is carried in ζ = logit s on a fixed trapezoidal quadrature grid of
+  K = 101 nodes over [−6, 6]. Both notebooks use these defaults everywhere and vary neither.
+- Theoretical reason: none recorded. ζ ∈ ℝ is unbounded, so **any** half-width is a truncation, and
+  Appendix A fixes only a lower bound on it, θ_L < Z, so that *no*'s exclusion leaves a node
+  unexcluded. Nothing fixes 6 in particular.
+- Implementational reason: none recorded.
+- Bogacz status: not an operation; the grid discretizes the integral, not the state.
+- Depends on it: every reported quantity, since B is ζ and ζ² orthonormalized on [−Z, Z] and ℓ₀ is
+  renormalized on the truncated grid.
+- Evidence: **`audits/2026-09-23-grid-half-width/` and E17, and they do not discharge what this
+  entry needs.** `agent.md` §3.3 makes the half-width a class (d) implementation constant, which
+  requires evidence that the results it supports do not depend on its exact value. That evidence was
+  never recorded — this entry held a title, a status and nothing else until 2026-09-23 — and the
+  audit shows it would not have been produced: §4.5's conjunction runs 68, 33, 5, 0, 0 of 121 cells
+  over Z = 5 to 8, and Z = 6 sits about half a unit below the turn. **The constant therefore fails
+  its own class's requirement**, which is recorded rather than repaired: the verdicts are reported
+  under §4.2's widened guard instead.
+- Findings added later:
+  - 2026-09-23 (E17). What the verdicts track is **Z − θ_L**, the *all*-cell's width in log-odds,
+    not Z and not n separately, so this entry and §4.2's n guard are one question. Appendix F's
+    claims are unaffected because R² over profiles is a correlation; §§4.4–4.5's are affected
+    because an absolute mass threshold over a truncated cell is not.
 
 ### I7. Appendix E's E2 mirrors main's Code Cell 2, verified by E3
 - Status: Settled
@@ -2032,3 +2054,36 @@ Nothing here is class (e): every number Appendix F and §5.2 quote is printed by
   superseded**; O13 now carries the printed values.
 - Bogacz status: no new operation. The cell evaluates Eqs. (15)–(16) and (B2) at a setting, so §3.2
   registers no new divergence.
+
+**E17. The grid half-width, and what the verdicts depend on (2026-09-23).** Classed by the agent;
+raised by another agent's report that widening the logit range from ±6 to ±8 overturns the results.
+Evidence: `audits/2026-09-23-grid-half-width/`. **Everything the audit prints is class (e)** — no
+cell varies the half-width — so none of it reaches prose, and §4.2's guard below is written without
+a number from it.
+
+- **The report is substantially right, and its framing is wrong.** The controlling quantity is not
+  the half-width Z but **Z − θ_L, the width of the *all*-cell in log-odds**. θ_L = log(2n−1), so n
+  moves one end of that cell and Z the other; at Z = 8 the conjunction returns once the cell is
+  narrowed again (n = 50, 74), and likewise at Z = 10 and 12 with n = 400 and 3000. Neither Z nor n
+  predicts the verdict alone. It is not an exact invariant of Z − θ_L and is not claimed to be.
+- **Not numerical.** q_H equals Eq. (24)'s limit to four decimals at every Z, so the model is on its
+  own amplification asymptote and this is a property of ½(I + BBᵀW)(ℓ₀ − φ_L). The entry never leaks
+  (~1e-170), q_lit is flat at ≈ 0.05 across every Z, and the effect survives holding the node
+  spacing fixed. The channel is that **B is ζ and ζ² orthonormalized on [−Z, Z]**, so the basis is
+  rebuilt by the grid.
+- **§4.5's plane collapses**: both conditions together in 68, 33, 5, 0, 0 of 121 cells at
+  Z = 5, 6, 6.5, 7, 8, with both floors moving, so the *opposing floors* reading is Z-conditional
+  too. Z = 6 returns 33 with least Λ = 64 over α = 1 to 128, which is what §4.5 reports, so the
+  sweep computes the notebook's own quantity.
+- **Appendix F's claims survive; its numbers are conditional.** H1's content — the maximum class
+  unbounded in Λ, the minimum class with an interior optimum — holds at Z = 5, 6, 7, 8 alike, as do
+  the maximum class's R² and the image-type signs. The minimum class's bracket and R² move. §5.2's
+  H1 sentence is therefore safe and its "bracketed between 32 and 48" is not.
+- **Why they differ, which is the usable part.** §§4.4–4.5 apply *absolute* tests to q-mass over an
+  interval of length Z − θ_L; Appendix F scores R² over profiles across items, a correlation, which
+  is invariant to scale and offset. Appendix F runs at Z − θ_L = 4.05, inside the region where the
+  main evaluation's conjunction is already at zero cells, and is unaffected there.
+- **Depends on it:** §§4.4, 4.5, 4.6 and §6 item 3 through the conjunction; §4.2's guard, widened
+  2026-09-23; I6, which was an empty entry and now carries this as its evidence.
+- **Not taken here.** Whether the criterion's *form* should change — an absolute mass threshold over
+  a truncated cell is the fragile object — is a B-series question for the user.
