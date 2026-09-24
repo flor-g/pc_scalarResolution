@@ -100,6 +100,13 @@ Every point was checked against the files and, where numerical, recomputed with 
 - [x] **R9** (2026-09-23, Q6 approved; also narrows the drafted §1.5's closing line, "in which it
   does not hold" → "in which the interpretation is not staged that way", flagged to the user): background §2.6's staging claim restated as joint inference of
   the downstream fields given the clamped lexical input.
+- [ ] **R11**, TODO, not to be applied until the user says (user, 2026-09-23): print F17's and F18's
+  counts from a code cell so that `thesis_outline/sections_3-6.md` 5.5 may quote them (C6) — the
+  265 configurations in which φ_S\* and ℓ₀ are unimodal under *some* and the neighbour rule agrees
+  with the argmax, and the Beta(1, 64) / Beta(1, 256) at Λ = 8 counterexamples. Source:
+  `agent/audits/2026-09-23-mode-coordinate/local_rule.py` and `counterexample_output.txt`. A code
+  change: needs a checkpoint, the E2/E3 couplings checked if the cell is Code Cell 2 or 2b, and both
+  notebooks re-executed.
 - [ ] **R10**, optional, waits on the user: a full-network spectrum with the relay in Code Cell E4
   (code change; re-execution of appendix_E), so E.1 can quote F5.
 
@@ -231,3 +238,8 @@ a unimodal posterior and compares neighbours only — resolves it (done: §5.5 b
   and a proof. It does nothing for q.
 - C6: F17's and F18's counts are printed by audit scripts only; a cell must print them before the
   paper quotes them.
+
+**User, 2026-09-23:** the notebook change is a TODO task, not applied (R11). Fix background §2.4's
+misalignment (done: locality is no longer said to derive the utility basis's dimension; §3.5 chooses
+m = 2 for tilt and width, locality is what that choice strains, Appendix E buys it back, and §5.1
+argues binary branching from it).

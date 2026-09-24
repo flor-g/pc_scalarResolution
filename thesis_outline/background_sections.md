@@ -549,10 +549,13 @@ in Part II; the previous draft's 250 words were thinner than the load it bears.*
   architecture's ancestor, do not impose it — which is itself evidence that the field treats locality
   as optional.
 - **The move that makes the first question a thesis rather than a methodological note.** Locality is
-  **generative**: §3.5 derives the utility basis dimension from it, §5.1 derives binary branching
-  from it, and Appendix E buys it back at \(m>1\) with a relay, at the cost of a fourth
+  **generative**, though not of the utility basis's dimension: §3.5 chooses \(m=2\) for tilt and
+  width, and locality is what that choice puts under strain, since at \(m>1\) the update of
+  \(\theta_u\) stops being local. Appendix E buys it back with a relay, at the cost of a fourth
   timescale — which under commitment 7 is an **ordering**, \(\tau_r\le\tau_\varepsilon\), and
-  not a stability requirement the relay carries of its own (F26). Say here that the
+  not a stability requirement the relay carries of its own (F26). And §5.1 argues for binary
+  branching from it: a cascade of complementary pairs needs only \(m=1\) at each level, where the
+  update is local without the relay. Say here that the
   dissertation treats an implementation constraint as a *source of structure*, and that Part I's
   three questions will be answered from it.
 - **Where the constraint is stated, and what Bogacz does with a read-out.** Bogacz (2017, §1)
