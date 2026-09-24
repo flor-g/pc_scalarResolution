@@ -1251,6 +1251,25 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     not Z and not n separately, so this entry and §4.2's n guard are one question. Appendix F's
     claims are unaffected because R² over profiles is a correlation; §§4.4–4.5's are affected
     because an absolute mass threshold over a truncated cell is not.
+  - **2026-09-24, the K half: no cell re-evaluates the criteria at another node count, and the
+    plane counts move with it** (agent, raised with the user; `agent/audits/2026-09-24-node-count/`,
+    read-only, scripts not in a cell, so every number here is class (e) for prose). Where K has been
+    varied before: Code Cell 2's specification check (E[s] only, the default prior, K = 51 to 801:
+    |401 − 801| = 1.7e-03); Code Cell 2b's boundary check (the delta-like row's peak at 201, 401,
+    801); Code Cell A's `peak_locality_report` (neighbour-rule agreement at 101, 201, 401); and the
+    Z ladders, where K moves with Z at fixed spacing and so varies truncation, not accuracy.
+    - **Part D:** all four criteria unchanged in all nine rows at K = 101, 201, 401, 801, 1601;
+      P(all) moves at the percent level (delta-like 0.4351, 0.3625, 0.3977, 0.4157, 0.4248).
+    - **The plane:** q conjunction **33, 36, 36, 34** and mode conjunction **13, 15, 15, 15** at
+      K = 101, 201, 401, 801; the mode conjunction stays a subset of the q conjunction at every K.
+      Five cells account for it, all moving from not met to met: (α 16, Λ 128) meets the mode
+      conjunction at every finer K; (256, 2048) sits at P(all) = 0.5051 at K = 101 and meets both
+      conjunctions at every finer K (0.36 to 0.46); (4, 64) and (8, 32) carry q shifts of about
+      ±5e-3 whose sign changes with K, the O(h) step artefact of Code Cell 2's check; (1024, 1024)
+      has a q shift at the 1e-12 zero band (I5), counted at finer K.
+    - So §4.5's 33 and 13, and every place they are quoted, are **K = 101 counts**, conditional on
+      the node count by a few cells as they are on Z (E17) — at K = 101 the q count sits at the low
+      end of the range the finer grids give. Not applied anywhere; the user decides (agent.md §5.4).
 
 ### I7. Appendix E's E2 mirrors main's Code Cell 2, verified by E3
 - Status: Settled
