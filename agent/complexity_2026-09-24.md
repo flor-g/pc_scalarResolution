@@ -76,10 +76,10 @@ Later in the session, after the agent had twice misread the scope:
   6,435, headings in step. `revisions.md` §17 records it. `ec2eb0d`
 - [x] **CX4 (2026-09-24). Records**: I14 and E20 in `agent/decisions.md`; findings CX-F1 to
   CX-F6 below. `0475a21`
-- [ ] **CX6. Correct the framing to the user's three levels** (CX-F7). Appendix G's opening and §3's
+- [x] **CX6 (2026-09-24). Correct the framing to the user's three levels** (CX-F7). Appendix G's opening and §3's
   closing paragraph, Code Cell G's header comment, the §5.5 bullet, `revisions.md` §17, agent.md's
   cell map, I14's finding. No printed line changes; notebooks not re-executed (markdown and one
-  comment).
+  comment). `cf2a25f`
 - [ ] **CX5. OPEN (user, 2026-09-24): remove the avoidable Θ(K³) from `infer`** (CX-F2).
   `stiffest_state_rate` finds λ_max(H) by a dense eigendecomposition of the (K + m)-square H, and
   `infer` calls it twice per inference (the tolerance and τ_ε); Eq. (G1) gives λ_max(H) = θ_u² + 2
