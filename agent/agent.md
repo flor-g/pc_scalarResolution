@@ -151,8 +151,8 @@ Each of these has broken at least once.
    either must be added to E3's replay list, with what it needs passed in, or E3 reports its lines as deleted.
 8. **Never replace `sys.stdout` with a tee under ipykernel.** It silently kills stream capture for
    the rest of the session. `contextlib.redirect_stdout` is safe.
-9. **`code cell 1` is copied almost whole into appendix_E's Code Cell E1.** 878 of its 912 lines are
-   identical. Every `def` in main appears in E1, which adds only `relay`, `relay_loop_abscissa` and
+9. **`code cell 1` is copied almost whole into appendix_E's Code Cell E1.** 964 of its 1006 lines are
+   identical (re-measured 2026-09-24 at CX5; 878 of 912 when first written). Every `def` in main appears in E1, which adds only `relay`, `relay_loop_abscissa` and
    `theta_u_gradient_columns`; 24 of main's 30 are verbatim. The other six — `__init__`,
    `predict_state`, `residuals`, `free_energy`, `infer`, `theta_u_gradient` — carry the relay in E1
    (`predict_state`, `residuals` and `free_energy` take an extra `relay=None`). **Nothing diffs the

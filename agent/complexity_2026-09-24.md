@@ -80,7 +80,8 @@ Later in the session, after the agent had twice misread the scope:
   closing paragraph, Code Cell G's header comment, the §5.5 bullet, `revisions.md` §17, agent.md's
   cell map, I14's finding. No printed line changes; notebooks not re-executed (markdown and one
   comment). `cf2a25f`
-- [ ] **CX5. OPEN (user, 2026-09-24): remove the avoidable Θ(K³) from `infer`** (CX-F2).
+- [x] **CX5 (2026-09-24, opened as an open task; done at the user's instruction). Remove the avoidable
+  Θ(K³) from `infer`** (CX-F2). **Closed**: see CX-F8 for what was done and the acceptance result.
   `stiffest_state_rate` finds λ_max(H) by a dense eigendecomposition of the (K + m)-square H, and
   `infer` calls it twice per inference (the tolerance and τ_ε); Eq. (G1) gives λ_max(H) = θ_u² + 2
   in closed form at σ = 1 and BᵀWB = I. **What the fix has to respect:**
@@ -255,3 +256,20 @@ Later in the session, after the agent had twice misread the scope:
   architecture, and its complexity is this instantiation's, not the architecture's unique one.
   Appendix G, the §5.5 bullet and I14 were written on the first framing; CX6 corrects them. The
   argument about cost taking part in the dynamics is held back by the user and not recorded yet.
+- **CX-F8. CX5 done without narrowing the method.** The task allowed for keeping the decomposition
+  as the general path; it was not needed. H couples φ_S to φ_u only through W^{1/2}B, so it splits
+  into one 2 × 2 block per eigenvalue γ_j of BᵀWB, [[a, −θ_u√γ_j/σ_S], [−θ_u√γ_j/σ_S,
+  1/σ_u + θ_u²γ_j/σ_S]] with a = 1/σ_L + 1/σ_S, and acts as a elsewhere; each block's larger root
+  is at least a. `stiffest_state_rate` now returns the largest block root: exact at every σ and every
+  B, Θ(Km²). Checked against the dense matrix to 2.1e-15 over 1,080 scratch configurations (K 11–201,
+  m 1–3, five σ settings, orthonormal, random and rank-deficient B, θ_u 0 to 1407.77), and Code Cell
+  G now prints 9.8e-16 over its 45 and 9.6e-16 over 90 more at σ ≠ 1. Lifted into E1 (the old
+  methods were verbatim). **Acceptance PASS**: main RUNNER OK, 0 errors, 8 figures, 922 s, every
+  printed line outside `cost:` lines and Code Cell G identical to `2fbc46d` (0 changed across ten
+  cells), Code Cell G's step counts identical; appendix_E RUNNER OK, 0 errors, 5 figures, 2006 s,
+  every printed line identical, E2 19/19, E3 PASS (223 and 263 identical, the usual shape). C6 sweep
+  of Appendix G clean. λ_max(H)'s set-up now costs about 0.1 ms at K = 3201, against 3.2 s.
+  Appendix G §1 gains the blockwise form (unnumbered, so Eqs. G2–G3 keep their numbers), §2's row is
+  Θ(Km²), Eq. (G3) is O(Km(m + (θ_u² + 2) log(a/tol))), §4's memory and wall-clock sentences lose the
+  decomposition; the outline §5.6 bullet follows; I14 and E20 gain findings; agent.md's coupling 9
+  line counts re-measured (964 of 1006).

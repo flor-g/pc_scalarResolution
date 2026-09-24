@@ -1664,6 +1664,11 @@ arithmetic was a time the process spends. The bullet now says what the figure re
 Appendix G attributes each factor to the equations every instantiation shares or to this
 instantiation's choices. §5.5 830 → 870, §5 2,170 → 2,210, total 6,435 → 6,475.
 
+**CX5, the same day.** `stiffest_state_rate` no longer decomposes H: it finds λ_max(H) blockwise
+from BᵀWB, exactly, at any σ and any basis. The bullet's total loses its K³ term and now reads
+O(Km(m + (θ_u² + 2) log(a/tol))), and "the K³" leaves its list of choices. (The bullet is §5.6
+since CX7's renumbering, §18.)
+
 ## 16. OR: the outline reorganized (2026-09-24)
 
 The working record, closed, is `agent/history.md` §18. **What changed in the

@@ -1521,6 +1521,17 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   quantity to the equations every instantiation shares or to this instantiation's choices; §3's
   closing paragraph attributes the θ_u² in N to the separation commitment 7 requires and the
   constant 8, the step and the stopping rule to this instantiation; the §5.5 bullet follows.
+  - 2026-09-24 (agent, at the user's instruction: CX5), **the avoidable Θ(K³) is gone.**
+    `stiffest_state_rate` found λ_max(H) by a dense eigendecomposition of the (K + m)-square H, twice
+    per inference. It now computes it blockwise: H couples φ_S to φ_u only through W^{1/2}B, so it
+    splits into one 2 × 2 block per eigenvalue γ_j of BᵀWB (entries a = 1/σ_L + 1/σ_S,
+    −θ_u√γ_j/σ_S, 1/σ_u + θ_u²γ_j/σ_S) and acts as a elsewhere; λ_max(H) is the largest block root.
+    **Exact for every σ and every B**, so the method is not narrowed (the task's second requirement);
+    Θ(Km²). Checked against the dense matrix to 2.1e-15 over 1,080 configurations in a scratch probe
+    (K 11–201, m 1–3, five σ settings, orthonormal, random and rank-deficient bases, θ_u 0 to
+    1407.77) and to 9.8e-16 and 9.6e-16 over the 45 + 90 Code Cell G prints. Applied to `code cell 1`
+    and E1 by lifting (coupling 9). Appendix G §1 gains the blockwise form (unnumbered), §2's row
+    becomes Θ(Km²), Eq. (G3) becomes O(Km(m + (θ_u² + 2) log(a/tol))), and the §5.6 bullet follows.
 
 ---
 
@@ -2742,3 +2753,7 @@ Classed by the agent.
   θ_u = 0, 1, 10, θ* and 1000, as arguments of a matrix and not as configurations run. No model
   constant changes.
 - **Wall clock** behind `cost:` (agent.md §2 item 3, §5.2).
+- **Added 2026-09-24 (CX5), class (b):** the largest gap between `stiffest_state_rate` and the dense
+  matrix's largest eigenvalue, relative to it, over the 45 spectrum configurations and over 90 more
+  at σ (L, S, u) ∈ {(2, 1, 1), (1, 3, 1), (2.5, 4, 1.5)} with an orthonormal, a seeded random and a
+  rank-deficient basis set on probe networks for the check alone; class (d): `GENERAL_SIGMAS`.

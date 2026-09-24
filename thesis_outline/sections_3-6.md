@@ -1356,12 +1356,12 @@ read as a limit of the architecture.
     determinate stipulation (§3's opening).
 - **What the simulation costs, and what that cost represents.** Appendix G gives the
   computational complexity of this simulation: one integrated inference is
-  $O\big(K^3+Km(\theta_u^2+2)\log(a/\mathrm{tol})\big)$, where $\theta_u^2+2$ is the condition number
+  $O\big(Km(m+(\theta_u^2+2)\log(a/\mathrm{tol}))\big)$, where $\theta_u^2+2$ is the condition number
   of $H$ (Eq. G1) and depends on neither $K$ nor $m$. The simulation is one instantiation of the
   architecture, and the architecture one representation of the process, so the figure represents the
   process's cost through this instantiation and is not the architecture's complexity. Appendix G
   attributes each factor to the equations every instantiation shares or to this instantiation's
-  choices: the $\theta_u^2$ enters through the separation §4.1.6 reports, while the $K^3$, the serial
+  choices: the $\theta_u^2$ enters through the separation §4.1.6 reports, while the serial
   arithmetic and the step size are choices. $n$ enters the cost only through $\theta_u^\ast$, and
   under the proposal above through $K$ as well.
 
