@@ -117,7 +117,7 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
   - Pragmatic speaker: \(S_1(u\mid s)\propto \exp\{\alpha_{\mathrm{rsa}}[\log L_0(s\mid u)-C(u)]\}\).
   - Pragmatic listener: \(L_1(s\mid u)\propto S_1(u\mid s)P(s)\).
   - \(\alpha_{\mathrm{rsa}}\) controls soft-maximal speaker choice; \(C(u)\) penalizes costly
-    forms. **The subscript is not decoration** (Q8, settled by the user 2026-09-21): §§4.1.5 and 5.2
+    forms. **The subscript is not decoration** (Q8): §§4.1.5 and 5.2
     use a bare \(\alpha\) for the concentration of the prior \(\mathrm{Beta}(\alpha,1)\), and the
     two quantities meet in §1.3's override-law sentence. Every RSA \(\alpha\) in the dissertation
     carries the subscript; the Beta concentration keeps the bare symbol, as the notebooks write it. The
@@ -148,9 +148,7 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
 - **Transition:** The dependency on \(P(s)\) creates a specific and documented failure.
 ## 1.3 Strengthening derived from the prior, and its two liabilities (about 440 words)
  
-*Merges the previous draft's §1.3 and §1.4 and promotes the Cremers material out of §1.5. The
-section's function has changed: it is no longer the setup for a wonkiness mechanism, but the first
-of the two empirical anchors §5.1 uses.*
+*The first of the two empirical anchors §5.1 uses.*
  
 - **Main claim to establish:** Deriving scalar strengthening from the listener's prior carries two
   liabilities, one from the size of the predicted prior effect and one from its direction.
@@ -224,11 +222,9 @@ of the two empirical anchors §5.1 uses.*
 - State that it does not by itself establish a covert grammatical operator, and that it is a second,
   independent reason to ask whether the computation of strengthening should reference the listener's
   current prior at all.
-- **Forward pointer, stated without embarrassment (R7, P-9).** §4.1.4 reports the same direction in
-  this model, as a property of its read-out \(q\) against its literal listener. Give both counts: it
-  appears under all four priors that have a row at the weaker lexical strength, and under two of
-  five at the stronger, where raising the strength removes it under two priors and enlarges it under
-  the other two. Name what carries it: the tempering, the halving of the settled log-density that §4.1.1's tempered
+- **Forward pointer, stated without embarrassment.** §4.1.4 reports the same direction in this
+  model, as a property of its read-out \(q\) against its literal listener; the counts are §4.1.4's
+  and do not enter the background (BG7). Name what carries it: the tempering, the halving of the settled log-density that §4.1.1's tempered
   control isolates (§4.1.4). Call it a parallel in direction, not a
   shared liability, since the mechanisms differ. Do not treat it as corroboration, and do not say
   what would avoid it: §5.1 no longer uses it (R2).
@@ -327,8 +323,8 @@ of the two empirical anchors §5.1 uses.*
   The dissertation needs the cross-cutting, not the remedy.
 ## 1.6 Alternatives: where they come from, and what bounds them (about 180 words)
  
-*New. Every work below is used in §5.1 and none was introduced in the previous draft; composition
-guide Entry 5b requires a sourced name to be cited before first use.*
+*Every work below is used in §5.1, so each is cited here before first use (composition guide
+Entry 5b).*
  
 - **Main claim to establish:** An alternative set is not read off the uttered expression, and it is
   not free either. Both facts constrain where a level representing competition could sit.
@@ -351,7 +347,7 @@ guide Entry 5b requires a sourced name to be cited before first use.*
   difference is the point.
 ## 1.7 Scale structure, thresholds, and extreme-favouring interpretation (about 190 words)
  
-*New. Supplies the entire literature of §4.2 and §5.2, motivates a continuous state space in §3.2, and earns the
+*Supplies the entire literature of §4.2 and §5.2, motivates a continuous state space in §3.2, and earns the
 project's "scalar vagueness resolution" keyword.*
  
 - **Main claim to establish:** Where a predicate's threshold sits on its scale is a matter of
@@ -426,13 +422,9 @@ project's "scalar vagueness resolution" keyword.*
 - **One sentence on what the algorithmic claim costs, because it is not free.** That claim carries
   the architecture's **commitment 7** (§3.4) — one of the model's *own* commitments, numbered in
   its own list, and **not** one of §2.2's three canonical ones; say which list once, here, because
-  the two are otherwise a numbering trap. The error units are held to
-  \(\tau_\varepsilon\le\tau_\varphi/(4\lambda_{\max}(H))\), a separation that tightens as
-  \(\theta_u^2\), and what it secures, with the error units' silent start, is the *monotone* rise of
-  \(\mathcal F\) rather than convergence. It is **measured**, not assumed, and §5.3 prices it as a liability of the
-  plausibility claim rather than as a detail of the schedule. One sentence and a forward pointer:
-  the background defines neither \(H\) nor \(\theta_u\), and §2.6 is where the ordering it
-  sharpens is stated.
+  the two are otherwise a numbering trap. §2.6 states the separation it demands, and §5.3 prices
+  it as a liability of the plausibility claim rather than as a detail of the schedule. One sentence
+  and a forward pointer.
 - **Counterargument/qualification:** do not equate this mapping with RSA's social recursion.
   Bidirectional generative/inference flow is not nested reasoning about a speaker reasoning about a
   listener. The proposal borrows RSA's likelihood structure while using predictive-coding dynamics
@@ -442,7 +434,7 @@ project's "scalar vagueness resolution" keyword.*
   (Colombo & Wright, 2021).
 ## 2.2 Three commitments of the canonical framework (about 285 words)
  
-*New, and the backbone of Part II: §§2.3–2.5 develop one commitment each, and §2.7's caveats attach
+*The backbone of Part II: §§2.3–2.5 develop one commitment each, and §2.7's caveats attach
 to them rather than floating free.*
  
 - **Main claim to establish:** The canonical form of predictive coding under the free-energy
@@ -481,8 +473,7 @@ to them rather than floating free.*
   background (BG7).
 ## 2.3 Variational free energy: the objective actually minimized (about 190 words)
  
-*Commitment 1 in detail. Shortened from the previous draft's 300 words, since §2.2 now introduces
-the unified objective.*
+*Commitment 1 in detail; §2.2 introduces the unified objective.*
  
 - **Present both decompositions**, in Bogacz's \(v\) for the hidden state, since \(s\) is the
   scale's proportion throughout this dissertation:
@@ -516,8 +507,8 @@ the unified objective.*
   State this candidly.
 ## 2.4 Predictive coding as local, error-driven message passing (about 400 words)
  
-*Commitment 2, and the answer to the first of the three questions. This is the weightiest subsection
-in Part II; the previous draft's 250 words were thinner than the load it bears.*
+*Commitment 2, and the answer to the first of the three questions: the weightiest subsection in
+Part II.*
  
 - **Main claim to establish:** Predictive coding turns variational inference into local dynamics
   between state units and error units — and **locality is not a side condition but the constraint
@@ -543,8 +534,7 @@ in Part II; the previous draft's 250 words were thinner than the load it bears.*
   **generative**, though not of the utility basis's dimension: §3.5 chooses \(m=2\) for tilt and
   width, and locality is what that choice puts under strain, since at \(m>1\) the update of
   \(\theta_u\) stops being local. Appendix E buys it back with a relay, at the cost of a fourth
-  timescale — which under commitment 7 is an **ordering**, \(\tau_r\le\tau_\varepsilon\), and
-  not a stability requirement the relay carries of its own (F26). And §5.1 argues for binary
+  timescale (§2.6). And §5.1 argues for binary
   branching from it: a cascade of complementary pairs needs only \(m=1\) at each level, where the
   update is local without the relay. Say here that the
   dissertation treats an implementation constraint as a *source of structure*, and that Part I's
@@ -568,9 +558,8 @@ in Part II; the previous draft's 250 words were thinner than the load it bears.*
   make**, per §2.1's three-way vocabulary.
 ## 2.5 What this architecture does not use (about 110 words)
  
-*Raised 60 → 110 at BG7: the 60 was a minimum budget handed a second move, which repeats §5.6's
-failure. Replaces the previous draft's 300-word precision subsection. Kept as its own heading so a reader
-arriving from the FEP literature finds the absence stated rather than having to infer it.*
+*Kept as its own heading so a reader arriving from the FEP literature finds the absence stated
+rather than having to infer it.*
  
 - Precision weighting is the standard mechanism by which a predictive-coding model modulates the
   influence of a prior or an error (Friston, 2008; Feldman & Friston, 2010; Bogacz, 2017), and
@@ -603,8 +592,9 @@ arriving from the FEP literature finds the absence stated rather than having to 
     the literal listener (§4.1.1 names both). Worth one sentence: it is why §4's readings are
     displacements from a control the model passes through, and not from a baseline stipulated
     beside it.
-  - Appendix E adds a fourth timescale, ordered \(\tau_r\le\tau_\varepsilon\) as in §2.4;
-    mention, do not develop.
+  - Appendix E adds a fourth timescale, which under commitment 7 is an **ordering**,
+    \(\tau_r\le\tau_\varepsilon\), not a requirement the relay carries of its own; mention, do not
+    develop.
 - **Bidirectional flow.** Predictions descend the chain and errors ascend it, and every intermediate
   level is both predicted and predicting.
 - **The consequence for staging, which is the point of the subsection, at its true scope.** The
@@ -647,11 +637,9 @@ arriving from the FEP literature finds the absence stated rather than having to 
 - **Close on claim level, not on apology.** The model is a predictive coding model at the
   **algorithmic** level and makes no general circuit-level claim — **with one exception that should
   be named rather than swallowed: Appendix E's relay is a circuit-level proposal**, modest but
-  genuinely implementational. **Its content is not the relay's speed.** Under commitment 7 the
-  relay's requirement collapses into the ordering \(\tau_r\le\tau_\varepsilon\) and binds
-  nothing further (F26), and what a slower relay breaks is the monotone rise of \(\mathcal F\) —
-  a transient, not a failure to converge. The implementational commitment carrying empirical content
-  is **commitment 7's separation itself**, which grows as \(\theta_u^2\) and which §5.3 prices.
+  genuinely implementational. **Its content is not the relay's speed**, which commitment 7 reduces
+  to an ordering (§2.6). The implementational commitment carrying empirical content is
+  **commitment 7's separation itself**, which grows as \(\theta_u^2\) and which §5.3 prices.
   The model is linear-Gaussian while the lexical field is clamped, which is what makes the
   closed forms exact and the implementation claim testable.
 - **Do not hedge the generative model.** The continuous log-odds state, the exclusion-set lexical
@@ -681,9 +669,7 @@ arriving from the FEP literature finds the absence stated rather than having to 
 `sections_3-6.md` has none of its own — and it covers the background, §§3–6, **and the appendices
 as `main.ipynb` and `appendix_E.ipynb` carry them**. A work cited anywhere in the dissertation has
 an entry here. Each notebook keeps its own References cell for its own text — `main.ipynb` cell 24,
-`appendix_E.ipynb` cell 9 (`agent/agent.md` §1, coupling 11). **BG10** reconciled the three on
-2026-09-22, 50 entries to 64: eight works that lived only in main's cell and six only in
-appendix_E's were folded in here. *Two divergences left standing, both wanting one pass across all
+`appendix_E.ipynb` cell 9 (`agent/agent.md` §1, coupling 11). *Two divergences left standing, both wanting one pass across all
 three: Friston is "Friston, K." for 2005 and "Friston, K. J." for 2007-2010, and the notebooks set
 page ranges with en dashes where this list uses hyphens.*
  

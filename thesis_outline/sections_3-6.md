@@ -25,28 +25,22 @@ exposure rather than by anything about the current trial.
 only worth something once the baseline is out of it. **Where the prior leaves the all-region in the
 majority, the network takes it out; where the prior puts the settled field's peak inside the cell
 of *all*, the network carries it outside.** Both are §4.1.2's position criterion, read through the
-two read-outs of §3.6, and Part D's delta-like prior is the case in a single row:
-$q_{\mathrm{lit}}=0.9568$ against $q_H=0.4351$, and a peak at $s=0.9852$ inside the cell against
-$0.9468$ outside it (§4.1.4). Across the plane, $q_{\mathrm{lit}}$ holds at least half the all-region
-in 77 of the 121 cells and the settled belief holds less than half in **15** of those;
-$\ell_0$ peaks inside the cell in 66 cells and $\varphi_S^\ast$ peaks outside it in **9** of those,
-the 9 a subset of the 15 (§4.1.5). **In every one of those cells the shift criterion is met as well**,
-which the cell counts rather than the prose asserts: where the network changes the position
-verdict it meets both criteria, and it does so under either read-out. **The 15 and the 9 are
-figures at the stipulated half-width**, and Appendix A's ladder counts them $32, 15, 0, 0, 0$ and
-$22, 9, 0, 0, 0$ over $Z\in\{5,6,7,8,10\}$: a count conditioned on the baseline failing entails a
-shift and so cannot outlast the shift criterion, which is empty by $Z=7$. §4.1.2's guard governs this
-claim as it governs the counts below it, and §4.1.5 states it there in full.
+two read-outs of §3.6. Part D's delta-like prior is the case in a single row (§4.1.4), and across
+the plane the network does it in a minority of the cells whose baseline fails a position criterion,
+under $q$ and, in a subset of those, under the delta read-out (§4.1.5). **In every one of those
+cells the shift criterion is met as well**, which the cell counts rather than the prose asserts:
+where the network changes the position verdict it meets both criteria, under either read-out.
+**The conditioned counts are figures at the stipulated half-width**, and they cannot outlast the
+shift criterion as the grid widens (§4.1.5). §4.1.2's guard governs this claim as it governs the
+counts below it.
 
 The unconditioned counts belong in the claim too, and only with what they include. Both conditions
 hold under three of the five priors at $\Lambda=512$, the three with the most prior mass on the
-all-region, and the second under all five, so among those priors they are nested (§4.1.4); across the
-plane both hold in 33 of 121 cells, in a band whose shape two opposed floors set, the first
-condition's falling in $\Lambda$ as the prior sharpens and the second's rising (§4.1.5). Under the
-delta read-out the same two counts are the delta-like prior alone and 13 cells, since **what
-survives the change of read-out is the position criterion and what does not is the shift** (§3.6's
-position). **Each of these is a count in which the baseline is doing part of the work**, which is
-why they stand after the paragraph above and not in place of it.
+all-region (§4.1.4), and across the plane in a band whose shape two opposed floors set (§4.1.5).
+Under the delta read-out the same two counts shrink to the delta-like prior alone and a smaller band,
+since **what survives the change of read-out is the position criterion and what does not is the
+shift** (§3.6's position). **Each of these is a count in which the baseline is doing part of the
+work**, which is why they stand after the paragraph above and not in place of it.
 
 The case for a level representing within-trial competition among alternatives therefore does not
 rest on the criterion failing (R2). It rests on what such a
@@ -96,7 +90,7 @@ reader should weigh is recorded as a fact with our position reserved.
 |---|---|---|
 | Amplification mechanism, Eqs. (23)–(24) | §3.5, §4.1.4 | It is what produces the effect, and it is measured |
 | The two-condition criterion and its results | §4.1.2–§4.1.5 | The verdict. **Carried as the position criterion with the baseline's own cells left out** (§4.1.4's one row; §4.1.5's 15 and 9), with the unconditioned counts reported beside them |
-| The cell of *all* has two stipulated ends, $n$ and $Z$ | §3.2, §4.1.2, §4.1.5, §5.5 | The guard every count in §§4.1.4–4.1.5 is relative to. **Printed at both ends since 2026-09-23** (Appendix A's two ladders; Code Cell 2's $K$-against-$Z$ check; F.10's control), so it is carried rather than reserved |
+| The cell of *all* has two stipulated ends, $n$ and $Z$ | §3.2, §4.1.2, §4.1.5, §5.5 | The guard every count in §§4.1.4–4.1.5 is relative to. **Printed at both ends** (Appendix A's two ladders; Code Cell 2's $K$-against-$Z$ check; F.10's control), so it is carried rather than reserved |
 | Conventionalization of $\theta_u^\ast$ by exposure (App. B) | §3.4, §5.1 | The position the architecture commits to |
 | The four construction obligations (Text cell 3; §8; App. B) | §5.1 | Turns the gap into a specification |
 | Binary branching per level, and $m=1$ (App. C §§2, 5) | §5.1 | Makes the alternatives level tractable and local |
@@ -116,7 +110,7 @@ or a footnote.
 - *The O corner costs nothing* (App. C §4): *not all* introduces no threshold and so no dimension.
   The model's verdict is that Horn's (1972) lexicalization gap is not representational. (It also
   bears on §5.1: enlarging the alternative set need not enlarge the space.)
-  **What the implementation predicts, and how far (O9, settled 2026-09-21).** The reflection
+  **What the implementation predicts, and how far (O9).** The reflection
   $\zeta\mapsto-\zeta$ carries the inventory onto its mirror exactly, so **this implementation
   predicts that the O corner is just as representational**. State the limit in the same breath: the
   prediction is about the architecture as it stands, and it is **not** carried into the phase §5.1
@@ -126,10 +120,13 @@ or a footnote.
   is measured in an audit, not in a notebook.
 - *Exclusion over truth sets* (App. D): stated in §3 in two sentences as a forced design choice,
   not as a finding — though §5.1 now gives it a second, independent motivation.
-**Tier C — left in the notebook and cited.** Conditioning and stiffness (Eq. 28); the
-$\mu_u$/$\ell_0$ common-mode invariance and its polar sweep (Eqs. 32–35); the flat-direction
-resolution (§9.1); grid refinement; the multidimensional ceiling (§9.3), except for one sentence
-in §5.5; the weight-transport accounting of § E.2.
+**Tier C — left in the notebook and cited.** Conditioning and stiffness (Eq. 28), cited from §3.4;
+the $\mu_u$/$\ell_0$ common-mode invariance and its polar sweep (Eqs. 32–35), cited from §4.1.2's
+guard; the flat-direction resolution (§9.1); grid refinement's figures, cited from §4.1.3 and §5.5;
+the multidimensional ceiling (§9.3), except for one sentence in §5.5; the weight-transport
+accounting of § E.2. **The rule for all of it:** the outline carries the rationale and the numbers
+the argument uses, and points to the notebook for derivations, verification figures and
+enumerations.
  
 ---
  
@@ -174,15 +171,14 @@ The raise history of this table is in `revisions.md` §16.
  
 ## The design strategy (section opening, about 170 words)
 
-*New, 2026-09-24 (the user's four points, reviewed; `thesis_outline/revisions.md` §14,
-`agent/decisions.md` C9). It states why §3.1's requirements take the shape they do, before they are
-listed.*
+*It states why §3.1's requirements take the shape they do, before they are listed
+(`agent/decisions.md` C9).*
 
 - **Main claim:** at each choice Bogacz's (2017) construction leaves open, the architecture takes
   the option that makes its result **determinate** — fixed by the configuration alone, and not by
   initialization, integration path, learning history or stopping time. Three choices carry it, and
   the first two are one chain.
-- **Why determinacy first (the motivation, the user's, 2026-09-24).** The available facts do not
+- **Why determinacy first (the motivation).** The available facts do not
   settle how to choose within the framework so as to arrive at the representation of a
   psychological process that fits best and predicts best; which choice is right can be learned only
   by trying the alternatives. The dissertation is **agnostic** among them and says so: it has no
@@ -249,18 +245,13 @@ Requirement 4 is what distinguishes this model from a fit, and §4.1.3 reports t
 ## 3.2 A continuous world state and a soft lexicon (about 295 words)
  
 - The world state is a proportion $s\in(0,1)$ carried in logit coordinates,
-  $\zeta=\operatorname{logit}(s)$ (Eq. 1). Because $\operatorname{logit}$ is a bijection
-  $(0,1)\to\mathbb R$, this is a change of coordinates and not a modelling assumption. Integrals
-  over $\zeta$ are evaluated on a fixed quadrature grid (Eq. 2). **Say what the grid's two
-  parameters do, and do not let the familiar half of it stand for both.** The node count $K$
-  discretizes the integral rather than the state, and no quantity in the model is defined in terms
-  of a node, so a reader must not take $K$ for a state-space size; Code Cell 2's specification
-  check reports $\mathbb E[s]$ converging in $K$. **The half-width $Z$ is the other kind.** Eq. (1)
-  carries $\zeta$ onto the whole of $\mathbb R$, so cutting it at $\pm Z$ **bounds the state
-  space**, there is nothing for it to converge to, and the same check reports that it does not
-  settle. §4.1.2's guard and §5.5 are where that is paid for; here it is one clause, so that the
-  sentence about $K$ is not read as covering the grid entire. **Flag for §5.1 that $\zeta$ is a
-  log-odds coordinate**; that fact does work twice later.
+  $\zeta=\operatorname{logit}(s)$ (Eq. 1), a change of coordinates and not a modelling assumption.
+  Integrals over $\zeta$ are evaluated on a fixed quadrature grid (Eq. 2). **One sentence on the
+  grid's two parameters, so that the familiar half does not stand for both:** the node count $K$
+  discretizes the integral and converges, while the half-width $Z$ bounds the state space and has
+  nothing to converge to (Text cell 3 §1; Code Cell 2's check reports both). §4.1.2's guard and
+  §5.5 are where the second is paid for. **Flag for §5.1 that $\zeta$ is a log-odds coordinate**;
+  that fact does work twice later.
 - Each utterance carries an **exclusion set** $E_y$, the states its entry rules out (Eq. 5), and the
   lexical field is that set's indicator scaled by lexical strength, $\varphi_L=\Lambda\chi_y$
   (Eq. 6). Two sentences on why exclusion rather than the truth set: under exclusion, "this entry
@@ -292,21 +283,17 @@ Requirement 4 is what distinguishes this model from a fit, and §4.1.3 reports t
      Eq. (D5), $\ell_0-\varphi_L$ is no unit's activity and exists only as a combination of two
      residuals.
   2. *It builds in a hypothesis about the dynamics:* that the world prior and lexical strength
-     counteract. Under Eq. (9) the two enter Eq. (15) as one term with one weight. Under Eq. (D5)
-     they still oppose each other in $\varphi_S^\ast$, but less directly, since the prior is then
-     weighted with the utility level's prediction and the entry apart from it. The hypothesis has
-     empirical content: the two placements return the same situation field from the same utility
-     state only while the lexical and situation levels' variances are equal, $\sigma_L=\sigma_S$,
-     and otherwise differ in it by $(\sigma_L-\sigma_S)\ell_0/S$ with $S=\sigma_L+\sigma_S$, so a
-     later precision-bearing phase tests the placement instead of inheriting it.
+     counteract, entering Eq. (15) as one term with one weight. The hypothesis has empirical
+     content: the two placements return the same situation field only while the lexical and
+     situation levels' variances are equal, so a later precision-bearing phase tests the placement
+     instead of inheriting it (Appendix D §5 gives the difference).
   3. *The literal listener is a state the network reaches.* Under Eq. (9) the field
      $\ell_0-\varphi_L$ is what Eq. (15) returns as $\sigma_S\to\infty$, when the utility level's
      prediction carries no weight. Under Eq. (D5) no setting of the variances returns it. §4.1.1's
      baseline rests on this reason.
 
-  Close on what the choice changes. The two placements differ in one quantity, the utility level's
-  drive $c_y$ (§3.3), and there only by the sign the prior carries against the entry: the couplings
-  differ by $2B^{\mathsf T}W\ell_0$, the same vector whatever was uttered (Eq. D7). §4.1.4 reports what
+  Close on what the choice changes: the two placements differ only in the utility level's drive
+  $c_y$ (§3.3), by a vector that is the same whatever was uttered (Eq. D7). §4.1.4 reports what
   raising $\Lambda$ does under Eq. (9). The rows under Eq. (D5) are a **counterfactual
   manipulation**, not a control, and stay in Appendix D and Code Cell D. About 90 words in the
   paper, and no number quoted here.
@@ -344,19 +331,14 @@ Requirement 4 is what distinguishes this model from a fit, and §4.1.3 reports t
   quantity, $c_y=B^{\mathsf T}W(\ell_0-\varphi_L)$ (Eq. 16), one pairing per column of $B$. By
   §3.2, $\ell_0-\varphi_L$ is $\log L_0$ up to its normalizer, with $-\infty$ softened to $-\Lambda$,
   so **the utility level reads a linear projection of the same log quantity RSA's $S_1$ reads**
-  (§1.2), softened as the lexicon is. State that, and warn in the same
-  breath that a projection does not imply an equivalence and that forgetting the difference is
-  dangerous. Give the warning its exact form: $B^{\mathsf T}W\mathbf 1=0$, so $c_y$ is blind to the
-  constant direction, which is exactly where $\log L_0$'s normalizer lives, and keeps only the
-  field's coordinates along the columns of $B$ — at $m=2$, the tilt and the width of §3.5. The
-  normalizer is what RSA's informativity runs on: for two utterances true at the same state, their
-  unnormalized $\log L_0$ agree there, and $S_1$'s preference between them, cost aside, comes from
-  their normalizers alone. Then the nuance that must not be got wrong: the invariance belongs to the
-  coupling, and the model does not share it. Eq. (15) carries the constant into $\varphi_S^\ast$,
-  and Eq. (21)'s strict concavity leaves no flat direction for it to vanish along; never write that
-  the model is constant-invariant. Code Cell D prints both facts (Appendix D Sec. 5). About 45 words
-  in the paper; the normalizer sentence is the agent's addition to R19 and the first to cut if the
-  bullet overruns.
+  (§1.2), softened as the lexicon is. State that, and warn in the same breath that a projection
+  does not imply an equivalence: the projection is blind to the constant direction, which is
+  exactly where $\log L_0$'s normalizer lives, and the normalizer is what RSA's informativity runs
+  on (for two utterances true at the same state, $S_1$'s preference between them, cost aside, comes
+  from their normalizers alone). Then the nuance that must not be got wrong: the invariance belongs
+  to the coupling, and the model does not share it, so never write that the model is
+  constant-invariant. Appendix D §5 gives the exact form and Code Cell D prints both facts. About 45
+  words in the paper; the normalizer clause is the first to cut if the bullet overruns.
 ## 3.4 State units, error units, and what is local (about 320 words)
  
 - Error units relax toward their residuals and state units ascend $\mathcal F$ (Eqs. 18–19), both
@@ -368,11 +350,10 @@ Requirement 4 is what distinguishes this model from a fit, and §4.1.3 reports t
   as $\theta_u^{-2}$. It is a precondition of the **monotone** rise of $\mathcal F$, not of convergence, and the
   monotone rise needs one thing more, the silent start of the error units the implementation uses:
   an overdamped system started with its errors away from their residuals can leave the maximum
-  before it returns. Text cell 3 §8.2 keeps four results apart, and so should the paper: a unique
-  optimum (concavity, next bullet); ascent in the quadrature metric when the errors sit at their
-  residuals; convergence of the coupled network at every separation, from a characteristic
-  equation whose coefficients are all positive; and monotone $\mathcal F$ under the implemented
-  start, which is measured rather than proved.
+  before it returns. Text cell 3 §8.2 keeps **four results** apart (a unique optimum; ascent when
+  the errors sit at their residuals; convergence at every separation; monotone $\mathcal F$ under
+  the implemented start, measured rather than proved), and the paper names them in one sentence and
+  points there.
   The learning rate is the ratio $\tau_\varphi/\tau_\theta$: the constant of proportionality is a
   time constant of the kind the error and state units already carry, so no step size is set apart
   from the ordering of timescales, though the ratio does a learning rate's work.
@@ -392,33 +373,23 @@ Requirement 4 is what distinguishes this model from a fit, and §4.1.3 reports t
   displacements from a baseline the model passes *through* rather than one stipulated beside it.
 - **Concavity is not the whole story; conditioning decides what is reachable.** Strict concavity
   secures convergence of the fast subsystem at *every* $\theta_u$ the slow flow passes through and
-  says nothing about the cost of arriving. The **stiffness ratio** — Eq. (28)'s $\varphi_u$ rate
-  over the constant $\varphi_S$ rate — is $(1+\theta_u^2)/2$, which is $404.8$ at the Gaussian
-  prior's $\theta_u^\ast$. Slow-parameter learning and fast-subsystem conditioning are therefore
-  coupled, and this is the sentence §4.1.6 and §5.3 are built on.
-  *(Writer's note: the printed name is **stiffness ratio**. `revisions.md` §4's §3.4 entry called it
-  a condition number and it is not one — at that $\theta_u^\ast$, $\lambda_{\max}(H)=810.69$
-  against Eq. (28)'s rate of $809.69$, so the ratio is not $\lambda_{\max}/\lambda_{\min}$. Use
-  the notebook's name; Text cell 4's *Integration cost and conditioning* prints the table.)*
+  says nothing about the cost of arriving. The **stiffness ratio** (use the notebook's name; it is
+  not a condition number) grows as $\theta_u^2$, so slow-parameter learning and fast-subsystem
+  conditioning are coupled, and this is the sentence §4.1.6 and §5.3 are built on. Text cell 4's
+  *Integration cost and conditioning* prints the table.
 - **Locality, and the relay that secures it.** The ranking inverts against expectation: Bogacz's
   free matrix $\Theta$ is local without comment, and our scalar restriction $\theta_u B$ is what
   needs defending, because tying $K\times m$ entries to one scalar is weight sharing. At $m=1$ the
-  defence is that $b$ is the fixed spatial profile of one projection, so $\langle\varepsilon_S,b\rangle$
-  is a single signal at a single synapse. At $m>1$ that defence gives out (Eq. B4), and the
-  implementation runs at $m=2$. Appendix E closes the gap by inserting a relay: the columns of $B$
-  become the terminal fields of the $\varphi_u$ axons, so $r=B\varphi_u$ (Eq. E1) is formed in one
-  node's dendrite, and the rule becomes $\tau_\theta\dot\theta_u=\langle\varepsilon_S,r\rangle$
-  (Eq. E4) — pre times post, at any $m$. **The sum is relocated, not removed**: out of the
-  plasticity rule, where a synapse would have had to read other neurons, and into a dendrite, where
-  summing one's own afferents is what local computation permits. Eq. (E4a) shows the two forms are
-  the same number, so no prediction moves. The cost is a fourth timescale — and **under commitment 7
-  it is an ordering rather than a requirement the relay carries of its own**:
-  $\tau_r\le\tau_\varepsilon$ (Eq. E6, which keeps the weak inequality), for **monotone
-  $\mathcal F$ and not against oscillation** (F26). A relay no slower than the error units inherits
-  their $\theta_u^{-2}$ scaling without a separate one; the scaling has moved, not disappeared.
-  State the exception rather than smoothing it: at equality $\mathcal F$ is monotone under *some*
-  only (O6). **The empirical content sits in commitment 7's separation, not in the relay's speed**
-  — background §2.7 closes on the same correction.
+  defence is that $b$ is the fixed spatial profile of one projection, a single signal at a single
+  synapse. At $m>1$ that defence gives out (Eq. B4), and the implementation runs at $m=2$.
+  Appendix E closes the gap with a relay that forms $B\varphi_u$ in one node's dendrite, so the
+  rule is pre times post at any $m$ (`appendix_E.ipynb` E.1 gives Eqs. E1–E6). **The sum is
+  relocated, not removed**: out of the plasticity rule, where a synapse would have had to read other
+  neurons, and into a dendrite, where summing one's own afferents is what local computation
+  permits. No prediction moves. The cost is a fourth timescale, and **under commitment 7 it is an
+  ordering, $\tau_r\le\tau_\varepsilon$, rather than a requirement the relay carries of its own**;
+  the one exception, at equality, is stated in E.1. **The empirical content sits in commitment 7's
+  separation, not in the relay's speed**, and background §2.7 closes on the same point.
 ## 3.5 Two choices the scale motivates (about 180 words)
  
 The first is a design choice with a stated rationale; the second is what that choice gives the
@@ -427,18 +398,15 @@ model to work with. Three properties of $B$ answer to different requirements and
 direction of the entries' span modulo the constant (App. C's "spanning"), and representing **tilt
 and width as independent coordinates**.
  
-- **$m=2$, so that tilt and width are coordinates of their own.** With $t$ distinct cut points the
-  scale divides into $t+1$ intervals, so the entries span at most $t$ dimensions modulo the
-  constant (Eq. C2). Here $t=2$, one threshold per endpoint, and $m=2$ is the least that retains
-  every direction: it misses only the constant, which the read-out misses too. Separation alone
-  asks for less — a single column of no definite parity separates all three entries (Text cell 5
-  Part A) — but it folds tilt and width into one coordinate, and that is the rationale for $m=2$.
-  The parity result gives necessity under a restriction: $\chi_{\textit{all}}-\chi_{\textit{some}}$
-  is even and $\chi_{\textit{no}}-\chi_{\textit{all}}$ is odd, so a single column **of definite
-  parity** annihilates one of them, and within such bases $m\ge2$ is forced exactly when an
-  inventory contains two pairs whose differences have opposite parity — **which, with symmetric
-  thresholds, requires three utterances at one level**. §5.1 turns that clause into a design.
-  Neither result makes $m=2$ the only architecture that separates the inventory.
+- **$m=2$, so that tilt and width are coordinates of their own.** With $t$ cut points the entries
+  span at most $t$ dimensions modulo the constant (Eq. C2); here $t=2$, one threshold per endpoint,
+  and $m=2$ is the least that retains every direction, missing only the constant, which the
+  read-out misses too. Separation alone asks for less (a single column of no definite parity
+  separates all three entries, Text cell 5 Part A), but it folds tilt and width into one
+  coordinate, and that is the rationale for $m=2$. Necessity holds only **within bases of definite
+  parity**, and only for an inventory with three utterances at one level (Appendix C §5 gives the
+  parity argument); §5.1 turns that clause into a design. Neither result makes $m=2$ the only
+  architecture that separates the inventory.
 - **The two directions do different work.** The odd column is a monotone ramp that slides
   log-density from one end of the scale to the other — **tilt**. The even column raises both tails
   and lowers the centre — **width**, and therefore the axis along which mass moves between the
@@ -530,14 +498,13 @@ Three beliefs, all internal to the model:
 - $q_{\mathrm{lit}}$, the **untempered literal listener**, $\varphi_S=\ell_0-\varphi_L$: the prior
   restricted by the entry and nothing else. At this first mention, one sentence saying that what
   "literal" denotes here is distinct from what it denotes in RSA and the Gricean literature, and no
-  further explanation (DEC5 of `agent/history.md` §4). Writer's note, not for the
-  paper: the sentence does not contradict §3.2, whose identification with RSA's $L_0$ holds only as
+  further explanation. *(Writer's note, not for the paper:* the sentence does not contradict §3.2, whose identification with RSA's $L_0$ holds only as
   $\Lambda\to\infty$, a limit and not a setting, so the sentence is true of every configuration
   evaluated. $q_{\mathrm{lit}}$ is a fixed point of this network rather than an external
   construction, being what Eq. (15) returns as $\sigma_S\to\infty$, **and it is one because
   $\ell_0$ enters at $g_L$**: under the placement §3.2 sets aside, no setting of the variances
   returns it (§3.2, reason 3; `agent/decisions.md` A3). Say both; the first removes the obvious objection
-  that the baseline was built to be beaten, and the clause names what that answer rests on.
+  that the baseline was built to be beaten, and the clause names what that answer rests on.)
 - The **tempered control**, $(\ell_0-\varphi_L)/2$, at $\theta_u=0$: the literal listener tempered
   by one half, the halving surviving into the belief because the read-out is exponential. It is a
   third quantity and not the baseline, and it holds the temperature fixed so that the utility level's
@@ -545,7 +512,7 @@ Three beliefs, all internal to the model:
   $\theta_u(0)=0$.
 - $q_H$, **the settled belief read through $q$** — §3.6 gives the read-out and what it costs.
 State once, plainly, that RSA and wRSA are **analytic baselines and are not implemented**, so no
-quantitative comparison is offered or implied.
+quantitative comparison with them is offered or implied; §4.2 compares the model with data.
  
 ### 4.1.2 The criterion, and how to read the statistics (about 545 words)
  
@@ -570,10 +537,9 @@ quantitative comparison is offered or implied.
   interpreted. This section reports them.
 - **A guard the reader needs before the first table.** These statistics are $q$-masses taken after
   the read-out's exponential, so they are nonlinear in $\varphi_S$ and do not inherit invariances
-  the $\varphi_S$ contrasts have. Measured instance: $\mu_u$ and $\ell_0$ move no $\varphi_S$
-  contrast at fixed $\theta_u$ — bit-identical to $3.6\times10^{-15}$ across a sixty-setting sweep —
-  while $\Delta_{\textit{some}}$ varies by more than a fifth of its own size across six $\mu_u$
-  settings. Any claim about a contrast between utterances must be checked against $\varphi_S$
+  the $\varphi_S$ contrasts have. Text cell 5 gives the measured instance: $\mu_u$ and $\ell_0$
+  move no $\varphi_S$ contrast at fixed $\theta_u$, while $\Delta_{\textit{some}}$ moves with
+  $\mu_u$. Any claim about a contrast between utterances must be checked against $\varphi_S$
   directly.
 - **A second guard: the verdicts are relative to the *all*-cell's width, not to $n$ alone.** Both
   q criteria are stated on the mass of an interval. $\theta_L=\log(2n-1)$ fixes that interval's
@@ -583,62 +549,44 @@ quantitative comparison is offered or implied.
   - *The $n$ end, which a cell prints.* Across both lexical strengths and all four base priors the
     q shift criterion changes status somewhere on a sweep of $n$, and *where* it changes depends on
     $\Lambda$ — granularity and lexical strength are not separable in what the tables below report.
-    Appendix A prints that sweep.
+    Code Cell A prints that sweep.
   - *The $Z$ end, which a cell now prints too.* Appendix A's half-width ladder runs the same four
     criteria over $Z\in\{5,6,7,8,10\}$ at fixed node spacing, beside its ladder in $n$, and
     Code Cell 4's plane is recounted at each. **The guard is symmetric and both halves are
-    sourced.** The figure to give is the one that makes the point in a line: under the flat prior
-    at $\Lambda=512$ both q criteria are met at $Z=5$ and $6$ and neither from $Z=7$, while the
-    peak of $\varphi_S^\ast$ climbs $0.8516$, $0.9168$, $0.9597$, $0.9862$, $0.9981$ in $s$ and
-    crosses the cell's start at $0.9500$ between $Z=6$ and $7$. *(Writer's note: this supersedes
-    the 2026-09-23 ruling that the $Z$ end takes no printed evidence, which the user reopened the
-    same day. `agent/decisions.md` E17 records the supersession, and the audit stays class (e) for
-    anything the cell does not print.)*
-  - *How $Z$ reaches the verdict, and the one thing not to say.* Not by clipping a tail:
-    $\varphi_S^\ast$ stays normalizable and nothing piles at the cut. $B$ is orthonormalized under
-    the grid's own measure, so **the peak of $\varphi_S^\ast$ moves with $Z$** — the same peak
-    Text cell 4 reports, which Eq. (12) makes $q$'s mode as well, so this is a fact about the
-    settled field and not about a choice of read-out. That peak is $\zeta_{k^\ast}$, so what moves
-    is the left-hand side of **§3.6's mode position criterion, $\zeta_{k^\ast}<\theta_L$** — name
-    it, because "the peak relative to $\theta_L$" *is* that criterion and not a new quantity.
-    Where it **fails**, the peak sitting at or above $\theta_L$, the conjunction cannot hold
-    either. **State the implication in that direction only.** The mode position criterion being
-    *met* does **not** deliver the conjunction: the first condition fails on its own in most
-    configurations, and it is the more fragile of the two. So the conjunction is **not** a claim
-    about where the peak sits, and the delta read-out is no substitute for it, both moving
-    together. *(Writer's note: Text cell 4 reports that peak in $s$ and $\theta_L$ is a threshold
-    in $\zeta$; convert once, or the two look like different quantities.)* §4.2's comparison is
-    untouched, $R^2$ over profiles reading agreement of shape across items.
-  Two further cautions attach. A sweep **brackets** a change rather than locating it; and a change
-  of status may be the sign flip of a quantity already decayed to $10^{-7}$, which is not the
-  finding that a flip at $10^{-1}$ is.
+    sourced.** Give the one figure that makes the point in a line: under the flat prior at
+    $\Lambda=512$ both q criteria are met at $Z=5$ and $6$ and neither from $Z=7$. Code Cell A prints
+    the ladder, and §5.5 says how $Z$ reaches the verdict (through $B$, not by clipping a tail).
+  - *The one implication to state, in the direction it runs.* Where the mode position criterion
+    **fails**, the peak of $\varphi_S^\ast$ at or above $\theta_L$, the conjunction fails too. The
+    criterion being *met* does **not** deliver the conjunction, since the first condition fails on
+    its own in most configurations. So the conjunction is not a claim about where the peak sits.
+    *(Writer's note: Text cell 4 reports the peak in $s$ and $\theta_L$ is a threshold in $\zeta$;
+    convert once.)* §4.2's comparison is untouched, $R^2$ over profiles reading agreement of shape
+    across items.
+  Appendix A's two cautions attach to every ladder: a sweep **brackets** a change rather than
+  locating it, and a change of status may be the sign flip of a quantity already decayed to
+  nothing.
 ### 4.1.3 The specification holds (about 145 words)
  
-Brief, and reported as a table rather than argued. The closed forms agree with the integrated
-dynamics to $4.45\times10^{-9}$ — **quoted as $1.00$ times the stopping tolerance, not as an
-absolute**, because I3 keys that tolerance to $\lambda_{\max}(H)$, so the figure is a property of
-what is being integrated and moves between rows. The fixed-point identities of Eq. (17) hold; the
-Hessian is negative definite across $\theta_u$; the relaxation rate is independent of
-$\varphi_L$; the analytic messages agree with finite differences. Grid refinement is tested on the
-**tail** of the sequence rather than on two coarse grids, because the rate is set by the entry being
-a step: $|401-801|$ in $\mathbb E[s]$ is $1.7\times10^{-3}$ under the hard mask against
-$3.3\times10^{-6}$ under a smooth one, with the smooth mask serving as the control that identifies
-which of the two is model and which is quadrature. (The coarse $51$–$401$ spread, $1.1\times10^{-2}$,
-is the $O(h)$ step artefact, which is why the tail is what is tested.) **The table's fifteenth
-line is the companion to that one and belongs beside it in the prose**: widening the half-width at
-fixed node spacing does not settle, $\mathbb E[s]$ spreading $1.5\times10^{-1}$ over $Z\in[5,10]$
-against the $1.7\times10^{-3}$ tail in $K$, which is §3.2's two-parameter point measured rather
-than asserted. Report the pair in one sentence and send the consequences to §4.1.2's guard.
-Code Cell E3 checks that the relay reproduces every one of these numbers.
+Brief, and reported as a table rather than argued: Code Cell 2 prints the fifteen checks (closed
+forms against the integrated dynamics, the identities of Eq. (17), the Hessian, the relaxation
+rate, the messages against finite differences, the grid), and the paper points there. Two reading
+rules come with it. Quote an agreement figure **as a multiple of the stopping tolerance, not as an
+absolute**, since I3 keys that tolerance to $\lambda_{\max}(H)$. And grid refinement is tested on
+the **tail** of the sequence, because the rate is set by the entry being a step, with the smooth
+mask as the control that separates model from quadrature. **The pair that belongs in the prose, in
+one sentence:** refining $K$ settles $\mathbb E[s]$ and widening $Z$ at fixed spacing does not,
+which is §3.2's two-parameter point measured rather than asserted; the consequences go to §4.1.2's
+guard. Code Cell E3 checks that the relay reproduces every one of these checks.
 **A warning follows the pair, in one sentence: a lower bound on $K$ is suspected and not
 established.** Coarsening from $K=101$, the four criteria track the fine grid to $K=81$, and at
 $K=61$ they first disagree with it on Part D's statuses (Appendix A's third ladder); what they do
 below that cannot yet be told apart from where the nodes fall against $\theta_L$. Point to §5.5 for
 what is known, and add nothing to §4.1.2's guard, which stays with $n$ and $Z$ (NK-D1).
- 
+
 ### 4.1.4 The five priors (about 470 words)
  
-**This is the section the argument turns on, and since 2026-09-23 it turns on one row of it.**
+**This is the section the argument turns on, and it turns on one row of it.**
 It reports Text cell 4b's rows: all five priors at $\Lambda=512$, each at its own learned
 $\theta_u^\ast$, with $\Lambda=8$ entering as a one-line contrast (R20, P-10). **The delta-like row
 is the one the constructive claim rests on**, for the reason the baseline bullet below gives, and
@@ -654,11 +602,10 @@ it, so the reader sees the rows before being told which one carries weight.
 | delta-like | $+1407.77$ | 0.9568 | 0.9568 | 0.4351 | $-0.5217$ | $-0.0586$ | $-0.4631$ | met | met |
  
 - **Why $\Lambda=512$, in one sentence.** At Part D's $\Lambda=8$ the diffuse priors override the
-  entries for *no* and *all* (largest leak $0.63$ under the Gaussian prior, $0.91$ under both skewed
-  priors), so those rows measure the override as well as the criterion; at $\Lambda=512$ every
-  entry holds under every prior (largest leak $1.1\times10^{-74}$). Read *some* only: under *no*
-  and *all* the literal listener already holds none and all of the all-region, so their zero shifts
-  are saturation.
+  entries for *no* and *all*, so those rows measure the override as well as the criterion; at
+  $\Lambda=512$ every entry holds under every prior (Text cell 4b gives the leaks). Read *some*
+  only: under *no* and *all* the literal listener already holds none and all of the all-region, so
+  their zero shifts are saturation.
 - **The conjunction holds under three of the five**, the flat, $\mathrm{Beta}(3,1)$ and delta-like
   priors, and the second condition under all five, so no prior meets the first condition alone.
   State it as an observation before interpreting it. Among these five rows the two conditions are
@@ -666,19 +613,19 @@ it, so the reader sees the rows before being told which one carries weight.
   second in 59). The three are the priors with the most prior mass on the all-region, and across
   them the shift deepens with that mass.
 - **The contrast with $\Lambda=8$, and where §3.2's commitment shows.** At $\Lambda=8$ the four
-  diffuse priors meet the second condition only, with shifts $+0.0008$, $+0.0295$, $+0.0004$ and
-  $+0.0421$. Raising $\Lambda$ to 512 carries the flat and $\mathrm{Beta}(3,1)$ priors across zero
-  and moves the Gaussian and $\mathrm{Beta}(1,3)$ priors further from it. The tempering barely moves
-  with $\Lambda$; what moves is the utility level's own contribution, whose drive $c_y$ is the one
-  quantity the placement of $\ell_0$ changes (§3.2, Eq. D7). The prior also matters less at this
-  $\Lambda$: the $\varphi_S$ contrasts between utterances agree across the five priors to $0.0001$
-  at each prior's own $\theta_u^\ast$, against $0.0575$ across Part D's four at $\Lambda=8$.
+  diffuse priors meet the second condition only. Raising $\Lambda$ to 512 carries the flat and
+  $\mathrm{Beta}(3,1)$ priors across zero and moves the Gaussian and $\mathrm{Beta}(1,3)$ priors
+  further from it. The tempering barely moves with $\Lambda$; what moves is the utility level's own
+  contribution, whose drive $c_y$ is the one quantity the placement of $\ell_0$ changes (§3.2,
+  Eq. D7). The prior also matters less at this $\Lambda$, the utterance contrasts in $\varphi_S$
+  agreeing across priors far more closely than at $\Lambda=8$ (Code Cells 2 and 2b print both
+  spreads).
 - **Decompose the shift before interpreting it.** $\Delta_y$ contains the tempering and the utility
   level, and they come apart at the tempered control. Where the conjunction holds, the utility
   level's contribution outweighs the tempering. It is negative under four priors and positive under
   $\mathrm{Beta}(1,3)$. Whether the first condition is met therefore depends on the prior the entry
   is read against.
-- **The anti-exhaustive direction, and the Cremers parallel (R7, P-9; about 40 words).** Give both
+- **The anti-exhaustive direction, and the Cremers parallel (about 40 words).** Give both
   counts in one sentence. The shift is positive under all four priors that have a row at
   $\Lambda=8$ (the delta-like prior has none there, since it needs the stronger lexicon), and under
   two of five at $\Lambda=512$, the Gaussian and $\mathrm{Beta}(1,3)$. Raising $\Lambda$ removes the
@@ -696,8 +643,8 @@ it, so the reader sees the rows before being told which one carries weight.
   - §5.1 does not use the parallel as evidence for the alternatives level (R2).
 - **Where the first condition is met, the mechanism is amplification, not competition.** Differencing
   Eq. (16) against the tempered control gives
-  $\varphi_S^\ast(\theta_u)-\varphi_S^\ast(0)=\tfrac{\theta_u}{2}B\varphi_u^\ast$ (Eq. 23, exact to
-  $1.8\times10^{-15}$ at the Gaussian prior's $\theta_u^\ast$), and growing $|\theta_u|$ drives
+  $\varphi_S^\ast(\theta_u)-\varphi_S^\ast(0)=\tfrac{\theta_u}{2}B\varphi_u^\ast$ (Eq. 23; Text
+  cell 4 checks it), and growing $|\theta_u|$ drives
   $\varphi_S^\ast\to\tfrac12(I+BB^{\mathsf T}W)(\ell_0-\varphi_L)$ (Eq. 24) — the control field with
   its component in $\operatorname{span}B$ **doubled**. Under the delta-like prior the two entries'
   couplings share their tilt coordinate and differ only in width, and doubling a negative width
@@ -707,25 +654,17 @@ it, so the reader sees the rows before being told which one carries weight.
   has to be named each time, because the two read-outs are reported at different $\Lambda$.**
   - *Part D's four diffuse priors, at $\Lambda=8$ and each at its own $\theta_u^\ast$* (Code
     Cell 2). The peak of $\varphi_S^\ast$ under *some* sits **up** the scale of $\ell_0$'s peak
-    under every one of them — $0.5000\to0.5890$, $0.5000\to0.6726$, $0.2535\to0.3274$,
-    $0.7465\to0.8429$ — while the utility level's contribution to all-region $q$-mass is negative
-    under each. **The two read-outs disagree in direction**, and §3.6 says why that is possible:
-    halving does not move a peak, so what the mode registers is the utility level's own doing.
-  - *The same five priors at $\Lambda=512$*, which Code Cell 2b prints beside the q criteria and
-    beside this section's own table, so the two read-outs can be read at one lexical strength for
-    once. The cell prints **the mode position criterion met in all 8 of its rows and the mode shift
-    criterion in 2**, those two being the delta-like prior at $\theta_u^\ast$ and at its realizable
-    $\theta_u$. The four diffuse priors' peaks move *up*, to $0.9072$, $0.9168$, $0.8966$ and
-    $0.9168$ from $0.5000$, $0.5000$, $0.2535$ and $0.7465$. So **under the read-out §3.6 prefers
-    the conjunction holds under the delta-like prior alone, where under $q$ it holds under three of
-    the five.** Say it in the same breath as the q count and never on its own. *(Writer's note: the **8 rows
-    are 5 priors and 3 repeats** at a realizable $\theta_u$, so a count over rows is not a count
-    over priors. Since 2026-09-23 the cell prints **both**: over the five distinct priors, one row
-    each at its own $\theta_u^\ast$, **the mode shift criterion under 1, the mode position criterion
-    under 5, both under 1, against the q criteria's 3, 5 and 3** — the same form the q blocks above
-    use, so either count may be quoted (C6). It also prints that each repeat carries the same four
-    verdicts as its own $\theta_u^\ast$ row. Naming the prior is still the better sentence, because
-    it says *which*.)*
+    under every one of them, while the utility level's contribution to all-region $q$-mass is
+    negative under each (Text cell 4 gives the peaks). **The two read-outs disagree in
+    direction**, and §3.6 says why that is possible: halving does not move a peak, so what the mode
+    registers is the utility level's own doing.
+  - *The same five priors at $\Lambda=512$* (Code Cell 2b), so the two read-outs can be read at
+    one lexical strength. The diffuse priors' peaks again move *up*. **Under the read-out §3.6
+    prefers the conjunction holds under the delta-like prior alone, where under $q$ it holds under
+    three of the five.** Say it in the same breath as the q count and never on its own, and quote
+    the cell's count **over priors** (mode shift under 1, mode position under 5, both under 1,
+    against the q criteria's 3, 5 and 3), not its count over rows, which includes repeats at a
+    realizable $\theta_u$. Naming the prior is still the better sentence, because it says *which*.
   - *The mode position criterion is already met by $\ell_0$ alone* on those four: the cell of
     *all* starts at $s=0.9500$, and every one of the four priors peaks outside it before the model
     is run. Nothing is shown by a criterion its own baseline meets. **The same holds at
@@ -735,8 +674,8 @@ it, so the reader sees the rows before being told which one carries weight.
     §5.1's reading of the two criteria rests on this bullet as much as on the counts.
   - *The delta-like prior, at $\Lambda=512$* (Code Cell 2b), is the one row where the model moves
     the peak out: $0.9852$ **inside** the cell to $0.9468$ **outside** it, one node below
-    $\theta_L$. It stays outside on grids of $201$, $401$ and $801$ nodes, so it is not a
-    discretization artefact.
+    $\theta_L$. It stays outside on finer grids (Text cell 4b), so it is not a discretization
+    artefact.
   - **Report both read-outs and derive nothing from their agreement.** Where they agree the reading
     is not doubled, and where they disagree neither is the corrected version of the other; they
     answer different questions, §3.6 says which.
@@ -767,80 +706,65 @@ it, so the reader sees the rows before being told which one carries weight.
   *(Writer's note: these are the counts that survive §4.1.4's rule that nothing is shown by a
   criterion its own baseline meets. Do not restate the rule here; §4.1.4 states it and §5.1 uses it.)*
 - **And say in the same breath that 15 and 9 are $Z=6$ figures**, because they are the claim's own
-  numbers and §4.1.2's guard bears on them hardest. Appendix A's ladder counts them **32, 15, 0, 0, 0**
-  and **22, 9, 0, 0, 0** over $Z\in\{5,6,7,8,10\}$. **They are no more robust to the half-width than
-  the conjunction is**, and they cannot be: carrying a criterion the baseline fails entails a shift,
-  so each is bounded above by the shift count, which is already $0$ by $Z=7$. State that as the
-  reason rather than leaving the pattern to look like a coincidence. What survives a wider grid is
-  the **bare** position count, $76, 59, 48, 25, 12$ against the shift's $113, 74, 24, 0, 0$, and
-  that is a count the baseline is doing the work in — which is exactly what §4.1.4's rule bars from
-  carrying a claim. **The honest summary: conditioning on the baseline buys the argument and costs
-  the robustness, and both halves are reported here.**
+  numbers and §4.1.2's guard bears on them hardest: Appendix A's ladder finds both empty from $Z=7$.
+  **They are no more robust to the half-width than the conjunction is**, and they cannot be:
+  carrying a criterion the baseline fails entails a shift, so each is bounded above by the shift
+  count, which is already $0$ by $Z=7$. State that as the reason rather than leaving the pattern to
+  look like a coincidence. What survives a wider grid is the **bare** position count, a count the
+  baseline is doing the work in, which is exactly what §4.1.4's rule bars from carrying a claim.
+  **The honest summary: conditioning on the baseline buys the argument and costs the robustness,
+  and both halves are reported here.**
 - **The conjunction is not confined to Part D's rows.** Sweeping lexical strength against prior
   concentration on the limit family $\mathrm{Beta}(\alpha,1)$, both conditions hold together in
   **33 of 121 cells**, in a band running from $(\alpha,\Lambda)=(1,512)$ to $(128,2048)$. Text
   cell 4b's flat row is the band's corner cell $(1,512)$, and its delta-like row is the cell
   $(64,512)$, at the band's lower edge in $\Lambda$. The Gaussian and $\mathrm{Beta}(1,3)$ priors
   are not members of the family, and $\mathrm{Beta}(3,1)$ falls between $\alpha=2$ and $\alpha=4$.
-- **The floors, and where the trade-off claim now lives (P-8).** Each condition holds above a floor
-  in $\Lambda$, and the two floors run in opposite directions in $\alpha$. The first condition's
-  floor **falls** as the prior sharpens, from $\Lambda\ge512$ at $\alpha=1$ to $\Lambda\ge16$ at
-  $\alpha=64$ and $\Lambda\ge2$ from $\alpha=128$ to $512$ (the $\alpha=1024$ row reads 2048 and is
-  saturated): the more prior mass sits on the all-region, the less lexical strength the utility
-  level needs to take some away. The second condition's floor **rises**, from $\Lambda\ge2$ up to
-  $\alpha=8$ to $64$, $256$, $512$ and $1024$ at $\alpha=16$, $32$, $64$ and $128$, and past
-  $\alpha=256$ it is unreachable on this grid. The floors cross between $\alpha=8$ and $\alpha=16$.
-  **This is the claim that prior concentration buys the first condition and spends the second, and
-  it is sourced here, on the floors.** **And with the position criterion carrying the constructive
-  claim, the second floor is the binding one**: it is what closes the band at $\alpha=256$ and so
-  what bounds the 15 and the 9 above. Say so, and say what follows in §5.1: a drain keyed to the
-  alternative lowers the *first* floor, so it would not extend the region this architecture's own
-  result lives in. The level is not what the constructive claim needs, which is R2's point reached
-  from the other end. It is a property of the plane and not of Part D's rows: at
-  $\Lambda=512$ both floors lie at or below 512 from $\alpha=1$ to $64$, which is why those rows do
-  not show the tension (§4.1.4). "Under every prior tested" is not written anywhere; §5.1 and §6
-  point here.
-- **The V, under both read-outs (R13, R14).** The least $\Lambda$ at which both conditions hold
-  runs $512$, $256$, $128$, $64$, $64$, $256$, $512$, $1024$ over $\alpha=1$ to $128$, a V with its
-  minimum at $\alpha=8$ and $16$. Under the delta read-out's two criteria (§3.6; R12) the right arm
-  is shared from $\alpha=32$, at $\Lambda=8\alpha$; the left arm exists only under $q$, since the
-  mode shift criterion is never met at $\alpha\le8$; and the two conjunctions part in 20 cells, all
-  of them met under $q$ alone. **Give the delta conjunction its own count and not only the
-  difference**: it holds in **13** of the 121 cells against $q$'s 33, and §3.6's position makes 13
-  the figure this dissertation's preferred read-out returns. Report both, and do not let the
-  preference quietly promote one of the two numbers. Report the V as a result, and derive no evidence for a missing level
-  from it. **Say which half of that is $Z$-conditional** (§4.1.2's guard). **Robust, and now printed:** Appendix A's ladder counts the two
-  conjunctions at each half-width and counts the cells where the mode conjunction holds and the q
-  conjunction does not, and **that column is zero at every rung**. So the delta conjunction is a
-  strict subset at every half-width swept, the two read-outs part only in $q$'s favour, and the
-  instruction just given stands on the subset relation and not on the count. **Not robust:** the
-  figures **13** and **20** are $Z=6$ figures. The ladder gives the delta conjunction as
-  $37, 13, 0, 0, 0$ and the q conjunction as $68, 33, 0, 0, 0$, so the gap runs $31, 20, 0, 0, 0$.
-  *(Writer's note: a zero gap at the wide rungs is **both** conjunctions empty, not the read-outs
-  agreeing, and the zero reversal column is what distinguishes the two. Never report a zero gap as
-  agreement. What is still **class (e)** is the boundary $\alpha\le8$: the least $\alpha$ at which
-  the mode shift criterion is met runs $8, 16, 32, 32, 128$ in the audit and no cell prints it, so
-  write the boundary as a $Z=6$ figure without quoting its ladder.)*
+- **The floors, and where the trade-off claim lives.** Each condition holds above a floor in
+  $\Lambda$, and the two floors run in opposite directions in $\alpha$ (Text cell 6 gives them
+  cell by cell). The first condition's floor **falls** as the prior sharpens: the more prior mass
+  sits on the all-region, the less lexical strength the utility level needs to take some away. The
+  second condition's floor **rises**, and past $\alpha=256$ it is unreachable on this grid. The
+  floors cross between $\alpha=8$ and $\alpha=16$. **This is the claim that prior concentration
+  buys the first condition and spends the second, and it is sourced here, on the floors.** **And
+  with the position criterion carrying the constructive claim, the second floor is the binding
+  one**: it is what closes the band at $\alpha=256$ and so what bounds the 15 and the 9 above. Say
+  so, and say what follows in §5.1: a drain keyed to the alternative lowers the *first* floor, so it
+  would not extend the region this architecture's own result lives in. The level is not what the
+  constructive claim needs, which is R2's point reached from the other end. It is a property of the
+  plane and not of Part D's rows: at $\Lambda=512$ both floors lie at or below 512 from $\alpha=1$
+  to $64$, which is why those rows do not show the tension (§4.1.4). "Under every prior tested" is
+  not written anywhere; §5.1 and §6 point here.
+- **The V, under both read-outs.** The least $\Lambda$ at which both conditions hold traces a V
+  over $\alpha$ with its minimum at $\alpha=8$ and $16$ (Text cell 6). Under the delta read-out's
+  two criteria (§3.6) the right arm is shared from $\alpha=32$; the left arm exists only under $q$,
+  since the mode shift criterion is never met at $\alpha\le8$; and the two conjunctions part in 20
+  cells, all of them met under $q$ alone. **Give the delta conjunction its own count and not only
+  the difference**: it holds in **13** of the 121 cells against $q$'s 33, and §3.6's position makes
+  13 the figure this dissertation's preferred read-out returns. Report both, and do not let the
+  preference quietly promote one of the two numbers. Report the V as a result, and derive no
+  evidence for a missing level from it. **Say which half is $Z$-conditional.** *Robust:* the delta
+  conjunction is a subset of the q conjunction at every half-width Appendix A sweeps (its reversal
+  column is zero at every rung), so the two read-outs part only in $q$'s favour. *Not robust:* the
+  figures 13 and 20 are $Z=6$ figures. *(Writer's note: a zero gap at a wide rung is both
+  conjunctions empty, not the read-outs agreeing; never report it as agreement. The boundary
+  $\alpha\le8$ is a $Z=6$ figure, and no cell prints its ladder.)*
 - **The override law, the exchange rate of §3.2's contest.** $\Lambda_{\mathrm{crit}}\approx\alpha\log2n$
   (Eq. 41), linear in prior concentration with a slope fixed by the predicate's granularity alone:
-  the rate at which lexical strength must grow to hold the entry against a sharper $\ell_0$.
-  Measured slopes match it to within $4.1\%$ at the tempered control (ratios $1.041$, $1.014$,
-  $0.998$ at $\alpha=1024$). With $\theta_u^\ast$ re-learned
-  they are $1.9890$, $2.9334$ and $4.3102$, $36$–$45\%$ above it: the utility level reinforces the
-  prior against the entry. That nothing in RSA plays this role is background §1.3's point (U11), not
-  this section's.
+  the rate at which lexical strength must grow to hold the entry against a sharper $\ell_0$. The
+  measured slopes match it at the tempered control and sit $36$–$45\%$ above it with $\theta_u^\ast$
+  re-learned (Text cell 6 gives them): the utility level reinforces the prior against the entry.
+  That nothing in RSA plays this role is background §1.3's point, not this section's.
 - **Two honesty notes.** The band is reached by raising $\Lambda$, a parameter of the lexicon rather
-  than an elicited quantity — but Eq. (41) means its required value is predicted rather than
+  than an elicited quantity, but Eq. (41) means its required value is predicted rather than
   arbitrary. And what fails first as $\alpha$ grows is the model's ability to tell the utterances
-  apart, the spread $D$ falling $0.0057\to0.0012\to0.0003$ over $\alpha=64,256,1024$ at
-  $\Lambda=8$.
-- **What the conjunction needs, measured apart from what $\theta_u^\ast$ costs.** Across the 33
-  cells the least $|\theta_u|$ meeting the conjunction runs from $0.100$ to $4.250$, with
-  $\lambda_{\max}(H)$ between $2.0$ and $20.1$ there, so every cell is integrable at the $\theta_u$
-  the conjunction needs; at their own $\theta_u^\ast$ the same cells have $\lambda_{\max}(H)$
-  between $3.5\times10^{4}$ and $3.6\times10^{7}$. §4.1.6 takes it up.
+  apart (Text cell 6 gives the spread).
+- **What the conjunction needs, measured apart from what $\theta_u^\ast$ costs.** Every one of the
+  33 cells is integrable at the $\theta_u$ its conjunction needs, while at its own $\theta_u^\ast$
+  it is orders of magnitude stiffer (Text cell 6 gives both ranges). §4.1.6 takes it up.
+
 ---
- 
+
 ### 4.1.6 What the verdict needs, against what $\theta_u^\ast$ costs (about 100 words)
 
 **Evidence for §5.3, reported without interpretation.** Every row is the delta-like prior at
@@ -850,23 +774,18 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   $\lambda_{\max}(H)=6.5$ and commitment 7 demands a separation $4\lambda=26$. Eq. (20) from
   $\theta_u=0$ passes that value **in one update**. Whatever makes this row expensive, it is not
   the conjunction.
-- **What the flow actually reaches is where it halts** — its own update having fallen below the
+- **What the flow actually reaches is where it halts**, its own update having fallen below the
   tolerance, the only stopping rule the model has, and an **ad hoc** value (A19). That is
-  $\theta_u=34.695$, after $7$ updates. The integrated run there ($242{,}163$ Euler steps) gives
-  $\Delta_{\textit{some}}=-0.5208$ and $q_H=0.4361$: **both criteria met, in the dynamics and not
-  only in closed form.** There $\lambda_{\max}(H)=1205.8$, a demanded separation of $4{,}823$.
+  $\theta_u=34.695$, after $7$ updates, where the integrated run meets **both criteria in the
+  dynamics and not only in closed form** (Code Cell 2b prints the run), at a demanded separation of
+  $4{,}823$.
 - **What $\theta_u^\ast$ would cost.** The same inference at $\theta_u^\ast=1407.77$ would take
-  $3.98\times10^{8}$ steps at a separation of $7.9\times10^{6}$ — hours on the machine that ran it.
-  Quote the step count and the separation, not the wall clock: the hours sit on a `cost:` line and
-  move with the machine (`agent/agent.md` §5.2).
+  $3.98\times10^{8}$ steps at a separation of $7.9\times10^{6}$. Quote the step count and the
+  separation, not the wall clock, which sits on a `cost:` line and moves with the machine.
 - **And $\theta_u^\ast$ is not what the flow reaches.** Code Cell 2b says so in its own output:
-  $\theta_u^\ast$ lies orders of magnitude beyond both the conjunction's threshold and the halt,
-  and **this integrator does not reach it at all**. That $\theta_u^\ast$ *is* the maximizer rests
-  on the closed form and the monotone rise, not on an integration.
-  *(Writer's note, not for the paper: the sharper statement — not within $0.1\%$ of
-  $\theta_u^\ast$ after $5{,}000$ updates, F15 of `agent/history.md` §3 —
-  is **class (e)**. No cell prints it, and I8, which once licensed recorded scripts as sources, is
-  superseded by C6 and I10. Do not reinstate those figures unless a cell prints them.)*
+  this integrator does not reach it at all. That $\theta_u^\ast$ *is* the maximizer rests on the
+  closed form and the monotone rise, not on an integration. *(Writer's note: no cell prints a
+  sharper figure for how far short the flow stays; do not quote one.)*
 - **Report, and stop.** §5.3 is where the cost is interpreted, and §5.5 is where the tolerance's own
   locality debt (D12) is admitted. This section states neither.
 ---
@@ -977,100 +896,6 @@ than a rhetorical one: it is derived from the construction and needs no datum to
 survives a change of data. R2 rests the level on it and **R2 stands**. The conjecture about
 consistent shift is the **second** motivation, and the bullet below says what keeps it second.
  
-- **What the criterion adds to the case, and where it is sourced (P-8).** The case for the level is
-  the complexity it saves (R2; the design below). The criterion adds one thing the level would
-  change, and it is stated on §4.1.5's floors, not on Part D's rows. As the prior sharpens, the first
-  condition's floor in $\Lambda$ falls and the second's rises, so on the plane prior concentration
-  buys the first condition and spends the second. A drain keyed to the *alternative* would not
-  scale with prior mass on the all-region, and so would lower the first floor without raising the
-  second. Say that this is argued from the floors and not measured, since no such drain is built.
-  Do not write "under every prior tested": at $\Lambda=512$ both floors lie at or below it from
-  $\alpha=1$ to $64$, and Part D's rows show no tension (§4.1.4). The earlier bullet reading the
-  pattern as pointing at an absent level is withdrawn (R14), and the anti-exhaustive parallel now
-  lives in §4.1.4 as a parallel, not as corroboration (R7).
-- **The two criteria are keyed to different parts of the construction, and this is the
-  dissertation's reading of them.** State it as a conjecture, argued and not measured, and under
-  §4.1.2's guard: both criteria are stated over the cell of *all*, and that cell is stipulated at both
-  ends. Five moves, in this order.
-  1. **Consistent shift is what an alternatives level would supply.** The shift criterion is met
-     here only where the prior already puts mass on the all-region. It is the fragile one of the two
-     under the five priors (§4.1.4); it is where the read-outs part, in 35 of the 121 cells and in
-     half of Code Cell 2b's 8 rows, that cell printing the shift criteria agreeing in 4 of 8 and the
-     position criteria in 8, against **no** cell of the plane where the position criteria part;
-     and its floor falls with prior concentration where the other's rises (§4.1.5). A drain keyed to
-     the *alternative* rather than to prior mass is what would detach it from the prior, which is
-     the argument the floors already carry. **The conjecture is that this architecture cannot
-     deliver consistent shift because it lacks that level, not because the effect is absent.**
-     Nothing here measures what such a level would do, and the sentence says so.
-  2. **Shift does not stand as the criterion of scalar strengthening on its own**, and this is not a
-     retreat from 1. A shift that leaves *all* the most probable single outcome is movement without
-     resolution (§4.1.2), so the dissertation does not fall back on the shift alone when the position
-     criterion is the one its architecture supplies, and does not treat the shift's fragility as
-     the finding.
-  3. **Position is mostly what this architecture instantiates.** Two reasons, of different kinds.
-     *It is stated on the object the construction represents*: a mode is what commitment 3 says the
-     system carries (§3.6), so "where the settled field peaks, relative to the cell of *all*" is a
-     question this architecture answers natively, in either read-out — which is why the two position
-     criteria agree in every cell of the plane and in every row of Code Cells 2 and 2b, with the
-     single exception move 5 names. *The shift criterion is not like that*: it is a difference
-     between two normalized masses taken against a baseline, and the fourth qualification in the
-     list below already says binarity does not remove that and no level carries it as one unit. So the criterion this architecture supplies natively is position, and the criterion that
-     needs machinery beyond it is shift.
-  4. **The guard, in the same breath, because 3 overstates without it.** Where the baseline already
-     meets the position criterion nothing is shown by the model meeting it (§4.1.4), and that is
-     every prior but the delta-like one, at both lexical strengths; the delta-like row is the one
-     where the model carries the peak out. At the sharp end of the plane the criterion is not met at all, its floor
-     rising past reach beyond $\alpha=256$ (§4.1.5). **So the claim is that position is where this
-     architecture does its work, not that meeting it is common or cheap.**
-  5. **And the agreement of the two position criteria is measured, not proved.** Appendix A's sweep
-     holds one printed row where they part: the flat prior at $\Lambda=8$ and $n=2$, where the mode
-     sits outside the cell of *all* while $0.5615$ of the mass sits inside it. That row is §4.1.2's
-     guard on $n$ made concrete, and it is why 3 is written as a reading of the measurements rather
-     than as a property of the criteria.
-- **What weight that conjecture carries, and why it does not outrank the complexity argument.**
-  Put this immediately after the conjecture, or a reader who has just read it will take it for the
-  case. Four moves.
-  1. **The conjecture is about this architecture, and the prose should say so.** What §§4.1.4 and 4.1.5
-     show is that the shift criterion is inconsistent **in this model**, which has no within-trial
-     competition. The step from there to *inconsistent without within-trial competition* is the
-     conjecture, not the measurement: one architecture is one architecture. Write the model-relative
-     version. Nothing in this section needs the stronger one.
-  2. **A shift would be welcome, not required.** Say the hope plainly: a level carrying the
-     alternative would be expected to deliver the shift too, and that would be a result worth
-     having. It is not a condition on the design, and no obligation below is contingent on it.
-  3. **Why it cannot be promoted, and the obstacle is not instrument precision.** The shift is a
-     **comparison of two distributions over the scale**, the settled belief against the literal
-     listener, with the prior held fixed across both. Two of those three quantities can be asked
-     for and the third cannot.
-     - *The settled belief can.* Xiang et al. (2022) elicit graded judgments over a five-point
-       scale, which is the measurement §4.2 already runs against, and Chemla and Spector (2011)
-       establish graded interpretation judgments as a method.
-     - *The prior can*, and Degen, Tessler and Goodman (2015) and Cremers, Wilcox and Spector
-       (2023) elicit it precisely to drive a prediction. Note the complication in the same breath:
-       *Wonky worlds* shows the prior is **revised by the utterance**, so "held fixed across both"
-       is not an innocent premise even where the prior is measured.
-     - *The literal listener cannot.* It is defined by holding the prior and the truth conditions
-       fixed while removing the pragmatic computation, and **no behavioural condition instantiates
-       that**. Where the literature supplies a "literal" condition it manipulates the speaker's
-       epistemic state, which changes the inference rather than suspending it, and what it returns
-       is a **rate**, not a distribution over the scale. Geurts and Pouscoulous (2009) show how far
-       the measured rate moves with the task the judgment is collected in. In the probabilistic
-       accounts the literal listener is **computed**, from an elicited prior and a stipulated
-       semantics, which is exactly what it is here: §4.1.1 says $q_{\mathrm{lit}}$ is a fixed point of
-       this network rather than an external construction, and that is a virtue **inside** the model
-       and the reason it has no counterpart outside one.
-     **State the conclusion as a claim about what the quantity is, not about what instruments
-     reach.** The position criterion is one distribution against a threshold, both of which a person
-     can be asked for. The shift criterion is stated against a baseline that is a construct in every
-     account that has one, so any empirical claim of the form *strengthening is a shift* is relative
-     to a stipulated semantics and an elicited prior. Written that way the point does not expire;
-     written as a limit of current methods it invites "wait for better methods".
-  4. **And say where the wanting comes from, in one sentence and without contempt for it.** That
-     strengthening should be a shift and not only a position is, in the first instance, something we
-     introspect: hearing *some*, one takes oneself to have moved **away from** *all*, not merely to
-     have landed below it. That is a real datum about the explanandum and it is the source of the
-     framing the background sets out. It is also not the kind of thing that outranks a motivation
-     needing no datum at all, which is move 1 of the frame and the whole of R2.
 **The design: resolution as a negative search.** State the position, because it is what makes the
 remaining obligations answerable rather than open.
  
@@ -1093,7 +918,11 @@ remaining obligations answerable rather than open.
   $\{\chi,\ker\chi\}$ for any entry $\chi$: at the
   utterance level $\langle E_{\textit{some}},\ \ker E_{\textit{some}}\rangle$, and then, on the
   domain that leaves, $\langle E_{\textit{all}},\ \ker E_{\textit{all}}\rangle$ with the kernel
-  taken relative to that domain. Appendix D's Eq. (D2) already supplies the kernel relation.
+  taken relative to that domain. Appendix D's Eq. (D2) already supplies the kernel relation. Cite
+  here what bounds such an inventory, all four works introduced in background §1.6: alternative
+  sets depend on context rather than on the uttered expression (Rooth, 1985, 1992; Kratzer &
+  Shimoyama, 2002), and competition is resolved by, rather than generative of, what is produced,
+  over a structurally bounded set (Katzir, 2007; Fox & Spector, 2018).
 - **Where the present inventory does and does not exhibit the saving.** State this rather than let
   a reader find it. Each of the cascade's two cuts peels off a *single endpoint cell* — $s=0$, then
   $s=1$ — leaving the interior $\{1/n,\dots,(n{-}1)/n\}$ undifferentiated: two levels, three
@@ -1106,17 +935,14 @@ remaining obligations answerable rather than open.
   the prediction rather than the three-word scale as the demonstration.
 - **The dimension and locality payoff, which is an argument and not a measurement.** Appendix C
   Eq. (C2) fixes the dimension by the threshold count, and Appendix C §5 shows that, within bases of
-  definite parity, $m\ge2$ is forced exactly when one inventory carries two pairs of opposite parity — which with symmetric thresholds
-  takes three utterances at one level. A cascade puts one cut per level, so **each level is a
-  complementary pair and $m=1$ suffices at each**. Eq. (C1) already proves that a complementary pair
-  costs no dimension, its $\kappa_{y'}=-\kappa_y$ resting on $\langle\mathbf 1,b_j\rangle=0$.
-  Complementary *within a domain* $D$ means $\chi_{y'}=\chi_D-\chi_y$, so the identical derivation
-  returns $\kappa_{y'}=-\kappa_y$ once the level's basis is taken orthogonal to $\chi_D$ in place of
-  $\mathbf 1$ — a substitution into a proved result rather than a new computation, and one that
-  therefore holds at **any cascade depth** whose levels are complementary pairs, ⟨*some*, *most*,
-  *all*⟩ included. The consequence is exact: $m=1$ is where Appendix B's locality defence is clean,
-  so a binary cascade is local at every level **without the relay**, and Appendix C's degeneracy
-  result does not bite because *some* and *all* never occupy one level.
+  definite parity, $m\ge2$ is forced exactly when one inventory carries two pairs of opposite
+  parity, which with symmetric thresholds takes three utterances at one level. A cascade puts one
+  cut per level, so **each level is a complementary pair and $m=1$ suffices at each**: Appendix C §2
+  shows that a complementary pair costs no dimension on any domain of the scale, so the result holds
+  at any cascade depth, ⟨*some*, *most*, *all*⟩ included. The consequence is exact: $m=1$ is where
+  Appendix B's locality defence is clean, so a binary cascade is local at every level **without the
+  relay**, and Appendix C's degeneracy result does not bite because *some* and *all* never occupy
+  one level.
 - **And binarity removes the obstacle at the generative map.** Appendix A observes that a
   normalization across word-form units would not be local, and an RSA speaker term is exactly such
   a normalization — a softmax over the alternative set, which is also non-affine and so would cost
@@ -1176,9 +1002,106 @@ remain, and naming them is the point of saying so:
   solution, not a result**. Everything reported in §4 stands independently of it: no number in this
   dissertation depends on the alternatives level existing.
  
+**What the criteria add: the second motivation, after the design.** The design above is the
+first motivation and needs no datum; what follows is the second, and it stays second.
+
+- **What the criterion adds to the case, and where it is sourced.** The case for the level is
+  the complexity it saves (R2; the design above). The criterion adds one thing the level would
+  change, and it is stated on §4.1.5's floors, not on Part D's rows. As the prior sharpens, the first
+  condition's floor in $\Lambda$ falls and the second's rises, so on the plane prior concentration
+  buys the first condition and spends the second. A drain keyed to the *alternative* would not
+  scale with prior mass on the all-region, and so would lower the first floor without raising the
+  second. Say that this is argued from the floors and not measured, since no such drain is built.
+  Do not write "under every prior tested": at $\Lambda=512$ both floors lie at or below it from
+  $\alpha=1$ to $64$, and Part D's rows show no tension (§4.1.4). Do not read the
+  pattern as pointing at an absent level (R14), and do not use the anti-exhaustive parallel as
+  corroboration; §4.1.4 carries it as a parallel (R7).
+- **The two criteria are keyed to different parts of the construction, and this is the
+  dissertation's reading of them.** State it as a conjecture, argued and not measured, and under
+  §4.1.2's guard: both criteria are stated over the cell of *all*, and that cell is stipulated at both
+  ends. Five moves, in this order.
+  1. **Consistent shift is what an alternatives level would supply.** The shift criterion is met
+     here only where the prior already puts mass on the all-region. It is the fragile one of the two
+     under the five priors (§4.1.4); it is where the read-outs part, in 35 of the 121 cells and in
+     half of Code Cell 2b's 8 rows, that cell printing the shift criteria agreeing in 4 of 8 and the
+     position criteria in 8, against **no** cell of the plane where the position criteria part;
+     and its floor falls with prior concentration where the other's rises (§4.1.5). A drain keyed to
+     the *alternative* rather than to prior mass is what would detach it from the prior, which is
+     the argument the floors already carry. **The conjecture is that this architecture cannot
+     deliver consistent shift because it lacks that level, not because the effect is absent.**
+     Nothing here measures what such a level would do, and the sentence says so.
+  2. **Shift does not stand as the criterion of scalar strengthening on its own**, and this is not a
+     retreat from 1. A shift that leaves *all* the most probable single outcome is movement without
+     resolution (§4.1.2), so the dissertation does not fall back on the shift alone when the position
+     criterion is the one its architecture supplies, and does not treat the shift's fragility as
+     the finding.
+  3. **Position is mostly what this architecture instantiates.** Two reasons, of different kinds.
+     *It is stated on the object the construction represents*: a mode is what commitment 3 says the
+     system carries (§3.6), so "where the settled field peaks, relative to the cell of *all*" is a
+     question this architecture answers natively, in either read-out — which is why the two position
+     criteria agree in every cell of the plane and in every row of Code Cells 2 and 2b, with the
+     single exception move 5 names. *The shift criterion is not like that*: it is a difference
+     between two normalized masses taken against a baseline, and the fourth qualification in the
+     design's list above already says binarity does not remove that and no level carries it as one unit. So the criterion this architecture supplies natively is position, and the criterion that
+     needs machinery beyond it is shift.
+  4. **The guard, in the same breath, because 3 overstates without it.** Where the baseline already
+     meets the position criterion nothing is shown by the model meeting it (§4.1.4), and that is
+     every prior but the delta-like one, at both lexical strengths; the delta-like row is the one
+     where the model carries the peak out. At the sharp end of the plane the criterion is not met at all, its floor
+     rising past reach beyond $\alpha=256$ (§4.1.5). **So the claim is that position is where this
+     architecture does its work, not that meeting it is common or cheap.**
+  5. **And the agreement of the two position criteria is measured, not proved.** Appendix A's sweep
+     holds one printed row where they part: the flat prior at $\Lambda=8$ and $n=2$, where the mode
+     sits outside the cell of *all* while $0.5615$ of the mass sits inside it. That row is §4.1.2's
+     guard on $n$ made concrete, and it is why 3 is written as a reading of the measurements rather
+     than as a property of the criteria.
+- **What weight that conjecture carries, and why it does not outrank the complexity argument.**
+  Put this immediately after the conjecture, or a reader who has just read it will take it for the
+  case. Four moves.
+  1. **The conjecture is about this architecture, and the prose should say so.** What §§4.1.4 and 4.1.5
+     show is that the shift criterion is inconsistent **in this model**, which has no within-trial
+     competition. The step from there to *inconsistent without within-trial competition* is the
+     conjecture, not the measurement: one architecture is one architecture. Write the model-relative
+     version. Nothing in this section needs the stronger one.
+  2. **A shift would be welcome, not required.** Say the hope plainly: a level carrying the
+     alternative would be expected to deliver the shift too, and that would be a result worth
+     having. It is not a condition on the design, and no obligation below is contingent on it.
+  3. **Why it cannot be promoted, and the obstacle is not instrument precision.** The shift is a
+     **comparison of two distributions over the scale**, the settled belief against the literal
+     listener, with the prior held fixed across both. Two of those three quantities can be asked
+     for and the third cannot.
+     - *The settled belief can.* Xiang et al. (2022) elicit graded judgments over a five-point
+       scale, which is the measurement §4.2 already runs against, and Chemla and Spector (2011)
+       establish graded interpretation judgments as a method.
+     - *The prior can*, and Degen, Tessler and Goodman (2015) and Cremers, Wilcox and Spector
+       (2023) elicit it precisely to drive a prediction. Note the complication in the same breath:
+       *Wonky worlds* shows the prior is **revised by the utterance**, so "held fixed across both"
+       is not an innocent premise even where the prior is measured.
+     - *The literal listener cannot.* It is defined by holding the prior and the truth conditions
+       fixed while removing the pragmatic computation, and **no behavioural condition instantiates
+       that**. Where the literature supplies a "literal" condition it manipulates the speaker's
+       epistemic state, which changes the inference rather than suspending it, and what it returns
+       is a **rate**, not a distribution over the scale. Geurts and Pouscoulous (2009) show how far
+       the measured rate moves with the task the judgment is collected in. In the probabilistic
+       accounts the literal listener is **computed**, from an elicited prior and a stipulated
+       semantics, which is exactly what it is here: §4.1.1 says $q_{\mathrm{lit}}$ is a fixed point of
+       this network rather than an external construction, and that is a virtue **inside** the model
+       and the reason it has no counterpart outside one.
+     **State the conclusion as a claim about what the quantity is, not about what instruments
+     reach.** The position criterion is one distribution against a threshold, both of which a person
+     can be asked for. The shift criterion is stated against a baseline that is a construct in every
+     account that has one, so any empirical claim of the form *strengthening is a shift* is relative
+     to a stipulated semantics and an elicited prior. Written that way the point does not expire;
+     written as a limit of current methods it invites "wait for better methods".
+  4. **And say where the wanting comes from, in one sentence and without contempt for it.** That
+     strengthening should be a shift and not only a position is, in the first instance, something we
+     introspect: hearing *some*, one takes oneself to have moved **away from** *all*, not merely to
+     have landed below it. That is a real datum about the explanandum and it is the source of the
+     framing the background sets out. It is also not the kind of thing that outranks a motivation
+     needing no datum at all, which is move 1 of the frame and the whole of R2.
 - **Close with the position on the current gain.** At learning, $\theta_u^\ast$ depends on
-  $\sum_y c_y$ and so on the inventory, substantially: exposure to *no* alone gives $-11.28$, to
-  *some* alone $-44.18$, to *all* alone $-65.70$, to all three $-28.44$. But this is a cross-trial
+  $\sum_y c_y$ and so on the inventory, substantially (Appendix B prints $\theta_u^\ast$ under each
+  exposure). But this is a cross-trial
   average, one shared weight, consulted identically whatever is heard, so any implicature reaching
   the belief by this route is **conventionalized rather than computed** — and § E.2 confirms the
   relay does not change this. Levinson's (2000) default GCIs are the nearest neighbour and still
@@ -1285,11 +1208,10 @@ what it costs and what is still owed.
   divergence.
 - **Cost rises while the verdict stands still.** Commitment 7 ties the error units' speed to
   $\lambda_{\max}(H)$, which grows as $\theta_u^2$. Under the delta-like prior the conjunction
-  holds from the first update, at a demanded separation of $26$; every later update leaves the
-  verdict as it is and makes each later inference costlier — $4{,}823$ where the flow halts, rising
-  toward $7.9\times10^{6}$ at $\theta_u^\ast$. Across the plane's 33 both-condition cells the
-  separation needed where the conjunction first holds is at most about $80$, against
-  $4\times(3.5\times10^{4}$ to $3.6\times10^{7})$ at $\theta_u^\ast$.
+  holds from the first update, and every later update leaves the verdict as it is and makes each
+  later inference costlier, from where the conjunction first holds, through the halt, toward
+  $\theta_u^\ast$ (§4.1.6 gives the three separations). Across the plane the same holds cell by
+  cell (§4.1.5).
 - **Why $\theta_u^\ast$ stays the commitment, the conclusion unchanged and the reason reversed.**
   It is the **asymptote**, and it carries no tolerance. It used to stand because no self-contained
   halting mechanism was known. It now stands because the tolerance is **ad hoc**: a result reported
@@ -1305,9 +1227,6 @@ what it costs and what is still owed.
   thousands of Euler steps per inference even where the conjunction first holds, are the cost the
   plausibility commitment has to answer for. This section is the argument `main.ipynb`'s *Integration
   cost and conditioning* defers to the outline, and the target O3's bare pointers were waiting on.
-  *(Writer's note: F15's sharper figure — not within $0.1\%$ of $\theta_u^\ast$ after $5{,}000$
-  updates — is **class (e)**, as at §4.1.6; no cell prints it. The approach-without-arrival is stated
-  from $\tilde{\mathcal F}$'s flattening, which is an argument, not a measurement.)*
 ---
  
 ## 5.4 What an algorithmic account makes posable (about 120 words)
@@ -1340,59 +1259,36 @@ what it costs and what is still owed.
 ---
  
 ## 5.5 Limits (about 745 words)
- 
-- Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
-  reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
-  objective is not concave. The same division as in Bogacz.
-- **Halting by tolerance is offered as a direction, not a commitment, and the reason is a
-  violation we have not settled.** The flow of Eq. (20) stops when its own update falls below a
-  tolerance; the value is ad hoc, so results are reported at $\theta_u^\ast$, the asymptote, which
-  carries none, and a realizable $\theta_u$ is quoted with the tolerance it halted at. What keeps
-  this a direction rather than a claim is that the **fast** loop's tolerance is keyed to
-  $\lambda_{\max}(H)$, a global quantity — a locality problem of the same kind as the timescale
-  bound's, and not licensed by it (D12). The **slow** rule carries no such debt. Two implications
-  are owned rather than hedged: a plausible tolerance halts far short of $\theta_u^\ast$, and a
-  slow start halts at once at the tempered control (§5.3).
+
+Four groups, each under a run-in head in the paper, so that a limit of the numerical substrate is not
+read as a limit of the architecture.
+
+**The numerical substrate.**
+
 - **The state space is truncated, and the truncation reshapes $\varphi_S^\ast$ itself.** $\zeta$
   ranges over $\mathbb R$; the grid carries $[-Z,Z]$, and $Z$ is stipulated with only a lower bound
-  from the semantics, $\theta_L<Z$ (Text cell 3 §1, which separates it from $K$: refining $K$
-  converges, $Z$ has nothing to converge to). **The mechanism is not a clipped tail.** $B$ is
-  orthonormalized under the grid's own measure, so the **peak of $\varphi_S^\ast$** moves with $Z$.
-  That peak is $\zeta_{k^\ast}$, so **§3.6's mode position criterion, $\zeta_{k^\ast}<\theta_L$,
-  moves with $Z$ by definition**, and where it fails the conjunction fails too — sufficient, not
-  equivalent, the first condition failing on its own in most configurations. Appendix A's ladder
-  prints it: under the flat prior at $\Lambda=512$ the peak climbs $0.8516$ to $0.9981$ in $s$ over
-  $Z\in\{5,10\}$ and crosses the cell's start between $Z=6$ and $7$, which is where both q criteria
-  stop being met. The same peak is $q$'s
-  mode (Eq. 12), so neither read-out escapes it. §4.1.5's band moves with $Z$; §4.2's $R^2$ does not, reading
-  agreement of shape across items. **The general form: a mass above a fixed cut, and the peak's own
-  location, both move with the half-width; a statistic comparing shapes across items does not.**
-  And the
-  dependence sits **below** the criterion: Eq. (24)'s limit doubles the field's component in
-  $\operatorname{span}\{\zeta,\zeta^2\}$, a projection taken in $L^2([-Z,Z])$, so
-  **reformulating the criterion cannot remove it** — only a projection under a fixed reference
-  measure would, and that breaks the $B^{\mathsf T}WB=I$ that Eq. (B2) assumes. Owned rather than
-  hedged, under §4.1.2's guard.
+  from the semantics, $\theta_L<Z$ (Text cell 3 §1, which separates it from $K$). **The mechanism
+  is not a clipped tail.** $B$ is orthonormalized under the grid's own measure, so the **peak of
+  $\varphi_S^\ast$** moves with $Z$, and with it **§3.6's mode position criterion,
+  $\zeta_{k^\ast}<\theta_L$, by definition**; where that fails the conjunction fails too (§4.1.2
+  gives the one figure, Code Cell A the ladder). The same peak is $q$'s mode (Eq. 12), so neither
+  read-out escapes it. **The general form: a mass above a fixed cut, and the peak's own location,
+  both move with the half-width; a statistic comparing shapes across items does not**, which is
+  why §4.1.5's band moves with $Z$ and §4.2's $R^2$ does not. And the dependence sits **below** the
+  criterion, so **reformulating the criterion cannot remove it** (Appendix A gives the reason, and
+  what a fixed reference measure would cost). Owned rather than hedged, under §4.1.2's guard.
 - **The node count has a suspected lower bound, not an established one** (§4.1.3's warning points
   here). $K$ is an accuracy parameter in the sense Text cell 3 §1 gives it: the settled fields and
   $\mathbb E[s]$ converge as $K$ is refined. A criterion's status is a threshold on those fields, so
-  it can change at a boundary cell as $K$ moves. Appendix A's third ladder prints both ends (C6).
-  - *The finer end.* Part D's 36 statuses are the same at every $K$ from $101$ to $1601$. The
-    plane's counts move by boundary cells: the q conjunction runs $33, 36, 36, 34$ and the mode
-    conjunction $13, 15, 15, 15$ at $K=101, 201, 401, 801$, seven cells change in some column, and
-    the mode conjunction stays a subset of the q conjunction at every $K$. §4.1.5 quotes its counts
-    at $K=101$; this bullet is where their spread is reported.
-  - *The coarse end.* Against $K=801$, the plane's agreement stays near the fine grids' own floor
-    ($K=401$ against $801$: $119$ to $121$ of $121$ per column) down to $K=81$ ($117$ to $120$),
-    and Part D's 36 statuses all agree;
-    at $K=61$ only $33$ agree. Below that the counts do not decay with $K$; they sort by where the
-    grid's lower edge of the all-region falls against $\theta_L$. Where the edge falls below
-    $\theta_L$, the q conjunction shrinks as the gap grows ($32, 29, 24, 9$, then $0$ from
-    $K=21$). Where it falls $0.056$ above, the q conjunction holds in $32$ to $39$ cells at every
-    such rung down to $K=7$, against $K=801$'s $34$. Even at that
-    fixed offset, agreement falls with the spacing (q shift $116$ of $121$ at $K=51$, $76$ at
-    $K=7$). The smooth mask removes the step from the network but not from the statistic's cut,
-    and it softens the pattern without removing it.
+  it can change at a boundary cell as $K$ moves. Appendix A's *A third axis* prints both ends.
+  - *The finer end.* Part D's statuses are the same at every $K$ up to $1601$; the plane's counts
+    move by a few boundary cells, and the mode conjunction stays a subset of the q conjunction at
+    every $K$. §4.1.5 quotes its counts at $K=101$.
+  - *The coarse end.* The criteria track the fine grid down to $K=81$ and first disagree on Part D's
+    statuses at $K=61$. Below that the counts do not decay steadily with $K$: they sort by where the
+    grid's lower edge of the all-region falls against $\theta_L$, and even at a fixed offset
+    agreement falls with the spacing. The smooth mask removes the step from the network but not
+    from the statistic's cut, and softens the pattern without removing it.
   - *What the evidence allows.* A suspected floor near $K=61$–$81$ at $Z=6$ for the evaluation's
     **cut-based** statistics. It is not a measured minimum for the model, because node placement
     and resolution have not been separated.
@@ -1416,6 +1312,34 @@ what it costs and what is still owed.
     itself need a motivation, and it joins O1's question of what fixes $n$. **This phase does not
     implement it**: the evaluations it reports do not need it, and a fixed grid is the more
     determinate stipulation (§3's opening).
+
+**The architecture.**
+
+- Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
+  reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
+  objective is not concave. The same division as in Bogacz.
+- The model is linear-Gaussian while $\varphi_L$ is clamped, so the recurrent dynamics are an
+  implementation claim rather than a computational necessity.
+- The relay secures locality at the cost of a fourth timescale, an ordering under commitment 7
+  (§3.4; `appendix_E.ipynb` E.1).
+- $m=2$ is necessary at a flat inventory only within bases of definite parity, and chosen, beyond
+  separation, for tilt and width as independent coordinates; **sufficiency is open**.
+- Multidimensional semantics with sharp lexical boundaries is a declared non-compatibility.
+- Not learned: $\Lambda$, $\theta_L$, $B$, $\mu_u$, the inventory.
+
+**Stipulations and directions.**
+
+- Halting by tolerance is a direction, not a commitment; §5.3 gives the reason (the fast loop's
+  tolerance is keyed to a global quantity, D12) and its two implications.
+- **Two stipulations of this phase, labelled as such and not built otherwise.** Results are
+  reported at **uniform exposure** — $p(y)$ is not a variable of the implementation but is implicit
+  in the batched sum, and no frequency-bearing version is built. And the inventory is taken to hold
+  at least $\{\chi,\ker\chi\}$ for any entry; membership follows from exposure somewhere, not
+  from exposure in a given experiment.
+- Tier B facts recorded here, position reserved.
+
+**Open.**
+
 - **Open: is the read-out part of the system, and so bound by locality?** Bogacz's model has no
   read-out stage (background §2.4), so the tutorial does not say. The question arises here because
   the hidden variables are a field over the scale (`agent/decisions.md` A21): any statement about
@@ -1439,30 +1363,13 @@ what it costs and what is still owed.
     statistics; and unimodality under *some* is **measured, not proved**, and fails where the
     prior peaks inside *some*'s excluded region, $s<1/2n$, at a weak $\Lambda$ (a Beta(1, 64)
     prior at $\Lambda=8$ gives two peaks). It does nothing for $q$'s normalizer.
-  - Sourced (C6): Code Cell A's last block prints the counts — a single peak of $\varphi_S^\ast$ and
-    of $\ell_0$ under *some*, and both neighbour rules agreeing with the argmax, in all 767
-    configurations it runs (Part D's rows along Appendix A's two ladders and at three node counts,
-    and the plane at every half-width) — and the Beta(1, 64) and Beta(1, 256) control at
-    $\Lambda=8$.
-- The model is linear-Gaussian while $\varphi_L$ is clamped, so the recurrent dynamics are an
-  implementation claim rather than a computational necessity.
-- The relay secures locality at the cost of a fourth timescale, $\tau_r\le\tau_\varepsilon$
-  (Eq. E6), which **inherits** $\theta_u^{-2}$ from the error units rather than imposing its own
-  (F26); at equality $\mathcal F$ is monotone under *some* only (O6).
-- $m=2$ is necessary at a flat inventory only within bases of definite parity, and chosen, beyond
-  separation, for tilt and width as independent coordinates; **sufficiency is open**.
-- Multidimensional semantics with sharp lexical boundaries is a declared non-compatibility.
-- Not learned: $\Lambda$, $\theta_L$, $B$, $\mu_u$, the inventory.
-- **Two stipulations of this phase, labelled as such and not built otherwise.** Results are
-  reported at **uniform exposure** — $p(y)$ is not a variable of the implementation but is implicit
-  in the batched sum, and no frequency-bearing version is built. And the inventory is taken to hold
-  at least $\{\chi,\ker\chi\}$ for any entry; membership follows from exposure somewhere, not
-  from exposure in a given experiment.
-- Tier B facts recorded here, position reserved.
+  - Sourced (C6): Appendix A's *Finding the peak by comparing neighbours* prints the counts and
+    the Beta(1, β) control; quote them from there.
+
 ## 5.6 Predictions (about 130 words)
  
-- **Exposure frequency should shift strengthening.** $\theta_u^\ast$ is set by
-  $3\,\mathbb E_{p(y)}[c_y]$, so non-uniform exposure to the inventory moves it. **This is a
+- **Exposure frequency should shift strengthening.** $\theta_u^\ast$ is set by the mean drive of
+  the inventory under exposure (Appendix B), so non-uniform exposure to the inventory moves it. **This is a
   prediction about departures from a stipulated uniform**, which is what makes it a prediction at
   all: uniform $p(y)$ is this phase's stipulation (Appendix B), not a result, and the model is not
   run at any other exposure. No analogue in RSA.
@@ -1477,9 +1384,9 @@ what it costs and what is still owed.
   one. That is the ordering the measurement of §4.2 shows, and it is testable on any class with an
   elicited prior and a degree estimate. **Stated as a prediction of H1, on which the dissertation
   takes no position** — it neither adopts nor rejects it, for the reason §5.2 gives: the comparison
-  runs at one resolution and under commitments a later phase may drop. What is *not* predicted here is an earlier draft's trend — the monotone
-  rise in the utility level's contribution as the cut approaches the endpoint, and its reversal under
-  a sharp prior — which is withdrawn.
+  runs at one resolution and under commitments a later phase may drop. **Not predicted:** a monotone rise in the utility level's
+  contribution as the cut approaches the endpoint, or its reversal under a sharp prior; neither is
+  supported.
 ---
  
 # 6. Conclusion (about 265 words)
@@ -1493,12 +1400,11 @@ what it costs and what is still owed.
    therefore does not by itself diagnose a within-trial alternatives computation.
 3. Where the prior leaves the all-region in the majority the network takes it out, and where the
    prior peaks inside the cell of *all* the network carries the peak outside it: in a single row of
-   §4.1.4, and in 15 and 9 of the 121 cells of §4.1.5, under the two read-outs respectively, at the
-   stipulated half-width and not at wider ones (§4.1.2's guard, sourced at both ends). In every
-   one of those the shift criterion is met as well. The unconditioned counts are three of five
-   priors and 33 cells under $q$, and the delta-like prior and 13 cells under the delta read-out
-   §3.6 argues for — counts in which the prior is doing part of the work, which is why the
-   conditioned ones lead. **What survives the change of read-out is the position criterion and not
+   §4.1.4, and in a band of the plane under each read-out (§4.1.5), at the stipulated half-width and
+   not at wider ones (§4.1.2's guard, sourced at both ends). In every one of those the shift
+   criterion is met as well. The unconditioned counts, in which the prior is doing part of the work,
+   are larger under $q$ than under the delta read-out §3.6 argues for, which is why the conditioned
+   ones lead. **What survives the change of read-out is the position criterion and not
    the shift**, and §5.1 reads that division as keyed to the level this architecture lacks.
    What a level representing competition among alternatives would change is what the
    network pays for that. On the plane the first condition's floor falls as the prior sharpens and
