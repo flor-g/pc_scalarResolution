@@ -91,10 +91,48 @@ Later in the session, after the agent had twice misread the scope:
      where its premises hold, or state the restriction; do not silently narrow the method.
   3. λ_max(H) keys the stopping tolerance (I3) and τ_ε (I4), so any change must reproduce it to
      roundoff: every step count in both notebooks must be unchanged, E3 included.
-  4. Appendix G §2's table row and its "costs of this implementation" sentence, Eq. (G3)'s K³
+  4. Appendix G §2's table row and its "choices of this instantiation" sentence, Eq. (G3)'s K³
      term, and the outline §5.5 bullet's total all change with it.
   Acceptance: both notebooks re-run, no printed line changes outside `cost:` lines and Appendix G's
   own, and λ_max agrees with the decomposition to roundoff at every configuration Code Cell G lists.
+- [ ] **CX7. OPEN (user, 2026-09-24): can the cost take part in the dynamics?** Not settled, and
+  not yet written into any notebook, outline or `agent/decisions.md` entry; the user will examine it
+  further. The question as posed: RSA writes utility as informativeness minus cost; this model has
+  no cost in its dynamics; would adding **Appendix G's** cost (this instantiation's complexity, read
+  as a representation of the process's cost) to μ_u break locality or the construction?
+  **The user's argument, as it stands:**
+  1. The true cost is not available to the system at any time t: it is a property of the whole
+     trajectory, halting step included, so no state before the halt fixes it.
+  2. Adding it to the dynamics makes the system self-referential (φ at t depends on the cost, which
+     depends on φ after t), and does so **even with locality set aside**.
+  3. So any stipulated participation of cost in the dynamics is not the true cost. Once a term takes
+     part, the true cost is the cost of the modified system; the two agree only at a fixed point
+     C = cost(dynamics given C), which the evaluator can solve for and the system never computes.
+  4. RSA's own treatment of cost is set aside by the user as not obviously right; nothing here rests
+     on it.
+  **Corrected on the way (the user's):** committing this instantiation's cost to the algorithm is
+  not a confusion of levels. It makes this instantiation the algorithm, which is one more commitment
+  and no defect in itself. The agent's argument from non-uniqueness had cause and effect reversed and
+  is withdrawn; the objection that remains is the self-reference of 1–3.
+  **Qualifications the agent raised, not yet discussed:**
+  - (a) Of N ≈ 8κ(H) log(a/tol) (Eq. G2), the factor κ(H) = θ_u² + 2 is a function of the current
+    θ_u, fixed within an inference, and so is determined before the inference starts; only the log
+    factor and the halting step depend on the trajectory. Coupling κ(H) into μ_u would still close a
+    loop, μ_u → θ_u\* (Appendix B) → κ(H) → μ_u, but a loop in what determines what rather than in
+    time. So "not available at any t" holds of the full cost, not of its dominant factor.
+  - (b) θ_u changes between inferences (τ_θ ≫ τ_φ), so the realized cost of a *completed*
+    inference could reach the slow timescale as ordinary feedback without self-reference. It would be
+    the cost of past inferences, never of the current one; and it needs a halting signal this phase
+    does not commit to (A19 is a direction; the λ_max-keyed tolerance is D12's open locality problem).
+  - (c) On the locality side, for any per-utterance or per-trial μ_u: Bogacz encodes v_p in synaptic
+    strength, maintained over the lifetime, so a μ_u that changes with the input stops being a
+    parameter and becomes an input activity at the top of the chain; and a y-dependent prior on φ_u
+    makes the directed generative model cyclic unless the utterance's form is split off as a root
+    observation. Both were raised under the agent's first, mistaken reading (utterance complexity in
+    RSA's sense) and may or may not bear on the reading above.
+  **To settle:** whether 1–3 is the position the dissertation takes; how (a) and (b) bear on it; and
+  where it is written (candidates: an `agent/decisions.md` entry; §5.3, which interprets the cost;
+  §5.5; Appendix G).
 
 ## 4. Findings
 
