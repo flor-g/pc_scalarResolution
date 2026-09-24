@@ -1675,12 +1675,12 @@ background target **4,160** (§2.4 400). Both tables re-summed.
 1. ~~PS11~~ **Closed 2026-09-23**: Code Cell A's `peak_locality_report` prints the counts §5.5
    rests on (767 configurations under *some*, and the Beta(1, 64) / Beta(1, 256) control at
    Λ = 8), and Appendix A's closing paragraph describes them. §5.5 may quote them.
-2. **A21's reasons await the user's confirmation.** §3.6's reason 3 and §5.5's read-out bullet rest
-   on them.
+2. ~~A21's reasons~~ **Confirmed by the user 2026-09-24.** §3.6's reason 3 and §5.5's read-out
+   bullet rest on them.
 3. **§5.5's read-out question is posed, not answered.** Do not draft a position on whether the
    read-out is bound by locality; the user's stipulation is offered as a candidate with its costs.
-4. **"Spanning" (PS3)** stays Appendix C's word for injectivity on the entries' span, by the
-   agent's decision pending the user's confirmation; §3.5 calls the property "retaining".
+4. **"Spanning" (PS3)** stays Appendix C's word for injectivity on the entries' span, confirmed
+   by the user 2026-09-24; §3.5 calls the property "retaining".
 5. **PS10** (optional) touches no outline sentence unless E.1 is to quote the full relay spectrum.
 
 **Added 2026-09-24: §3's opening, the design strategy** (PS13; `agent/decisions.md` C9). The user's

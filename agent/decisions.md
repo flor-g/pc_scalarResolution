@@ -542,9 +542,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   all, for both of its adjectives — 2 of the 56 modelled items, 10 of the 280 rows. See **E16**.
 
 ### A21. The situation level is field-valued: the hidden variables are log-weights over the world state
-- Status: Settled as a fact of the construction; the reasons below are reconstructed, and await the
-  user's confirmation
-- Decided by: agent, pending user confirmation (the reasons, recorded 2026-09-23 at the user's
+- Status: Settled; the reasons below are reconstructed, and confirmed by the user 2026-09-24
+- Decided by: agent, confirmed by user (2026-09-24) (the reasons, recorded 2026-09-23 at the user's
   request; the choice itself predates the record and was never entered)
 - Decision: the hidden variables of the situation level are the K values of φ_S, an unnormalized
   log-weight field over the world coordinate ζ (Text cell 3 §1), and not the world state itself.
@@ -1347,7 +1346,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     gap, and a difference of two counts does not establish a subset relation; the reversal column
     does, and it is zero at every rung.
   - **2026-09-23, PS11: Code Cell A takes the neighbour-comparison counts** (agent's placement,
-    pending user confirmation). `peak_locality_report` counts, under *some*, the local maxima of
+    confirmed by user 2026-09-24). `peak_locality_report` counts, under *some*, the local maxima of
     φ_S\* and ℓ₀ and checks the two neighbour rules against the argmax, over Part D's nine rows on
     this cell's Z and n ladders and at K = 101, 201, 401, and Code Cell 4's plane at every Z; then a
     control of Beta(1, β) priors. Code Cell A, not Code Cell 2, because the counts run over this

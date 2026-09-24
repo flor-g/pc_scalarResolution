@@ -83,7 +83,7 @@ Every point was checked against the files and, where numerical, recomputed with 
   background §2.6 and outline §3.4.
 - [x] **PS3** (2026-09-23): Appendix C §1 defines "spanning" as injectivity of B^T W on
   span{χ_y}/⟨1⟩, and says B's columns do not span the χ_y. The word is kept (P3 asks to separate
-  the senses, not to rename; renaming is open to the user).
+  the senses, not to rename). Keeping the word confirmed by the user 2026-09-24.
 - [x] **PS4** (2026-09-23): Appendix E. E.1 states Eq. (E5) is a subsystem and what it omits; the
   "What is unchanged" rows for Eq. (13) and Eqs. (21)-(22) say "at r = Bφ_u"; E.2's "F does not see
   it" restricted to the equilibrated relay; E.3's §8.4 row says the extra variable is not covered.
@@ -114,7 +114,7 @@ Every point was checked against the files and, where numerical, recomputed with 
   201, 401; the plane at every Z): one peak of φ_S\* and of ℓ₀ in all, both neighbour rules equal to
   the argmax in all; the Beta(1, β) control reproduces PSF18. The count is tie-aware (E18: symmetric
   priors on even-K grids have two equal central nodes). Placement in Code Cell A recorded under I10,
-  pending the user. main 0 errors, 8 figures, 15/15, 846 s; appendix_E 0 errors, 5 figures, E3 PASS
+  confirmed by the user 2026-09-24. main 0 errors, 8 figures, 15/15, 846 s; appendix_E 0 errors, 5 figures, E3 PASS
   (223 identical / 1 changed / 4 inserted; 263 identical); only Code Cell A's output changed.
   Was: TODO, not to be applied until the user says (user, 2026-09-23): print PSF17's and PSF18's
   counts from a code cell so that `thesis_outline/sections_3-6.md` 5.5 may quote them (C6) — the
