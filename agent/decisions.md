@@ -576,6 +576,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: every equation of Text cell 3; the need for any read-out at all (A13, A16, B7, B8,
   B13); `thesis_outline/sections_3-6.md` 3.6 and Conclusion item 1.
 - Evidence: `agent/review_2026-09-23_proof_scope.md` §5 and the exchange of 2026-09-23; `agent/audits/2026-09-23-mode-coordinate/`local_maxima_output.txt.
+- Findings added later: **2026-09-24 (user request).** Text cell 3 §1 now closes on "Why the
+  situation level carries a field over ζ": the single-node alternative, and three reasons it is not
+  taken (the entry is a set, so a single node makes F non-concave and loses §8.1, §6 and the exact
+  test; a single value carries no mass; the utility level acts on the belief's shape), with the
+  price stated. The reasons are still this entry's, pending the user's confirmation.
 
 ### A17. Eq. (A4) is stated as non-local; the relay and the alternatives level are named, not derived
 - Status: Settled; resolves D10

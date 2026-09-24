@@ -259,3 +259,9 @@ a unimodal posterior and compares neighbours only — resolves it (done: §5.5 b
 misalignment (done: locality is no longer said to derive the utility basis's dimension; §3.5 chooses
 m = 2 for tilt and width, locality is what that choice strains, Appendix E buys it back, and §5.1
 argues binary branching from it).
+
+**User, 2026-09-24:** clarify in the notebook why the single-node alternative of A21 is not taken.
+
+- [x] **PS12** (2026-09-24): Text cell 3 §1 closes on "Why the situation level carries a field over
+  ζ" — the alternative (a single ζ node with a nonlinear generative map, as in Bogacz §2's
+  g(v) = v²), three reasons against it, and the price. Markdown only, no number quoted; A21 finding.
