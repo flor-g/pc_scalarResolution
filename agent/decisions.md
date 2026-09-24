@@ -1354,8 +1354,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     cell's ladders, need Code Cell 2b's rows (Code Cell 2 runs before 2b), and Code Cell A has no
     mirror, so E2, E2b and E3 are untouched. Appendix A's closing paragraph describes the block,
     and Text cell 4 points to it.
-  - **2026-09-24, NK1: Code Cell A takes the node-count ladder** (agent's placement, pending user
-    confirmation). The same rule: the four criteria and the plane along the third grid axis sit
+  - **2026-09-24, NK1: Code Cell A takes the node-count ladder** (agent's placement, confirmed
+    by user 2026-09-24). The same rule: the four criteria and the plane along the third grid axis sit
     beside their ladders in n and Z, and the block needs Code Cell 2b's rows. Code Cell 2's
     refinement check stays with E[s]; Code Cell A has no mirror, so E2, E2b and E3 are untouched.
 
@@ -2617,7 +2617,7 @@ a number from it.
   the Z ladder, K = 84, 118, 134, 168). The count is therefore tie-aware, matching the argmax.
 
 **E19. The quantities `node_count_report` adds (2026-09-24, NK1 of
-`agent/node_count_2026-09-24.md`).** Classed by the agent.
+`agent/history.md` §17).** Classed by the agent.
 - **(b) reported statistics**: the four criteria and two conjunctions at other node counts, cell by
   cell agreement with K = 801 and between K = 401 and 801 (the floor), Part D statuses agreeing,
   the cells that change status from K = 101, and two grid descriptors per rung: the first node

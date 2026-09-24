@@ -6,7 +6,8 @@ The closed working records of this project, in one file, ordered by when each wa
 `procedure_records/`, on the pattern `agent/agent.md` §5.3 describes: the user's instruction
 verbatim, the decisions it rested on, a numbered task list, the verification, and numbered
 findings. All sixteen closed. They are consolidated here on 2026-09-23 and the directory is
-removed.
+removed. Records opened since are written in `agent/` and folded in here as they close (§17
+on 2026-09-24).
 
 **What was kept, and what was not.** Each record keeps its **findings** and task outcomes,
 because those carry numbered IDs that `agent/decisions.md` and `thesis_outline/revisions.md` cite
@@ -44,6 +45,7 @@ written to, and it still governs any new one.
 | 14 | [One name for the scale's resolution, and what fixes it](#r14) | 2026-09-21 13:25 | 2026-09-22 14:36 | 5 | O1 |
 | 15 | [The exposure ensemble, stated as a stipulation: its weights and its membership](#r15) | 2026-09-21 13:38 | 2026-09-22 11:26 | 4 | O2 (settled), A18, O8's ensemble half |
 | 16 | [Halting by tolerance: can the realizable maximizer be defined that way?](#r16) | 2026-09-21 15:45 | 2026-09-22 12:18 | 25 | A19 (demoted to a direction), D12, I3 |
+| 17 | [The node count K: printing what was found, and what it implies](#r17) | 2026-09-24 12:25 | 2026-09-24 | 4 | I6, I10, E19; revisions.md §15 |
 
 ---
 
@@ -4590,5 +4592,105 @@ line protects is everything the paper reports **as a prediction** — and those 
 ---
 
 *Full original:* `git show 7754cb5:procedure_records/tolerance_halting.md`
+
+---
+
+<a id="r17" name="r17"></a>
+
+## 17. The node count K: printing what was found, and what it implies
+
+*Was* `agent/node_count_2026-09-24.md` (folded under `agent/agent.md` §5.3 on 2026-09-24)
+
+**Opened** 2026-09-24 12:25 · **Closed** 2026-09-24 · 4 commits
+
+**Settled** I6 (the K half printed, and corrected), I10 (NK1's placement), E19; revisions.md §15
+
+**Opened by**
+
+> Now can you check if we have every tried accuracies other than K = 10?
+
+> I see. The trend towards finer K is worth reporting. However, I am more interested in the trend
+> towards coarser K, since that informs us the minimum complexity required before things become
+> unpredictive.
+
+> No need. Print what we have found so far in an appropriate place the notebook. In the outline,
+> discuss the implications and direction of future investigation regarding this issue. Now plan
+> your tasks regarding this.
+
+"No need" declined the aligned-grid audit (θ_L held on a Voronoi boundary at every K); it entered
+the outline as a direction instead.
+
+**NK-D1, the user's ruling**
+
+> No to the 4.2 guard. we don't know the lower bound of K yet, so we don't want to add that to the
+> guard as if we know it. What we need in the outline is a warning to the reader on a suspected
+> lower bound of K and pointer to the relevant section that discusses what we know about it.
+
+So the lower bound is **suspected, not established**, everywhere it is written, and §4.2's guard
+stays with n and Z. **Confirmed by the user at close (2026-09-24, "All confirmed")**: NK1's
+placement in Code Cell A, and the reading that the outline's headline counts carry no per-site K
+qualifier, their spread across K being reported once, in §5.5.
+
+#### Tasks
+
+- [x] **NK0** (2026-09-24): checkpoint, `git status` clean at `5e755a1`.
+- [x] **NK1**: Code Cell A's `node_count_report`, after `peak_locality_report`: the floor (K = 401
+  against 801); the finer end (Part D's nine rows at K = 101 to 1601 with P(all), the plane's six
+  counts and reversals at K = 101 to 801, and the cells that move); the coarse end (odd K from 101
+  to 5: spacing, nodes in the region, first node and lower edge against θ_L, the two conjunctions,
+  agreement with K = 801, Part D of 36); the smooth-mask control at sharpness 0.1. Reproduces all
+  four audit outputs digit for digit; about a second. `09ea547`.
+- [x] **NK2**: both notebooks executed; acceptance met (NK-F5). `09ea547`.
+- [x] **NK3**: Appendix A, "A third axis: the node count", after the neighbour-comparison paragraph
+  (which the block follows); it suggests a lower bound without establishing one. `09ea547`.
+- [x] **NK4**: Text cell 3 §1 — refining K converges the settled fields and the expectations read
+  from them; a criterion's status can still change at a boundary cell. `09ea547`.
+- [x] **NK5**: "at K = 101" at the first quote of each count per text cell (NK-F8). `09ea547`.
+- [x] **NK6–NK8**: `sections_3-6.md` §4.3 warning and §5.5 bullet with four directions; §4.3
+  105 → 145, §5.5 465 → 645, Total 6,210; `revisions.md` §15. `01955cd`.
+- [x] **NK9**: I6 finding (printed; seven cells; the lower edge), I10 finding, E19. `a32d059`.
+- [x] **NK10**: C6 sweep (NK-F7), references checked (NK-F9), this fold.
+
+#### Findings
+
+- **NK-F1 (NK1): seven plane cells move at the finer end, not five.** The audit's
+  `plane_flips.py` checked q shift, q position and the two conjunctions only; the printed list adds
+  (α 16, Λ 32) in mode position and (α 32, Λ 8) in mode shift. The record's own summary and I6's first
+  finding said five; the outline quotes seven.
+- **NK-F2 (NK1): the column that sorts the coarse rungs is the lower edge, not the first node.**
+  The plan asked for the distance from θ_L to the first node inside the cell. That column is
+  +0.056 on K = 101, 81 and 61 as well, which track the fine grid, so it does not separate
+  anything. Under the trapezoidal weights the first node inside carries the interval down to the
+  midpoint with the node below; that midpoint minus θ_L does sort the rungs (negative: q
+  conjunction 33, 32, 29, 24, 9, 0 as it grows; +0.056: 32 to 39). Both columns are printed, and
+  I6's "node at ζ = 3.0" account is corrected in a new finding there.
+- **NK-F3 (NK1): at a fixed lower-edge offset, agreement still falls with the spacing** (q shift
+  116 of 121 at K = 51, 76 at K = 7, all at +0.056). So placement does not account for all of the
+  coarse end, and the ladder already separates the two in part. It still does not establish a
+  bound: the offset is held only at one value, never at zero.
+- **NK-F4 (NK6): the outline's §4.3 and §5.5 were drafted while NK2 ran**, from the prototype's
+  output, whose code is identical to the cell's; every number is checked against the executed
+  cell before commit.
+- **NK-F5 (NK2): acceptance met.** main 0 errors, 8 figures; appendix_E 0 errors, 5 figures; 15/15;
+  E3 PASS (223 identical / 1 changed / 4 inserted; 263). Against NK0 only Code Cell A's output
+  changed, apart from Code Cell 2b's and E2b's machine-timing `cost:` lines. main was run a second
+  time after NK-F6's fix; the diff between the two runs is the header lines alone.
+- **NK-F6: the block's header and Appendix A cited Eq. (2) for the trapezoidal weights.** Eq. (2) is
+  the quadrature inner product, and Text cell 3 §1 says only "fixed positive quadrature weights";
+  the trapezoidal rule lives in Code Cell 1's `build_grid`. Both now cite `build_grid`.
+- **NK-F7 (C6 sweep): two derived numbers replaced by printed ones.** "Within four cells of the
+  floor" became the printed ranges (119–121 at the floor, 117–120 at K = 81), and "three statuses
+  change at K = 61" became "only 33 of 36 agree". Every numeral in Appendix A's new paragraph is
+  found in Code Cell A's output.
+- **NK-F8 (NK5): the K = 101 clause went to the first quote of each count per text cell**, three
+  sites (Text cell 4's band of 33; Text cell 6's 33 and 13), not all six, so as not to repeat it.
+  The agent's scoping, named to the user.
+- **NK-F9 (§4.3): the warning was placed after the refinement/half-width pair, and E3's sentence
+  before it**, so that "the companion to that one" keeps its antecedent and E3's "every one of these
+  numbers" does not appear to cover Code Cell A, which E3 does not replay.
+
+---
+
+*Full original:* `git show a32d059:agent/node_count_2026-09-24.md`
 
 ---

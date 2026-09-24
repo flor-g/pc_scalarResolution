@@ -1625,7 +1625,7 @@ deferring to §3 (the two files had been pointing at each other).
 
 The user asked what the criteria do at node counts other than K = 101, and above all toward
 coarser K, "since that informs us the minimum complexity required before things become
-unpredictive". The working record is `agent/node_count_2026-09-24.md`; its IDs carry the prefix
+unpredictive". The working record, closed, is `agent/history.md` §17; its IDs carry the prefix
 NK. Code Cell A's `node_count_report` (NK1) prints both ends; this section is the outline-side view.
 
 **Applied to the outlines.**
@@ -1641,7 +1641,7 @@ NK. Code Cell A's `node_count_report` (NK1) prints both ends; this section is th
 
 1. **The lower bound is suspected, not established**, wherever it is written. Do not state a
    minimum K, and do not add K to §4.2's guard.
-2. **The headline counts carry no per-site K qualifier** (the agent's reading of NK-D1, named to
+2. **The headline counts carry no per-site K qualifier** (the agent's reading of NK-D1, confirmed by
    the user). Their spread across K is reported once, in §5.5.
 3. What §5.5 quotes about the coarse end is a description of printed columns. The reading "cut-based
    statistics, not the model" is the outline's, and the notebook takes no position on it (B10).
