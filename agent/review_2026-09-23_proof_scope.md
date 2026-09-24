@@ -114,4 +114,30 @@ Every point was checked against the files and, where numerical, recomputed with 
 - **Q5** (B7/B8): how to treat the coordinate dependence of the delta-like row's mode position.
   **User, 2026-09-23: "we need to think more about this one. As pointed out, the choice carries
   theoretical content and needs to be justified explicitly."** R8 stays open.
+
+## 5. Q5 evidence (agent, 2026-09-23; `agent/audits/2026-09-23-mode-coordinate/`)
+
+Both mode criteria under *some*, read in ζ (the node where φ_S\* is largest, B7/B8) and as a density
+over s (the node where φ_S\* − log s(1−s) is largest):
+
+- **F9. The dependence is not confined to the delta-like row.** Plane, 121 cells: mode shift 67 (ζ)
+  against **121** (s); mode position 59 against 39, differing in 20 cells; conjunction 13 against
+  39, differing in 32. Part D: 5 of 9 rows change at least one criterion (flat and Beta(3,1) at both
+  Λ, and the delta-like row).
+- **F10. In s the baselines sit on the grid's edge.** Every Beta(α, 1) with α ≥ 1 has its s-density
+  mode at s = 1, Beta(1, 3) at s = 0, and the flat prior has none; on the grid these become the edge
+  nodes, s = 0.99753 or 0.00247, which move with the half-width Z. That is why the s-read mode shift
+  criterion holds in all 121 cells: it compares against an endpoint the open scale excludes
+  (Eq. A1). In ζ, every Beta(α, β) has an interior mode, at log(α/β).
+- **F11. What fixes ζ in the model.** φ_S is a log-density against the quadrature measure in ζ
+  (Eq. 2; I6; the default prior is Gaussian in ζ, A15), so the most active situation unit *is* the
+  ζ mode. The s mode needs a fixed per-unit bias, −log s(1−s), which no part of the model supplies.
+  Outside source worth checking before citing: MacKay (1998), "Choice of basis for Laplace
+  approximation", on mode-based approximations being basis-dependent and the logit/softmax basis
+  being the better one for probabilities. [verify]
+- **F12. The argmax is an operation across nodes.** Selecting the most active unit compares every
+  node, as q's normalizer sums over every node: a max where q has a sum. §3.6 reason 1 ("it needs
+  no sum across nodes") is true of the delta, which is the settled vector, but not of the mode
+  criteria read from it. This is P6's second half, and it bears on the position of A16.
+
 - **Q6**: may background §2.6's no-semantic-stage claim be narrowed?

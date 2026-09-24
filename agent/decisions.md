@@ -735,6 +735,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     density over s, which carries the Jacobian 1/s(1−s), is at s = 0.95257, inside it. The mode
     position criterion on that row is met in ζ and not in s. No cell prints the second number.
     Selecting the argmax is also an operation beyond the delta, and its locality is not argued.
+    **Extended the same day** (`agent/audits/2026-09-23-mode-coordinate/output.txt`; record F9-F12):
+    read over s, the plane gives mode shift 121, mode position 39, both 39 (against 67, 59, 13 in ζ),
+    and 5 of Part D's 9 rows change; in s the evaluation's priors have their modes at the excluded
+    endpoints, so the s baselines sit on the grid's edge node. The user holds the question open.
 
 ### B10. The notebooks report the conditions and take no position on what counts as strengthening
 - Status: Settled

@@ -1,0 +1,63 @@
+PART D, Lambda = 8 and Lambda = 512, under 'some'
+gaussian L=8                 theta*=   -28.437 cell s>=0.9500 | zeta: mode 0.58904 base 0.50000 shift False pos True  | s: mode 0.64566 base 0.50000 shift False pos True 
+flat L=8                     theta*=  5950.626 cell s>=0.9500 | zeta: mode 0.67261 base 0.50000 shift False pos True  | s: mode 0.94685 base 0.99753 shift True  pos True    <-- differs
+skewed low L=8               theta*=   -14.508 cell s>=0.9500 | zeta: mode 0.32739 base 0.25351 shift False pos True  | s: mode 0.19155 base 0.00247 shift False pos True 
+skewed high L=8              theta*=    55.008 cell s>=0.9500 | zeta: mode 0.84290 base 0.74649 shift False pos True  | s: mode 0.96231 base 0.99753 shift True  pos False   <-- differs
+gaussian L=512               theta*=  1580.814 cell s>=0.9500 | zeta: mode 0.90721 base 0.50000 shift False pos True  | s: mode 0.90721 base 0.50000 shift False pos True 
+flat L=512                   theta*=  1521.482 cell s>=0.9500 | zeta: mode 0.91683 base 0.50000 shift False pos True  | s: mode 0.91683 base 0.99753 shift True  pos True    <-- differs
+skewed low L=512             theta*=  1589.494 cell s>=0.9500 | zeta: mode 0.89660 base 0.25351 shift False pos True  | s: mode 0.90721 base 0.00247 shift False pos True 
+skewed high L=512            theta*=  1499.370 cell s>=0.9500 | zeta: mode 0.91683 base 0.74649 shift False pos True  | s: mode 0.92553 base 0.99753 shift True  pos True    <-- differs
+delta-like Beta(64,1) L=512  theta*=  1407.769 cell s>=0.9500 | zeta: mode 0.94685 base 0.98523 shift True  pos True  | s: mode 0.95257 base 0.99753 shift True  pos False   <-- differs
+
+PLANE, Beta(alpha,1) x Lambda, 121 cells, under 'some'
+{'shift_z': 67, 'shift_s': 121, 'pos_z': 59, 'pos_s': 39, 'both_z': 13, 'both_s': 39, 'shift_diff': 54, 'pos_diff': 20, 'both_diff': 32}
+cells where the position or the conjunction differs (alpha, Lambda, zeta mode, s mode, pos z/s, both z/s):
+   (1.0, 2.0, 0.5597136492671929, 0.9577102281579662, True, False, False, False)
+   (1.0, 4.0, 0.5890404340586651, 0.9525741268224334, True, False, False, False)
+   (1.0, 8.0, 0.6726070170677605, 0.9468488636019362, True, True, False, True)
+   (1.0, 16.0, 0.7464939833376621, 0.9404756340234984, True, True, False, True)
+   (1.0, 32.0, 0.826353352980995, 0.9333919644249093, True, True, False, True)
+   (1.0, 64.0, 0.8721384336809187, 0.9255320548339719, True, True, False, True)
+   (1.0, 128.0, 0.8965995485417504, 0.9255320548339719, True, True, False, True)
+   (1.0, 256.0, 0.907207046882843, 0.9255320548339719, True, True, False, True)
+   (1.0, 512.0, 0.9168273035060777, 0.9168273035060777, True, True, False, True)
+   (1.0, 1024.0, 0.9168273035060777, 0.9168273035060777, True, True, False, True)
+   (1.0, 2048.0, 0.9168273035060777, 0.9168273035060777, True, True, False, True)
+   (2.0, 2.0, 0.7231218051243898, 0.9701133201963639, True, False, False, False)
+   (2.0, 4.0, 0.7464939833376621, 0.9664307767185175, True, False, False, False)
+   (2.0, 8.0, 0.789181706522253, 0.9577102281579662, True, False, False, False)
+   (2.0, 16.0, 0.826353352980995, 0.9468488636019362, True, True, False, True)
+   (2.0, 32.0, 0.8581489350995123, 0.9404756340234984, True, True, False, True)
+   (2.0, 64.0, 0.8849332679544502, 0.9333919644249093, True, True, False, True)
+   (2.0, 128.0, 0.907207046882843, 0.9255320548339719, True, True, False, True)
+   (2.0, 256.0, 0.907207046882843, 0.9255320548339719, True, True, False, True)
+   (2.0, 512.0, 0.9168273035060777, 0.9255320548339719, True, True, False, True)
+   (2.0, 1024.0, 0.9168273035060777, 0.9255320548339719, True, True, False, True)
+   (2.0, 2048.0, 0.9168273035060777, 0.9168273035060777, True, True, False, True)
+   (4.0, 2.0, 0.8581489350995123, 0.9763394218445388, True, False, False, False)
+   (4.0, 4.0, 0.8721384336809187, 0.973403006423134, True, False, False, False)
+   (4.0, 8.0, 0.8721384336809187, 0.9664307767185175, True, False, False, False)
+   (4.0, 16.0, 0.8849332679544502, 0.9577102281579662, True, False, False, False)
+   (4.0, 32.0, 0.8965995485417504, 0.9468488636019362, True, True, False, True)
+   (4.0, 64.0, 0.907207046882843, 0.9404756340234984, True, True, False, True)
+   (4.0, 128.0, 0.907207046882843, 0.9333919644249093, True, True, False, True)
+   (4.0, 256.0, 0.9168273035060777, 0.9255320548339719, True, True, False, True)
+   (4.0, 512.0, 0.9168273035060777, 0.9255320548339719, True, True, False, True)
+   (4.0, 1024.0, 0.9168273035060777, 0.9255320548339719, True, True, False, True)
+   (4.0, 2048.0, 0.9168273035060777, 0.9255320548339719, True, True, False, True)
+   (8.0, 2.0, 0.9333919644249093, 0.9763394218445388, True, False, False, False)
+   (8.0, 4.0, 0.9333919644249093, 0.9763394218445388, True, False, False, False)
+   (8.0, 8.0, 0.9333919644249093, 0.973403006423134, True, False, False, False)
+   (8.0, 16.0, 0.9255320548339719, 0.9664307767185175, True, False, False, False)
+   (8.0, 32.0, 0.9255320548339719, 0.9577102281579662, True, False, False, False)
+   (8.0, 64.0, 0.9255320548339719, 0.9525741268224334, True, False, False, False)
+   (8.0, 128.0, 0.9255320548339719, 0.9404756340234984, True, True, False, True)
+   (8.0, 256.0, 0.9255320548339719, 0.9333919644249093, True, True, False, True)
+   (8.0, 512.0, 0.9255320548339719, 0.9255320548339719, True, True, False, True)
+   (8.0, 1024.0, 0.9168273035060777, 0.9255320548339719, True, True, False, True)
+   (8.0, 2048.0, 0.9168273035060777, 0.9255320548339719, True, True, False, True)
+   (16.0, 64.0, 0.9468488636019362, 0.9623121094913941, True, False, False, False)
+   (16.0, 128.0, 0.9404756340234984, 0.9525741268224334, True, False, False, False)
+   (32.0, 256.0, 0.9468488636019362, 0.9525741268224334, True, False, True, False)
+   (64.0, 512.0, 0.9468488636019362, 0.9525741268224334, True, False, True, False)
+   (128.0, 1024.0, 0.9468488636019362, 0.9525741268224334, True, False, True, False)
