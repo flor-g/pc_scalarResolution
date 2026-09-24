@@ -158,13 +158,13 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
-| **3. The proposed architecture** | 800 | **1,330** | |
+| **3. The proposed architecture** | 800 | **1,360** | |
 | 3.1 What the model must do | 90 | 90 | Four design requirements |
 | 3.2 A continuous world state and a soft lexicon | 160 | **295** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
 | 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
 | 3.4 State units, error units, and what is local | 210 | **320** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied; **+30 on 2026-09-23 for the four convergence results kept apart**, `agent/review_2026-09-23_proof_scope.md` R7) |
 | 3.5 Two choices the scale motivates | 140 | **180** | $m=2$ from threshold parity; the amplification axis; **+40 on 2026-09-23 for the three properties of $B$ kept apart, and necessity scoped to definite parity** (`agent/review_2026-09-23_proof_scope.md` R6) |
-| 3.6 Two read-outs (new) | — | **190** | `revisions.md` §5, item 1; **+90 on 2026-09-23 for the position that the delta read-out is the one the construction motivates, and the four things it does not license** (§11 of `revisions.md`, PP1) |
+| 3.6 Two read-outs (new) | — | **220** | `revisions.md` §5, item 1; **+90 on 2026-09-23 for the position that the delta read-out is the one the construction motivates, and the four things it does not license** (§11 of `revisions.md`, PP1) |
 | **4. Evaluation** | 745 | **1,890** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
 | 4.2 The criterion, and how to read the statistics | 170 | **545** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17); **+45 the same day for which read-out the criterion is written in** (PP2) |
@@ -172,15 +172,15 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 4.4 The five priors | 220 | **470** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
 | 4.5 The plane, and where both conditions hold | 165 | **530** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **2,185** | |
+| **5. Discussion** | 705 | **2,305** | |
 | 5.1 What an alternatives level would have to supply | 390 | **560** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5); **+100 the same day for the order of the two motivations, and why the conjecture stays second** (PP10) |
 | 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **860** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement; **+60 on 2026-09-23 for F.10's half-width control** (Z5) |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
-| 5.5 Limits (was 5.3) | 65 | **345** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5) |
+| 5.5 Limits (was 5.3) | 65 | **465** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5); **+120 the same day for the open question of whether the read-out falls under locality** (`agent/review_2026-09-23_proof_scope.md` R8) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **5,670** | |
+| **Total** | **2,400** | **5,820** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -192,7 +192,7 @@ figure against text still written to the old one. **Every section heading's figu
 against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
 agree, and the check is worth repeating whenever a budget moves.
 
-# 3. The proposed architecture (about 1,330 words)
+# 3. The proposed architecture (about 1,360 words)
  
 ## 3.1 What the model must do (about 90 words)
  
@@ -408,7 +408,7 @@ and width as independent coordinates**.
   centre and the extremes. Every result in §4.4 and §5.2 turns on which of the two an entry loads.
 ---
  
-## 3.6 Two read-outs (about 190 words)
+## 3.6 Two read-outs (about 220 words)
 
 The settled state is a pair of fields. Turning it into a statement about belief takes a read-out,
 and the model admits two. Which one is in force decides what a result means, so the choice is stated
@@ -447,11 +447,16 @@ here rather than assumed.
      moment only the most likely values of features, and not the whole posterior (Bogacz, 2017,
      §2.2, with binocular rivalry as his example). The same economy motivates the Gaussian
      machinery of background §2.2's commitment 3, which is why the two sit together there. Under
-     the delta, what the network represents is the settled vector $x^\ast$. $q$ asks for more than
-     that vector: an exponential at every node and a sum across every node, which together form a
-     normalized density over $\zeta$ that, on Bogacz's ground, is not represented. That is why $q$
-     is a convention of the literature compared with rather than a statement the model makes about
-     itself, and it is the reason to give first.
+     the delta, what the network represents is the settled vector $x^\ast$ — and in this
+     construction that vector already holds an unnormalized log-weight at every node of the scale
+     (`agent/decisions.md` A21). The model therefore does carry a distribution over $s$, value by
+     value, and pays the first of Bogacz's two costs by its choice of a field-valued situation
+     level; the delta does not avoid it. What the delta avoids is the second. $q$ adds a
+     normalization — an exponential at every node and a sum across every node — which Bogacz
+     (§2.2) names as the step a simple biological system would find hard, and which this network
+     never performs. That is why $q$ is a convention of the literature compared with rather than a
+     statement the model makes about itself, and it is the reason to give first. **Never write that
+     the model avoids representing a distribution over states**; it does not.
 - **Four things the position does not license.** State them in the same place, or the position
   reads as licensing all four.
   1. **The criterion stays on $q$** (§4.2). Strengthening is stated as a mass in the accounts this
@@ -817,7 +822,7 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   locality debt (D12) is admitted. This section states neither.
 ---
  
-# 5. Discussion (about 2,185 words)
+# 5. Discussion (about 2,305 words)
  
 ## 5.1 What an alternatives level would have to supply (about 560 words)
  
@@ -1272,7 +1277,7 @@ what it costs and what is still owed.
   natural misreading: the claim is about what a level can be asked, not about what is true.
 ---
  
-## 5.5 Limits (about 345 words, was §5.3)
+## 5.5 Limits (about 465 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
   reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
@@ -1306,6 +1311,31 @@ what it costs and what is still owed.
   **reformulating the criterion cannot remove it** — only a projection under a fixed reference
   measure would, and that breaks the $B^{\mathsf T}WB=I$ that Eq. (B2) assumes. Owned rather than
   hedged, under §4.2's guard.
+- **Open: is the read-out part of the system, and so bound by locality?** Bogacz's model has no
+  read-out stage (background §2.4), so the tutorial does not say. The question arises here because
+  the hidden variables are a field over the scale (`agent/decisions.md` A21): any statement about
+  $s$ is read off that field. State the nuances rather than an answer.
+  - $q$ needs a sum across every node, whatever the field's shape.
+  - The mode criteria need the peak of $\varphi_S^\ast$. Under *some*, where both are stated, the
+    field has a single local maximum in every configuration the evaluation reports, so the peak unit
+    is the only one exceeding both neighbours — a **neighbour comparison** finds it. And since
+    $\ell_0$ has a single peak under every prior used, the mode shift criterion is the sign of
+    $\ell_0$'s slope at that unit, so both criteria are neighbour comparisons there. Under *no* and
+    *all* the field has two to four local maxima in most cells, and the global peak needs a
+    **comparison across the grid**.
+  - **A candidate resolution, offered as a stipulation:** the read-out assumes a unimodal posterior
+    and compares neighbours only, whatever the true shape. It reproduces both mode criteria exactly
+    wherever they are reported; it fits the delta's single point, and Bogacz's own example of
+    binocular rivalry, where one of two interpretations is represented. Its costs, owned: it is
+    stipulated, not derived; it needs each state unit to read its neighbours, a connection Bogacz's
+    architecture does not contain — his within-level weights, the $\Sigma$ of his §5.2, run
+    between error nodes and their interneurons, and a state node reads only error nodes; under *no* and *all* it returns
+    *a* local peak, not the global one, so the peaks the notebook prints there stay the modeller's
+    statistics; and unimodality under *some* is **measured, not proved**, and fails where the
+    prior peaks inside *some*'s excluded region, $s<1/2n$, at a weak $\Lambda$ (a Beta(1, 64)
+    prior at $\Lambda=8$ gives two peaks). It does nothing for $q$'s normalizer.
+  - C6 before drafting: the counts behind "every configuration" and the Beta(1, 64) case are printed
+    by an audit script only (`agent/audits/2026-09-23-mode-coordinate/`), not by a cell.
 - The model is linear-Gaussian while $\varphi_L$ is clamped, so the recurrent dynamics are an
   implementation claim rather than a computational necessity.
 - The relay secures locality at the cost of a fourth timescale, $\tau_r\le\tau_\varepsilon$

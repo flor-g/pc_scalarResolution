@@ -204,3 +204,30 @@ R8 status: notebook clarification and §3.6's coordinate done. Open: §3.6's rea
 across nodes") and whether a read-out falls under locality — the user's call, with F12 and F16 as
 the evidence. Flagged, not edited: background §2.4 says "§3.5 derives the utility basis dimension
 from [locality]", which R6's recast of §3.5 no longer supports.
+
+**User, 2026-09-23:** record the field-valued situation level in decisions.md (done: **A21**, with
+**D13** in the divergence register); narrow §3.6's reason 3 to the normalization (done; A16 finding;
+background §2.2's pointer); pose the read-out's locality as an open question in §5.5 with the
+unimodal/neighbour nuance, and verify whether the user's proposed stipulation — the read-out assumes
+a unimodal posterior and compares neighbours only — resolves it (done: §5.5 bullet, +120 words;
+§3.6 +30; Total 5,820).
+
+- **F17 (`local_rule_output.txt`).** Under *some*, over Part D's nine rows at every Z ∈ {6, 8},
+  K ∈ {101, 201}, n ∈ {2, 4, 10, 20} (144 configurations) and the 121-cell plane: φ_S\* and ℓ₀ each
+  have exactly one local maximum in all 265, and the neighbour rule — the peak is the unit exceeding
+  both neighbours; the shift criterion is the sign of ℓ₀'s slope at that unit — agrees with the
+  argmax on both mode criteria in all 265.
+- **F18 (`counterexample_output.txt`), predicted before it was run.** Unimodality under *some* fails
+  where prior plus utility peak inside *some*'s excluded region, s < 1/2n: Beta(1, 64) and
+  Beta(1, 256) at Λ = 8 give two local maxima (for Beta(1, 256) the global one, s = 0.021, is inside
+  the excluded region). At Λ = 512 both are unimodal. Beta(1, 3) and Beta(1, 16) are unimodal at
+  both Λ. Why *some* is the favourable case: its excluded region is the far tail from where a
+  concave ℓ₀ plus a tilt and a negative width peak, so the step removes no candidate; *no* and
+  *all* exclude the region that holds that peak.
+- **Assessment of the stipulation**, as written into §5.5: it resolves the question for every
+  reported mode criterion; it is consonant with the delta and with Bogacz's binocular-rivalry
+  remark; it costs a stipulation, a connection among state units Bogacz does not have (his
+  within-level Σ of §5.2 connects error nodes and interneurons), the global peak under *no*/*all*,
+  and a proof. It does nothing for q.
+- C6: F17's and F18's counts are printed by audit scripts only; a cell must print them before the
+  paper quotes them.

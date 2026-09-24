@@ -375,6 +375,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     they are comparable in motivation, each a reduction in what inference must carry. Applied to
     `thesis_outline/background_sections.md` 2.2-2.3 (the three objects, the sign bridge) and
     `thesis_outline/sections_3-6.md` 3.6 (the delta bullet and reason 3).
+  - **2026-09-23, reason 3 narrowed (user approved, A21).** The construction represents an
+    unnormalized distribution over s, K values, so Bogacz's first cost is paid by the field-valued
+    situation level and the delta does not avoid it. Reason 3 now rests on his second cost: q adds a
+    normalization the network never performs. §3.6 must not say the model avoids representing a
+    distribution over states; background §2.2's pointer names the normalization argument.
 
 ### A19. Halting by tolerance: a proposed direction, not a commitment
 - Status: **DEMOTED 2026-09-22 by the user, from a commitment to a direction.** Settled as of
@@ -535,6 +540,42 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   are cited in §5.2's prose.
 - **One item is scored nowhere.** The image set `curved_greenline` drew no Experiment 3 response at
   all, for both of its adjectives — 2 of the 56 modelled items, 10 of the 280 rows. See **E16**.
+
+### A21. The situation level is field-valued: the hidden variables are log-weights over the world state
+- Status: Settled as a fact of the construction; the reasons below are reconstructed, and await the
+  user's confirmation
+- Decided by: agent, pending user confirmation (the reasons, recorded 2026-09-23 at the user's
+  request; the choice itself predates the record and was never entered)
+- Decision: the hidden variables of the situation level are the K values of φ_S, an unnormalized
+  log-weight field over the world coordinate ζ (Text cell 3 §1), and not the world state itself.
+  s appears in the model only as the label of a unit. The lexical level is field-valued for the
+  same reason (φ_L = Λχ_y). This is where the construction parts from Bogacz's examples, whose
+  hidden cause is the world quantity and whose state node's activity *is* its estimate.
+- Theoretical reason: two of the construction's commitments together. (1) An entry is a **set**
+  over the scale (A2): *some* says the state is not in a region, not that it lies near a value.
+  (2) The **Gaussian, linear machinery** (background §2.2 commitment 3; Text cell 3 §8): a region
+  constraint on a single ζ node is a step-shaped log-likelihood that no Gaussian expresses. Lifting
+  the entry to a field and putting φ_S in the same space keeps g_L = ℓ₀ − φ_S affine, so F is a sum
+  of squares in the field, whence §8's concavity, uniqueness and closed forms. Two things the
+  evaluation asks for also need a distribution: mass (the q criteria, the RSA comparison, A16) and
+  the utility level's width channel (Appendix C §8), since a point has no width.
+- The alternative, recorded so the choice can be weighed: one node for ζ, a Gaussian prior, and the
+  soft mask as a nonlinear log-likelihood, which Bogacz's framework admits (his first example has a
+  nonlinear g). Its update is local and its settled activity is the most likely ζ, the ζ mode of
+  B8/B13, with no read-out step. It loses concavity (under *no* and *all* the log-posterior in ζ has
+  two to four local maxima, `agent/review_2026-09-23_proof_scope.md` F16), the closed forms, every mass statistic, and the width channel.
+- What it costs, stated so that no sentence claims otherwise: the construction **represents a
+  distribution over s, value by value** (K numbers, unnormalized). Bogacz's first reason against
+  computing the posterior (§2.2: infinitely many values rather than a few summary statistics) is
+  therefore paid by this choice, and the delta does not avoid it. What the model avoids is his
+  second, the normalization, which only q performs.
+- Implementational reason: the quadrature grid of Text cell 3 §1 (I6); D6's change of variables
+  makes each grid unit one of Bogacz's φ nodes.
+- Bogacz status: every operation an instance under D6; what the nodes stand for has no counterpart
+  (D13).
+- Depends on it: every equation of Text cell 3; the need for any read-out at all (A13, A16, B7, B8,
+  B13); `thesis_outline/sections_3-6.md` 3.6 and Conclusion item 1.
+- Evidence: `agent/review_2026-09-23_proof_scope.md` §5 and the exchange of 2026-09-23; `agent/audits/2026-09-23-mode-coordinate/`local_maxima_output.txt.
 
 ### A17. Eq. (A4) is stated as non-local; the relay and the alternatives level are named, not derived
 - Status: Settled; resolves D10
@@ -2084,6 +2125,14 @@ while φ_L is clamped.
   slow rule |Δθ_u| < tol is clean and can be said to be; the fast keying is not.
 - **Not resolved. No verdict is claimed here**, and this entry is the agent's reading of Bogacz on
   parameter convergence plus the user's decision of 2026-09-22.
+
+**D13. The hidden variables are a log-weight field over the world state, not the world state.**
+Divergence (interpretive), not an operation. Bogacz's state nodes each estimate a world quantity;
+ours each carry the log-weight of one grid point of ζ (A21). Every operation stays an instance under
+D6. What follows is that a statement about s has to be read off the field, which is D9's origin;
+locality survives inside the network, and whether it binds the read-out is open
+(`thesis_outline/sections_3-6.md` 5.5). Decided by: agent's record of a choice never entered, pending
+user confirmation (A21).
 
 **D11. The error-unit rate at σ ≠ 1.** Divergence of rate only, not exercised. `infer` integrates
 τ_ε ε̇ = r/σ − ε, where his Eq. (54) is ε̇ = r − Σε: the fixed points agree and the relaxation

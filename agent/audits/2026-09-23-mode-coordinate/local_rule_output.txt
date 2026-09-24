@@ -1,0 +1,2 @@
+Part D rows over Z x K x n: 144 configurations; phi_S* unimodal in 144, ell_0 unimodal in 144; local rule agrees with argmax: position 144, shift 144
+plane: 121 cells; phi_S* unimodal in 121, ell_0 unimodal in 121; local rule agrees with argmax: position 121, shift 121

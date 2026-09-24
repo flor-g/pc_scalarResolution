@@ -483,8 +483,11 @@ to them rather than floating free.*
   delta reduces the belief to the point the dynamics settle to. Bogacz's ground for the second is
   representational: it is reasonable to assume that the brain represents at a given moment only the
   most likely values of features (his §2.2, with binocular rivalry as the example). One sentence
-  here, with the forward pointer, because **§3.6's position on the two read-outs rests on that
-  ground**. The argument from it belongs to §3.6, and nothing measured enters the background (BG7).
+  here, with the forward pointer, because **§3.6's position on the two read-outs rests on Bogacz's
+  §2.2** — on its normalization argument (§2.4 below), not on the most-likely-values ground, since
+  §3 lifts the hidden state to a field over the scale and so does carry many values
+  (`agent/decisions.md` A21). The argument belongs to §3.6, and nothing measured enters the
+  background (BG7).
 ## 2.3 Variational free energy: the objective actually minimized (about 190 words)
  
 *Commitment 1 in detail. Shortened from the previous draft's 300 words, since §2.2 now introduces
