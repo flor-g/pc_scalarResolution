@@ -211,7 +211,7 @@ Later in the session, after the agent had twice misread the scope:
   placement and length are approved." Written as `sections_3-6.md` §5.4, *Cost in the dynamics*
   (about 250 words), after §5.3, the old §§5.4–5.6 renumbered §§5.5–5.7 (`revisions.md` §18);
   decision A22; nine reference-list entries, each now verified against its source, Hofstadter 1979
-  and Rosen 1985 included. Shenhav et al. (2013) and Niv et al. (2007) are not cited. Earlier
+  and Rosen 1985 included. Shenhav et al. (2013) and Niv et al. (2007) are not cited. `a202a6c` Earlier
   candidates for placement, kept for the record
   (candidates: an `agent/decisions.md` entry; §5.3, which interprets the cost;
   §5.5; Appendix G).
