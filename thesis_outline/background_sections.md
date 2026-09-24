@@ -13,7 +13,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
 ## Scale and argumentative shape
  
 - **Target length: approximately 4,160 words.** Raised from 4,090 on 2026-09-23 (§2.4, +70 for
-  Bogacz on the read-out and the basal-ganglia note; `agent/review_2026-09-23_proof_scope.md` R8).
+  Bogacz on the read-out and the basal-ganglia note; `agent/review_2026-09-23_proof_scope.md` PS8).
   Raised from 4,050 on 2026-09-23 (§2.2, for what
   commitment 3 is a commitment *about*; PP7 of `revisions.md` §11). Raised from 3,670 on 2026-09-22 under BG7: the
   budget follows what the sections have to carry, and is not trimmed to preserve a number (the

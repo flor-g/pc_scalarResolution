@@ -181,12 +181,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: none.
 - Bogacz status: not applicable.
 - Depends on it: Part A's parity argument, Appendix C, the need for Appendix E's relay.
-- Findings added later: **2026-09-23 (agent, raised with the user; `agent/review_2026-09-23_proof_scope.md` F3).** The theoretical
+- Findings added later: **2026-09-23 (agent, raised with the user; `agent/review_2026-09-23_proof_scope.md` PSF3).** The theoretical
   reason overstates. One mixed-parity column, (b₁ + b₂)/√2, separates *no*, *some* and *all*
   (+2.3697, −2.3697, −10.5266 at Λ = 8), and Text cell 5 already chooses m = 2 for tilt and width
   as independent coordinates. The parity argument makes m ≥ 2 necessary only within a basis of
-  definite parity. Outline §3.5's "neither is chosen" is the site (R6, Q3).
-  **Approved by the user 2026-09-23 (Q3).** m = 2 is a design choice with a stated rationale:
+  definite parity. Outline §3.5's "neither is chosen" is the site (PS6, PSQ3).
+  **Approved by the user 2026-09-23 (PSQ3).** m = 2 is a design choice with a stated rationale:
   tilt and width as independent coordinates, and the least m that retains every direction of the
   entries' span. The parity result is necessity within bases of definite parity only. Applied to
   outline §§3.5, 5.1, 5.5, Appendix C (opening and §5) and Text cell 5 Part B's sufficiency line.
@@ -255,7 +255,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   F non-monotone (§8.2 check failed, min step −18.3).
 - Implementational reason: `fast_time_constant()`, dt = τ_ε/2 (I4).
 - Bogacz status: instance under restriction, see D4; §8.3's attribution overstates, see CF2.
-- Findings added later: **2026-09-23 (user approved the restructure, `agent/review_2026-09-23_proof_scope.md` R7).** The commitment is
+- Findings added later: **2026-09-23 (user approved the restructure, `agent/review_2026-09-23_proof_scope.md` PS7).** The commitment is
   a precondition of the monotone rise of F, not a sufficient condition: monotonicity also uses
   `infer`'s silent start of the error units, and is measured (Part A), not proved. Convergence of
   the coupled network needs no separation at all, the characteristic equation's coefficients being
@@ -274,9 +274,9 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Findings added later: under A11 the relay needs only τ_r ≤ τ_ε, for monotone F (F26, 2026-09-11).
   2026-09-13: at τ_r = τ_ε F is monotone under *some* only; under *no* and *all* three steps fall
   (Code Cell E4). Eq. (E6) keeps ≤ for stability, with the exception stated (O6).
-  2026-09-23 (`agent/review_2026-09-23_proof_scope.md` F5, R4): Eq. (E5) holds φ_S fixed and so is a subsystem spectrum; E.1 and E.3
+  2026-09-23 (`agent/review_2026-09-23_proof_scope.md` PSF5, PS4): Eq. (E5) holds φ_S fixed and so is a subsystem spectrum; E.1 and E.3
   now say so. The full linear network with the relay is stable at the four θ_u of E.1 for
-  τ_r/τ_ε ∈ {1, 2, 10} (agent's check, printed by no cell; R10 would print it).
+  τ_r/τ_ε ∈ {1, 2, 10} (agent's check, printed by no cell; PS10 would print it).
 
 ### A13. The read-out is a softmax outside the dynamics
 - Status: Settled; its standing as the reported belief is reframed by A16 (2026-09-13)
@@ -361,12 +361,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     `thesis_outline/background_sections.md` 2.2 (what commitment 3 is a commitment about). **The
     notebooks are untouched: B10 keeps positions out of them.**
   - **2026-09-23, an external review finds reason 3 false of this implementation (agent, raised
-    with the user; `agent/review_2026-09-23_proof_scope.md` F1, F2, Q1, Q2).** The delta is over x = (φ_S, φ_u), K + m = 103 numbers
+    with the user; `agent/review_2026-09-23_proof_scope.md` PSF1, PSF2, PSQ1, PSQ2).** The delta is over x = (φ_S, φ_u), K + m = 103 numbers
     at the defaults, so it carries the whole field q normalizes; it does not reduce a distribution to
     a mode and a variance. And the delta is not a consequence of Gaussianity: Bogacz adopts it "for
     simplicity" (tutorial line 297), and a Laplace approximation keeps a covariance. Reasons 1 and 2
     are untouched. Not edited, since the ruling is the user's.
-  - **2026-09-23, the user's ruling on the review (Q1, Q2).** Reason 3 as recorded above ("a mode
+  - **2026-09-23, the user's ruling on the review (PSQ1, PSQ2).** Reason 3 as recorded above ("a mode
     and a variance", "two numbers") was the agent's misreading of what the user meant, and is
     **superseded**. The user's reason is Bogacz's own, cited in place: it is reasonable to assume the
     brain represents at a given moment only the most likely values of features (tutorial §2.2), and
@@ -563,7 +563,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   soft mask as a nonlinear log-likelihood, which Bogacz's framework admits (his first example has a
   nonlinear g). Its update is local and its settled activity is the most likely ζ, the ζ mode of
   B8/B13, with no read-out step. It loses concavity (under *no* and *all* the log-posterior in ζ has
-  two to four local maxima, `agent/review_2026-09-23_proof_scope.md` F16), the closed forms, every mass statistic, and the width channel.
+  two to four local maxima, `agent/review_2026-09-23_proof_scope.md` PSF16), the closed forms, every mass statistic, and the width channel.
 - What it costs, stated so that no sentence claims otherwise: the construction **represents a
   distribution over s, value by value** (K numbers, unnormalized). Bogacz's first reason against
   computing the posterior (§2.2: infinitely many values rather than a few summary statistics) is
@@ -770,20 +770,20 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
       and it is the n guard of `sections_3-6.md` 4.2 made concrete.
   - **2026-09-23: how the paper reads these two criteria is B11**, not this entry. B8 stays a
     definition.
-  - **2026-09-23, the mode is coordinate-dependent (agent, raised with the user; `agent/review_2026-09-23_proof_scope.md` F6, Q5).**
+  - **2026-09-23, the mode is coordinate-dependent (agent, raised with the user; `agent/review_2026-09-23_proof_scope.md` PSF6, PSQ5).**
     "The grid node where the field is largest" is the mode of q in ζ. On the delta-like row under
     *some* it maps to s = 0.94685, outside the cell of *all*; the mode of the same distribution as a
     density over s, which carries the Jacobian 1/s(1−s), is at s = 0.95257, inside it. The mode
     position criterion on that row is met in ζ and not in s. No cell prints the second number.
     Selecting the argmax is also an operation beyond the delta, and its locality is not argued.
-    **Extended the same day** (`agent/audits/2026-09-23-mode-coordinate/output.txt`; record F9-F12):
+    **Extended the same day** (`agent/audits/2026-09-23-mode-coordinate/output.txt`; record PSF9-PSF12):
     read over s, the plane gives mode shift 121, mode position 39, both 39 (against 67, 59, 13 in ζ),
     and 5 of Part D's 9 rows change; in s the evaluation's priors have their modes at the excluded
     endpoints, so the s baselines sit on the grid's edge node. The user holds the question open.
 
 ### B13. The mode criteria are read over ζ, and the notebook says why
 - Status: Settled
-- Decided by: user (2026-09-23), on the evidence of `agent/review_2026-09-23_proof_scope.md` F9-F14
+- Decided by: user (2026-09-23), on the evidence of `agent/review_2026-09-23_proof_scope.md` PSF9-PSF14
 - Decision: the mode of B7/B8 stays the grid node where φ_S\* is largest, i.e. the mode of q over ζ,
   and Text cell 4 carries a paragraph, "Why the mode is read over ζ and not over s", giving the reason.
 - Theoretical reason: φ_S\* is a log-density against the quadrature measure of Eq. (2), uniform in
@@ -2183,7 +2183,7 @@ prose would change. Text cell 3 (inventory, commitment 7, Eq. 20, §8.3) defines
 is what §8.3's characteristic equation needs, and every quoted λ_max(H) is that one. The two
 differ: 3.0000 against 2.0647 at θ_u = 1, and 810.6907 against 809.8088 at θ\* (V2). Eqs. (21)–(22)
 are unaffected, since the quadratic form is the same in either coordinates.
-**Resolved 2026-09-23** (user approved the §8 restructure, `agent/review_2026-09-23_proof_scope.md` R7): Text cell 3 §8 now states
+**Resolved 2026-09-23** (user approved the §8 restructure, `agent/review_2026-09-23_proof_scope.md` PS7): Text cell 3 §8 now states
 the metric G = diag(W, I_m) and defines H in it, and commitment 7 and §8.3 cite that H.
 
 **E2. The first line of Eq. (19) is not ∂F/∂φ_S.** Class (e); the code is right and the prose would

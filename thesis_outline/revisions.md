@@ -1621,6 +1621,44 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 14. PS1–PS11: the proof-scope review, as it bears on the outlines (2026-09-23)
+
+An external review of the proofs and read-outs, applied under the user's rulings. The working
+record is `agent/review_2026-09-23_proof_scope.md`; its IDs carry the prefix PS so that they do not
+collide with this file's R and Q. This section is the outline-side view: what landed where, and
+what a writer must not do before the open items close.
+
+**Applied to the outlines.**
+
+| Task | Site | What changed |
+|---|---|---|
+| PS2 | background §2.6; §3.4 | The learning rate is the ratio τ_φ/τ_θ, not absent |
+| PS5 | background §§2.2–2.3; §3.6 | The delta is Bogacz's further approximation over the fields, not a consequence of Gaussianity; three objects kept apart (posterior over fields, delta over fields, q over ζ); the sign bridge; reason 3 cites Bogacz §2.2 in place, and "two numbers" is gone (A16) |
+| PS6 | §3.5 (retitled "Two choices the scale motivates"); §5.1; §5.5 | m = 2 is a design choice for tilt and width; necessity only within definite-parity bases; the affine alternatives level keeps the proof only if every new direction is anchored (A7) |
+| PS7 | §3.4; background §§2.1, 2.6 | Four convergence results kept apart; monotone F needs the silent start and is measured (A11) |
+| PS8 | §3.6; §5.5; background §2.4 | The mode is read over ζ (B13); reason 3 rests on q's normalization, since the model does represent a distribution over s (A21); background states Bogacz's lack of a read-out stage and the basal-ganglia note; §5.5 poses the read-out's locality as open |
+| PS9 | background §§1.5, 2.6 | Joint inference given the clamped lexical input, not the absence of a semantic stage; §1.5's drafted closing line narrowed to match |
+| — | background §2.4 | Locality no longer said to derive the utility basis's dimension; it is what m > 1 strains |
+
+Budgets: `sections_3-6.md` Total **5,820** (§3.4 320, §3.5 180, §3.6 220, §5.5 465);
+background target **4,160** (§2.4 400). Both tables re-summed.
+
+**Open, and binding on a writer.**
+
+1. **PS11 (TODO, not applied by the user's instruction).** §5.5's read-out bullet rests on counts
+   printed only by an audit script: unimodality under *some* in 265 configurations, and the
+   Beta(1, 64) / Beta(1, 256) exceptions at Λ = 8. Under C6 the paper quotes none of them until a
+   cell prints them.
+2. **A21's reasons await the user's confirmation.** §3.6's reason 3 and §5.5's read-out bullet rest
+   on them.
+3. **§5.5's read-out question is posed, not answered.** Do not draft a position on whether the
+   read-out is bound by locality; the user's stipulation is offered as a candidate with its costs.
+4. **"Spanning" (PS3)** stays Appendix C's word for injectivity on the entries' span, by the
+   agent's decision pending the user's confirmation; §3.5 calls the property "retaining".
+5. **PS10** (optional) touches no outline sentence unless E.1 is to quote the full relay spectrum.
+
+---
+
 ## 13. Z1–Z6: the half-width, printed (2026-09-23)
 
 **The user reopened E17's second ruling.** That ruling was that the Z end of §4.2's guard takes no
@@ -1738,7 +1776,7 @@ variance, against one carried value by value.
 was the agent's, and it misread the user: the delta is over the whole settled vector, so it
 compresses nothing to two numbers. The user's reason is Bogacz's §2.2 ground, cited in place, with
 the Gaussian machinery comparable in motivation rather than the source of the delta
-(`agent/decisions.md` A16, `agent/review_2026-09-23_proof_scope.md` Q1-Q2).
+(`agent/decisions.md` A16, `agent/review_2026-09-23_proof_scope.md` PSQ1-PSQ2).
 
 **Position 2, in the user's terms.** Under guarding premises on *n*: consistent shift is conjectured
 to be a consequence of the alternatives level this implementation lacks; shift cannot stand as the
