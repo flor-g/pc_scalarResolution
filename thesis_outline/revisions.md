@@ -1734,6 +1734,12 @@ full-fledged distribution over possible states** — which is also the foundatio
 Gaussian machinery the construction commits to: a distribution carried as two numbers, a mode and a
 variance, against one carried value by value.
 
+*2026-09-23, superseded in part.* The gloss after the dash ("two numbers, a mode and a variance")
+was the agent's, and it misread the user: the delta is over the whole settled vector, so it
+compresses nothing to two numbers. The user's reason is Bogacz's §2.2 ground, cited in place, with
+the Gaussian machinery comparable in motivation rather than the source of the delta
+(`agent/decisions.md` A16, `agent/review_2026-09-23_proof_scope.md` Q1-Q2).
+
 **Position 2, in the user's terms.** Under guarding premises on *n*: consistent shift is conjectured
 to be a consequence of the alternatives level this implementation lacks; shift cannot stand as the
 criterion of scalar strengthening independent of position; and position is mostly a consequence of

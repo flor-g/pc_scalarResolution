@@ -158,12 +158,12 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
-| **3. The proposed architecture** | 800 | **1,260** | |
+| **3. The proposed architecture** | 800 | **1,330** | |
 | 3.1 What the model must do | 90 | 90 | Four design requirements |
 | 3.2 A continuous world state and a soft lexicon | 160 | **295** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
 | 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
-| 3.4 State units, error units, and what is local | 210 | **290** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied) |
-| 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
+| 3.4 State units, error units, and what is local | 210 | **320** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied; **+30 on 2026-09-23 for the four convergence results kept apart**, `agent/review_2026-09-23_proof_scope.md` R7) |
+| 3.5 Two choices the scale motivates | 140 | **180** | $m=2$ from threshold parity; the amplification axis; **+40 on 2026-09-23 for the three properties of $B$ kept apart, and necessity scoped to definite parity** (`agent/review_2026-09-23_proof_scope.md` R6) |
 | 3.6 Two read-outs (new) | — | **190** | `revisions.md` §5, item 1; **+90 on 2026-09-23 for the position that the delta read-out is the one the construction motivates, and the four things it does not license** (§11 of `revisions.md`, PP1) |
 | **4. Evaluation** | 745 | **1,890** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
@@ -180,7 +180,7 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 5.5 Limits (was 5.3) | 65 | **345** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **5,600** | |
+| **Total** | **2,400** | **5,670** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -192,7 +192,7 @@ figure against text still written to the old one. **Every section heading's figu
 against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
 agree, and the check is worth repeating whenever a budget moves.
 
-# 3. The proposed architecture (about 1,260 words)
+# 3. The proposed architecture (about 1,330 words)
  
 ## 3.1 What the model must do (about 90 words)
  
@@ -320,7 +320,7 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   the model is constant-invariant. Code Cell D prints both facts (Appendix D Sec. 5). About 45 words
   in the paper; the normalizer sentence is the agent's addition to R19 and the first to cut if the
   bullet overruns.
-## 3.4 State units, error units, and what is local (about 290 words)
+## 3.4 State units, error units, and what is local (about 320 words)
  
 - Error units relax toward their residuals and state units ascend $\mathcal F$ (Eqs. 18–19), both
   instances of Bogacz's Eqs. (53)–(54). The slow parameter follows his own gradient under
@@ -328,8 +328,14 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   **a commitment and not merely an ordering** (Text cell 3, commitment 7; A11). The bound is
   critical damping of the stiffest mode; it is **ours rather than Bogacz's**, which is what makes it
   something to answer for in §5.3; and since $\lambda_{\max}(H)$ grows as $\theta_u^2$ it tightens
-  as $\theta_u^{-2}$. What it secures is the **monotone** rise of $\mathcal F$, not convergence —
-  the next bullet gets convergence from concavity instead, and the two should not be run together.
+  as $\theta_u^{-2}$. It is a precondition of the **monotone** rise of $\mathcal F$, not of convergence, and the
+  monotone rise needs one thing more, the silent start of the error units the implementation uses:
+  an overdamped system started with its errors away from their residuals can leave the maximum
+  before it returns. Text cell 3 §8.2 keeps four results apart, and so should the paper: a unique
+  optimum (concavity, next bullet); ascent in the quadrature metric when the errors sit at their
+  residuals; convergence of the coupled network at every separation, from a characteristic
+  equation whose coefficients are all positive; and monotone $\mathcal F$ under the implemented
+  start, which is measured rather than proved.
   The learning rate is the ratio $\tau_\varphi/\tau_\theta$: the constant of proportionality is a
   time constant of the kind the error and state units already carry, so no step size is set apart
   from the ordering of timescales, though the ratio does a learning rate's work.
@@ -376,19 +382,26 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   State the exception rather than smoothing it: at equality $\mathcal F$ is monotone under *some*
   only (O6). **The empirical content sits in commitment 7's separation, not in the relay's speed**
   — background §2.7 closes on the same correction.
-## 3.5 Two choices the scale forces (about 140 words)
+## 3.5 Two choices the scale motivates (about 180 words)
  
-Neither of the following is chosen. Both are consequences of the lexicon's threshold structure.
+The first is a design choice with a stated rationale; the second is what that choice gives the
+model to work with. Three properties of $B$ answer to different requirements and are kept apart:
+**separating** the inventory (its entries project to distinct points), **retaining** every
+direction of the entries' span modulo the constant (App. C's "spanning"), and representing **tilt
+and width as independent coordinates**.
  
-- **$m=2$, because the scale has two ends.** With $t$ distinct cut points the scale divides into
-  $t+1$ intervals, so the entries span at most $t$ dimensions modulo the constant (Eq. C2). Here
-  $t=2$, one threshold per endpoint, and $m=2$ is exactly right rather than merely sufficient: the
-  only direction it misses is the constant, which the read-out misses too. The parity form:
-  $\chi_{\textit{all}}-\chi_{\textit{some}}$ is even and $\chi_{\textit{no}}-\chi_{\textit{all}}$ is
-  odd, so any single basis function of definite parity annihilates one of them, and $m\ge2$ is
-  forced exactly when an inventory contains two pairs whose differences have opposite parity —
-  **which, with symmetric thresholds, requires three utterances at one level**. §5.1 turns that
-  clause into a design.
+- **$m=2$, so that tilt and width are coordinates of their own.** With $t$ distinct cut points the
+  scale divides into $t+1$ intervals, so the entries span at most $t$ dimensions modulo the
+  constant (Eq. C2). Here $t=2$, one threshold per endpoint, and $m=2$ is the least that retains
+  every direction: it misses only the constant, which the read-out misses too. Separation alone
+  asks for less — a single column of no definite parity separates all three entries (Text cell 5
+  Part A) — but it folds tilt and width into one coordinate, and that is the rationale for $m=2$.
+  The parity result gives necessity under a restriction: $\chi_{\textit{all}}-\chi_{\textit{some}}$
+  is even and $\chi_{\textit{no}}-\chi_{\textit{all}}$ is odd, so a single column **of definite
+  parity** annihilates one of them, and within such bases $m\ge2$ is forced exactly when an
+  inventory contains two pairs whose differences have opposite parity — **which, with symmetric
+  thresholds, requires three utterances at one level**. §5.1 turns that clause into a design.
+  Neither result makes $m=2$ the only architecture that separates the inventory.
 - **The two directions do different work.** The odd column is a monotone ramp that slides
   log-density from one end of the scale to the other — **tilt**. The even column raises both tails
   and lowers the centre — **width**, and therefore the axis along which mass moves between the
@@ -401,9 +414,10 @@ The settled state is a pair of fields. Turning it into a statement about belief 
 and the model admits two. Which one is in force decides what a result means, so the choice is stated
 here rather than assumed.
 
-- **The delta at the settled state** (Bogacz §3; `agent/decisions.md` A16). *Assumes* the posterior is a
-  point mass at $(\varphi_S^\ast,\varphi_u^\ast)$ — the Laplace commitment the construction
-  inherits, background §2.2 commitment 3. *Supplies* the settled vector itself, with **no
+- **The delta at the settled state** (Bogacz §3; `agent/decisions.md` A16). *Assumes* the approximate
+  posterior over field configurations is a point mass at $x^\ast=(\varphi_S^\ast,\varphi_u^\ast)$
+  — Bogacz's delta (his §3, Eq. 34), which background §2.2 sets beside commitment 3 as a further
+  approximation and not as a consequence of it. *Supplies* the settled vector itself, with **no
   normalization**, so the read-out is local. *Does not supply* masses or expectations: neither
   condition of §4.2's criterion has a direct analogue under it, and the nearest is the Voronoi cell
   that the peak of $\varphi_S^\ast$ falls in (App. A).
@@ -428,14 +442,16 @@ here rather than assumed.
   2. *The practical reasons are already on the page.* Halving does not move a peak, so the delta
      does not see the tempering at all and carries none of the tempering/utility confound that
      $\Delta$ has under $q$. What it registers is the utility level's own doing.
-  3. **The representational reason, which is the one to lead with.** Background §2.2's commitment 3
-     is not a convenience of the algebra. It is the claim that a system of this kind does not carry
-     a posterior as a distribution over states but as a **small number of parameters, a mode and a
-     variance**, and on a dense scale the two are nowhere near each other in cost: a value at every
-     node against two numbers. A read-out that needs the whole field normalized across every node
-     therefore asks the system for exactly the object the commitment says it cannot afford. That is
-     why $q$ is a convention of the literature compared with rather than a statement the model makes
-     about itself, and it is the reason to give first.
+  3. **The representational reason, which is the one to lead with.** Bogacz grounds the delta in a
+     claim about representation: it is reasonable to assume that the brain represents at a given
+     moment only the most likely values of features, and not the whole posterior (Bogacz, 2017,
+     §2.2, with binocular rivalry as his example). The same economy motivates the Gaussian
+     machinery of background §2.2's commitment 3, which is why the two sit together there. Under
+     the delta, what the network represents is the settled vector $x^\ast$. $q$ asks for more than
+     that vector: an exponential at every node and a sum across every node, which together form a
+     normalized density over $\zeta$ that, on Bogacz's ground, is not represented. That is why $q$
+     is a convention of the literature compared with rather than a statement the model makes about
+     itself, and it is the reason to give first.
 - **Four things the position does not license.** State them in the same place, or the position
   reads as licensing all four.
   1. **The criterion stays on $q$** (§4.2). Strengthening is stated as a mass in the accounts this
@@ -944,8 +960,8 @@ remaining obligations answerable rather than open.
   log-odds coordinate and the first step of a balanced search. Present ⟨*some*, *most*, *all*⟩ as
   the prediction rather than the three-word scale as the demonstration.
 - **The dimension and locality payoff, which is an argument and not a measurement.** Appendix C
-  Eq. (C2) fixes the dimension by the threshold count, and Appendix C §5 shows $m\ge2$ is forced
-  exactly when one inventory carries two pairs of opposite parity — which with symmetric thresholds
+  Eq. (C2) fixes the dimension by the threshold count, and Appendix C §5 shows that, within bases of
+  definite parity, $m\ge2$ is forced exactly when one inventory carries two pairs of opposite parity — which with symmetric thresholds
   takes three utterances at one level. A cascade puts one cut per level, so **each level is a
   complementary pair and $m=1$ suffices at each**. Eq. (C1) already proves that a complementary pair
   costs no dimension, its $\kappa_{y'}=-\kappa_y$ resting on $\langle\mathbf 1,b_j\rangle=0$.
@@ -963,9 +979,13 @@ remaining obligations answerable rather than open.
   its log-odds, which is the coordinate the model already lives in (Eq. 1), and normalization is not
   an operation at all — it is absorbed into the representation, and complement becomes an
   order-reversing affine involution, $x\mapsto c-x$, the form $g_L$ already has (Eq. 9). Affine
-  preserves §8.6's first condition, so the global convergence proof extends by Eq. (22)'s own
-  argument. **This is the good branch of the trade**: an affine alternatives level keeps the proof,
-  and binarity is what lets it perform the comparison anyway.
+  preserves §8.6's first condition, and with it concavity, by Eq. (22)'s own argument. Strictness,
+  and with it the unique maximum Text cell 3 §8's results start from, needs one thing more: every
+  direction the new level introduces must be anchored by a finite-variance term of its own, as
+  §8.6's third condition requires of $\sigma_u$; a direction left unanchored is a flat direction.
+  **This is the good branch of the trade**: an affine alternatives level whose directions are all
+  anchored keeps the proof, and binarity is what lets it perform the comparison anyway. Whether
+  the proposed level meets the proviso is for its specification to show; nothing here shows it.
 - **And the criterion's second condition is binary already (§3.6, R4).** This is where the previous
   bullet stops being about the generative map and starts being about what §4 actually reports.
   §3.6's cost of $q$ is its normalizer, which sums across every node. But
@@ -1291,7 +1311,8 @@ what it costs and what is still owed.
 - The relay secures locality at the cost of a fourth timescale, $\tau_r\le\tau_\varepsilon$
   (Eq. E6), which **inherits** $\theta_u^{-2}$ from the error units rather than imposing its own
   (F26); at equality $\mathcal F$ is monotone under *some* only (O6).
-- $m=2$ is necessary at a flat inventory; **sufficiency is open**.
+- $m=2$ is necessary at a flat inventory only within bases of definite parity, and chosen, beyond
+  separation, for tilt and width as independent coordinates; **sufficiency is open**.
 - Multidimensional semantics with sharp lexical boundaries is a declared non-compatibility.
 - Not learned: $\Lambda$, $\theta_L$, $B$, $\mu_u$, the inventory.
 - **Two stipulations of this phase, labelled as such and not built otherwise.** Results are

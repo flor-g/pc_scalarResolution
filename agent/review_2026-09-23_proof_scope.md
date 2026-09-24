@@ -82,18 +82,23 @@ Every point was checked against the files and, where numerical, recomputed with 
 - [x] **R4** (2026-09-23): Appendix E. E.1 states Eq. (E5) is a subsystem and what it omits; the
   "What is unchanged" rows for Eq. (13) and Eqs. (21)-(22) say "at r = Bφ_u"; E.2's "F does not see
   it" restricted to the equilibrated relay; E.3's §8.4 row says the extra variable is not covered.
-- [ ] **R5**, waits on the user (Q1-Q2): background §§2.2-2.3 and outline §3.6 carry the three
-  objects, the sign bridge, and whatever replaces or restricts A16's third reason.
-- [ ] **R6**, waits on the user (Q3): outline §3.5, §5.1 and A7 recast m = 2 as a design rationale
+- [x] **R5** (2026-09-23, Q1-Q2 answered): background §2.2's table row and read-out bullet, §2.3's
+  three objects, Bogacz's v in the decompositions and the sign bridge; outline §3.6's delta bullet
+  and reason 3 now cite Bogacz §2.2's ground in place; A16 finding; revisions.md note.
+- [x] **R6** (2026-09-23, Q3 approved; §3.5 retitled "Two choices the scale motivates", 140 → 180
+  words, §3 and Total re-summed; Appendix C opening and §5; Text cell 5; §5.5's limit line): outline §3.5, §5.1 and A7 recast m = 2 as a design rationale
   (tilt and width as independent coordinates), with necessity only within a definite-parity basis;
   §5.1's affine-level convergence made conditional on every new direction being anchored.
-- [ ] **R7**, waits on the user (Q4): Text cell 3 §§8.2-8.3 split into four results (unique optimum;
+- [x] **R7** (2026-09-23, Q4 approved; monotonicity kept in §8.2 as (iii) so Part A's printed
+  label "Sec. 8.2 F non-decreasing" stays true and no code changes; outline §3.4 290 → 320 words;
+  background §§2.1, 2.6 name the silent start; E1, E2 resolved; A11 finding): Text cell 3 §§8.2-8.3 split into four results (unique optimum;
   ascent with instantaneous errors, in the W metric; coupled stability from the characteristic
   equation; monotonicity from the silent start), which also closes E1/E2; outline §3.4 follows.
 - [ ] **R8**, waits on the user (Q5): the mode criteria named as statistics of φ_S\* in ζ, the
   argmax named as a further operation, §3.6's "the mode is shared" given its coordinate; whether a
   cell prints the s-density mode.
-- [ ] **R9**, waits on the user (Q6): background §2.6's staging claim restated as joint inference of
+- [x] **R9** (2026-09-23, Q6 approved; also narrows the drafted §1.5's closing line, "in which it
+  does not hold" → "in which the interpretation is not staged that way", flagged to the user): background §2.6's staging claim restated as joint inference of
   the downstream fields given the clamped lexical input.
 - [ ] **R10**, optional, waits on the user: a full-network spectrum with the relay in Code Cell E4
   (code change; re-execution of appendix_E), so E.1 can quote F5.
@@ -107,4 +112,6 @@ Every point was checked against the files and, where numerical, recomputed with 
 - **Q3** (A7): may §3.5 stop saying m = 2 is forced?
 - **Q4** (E1/E2, open since 2026-09-13): may Text cell 3 §8 be restructured and D6's metric stated?
 - **Q5** (B7/B8): how to treat the coordinate dependence of the delta-like row's mode position.
+  **User, 2026-09-23: "we need to think more about this one. As pointed out, the choice carries
+  theoretical content and needs to be justified explicitly."** R8 stays open.
 - **Q6**: may background §2.6's no-semantic-stage claim be narrowed?

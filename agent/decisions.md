@@ -186,6 +186,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   (+2.3697, −2.3697, −10.5266 at Λ = 8), and Text cell 5 already chooses m = 2 for tilt and width
   as independent coordinates. The parity argument makes m ≥ 2 necessary only within a basis of
   definite parity. Outline §3.5's "neither is chosen" is the site (R6, Q3).
+  **Approved by the user 2026-09-23 (Q3).** m = 2 is a design choice with a stated rationale:
+  tilt and width as independent coordinates, and the least m that retains every direction of the
+  entries' span. The parity result is necessity within bases of definite parity only. Applied to
+  outline §§3.5, 5.1, 5.5, Appendix C (opening and §5) and Text cell 5 Part B's sufficiency line.
 
 ### A8. g_y = θ_L A W φ_L; θ_L is a gain and a threshold
 - Status: Settled
@@ -251,6 +255,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   F non-monotone (§8.2 check failed, min step −18.3).
 - Implementational reason: `fast_time_constant()`, dt = τ_ε/2 (I4).
 - Bogacz status: instance under restriction, see D4; §8.3's attribution overstates, see CF2.
+- Findings added later: **2026-09-23 (user approved the restructure, `agent/review_2026-09-23_proof_scope.md` R7).** The commitment is
+  a precondition of the monotone rise of F, not a sufficient condition: monotonicity also uses
+  `infer`'s silent start of the error units, and is measured (Part A), not proved. Convergence of
+  the coupled network needs no separation at all, the characteristic equation's coefficients being
+  positive. Text cell 3 §8.2 now states (i) ascent with instantaneous errors, (ii) coupled
+  convergence, (iii) monotone F under the implemented start, beside §8.1's unique optimum.
 
 ### A12. main keeps the non-local form of Eq. (20); Appendix E is a bonus
 - Status: Settled
@@ -356,6 +366,15 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     a mode and a variance. And the delta is not a consequence of Gaussianity: Bogacz adopts it "for
     simplicity" (tutorial line 297), and a Laplace approximation keeps a covariance. Reasons 1 and 2
     are untouched. Not edited, since the ruling is the user's.
+  - **2026-09-23, the user's ruling on the review (Q1, Q2).** Reason 3 as recorded above ("a mode
+    and a variance", "two numbers") was the agent's misreading of what the user meant, and is
+    **superseded**. The user's reason is Bogacz's own, cited in place: it is reasonable to assume the
+    brain represents at a given moment only the most likely values of features (tutorial §2.2), and
+    the delta of his §3, Eq. (34), formalizes that. The delta is a commitment of its own, set beside
+    the Gaussian machinery and not derived from it; the user's intended link between the two is that
+    they are comparable in motivation, each a reduction in what inference must carry. Applied to
+    `thesis_outline/background_sections.md` 2.2-2.3 (the three objects, the sign bridge) and
+    `thesis_outline/sections_3-6.md` 3.6 (the delta bullet and reason 3).
 
 ### A19. Halting by tolerance: a proposed direction, not a commitment
 - Status: **DEMOTED 2026-09-22 by the user, from a commitment to a direction.** Settled as of
@@ -2093,12 +2112,17 @@ prose would change. Text cell 3 (inventory, commitment 7, Eq. 20, §8.3) defines
 is what §8.3's characteristic equation needs, and every quoted λ_max(H) is that one. The two
 differ: 3.0000 against 2.0647 at θ_u = 1, and 810.6907 against 809.8088 at θ\* (V2). Eqs. (21)–(22)
 are unaffected, since the quadratic form is the same in either coordinates.
+**Resolved 2026-09-23** (user approved the §8 restructure, `agent/review_2026-09-23_proof_scope.md` R7): Text cell 3 §8 now states
+the metric G = diag(W, I_m) and defines H in it, and commitment 7 and §8.3 cite that H.
 
 **E2. The first line of Eq. (19) is not ∂F/∂φ_S.** Class (e); the code is right and the prose would
 change. Differentiating Eq. (13) gives ∂F/∂φ_S = −W(ε_S + ε_L). Eq. (19) writes −ε_S − ε_L, which
 is W⁻¹∂F/∂φ_S (V1: a gap of up to 12.2 against the plain partial, 2.2e-16 against the metric one).
 Part A's gradient check divides by w_k, so it tests the metric gradient. §8.2's argument that F
 rises still holds, in that metric. Stating D6 repairs both E1 and E2.
+**Resolved 2026-09-23** with E1: Eq. (19) now writes ∇_{φ_S}F in the metric of §8, and the sentence
+under it says the right-hand sides equal that gradient only when the error units sit at their
+residuals.
 
 **E3. The gradient at θ_u = 0 is misstated in three places.** Class (e). Its value is
 ⟨μ_u, Σ_y c_y⟩/(S·|Y|) = −6.8187, which the learning probe prints (V4).

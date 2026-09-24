@@ -323,7 +323,8 @@ of the two empirical anchors §5.1 uses.*
 > dispute is the **form the dispute shares**: to assign a pattern to one of two levels is to
 > presuppose that the levels are stages — a semantic value computed, then a pragmatic one computed
 > on it. Every criterion above inherits that presupposition rather than arguing for it. Part II
-> supplies an architecture in which it does not hold, and §5.1 returns to what follows.
+> supplies an architecture in which the interpretation is not staged that way, and §5.1 returns to
+> what follows.
  
 - **Drafting notes.** "Has been argued to be truth-conditionally active" rather than "is", because
   §1.4's evidence is contested and Entry 2a forbids borrowing the stronger reading. The closing
@@ -434,8 +435,8 @@ project's "scalar vagueness resolution" keyword.*
   its own list, and **not** one of §2.2's three canonical ones; say which list once, here, because
   the two are otherwise a numbering trap. The error units are held to
   \(\tau_\varepsilon\le\tau_\varphi/(4\lambda_{\max}(H))\), a separation that tightens as
-  \(\theta_u^2\), and what it secures is the *monotone* rise of \(\mathcal F\) rather than
-  convergence. It is **measured**, not assumed, and §5.3 prices it as a liability of the
+  \(\theta_u^2\), and what it secures, with the error units' silent start, is the *monotone* rise of
+  \(\mathcal F\) rather than convergence. It is **measured**, not assumed, and §5.3 prices it as a liability of the
   plausibility claim rather than as a detail of the schedule. One sentence and a forward pointer:
   the background defines neither \(H\) nor \(\theta_u\), and §2.6 is where the ordering it
   sharpens is stated.
@@ -457,7 +458,7 @@ to them rather than floating free.*
 |---|---|---|---|
 | **1. A unified objective** | One functional — variational free energy — is minimized by perception, learning and action alike (Friston, 2008, 2010) | State inference and parameter learning fall out of one quantity, and the same objective yields both sets of dynamics | Taken. It is what makes the strict concavity of §3.4 and the closed forms meaningful rather than incidental, and §4.3 tests them |
 | **2. Local computation and local plasticity** | A unit updates from its own afferents; a synapse updates from the activities it connects (Bogacz, 2017) | That the algorithm could be carried by neurons at all | Taken as a **design constraint on the build**, and treated as generative. **This is the dissertation's answer to the first question** |
-| **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.5 records as a limit. It is also what makes the delta at the settled state a **posterior** rather than a summary of one, which is what lets §3.6 offer it as a read-out at all — and §3.6 goes further and prefers it, on the bullet below |
+| **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.5 records as a limit. It does **not** make the posterior a delta: Bogacz's delta is a further approximation adopted beside it, and §3.6 offers that delta as a read-out and prefers it, on the bullet below |
  
 - **The scoping sentence.** No measurement shows that cortex minimizes one objective rather than
   several; locality is a desideratum imported from what neurons plausibly can do rather than a
@@ -470,30 +471,45 @@ to them rather than floating free.*
   are Gaussian. A non-Gaussian generative model would not yield subtractive error units at all.
   **Cross-refer forward to §2.7's negative-firing-rate problem**, which is the same issue seen at the
   circuit level.
-- **And what commitment 3 is a commitment *about*, which §3.6 turns into a choice of read-out.**
-  Gaussian, or Laplace-approximated as such, is a claim about **representational cost** before it is
-  a claim about algebra: an arbitrary density over a state space has to be carried value by value,
-  a Gaussian by two numbers, and the framework's wager is that a system of this kind pays the second
-  price and not the first. One sentence here, with the forward pointer, because **§3.6's position on
-  the two read-outs rests on it**: a read-out that needs the whole field normalized across the state
-  space asks for the object this commitment says is not represented. Keep it to the commitment's own
-  motivation. The argument from it belongs to §3.6, and nothing measured enters the background (BG7).
+- **And the further approximation §3.6 turns into a choice of read-out.** Bogacz (2017) goes one
+  step past commitment 3: rather than the whole posterior, the system infers the most likely value
+  of the hidden state (his §2.2), and his §3 recovers this as a free energy whose approximating
+  density is a **delta** at that value (his Eq. 34). The delta is a commitment of its own and not a
+  consequence of Gaussianity, since a Laplace approximation keeps a mode *and* a covariance (Friston
+  et al., 2007). What it shares with commitment 3 is the motivation, a reduction in what inference
+  has to carry: commitment 3 reduces the objective to precision-weighted squared errors, and the
+  delta reduces the belief to the point the dynamics settle to. Bogacz's ground for the second is
+  representational: it is reasonable to assume that the brain represents at a given moment only the
+  most likely values of features (his §2.2, with binocular rivalry as the example). One sentence
+  here, with the forward pointer, because **§3.6's position on the two read-outs rests on that
+  ground**. The argument from it belongs to §3.6, and nothing measured enters the background (BG7).
 ## 2.3 Variational free energy: the objective actually minimized (about 190 words)
  
 *Commitment 1 in detail. Shortened from the previous draft's 300 words, since §2.2 now introduces
 the unified objective.*
  
-- **Present both decompositions:**
-  - \(\mathcal F(q)=D_{KL}[q(s)\|p(s)]-\mathbb E_q[\log p(u\mid s)]\) — complexity minus accuracy.
-  - \(\mathcal F(q)=D_{KL}[q(s)\|p(s\mid u)]-\log p(u)\); since KL divergence is non-negative,
+- **Present both decompositions**, in Bogacz's \(v\) for the hidden state, since \(s\) is the
+  scale's proportion throughout this dissertation:
+  - \(\mathcal F(q)=D_{KL}[q(v)\|p(v)]-\mathbb E_q[\log p(u\mid v)]\) — complexity minus accuracy.
+  - \(\mathcal F(q)=D_{KL}[q(v)\|p(v\mid u)]-\log p(u)\); since KL divergence is non-negative,
     \(\mathcal F\ge -\log p(u)\), so free energy upper-bounds surprisal.
+- **Bridge the sign convention in one sentence.** The free energy of this section is minimized.
+  Bogacz works with its negative, which he also writes \(F\) and maximizes (his Eq. 34), and §3 and
+  both notebooks follow him: their \(\mathcal F\) is the negative free energy and is maximized.
 - **Clarify three terms the slides risk conflating:** *prediction error* is a mismatch between an
   observation and a model prediction; *surprisal* is \(-\log p(u)\); *variational free energy* is an
   optimizable bound on surprisal, not the raw difference between prediction and input.
 - **Replace the mapping paragraph entirely.** The previous draft mapped the objective onto
-  \(q(s)=\mathrm{softmax}(z)\) over a discrete state set. **The state is continuous:** the
-  approximating belief is over \(\zeta=\operatorname{logit}(s)\), evaluated on a fixed quadrature
-  grid, and the grid discretizes the integral rather than the state.
+  \(q(s)=\mathrm{softmax}(z)\) over a discrete state set. **The hidden state is a pair of fields**,
+  \(x=(\varphi_S,\varphi_u)\), with \(\varphi_S\) sampled on a fixed quadrature grid over
+  \(\zeta=\operatorname{logit}(s)\). Three objects follow, and they must not be run together:
+  - the model's **posterior over field configurations** \(x\), at fixed \(\theta_u\);
+  - Bogacz's **delta** \(\delta(x-x^\ast)\), the approximation to it the construction adopts (§2.2),
+    also over \(x\);
+  - the **read-out** \(q(\zeta)\propto e^{\varphi_S^\ast(\zeta)}\), a distribution over the world
+    coordinate, formed from the settled field for comparison with RSA (§3.6).
+  The grid discretizes the integral over \(\zeta\) that \(q\) needs; it does not discretize
+  \(x\), which is a vector of \(K+m\) numbers throughout.
 - **One sentence on "utility":** in this architecture it names the terminating level of the
   prediction chain, not an RSA speaker's informativity-minus-cost. **Cut** the previous draft's
   KL-versus-communicative-utility discussion and the presupposition-accommodation material; §§3–6
@@ -565,8 +581,8 @@ arriving from the FEP literature finds the absence stated rather than having to 
   follows Bogacz's own gradient. Bogacz (2017) distinguishes rapidly changing neural activities
   representing inferred states and errors from synaptic parameters encoding learned regularities,
   and the bound on \(\tau_\varepsilon\) is **ours and not his** (§2.1, commitment 7): it is
-  critical damping of the stiffest mode, it tightens as \(\theta_u^2\), and what it secures is
-  the monotone rise of \(\mathcal F\), not convergence — which §5.5 records and §5.3 prices.
+  critical damping of the stiffest mode, it tightens as \(\theta_u^2\), and what it secures, with
+  the error units' silent start, is the monotone rise of \(\mathcal F\), not convergence — which §5.5 records and §5.3 prices.
   - **The learning rate is a ratio of time constants,** \(\tau_\varphi/\tau_\theta\): the constant
     of proportionality is a time constant of the kind the error and state units already carry, so
     the model has no step size set apart from its ordering of timescales. One sentence, and no
@@ -580,14 +596,20 @@ arriving from the FEP literature finds the absence stated rather than having to 
     mention, do not develop.
 - **Bidirectional flow.** Predictions descend the chain and errors ascend it, and every intermediate
   level is both predicted and predicting.
-- **The consequence for staging, which is the point of the subsection.** Because the lexical field
-  and the world prior enter the **same log-density** and the objective is jointly concave with a
-  unique maximum, the settled interpretation is **co-determined**: there is no point in the
-  computation at which a purely semantic value exists prior to pragmatic influence, and the result
-  cannot be factored into a semantic stage followed by a pragmatic one.
-  - **Be careful here.** Bidirectional message flow alone does not deny staging — a feedforward
-    pipeline with error feedback is still stageable. What denies it is the joint settlement. State
-    the joint settlement as the claim and bidirectional flow as the mechanism by which it is reached.
+- **The consequence for staging, which is the point of the subsection, at its true scope.** The
+  lexical input is not co-determined: \(\varphi_L=\Lambda\chi_y\) is supplied by the utterance and
+  clamped before recurrence begins, so a semantic value, the entry itself, does exist before any
+  pragmatic influence. What is joint is everything downstream of it. Given the clamped
+  \(\varphi_L\), the world belief and the utility state are inferred together, as the one maximizer
+  of an objective strictly concave in both, and neither settles first. So the claim is that **the
+  interpretation is co-determined**: no literal interpretation is settled on the entry alone and
+  then revised by pragmatic influence.
+  - **Be careful here, twice.** Bidirectional message flow alone does not deny staging — a
+    feedforward pipeline with error feedback is still stageable; the claim rests on the joint
+    settlement, and bidirectional flow is the mechanism by which it is reached. And concavity gives
+    a *unique* solution, not an *impossibility* of staging: a staged computation could reach the
+    same maximizer. The claim is about how this architecture computes the interpretation, not about
+    how no architecture could.
   - This is the architectural fact §1.5's demarcation problem is answered from.
 - **Counterargument/qualification:** updating the slow parameter once per utterance is closer to
   empirical-Bayes parameter learning than to a fully derived canonical predictive-coding circuit.
