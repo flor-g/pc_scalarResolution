@@ -138,8 +138,60 @@ Later in the session, after the agent had twice misread the scope:
   **Next (the user's):** before steps 1–3 are settled, clear what "self-referential" commits the
   argument to, against the literature on self-reference (Hofstadter's GEB; Open questions about time
   and self-reference in living systems, in the user's reading list).
-  **To settle:** whether 1–3 is the position the dissertation takes; how (a) and (b) bear on it; and
-  where it is written (candidates: an `agent/decisions.md` entry; §5.3, which interprets the cost;
+  **The literature review (agent, 2026-09-24) and the user's rulings on it.** Read: Abramsky,
+  Banzhaf, Caves, Levin, Machado, Ofria, Stepney & White (2026), *Open questions about time and
+  self-reference in living systems*, R. Soc. Open Sci. 13: 261059 (the user's reading list); searched
+  and verified: Wolpert (2008, Physica D 237: 1257–1281); Kauffman (2005, EigenForm, Kybernetes 34:
+  129–150) and von Foerster on eigenbehaviour; Russell & Wefald (1991, AI 49: 361–395); Russell &
+  Subramanian (1995, JAIR); Mar & Grim (1991, Noûs 25: 659–693); Niv, Daw, Joel & Dayan (2007,
+  Psychopharmacology 191: 507–520). From memory, unverified: Hofstadter (1979, 2007); Rosen (1985,
+  *Anticipatory systems*); Shenhav, Botvinick & Cohen (2013, Neuron). Already in the dissertation's
+  list: Griffiths, Lieder & Goodman (2015); Lieder & Griffiths (2020); Friston (2010).
+  What bears on the argument: the paper's §4.2 (self-reference is paradoxical only in a timeless
+  projection; in natural time a reference to oneself is resolved by a future self, and, after Rosen,
+  a system can be driven by an anticipated future state, not an actual one) diagnoses steps 1–2 and
+  names (a) as anticipation and (b) as the spiral; its §2.2 (whole-to-whole self-reference is not
+  necessarily paradoxical); its footnote 8 (a fixed update rule admits closed forms, a self-modifying
+  one in general does not); its §6.1.2 (eigenforms: a self-referential equation's solution realized
+  by unwinding it in time); Bennett's criterion for representational time as the paper reports it
+  (met by θ_u, not by the fast subsystem). Bounded optimality and resource-rational analysis place
+  the true cost outside or across runs, not inside the running algorithm: the established position
+  closest to the user's. Niv et al.'s tonic average reward rate is a biological instance of (b).
+  The free-energy principle's complexity term is a state function and takes part without
+  self-reference, which fixes the scope of step 1.
+  **Amendments, approved by the user 2026-09-24:**
+  - Step 1 names its object: the true cost is a **functional of the trajectory** (steps, settling
+    time, dissipation). Costs that are functions of the current state are out of its scope and can
+    take part without self-reference.
+  - Step 2 says **self-referential, not paradoxical**. The obstacle within an inference is causal:
+    the present state would have to be driven by the completed trajectory, a future self; only an
+    anticipated cost can do that (Rosen).
+  - Step 3 is restricted to **the inference in progress**. Across inferences, (b) iterated,
+    C_{k+1} = cost(dynamics given C_k), reaches the fixed point as an eigenform if the map is a
+    contraction, and oscillates or diverges otherwise.
+  - The argument is kept **free of Gödel, Turing and Wolpert**: the dynamics here are predictable
+    from outside to within constants (Eq. G2), and the argument rests on the temporal premise alone.
+  **The user's further instructions, 2026-09-24:**
+  > Nevertheless, I think this line of literature is worth a footnote.
+  > Besides that we want to lead the argument with one background sentence of why we brought it up:
+  > both neo-Gricean literature and Relevance Theory involves cost in their dynamics. We want to
+  > discuss what cost-in-dynamics means to a system like what is instantiated in this dissertation.
+  - **A footnote** on the classical limits of self-reference (Gödel, Turing, Wolpert 2008): why the
+    argument does not rest on them, with pointers to the tradition that treats self-reference as
+    unfolding in time (Hofstadter; Abramsky et al. 2026).
+  - **A lead sentence**: neo-Gricean pragmatics and Relevance Theory both put cost into
+    interpretation; the question is what cost in the dynamics means for a system of the kind
+    instantiated here. **Accuracy point raised with the user (agent.md §5.4), awaiting a ruling:** the
+    two put different costs there. Neo-Gricean cost (Horn's 1984 R-principle; Levinson's 2000
+    M-principle) is mainly the *speaker's* economy of expression, which the hearer reasons *from*: a
+    represented quantity, a function of the utterance's form, which steps 1–3 do not exclude. Relevance
+    Theory's effort is the *hearer's own* processing effort, part of what relevance is and of when
+    comprehension stops (Sperber & Wilson 1995; Wilson & Sperber 2004): squarely in scope, and its
+    stopping rule parallels A19's halting question. Neither work is yet in the dissertation's
+    reference list (only Horn 1972 and Levinson 2000 are).
+  **To settle:** whether 1–3, amended, is the position the dissertation takes; the lead sentence's
+  wording, after the accuracy point; and where the argument is written, and at what length
+  (candidates: an `agent/decisions.md` entry; §5.3, which interprets the cost;
   §5.5; Appendix G).
 
 ## 4. Findings
