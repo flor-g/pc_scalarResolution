@@ -92,12 +92,12 @@ Later in the session, after the agent had twice misread the scope:
   3. λ_max(H) keys the stopping tolerance (I3) and τ_ε (I4), so any change must reproduce it to
      roundoff: every step count in both notebooks must be unchanged, E3 included.
   4. Appendix G §2's table row and its "choices of this instantiation" sentence, Eq. (G3)'s K³
-     term, and the outline §5.5 bullet's total all change with it.
+     term, and the outline §5.6 bullet's total all change with it (§5.5 until CX7's renumbering).
   Acceptance: both notebooks re-run, no printed line changes outside `cost:` lines and Appendix G's
   own, and λ_max agrees with the decomposition to roundoff at every configuration Code Cell G lists.
-- [ ] **CX7. OPEN (user, 2026-09-24): can the cost take part in the dynamics?** Not settled, and
-  not yet written into any notebook, outline or `agent/decisions.md` entry; the user will examine it
-  further. The question as posed: RSA writes utility as informativeness minus cost; this model has
+- [x] **CX7 (2026-09-24, opened as an open task). Can the cost take part in the dynamics?** Settled
+  by the user as the dissertation's position (A22) and written as outline §5.4; the history of the
+  question follows. The question as posed: RSA writes utility as informativeness minus cost; this model has
   no cost in its dynamics; would adding **Appendix G's** cost (this instantiation's complexity, read
   as a representation of the process's cost) to μ_u break locality or the construction?
   **The user's argument, as it stands:**
@@ -207,8 +207,12 @@ Later in the session, after the agent had twice misread the scope:
   (1936), Wolpert (2008), Hofstadter (1979), Abramsky et al. (2026); Frank & Goodman (2012), Goodman
   & Frank (2016) and Levinson (2000) are already there. Verify Horn 1984, Sperber & Wilson 1995,
   Turing 1936 and Hofstadter 1979 against their sources before entering them.
-  **To settle:** whether 1–3, amended, is the position the dissertation takes; and where the
-  argument is written, and at what length
+  **Closed, 2026-09-24.** The user: "amended steps 1-3 are the dissertation's position. Your argument
+  placement and length are approved." Written as `sections_3-6.md` §5.4, *Cost in the dynamics*
+  (about 250 words), after §5.3, the old §§5.4–5.6 renumbered §§5.5–5.7 (`revisions.md` §18);
+  decision A22; nine reference-list entries, each now verified against its source, Hofstadter 1979
+  and Rosen 1985 included. Shenhav et al. (2013) and Niv et al. (2007) are not cited. Earlier
+  candidates for placement, kept for the record
   (candidates: an `agent/decisions.md` entry; §5.3, which interprets the cost;
   §5.5; Appendix G).
 

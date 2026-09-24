@@ -90,18 +90,18 @@ reader should weigh is recorded as a fact with our position reserved.
 |---|---|---|
 | Amplification mechanism, Eqs. (23)–(24) | §3.5, §4.1.4 | It is what produces the effect, and it is measured |
 | The two-condition criterion and its results | §4.1.2–§4.1.5 | The verdict. **Carried as the position criterion with the baseline's own cells left out** (§4.1.4's one row; §4.1.5's 15 and 9), with the unconditioned counts reported beside them |
-| The cell of *all* has two stipulated ends, $n$ and $Z$ | §3.2, §4.1.2, §4.1.5, §5.5 | The guard every count in §§4.1.4–4.1.5 is relative to. **Printed at both ends** (Appendix A's two ladders; Code Cell 2's $K$-against-$Z$ check; F.10's control), so it is carried rather than reserved |
+| The cell of *all* has two stipulated ends, $n$ and $Z$ | §3.2, §4.1.2, §4.1.5, §5.6 | The guard every count in §§4.1.4–4.1.5 is relative to. **Printed at both ends** (Appendix A's two ladders; Code Cell 2's $K$-against-$Z$ check; F.10's control), so it is carried rather than reserved |
 | Conventionalization of $\theta_u^\ast$ by exposure (App. B) | §3.4, §5.1 | The position the architecture commits to |
 | The four construction obligations (Text cell 3; §8; App. B) | §5.1 | Turns the gap into a specification |
 | Binary branching per level, and $m=1$ (App. C §§2, 5) | §5.1 | Makes the alternatives level tractable and local |
 | Non-locality of normalization across word forms (App. A) | §5.1 | The obstacle binarity removes |
-| The relay, Eqs. (E1)–(E6) | §3.4, §5.5 | Locality at $m>1$, and the cost it carries |
+| The relay, Eqs. (E1)–(E6) | §3.4, §5.6 | Locality at $m>1$, and the cost it carries |
 | $\theta_L$ as predicate granularity, Eq. (A5) | §3.3, §4.2, §5.1–§5.2 | Sets the search's resolution; the closed/open prediction |
 | $m$ = threshold count and the parity argument (App. C) | §3.5, §4.2, §5.1 | Fixes dimension; the mechanism behind §4.2.4's parity result |
 | Scale class against Xiang et al.: H1 and H2, match and mismatch (§4.2, App. F) | §4.2, §5.2 | Second empirical anchor. **Reported; neither adopted nor rejected**, because the comparison runs at one resolution and under commitments a later phase may drop (O13). The open-scale half of H2 is stated and left untested (O14) |
 | Strict concavity, unique fixed point, closed forms | §3.4, §4.1.3 | Makes the dynamics a testable implementation claim |
  
-**Tier B — recorded as a fact, position reserved.** One or two sentences each, no verdict, in §5.5
+**Tier B — recorded as a fact, position reserved.** One or two sentences each, no verdict, in §5.6
 or a footnote.
  
 - *Exact zero is unrepresentable* (App. A): a predicate over $n$ atoms cannot distinguish "none"
@@ -122,9 +122,9 @@ or a footnote.
   not as a finding — though §5.1 now gives it a second, independent motivation.
 **Tier C — left in the notebook and cited.** Conditioning and stiffness (Eq. 28), cited from §3.4;
 the $\mu_u$/$\ell_0$ common-mode invariance and its polar sweep (Eqs. 32–35), cited from §4.1.2's
-guard; the flat-direction resolution (§9.1); grid refinement's figures, cited from §4.1.3 and §5.5;
-the multidimensional ceiling (§9.3), except for one sentence in §5.5; the weight-transport
-accounting of § E.2; the simulation's computational complexity (Appendix G), cited from §5.5. **The rule for all of it:** the outline carries the rationale and the numbers
+guard; the flat-direction resolution (§9.1); grid refinement's figures, cited from §4.1.3 and §5.6;
+the multidimensional ceiling (§9.3), except for one sentence in §5.6; the weight-transport
+accounting of § E.2; the simulation's computational complexity (Appendix G), cited from §5.6. **The rule for all of it:** the outline carries the rationale and the numbers
 the argument uses, and points to the notebook for derivations, verification figures and
 enumerations.
  
@@ -157,15 +157,16 @@ The raise history of this table is in `revisions.md` §16.
 | 4.2.2 Where the model matches | 170 | The fits; the half-width control; the utility level's gain; the image-type sign |
 | 4.2.3 Where it does not | 70 | The residuals |
 | 4.2.4 How far the utility level reaches | 110 | $\theta_u^\ast$'s sign; the displacement; the parity result |
-| **5. Discussion** | **2,210** | |
+| **5. Discussion** | **2,460** | |
 | 5.1 What an alternatives level would have to supply | 560 | The design and its savings; what the criteria add; what is not derived; the current gain |
 | 5.2 Scale structure: what the comparison of §4.2 is worth | 360 | Why no position on H1; the one causal belief; the comparison's worth; the instinct |
 | 5.3 Realizability, halting, and the plausibility commitment | 170 | What halts; why $\theta_u^\ast$ stays the commitment; the cost |
-| 5.4 What an algorithmic account makes posable | 120 | Four questions the computational level cannot pose |
-| 5.5 Limits | 870 | The numerical substrate, and what the simulation costs; the architecture; stipulations; the read-out's locality |
-| 5.6 Predictions | 130 | Exposure; granularity; the midpoint cut; the lexical strength of a class |
+| 5.4 Cost in the dynamics | 250 | Why cost is raised (neo-Gricean, Relevance Theory, RSA); the true cost cannot take part; the two proxy forms; bounded optimality; the footnote on the classical limits |
+| 5.5 What an algorithmic account makes posable | 120 | Four questions the computational level cannot pose |
+| 5.6 Limits | 870 | The numerical substrate, and what the simulation costs; the architecture; stipulations; the read-out's locality |
+| 5.7 Predictions | 130 | Exposure; granularity; the midpoint cut; the lexical strength of a class |
 | **6. Conclusion** | **265** | |
-| **Total** | **6,475** | |
+| **Total** | **6,725** | |
 
 # 3. The proposed architecture (about 1,530 words)
  
@@ -197,8 +198,8 @@ The raise history of this table is in `revisions.md` §16.
   clamped and at fixed $\theta_u$ this gives a unique fixed point in closed form (Eqs. 15–16, and
   $\theta_u^\ast$ by Eq. B2), which makes the dynamics exactly testable (§4.1.3) and lets the
   evaluation read configurations too stiff to integrate. Its cost is that the recurrent dynamics
-  become a claim about implementation rather than a computational necessity (§5.5). Say the scope
-  once: $\mathcal F$ is not jointly concave in $(\theta_u,\varphi_u)$ (Text cell 3 §8.5; §5.5).
+  become a claim about implementation rather than a computational necessity (§5.6). Say the scope
+  once: $\mathcal F$ is not jointly concave in $(\theta_u,\varphi_u)$ (Text cell 3 §8.5; §5.6).
 - **2. A field-valued situation level** (`agent/decisions.md` A21) is what keeps choice 1
   available. An entry is a set over the scale, and on a single node for $\zeta$ a set enters only
   as a step in the log-likelihood, which leaves $\mathcal F$ non-concave. Carried as a field, the
@@ -212,7 +213,7 @@ The raise history of this table is in `revisions.md` §16.
 - **3. $\theta_u^\ast$ as the reported parameter.** Under the batched uniform ensemble of this phase
   every update is identical, so the flow of Eq. (20) **approaches** a $\theta_u^\ast$ the
   configuration fixes, and results reported there depend on no tolerance and no learning history
-  (§§5.3, 5.5). Bogacz has no counterpart: his parameters never converge, being updated after each
+  (§§5.3, 5.6). Bogacz has no counterpart: his parameters never converge, being updated after each
   observation. The cost is the halting question, whose cause is the batching and which is not
   dissolved by naming it (§5.3). One sentence here; §5.3 carries the argument.
 - **In sum, and the trade-off.** The architecture is as determinate as the framework allows, given
@@ -250,7 +251,7 @@ Requirement 4 is what distinguishes this model from a fit, and §4.1.3 reports t
   grid's two parameters, so that the familiar half does not stand for both:** the node count $K$
   discretizes the integral and converges, while the half-width $Z$ bounds the state space and has
   nothing to converge to (Text cell 3 §1; Code Cell 2's check reports both). §4.1.2's guard and
-  §5.5 are where the second is paid for. **Flag for §5.1 that $\zeta$ is a log-odds coordinate**;
+  §5.6 are where the second is paid for. **Flag for §5.1 that $\zeta$ is a log-odds coordinate**;
   that fact does work twice later.
 - Each utterance carries an **exclusion set** $E_y$, the states its entry rules out (Eq. 5), and the
   lexical field is that set's indicator scaled by lexical strength, $\varphi_L=\Lambda\chi_y$
@@ -555,7 +556,7 @@ quantitative comparison with them is offered or implied; §4.2 compares the mode
     Code Cell 4's plane is recounted at each. **The guard is symmetric and both halves are
     sourced.** Give the one figure that makes the point in a line: under the flat prior at
     $\Lambda=512$ both q criteria are met at $Z=5$ and $6$ and neither from $Z=7$. Code Cell A prints
-    the ladder, and §5.5 says how $Z$ reaches the verdict (through $B$, not by clipping a tail).
+    the ladder, and §5.6 says how $Z$ reaches the verdict (through $B$, not by clipping a tail).
   - *The one implication to state, in the direction it runs.* Where the mode position criterion
     **fails**, the peak of $\varphi_S^\ast$ at or above $\theta_L$, the conjunction fails too. The
     criterion being *met* does **not** deliver the conjunction, since the first condition fails on
@@ -581,7 +582,7 @@ guard. Code Cell E3 checks that the relay reproduces every one of these checks.
 **A warning follows the pair, in one sentence: a lower bound on $K$ is suspected and not
 established.** Coarsening from $K=101$, the four criteria track the fine grid to $K=81$, and at
 $K=61$ they first disagree with it on Part D's statuses (Appendix A's third ladder); what they do
-below that cannot yet be told apart from where the nodes fall against $\theta_L$. Point to §5.5 for
+below that cannot yet be told apart from where the nodes fall against $\theta_L$. Point to §5.6 for
 what is known, and add nothing to §4.1.2's guard, which stays with $n$ and $Z$ (NK-D1).
 
 ### 4.1.4 The five priors (about 470 words)
@@ -786,7 +787,7 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   this integrator does not reach it at all. That $\theta_u^\ast$ *is* the maximizer rests on the
   closed form and the monotone rise, not on an integration. *(Writer's note: no cell prints a
   sharper figure for how far short the flow stays; do not quote one.)*
-- **Report, and stop.** §5.3 is where the cost is interpreted, and §5.5 is where the tolerance's own
+- **Report, and stop.** §5.3 is where the cost is interpreted, and §5.6 is where the tolerance's own
   locality debt (D12) is admitted. This section states neither.
 ---
  
@@ -881,7 +882,7 @@ every number attributed to Xiang et al. is cited and printed by no cell (S-5). *
   Appendix C's, not a fitted trend. Appendix F prints the loadings; quote them from there.
 ---
 
-# 5. Discussion (about 2,210 words)
+# 5. Discussion (about 2,460 words)
  
 ## 5.1 What an alternatives level would have to supply (about 560 words)
  
@@ -1155,7 +1156,7 @@ hedged causal statement, and says what the comparison is worth.
   else here is, and a ladder **brackets** an optimum rather than locating it. The section must not
   credit H1 with more than the ordering it shows, and must not treat the residual as telling against
   it either. The one causal statement above is hedged on purpose and stays hedged: it is what we
-  think, about this phase, and nothing in §5.1, §5.6 or §6 may restate it as established. §4.1.2's second guard applies here too: the
+  think, about this phase, and nothing in §5.1, §5.7 or §6 may restate it as established. §4.1.2's second guard applies here too: the
   denotation $n$ that fixes $\theta_L$ is stipulated, and §4's readings move with it — this section
   runs at $n=4$ because the authors' scale has five positions, a choice about their paradigm and not
   a discovery about the predicates.
@@ -1229,9 +1230,50 @@ what it costs and what is still owed.
   cost and conditioning* defers to the outline, and the target O3's bare pointers were waiting on.
 ---
  
-## 5.4 What an algorithmic account makes posable (about 120 words)
+## 5.4 Cost in the dynamics (about 250 words)
 
-- **The claim.** Every question the three sections above turn on is **not posable at the
+**Lead with the one sentence that says why the question is raised** (wording approved; the
+traditions are cited, not expounded): *Neo-Gricean pragmatics (cf. Horn, 1984; Levinson, 2000),
+Relevance Theory (cf. Sperber & Wilson, 1995) and standard RSA (cf. Frank & Goodman, 2012; Goodman &
+Frank, 2016) all give cost a role in interpretation; we ask what cost in the dynamics would mean for
+a system of the kind instantiated here.*
+
+- **The cost in question is Appendix G's**, read as this instantiation's representation of the
+  process's cost (§5.6 says what it is not). **The position, in three steps** (A22):
+  1. **The true cost is a functional of the trajectory.** The step count, and the settling time it
+     counts, belong to the whole trajectory, halting step included, so no state before the halt
+     fixes them. A cost that is a function of the current state is outside this: it can take part
+     without self-reference.
+  2. **Letting it take part makes the system self-referential, not paradoxical.** The present state
+     would have to be driven by the completed trajectory, a future self. The obstacle is causal, and
+     it stands with locality set aside: a system can be driven by an *anticipated* future state, not
+     an actual one (Rosen, 1985; Abramsky et al., 2026).
+  3. **So within the inference in progress, a stipulated cost term is not the true cost.** Once a
+     term takes part, the true cost is the modified system's; the two agree only at a fixed point,
+     $C=\mathrm{cost}(\text{dynamics given }C)$, which the running inference does not compute.
+- **Not a confusion of levels.** Committing this instantiation's cost to the algorithm confuses no
+  levels: it makes the instantiation the algorithm, one more commitment. It does not escape step 2.
+- **The two forms a proxy can take**, named and not implemented. (a) **A configuration-level
+  proxy**, $\kappa(H)=\theta_u^2+2$ (Eq. G1), fixed before an inference starts; coupling it closes a
+  loop through $\theta_u^\ast$ (Appendix B) that is one of determination, not of time. (b) **A
+  cross-trial proxy**, the realized cost of completed inferences fed to the slow timescale, which
+  needs the halting signal §5.3 leaves as a direction. Iterated, (b) reaches step 3's fixed point
+  as an eigenform (Kauffman, 2005) if the map is a contraction, and oscillates or diverges
+  otherwise: what the running inference cannot compute, the sequence of inferences can approach.
+- **The nearest established position, in one sentence.** Bounded optimality optimizes a program
+  against its cost from outside, by its designer or architecture, not by the running program
+  (Russell & Subramanian, 1995); resource-rational analysis sets cost at the same level (§5.5).
+- **Footnote** (wording approved): *The argument does not rest on the classical limits of
+  self-reference — Gödel's incompleteness theorems, the undecidability of halting (Turing, 1936), or
+  the physical limits on self-prediction (Wolpert, 2008) — which concern systems in general; the
+  dynamics here are predictable from outside to within constants (Appendix G, Eq. G2), and the
+  argument needs only the weaker, temporal premise. For self-reference treated as a process
+  unfolding in time rather than as paradox, see Hofstadter (1979) and Abramsky et al. (2026).*
+---
+ 
+## 5.5 What an algorithmic account makes posable (about 120 words)
+
+- **The claim.** Every question §§5.1–5.3 turn on is **not posable at the
   computational level**. A computational theory states a goal and is silent on resources and
   representation, so the questions do not have wrong answers there — they have no answers, because
   they cannot be asked. Four instances, each naming where it arose:
@@ -1258,7 +1300,7 @@ what it costs and what is still owed.
   natural misreading: the claim is about what a level can be asked, not about what is true.
 ---
  
-## 5.5 Limits (about 870 words)
+## 5.6 Limits (about 870 words)
 
 Four groups, each under a run-in head in the paper, so that a limit of the numerical substrate is not
 read as a limit of the architecture.
@@ -1376,7 +1418,7 @@ read as a limit of the architecture.
   - Sourced (C6): Appendix A's *Finding the peak by comparing neighbours* prints the counts and
     the Beta(1, β) control; quote them from there.
 
-## 5.6 Predictions (about 130 words)
+## 5.7 Predictions (about 130 words)
  
 - **Exposure frequency should shift strengthening.** $\theta_u^\ast$ is set by the mean drive of
   the inventory under exposure (Appendix B), so non-uniform exposure to the inventory moves it. **This is a

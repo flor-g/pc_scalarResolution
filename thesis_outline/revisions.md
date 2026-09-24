@@ -1621,6 +1621,30 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 18. CX7: cost in the dynamics, a new §5.4 (2026-09-24)
+
+The working record is `agent/complexity_2026-09-24.md` (CX7); the position is decision A22. **What
+changed in the outlines:** `sections_3-6.md` gains §5.4, *Cost in the dynamics* (about 250 words):
+the approved lead sentence citing neo-Gricean pragmatics, Relevance Theory and standard RSA; the
+three-step position that the true cost of an inference cannot take part in its dynamics; the two
+proxy forms; the parallel with bounded optimality; and the approved footnote on the classical limits
+of self-reference. The old §5.4's opening "the three sections above" now reads "§§5.1–5.3", so that
+it does not silently take in the new section. `background_sections.md`'s reference list gains nine
+entries, each checked against its source (Abramsky et al. 2026; Hofstadter 1979; Horn 1984; Kauffman
+2005; Rosen 1985; Russell & Subramanian 1995; Sperber & Wilson 1995; Turing 1936; Wolpert 2008), and
+its scope note now names `main.ipynb` cell 26, which Appendix G's insertion made the References cell.
+Word table: §5 2,210 → 2,460, total 6,475 → 6,725.
+
+**The renumbering.** Every live reference in both outlines was moved, 14 in `sections_3-6.md` and 4
+in `background_sections.md`; this file's older sections and the records keep the numbers of their day.
+
+| Before | After |
+|---|---|
+| — | §5.4 Cost in the dynamics |
+| §5.4 What an algorithmic account makes posable | §5.5 |
+| §5.5 Limits | §5.6 |
+| §5.6 Predictions | §5.7 |
+
 ## 17. CX: the computational complexity of the simulation (2026-09-24)
 
 The working record is `agent/complexity_2026-09-24.md` while it is open. **What changed in the

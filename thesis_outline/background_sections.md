@@ -59,11 +59,11 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
      the quantities are represented, or what any one unit may see. **An algorithmic-level theory
      specifies representations and a process running under those constraints**: message passing,
      state and error units, locality, a basis of fixed dimension. A pattern is an algorithmic-level
-     peculiarity **when the computational goal does not entail it**. §5.4 extends that definition
+     peculiarity **when the computational goal does not entail it**. §5.5 extends that definition
      by one step, and the clause belongs here rather than there: a question can fail to be
      **posable** at the computational level at all — not answered wrongly, but unaskable, because a
      theory that fixes only the goal supplies nothing for the question to be about. Name the
-     extension in a clause and leave its instances to §5.4. **Never write that the computational
+     extension in a clause and leave its instances to §5.5. **Never write that the computational
      level is wrong, or that such a question refutes RSA**; neither follows, and both are the
      natural misreading.
 - **Evidence and citations:** Marr (1982) for the levels; Spratling (2013) and Aitchison and Lengyel
@@ -443,7 +443,7 @@ to them rather than floating free.*
 |---|---|---|---|
 | **1. A unified objective** | One functional — variational free energy — is minimized by perception, learning and action alike (Friston, 2008, 2010) | State inference and parameter learning fall out of one quantity, and the same objective yields both sets of dynamics | Taken. It is what makes the strict concavity of §3.4 and the closed forms meaningful rather than incidental, and §4.1.3 tests them |
 | **2. Local computation and local plasticity** | A unit updates from its own afferents; a synapse updates from the activities it connects (Bogacz, 2017) | That the algorithm could be carried by neurons at all | Taken as a **design constraint on the build**, and treated as generative. **This is the dissertation's answer to the first question** |
-| **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.5 records as a limit. It does **not** make the posterior a delta: Bogacz's delta is a further approximation adopted beside it, and §3.6 offers that delta as a read-out and prefers it, on the bullet below |
+| **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.6 records as a limit. It does **not** make the posterior a delta: Bogacz's delta is a further approximation adopted beside it, and §3.6 offers that delta as a read-out and prefers it, on the bullet below |
  
 - **The scoping sentence.** No measurement shows that cortex minimizes one objective rather than
   several; locality is a desideratum imported from what neurons plausibly can do rather than a
@@ -582,7 +582,7 @@ rather than having to infer it.*
   representing inferred states and errors from synaptic parameters encoding learned regularities,
   and the bound on \(\tau_\varepsilon\) is **ours and not his** (§2.1, commitment 7): it is
   critical damping of the stiffest mode, it tightens as \(\theta_u^2\), and what it secures, with
-  the error units' silent start, is the monotone rise of \(\mathcal F\), not convergence — which §5.5 records and §5.3 prices.
+  the error units' silent start, is the monotone rise of \(\mathcal F\), not convergence — which §5.6 records and §5.3 prices.
   - **The learning rate is a ratio of time constants,** \(\tau_\varphi/\tau_\theta\): the constant
     of proportionality is a time constant of the kind the error and state units already carry, so
     the model has no step size set apart from its ordering of timescales. One sentence, and no
@@ -668,10 +668,12 @@ rather than having to infer it.*
 **Scope: the whole dissertation.** This is the only reference list either outline keeps —
 `sections_3-6.md` has none of its own — and it covers the background, §§3–6, **and the appendices
 as `main.ipynb` and `appendix_E.ipynb` carry them**. A work cited anywhere in the dissertation has
-an entry here. Each notebook keeps its own References cell for its own text — `main.ipynb` cell 24,
+an entry here. Each notebook keeps its own References cell for its own text — `main.ipynb` cell 26,
 `appendix_E.ipynb` cell 9 (`agent/agent.md` §1, coupling 11). *Two divergences left standing, both wanting one pass across all
 three: Friston is "Friston, K." for 2005 and "Friston, K. J." for 2007-2010, and the notebooks set
 page ranges with en dashes where this list uses hyphens.*
+ 
+Abramsky, S., Banzhaf, W., Caves, L. S. D., Levin, M., Machado, P., Ofria, C., Stepney, S., & White, R. (2026). Open questions about time and self-reference in living systems. *Royal Society Open Science, 13*, 261059. https://doi.org/10.1098/rsos.261059
  
 Aitchison, L., & Lengyel, M. (2017). With or without you: Predictive coding and Bayesian inference in the brain. *Current Opinion in Neurobiology, 46*, 219-227. https://doi.org/10.1016/j.conb.2017.08.010
  
@@ -741,13 +743,19 @@ Grossberg, S. (1987). Competitive learning: From interactive activation to adapt
  
 Gutzmann, D. (2021). Semantics vs. pragmatics. In D. Gutzmann, L. Matthewson, C. Meier, H. Rullmann, & T. E. Zimmermann (Eds.), *The Wiley Blackwell companion to semantics* (pp. 1-31). Wiley. https://doi.org/10.1002/9781118788516.sem049 **[Year unresolved: Crossref records the chapter and the volume as 2020 (online); the print volume is dated 2021. Pick one and use it for every Companion chapter cited.]**
  
+Hofstadter, D. R. (1979). *Gödel, Escher, Bach: An eternal golden braid*. Basic Books.
+ 
 Horn, L. R. (1972). *On the semantic properties of logical operators in English* [Unpublished doctoral dissertation]. University of California, Los Angeles.
+ 
+Horn, L. R. (1984). Toward a new taxonomy for pragmatic inference: Q-based and R-based implicature. In D. Schiffrin (Ed.), *Meaning, form, and use in context: Linguistic applications* (pp. 11-42). Georgetown University Press.
  
 Ippolito, M. (2010). Embedded implicatures? Remarks on the debate between globalist and localist theories. *Semantics and Pragmatics, 3*, Article 5, 1-15. https://doi.org/10.3765/sp.3.5
  
 Jaszczolt, K. M. (2012). Semantics/pragmatics boundary disputes. In C. Maienborn, K. von Heusinger, & P. Portner (Eds.), *Semantics: An international handbook of natural language meaning* (Vol. 3, pp. 2333-2360). De Gruyter Mouton.
  
 Katzir, R. (2007). Structurally-defined alternatives. *Linguistics and Philosophy, 30*(6), 669-690. https://doi.org/10.1007/s10988-008-9029-y
+ 
+Kauffman, L. H. (2005). EigenForm. *Kybernetes, 34*(1/2), 129-150. https://doi.org/10.1108/03684920510575780
  
 Keller, G. B., & Mrsic-Flogel, T. D. (2018). Predictive processing: A canonical cortical computation. *Neuron, 100*(2), 424-435. https://doi.org/10.1016/j.neuron.2018.10.003
  
@@ -789,6 +797,10 @@ Rooth, M. (1985). *Association with focus* [Doctoral dissertation, University of
  
 Rooth, M. (1992). A theory of focus interpretation. *Natural Language Semantics, 1*(1), 75-116. https://doi.org/10.1007/BF02342617
  
+Rosen, R. (1985). *Anticipatory systems: Philosophical, mathematical and methodological foundations*. Pergamon Press.
+ 
+Russell, S., & Subramanian, D. (1995). Provably bounded-optimal agents. *Journal of Artificial Intelligence Research, 2*, 575-609. https://doi.org/10.1613/jair.133
+ 
 Sauerland, U. (2004). Scalar implicatures in complex sentences. *Linguistics and Philosophy, 27*(3), 367-391. https://doi.org/10.1023/B:LING.0000023378.71748.db
  
 Sauerland, U. (2012). The computation of scalar implicatures: Pragmatic, lexical or grammatical? *Language and Linguistics Compass, 6*(1), 36-49. https://doi.org/10.1002/lnc3.321
@@ -797,13 +809,19 @@ Schlegel, P., Yin, Y., Bates, A. S., Dorkenwald, S., Eichler, K., Brooks, P., Ha
  
 Sherman, S. M., & Guillery, R. W. (1998). On the actions that one nerve cell can have on another: Distinguishing "drivers" from "modulators". *Proceedings of the National Academy of Sciences, 95*(12), 7121-7126. https://doi.org/10.1073/pnas.95.12.7121
  
+Sperber, D., & Wilson, D. (1995). *Relevance: Communication and cognition* (2nd ed.). Blackwell.
+ 
 Spratling, M. W. (2013). Distinguishing theory from implementation in predictive coding accounts of brain function. *Behavioral and Brain Sciences, 36*(3), 231-232. https://doi.org/10.1017/S0140525X12002178
  
 Strogatz, S. H. (1994). *Nonlinear dynamics and chaos: With applications to physics, biology, chemistry, and engineering*. Addison-Wesley.
  
+Turing, A. M. (1936). On computable numbers, with an application to the Entscheidungsproblem. *Proceedings of the London Mathematical Society, s2-42*(1), 230-265. https://doi.org/10.1112/plms/s2-42.1.230
+ 
 Walsh, K. S., McGovern, D. P., Clark, A., & O'Connell, R. G. (2020). Evaluating the neurophysiological evidence for predictive processing as a model of perception. *Annals of the New York Academy of Sciences, 1464*(1), 242-268. https://doi.org/10.1111/nyas.14321
  
 Whittington, J. C. R., & Bogacz, R. (2017). An approximation of the error backpropagation algorithm in a predictive coding network with local Hebbian synaptic plasticity. *Neural Computation, 29*(5), 1229-1262. https://doi.org/10.1162/NECO_a_00949
+ 
+Wolpert, D. H. (2008). Physical limits of inference. *Physica D: Nonlinear Phenomena, 237*(9), 1257-1281. https://doi.org/10.1016/j.physd.2008.03.040
  
 Xiang, M., Kennedy, C., Xu, W., & Leffel, T. (2022). Pragmatic reasoning and semantic convention: A case study on gradable adjectives. *Semantics and Pragmatics, 15*(9). https://doi.org/10.3765/sp.15.9
  

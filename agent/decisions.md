@@ -14,6 +14,11 @@ The record of architectural, evaluation, and implementation decisions for `main.
 > the new numbers where they were rewritten: §4.x became §4.1.x, and §5.2's measurements against
 > Xiang et al. (2022) became §4.2, §5.2 keeping the discussion. Dated findings that name the old
 > §5.2 meant both halves; the mapping is in `thesis_outline/revisions.md` §16.
+>
+> **Outline §5 renumbered on 2026-09-24 (CX7).** A new §5.4, *Cost in the dynamics*, moved the old
+> §5.4 (what an algorithmic account makes posable) to §5.5, §5.5 (Limits) to §5.6 and §5.6
+> (Predictions) to §5.7. Live "Depends on it" lines use the new numbers; dated findings and the
+> records keep the numbers of their day. The mapping is in `thesis_outline/revisions.md` §18.
 
 ## Entry template
 
@@ -314,6 +319,43 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Theoretical reason: one synapse, one scalar, one pooled error signal; nothing compares
   alternatives inside one inference pass.
 - Depends on it: Appendix B Alternative spaces; Part C's closing claim; see O2.
+
+---
+
+### A22. The true cost of an inference does not take part in its dynamics; a proxy may
+- Status: Settled
+- Decided by: user (2026-09-24), after the agent's review of the literature; the argument is the
+  user's, amended by the agent and the amendments approved by the user
+- Decision: the dissertation's position, written as outline §5.4 (*Cost in the dynamics*):
+  1. The true cost is a **functional of the trajectory** (Appendix G's step count and the settling
+     time it counts), so no state before the halt fixes it. Costs that are functions of the current
+     state are outside the position and can take part without self-reference.
+  2. Letting the true cost take part makes the system **self-referential, not paradoxical**: the
+     present state would have to be driven by the completed trajectory, a future self. The obstacle
+     is causal and stands with locality set aside; a system can be driven by an anticipated future
+     state, not an actual one.
+  3. So **within the inference in progress** any stipulated cost term is not the true cost; the two
+     agree only at a fixed point, C = cost(dynamics given C), which the running inference does not
+     compute.
+  Committing this instantiation's cost to the algorithm is legitimate (it makes the instantiation the
+  algorithm, one more commitment) and does not escape step 2. **Two proxy forms are named, not
+  implemented:** (a) configuration-level, κ(H) = θ_u² + 2 (Eq. G1), fixed before an inference,
+  closing a loop of determination through θ_u\*; (b) cross-trial, the realized cost of completed
+  inferences fed to the slow timescale, needing a halting signal; iterated, (b) reaches the fixed
+  point of step 3 as an eigenform if the map is a contraction. The argument does **not** rest on
+  Gödel, Turing or Wolpert: the dynamics here are predictable from outside to within constants
+  (Eq. G2); a footnote says so.
+- Theoretical reason: neo-Gricean pragmatics, Relevance Theory and standard RSA all give cost a
+  role in interpretation, so a process model owes an account of what cost in its dynamics would
+  mean. The literature's diagnosis of self-reference as a timeless projection that natural time
+  unwinds (Abramsky et al., 2026, §4.2) and bounded optimality's placing of cost outside the
+  running program (Russell & Subramanian, 1995) are the two nearest positions.
+- Implementational reason: none; nothing is implemented. The model's dynamics carry no cost term.
+- Bogacz status: no operation. Bogacz's F has no cost of computation in it.
+- Depends on it: `sections_3-6.md` §5.4 and its footnote; the reference list's nine entries of
+  2026-09-24; I14 (whose cost is the one in question).
+- Evidence: `agent/complexity_2026-09-24.md` CX7 (the user's argument, the corrections, the
+  literature review with what was verified and what was not, the rulings).
 
 ---
 
@@ -1096,7 +1138,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   "maximally deterministic" (overclaims, and names the wrong property).
 - Implementational reason: none.
 - Bogacz status: framing; the divergences it summarizes are D1, D4, D12, D13.
-- Depends on it: `thesis_outline/sections_3-6.md` §3's opening; §§3.4, 3.6, 5.3, 5.5 carry the costs.
+- Depends on it: `thesis_outline/sections_3-6.md` §3's opening; §§3.4, 3.6, 5.3, 5.6 carry the costs.
 - Findings added later: **2026-09-24, the motivation (user).** The available facts do not settle
   which choices within the framework give the best-fitting, most predictive representation of the
   process; the dissertation is agnostic among them, and trying them all would be better. It starts
@@ -1462,7 +1504,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   slowest mode, which Code Cell G shows for every run it prints and nothing guarantees in general.
 - Bogacz status: no operation is added. Code Cell G rebuilds H as `stiffest_state_rate` does, as a
   diagnostic, and checks the two agree.
-- Depends on it: `main.ipynb` Appendix G, Code Cell G; `sections_3-6.md` §5.5 and Tier C.
+- Depends on it: `main.ipynb` Appendix G, Code Cell G; `sections_3-6.md` §5.6 and Tier C; §5.4 (A22).
 - Evidence: `agent/complexity_2026-09-24.md` §4, CX-F1 to CX-F6; Code Cell G's output.
 - Findings added later: 2026-09-24 (user), **the scope bullet's gloss was wrong, and so was the
   theoretical reason above.** There are three things, not two: the **process**; the
@@ -1542,7 +1584,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Theoretical reason: A14 — implicature through θ_u is conventionalized, so the exposure ensemble is
   the mechanism, and its weights are a claim about what a listener hears. This phase declines the
   claim rather than inventing frequencies for it.
-- Depends on it: every θ_u\*, hence every reported result; §5.6's prediction that exposure frequency
+- Depends on it: every θ_u\*, hence every reported result; §5.7's prediction that exposure frequency
   shifts strengthening, which is now explicitly a prediction **about departures from the stipulated
   uniform**; Appendix B's "prior over utterances" sentence; O8, which asks the same question about
   ensemble **membership** for §5.2's predicates and inherits this principle.
@@ -1757,7 +1799,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   class, and the cell states in its own docstring that for *some* the kernel **is** the entry for
   *no* exactly, while for *all* it is a field no utterance names — architectural, not lexical
   (A18). Appendix F §2 says the ensemble is the **inventory's**, never the experiment's.
-- **Depends on it:** `sections_3-6.md` §§4.2, 5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
+- **Depends on it:** `sections_3-6.md` §§4.2, 5.2, §5.5, §6 item 4; `background_sections.md` §1.7.
 - **Finding, 2026-09-17** (record `agent/history.md` §12, raised under
   O13). **The ensemble question has an answer wherever the predicate is tested against an antonym.**
   In Xiang et al.'s paradigm every item pairs an adjective with its antonym, and in the uttered
@@ -2061,7 +2103,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   what fixes it — the record shows the data want it to vary with the object's familiarity as well as
   with the expression, which is a context dependence Λ does not now have. (c) Whether a relative
   adjective's cut t enters the model at all, which is what H2's open-scale half requires.
-- **Depends on it:** `sections_3-6.md` §§4.2, 5.2 and §5.4, `background_sections.md` §1.7, revisions.md
+- **Depends on it:** `sections_3-6.md` §§4.2, 5.2 and §5.5, `background_sections.md` §1.7, revisions.md
   Q7; the reading of the Λ axis in Text cell 6 and Code Cell 4; A5's θ_L and §3 item 6's Λ = 8.
 - Evidence: **Code Cell F of `main.ipynb`** (2026-09-22), which is now the source of record;
   `agent/audits/2026-09-17-scale-classes/output.txt` and `xiang_items_output.txt` are the superseded
