@@ -1,0 +1,13 @@
+statuses (of 32 = 8 blocks x 4 criteria) agreeing with K = 801, per n;
+nodes in the all-region at K = 101, and the least odd K giving 21 of them at Z = 6
+   n  K=101  K=201  K=401  in region  K for 21
+   2     31     32     32         41        51
+   3     32     32     32         37        57
+   4     31     32     32         34        61
+   5     32     32     32         32        65
+  10     32     32     32         26        81
+  15     32     32     32         22        93
+  20     32     32     32         20       105
+  50     31     32     31         12       173
+ 100     31     32     31          6       341
+ 201     30     31     31          1     39747

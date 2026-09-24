@@ -173,15 +173,15 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 4.4 The five priors | 220 | **470** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
 | 4.5 The plane, and where both conditions hold | 165 | **530** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **2,485** | |
+| **5. Discussion** | 705 | **2,585** | |
 | 5.1 What an alternatives level would have to supply | 390 | **560** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5); **+100 the same day for the order of the two motivations, and why the conjecture stays second** (PP10) |
 | 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **860** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement; **+60 on 2026-09-23 for F.10's half-width control** (Z5) |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
-| 5.5 Limits (was 5.3) | 65 | **645** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5); **+120 the same day for the open question of whether the read-out falls under locality** (`agent/review_2026-09-23_proof_scope.md` PS8); **+180 on 2026-09-24 for what is known about the node count at both ends, and four directions** (`agent/history.md` §17, NK6–NK7) |
+| 5.5 Limits (was 5.3) | 65 | **745** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5); **+120 the same day for the open question of whether the read-out falls under locality** (`agent/review_2026-09-23_proof_scope.md` PS8); **+180 on 2026-09-24 for what is known about the node count at both ends, and four directions** (`agent/history.md` §17, NK6–NK7); **+100 the same day for the proposal that $(K,Z)$ be a function of $n$, not implemented** (user) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **6,210** | |
+| **Total** | **2,400** | **6,310** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -887,7 +887,7 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   locality debt (D12) is admitted. This section states neither.
 ---
  
-# 5. Discussion (about 2,485 words)
+# 5. Discussion (about 2,585 words)
  
 ## 5.1 What an alternatives level would have to supply (about 560 words)
  
@@ -1342,7 +1342,7 @@ what it costs and what is still owed.
   natural misreading: the claim is about what a level can be asked, not about what is true.
 ---
  
-## 5.5 Limits (about 645 words, was §5.3)
+## 5.5 Limits (about 745 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
   reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
@@ -1407,6 +1407,18 @@ what it costs and what is still owed.
     a number**: $K$ counts its units, so a representational minimum would say how many that choice
     needs, the cost §3's opening names in words (A21). (iv) **Prefer a smooth statistic where one
     exists**, so that the reported quantities converge as the fields do.
+  - *A proposal: the grid as a function of $n$.* $n$ fixes the all-region's lower end,
+    $\theta_L=\log(2n-1)$; $Z$ fixes its upper end, and $K$ how finely it is resolved. On a fixed
+    grid, raising $n$ narrows the region the criteria read until $\theta_L$ reaches $Z$, so a grid
+    tied to $n$ would keep that region comparable across granularities. **The proposal is joint**:
+    a rule for $K$ alone, keyed to the region's width $Z-\theta_L$, diverges as $\theta_L$
+    approaches $Z$, because the width is set partly by the stipulated $Z$. Under A21 the proposal is
+    also representational: $K$ counts the situation units and $Z$ bounds the scale they cover, so
+    $(K,Z)$ as a function of $n$ says that a scale is represented at the extent and resolution its
+    granularity calls for. It would replace two stipulated constants with one rule, whose form would
+    itself need a motivation, and it joins O1's question of what fixes $n$. **This phase does not
+    implement it**: the evaluations it reports do not need it, and a fixed grid is the more
+    determinate stipulation (§3's opening).
 - **Open: is the read-out part of the system, and so bound by locality?** Bogacz's model has no
   read-out stage (background §2.4), so the tutorial does not say. The question arises here because
   the hidden variables are a field over the scale (`agent/decisions.md` A21): any statement about

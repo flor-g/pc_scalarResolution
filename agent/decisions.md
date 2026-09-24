@@ -1296,6 +1296,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     such rung. At that fixed offset, agreement still falls with the spacing (q shift 116 of 121 at
     K = 51, 76 at K = 7), so placement does not account for all of it. The user ruled (NK-D1) that
     the lower bound is **suspected, not established**, and §4.2's guard stays with n and Z.
+  - **2026-09-24, the grid as a function of n: proposed, not implemented (user).** §5.5 proposes
+    that (K, Z) be set by n jointly, and says this phase does not implement it because the
+    evaluations do not need it. Evidence for the second half, class (e) and not quoted:
+    `agent/audits/2026-09-24-node-count/n_by_K_output.txt`. Appendix A's n ladder at K = 101 agrees
+    with K = 801 in 30 to 32 of its 32 statuses per rung, although the all-region holds 26 nodes
+    at n = 10 and 1 at n = 201; holding 21 nodes in it would need K = 39747 at n = 201, which is
+    why the proposal is joint. The constants stay as this entry states them.
 
 ### I7. Appendix E's E2 mirrors main's Code Cell 2, verified by E3
 - Status: Settled

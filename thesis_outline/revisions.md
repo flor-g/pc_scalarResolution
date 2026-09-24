@@ -1646,6 +1646,16 @@ NK. Code Cell A's `node_count_report` (NK1) prints both ends; this section is th
 3. What §5.5 quotes about the coarse end is a description of printed columns. The reading "cut-based
    statistics, not the model" is the outline's, and the notebook takes no position on it (B10).
 
+**Added 2026-09-24 (user): the grid as a function of n.** §5.5's K bullet gains a proposal that
+(K, Z) be a function of n, with its reasons (n fixes the region's lower end, Z its upper, K its
+resolution; a rule for K alone diverges as θ_L → Z; under A21 the proposal is representational),
+and the statement that this phase does not implement it because the evaluations do not need it.
+The user ruled that the numerical question (does the K the evaluation needs depend on n) is not
+discussed, to save space. **No number is quoted**, so C6 is not triggered; the "not needed" rests on
+`agent/audits/2026-09-24-node-count/n_by_K_output.txt` (the n ladder's statuses at K = 101 agree
+with K = 801 in 30 to 32 of 32 per rung). If a writer quotes any of it, it must be printed first.
+§5.5 645 → 745, §5 2,585, Total **6,310**.
+
 ---
 
 ## 14. PS1–PS11: the proof-scope review, as it bears on the outlines (2026-09-23)
