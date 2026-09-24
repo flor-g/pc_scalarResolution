@@ -45,10 +45,17 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
 - **B10 / C7.** The notebook states what the ladder shows and takes no position on it; the words
   "condition" and "verdict" are not used.
 - **C6.** Every count the outline will quote must first be printed by the new block.
-- **NEEDS THE USER (NK-D1).** Whether §4.2's guard gains a **K end** beside its n and Z ends, and
-  whether the headline counts (33, 13) are reported with the K range beside them. This changes how
-  a headline count is presented (`agent/agent.md` §5.4), so the prose tasks NK6–NK7 wait on it. The
-  plan below drafts the agent's recommendation — yes to both, K = 101 stays the reported grid.
+- **NK-D1, answered by the user 2026-09-24: no K end in §4.2's guard.**
+  > No to the 4.2 guard. we don't know the lower bound of K yet, so we don't want to add that to the
+  > guard as if we know it. What we need in the outline is a warning to the reader on a suspected
+  > lower bound of K and pointer to the relevant section that discusses what we know about it.
+
+  So the lower bound is **suspected, not established**, everywhere it is written, notebook
+  included. The guard stays with n and Z. The outline carries a **warning** where the reader meets
+  the grid (§4.3, which reports grid refinement) and a **pointer** to §5.5, which holds what is
+  known. The headline counts get **no per-site K qualifier**; the finer-end movement of the plane
+  counts (33 → 36, 13 → 15) is reported in §5.5 beside the coarse end. *Agent's reading of the
+  ruling on that last point, named to the user.*
 
 ## 4. Tasks, in order
 
@@ -76,8 +83,9 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
   node count**", stated and not interpreted — K is the grid parameter Text cell 3 §1 calls an
   accuracy parameter; the finer end moves the plane counts by a few boundary cells and leaves
   Part D unchanged; the coarse end tracks the fine grid to K = 81 and, below K = 61, alternates with
-  the distance from θ_L to the first node inside the cell, under the smooth mask too; the cell
-  prints it and the appendix draws nothing from it.
+  the distance from θ_L to the first node inside the cell, under the smooth mask too. It says that
+  this **suggests a lower bound on K without establishing one**, since placement and resolution are
+  not separated; the cell prints it and the appendix draws nothing further from it.
 - [ ] **NK4. Text cell 3 §1**: qualify "K is an accuracy parameter: refining it converges" — the
   settled fields and E[s] converge, while a criterion's status, being a threshold on them, can
   change at a boundary cell with K; pointer to Appendix A. (Correction of an overstatement in the
@@ -86,19 +94,20 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
   cells of Text cell 6"; Text cell 6's "both q criteria hold together in 33", "over the 33 cells",
   "13 cells"), one clause each: the counts are at K = 101, and Appendix A prints them at other K.
   No number changes.
-- [ ] **NK6. Outline, the implications** (waits on NK-D1):
-  - §4.2's guard gains a K end: the counts are relative to the node count by a few boundary cells,
-    as to n and Z; Part D is K-robust. §4.5's 33 and 13 carry "at K = 101" and the printed range.
-  - §5.5 Limits, a bullet beside the truncation bullet: **what the node count shows, and what it
-    does not**. The fine end: counts conditional by a few cells, subset relation intact. The coarse
-    end: the evaluation needs about K = 81 at Z = 6 (a spacing near 0.15 in log-odds, about 20
-    nodes across the cell of *all*) before its statuses track the fine grid; below it they track
-    node placement against θ_L. That is a **floor for the evaluation's statistics, not a measured
-    minimum for the model**, and the paper says so.
-  - Sites that quote 33 or 13 (`sections_3-6.md` central claim line 45, §3.6 item 3, §4.5, §6 and
-    any others the sweep finds): each carries the K qualifier once, or points to §4.2.
-- [ ] **NK7. Outline, the direction of future investigation** (§5.5, or §5.6 if the user prefers
-  it among the predictions):
+- [ ] **NK6. Outline, the warning and what is known** (NK-D1 answered):
+  - **§4.3, the warning.** After the grid-refinement sentence: refinement converges in the tail,
+    but a **lower bound on K is suspected** — below about K = 61–81 at Z = 6 the criteria stop
+    tracking the fine grid — and it is **not established**, because what the coarse ladder shows
+    cannot yet be told apart from node placement against θ_L. One sentence and a pointer to §5.5.
+    §4.2's guard is **not** touched.
+  - **§5.5 Limits, what is known**, a bullet beside the truncation bullet: the fine end (Part D
+    unchanged to K = 1601; the plane counts move by a few boundary cells, 33 → 34–36 and 13 → 15,
+    subset relation intact at every K); the coarse end (tracks the fine grid to K = 81, the first
+    Part D flip at K = 61, alternation with node placement below, the smooth mask no cure); and the
+    reading the evidence allows — a suspected floor for the evaluation's cut-based statistics, not
+    a measured minimum for the model. Every number from NK1's printed block.
+- [ ] **NK7. Outline, the direction of future investigation**, closing §5.5's bullet (or §5.6 if
+  the user prefers it among the predictions):
   1. **Separate placement from resolution**: hold θ_L on a Voronoi boundary at every K (or integrate
      the cell with exact partial weights), so that what remains of the degradation is the field's
      own resolution — the audit the user declined now, named as the next step.
@@ -110,7 +119,7 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
      §3's opening names in words.
   4. **Replace cut-based statistics where a smooth one exists**, so that the reported quantities
      inherit the convergence the fields have.
-- [ ] **NK8. Word budget**: §4.2, §5.5 (and §5.6 if used) raised; §§4–5 and Total re-summed;
+- [ ] **NK8. Word budget**: §4.3, §5.5 (and §5.6 if used) raised; §§4–5 and Total re-summed;
   headings in step with the table (`agent/agent.md` §5.3's bookkeeping rule).
 - [ ] **NK9. Records**: I6 findings marked printed (class (e) → sourced); I10 finding (placement);
   E-register **E19** classing the new quantities (reported statistics; the smooth mask a control);
@@ -118,9 +127,8 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
 - [ ] **NK10. Close**: C6 sweep over both notebooks and the outline; dangling-reference check;
   commit per task under §4.3; fold this record into `agent/history.md` when the user confirms.
 
-**Order and gates.** NK0–NK5 can run now: they print and describe, and change no headline number.
-NK6–NK7 wait on NK-D1. Code before prose (§5.3): NK3–NK5 are written against NK2's executed
-output, never against the audit's.
+**Order and gates.** NK-D1 is answered, so nothing waits on the user except the start. Code
+before prose (§5.3): NK3–NK7 are written against NK2's executed output, never against the audit's.
 
 ## 5. Findings log
 
