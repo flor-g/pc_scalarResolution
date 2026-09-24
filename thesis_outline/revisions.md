@@ -1623,7 +1623,7 @@ deferring to §3 (the two files had been pointing at each other).
 
 ## 16. OR: the outline reorganized (2026-09-24)
 
-The working record is `agent/review_2026-09-24_outline_organization.md`. **What changed in the
+The working record, closed, is `agent/history.md` §18. **What changed in the
 outlines:** §4 split into §4.1 (scalar implicature, the old §§4.1–4.6) and §4.2 (the Xiang et al.
 comparison, moved from §5.2, which keeps the discussion); §5.1 reordered so the design leads; §5.5
 grouped under four heads; derivations, verification figures and enumerations replaced by pointers
