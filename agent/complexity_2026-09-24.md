@@ -130,6 +130,14 @@ Later in the session, after the agent had twice misread the scope:
     makes the directed generative model cyclic unless the utterance's form is split off as a root
     observation. Both were raised under the agent's first, mistaken reading (utterance complexity in
     RSA's sense) and may or may not bear on the reading above.
+  **The user's ruling on (a) and (b), 2026-09-24:** agreed, both. They are the **forms in which a
+  proxy of the cost can take part in the dynamics**: (a) a configuration-level proxy, κ(H), available
+  before an inference starts, whose coupling closes a loop in determination and not in time; (b) a
+  cross-trial proxy, the realized cost of completed inferences fed to the slow timescale, conditional
+  on a halting signal. Neither is the true cost of the inference in progress, which steps 1–3 keep.
+  **Next (the user's):** before steps 1–3 are settled, clear what "self-referential" commits the
+  argument to, against the literature on self-reference (Hofstadter's GEB; Open questions about time
+  and self-reference in living systems, in the user's reading list).
   **To settle:** whether 1–3 is the position the dissertation takes; how (a) and (b) bear on it; and
   where it is written (candidates: an `agent/decisions.md` entry; §5.3, which interprets the cost;
   §5.5; Appendix G).
