@@ -1433,6 +1433,38 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   with χ_some = 0 at a node where Eq. (A1) requires 1. Every other printed line in both notebooks,
   and every figure, is unchanged.
 
+### I14. The computational complexity is the simulation's, stated in Θ where tight and O where not
+- Status: Settled
+- Decided by: user (2026-09-24), except the three parts marked as the agent's below
+- Decision:
+  - **Scope.** The analysis is of the **simulation**: the serial arithmetic `code cell 1` performs, in
+    K, m, |Y| and θ_u. It is not a complexity of the architecture, and the text says which of its
+    quantities are also the architecture's: the size, Θ(K + m) units and Θ(Km) connections through
+    B, and the settling time in units of τ_φ. The user asked "(correct?)"; the answer, given in
+    chat before any work, was "mostly, with that qualification" (agent.md §5.4).
+  - **Notation.** Θ wherever a tight bound is shown; O only where the upper bound alone is. The
+    totals are O because the Euler step count is; the breakdown gives each part.
+  - **Placement.** `main.ipynb` Appendix G (cell 24) and Code Cell G (cell 25), References moving
+    to 26. The outline carries one bullet in §5.5's numerical-substrate group and a Tier C entry,
+    no new section. The evaluation harness's own runtime is not analysed. §5.1's O(n) against
+    O(log n) is a claim about an architecture not built and is left out.
+  - **Name.** "Computational complexity"; "realizability" stays O7's settling-cost sense.
+  - *Agent's, pending user confirmation:* (i) the step-count ladder holds θ_u **fixed as a
+    control** (B4) at 2, 5, 10 and 20, since θ* cannot be set; (ii) κ(H) = λ_max/λ_min is named
+    the **condition number** and kept apart from Text cell 4's stiffness ratio, with "condition"
+    used only in that term (C7, with Text cell 3 §2's "condition number 21.0" as precedent);
+    (iii) the wall clock is printed behind `cost:` and quoted by no sentence as a figure.
+- Theoretical reason: the dissertation's cost arguments (§4.1.6, §5.3) are about the architecture;
+  a complexity that did not say whose it is would let a serial machine's step count be read as a
+  demand on the modelled process. Eq. (G1) is what separates the two: N = (settling time in τ_φ) ×
+  8λ_max(H), and only the second factor carries θ_u².
+- Implementational reason: N is data-dependent; its lower bound needs the start to excite the
+  slowest mode, which Code Cell G shows for every run it prints and nothing guarantees in general.
+- Bogacz status: no operation is added. Code Cell G rebuilds H as `stiffest_state_rate` does, as a
+  diagnostic, and checks the two agree.
+- Depends on it: `main.ipynb` Appendix G, Code Cell G; `sections_3-6.md` §5.5 and Tier C.
+- Evidence: `agent/complexity_2026-09-24.md` §4, CX-F1 to CX-F6; Code Cell G's output.
+
 ---
 
 ## O. Open decisions
@@ -2639,3 +2671,17 @@ a number from it.
 - **(d) two ladders**, `FINE_NODE_COUNTS` (101 to 1601, doubling) and `COARSE_NODE_COUNTS` (odd K
   from 101 to 5). Odd K only at the coarse end, since an even K ties the central nodes of a
   symmetric prior (E18). No model constant changes; K = 101 stays the default everywhere else.
+
+**E20. The quantities Code Cell G adds (2026-09-24, CX1 of `agent/complexity_2026-09-24.md`).**
+Classed by the agent.
+- **(b) reported statistics** of the simulation, defined in Appendix G: the largest gap between H's
+  eigenvalues and Eq. (G1), relative to λ_max; κ(H); the stiffness ratio printed beside it for
+  contrast; the Euler step count N, N/κ(H), the largest derivative's decay per step over the second
+  half of a run times 8κ(H), and N dt/τ_φ. Nothing reads them back into the model.
+- **(c) a control**, labelled as one in the output and justified in Appendix G §3: θ_u fixed at 2,
+  5, 10 and 20 for the step counts, and at 20 for the wall clock.
+- **(d) ladders**: `SPECTRUM_NODE_COUNTS` (51, 101, 201), `SPECTRUM_BASIS_DEGREES` (1, 2, 3),
+  `STEP_COUNT_THETAS`, `TIMING_NODE_COUNTS` (101 to 3201). The spectrum check also evaluates H at
+  θ_u = 0, 1, 10, θ* and 1000, as arguments of a matrix and not as configurations run. No model
+  constant changes.
+- **Wall clock** behind `cost:` (agent.md §2 item 3, §5.2).

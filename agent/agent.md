@@ -49,7 +49,7 @@ agent works **from**.
 repository as remote `origin` (`https://github.com/flor-g/pc_scalarResolution.git`). The first
 commit is 499918c (2026-09-13). Procedures are in §4.
 
-### `main.ipynb`, by cell index (25 cells)
+### `main.ipynb`, by cell index (27 cells)
 
 | Index | Cell | Holds |
 |---|---|---|
@@ -69,7 +69,9 @@ commit is 499918c (2026-09-13). Procedures are in §4.
 | 15, 17, 19, 21 | Code Cells A-D | Each prints the numbers the appendix above it quotes; Code Cell A also prints Text cell 3 §2's (decision I10). |
 | 22 | **Appendix F** | H1 and H2 against Xiang et al. (2022), Eqs. (F1)–(F3). The only cell that reads a data file, and the only place Λ is fitted (S-1). States the two hypotheses, reports match and mismatch, and says nothing about what a mismatch is due to. |
 | 23 | Code Cell F | The numbers Appendix F quotes, in eight blocks. Runs at n = 4 in its own respawned network; the default n = 10 everywhere else is untouched. |
-| 24 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
+| 24 | **Appendix G** | The computational complexity of the **simulation**, not of the architecture (decision I14): the spectrum of H in closed form, Eq. (G1); the cost operation by operation, Θ where tight and O where not; the Euler step count, Eq. (G2); the total, Eq. (G3). |
+| 25 | Code Cell G | The numbers Appendix G quotes: the spectrum check, the step-count ladder (θ_u fixed, a control), and the wall clock behind `cost:`. Reads `evaluation_network` (Code Cell 2). |
+| 26 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
 
 ### `appendix_E.ipynb` (10 cells)
 
@@ -126,13 +128,13 @@ Each of these has broken at least once.
    import json, re
    def read(p):
        src = "\n".join("".join(c["source"]) for c in json.load(open(p))["cells"])
-       return src, set(re.findall(r"\\tag\{([A-F]?\d+)\}", src))
+       return src, set(re.findall(r"\\tag\{([A-G]?\d+)\}", src))
    pairs = [read("main.ipynb"), read("appendix_E.ipynb")]
    defined = pairs[0][1] | pairs[1][1]
    for src, _ in pairs:
        cited = set()
-       for m in re.finditer(r"(?<!Bogacz )Eqs?\.?\s*\(?([A-F]?\d+)\)?"
-                            r"(?:\s*[-–]\s*\(?([A-F]?\d+)\)?)?", src):
+       for m in re.finditer(r"(?<!Bogacz )Eqs?\.?\s*\(?([A-G]?\d+)\)?"
+                            r"(?:\s*[-–]\s*\(?([A-G]?\d+)\)?)?", src):
            cited |= {g for g in m.groups() if g}
        print(sorted(x for x in cited - defined if not x.isdigit()))   # must be []
    ```
@@ -194,6 +196,8 @@ than silently, but an agent renaming or re-signing these should know what breaks
   2026-09-23, PS11) and `node_count_report` (added 2026-09-24, NK1), so that their Part D rows
   are the ones Text cell 4b reports. Renaming any of
   them raises `NameError` in Code Cell A.
+- **Code Cell G reads `evaluation_network` from Code Cell 2** and respawns it at other K, m and
+  θ_u. It defines every other name it uses.
 - **Code Cell F reads `evaluation_network` from Code Cell 2** and respawns it at `num_atoms=4`.
   It defines every other name it uses, so `code cell 1` is untouched and coupling 9 stays quiet.
 - **Code Cell D overrides `predict_state` against main's signature**, `(phi_u, theta_u=None)`, in
