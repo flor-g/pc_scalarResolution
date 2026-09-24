@@ -1284,6 +1284,19 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
       measures below K ≈ 81 is the discretization of cut-based statistics, not a representational
       minimum of the model; isolating the latter needs statistics that do not depend on node
       placement against θ_L (for instance θ_L held on a Voronoi boundary at every K). Not applied.
+  - **2026-09-24, printed (NK1): the K half now has a cell, and two corrections to the finding
+    above.** Code Cell A's `node_count_report` prints the floor, both ends and the smooth-mask
+    control; every number above reproduces, so the finding moves from class (e) to sourced for
+    prose. (1) **Seven** plane cells change status at some finer K, not five: the audit checked
+    q shift, q position and the two conjunctions, and (α 16, Λ 32) and (α 32, Λ 8) move in mode
+    position and mode shift alone. (2) **The node-at-3.0 account is incomplete**: K = 101, 81 and 61
+    also carry a node at ζ = 3.0 and track the fine grid. The column that sorts the coarse rungs is
+    the grid's **lower edge** of the all-region, the first node inside minus half the spacing (the
+    trapezoidal weights, Eq. 2): below θ_L the q conjunction runs 33, 32, 29, 24, 9, 0 as the gap
+    grows (K = 101, 81, 61, 41, 25, 21, then 0 on every such rung); 0.056 above it, 32 to 39 on every
+    such rung. At that fixed offset, agreement still falls with the spacing (q shift 116 of 121 at
+    K = 51, 76 at K = 7), so placement does not account for all of it. The user ruled (NK-D1) that
+    the lower bound is **suspected, not established**, and §4.2's guard stays with n and Z.
 
 ### I7. Appendix E's E2 mirrors main's Code Cell 2, verified by E3
 - Status: Settled
@@ -1341,6 +1354,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     cell's ladders, need Code Cell 2b's rows (Code Cell 2 runs before 2b), and Code Cell A has no
     mirror, so E2, E2b and E3 are untouched. Appendix A's closing paragraph describes the block,
     and Text cell 4 points to it.
+  - **2026-09-24, NK1: Code Cell A takes the node-count ladder** (agent's placement, pending user
+    confirmation). The same rule: the four criteria and the plane along the third grid axis sit
+    beside their ladders in n and Z, and the block needs Code Cell 2b's rows. Code Cell 2's
+    refinement check stays with E[s]; Code Cell A has no mirror, so E2, E2b and E3 are untouched.
 
 ### I11. Code Cell 2b, its mirror, and how E3 finds both
 - Status: Settled
@@ -2598,3 +2615,16 @@ a number from it.
   "larger than both neighbours" test finds **no** maximum of ℓ₀ for a prior symmetric about ζ = 0
   on a grid with an even node count: the two central nodes are exactly equal (Z = 5, 7, 8, 10 of
   the Z ladder, K = 84, 118, 134, 168). The count is therefore tie-aware, matching the argmax.
+
+**E19. The quantities `node_count_report` adds (2026-09-24, NK1 of
+`agent/node_count_2026-09-24.md`).** Classed by the agent.
+- **(b) reported statistics**: the four criteria and two conjunctions at other node counts, cell by
+  cell agreement with K = 801 and between K = 401 and 801 (the floor), Part D statuses agreeing,
+  the cells that change status from K = 101, and two grid descriptors per rung: the first node
+  inside the all-region, and its lower edge (that node minus half the spacing), each less θ_L.
+  Nothing reads them back into the model.
+- **(c) a control**, labelled as one in the output: the same ladder with exclusion sharpness 0.1,
+  the smooth mask of Code Cell 2's Sec. 1 check.
+- **(d) two ladders**, `FINE_NODE_COUNTS` (101 to 1601, doubling) and `COARSE_NODE_COUNTS` (odd K
+  from 101 to 5). Odd K only at the coarse end, since an even K ties the central nodes of a
+  symmetric prior (E18). No model constant changes; K = 101 stays the default everywhere else.

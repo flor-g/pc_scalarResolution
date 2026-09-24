@@ -59,8 +59,8 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
 
 ## 4. Tasks, in order
 
-- [ ] **NK0. Checkpoint.** `git status` clean; record the hash here.
-- [ ] **NK1. Code: `node_count_report` in Code Cell A**, called after `peak_locality_report`.
+- [x] **NK0. Checkpoint.** `git status` clean at `5e755a1` (2026-09-24).
+- [x] **NK1. Code: `node_count_report` in Code Cell A**, called after `peak_locality_report`.
   Prints, under *some*, each configuration at its own θ_u\* (A9):
   1. **The floor**: K = 401 against K = 801, cells agreeing per criterion, of 121.
   2. **The finer end**: Part D's nine rows × four criteria at K = 101, 201, 401, 801, 1601, with
@@ -75,26 +75,27 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
      Cell 2's Sec. 1 check already uses), agreement columns only, labelled as a control (B4, C8).
   Acceptance: the numbers reproduce `coarse_ladder_output.txt`, `coarse_ladder_smooth_output.txt`
   and `plane_flips_output.txt`; runtime of the block recorded under `cost:`-free text only if
-  deterministic.
-- [ ] **NK2. Execute** main, then appendix_E (E3 reads main's Code Cells 2 and 2b; neither
+  deterministic. **Done**: the prototype reproduces all four audit outputs digit for digit and runs
+  in about a second. One column differs from the plan (finding NK-F2).
+- [x] **NK2. Execute** main, then appendix_E (E3 reads main's Code Cells 2 and 2b; neither
   changes, so E3 must pass with its usual shape). Acceptance: 0 errors, 8 and 5 figures, 15/15,
   E3 PASS (223/1/4; 263); a full output diff against NK0 shows only Code Cell A changed.
-- [ ] **NK3. Appendix A prose**: a paragraph after the half-width ladder, "**A third axis: the
+- [x] **NK3. Appendix A prose**: a paragraph after the half-width ladder, "**A third axis: the
   node count**", stated and not interpreted — K is the grid parameter Text cell 3 §1 calls an
   accuracy parameter; the finer end moves the plane counts by a few boundary cells and leaves
   Part D unchanged; the coarse end tracks the fine grid to K = 81 and, below K = 61, alternates with
   the distance from θ_L to the first node inside the cell, under the smooth mask too. It says that
   this **suggests a lower bound on K without establishing one**, since placement and resolution are
   not separated; the cell prints it and the appendix draws nothing further from it.
-- [ ] **NK4. Text cell 3 §1**: qualify "K is an accuracy parameter: refining it converges" — the
+- [x] **NK4. Text cell 3 §1**: qualify "K is an accuracy parameter: refining it converges" — the
   settled fields and E[s] converge, while a criterion's status, being a threshold on them, can
   change at a boundary cell with K; pointer to Appendix A. (Correction of an overstatement in the
   specification, not an interpretive change; flagged to the user with the diff.)
-- [ ] **NK5. Text cells 4 and 6**: where 33 and 13 are quoted (Text cell 4 near "across the 33
+- [x] **NK5. Text cells 4 and 6**: where 33 and 13 are quoted (Text cell 4 near "across the 33
   cells of Text cell 6"; Text cell 6's "both q criteria hold together in 33", "over the 33 cells",
   "13 cells"), one clause each: the counts are at K = 101, and Appendix A prints them at other K.
   No number changes.
-- [ ] **NK6. Outline, the warning and what is known** (NK-D1 answered):
+- [x] **NK6. Outline, the warning and what is known** (NK-D1 answered):
   - **§4.3, the warning.** After the grid-refinement sentence: refinement converges in the tail,
     but a **lower bound on K is suspected** — below about K = 61–81 at Z = 6 the criteria stop
     tracking the fine grid — and it is **not established**, because what the coarse ladder shows
@@ -106,7 +107,7 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
     Part D flip at K = 61, alternation with node placement below, the smooth mask no cure); and the
     reading the evidence allows — a suspected floor for the evaluation's cut-based statistics, not
     a measured minimum for the model. Every number from NK1's printed block.
-- [ ] **NK7. Outline, the direction of future investigation**, closing §5.5's bullet (or §5.6 if
+- [x] **NK7. Outline, the direction of future investigation**, closing §5.5's bullet (or §5.6 if
   the user prefers it among the predictions):
   1. **Separate placement from resolution**: hold θ_L on a Voronoi boundary at every K (or integrate
      the cell with exact partial weights), so that what remains of the degradation is the field's
@@ -119,12 +120,12 @@ From `agent/audits/2026-09-24-node-count/` and decision I6's two 2026-09-24 find
      §3's opening names in words.
   4. **Replace cut-based statistics where a smooth one exists**, so that the reported quantities
      inherit the convergence the fields have.
-- [ ] **NK8. Word budget**: §4.3, §5.5 (and §5.6 if used) raised; §§4–5 and Total re-summed;
+- [x] **NK8. Word budget**: §4.3, §5.5 (and §5.6 if used) raised; §§4–5 and Total re-summed;
   headings in step with the table (`agent/agent.md` §5.3's bookkeeping rule).
-- [ ] **NK9. Records**: I6 findings marked printed (class (e) → sourced); I10 finding (placement);
+- [x] **NK9. Records**: I6 findings marked printed (class (e) → sourced); I10 finding (placement);
   E-register **E19** classing the new quantities (reported statistics; the smooth mask a control);
   `thesis_outline/revisions.md` §15 as the outline-side view; this record's findings log.
-- [ ] **NK10. Close**: C6 sweep over both notebooks and the outline; dangling-reference check;
+- [x] **NK10. Close**: C6 sweep over both notebooks and the outline; dangling-reference check;
   commit per task under §4.3; fold this record into `agent/history.md` when the user confirms.
 
 **Order and gates.** NK-D1 is answered, so nothing waits on the user except the start. Code
@@ -132,4 +133,38 @@ before prose (§5.3): NK3–NK7 are written against NK2's executed output, never
 
 ## 5. Findings log
 
-(empty)
+- **NK-F1 (NK1): seven plane cells move at the finer end, not five.** The audit's
+  `plane_flips.py` checked q shift, q position and the two conjunctions only; the printed list adds
+  (α 16, Λ 32) in mode position and (α 32, Λ 8) in mode shift. §2 above and I6's first finding
+  said five; the outline quotes seven.
+- **NK-F2 (NK1): the column that sorts the coarse rungs is the lower edge, not the first node.**
+  The plan asked for the distance from θ_L to the first node inside the cell. That column is
+  +0.056 on K = 101, 81 and 61 as well, which track the fine grid, so it does not separate
+  anything. Under the trapezoidal weights the first node inside carries the interval down to the
+  midpoint with the node below; that midpoint minus θ_L does sort the rungs (negative: q
+  conjunction 33, 32, 29, 24, 9, 0 as it grows; +0.056: 32 to 39). Both columns are printed, and
+  I6's "node at ζ = 3.0" account is corrected in a new finding there.
+- **NK-F3 (NK1): at a fixed lower-edge offset, agreement still falls with the spacing** (q shift
+  116 of 121 at K = 51, 76 at K = 7, all at +0.056). So placement does not account for all of the
+  coarse end, and the ladder already separates the two in part. It still does not establish a
+  bound: the offset is held only at one value, never at zero.
+- **NK-F4 (NK6): the outline's §4.3 and §5.5 were drafted while NK2 ran**, from the prototype's
+  output, whose code is identical to the cell's; every number is checked against the executed
+  cell before commit.
+- **NK-F5 (NK2): acceptance met.** main 0 errors, 8 figures; appendix_E 0 errors, 5 figures; 15/15;
+  E3 PASS (223 identical / 1 changed / 4 inserted; 263). Against NK0 only Code Cell A's output
+  changed, apart from Code Cell 2b's and E2b's machine-timing `cost:` lines. main was run a second
+  time after NK-F6's fix; the diff between the two runs is the header lines alone.
+- **NK-F6: the block's header and Appendix A cited Eq. (2) for the trapezoidal weights.** Eq. (2) is
+  the quadrature inner product, and Text cell 3 §1 says only "fixed positive quadrature weights";
+  the trapezoidal rule lives in Code Cell 1's `build_grid`. Both now cite `build_grid`.
+- **NK-F7 (C6 sweep): two derived numbers replaced by printed ones.** "Within four cells of the
+  floor" became the printed ranges (119–121 at the floor, 117–120 at K = 81), and "three statuses
+  change at K = 61" became "only 33 of 36 agree". Every numeral in Appendix A's new paragraph is
+  found in Code Cell A's output.
+- **NK-F8 (NK5): the K = 101 clause went to the first quote of each count per text cell**, three
+  sites (Text cell 4's band of 33; Text cell 6's 33 and 13), not all six, so as not to repeat it.
+  The agent's scoping, named to the user.
+- **NK-F9 (§4.3): the warning was placed after the refinement/half-width pair, and E3's sentence
+  before it**, so that "the companion to that one" keeps its antecedent and E3's "every one of these
+  numbers" does not appear to cover Code Cell A, which E3 does not replay.
