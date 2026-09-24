@@ -1270,6 +1270,20 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     - So §4.5's 33 and 13, and every place they are quoted, are **K = 101 counts**, conditional on
       the node count by a few cells as they are on Z (E17) — at K = 101 the q count sits at the low
       end of the range the finer grids give. Not applied anywhere; the user decides (agent.md §5.4).
+    - **The coarse end, which the user asked for (2026-09-24): where results stop tracking the
+      fine grid** (`coarse_ladder_output.txt`, `coarse_ladder_smooth_output.txt`; odd K only;
+      agreement cell by cell with K = 801, whose own disagreement with K = 401 is 119–121 of 121).
+      K = 101 and 81 (spacing h = 0.12, 0.15; 26 and 21 nodes in the cell of *all*) sit at that
+      floor, with Part D 36 of 36 statuses. K = 61 (h = 0.2) is the first where Part D flips (33 of
+      36). **Below that the counts are governed by where the nodes fall against θ_L = 2.944, not by
+      the model**: every K with a node at ζ = 3.0, just inside the cell (41, 25, 21, 17, 13, 9, 5),
+      inflates P(all) and empties the q conjunction (0 at K ≤ 21 of that group), while K without
+      one (51, 31, 15, 11, 7) gives 32–39, close to the fine grid for the wrong reason. The smooth
+      mask (sharpness 0.1) does not cure it: the criteria themselves cut at θ_L (the all-region mass,
+      the mode position), and a mask width of 0.1 is below the spacing there. So what the ladder
+      measures below K ≈ 81 is the discretization of cut-based statistics, not a representational
+      minimum of the model; isolating the latter needs statistics that do not depend on node
+      placement against θ_L (for instance θ_L held on a Voronoi boundary at every K). Not applied.
 
 ### I7. Appendix E's E2 mirrors main's Code Cell 2, verified by E3
 - Status: Settled
