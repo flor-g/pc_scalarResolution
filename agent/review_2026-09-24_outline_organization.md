@@ -22,7 +22,7 @@ out of the two files would go.
 ## 2. The line between "result" and "technicality" (OR-D1, confirmed by the user 2026-09-24)
 
 A dissertation's §4 must report results, and a pointer cannot replace a number the discussion argues
-from. The agent's proposed line, **pending the user**:
+from. The agent's line, **confirmed by the user**:
 
 - **Stays in the outline:** every rationale and discussion; every number a claim in §§4–6 argues
   from (§4.4's table; the 33 and 13; the 15 and 9; one ladder figure per guard); the drafting
@@ -90,6 +90,39 @@ shrinks or grows but its entries stay valid.
   "nothing measured enters the background (BG7)". **Proposal:** the forward pointer names the
   parallel and sends the counts to §4.4.
 
+- **OR9. The Xiang comparison is evaluation, not discussion (the user, 2026-09-24).**
+  > I think the evaluation against Xiang data are essentially evaluations rather than discussions
+  > […] The content that are already in section 4 is evaluation on scalar implicature
+  > specifically. So any existing 4.* should be 4.1.* instead; then any evaluation against Xiang
+  > should be 4.2.*
+
+  **The new §4**, with a two-line opening naming the two evaluations and their different
+  configurations:
+  - **4.1 Scalar implicature** — the present §§4.1–4.6 become §§4.1.1–4.1.6, content unchanged by
+    this task (4.1.1 What is compared; 4.1.2 The criterion; 4.1.3 The specification holds; 4.1.4
+    The five priors; 4.1.5 The plane; 4.1.6 What the verdict needs, against what θ\* costs).
+  - **4.2 Scale classes against Xiang et al. (2022)** — §5.2's measurements move here:
+    4.2.1 *What is tested, and at what configuration* (n = 4, a fitted Λ, H1 and H2 stated as what
+    is tested, the open-scale half untested, the ensemble is the inventory's); 4.2.2 *Where the
+    model matches* (the fits, the half-width control, the utility level's gain, the image-type
+    sign); 4.2.3 *Where it does not* (the residuals); 4.2.4 *How far the utility level reaches*
+    (Eq. F3's sign result and the Eq. 24 limit as measured facts; the parity loadings as a pointer
+    to Appendix F).
+  - **§5.2 stays numbered §5.2** and keeps the discussion: why no position is taken on H1, the one
+    causal statement, what the comparison is worth against Xiang et al.'s conclusion, the
+    calibration, and the θ_A instinct. About 500 of its 860 words move to §4.2; the total stays.
+  - **Consequences the move exposes.** (i) §4.1.1's "all internal to the model; no quantitative
+    comparison offered" is scoped to §4.1 by the numbering, and §4.2.1 states its own comparison;
+    Xiang et al.'s own models' R² stay cited as *their reported fits*, not as a comparison this
+    dissertation runs. (ii) §4.2.1 says §4.1.2's criterion does not apply there. (iii) Pointers to
+    §5.2 for the comparison are re-aimed: Central claim, the scope table's Tier A row, §5.6's
+    fourth prediction, §6 item 4, background §1.7.
+  - **Cross-references.** "§4.x" → "§4.1.x" in the live files: `sections_3-6.md` (94),
+    `background_sections.md` (13), `agent/decisions.md` (26), and one comment in Code Cell A
+    ("Sec. 4.5"; a comment, so no re-execution). `revisions.md` (100) and `agent/history.md` are
+    logs: a mapping note at the head of `revisions.md` §16, and the binding lists of §§14–15
+    updated, rather than rewriting history.
+
 ## 4. Findings: content (questions 2 and 3)
 
 Checked against the notebooks' markdown on 2026-09-24. "In the notebook" means the passage or its
@@ -144,6 +177,9 @@ content is rationale and literature, as the rule wants.
 - [x] **OR-D1.** Confirmed by the user 2026-09-24 ("Your decisions are confirmed"), with the proposals of §§3–4.
 - [ ] **OR-A. Housekeeping** (OR1, OR2, OR3): header, bookkeeping moved to `revisions.md`, one
   form for writer's notes. No content change.
+- [ ] **OR-S. The new §4** (OR9), before any pointer pass, so that pointers are written against
+  the new layout: renumber, move §5.2's measurements to §4.2, add §4's opening, re-aim references,
+  re-sum the word table.
 - [ ] **OR-B. Notebook first** (OR-N1, OR-N2): Appendix C and Appendix A (or Text cell 3 §1) gain
   the two technical passages; no code changes, so no re-execution is needed. Code before prose does
   not bind here, since neither passage quotes a number, but each is checked against the equations it
