@@ -3,13 +3,13 @@
 The closed working records of this project, in one file, ordered by when each was opened.
 
 **What this is.** While a change was in progress it had a working record in
-`procedure_records/`, on the pattern `agent.md` §5.3 describes: the user's instruction
+`procedure_records/`, on the pattern `agent/agent.md` §5.3 describes: the user's instruction
 verbatim, the decisions it rested on, a numbered task list, the verification, and numbered
 findings. All sixteen closed. They are consolidated here on 2026-09-23 and the directory is
 removed.
 
 **What was kept, and what was not.** Each record keeps its **findings** and task outcomes,
-because those carry numbered IDs that `decisions.md` and `thesis_outline/revisions.md` cite
+because those carry numbered IDs that `agent/decisions.md` and `thesis_outline/revisions.md` cite
 as evidence, and those citations now resolve here. Dropped: drafts, superseded prose,
 repeated output dumps and the long narration of steps that landed. **Nothing is lost**: each
 section ends with the command that prints its full original out of git.
@@ -19,7 +19,7 @@ added the file, *closed* the last commit that touched it. Where a record states 
 opening date in the user's words it is quoted under **Opened by**, and the two can differ by
 a few hours, the record being written after the instruction.
 
-Decisions are `decisions.md` entries. `agent.md` §5.3 is the standard the records were
+Decisions are `agent/decisions.md` entries. `agent/agent.md` §5.3 is the standard the records were
 written to, and it still governs any new one.
 
 ---
@@ -77,7 +77,7 @@ written to, and it still governs any new one.
 
 Record format: `[x] Tn (date): what changed; acceptance result; commit`.
 
-- [x] T0 (2026-09-13): checkpoint. The notebooks and `decisions.md` are unchanged since b1236f2. The
+- [x] T0 (2026-09-13): checkpoint. The notebooks and `agent/decisions.md` are unchanged since b1236f2. The
   uncommitted move of the change records into `procedure_records/` is the user's and is not folded
   into this change.
 - [x] T1 (2026-09-13): code. Code Cell E1, `infer`: a comment at the `tau_relay >= tau_error`
@@ -87,7 +87,7 @@ Record format: `[x] Tn (date): what changed; acceptance result; commit`.
 - [x] T2 (2026-09-13): prose, applied by a script requiring each edit to land exactly once.
   Acceptance: every edit landed once; both notebooks load as JSON (strict validation already fails
   at b1236f2, F4).
-- [x] T3 (2026-09-13): `decisions.md`: O5 and O6 settled by the user; a dated finding under A11; commit 235cb59 (T1-T3).
+- [x] T3 (2026-09-13): `agent/decisions.md`: O5 and O6 settled by the user; a dated finding under A11; commit 235cb59 (T1-T3).
 
 #### 3. Findings
 
@@ -842,7 +842,7 @@ Pre-populated from the audit (2026-09-11). New entries are appended during T0–
     ⟨ε_S, r⟩ where main forms Σ_j φ_u,j⟨ε_S, b_j⟩: mathematically identical, different summation
     order, so the gradient at θ_u = 0 comes out 267.49704880934354 against 267.49704880934377 and the
     θ_u after one update differs by **1.07e-14**.
-  - **NOTE ADDED 2026-09-21 (H12, `history.md` §16): the band below is the
+  - **NOTE ADDED 2026-09-21 (H12, `agent/history.md` §16): the band below is the
     floor AT THIS theta_u, not the floor.** The floor is **4.547e-13 x lambda_max(H)**, flat to four
     significant figures from theta_u = 13.4 to 61.3, and 8.2e-11 to 1.6e-10 is what that gives at
     the lambda of this run. F34's conclusion is unaffected and in fact generalized; what it
@@ -1098,7 +1098,7 @@ Pre-populated from the audit (2026-09-11). New entries are appended during T0–
 
 Record format: `[x] Tn (date): what changed; acceptance result; commit`.
 
-- [x] T0 (2026-09-13): checkpoint. HEAD e03268a; the notebooks, `decisions.md` and `agent.md` are
+- [x] T0 (2026-09-13): checkpoint. HEAD e03268a; the notebooks, `agent/decisions.md` and `agent/agent.md` are
   unchanged since. `thesis_outline/` is staged by the user and is not part of this change; commits
   here name their paths with `git commit --`.
 - [x] T1 (2026-09-13): code. `delta_readout_report` in Code Cell 2, defined before RUN and called
@@ -1112,8 +1112,8 @@ Record format: `[x] Tn (date): what changed; acceptance result; commit`.
 - [x] T3 (2026-09-13): prose against the outputs (§4), 10 edits in Text cells 3, 4 and 6. Acceptance:
   each landed once; the 25 decimals the guide quotes are all in main's executed Code Cell 2 output.
   Markdown only, so no stored output changes and E3 is unaffected.
-- [x] T4 (2026-09-13): `decisions.md`: A13 status, A16 and B7 added, dated findings under B1 and C3,
-  D9 resolved and its register row. `agent.md`: §2 item 7 (E3 replay), §5.1 baseline.
+- [x] T4 (2026-09-13): `agent/decisions.md`: A13 status, A16 and B7 added, dated findings under B1 and C3,
+  D9 resolved and its register row. `agent/agent.md`: §2 item 7 (E3 replay), §5.1 baseline.
 - [x] T5 (2026-09-13): committed T1-T4 as cb8cc6a, by explicit paths; `thesis_outline/` left staged.
 - [x] T6 (2026-09-13): DEC4 and DEC5 confirmed. Text cell 3 §7, at the first mention of *literal*:
   one sentence that its denotation here is distinct from RSA's (Frank & Goodman, 2012) and the
@@ -1187,7 +1187,7 @@ decimal the guide quotes is in main's executed Code Cell 2 output.
 - **DEC2 (user, 2026-09-13).** Sense 3 (Appendix C §7) takes no term. It is phrased as a projection
   that "collapses a contrast between exclusion sets", which matches existing usage (Text cell 5
   Part A; Appendix C's table). The agent named the subject as "$m=2$" and "$m=1$" rather than "this
-  map", following that table. "Expressible" and "representable" were avoided (decisions.md O7).
+  map", following that table. "Expressible" and "representable" were avoided (agent/decisions.md O7).
 - Sense 2 (the cost sense) is untouched, and O7 stays open for it.
 
 #### 2. Tasks
@@ -1205,14 +1205,14 @@ decimal the guide quotes is in main's executed Code Cell 2 output.
     direction $m=1$ misses is the middle interval …, a difference of two exclusion sets, so $m=1$
     *does* collapse a contrast, the one between *some* and *all*, and that is why $m=1$ actually
     fails."
-- [x] T2 (2026-09-13): executed main, then appendix_E (agent.md §5.1).
+- [x] T2 (2026-09-13): executed main, then appendix_E (agent/agent.md §5.1).
   - main.ipynb: RUNNER OK, 0 errors, 6 figures, 244 s.
   - appendix_E.ipynb: RUNNER OK, 0 errors, 3 figures, 684 s.
   - Stored outputs against HEAD: main cell 15 differs in the one header line only; main cell 7 and
     appendix_E cell 3 differ only in wall-clock `cost:` lines; every other output line is identical.
     Read off the new outputs: main 14/14 specification checks passed; appendix_E E2 18/18 passed,
     and E3 PASS, "the relay changes no reported quantity: 260 lines identical, 0 deleted".
-- [x] T3 (2026-09-13): `decisions.md` O7 finding; `thesis_outline/revisions.md` §7 note.
+- [x] T3 (2026-09-13): `agent/decisions.md` O7 finding; `thesis_outline/revisions.md` §7 note.
 
 #### 3. Findings
 
@@ -1452,7 +1452,7 @@ conjunction costs" (T6 item 2, R14).**
 > mode, sits at $s=0.5000$, $0.6726$, $0.8085$ and $0.8849$.
 
 Choices put to the user, all approved 2026-09-15:
-- E3 corrects an interpretive sentence (agent.md §5.4); its replacement follows R15.
+- E3 corrects an interpretive sentence (agent/agent.md §5.4); its replacement follows R15.
 - E2 writes the mode as the node $k^\ast$, following $k$ as the node index of Eqs. (25)–(27).
   Appendix C §8 writes $k_1,k_2$ for the utility coefficients, in a separate cell.
 - E5 gives the V as a result and stops at the measurement: the two paragraphs do not say which
@@ -1461,10 +1461,10 @@ Choices put to the user, all approved 2026-09-15:
 
 #### 7. T7 records: approved by the user 2026-09-15 and applied
 
-Six changes, in `decisions.md`, `thesis_outline/revisions.md`, `agent.md` and the notebook. Under
-agent.md §3.1 a settled decision is never edited, so B8 takes a dated finding rather than a rewrite.
+Six changes, in `agent/decisions.md`, `thesis_outline/revisions.md`, `agent/agent.md` and the notebook. Under
+agent/agent.md §3.1 a settled decision is never edited, so B8 takes a dated finding rather than a rewrite.
 
-**A. `decisions.md` B8, appended under *Findings added later*.**
+**A. `agent/decisions.md` B8, appended under *Findings added later*.**
 
 > - **2026-09-15. The criteria are printed, and so is the mechanism under them.**
 >   - T1 (2718404): Code Cells 2 and 2b, mirrored in E2 and E2b, print per row the modes of ℓ₀,
@@ -1482,7 +1482,7 @@ agent.md §3.1 a settled decision is never edited, so B8 takes a dated finding r
 >   - Every number in this entry's *Evidence* and in the F4/F5 findings above is therefore printed
 >     by a cell, and the numbers Q2 and Q6 of `thesis_outline/revisions.md` quote are sourced (C6).
 
-**B. `decisions.md` E register, new entry E14.**
+**B. `agent/decisions.md` E register, new entry E14.**
 
 > **E14. The quantities T1–T3 added (2026-09-15).** Classed by the agent; the counterfactual label
 > was confirmed by the user 2026-09-14.
@@ -1510,7 +1510,7 @@ agent.md §3.1 a settled decision is never edited, so B8 takes a dated finding r
 >   its configuration's own Λ and θ_u\*, and §8 says so.
 > - Code Cell 2b's own quantities stay under E12, and E13's masses are unchanged.
 
-**B2. `decisions.md` C section, new entry C8 (the user, 2026-09-15).**
+**B2. `agent/decisions.md` C section, new entry C8 (the user, 2026-09-15).**
 
 > ### C8. "Control" names a manipulation of the model; an algebraic one is a counterfactual manipulation
 > - Status: Settled
@@ -1523,7 +1523,7 @@ agent.md §3.1 a settled decision is never edited, so B8 takes a dated finding r
 >   the tilt part alone and plus the width part alone.
 > - Theoretical reason: none. The distinction is for the reader (the user: "for the sake of not
 >   confusing the reader").
-> - Implementational reason: agent.md §3.3 keeps q_lit, the tempered control and the model apart, and
+> - Implementational reason: agent/agent.md §3.3 keeps q_lit, the tempered control and the model apart, and
 >   B4 lists the retained fixed-θ_u controls in `theta_u_learned_reach.md` §5.C. A field that is the
 >   tempered control plus part of the utility field would take a third name confusable with the
 >   second, and would enter that list without matching any run.
@@ -1532,7 +1532,7 @@ agent.md §3.1 a settled decision is never edited, so B8 takes a dated finding r
 > - Evidence: no setting of θ_u, Λ, μ_u or B makes the network settle on either field; each is
 >   φ_S\*(θ_u = 0) plus one column's share of Eq. (23)'s utility field.
 
-**C. `decisions.md` I register, new entry I12.**
+**C. `agent/decisions.md` I register, new entry I12.**
 
 > ### I12. The mode is the first node of an argmax, and the gap is printed
 > - Status: Settled
@@ -1547,7 +1547,7 @@ agent.md §3.1 a settled decision is never edited, so B8 takes a dated finding r
 >   makes the rule's reach visible instead of assumed.
 > - Bogacz status: statistic of the delta read-out (his Eq. 34); no counterpart in the tutorial.
 > - Depends on it: B8's two criteria; Code Cells 2, 2b, 4 and C.
-> - Evidence: the gaps printed in those cells; `audits/2026-09-13-delta-criteria/output.txt`.
+> - Evidence: the gaps printed in those cells; `agent/audits/2026-09-13-delta-criteria/output.txt`.
 
 **D. `thesis_outline/revisions.md`.** Three rows in §8, and two stale lines corrected. The R14 and
 R15 rows are the user's and are not edited; the note goes in §8.
@@ -1560,17 +1560,17 @@ R15 rows are the user's and are not edited; the note goes in §8.
 > Code Cell C, `utility_split_report`; Appendix C §8 |
 >
 > (2026-09-15: R14's and R15's code tasks, T1–T3 and T6 of
-> `history.md` §6, are closed; T7 and T8 remain.)
+> `agent/history.md` §6, are closed; T7 and T8 remain.)
 
 - Q2, under *The audit*: "**Nothing in this subsection is printed by a notebook cell yet** (see
   "Printing" below)." becomes "**2026-09-15: every number in this subsection is printed**, by Code
   Cells 2, 2b and 4."
-- Q6, at *Preliminary result*: "(record F4; `audits/…/mode_mechanism_output.txt`; not printed by any
+- Q6, at *Preliminary result*: "(record F4; `agent/audits/…/mode_mechanism_output.txt`; not printed by any
   cell)" becomes "(record F4; printed by Code Cell C and reported in Appendix C §8 since 2026-09-15)".
 
-**E. `agent.md` §3.3, the class (c) row (the user, 2026-09-15: "fix the error in agent.md").** The row
+**E. `agent/agent.md` §3.3, the class (c) row (the user, 2026-09-15: "fix the error in agent/agent.md").** The row
 cited "decision E4" for the rule that a control states its justification in the prose; the entry
-about controls is **B4** (E4 in `decisions.md` is the elicited-prior finding, and Code Cell E4 in
+about controls is **B4** (E4 in `agent/decisions.md` is the elicited-prior finding, and Code Cell E4 in
 `appendix_E.ipynb` is a third thing with that label). The row now cites B4, says a control is a
 configuration the network is actually run in, and adds C8's distinction: a quantity built by algebra
 on settled fields is a counterfactual manipulation, not a control.
@@ -1583,7 +1583,7 @@ Cell C is not mirrored there.
 
 Confirmed by the user 2026-09-15: I12; the Q2 and Q6 corrections made in place; C8's naming, so
 E14 classes the two single-part fields as counterfactual manipulations rather than as controls; and
-the `agent.md` fix. Nothing in T7 is left open.
+the `agent/agent.md` fix. Nothing in T7 is left open.
 
 - [x] **T0 (2026-09-14). Checkpoint.** HEAD 7854b8f, clean tree. T1 prints in Code Cell 2, and so in
   Code Cell 2b, which calls the same function (S-5 of `evaluation_partD_atStrongLambda.md`).
@@ -1621,7 +1621,7 @@ the `agent.md` fix. Nothing in T7 is left open.
     - q's two conditions beside them, so the rows can be compared.
   - The mode is the grid node where the field is largest, as B7 defines it. Say that ties are
     resolved to the first index, and print the smallest gap between the two largest nodes.
-  - Acceptance: the values equal `audits/2026-09-13-delta-criteria/output.txt` §PART D ROWS, and every
+  - Acceptance: the values equal `agent/audits/2026-09-13-delta-criteria/output.txt` §PART D ROWS, and every
     line the cell printed before is unchanged.
 
 - [x] **T2 (2026-09-14). Code Cell 4: the mode criteria recorded and summarized on the plane.** Closed:
@@ -1633,7 +1633,7 @@ the `agent.md` fix. Nothing in T7 is left open.
   shift criteria, the position criteria and the conjunctions, the 35 cells where a q criterion and its
   mode counterpart disagree (θ\*, P(all|some), shift, tempering, utility, both modes, the four yes/no),
   and the floors by α under both read-outs (the V), with * where a criterion also holds below its floor
-  (none do). C7 names throughout. Acceptance (`audits/2026-09-14-mode-plane/test_t2.py`, before
+  (none do). C7 names throughout. Acceptance (`agent/audits/2026-09-14-mode-plane/test_t2.py`, before
   execution): existing lines unchanged; counts 67/59/13 against 74/59/33, unmoved 4, differing modes 0,
   gap 5.60e−05, agreement 53/21/14/33, 59/0/0/62, 13/20/0/88, all 35 rows and the V table equal to
   `output.txt`: PASS. Executed: main 0 errors, 8 figures, 14/14, 251 s; the only output change is Code
@@ -1661,7 +1661,7 @@ the `agent.md` fix. Nothing in T7 is left open.
   lists, so the plane is Code Cell 4's. Prints Blocks 1-3 as recorded in §0, under C7 names; the two
   single-part fields are labelled as counterfactual, not network states (agent, pending user
   confirmation: a construction of the report, not a control of the model). Acceptance
-  (`audits/2026-09-14-utility-split/acceptance.py`, run before insertion): every number of
+  (`agent/audits/2026-09-14-utility-split/acceptance.py`, run before insertion): every number of
   `mode_mechanism_output.txt` and `halving_check_output.txt` for Part D's four diffuse rows, every plane
   count, the 21-cell and ten-cell tables: PASS. Executed: main 0 errors, 8 figures, 14/14, 266 s; the
   only output change is Code Cell C's 91 added lines, equal to the pre-insertion test; appendix_E 0
@@ -1689,7 +1689,7 @@ the `agent.md` fix. Nothing in T7 is left open.
 - [x] **T5 (2026-09-14). Execute main, then appendix_E** — closed for T1: `RUNNER OK main.ipynb: error
   outputs 0, figures 8, runtime 248 s`, 14/14; `RUNNER OK appendix_E.ipynb: error outputs 0, figures 5,
   runtime 706 s`, E2 18/18, E3 PASS (202 and 233 lines identical), E4 unchanged. Output diffs against
-  7854b8f: the T1 block inserted, and the C7 renames. Record: `audits/2026-09-14-no-position/`. T2, T3
+  7854b8f: the T1 block inserted, and the C7 renames. Record: `agent/audits/2026-09-14-no-position/`. T2, T3
   and T6 remain open. Originally:
   - Baseline: main 0 errors, 6 figures, 14/14; appendix_E 0 errors, 3 figures, E2 18/18, E3 PASS.
   - Diff the stored outputs against the T0 hash: only insertions, plus `cost:` lines.
@@ -1702,14 +1702,14 @@ the `agent.md` fix. Nothing in T7 is left open.
   movement); E4 Text cell 4b, the eight rows and the steps at Λ = 512, with the flat row as plane cell
   (1, 512); E5 Text cell 6, the plane under the delta read-out and the V under both read-outs; E6 (the
   user, 2026-09-15) the word "delta" is the delta distribution, in the read-out's name and in the
-  delta-like prior, and is unrelated to $\Delta_y$. Applied by `audits/2026-09-14-mode-plane/apply_t6.py`.
+  delta-like prior, and is unrelated to $\Delta_y$. Applied by `agent/audits/2026-09-14-mode-plane/apply_t6.py`.
   Checks: every number in the new prose is printed by Code Cell 2, 2b, 4 or C; 74 anchors, 73 ToC
   links, none unresolved; no new "condition" or "verdict"; markdown spacing kept. Markdown only, so
   the notebooks were not re-executed. Originally:
 
 - **T6. Notebook prose. Wording needs the user's review before it lands.**
   - Text cell 4 Part D's reading guide defines (a) and (b) as reported statistics, class (b) of
-    agent.md §3.3, as unnumbered displays so Eqs. (1)–(41) do not shift (agent.md §2 item 5). It
+    agent/agent.md §3.3, as unnumbered displays so Eqs. (1)–(41) do not shift (agent/agent.md §2 item 5). It
     also announces the new lines.
   - Text cell 6, *Where both of Part C's conditions hold*: the delta criteria's counts, and the V
     under both read-outs, reported as a result (R14).
@@ -1718,23 +1718,23 @@ the `agent.md` fix. Nothing in T7 is left open.
   - Every quoted number is checked against the executed output.
 
 - [x] **T7 (2026-09-15). Records, approved by the user and applied; commit 5acb6b5.** §7 holds the
-  six changes: `decisions.md` B8's dated finding, the new C8 (control names a manipulation of the
+  six changes: `agent/decisions.md` B8's dated finding, the new C8 (control names a manipulation of the
   model; an algebraic one is a counterfactual manipulation), I12 (the argmax tie rule, confirmed by
   the user), E14 (the classing of everything T1–T3 added); `thesis_outline/revisions.md` §8's three
-  rows, its dated note, and the two stale "not printed by any cell" lines; `agent.md` §3.3's class (c)
+  rows, its dated note, and the two stale "not printed by any cell" lines; `agent/agent.md` §3.3's class (c)
   row, which cited decision E4 where the entry is B4, now also carrying C8's distinction; and C8's
   naming in Code Cell C's comment and printed legend and in Appendix C §8. Verified: main 0 errors, 8
   figures, 14/14, the only output change being Code Cell C's legend; Code Cells 2 and 2b unchanged, so
   appendix_E was not re-executed. Still stale, left for the user: `revisions.md` line 816 says R15's
-  investigation "is an open task in `history.md` §6", which T3 closed.
+  investigation "is an open task in `agent/history.md` §6", which T3 closed.
   Originally:
 
 - **T7. Records.**
-  - `decisions.md`: B8's implementational reason; an E-register entry for each new printed
+  - `agent/decisions.md`: B8's implementational reason; an E-register entry for each new printed
     quantity; an I-entry for the mode tie rule if T1 makes one.
   - `thesis_outline/revisions.md` §8: point the numbers of Q2 and Q6 at their cells.
 
-- [x] **T8 (2026-09-15). Commit** (agent.md §4.3), with the hash on each closed task: T1 2718404,
+- [x] **T8 (2026-09-15). Commit** (agent/agent.md §4.3), with the hash on each closed task: T1 2718404,
   T2 5ee04a6, T3 27a4122 with its prose 5a7bc8e, T6 af971c4, T7 5acb6b5, plus the record commits
   9937734, 92cf465, 4cb1d1a and 28c838a. Nothing is pushed; the user asks for pushes.
 
@@ -1852,8 +1852,8 @@ Cell 2 would then print neither the integrated run nor the floor that supports I
 
 - (a) No renumbering: e.g. "Text cell 4b" and "Code Cell 2b", with anchors `tc4b` and `code2b`.
   *Recommended.* Existing references to Code Cells 3 and 4 and Text cells 5 and 6 stay true: Text
-  cell 5 (9 mentions), Appendix C/D and Code Cell D comments, Code Cell 4, decisions.md,
-  revisions.md, agent.md, the records.
+  cell 5 (9 mentions), Appendix C/D and Code Cell D comments, Code Cell 4, agent/decisions.md,
+  revisions.md, agent/agent.md, the records.
 - (b) Renumber everything after it. That touches every site above, and every record that cites them
   by number.
 - The header prefix of the new code cell must not begin `# === Code Cell 2` followed by a colon-free
@@ -1888,7 +1888,7 @@ acceptance against the five-row Part D output. Options:
 - (b) T1 first, then move.
 
 
-##### S-6. Interpretive claims the new cell contradicts (agent.md §5.4: stop and ask)
+##### S-6. Interpretive claims the new cell contradicts (agent/agent.md §5.4: stop and ask)
 
 These sentences are true of the Λ = 8 table and become Λ-conditional once the new cell prints §1.
 Rewriting them is the user's call.
@@ -1915,7 +1915,7 @@ Rewriting them is the user's call.
 
 - Does the new cell add a figure of *some* under the five priors at Λ = 512? The four diffuse
   priors are now comparable with the delta row on one Λ, so a shared log axis could hold all five.
-- Figure count changes 6 → 7 if yes. The baseline in agent.md §5.1 must follow.
+- Figure count changes 6 → 7 if yes. The baseline in agent/agent.md §5.1 must follow.
 
 ---
 
@@ -2032,11 +2032,11 @@ Rewriting them is the user's call.
   - **I10** records that additions to Code Cell 2 go inside existing functions, so that E3's replay
     needs no new calls. A new cell departs from that implementational reason.
 
-- [x] **T0 (2026-09-14). Checkpoint.** This record and `audits/2026-09-14-strong-lambda/` committed
+- [x] **T0 (2026-09-14). Checkpoint.** This record and `agent/audits/2026-09-14-strong-lambda/` committed
   as a202cdb; the build and apply scripts read both notebooks at that commit.
 
 - [x] **T1 (2026-09-14). S-1 to S-5 and S-7 settled by the user; S-6 deferred to the prose pass.**
-  `decisions.md`: B9 (new), dated findings under B3 and B8, I10 marked amended, I11 (new: naming,
+  `agent/decisions.md`: B9 (new), dated findings under B3 and B8, I10 marked amended, I11 (new: naming,
   E2b, E3's two prefixes, E4's explicit delta row). Commit pending with T9.
   - **Implementation choices made by the agent, confirmed by the user 2026-09-14:**
     - the integrated RUN and THE ROUNDOFF FLOOR run for **every** both-conditions row whose arrival
@@ -2050,7 +2050,7 @@ Rewriting them is the user's call.
     - the spike block stays in `base_prior_sweep`, so Code Cell 2b also prints it at Λ = 512;
     - all three Code Cell 2b figures use a log vertical axis, like the moved delta-like figure;
     - Code Cell 2b's comments correct E9's stale "Code Cell 3" to "Code Cell 4".
-  - Scripts (scratch, to be filed under `audits/2026-09-14-strong-lambda/` at T9):
+  - Scripts (scratch, to be filed under `agent/audits/2026-09-14-strong-lambda/` at T9):
     `build_sources.py`, `cell2b_template.py`, `test_sources.py`, `apply_to_notebooks.py`, `new_e3.py`.
 
 - [x] **T2 (2026-09-14). New code cell after Code Cell 2** — closed: Code Cell 2b at main cell 9,
@@ -2109,20 +2109,20 @@ Rewriting them is the user's call.
     `cost:` lines excepted.
 
 - [x] **T7 (2026-09-14). Structure** — closed for code: Text cell 4b (heading, anchor `tc4b`, a scope
-  paragraph, anchor `code2b`); ToC regenerated (72 links, all resolve; indices checked); agent.md §1
-  cell maps, §2 couplings 1, 2, 7 and §5.1 baseline updated. decisions.md cites cells by name, not
+  paragraph, anchor `code2b`); ToC regenerated (72 links, all resolve; indices checked); agent/agent.md §1
+  cell maps, §2 couplings 1, 2, 7 and §5.1 baseline updated. agent/decisions.md cites cells by name, not
   index, so needs no change. Text cell 4b's argument is the prose pass (S-6). Originally:
   - New markdown cell before the new code cell, with its anchor inside the heading. The code anchor
-    goes at the end of that markdown cell (agent.md §2 item 6).
+    goes at the end of that markdown cell (agent/agent.md §2 item 6).
   - Regenerate the ToC (cell 0).
-  - Update agent.md §1's cell map: 21 → 23 cells; Text cell 5 onward shift by 2, so Code Cells A–D
+  - Update agent/agent.md §1's cell map: 21 → 23 cells; Text cell 5 onward shift by 2, so Code Cells A–D
     move to 15, 17, 19, 21 and References to 22.
-  - Update decisions.md entries that cite cell indices.
-  - New displays are unnumbered unless the user approves renumbering (agent.md §2 item 5).
+  - Update agent/decisions.md entries that cite cell indices.
+  - New displays are unnumbered unless the user approves renumbering (agent/agent.md §2 item 5).
 
-- [x] **T8 (2026-09-14). Records** — closed: decisions.md B9, I11, findings under B3 and B8, I10
+- [x] **T8 (2026-09-14). Records** — closed: agent/decisions.md B9, I11, findings under B3 and B8, I10
   amended, quantity trace entry for Code Cell 2b; `delta_criteria_printing.md` order note. Originally:
-  - `decisions.md`: E-register entries for each new printed quantity; B3/B7/B8/I10 updates per T1.
+  - `agent/decisions.md`: E-register entries for each new printed quantity; B3/B7/B8/I10 updates per T1.
   - `delta_criteria_printing.md`: note the order chosen under S-5, and that its T1 acceptance now
     spans two cells.
 
@@ -2259,7 +2259,7 @@ strengthen, stipulat, "we take / adopt", "counts as". Line wording is quoted in 
 #### 4. The wording pass (T1, 2026-09-14, under C7)
 
 Checkpoint 7854b8f. Script `c7_rename.py` (every replacement asserted exactly once; main cells and
-their appendix E mirrors patched together), filed with its run output in `audits/2026-09-14-no-position/`.
+their appendix E mirrors patched together), filed with its run output in `agent/audits/2026-09-14-no-position/`.
 Executed together with `delta_criteria_printing.md` T1: main 0 errors, 8 figures, 14/14; appendix_E 0
 errors, 5 figures, E2 18/18, E3 PASS (202 and 233 lines identical), E4 unchanged; ToC 72 links resolve.
 Every changed output line is a C7 rename, the T1 block, or Code Cell 3's "requirement".
@@ -2445,7 +2445,7 @@ Every changed output line is a C7 rename, the T1 block, or Code Cell 3's "requir
   excludes where `margin > 0`, i.e. ζ < −θ_L, **strict**; its own docstring states the non-strict
   form, so the code disagrees with both the docstring and Eq. (A1). At a node lying exactly on
   −θ_L, χ_no and χ_some would both be 0 and χ_no + χ_some = 1 would fail there, which Appendix C §2
-  and Eq. (C1) rely on. Prose defines and code implements (`agent.md` §3), so the code is the side
+  and Eq. (C1) rely on. Prose defines and code implements (`agent/agent.md` §3), so the code is the side
   that is wrong. **Left for the user** (§5.4): it is a code cell, and outside the scope of these two
   questions.
 - **F11 corrected, 2026-09-16.** F11 as first written said the divergence was "invisible today: no
@@ -2509,7 +2509,7 @@ one comparison cannot express that. The old uniformity was bought by getting one
 
 - [x] T0 (2026-09-16): checkpoint be47516. The tree carried one uncommitted line in `main.ipynb`
   cell 18, the user's; folded into this change's commit at their direction.
-- [x] T1: `audits/2026-09-16-exclusion-complement/acceptance.py`, run **before** applying.
+- [x] T1: `agent/audits/2026-09-16-exclusion-complement/acceptance.py`, run **before** applying.
   ACCEPTANCE PASS.
 - [x] T2: `apply.py --apply` patched `main.ipynb` cell 5 and `appendix_E.ipynb` cell 2, one site
   each. Writer round-trip verified byte-identical first, so nothing outside the hunk moved. The two
@@ -2552,7 +2552,7 @@ one comparison cannot express that. The old uniformity was bought by getting one
   out of scope here. Recorded as open decision O11 on 2026-09-17, with both options and the measured
   cost of each. **Settled by the user the same day** in favour of the closed form: Eq. (27)'s
   all-region is now R = {ζ ≥ θ_L}. See `all_region_closed.md`; no printed number moved.
-- **F4 (a coupling `agent.md` §2 did not list).** Code cell 1 and Code Cell E1 both define
+- **F4 (a coupling `agent/agent.md` §2 did not list).** Code cell 1 and Code Cell E1 both define
   `exclusion_indicator`, byte-identically, and §2's list covered Code Cell 2 ↔ E2 but not this pair.
   **Added as coupling 9 on 2026-09-17**; F6 gives the true width of the duplication.
 - **F5 (the fragility, quantified 2026-09-17).** θ_u\* at the override threshold is a **staircase**
@@ -2569,7 +2569,7 @@ one comparison cannot express that. The old uniformity was bought by getting one
 - **F6 (the duplication is far wider than one function).** Checking F4 properly: appendix_E's Code
   Cell E1 shares **878 of code cell 1's 912 lines**, and every `def` in main appears verbatim in E1,
   which adds only `relay`, `relay_loop_abscissa` and `theta_u_gradient_columns`. Nothing in the
-  project diffs the two. Added to `agent.md` §2 as coupling 9 on 2026-09-17.
+  project diffs the two. Added to `agent/agent.md` §2 as coupling 9 on 2026-09-17.
 
 *Full original:* `git show ace8204:procedure_records/exclusion_complement_fix.md`
 
@@ -2615,7 +2615,7 @@ mirrored.
 #### 3. Tasks
 
 - [x] T0 (2026-09-17): checkpoint e10f002, tree clean.
-- [x] T1: `audits/2026-09-17-all-region-closed/acceptance.py`, run **before** applying. PASS: the
+- [x] T1: `agent/audits/2026-09-17-all-region-closed/acceptance.py`, run **before** applying. PASS: the
   site counts match the scope, and the open and closed masks agree on all 55 (θ_L, K) combinations
   the notebooks use — while differing, as expected, at θ_L = 3.0 on K = 101.
 - [x] T2: `apply.py --apply`, every edit count-asserted, writer round-trip checked byte-identical
@@ -2708,7 +2708,7 @@ choices, positions 1..5):
 | relative | artifact | .052 | .026 | .054 | .186 | .681 | 5 | 4.42 |
 
 **F1 is internally inconsistent, and F3–F5 were scored against absent data. Both corrected
-2026-09-22 at T1/T2; `decisions.md` E16 carries the record.**
+2026-09-22 at T1/T2; `agent/decisions.md` E16 carries the record.**
 
 Two faults, one in the table above and one in the audit that produced it.
 
@@ -3011,7 +3011,7 @@ has**, which the experiment neither creates nor limits. §5.2 must say it that w
   So the quantity the separation would represent is **t**, the relative class's midpoint, not n; n
   stays with θ_L. S-2's decision is unchanged: the relative class is not modelled here.
 
-  Recorded as `decisions.md` **O14**. What follows for this change:
+  Recorded as `agent/decisions.md` **O14**. What follows for this change:
   - **No cut *t* enters the model.** Appendix A's identification argument and its "θ_L enters twice"
     paragraph are untouched, and the objection that motivated S-2 does not arise.
   - **§5.2 still states H2 in full** (the user's first instruction) and says plainly that its
@@ -3028,11 +3028,11 @@ has**, which the experiment neither creates nor limits. §5.2 must say it that w
 
 - **S-1. Is Λ fitted, and if so what class of quantity is a fitted Λ?** The section's Λ numbers come
   from choosing, per class, the Λ that best matches their data. Nothing in this project is fitted;
-  the four classes of `agent.md` §3.3 have no room for a fitted parameter, so a quoted best-fit Λ is
+  the four classes of `agent/agent.md` §3.3 have no room for a fitted parameter, so a quoted best-fit Λ is
   class (e) as things stand. Options: **(i)** quote the whole Λ scan and no single value, which
   keeps §5.2's standing "no fit is offered" sentence true and still carries F6's result (a finite Λ
   is required by two classes and not by the third); **(ii)** declare a fitted quantity as a fifth
-  class in `agent.md` §3.3 and record each fitted Λ under it; **(iii)** fix Λ = 8 for every class,
+  class in `agent/agent.md` §3.3 and record each fitted Λ under it; **(iii)** fix Λ = 8 for every class,
   which loses F6 and most of F4. The agent's reading is that (i) is the only option that leaves the
   rest of the paper's standards intact, but the choice is the user's.
 
@@ -3052,7 +3052,7 @@ has**, which the experiment neither creates nor limits. §5.2 must say it that w
   class profiles. The agent's reading is (i).
 
 - **S-4. n = 4.** Appendix F respawns the network at n = 4 so that Eq. (A5)'s cells are their five
-  scale positions. This is a setting of an existing quantity (class (a)) and needs a decisions.md
+  scale positions. This is a setting of an existing quantity (class (a)) and needs a agent/decisions.md
   entry saying why 4 and that the default n = 10 is untouched. Confirm.
 
 - **S-5. May a cell print a published number?** The comparison quotes their LG/QF/ST/hybrid R²
@@ -3069,7 +3069,7 @@ has**, which the experiment neither creates nor limits. §5.2 must say it that w
 
 **Raised 2026-09-21, SETTLED 2026-09-22 — S-8.** The user asked that **how the evaluation varies with
 n** be reported in the notebook and in the paper, the finding currently sitting in
-`history.md` §9 (F6–F10, decision **O10**). Two things are
+`agent/history.md` §9 (F6–F10, decision **O10**). Two things are
 the user's to settle:
 1. **Where it goes in the paper.** (a) §4, as a property of the evaluation, since it says which side
    of a crossing the reported verdicts sit on; (b) §5.2, next to H1, since n is what atomicity
@@ -3087,7 +3087,7 @@ the user's to settle:
 guard beside the softmax-nonlinearity guard, with a clause in §5.2's *Calibrate the claim* bullet;
 (b) Code Cell A prints it. The widening: the sweep runs **all four `BASE_WORLD_PRIORS`**, not the
 two the side quest used, because the two were `gaussian` and `skewed high` under ad-hoc names and
-the inconsistency was itself a `agent.md` §5.5 violation. It cost nothing — the block runs in
+the inconsistency was itself a `agent/agent.md` §5.5 violation. It cost nothing — the block runs in
 under 0.1 s — and it is what exposed the degenerate-ray crossing under `flat` (F7 qualified).
 
 **The budget moved.** S-8 estimated 60 words in §4 and 15 in §5.2. §4.2 took about **90**, because
@@ -3111,7 +3111,7 @@ dependence. Consequences for the tasks: **T2 block 4** keeps its per-class scan;
 the image-type difference as a measured difference, and may print the two best-fitting Λ of the
 minimum class (F9: shapes ≈ 6, artifacts ≈ 24) **labelled as a property of the fit, not as a fitted
 parameter**; **T10's prose** may never write that Λ is independent of image type — only that no
-second Λ was fitted, and why. `decisions.md` **O8**.
+second Λ was fitted, and why. `agent/decisions.md` **O8**.
 
 - [x] **T0. Checkpoint.** — done 2026-09-22 at `ae2f414`; tree clean but for three untracked backups.
       (The list was written at `acabb7e`; the U0–U14 change and T14–T16 landed in between.)
@@ -3125,7 +3125,7 @@ second Λ was fitted, and why. `decisions.md` **O8**.
       written:** the four OSF files were never vendored and the 2026-09-17 derivation kept only its
       result. The user settled this the same day — ship the aggregate with its provenance — so the
       README says plainly that the hash pins the file and certifies nothing about the derivation
-      (`decisions.md` A20). Running the check exposed a defect in the record: **F1's table below is
+      (`agent/decisions.md` A20). Running the check exposed a defect in the record: **F1's table below is
       internally inconsistent**, its two `shape` rows renormalized while their mean positions were
       not. See the correction under §5.
       **As specified:** **T1. The data file** (S-3 settled: yes). Add the derived aggregate under a new `data/xiang_2022/`
@@ -3212,29 +3212,29 @@ second Λ was fitted, and why. `decisions.md` **O8**.
       run 1–10 and 1–5 with no gaps (the §5.1 interrupted-run check). **Diffed against T0's
       `ae2f414`: every difference in either notebook is a `cost:` line, which E3 drops by design,
       and the only new cell is Code Cell F.** Two departures from the recorded baseline, both
-      bookkeeping rather than defects, and both fixed in `agent.md` §5.1: main's runtime was "about
+      bookkeeping rather than defects, and both fixed in `agent/agent.md` §5.1: main's runtime was "about
       250 s" from 2026-09-14 and is 855 s with every count unchanged, the cells added since
       accounting for it; and E3's line counts are 220 and 261 where the baseline said 203 and 234,
       because Code Cells 2 and 2b have gained printed lines. **What E3 asserts is the shape** — 0
       deleted, 1 changed (the pass count), 4 inserted — and that has never moved.
-      **As specified:** **T7. Execute** main, then appendix_E, by `agent.md` §5.1. Acceptance: main 0 errors,
+      **As specified:** **T7. Execute** main, then appendix_E, by `agent/agent.md` §5.1. Acceptance: main 0 errors,
       8 figures, 14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS on both cells. Record the
       new runtime. Diff every other cell's stored output against T0: only the two new cells may
       differ.
 
-- [x] **T8. agent.md.** — done 2026-09-22. §1's cell map 23 → 25 with rows for 22, 23 and References
+- [x] **T8. agent/agent.md.** — done 2026-09-22. §1's cell map 23 → 25 with rows for 22, 23 and References
       at 24; §2 gains coupling 10 (the data-file path) and a loud dependency (Code Cell F reads
       `evaluation_network` from Code Cell 2); §5.1's baseline updated.
-      **As specified:** **T8. agent.md.** §1's `main.ipynb` cell map (23 → 25 cells, the new rows, References at 24)
+      **As specified:** **T8. agent/agent.md.** §1's `main.ipynb` cell map (23 → 25 cells, the new rows, References at 24)
       and §5.1's baseline. §2 needs no new coupling if T6 holds; if Code Cell F reads the data file,
       add a coupling for that path.
 
-- [x] **T9. decisions.md.** — done 2026-09-22. New **A20** (n = 4, the fitted Λ and its scope, the
+- [x] **T9. agent/decisions.md.** — done 2026-09-22. New **A20** (n = 4, the fitted Λ and its scope, the
       data file and what its hash does and does not certify, the relative class's exclusion, the
       bracket). New register-E entry **E16**, classing every quantity Code Cell F prints and
       recording the absent-item defect. **O13 rewritten**: its audit numbers are marked superseded
       and the printed values take their place. **O8** gains the pointer to what Code Cell F builds.
-      **As specified:** **T9. decisions.md.** New entries or amendments for whatever S-1 to S-5 settle: the n = 4
+      **As specified:** **T9. agent/decisions.md.** New entries or amendments for whatever S-1 to S-5 settle: the n = 4
       configuration; the treatment of Λ; *t*, if it enters; the data file and its provenance;
       O13's status. Quantity-trace (register E) entries for every quantity Code Cell F prints, each
       assigned a class under §3.3. O8 gains the pointer.
@@ -3277,7 +3277,7 @@ second Λ was fitted, and why. `decisions.md` **O8**.
       rewritten, the old prediction withdrawn from §5.2, §5.6 and §6 item 4) · `282f5ac` T8–T9 (the
       records, and the absent-data defect) · `ee03438` (E3's drifted baseline counts) · `6e3326e`
       T2–T7 (the two cells, executed and verified). The notebooks went in one commit because E3's
-      verification spans both and `agent.md` §4.3 forbids committing half a coupling.
+      verification spans both and `agent/agent.md` §4.3 forbids committing half a coupling.
       Checkpoint `ae2f414`; the list was written at `acabb7e`, with U0–U14 and T14–T16 in between.
 
 **Added 2026-09-21 at the user's request (decision O10). Blocked on S-8.**
@@ -3293,7 +3293,7 @@ second Λ was fitted, and why. `decisions.md` **O8**.
       ⟨μ_u, Σc⟩, θ_u\*, the q shift, P(all∣*some*), the mode step and the **status of all four
       criteria**; then the κ ladder (F10) and the n = 1 refusal (F8). Two defects in the pre-existing
       block were fixed on the way: the mode shift was measured against the **tempered** fixed point
-      rather than **ℓ_0**, disagreeing with Code Cells 2 and 4 (`agent.md` §5.5); and the q shift was
+      rather than **ℓ_0**, disagreeing with Code Cells 2 and 4 (`agent/agent.md` §5.5); and the q shift was
       printed to four decimals, so a status change appeared between two numbers both shown as
       0.0000. F7 is qualified and F9 extended in the side-quest record.
 
@@ -3305,11 +3305,11 @@ second Λ was fitted, and why. `decisions.md` **O8**.
       criteria's readings **cross** with n" is **not** used: per the user's 2026-09-22 instruction
       and F9-extended, the prose says which criteria *change status* where, that a sweep brackets
       rather than locates the change, and that one such change is a sign flip at −7.593e-07. The
-      O1 non-claim is honoured and stated in both `decisions.md` O1 and R25.
+      O1 non-claim is honoured and stated in both `agent/decisions.md` O1 and R25.
 
-- [x] **T16. Records.** — done 2026-09-22. `decisions.md`: O10 gains the pointer to the printed source and its numbers
+- [x] **T16. Records.** — done 2026-09-22. `agent/decisions.md`: O10 gains the pointer to the printed source and its numbers
       leave class (e); O1 gains a line that the reporting exists, since F9 is what makes it
-      consequential. `history.md` §9 §4 loses "neither
+      consequential. `agent/history.md` §9 §4 loses "neither
       question has any prose site" for side quest 2. `thesis_outline/revisions.md`: a site entry and
       a §8 source row.
 
@@ -3424,7 +3424,7 @@ second Λ was fitted, and why. `decisions.md` **O8**.
      sentence, stated as a contrast.
 
 - **G9. Nothing here contradicts a settled decision.** A3 is confirmed, not challenged: every
-  finding above is a reason for it. Under `agent.md` §3.1 the reasons and the evidence are added to
+  finding above is a reason for it. Under `agent/agent.md` §3.1 the reasons and the evidence are added to
   A3 as a dated amendment, and A3 is not reopened.
 
 ---
@@ -3513,7 +3513,7 @@ under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against
 
 - **P-6. The Λ = 512 headline.** Rebuilding §§4.4–4.5 moves the verdict from "the conjunction holds
   under none" (outline) / "under one" (`revisions.md` §2) to **"under three of five"**. Under
-  `agent.md` §5.4 a headline result changing is a stop-and-ask. §5.1, §6 and the background's
+  `agent/agent.md` §5.4 a headline result changing is a stop-and-ask. §5.1, §6 and the background's
   forward pointers lean on the old count. Confirm the new headline sentence before any prose moves.
 
 - **P-7. How A3 is updated.** Recommendation: a dated amendment in place — the user's reasons (a)
@@ -3529,11 +3529,11 @@ under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against
 - [x] **U1. Settle the blocking decisions** (2026-09-17). P-4 and P-5 in §8, P-1, P-2, P-3, P-7,
       P-8, P-9, P-10 in §11, each verbatim. Commit `1c473d8`, `90a9352`.
 
-- [x] **U2. `decisions.md`** (2026-09-17, P-7 = amend). **A3 amended:** the two user reasons dated 2026-09-17, the third
-      reason (G4), the evidence line pointing at `audits/2026-09-17-ell0-placement/`, and the
+- [x] **U2. `agent/decisions.md`** (2026-09-17, P-7 = amend). **A3 amended:** the two user reasons dated 2026-09-17, the third
+      reason (G4), the evidence line pointing at `agent/audits/2026-09-17-ell0-placement/`, and the
       widened "Depends on it". Add a dated finding under **B1/B2** if P-6 changes the criterion's
       reported scope. Register-E entries for every quantity a cell newly prints (U3), each classed
-      under `agent.md` §3.3 — note that variant B's fields are a **counterfactual manipulation
+      under `agent/agent.md` §3.3 — note that variant B's fields are a **counterfactual manipulation
       (C8)**, not a control, since no setting of the model produces them, and C8's wording must be
       used in both the cell's labels and the prose.
 
@@ -3617,8 +3617,8 @@ under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against
         Sec. 5 report on E1's architecture — E1 for `code cell 1`, E2 and E2b's definitions for
         Code Cells 2 and 2b, Eq. (D5) written at the relay as g_S = ℓ₀ + θ_u r — reproduces **all
         61 lines** of main's stored Sec. 5 output, self-checks included. Script and output:
-        `audits/2026-09-17-ell0-placement/relay_check.py`, `relay_check_output.txt`.
-      - **Two loud dependencies, for U8 to record.** Neither is a coupling of `agent.md` §2's kind,
+        `agent/audits/2026-09-17-ell0-placement/relay_check.py`, `relay_check_output.txt`.
+      - **Two loud dependencies, for U8 to record.** Neither is a coupling of `agent/agent.md` §2's kind,
         because each fails with an exception rather than silently.
         1. *Names.* Code Cell D now reads `part_d_priors` and `criterion_for_some` (Code Cell 2)
            and `STRONG_LAMBDA`, `DELTA_ALL_ALPHA` (Code Cell 2b). Renaming any raises `NameError`.
@@ -3629,7 +3629,7 @@ under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against
            `TypeError`. `TruthSetNetwork` is not exposed the same way: it overrides only
            `predict_lexical`, whose signature the two notebooks share.
 
-- [x] **U7. Execute** (2026-09-18), main then appendix_E, by `agent.md` §5.1. Commit `bf746b1`.
+- [x] **U7. Execute** (2026-09-18), main then appendix_E, by `agent/agent.md` §5.1. Commit `bf746b1`.
       **Both at baseline, exactly.**
       - `main.ipynb`: **0 errors, 8 figures, 14/14, 249 s.** Every code cell source-identical to U6's
         commit; against its stored outputs the only differing lines are 12 `cost:` lines in Code
@@ -3641,7 +3641,7 @@ under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against
       - Over the whole change (checkpoint `b548e0a` to here), the only stored output that differs
         in anything but wall-clock is Code Cell D's, which is the one U3 and U4 set out to change.
 
-- [x] **U8. `agent.md`** (2026-09-18). Commit `1320fa1`.
+- [x] **U8. `agent/agent.md`** (2026-09-18). Commit `1320fa1`.
       - **§1 cell map.** The Appendices A–D row now names "where ℓ₀ enters (Sec. 5, Eqs. (D5)–(D7),
         decision A3)". The cell count stays 23 and the Code Cells A–D row stays accurate.
       - **§2, the two loud dependencies from U6**, recorded under a new *Loud dependencies* paragraph
@@ -3757,17 +3757,17 @@ under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against
         the three references in the scope tiers and one in `background_sections.md` (commitment 3)
         following. §§3.6, 4.6, 5.3 and 5.4 appear in the table with no bodies yet, and the note says
         so; the central claim's pointer to the new §5.3 now works.
-      - **`decisions.md` A3.** The Evidence line no longer says the numbers are "to be printed" or
+      - **`agent/decisions.md` A3.** The Evidence line no longer says the numbers are "to be printed" or
         class (e): Code Cell D prints them (U3, `23bdf23`), and the audit is named as the derivation.
       - **Not done, and not U13's:** the outline bodies whose budgets moved under R1–R17 but whose
         text U9–U12 did not touch (§3.4, §4.3, §5.1, §5.2, §5.5, §5.6). The table's note flags them.
 
 - [x] **U14. Close the change** (2026-09-21, commit `a580599`). One logical change per commit throughout; every task
-      line above carries its hash. The closing checklist of `agent.md` §6, item by item:
+      line above carries its hash. The closing checklist of `agent/agent.md` §6, item by item:
       - **Bogacz.** One new operation in the change, Eq. (D5), and it has Eq. (9)'s status, an
         instance under restriction (A3, D3). No divergence entry is needed.
       - **Quantities.** **A gap found and closed here:** U2 required Register-E entries for
-        everything Code Cell D newly prints, and U3 closed without writing them. `decisions.md`
+        everything Code Cell D newly prints, and U3 closed without writing them. `agent/decisions.md`
         now carries **E15**, classing the couplings and identities (a), BᵀW1 and the constant
         component (a), the σ-limit and same-φ_u blocks (a) with their two σ controls and the θ_u = 1
         control labelled, Part D under both placements (b), and Eq. (D5) itself as a counterfactual
@@ -3789,17 +3789,17 @@ under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against
       - **Anchors and numbering.** All 74 ToC links resolve; the body's tags run (1)–(41) complete;
         Appendix D's run (D1)–(D7).
       - **One deviation, reported rather than repaired.** The ten commits from U9 to U13 carry the
-        subject line and the attribution but not `agent.md` §4.3's `Why:` and `Verified:` lines;
+        subject line and the attribution but not `agent/agent.md` §4.3's `Why:` and `Verified:` lines;
         U0–U8's commits do. The history is not rewritten for it (that needs the user under §4.5);
         this entry is the record that the tasks were prose-only and that no notebook was executed
         for them.
 
       **The change is closed.** U4's retitle of Appendix D was **confirmed by the user on
       2026-09-21**, so nothing from this change is left hanging. What it does not touch is the
-      standing list of open decisions in `decisions.md`, which the user worked through on
+      standing list of open decisions in `agent/decisions.md`, which the user worked through on
       2026-09-21: O4 deleted, O9 settled, O10, O13 and O14 addressed, leaving **O1, O2 and O8**
       (and O3, still open by the user's own earlier choice). `revisions.md` §7's Q1–Q8 are all
-      resolved. Next is **T0–T13** of `history.md` §12.
+      resolved. Next is **T0–T13** of `agent/history.md` §12.
 
 ---
 
@@ -3811,7 +3811,7 @@ under **two of five** at Λ = 512 (Gaussian +0.0071, Beta(1,3) +0.0089), against
   argument carry §5.1 alone; (iii) keep it only inside §4.5 and let §5.1 and §6 point there.
   **Recommendation (i)**, because the result it rests on is untouched and printed, and because
   removing it would leave §6 item 3 with nothing to say about what a level would change. This
-  rewrites an interpretive argument, so under `agent.md` §5.4 it is the user's.
+  rewrites an interpretive argument, so under `agent/agent.md` §5.4 it is the user's.
 
 - **P-9. Which Λ the anti-exhaustive count is stated at** (V5, V8, V11). Four of five at Λ = 8, two
   of five at Λ = 512. Stating it at Λ = 512 is consistent with the rest of §4.4 and makes the
@@ -3853,7 +3853,7 @@ worked list V1–V13 above; U10 absorbs V4–V6.
 > separate name from n, since they are essentially the same quantity.
 
 - [x] **N0. Checkpoint** — clean tree at `bc97d29`.
-      *(orig:)* **N0. Checkpoint** (`agent.md` §4.2). Record `git rev-parse --short HEAD`.
+      *(orig:)* **N0. Checkpoint** (`agent/agent.md` §4.2). Record `git rev-parse --short HEAD`.
 
 - [x] **N1. Appendix A (S1)** — done. Eq. (A6) and every δ removed; the gradable case folded under Eq. (A5) as *the same formula, a different source for n*; the open part replaced by O1's decision — this phase stipulates n and models no unstable-atom predicate, the two candidate readings are stated with the position reserved, and a later phase reads n off a learned θ_L rather than fixing it.
       *(orig:)* **N1. Appendix A (S1), markdown.** Under Q-N1(i): Eq. (A6) is removed and its content folded
@@ -3903,27 +3903,27 @@ worked list V1–V13 above; U10 absorbs V4–V6.
 
   Fixed: all four now read Eq. (A5), and §5.2's sentence is rewritten to N's own position — the
   gradable case is *the same* Eq. (A5) read with a real n, not a different equation.
-  `agent.md` coupling 5 now requires the `cited` ⊆ `defined` direction and carries a check that
+  `agent/agent.md` coupling 5 now requires the `cited` ⊆ `defined` direction and carries a check that
   spans both notebooks. **Lesson:** a mirror check cannot catch a defect that is mirrored, and a
   removal check cannot catch what still points at what was removed.
 
 
 - [x] **N6. Executed** (shared with HA10d): main 0 errors, 8 figures, 14/14, 837 s; appendix_E 0 errors, 5 figures, 18/18, E3 PASS both, 1872 s. Only the expected lines moved.
-      *(orig:)* **N6. Execute** main then appendix_E (`agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
+      *(orig:)* **N6. Execute** main then appendix_E (`agent/agent.md` §5.1). Acceptance: main 0 errors, 8 figures,
       14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS. The only stored-output change should
       be Code Cell A's two lines and `cost:` lines.
 
-- [x] **N7. Prose and records** — done, plus the six missed sites above. `agent.md` §5.5 gains a general rule rather than a one-off: *one quantity, one name* — the resolution is n and never δ, "delta" being reserved for the delta read-out and the delta-like prior.
+- [x] **N7. Prose and records** — done, plus the six missed sites above. `agent/agent.md` §5.5 gains a general rule rather than a one-off: *one quantity, one name* — the resolution is n and never δ, "delta" being reserved for the delta read-out and the delta-like prior.
       *(orig:)* **N7. Prose and records.** `sections_3-6.md` §3.3 (S6) drops the δ clause and states the
       two-part gloss of n in one sentence; `scale_classes_hypothesis.md` §2 (S7) reads n for δ, which
-      also makes H1's wording match S-4's n = 4; `decisions.md` O1's 2026-09-15 finding (S8) reads n;
-      `agent.md` §5.5's naming list gains the one-name rule if it is the kind of clash that list
+      also makes H1's wording match S-4's n = 4; `agent/decisions.md` O1's 2026-09-15 finding (S8) reads n;
+      `agent/agent.md` §5.5's naming list gains the one-name rule if it is the kind of clash that list
       records.
 
 - [x] **N8. Commit** — done.
       *(orig:)* **N8. Commit**, one logical change per commit, hashes recorded above.
 
-**Sequencing note (2026-09-21).** `history.md` §15 (X0–X5, decision O2)
+**Sequencing note (2026-09-21).** `agent/history.md` §15 (X0–X5, decision O2)
 is approved and waiting too. It touches cells 16 and 4 where this list touches 14, 15, 5, 0 and E1,
 so the two do not collide, and N6's execution would cover both. Running them in one pass saves an
 `appendix_E.ipynb` run of about 11 minutes.
@@ -3949,9 +3949,9 @@ so the two do not collide, and N6's execution would cover both. Running them in 
 > go with (a). Again, I think this is essentially the same philosophy as fixing all sigma at 1.
 
 
-Working record for the change the user approved on 2026-09-21, settling `decisions.md` **O2** (the
+Working record for the change the user approved on 2026-09-21, settling `agent/decisions.md` **O2** (the
 ensemble's **weights**) and, from the same day, **A18** and **O8**'s ensemble half (its
-**membership**). Pattern: `agent.md` §5.3.
+**membership**). Pattern: `agent/agent.md` §5.3.
 
 **Task IDs here are `X0`–`X8`.** `N0`–`N8` (`resolution_naming.md`) and `T0`–`T16`
 (`scale_classes_hypothesis.md`) are live at the same time; the prefixes keep them apart.
@@ -3970,7 +3970,7 @@ but the σ sentence and the "exposure ensemble" clause are in Text cell 3's **pr
 
 Option (a) of the four put to them: **stipulate uniform p(y) and label it**, rather than argue it
 from a principle, fit it to corpus frequencies, or add a sensitivity sweep. Recorded as
-`decisions.md` **O2**, settled.
+`agent/decisions.md` **O2**, settled.
 
 ---
 
@@ -4010,7 +4010,7 @@ utterance at a time.
 | Y3 | `thesis_outline/sections_3-6.md` §5.6 | The exposure prediction reads as a prediction **about departures from a stipulated uniform**, which is what makes it a prediction at all |
 | Y4 | `thesis_outline/sections_3-6.md` §5.5 Limits | One clause: results are reported at uniform exposure; a frequency-bearing version is not built |
 | Y5 | `thesis_outline/revisions.md` | A site entry for Y3 and Y4, so the outline pass picks them up |
-| Y6 | `decisions.md` | O2 settled (done 2026-09-21); A14's "see O2" pointer still reads correctly |
+| Y6 | `agent/decisions.md` | O2 settled (done 2026-09-21); A14's "see O2" pointer still reads correctly |
 
 **No code changes and no numbers move**, because uniform is what the code already computes. Nothing
 here is printed, so C6 does not arise and neither notebook is re-executed for this change alone.
@@ -4020,7 +4020,7 @@ here is printed, so C6 does not arise and neither notebook is re-executed for th
 #### 4. Tasks, in order
 
 - [x] **X0. Checkpoint** — clean tree at `f64d32e` (2026-09-22).
-      *(original:)* **X0. Checkpoint** (`agent.md` §4.2). Record `git rev-parse --short HEAD`.
+      *(original:)* **X0. Checkpoint** (`agent/agent.md` §4.2). Record `git rev-parse --short HEAD`.
 - [x] **X1. Appendix B (Y1)** — done. The stipulation and the σ parallel sit with the prior-over-utterances sentence; the asymmetry went to the per-presentation passage instead, since that is the place it would be felt. No claim about how far a non-uniform p(y) moves θ\*.
       *(original:)* **X1. Appendix B (Y1).** The stipulation, the σ parallel, the later-phase note, and the
       asymmetry of §2 in one short passage. It does **not** claim how far a non-uniform p(y) would
@@ -4073,7 +4073,7 @@ asymmetry is **across** levels.
       from exposure but not conversely. It also says that ant coincides with ker for these absolute
       classes in this phase, with no thesis about antonymy.
 - [x] **X8. Records** — done: R24 in `revisions.md`, the wording constraint on `scale_classes_hypothesis.md` T10, and this block.
-      *(original:)* **X8. Records.** `decisions.md` A18 and O8 are written (2026-09-21); `revisions.md` gains the
+      *(original:)* **X8. Records.** `agent/decisions.md` A18 and O8 are written (2026-09-21); `revisions.md` gains the
       site entries for X6 and X7; `scale_classes_hypothesis.md` T2's block 1 and T10's prose carry
       the wording constraint of X7.
 
@@ -4355,7 +4355,7 @@ determinism and is reported, not absorbed.**
       `bc3a261`: Code Cell 2b's output is **300 lines before and after**, and the only differences
       are the wall-clock seconds and µs/step inside `cost:` lines (26.06 → 25.38 s, 45 → 44 µs/step
       and so on). **Every step count is byte-identical** — 574,120, 527,295, 242,163 — as are all
-      reported quantities. Those `cost:` lines are what `agent.md` §5.2 calls machine quantities and
+      reported quantities. Those `cost:` lines are what `agent/agent.md` §5.2 calls machine quantities and
       what E3 skips for that reason.
 
 - **H19. R23's first evidence was cherry-picked across priors; corrected 2026-09-22**
@@ -4408,7 +4408,7 @@ for a pass that has another reason to run. None of them affects a computed value
 - [x] **HA10d** — done, in one pass shared with N6. main 14/14 in 837 s, appendix_E 18/18 and E3 PASS in 1872 s. Diffed against `bc97d29`: the ONLY non-timing output changes are HA10c's three lines becoming two, N2's heading and δ line, and E3's counts following mechanically (222 → 221 recorded, 221 → 220 identical). No verdict and no reported quantity moved.
       *(orig:)* **HA10d.** Re-execute both, confirm 14/14, 18/18, E3 PASS, and that only these lines move.
 
-- [x] **HA0. Checkpoint** (`agent.md` §4.2), before any code cell is touched. **Clean tree,
+- [x] **HA0. Checkpoint** (`agent/agent.md` §4.2), before any code cell is touched. **Clean tree,
       `f07db5d`** (2026-09-21). No uncommitted work of the user's was present, so §4.2 step 2
       applies and the current commit is the checkpoint; no `backups/` folder is needed, since every
       file this change touches is tracked.
@@ -4440,14 +4440,14 @@ for a pass that has another reason to run. None of them affects a computed value
 - [x] **HA2. `infer`'s docstring and I3** — done 2026-09-21. **The task as written is void**: it
       said the 1e-9 "keeps its value" and "no behaviour changes", which H12 refuted. What was done:
       `infer`'s docstring in both notebooks carries the floor law and the keyed tolerance;
-      `decisions.md` **I3 is rewritten** as `DERIVATIVE_TOLERANCE_PER_RATE x lambda_max(H)`, keeping
+      `agent/decisions.md` **I3 is rewritten** as `DERIVATIVE_TOLERANCE_PER_RATE x lambda_max(H)`, keeping
       its 2026-09-13 reasoning as the *reason for* the revision rather than against it, and noting
       that its old claim of "two orders inside the checks' 1e-8" was one order even then;
-      `decisions.md` **A19 point 5 is revised** — the fast loop's tolerance is *not* inconsequential,
+      `agent/decisions.md` **A19 point 5 is revised** — the fast loop's tolerance is *not* inconsequential,
       H7 having been measured at Λ = 8 where the question does not arise; **F34 is annotated** in
       `theta_u_learned_reach.md` to say its 8.2e-11–1.6e-10 band is the floor *at that θ_u* and the
       law is 4.547e-13·λ_max(H), so F34's conclusion generalizes while the single fixed tolerance it
-      licensed does not; and **`agent.md` §5.2's rule** now states that the floor scales, so the
+      licensed does not; and **`agent/agent.md` §5.2's rule** now states that the floor scales, so the
       tolerance does, and that any threshold bounding a tolerance-linked quantity is expressed in
       multiples of the tolerance rather than as a constant.
 
@@ -4529,7 +4529,7 @@ for a pass that has another reason to run. None of them affects a computed value
       formatting, while the three tolerance lines are identical. **E3 PASS on both cells.** ToC
       untouched: no heading moved.
 
-- [x] **HA6. Executed** 2026-09-21 (`agent.md` §5.1), main twice (the second time to print the
+- [x] **HA6. Executed** 2026-09-21 (`agent/agent.md` §5.1), main twice (the second time to print the
       floor coefficient the prose needed). **main: 0 errors, 8 figures, 14/14, 1154 s.
       appendix_E: 0 errors, 5 figures, 18/18, E3 PASS on both cells, 2516 s.**
       **Departures from the recorded baseline, reported not explained away.** Runtime: 250 s → 1154 s

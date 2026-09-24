@@ -122,7 +122,7 @@ or a footnote.
   predicts that the O corner is just as representational**. State the limit in the same breath: the
   prediction is about the architecture as it stands, and it is **not** carried into the phase §5.1
   proposes, where the two endpoints stop being fixed by the same threshold and become asymmetric
-  (§5.2's instinct sentence; `decisions.md` O14). Position reserved on $\mu_u$, the one quantity
+  (§5.2's instinct sentence; `agent/decisions.md` O14). Position reserved on $\mu_u$, the one quantity
   that breaks the mirror. Quote no number here unless a cell prints it first (C6): the equivariance
   is measured in an audit, not in a notebook.
 - *Exclusion over truth sets* (App. D): stated in §3 in two sentences as a forced design choice,
@@ -246,7 +246,7 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   $g_L(\varphi_S)=\ell_0-\varphi_S$ (Eq. 9): the entry and the prior then meet as a single
   difference in the lexical level's residual, $\varphi_L-g_L(\varphi_S)=\varphi_L-\ell_0+\varphi_S$,
   which one error unit carries (Eq. 11; Bogacz, 2017), and raising $\Lambda$ pushes against $\ell_0$
-  there. **Nothing in the construction forces $\ell_0$ into $g_L$** (`decisions.md` A3). It could
+  there. **Nothing in the construction forces $\ell_0$ into $g_L$** (`agent/decisions.md` A3). It could
   have entered one map up, in the map from the utility state: $g_L(\varphi_S)=-\varphi_S$ with
   $g_S(\varphi_u)=\ell_0+\theta_uB\varphi_u$ (Eq. D5). That placement is as local as Eq. (9) and
   has the same Bogacz status (Appendix D Sec. 5), so locality does not decide between them. Give the
@@ -400,7 +400,7 @@ The settled state is a pair of fields. Turning it into a statement about belief 
 and the model admits two. Which one is in force decides what a result means, so the choice is stated
 here rather than assumed.
 
-- **The delta at the settled state** (Bogacz §3; `decisions.md` A16). *Assumes* the posterior is a
+- **The delta at the settled state** (Bogacz §3; `agent/decisions.md` A16). *Assumes* the posterior is a
   point mass at $(\varphi_S^\ast,\varphi_u^\ast)$ — the Laplace commitment the construction
   inherits, background §2.2 commitment 3. *Supplies* the settled vector itself, with **no
   normalization**, so the read-out is local. *Does not supply* masses or expectations: neither
@@ -423,7 +423,7 @@ here rather than assumed.
   1. *It is congruous with the construction.* Every cost the bullet above charges $q$ is a cost the
      delta does not carry. It needs no sum across nodes; it is what the dynamics settle to rather
      than an operation laid on top of them; and the architecture dictates it where it dictates
-     nothing about $q$ (`decisions.md` A16).
+     nothing about $q$ (`agent/decisions.md` A16).
   2. *The practical reasons are already on the page.* Halving does not move a peak, so the delta
      does not see the tempering at all and carries none of the tempering/utility confound that
      $\Delta$ has under $q$. What it registers is the utility level's own doing.
@@ -464,13 +464,13 @@ Three beliefs, all internal to the model:
 - $q_{\mathrm{lit}}$, the **untempered literal listener**, $\varphi_S=\ell_0-\varphi_L$: the prior
   restricted by the entry and nothing else. At this first mention, one sentence saying that what
   "literal" denotes here is distinct from what it denotes in RSA and the Gricean literature, and no
-  further explanation (DEC5 of `history.md` §4). Writer's note, not for the
+  further explanation (DEC5 of `agent/history.md` §4). Writer's note, not for the
   paper: the sentence does not contradict §3.2, whose identification with RSA's $L_0$ holds only as
   $\Lambda\to\infty$, a limit and not a setting, so the sentence is true of every configuration
   evaluated. $q_{\mathrm{lit}}$ is a fixed point of this network rather than an external
   construction, being what Eq. (15) returns as $\sigma_S\to\infty$, **and it is one because
   $\ell_0$ enters at $g_L$**: under the placement §3.2 sets aside, no setting of the variances
-  returns it (§3.2, reason 3; `decisions.md` A3). Say both; the first removes the obvious objection
+  returns it (§3.2, reason 3; `agent/decisions.md` A3). Say both; the first removes the obvious objection
   that the baseline was built to be beaten, and the clause names what that answer rests on.
 - The **tempered control**, $(\ell_0-\varphi_L)/2$, at $\theta_u=0$: the literal listener tempered
   by one half, the halving surviving into the belief because the read-out is exponential. It is a
@@ -513,7 +513,7 @@ quantitative comparison is offered or implied.
   q criteria are stated on the mass of an interval. $\theta_L=\log(2n-1)$ fixes that interval's
   lower end and the grid's half-width $Z$ cuts off its upper, so what the criteria are stated over
   has length $Z-\theta_L$ — and **both ends are stipulated, neither measured**: $n=10$ by
-  Appendix A, $Z=6$ by `decisions.md` I6, which fixes only $\theta_L<Z$ and nothing more.
+  Appendix A, $Z=6$ by `agent/decisions.md` I6, which fixes only $\theta_L<Z$ and nothing more.
   - *The $n$ end, which a cell prints.* Across both lexical strengths and all four base priors the
     q shift criterion changes status somewhere on a sweep of $n$, and *where* it changes depends on
     $\Lambda$ — granularity and lexical strength are not separable in what the tables below report.
@@ -526,7 +526,7 @@ quantitative comparison is offered or implied.
     peak of $\varphi_S^\ast$ climbs $0.8516$, $0.9168$, $0.9597$, $0.9862$, $0.9981$ in $s$ and
     crosses the cell's start at $0.9500$ between $Z=6$ and $7$. *(Writer's note: this supersedes
     the 2026-09-23 ruling that the $Z$ end takes no printed evidence, which the user reopened the
-    same day. `decisions.md` E17 records the supersession, and the audit stays class (e) for
+    same day. `agent/decisions.md` E17 records the supersession, and the audit stays class (e) for
     anything the cell does not print.)*
   - *How $Z$ reaches the verdict, and the one thing not to say.* Not by clipping a tail:
     $\varphi_S^\ast$ stays normalizable and nothing piles at the cut. $B$ is orthonormalized under
@@ -787,13 +787,13 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
 - **What $\theta_u^\ast$ would cost.** The same inference at $\theta_u^\ast=1407.77$ would take
   $3.98\times10^{8}$ steps at a separation of $7.9\times10^{6}$ — hours on the machine that ran it.
   Quote the step count and the separation, not the wall clock: the hours sit on a `cost:` line and
-  move with the machine (`agent.md` §5.2).
+  move with the machine (`agent/agent.md` §5.2).
 - **And $\theta_u^\ast$ is not what the flow reaches.** Code Cell 2b says so in its own output:
   $\theta_u^\ast$ lies orders of magnitude beyond both the conjunction's threshold and the halt,
   and **this integrator does not reach it at all**. That $\theta_u^\ast$ *is* the maximizer rests
   on the closed form and the monotone rise, not on an integration.
   *(Writer's note, not for the paper: the sharper statement — not within $0.1\%$ of
-  $\theta_u^\ast$ after $5{,}000$ updates, F15 of `history.md` §3 —
+  $\theta_u^\ast$ after $5{,}000$ updates, F15 of `agent/history.md` §3 —
   is **class (e)**. No cell prints it, and I8, which once licensed recorded scripts as sources, is
   superseded by C6 and I10. Do not reinstate those figures unless a cell prints them.)*
 - **Report, and stop.** §5.3 is where the cost is interpreted, and §5.5 is where the tolerance's own
@@ -1388,7 +1388,7 @@ citations for a structurally bounded alternative set.
    algorithmic-level peculiarities) is complete: the outline is `thesis_outline/background_sections.md`,
    whose 13-item drafting checklist is fully ticked. The two files this item used to name —
    `claude/background_revision_plan.md` and `background_sections_outline.md` — **do not exist**;
-   the second is one of the superseded Desktop drafts `agent.md` §1 lists as not maintained. Two
+   the second is one of the superseded Desktop drafts `agent/agent.md` §1 lists as not maintained. Two
    consequences for this document, both applied long since: §5.1's sub-bullet on alternative-sensitive versus
    world-sensitive utility is deleted rather than redirected, since the model has one utility level;
    and the background now introduces Levinson (2000), Rooth, Kratzer & Shimoyama, Katzir,

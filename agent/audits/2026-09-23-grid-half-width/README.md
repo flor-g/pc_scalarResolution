@@ -5,7 +5,7 @@ logit range from ±6 to ±8 "overturns the results". **The report is substantial
 framing is wrong**, and the difference matters for what to do about it.
 
 Everything here is **class (e)**: no cell prints any of it, so none of it may be quoted in prose
-(`agent.md` §3.3). The architecture is `exec`'d out of code cell 1 and Appendix F is re-run out of
+(`agent/agent.md` §3.3). The architecture is `exec`'d out of code cell 1 and Appendix F is re-run out of
 Code Cell 23 verbatim, so this measures the notebook's own code at a half-width it never varies.
 Node count is scaled with Z to hold the spacing at 0.12, which separates truncation from
 resolution — the notebook's own refinement check varies nodes **at fixed half-width** and says so in
@@ -125,7 +125,7 @@ conjunctions are empty there, not that the read-outs have come to agree.
 
 Not "the results are wrong". §4.4 and §4.5 carry an **unstated condition on Z − θ_L** that decision
 **I6** was supposed to discharge and never did: I6 was an empty entry, with no decision text, no
-reason and no evidence, while `agent.md` §3.3 makes the half-width a class (d) constant requiring
+reason and no evidence, while `agent/agent.md` §3.3 makes the half-width a class (d) constant requiring
 "evidence that the results it supports do not depend on its exact value".
 
 §4.2 already carries half of the right guard — it says the verdicts are relative to *n* and that the

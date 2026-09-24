@@ -1,6 +1,6 @@
 # Composition guide
 
-Working rules for prose in `main.ipynb` and `appendix_E.ipynb` (text cells, appendices, and in-code comments), `thesis_outline/sections_3-6.md`, and `thesis_outline/background_sections.md`. *(Filenames corrected at BG8–BG12, 2026-09-22; the two named before were the 2026-09-01 Desktop drafts, which `agent.md` §1 lists as not maintained.)*
+Working rules for prose in `main.ipynb` and `appendix_E.ipynb` (text cells, appendices, and in-code comments), `thesis_outline/sections_3-6.md`, and `thesis_outline/background_sections.md`. *(Filenames corrected at BG8–BG12, 2026-09-22; the two named before were the 2026-09-01 Desktop drafts, which `agent/agent.md` §1 lists as not maintained.)*
 
 **How to use it.** Entry 1 is a drafting rule: hold it in mind while the first draft is
 written, because a claim that violates it is not repaired by editing. Entries 2, 3, and 4

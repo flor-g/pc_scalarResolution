@@ -70,7 +70,7 @@ these columns.
 ## Scope
 
 All 96 items are stored, including the 40 **relative** ones. The relative class is **not modelled**
-(`decisions.md` O14, S-2): a relative adjective's cut is a context threshold that neither endpoint
+(`agent/decisions.md` O14, S-2): a relative adjective's cut is a context threshold that neither endpoint
 supplies, and this phase has one θ_L for both endpoints. The items stay in the file because the file
 is the data; what is modelled is a property of Code Cell F, not of the aggregate.
 
@@ -81,5 +81,5 @@ is the data; what is modelled is a property of Code Cell F, not of the aggregate
 ```
 
 Reads the CSV and reprints the six empirical class profiles (F1 of
-`history.md` §12). It is a data-integrity check and **not** a source
+`agent/history.md` §12). It is a data-integrity check and **not** a source
 for any number the paper quotes — under C6 that source is Code Cell F.

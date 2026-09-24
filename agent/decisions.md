@@ -1,10 +1,10 @@
 # decisions.md
 
 The record of architectural, evaluation, and implementation decisions for `main.ipynb` and
-`appendix_E.ipynb`, with who made each and why. Procedures for adding to it are in `agent.md` §3.
+`appendix_E.ipynb`, with who made each and why. Procedures for adding to it are in `agent/agent.md` §3.
 
 > **Seeded 2026-09-13 from earlier working records** (agent memory files and
-> `history.md` §3, abbreviated reach.md below), condensed. Equation numbers follow the 2026-09-09 numbering. Numbers
+> `agent/history.md` §3, abbreviated reach.md below), condensed. Equation numbers follow the 2026-09-09 numbering. Numbers
 > quoted here are for orientation: verify against the executed notebook before citing one.
 > Where the records do not say who made a decision, **Decided by** reads `not recorded`; the user
 > may wish to fill these in. Registers D and E were audited on 2026-09-13; their verdicts are
@@ -82,10 +82,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   2 of 5 there.
 - Evidence: **`main.ipynb` Code Cell D, *Sec. 5: where ell_0 enters*, which prints them** (task U3,
   2026-09-17, commit 23bdf23; P-1 settled by the user 2026-09-17), so they are no longer class (e)
-  under §3.3. The audit behind them, `audits/2026-09-17-ell0-placement/` at commit b548e0a, is the
+  under §3.3. The audit behind them, `agent/audits/2026-09-17-ell0-placement/` at commit b548e0a, is the
   derivation and is not what the prose cites.
 - **Dated finding, 2026-09-17 (evidence only; A3 is confirmed, not reopened).** The alternative was
-  measured rather than argued: `audits/2026-09-17-ell0-placement/` runs variant B (g_L = −φ_S,
+  measured rather than argued: `agent/audits/2026-09-17-ell0-placement/` runs variant B (g_L = −φ_S,
   g_S = ℓ₀ + θ_u Bφ_u) against the model, everything else held.
   - The placement changes exactly one quantity, the utility level's drive: c_y = BᵀW(ℓ₀ − φ_L) here
     against −BᵀW(ℓ₀ + φ_L) there. The two differ by exactly 2BᵀWℓ₀ (max 2.8e-14 over the three
@@ -148,7 +148,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   there is still no interior maximizer, and the constructor still refuses it — on float equality,
   which catches only the exact case, and that is now known to be enough.
 
-- **Finding, 2026-09-22 (Appendix F, block F.9; `audits/2026-09-22-theta-u-sign/`). Real elicited
+- **Finding, 2026-09-22 (Appendix F, block F.9; `agent/audits/2026-09-22-theta-u-sign/`). Real elicited
   priors reach the ray.** The degenerate ray was known to be reachable by varying n at the
   stipulated μ_u (2026-09-22, Code Cell B). It is also reached by **data**: among Xiang et al.'s 96
   items, the minimum class under artifacts contains an item with ⟨μ_u, Σ_y c_y⟩ = 0.3364 and
@@ -205,7 +205,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: see I1 for how θ\* is obtained.
 - Bogacz status: see D2.
 - Depends on it: every reported result.
-- Evidence: `history.md` §3 §1, T0-T11.
+- Evidence: `agent/history.md` §3 §1, T0-T11.
 - Findings added later: 2026-09-13 (agent). The outline revision (`thesis_outline/revisions.md`
   R9, item 2) argues that the slow flow of Eq. (20) never arrives at θ\* (F15) and that, without an
   alternatives level, a mechanism outside F̃ must halt it. A flow halted short of θ\* holds θ_u at
@@ -312,7 +312,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: the delta is an instance of his Eq. (34); q has no counterpart in the tutorial (D9).
 - Depends on it: Text cell 3 §4 item 5; Text cell 4 Part C, Part D, Reporting statistics;
   `delta_readout_report` in Code Cell 2.
-- Evidence: `history.md` §4 F1-F4.
+- Evidence: `agent/history.md` §4 F1-F4.
 - Findings added later:
   - **2026-09-23, the user takes a position this entry left open.** A16 settles what each read-out
     *is*; it does not say which one the dissertation prefers. The user's ruling: **both are
@@ -380,8 +380,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      stipulate a tolerance representative of the brain, and a tolerance need not be uniform across
      inference tasks. What can be argued is that a representative tolerance is almost certainly
      **greater than 1e-9**, so a real system halts **earlier** than the flow's asymptote.
-- **Evidence** (`history.md` §16, findings H1–H7; audit
-  `audits/2026-09-21-tolerance-halting/`): the rule is self-contained, using only |Δθ_u| and never
+- **Evidence** (`agent/history.md` §16, findings H1–H7; audit
+  `agent/audits/2026-09-21-tolerance-halting/`): the rule is self-contained, using only |Δθ_u| and never
   θ\*; at Λ = 512 every Part D verdict is unchanged for tolerances from 1e-9 to 1; the plane keeps
   33 of 121 and agrees with θ\* in 121 of 121 cells; and 4λ_max(H) falls from about 9e6 to about
   1e4. Two cautions: a coarse tolerance can halt at a slow **start** (H5), and a tolerance near 1e-9
@@ -426,8 +426,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   6. **Because no value is committed to, the model's predictions are reported in closed form** unless
      otherwise specified. This is what keeps every reported result independent of the ad hoc
      quantity, and it is position 1 restated.
-- Evidence for points 3 and 4: block 5 of `audits/2026-09-21-tolerance-halting/output.txt`.
-- Tasks: `history.md` §16 §7 (HA0–HA8). **Q-HA1 and Q-HA2 are answered:**
+- Evidence for points 3 and 4: block 5 of `agent/audits/2026-09-21-tolerance-halting/output.txt`.
+- Tasks: `agent/history.md` §16 §7 (HA0–HA8). **Q-HA1 and Q-HA2 are answered:**
   `learn_theta_u` halts by the committed tolerance, every realizable θ_u is reported at it, and the
   two rules that locate today's realizable values stop defining one.
 
@@ -466,13 +466,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: A9's ensemble, hence every θ\*; O8; §5.2's ensemble sentence; Appendix D §2's
   kernel table, which is where the notation is defined; §5.1's cascade, already written as
   ⟨E_some, ker E_some⟩ and ⟨E_all, ker E_all⟩.
-- Evidence: F20 and F1 in `history.md` §12; the ensemble probes of
-  `audits/2026-09-13-scale-structure/` (|θ\*| 4.6 to 91 across candidate ensembles, verdicts
-  unchanged in what was tested). Tasks: `history.md` §15 X6–X8.
+- Evidence: F20 and F1 in `agent/history.md` §12; the ensemble probes of
+  `agent/audits/2026-09-13-scale-structure/` (|θ\*| 4.6 to 91 across candidate ensembles, verdicts
+  unchanged in what was tested). Tasks: `agent/history.md` §15 X6–X8.
 
 ### A20. Appendix F's configuration: n = 4, a fitted Λ, and one data file
 - Status: **Settled 2026-09-22**, implementing S-1, S-3, S-4, S-5 and S-7 of
-  `history.md` §12 §8. Printed by **Code Cell F**; nothing in it
+  `agent/history.md` §12 §8. Printed by **Code Cell F**; nothing in it
   reaches any other cell.
 - Decided by: the **user** (2026-09-17 for S-1 to S-7; 2026-09-22 for the data file's form).
 - **n = 4 is a setting, class (a).** Xiang et al. elicit on a five-point scale, and Eq. (A1) reads a
@@ -492,7 +492,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   prediction; the model quantities cover the 56 absolute items.
 - **The data file, class (d) with provenance.** `data/xiang_2022/xiang_items.csv`, the derived
   96-item aggregate, sha256 pinned in its README and checked by `check_data.py` beside it. It is the
-  only file either notebook reads (`agent.md` §2 coupling 10). **The step from the authors' four OSF
+  only file either notebook reads (`agent/agent.md` §2 coupling 10). **The step from the authors' four OSF
   files to this aggregate is documented but not re-runnable here:** the derivation was performed
   once in the 2026-09-17 audit and only its result was kept. The user settled this 2026-09-22 —
   ship the aggregate with its provenance rather than re-derive it — so the hash pins the file
@@ -566,7 +566,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   prior overrides the entry.
 - Evidence: the Gaussian prior at Λ = 512 is the control showing the effect is the prior's, not Λ's.
 - Findings added later:
-  - 2026-09-14 (`history.md` §7 F1–F5). With Λ = 512 for all
+  - 2026-09-14 (`agent/history.md` §7 F1–F5). With Λ = 512 for all
     five priors, the conjunction holds under three (flat, Beta(3,1), delta-like); every leak falls
     below 1e−174, and the *no*/*all* shifts saturate to zero. The Gaussian control above still reads
     +0.0071, but raising Λ alone does bring two diffuse priors into the conjunction. By B9 the row
@@ -576,7 +576,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Status: Settled
 - Decided by: user (2026-09-11, D2)
 - Decision: each retained fixed-θ control states its justification in the prose. The list is
-  `history.md` §3 §5.C. θ_u = 1 is no longer the start, so that cannot be a control's
+  `agent/history.md` §3 §5.C. θ_u = 1 is no longer the start, so that cannot be a control's
   justification.
 
 ### B5. Text cell 5 Part B keeps its θ_u = 1 table and adds a learned table
@@ -603,7 +603,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Theoretical reason: A16.
 - Implementational reason: printed in Code Cell 2 so that E2 mirrors it and E3 checks it.
 - Depends on it: the reading guide in Text cell 4 Part D.
-- Evidence: `history.md` §4 F2-F4.
+- Evidence: `agent/history.md` §4 F2-F4.
 
 ### B8. The delta read-out carries two criteria of its own
 - Status: Settled as a definition. Where and how the paper uses them is open (`thesis_outline/revisions.md` Q2, Q6). Reported without position in the notebooks (B10).
@@ -622,7 +622,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: statistics of the delta read-out (his Eq. 34); the tutorial has no counterpart for
   the criteria.
 - Depends on it: revisions.md Q2 (the V under both read-outs), Q6 (R7's supporting sentence).
-- Evidence: `audits/2026-09-13-delta-criteria/output.txt`, which reproduces Code Cell 2's Part D rows
+- Evidence: `agent/audits/2026-09-13-delta-criteria/output.txt`, which reproduces Code Cell 2's Part D rows
   and Code Cell 4's 59 and 33.
   - Part D: the delta criteria agree with B2 row by row.
   - Plane, 121 cells:
@@ -635,8 +635,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   - **The user approved revisions.md Q2 option (a) as R14.** §4.5 reports the V under both
     read-outs, and no evidence for a missing level is derived from it.
   - **The code edits that print these criteria are open tasks** T0–T8 in
-    `history.md` §6.
-  - **Preliminary, `audits/2026-09-13-delta-criteria/mode_mechanism_output.txt` (record F4).** The
+    `agent/history.md` §6.
+  - **Preliminary, `agent/audits/2026-09-13-delta-criteria/mode_mechanism_output.txt` (record F4).** The
     utility field splits into B's odd (tilt) and even (width) parts. The width is negative in every
     configuration tested and lowers all-region mass in all 121 plane cells. The tilt moves the mode
     up in every cell where it rises (50); the width moves it down in every cell where it falls (67).
@@ -644,13 +644,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     governs near the centre, and q's first condition reads the tail, which the width governs. That is
     why they part.
   - **Eq. (24)'s halving, checked across the plane (record F5,
-    `audits/2026-09-13-delta-criteria/halving_check_output.txt`).**
+    `agent/audits/2026-09-13-delta-criteria/halving_check_output.txt`).**
     - The utility coefficients k equal (θ/2)(μ_u + (θ/2)c)/(1 + θ²/2) to 1.2e-15, and sit within 1e-3
       of c/2 in 111 of 121 cells. The worst is (1, 2) at θ\* = −6.51, 17% on the tilt.
     - k and c have the same signs in every configuration.
     - The limit field reproduces the model's mode node and all four verdicts ((a), (b), and both q
       conditions) in all 121 cells and Part D's five rows. F4's reading therefore holds cell by cell.
-  - **2026-09-14, Λ = 512 for all five priors (`history.md` §7
+  - **2026-09-14, Λ = 512 for all five priors (`agent/history.md` §7
     F7).** The delta criteria part from q's on two Part D rows for the first time: under the flat and
     Beta(3,1) priors the q conjunction holds and criterion (a) does not (peaks move up to s = 0.917).
   - **2026-09-15. The criteria are printed, and so is the mechanism under them.**
@@ -712,18 +712,18 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: Text cell 4 Part C (the criterion paragraph, "Neither is sufficient alone", every
   "verdict" and "criterion met"), Parts D and 4b, Text cell 6, Code Cells 2 and 2b's printed lines
   ("a scalar implicature for \"some\" requires a NEGATIVE shift", "the criterion is NOT met", "Part
-  C's verdict"), Code Cell 4's summary; `history.md` §6 T1 wording.
+  C's verdict"), Code Cell 4's summary; `agent/history.md` §6 T1 wording.
 - Findings added later:
   - 2026-09-14: the existing prose and printed lines take the position in many places; listed for the
-    user, not yet revised (agent.md §5.4).
+    user, not yet revised (agent/agent.md §5.4).
   - 2026-09-14, the user refined B10: "criterion is kay. Calling it a criterion does not mean we
     commit to this criterion." Naming and wording in C7. Sites revised under
-    `history.md` §8.
+    `agent/history.md` §8.
 
 ### B9. Part D's companion at a strong Λ: every prior at Λ = 512, in a cell of its own
 - Status: Settled (implementation in progress)
 - Decided by: user (2026-09-14), approving S-1 to S-5 and S-7 of
-  `history.md` §7
+  `agent/history.md` §7
 - Decision:
   - A new text cell and code cell ("Text cell 4b", "Code Cell 2b") follow Code Cell 2. They report
     Part D's evaluations with Λ = 512 (B3's Λ = 8α at α = 64) for all five priors and all three
@@ -747,7 +747,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: no new operation; reported statistics of Eqs. (12), (15)–(16) as in B2 and B7.
 - Depends on it: Text cell 4 Parts C and D, *Integration cost and conditioning*, Text cell 6, E.1's
   delta-like relay bound; B3, B7, B8, I10.
-- Evidence: `audits/2026-09-14-strong-lambda/` (F1–F8 of the change record).
+- Evidence: `agent/audits/2026-09-14-strong-lambda/` (F1–F8 of the change record).
 - Findings added later:
   - 2026-09-14, prose pass (change record §6). **Agent drafts, pending user confirmation:** Part C's
     first commitment restated as "strengthening is relative to the prior and to the strength of the
@@ -941,7 +941,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     either one of the two alone, or even neither criteria as scalar strengthening. This notebook takes
     no position on how the criteria should be interpreted." (The instruction wrote "nether"; read as
     "neither".)
-- Depends on it: every site of `history.md` §8 §2; printed lines of Code Cells
+- Depends on it: every site of `agent/history.md` §8 §2; printed lines of Code Cells
   2, 2b and 4 and of E2, E2b; decisions B2, B8 keep their historical wording.
 
 ### C8. "Control" names a manipulation of the model; an algebraic one is a counterfactual manipulation
@@ -955,8 +955,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   the tilt part alone and plus the width part alone.
 - Theoretical reason: none. The distinction is for the reader (the user: "for the sake of not
   confusing the reader").
-- Implementational reason: `agent.md` §3.3 keeps q_lit, the tempered control and the model apart, and
-  B4 lists the retained fixed-θ_u controls in `history.md` §3 §5.C. A
+- Implementational reason: `agent/agent.md` §3.3 keeps q_lit, the tempered control and the model apart, and
+  B4 lists the retained fixed-θ_u controls in `agent/history.md` §3 §5.C. A
   field that is the tempered control plus part of the utility field would take a third name
   confusable with the second, and would enter that list without matching any run.
 - Bogacz status: naming convention; no operation.
@@ -973,7 +973,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Decided by: not recorded (set 2026-09-07); punctuation 2026-09-08; spacing and numbering chosen by
   the user 2026-09-09
 - No changelog prose or references to earlier versions. No dashes as sentence punctuation. Every
-  list loose. Equation numbering scheme as in `agent.md` §2.5. Code comments short, pointing to the
+  list loose. Equation numbering scheme as in `agent/agent.md` §2.5. Code comments short, pointing to the
   markdown.
 - **Finding, 2026-09-22: this entry regresses silently, and had.** The 2026-09-08 pass took the
   notebooks to zero dashes as sentence punctuation. An edit pass on 2026-09-22 found **35 em dashes**
@@ -1007,7 +1007,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   composition guide Entry 5c: the notation was never declared and it collides with the real
   subsection numbering, so a reader who follows §4.2 finds nothing and cannot tell whether the
   reference or their reading is at fault. All three now read "Text cell 3 §N, item M".
-  **This is the agent's reading of an undeclared convention, not the user's ruling** (agent.md
+  **This is the agent's reading of an undeclared convention, not the user's ruling** (agent/agent.md
   §3.1); it is recorded here rather than as its own entry because reader-facing text is what C5
   covers, and because there is no C5a in the ID scheme. Bogacz's own sections keep the "his §5.1"
   form and are untouched.
@@ -1038,7 +1038,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 ### I3. Stopping tolerance = DERIVATIVE_TOLERANCE_PER_RATE x lambda_max(H)
 - Status: **Revised 2026-09-21** (user). Was a fixed 1e-9 from 2026-09-13 (T11), which superseded
   1e-10. The *principle* is unchanged and is the whole reason for the revision.
-- Decided by: user (2026-09-21), on the measurements in `history.md` §16
+- Decided by: user (2026-09-21), on the measurements in `agent/history.md` §16
   H12-H18
 - Implementational reason: 1e-10 sat inside the roundoff floor, so step counts were decided by
   roundoff (F34); a tolerance must sit **above** that floor. What was not known in 2026-09-13 is
@@ -1067,7 +1067,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   table still listed 9.98e-10. Both notebook passages now also say **why** the figure differs
   between rows — the tolerance is keyed to lambda_max(H), so it is a property of what is being
   integrated rather than a constant — which is what stops the number going stale the same way
-  again. `agent.md` §3.3 gains a C6 sweep for exactly this failure: a number that *was* printed and
+  again. `agent/agent.md` §3.3 gains a C6 sweep for exactly this failure: a number that *was* printed and
   silently stopped being printed.
 
 ### I4. dt = τ_ε/2 with τ_ε from `fast_time_constant()`
@@ -1091,8 +1091,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: not an operation; the grid discretizes the integral, not the state.
 - Depends on it: every reported quantity, since B is ζ and ζ² orthonormalized on [−Z, Z] and ℓ₀ is
   renormalized on the truncated grid.
-- Evidence: **`audits/2026-09-23-grid-half-width/` and E17, and they do not discharge what this
-  entry needs.** `agent.md` §3.3 makes the half-width a class (d) implementation constant, which
+- Evidence: **`agent/audits/2026-09-23-grid-half-width/` and E17, and they do not discharge what this
+  entry needs.** `agent/agent.md` §3.3 makes the half-width a class (d) implementation constant, which
   requires evidence that the results it supports do not depend on its exact value. That evidence was
   never recorded — this entry held a title, a status and nothing else until 2026-09-23 — and the
   audit shows it would not have been produced: §4.5's conjunction runs 68, 33, 5, 0, 0 of 121 cells
@@ -1115,11 +1115,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 ### I7. Appendix E's E2 mirrors main's Code Cell 2, verified by E3
 - Status: Settled
 - Decided by: not recorded (structure of 2026-09-08)
-- Coupling rules in `agent.md` §2.
+- Coupling rules in `agent/agent.md` §2.
 
 ### I8. Appendix C and D numbers come from a recorded script, not a cell
 - Status: Superseded by C6 and I10 (2026-09-13)
-- Decided by: T5.1 decision in `history.md` §3; who made it not recorded
+- Decided by: T5.1 decision in `agent/history.md` §3; who made it not recorded
 - The script is recorded verbatim in reach.md §7.1, and covers Appendix C §6 and Appendix D §1
   only. See E7.
 
@@ -1137,7 +1137,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### I10. Where the numbers of C6 are printed
 - Status: Settled; amended in part by I11 (2026-09-14)
-- Decided by: agent, confirmed by user (2026-09-13); proposed as DEC3 of `history.md` §2
+- Decided by: agent, confirmed by user (2026-09-13); proposed as DEC3 of `agent/history.md` §2
 - Decision: numbers quoted in Text cells 4 and 5 are printed by Code Cells 2 and 3, inside the
   functions whose output they belong to. Each of Appendices A–D is followed by its own code cell
   (Code Cells A–D; Code Cell A also prints Text cell 3 §2's numbers about g_y). Numbers Appendix
@@ -1164,7 +1164,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 ### I11. Code Cell 2b, its mirror, and how E3 finds both
 - Status: Settled
 - Decided by: agent, confirmed by user (2026-09-14; S-3 and S-4 of
-  `history.md` §7)
+  `agent/history.md` §7)
 - Decision:
   - The cells B9 adds are named "Text cell 4b" and "Code Cell 2b" (anchors `tc4b`, `code2b`), so no
     later cell is renumbered. Numbers Text cell 4b quotes are printed by Code Cell 2b.
@@ -1176,7 +1176,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   - E4's relay bound takes the delta-like row explicitly, since Part D's rows no longer include it.
 - Implementational reason: amends I10's "E3's replay needs no new calls". E3 keeps its coverage of
   every moved block, including the integrated run, where the relay's path differs.
-- Depends on it: agent.md §1 (cell maps) and §2 (couplings 1, 2, 7).
+- Depends on it: agent/agent.md §1 (cell maps) and §2 (couplings 1, 2, 7).
 
 ### I12. The mode is the first node of an argmax, and the gap is printed
 - Status: Settled
@@ -1191,7 +1191,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   rule's reach visible instead of assumed.
 - Bogacz status: statistic of the delta read-out (his Eq. 34); no counterpart in the tutorial.
 - Depends on it: B8's two criteria; Code Cells 2, 2b, 4 and C.
-- Evidence: the gaps printed in those cells; `audits/2026-09-13-delta-criteria/output.txt`.
+- Evidence: the gaps printed in those cells; `agent/audits/2026-09-13-delta-criteria/output.txt`.
 
 ### I13. χ_some is built as the complement of χ_no, not from a margin of its own
 - Status: Settled
@@ -1212,7 +1212,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: no counterpart (input encoding), as A2.
 - Depends on it: Eq. (6) and χ_y everywhere; Eq. (C1) and Appendix C §§2, 4; Code Cell 4's override
   threshold table; Text cell 6's quoted θ_u\* range.
-- Evidence: `audits/2026-09-16-exclusion-complement/`. Acceptance PASS: step branch identical over
+- Evidence: `agent/audits/2026-09-16-exclusion-complement/`. Acceptance PASS: step branch identical over
   3000 shipped configurations, smooth branch within 2.22e-16, *no* and *all* bit-identical. At the
   one reachable coincidence χ_some goes 0 → 1, χ_no + χ_some = 1 becomes exact, and the Eq. (C1)
   residual falls from 3.0e-02 to 3.3e-16.
@@ -1245,13 +1245,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   **our own name, not Xiang et al.'s** — their models are LG, QF and ST, and none of them uses it.
   So the dissertation keeps **one name, n**, with a two-part gloss: the atoms a counting predicate
   resolves, and the distinguishable steps of a scale where no count exists, in which case n need not
-  be an integer. Eq. (A6)'s separate δ form goes. Tasks: `history.md` §14
+  be an integer. Eq. (A6)'s separate δ form goes. Tasks: `agent/history.md` §14
   (N0–N8). The clash with the **delta read-out** (A16, B7) is a second reason: "delta" already names
   the posterior of the construction.
 - Appendix A derives θ_L from the scale's resolution, ς(−θ_L) = 1/2n (Eq. A5). The implementation
   takes n = 10.
 - Findings added later: 2026-09-15 (agent), **this decision is consequential, not cosmetic.** Probing
-  n while holding everything else fixed (O10, `history.md` §9
+  n while holding everything else fixed (O10, `agent/history.md` §9
   F9) crosses criterion readings: under N(0,1) the q shift criterion for *some* is unmet at
   n = 2…20 and met at n = 50, and under Beta(3,1) the q position and mode position criteria are
   unmet at n = 2, 3 and met at n ≥ 4. So what fixes *n* also fixes which side of a crossing the
@@ -1294,7 +1294,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   criteria. Code Cell B's *ALTERNATIVE SPACES* block varies ensemble **membership** (θ_u\* from
   −11.2844 for *no* alone to −65.7004 for *all* alone, −28.4375 for the three together), which is
   not the same probe. The sensitivity sweep of option (d) was considered and **not** adopted.
-- Tasks: `history.md` §15 (X0–X5).
+- Tasks: `agent/history.md` §15 (X0–X5).
 
 ### O3. The outline pointer for the cost of realizability
 - Status: **Settled 2026-09-22** (user). The condition this was left open on is met: the settling-cost
@@ -1338,8 +1338,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   the term itself is O7.
 
 ### O5. Appendix B's sign sentence
-- Status: **Settled** (user, 2026-09-13; record `history.md` §1). Opened
-  2026-09-13 from `history.md` §2 F2.
+- Status: **Settled** (user, 2026-09-13; record `agent/history.md` §1). Opened
+  2026-09-13 from `agent/history.md` §2 F2.
 - Decision: the counterfactual is both signs reversed, c_y → −c_y, maximizer +28.4375. Appendix B now
   reads "were both signs reversed the maximizer would be +28.437".
 - Appendix B says that "were the two signs reversed the maximizer would be +22.578". Code Cell B
@@ -1348,8 +1348,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   written until the user restates what it should claim.
 
 ### O6. Does a relay as fast as the error units keep F monotone?
-- Status: **Settled for now** (user, 2026-09-13; record `history.md` §1).
-  Opened 2026-09-13 from `history.md` §2 F8.
+- Status: **Settled for now** (user, 2026-09-13; record `agent/history.md` §1).
+  Opened 2026-09-13 from `agent/history.md` §2 F8.
 - Decision: Eq. (E6) keeps τ_r ≤ τ_ε, and E.1 states the exception: at equality F is monotone under
   *some* only. E.1 also states what a strict bound would require: the largest τ_r/τ_ε at which no
   step of F decreases under any utterance, measured at every θ_u and prior claimed, with the bound
@@ -1381,7 +1381,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   "Realizing E_y" in Appendix A and in Code Cell 1's comment is ordinary usage and not part of the
   clash.
 - Options, and what each would change:
-  - (a) Rename sense 2. This touches Code Cell 2's function name, headers and labels; E2 (agent.md §2
+  - (a) Rename sense 2. This touches Code Cell 2's function name, headers and labels; E2 (agent/agent.md §2
     item 1); E3's replay list, which calls the function by name (item 7); Text cell 4; B7 and O3.
     Both notebooks must be re-executed. A new term has to be chosen, and it should also say which of
     the two quantities it names.
@@ -1422,7 +1422,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     Sense 2 lives in a function name, a printed header, row labels and a docstring that E2 copies and
     E3 calls by name, so renaming it means re-running both notebooks.
 - Findings added later: 2026-09-13, **senses 1 and 3 renamed by the user** (record
-  `history.md` §5).
+  `agent/history.md` §5).
   - Sense 1 → **"exact solvability"** (agent's proposal, approved by the user). Appendix B's
     preceding sentence already says θ v_p = u "is solvable". Changed: Appendix B's two sentences, and
     Code Cell B's header, now `EXACT SOLVABILITY AT theta_u*`. Rejected: "exact fit", because in the
@@ -1455,7 +1455,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   1. **The exposure ensemble.**
      - Candidates: the predicate alone; the predicate and its complement; the predicate within a
        scale inventory.
-     - Measured for the first two (`audits/2026-09-13-scale-structure/output.txt`): |θ\*| from 4.6
+     - Measured for the first two (`agent/audits/2026-09-13-scale-structure/output.txt`): |θ\*| from 4.6
        to 91 across the tested priors and cuts, and E_q[s] contributions within about 5% of Eq. (24)'s
        limit. So the verdicts there do not depend on this choice; the numbers do, slightly.
   2. **Λ.** At Λ = 8 the Gaussian priors override endpoint cuts: q-mass on the excluded states is
@@ -1502,7 +1502,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   *no* exactly, while for *all* it is a field no utterance names — architectural, not lexical
   (A18). Appendix F §2 says the ensemble is the **inventory's**, never the experiment's.
 - **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
-- **Finding, 2026-09-17** (record `history.md` §12, raised under
+- **Finding, 2026-09-17** (record `agent/history.md` §12, raised under
   O13). **The ensemble question has an answer wherever the predicate is tested against an antonym.**
   In Xiang et al.'s paradigm every item pairs an adjective with its antonym, and in the uttered
   adjective's own orientation that antonym is the entry's **complement**: for a minimum-standard
@@ -1520,7 +1520,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Status: **Settled 2026-09-21**
 - Decided by: the **user** (2026-09-21), on the measurement below. Raised by the user as a side
   quest 2026-09-15, with the answer wanted as a sense rather than in full. Record:
-  `history.md` §9.
+  `agent/history.md` §9.
 - **Decision.** The reflection is exact (finding 1), so **this implementation predicts that the O
   corner is just as representational**. The prediction is read as a fact about the implementation as
   it stands: it is **not transported to the proposed next phase**, where {0} and {1} stop being
@@ -1550,7 +1550,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   Option (c), what a principled μ_u for a mirrored scale would be, is **not** taken up; finding 2
   stays on record as the measured asymmetry, with our position reserved.
 - **Depends on it:** Appendix C §4's aside; A5's stipulation μ_u = 1; nothing currently printed.
-- Evidence: `audits/2026-09-15-side-quests/output.txt`. Class (e) under `agent.md` §3.3 until a cell
+- Evidence: `agent/audits/2026-09-15-side-quests/output.txt`. Class (e) under `agent/agent.md` §3.3 until a cell
   prints it (C6).
 
 ### O10. Does the number of atoms n change what the evaluation reports?
@@ -1598,7 +1598,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Evidence: as O9. Class (e) until a cell prints it (C6).
 
 ### O11. Eq. (27)'s all-region is open where its own gloss, and the rest of the notebook, are closed
-- Status: **Settled** (user, 2026-09-17; record `history.md` §11). Opened
+- Status: **Settled** (user, 2026-09-17; record `agent/history.md` §11). Opened
   2026-09-17 while applying I13.
 - Decided by: user (2026-09-17), choosing option 2 below: "the formula needs to be changed".
 - **Decision.** Eq. (27)'s all-region is the **closed** R = {ζ ≥ θ_L}. Applied to 23 mask sites
@@ -1611,7 +1611,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   main 0 errors, 8 figures, 14/14; appendix_E 0 errors, 5 figures, E2 18/18, E3 PASS. The change is
   inert because no grid node lands on +θ_L for any θ_L the notebooks use, at any K in the ladder.
 - **The framing below is how the question was put to the user on 2026-09-17, kept unedited**
-  (`agent.md` §3.1: a decision's body is never rewritten after the fact). Its present tense
+  (`agent/agent.md` §3.1: a decision's body is never rewritten after the fact). Its present tense
   describes the notebook as it stood before the change.
 - **The disagreement.** Text cell 4 defines P(all-region) over R = {ζ > θ_L}, "where *all* is true".
   But *all* excludes E_all = {ζ < θ_L} (Eq. A1), so it is true on the **closed** {ζ ≥ θ_L}. Formula
@@ -1640,7 +1640,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   2b, 4 and C; B2's conjunction; O9's symmetry statement.
 
 ### O12. The all-region and the cell of *all* are now the same set
-- Status: **Settled** (user, 2026-09-17; record `history.md` §11). Opened
+- Status: **Settled** (user, 2026-09-17; record `agent/history.md` §11). Opened
   and settled the same day; recorded first, at the user's direction, before being acted on.
 - Decided by: user (2026-09-17), in their words: "resolve the redundancy in prose. In code,
   preserve both 'upper_region' and 'inside', but add a comment next to the declaration statement of
@@ -1657,7 +1657,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   by the threshold of Eq. (A5), and that the pair is kept so either definition can be varied on its
   own. Both names survive, so C4 is untouched.
 - **The framing below is how the question was recorded on 2026-09-17, kept unedited**
-  (`agent.md` §3.1). Its present tense describes the notebook before the prose was resolved.
+  (`agent/agent.md` §3.1). Its present tense describes the notebook before the prose was resolved.
 - **What happened.** O11 made Eq. (27)'s all-region R = {ζ ≥ θ_L}, which is exactly Appendix A's
   Voronoi cell of *all*. One set now carries two names and two implementations:
   - **code:** `upper_region = (zeta >= theta_L)` (14 sites in main, 9 in appendix_E) beside
@@ -1678,11 +1678,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   §5.2 states H1, reports match and mismatch against Xiang et al. (2022), and makes no claim about
   the nature of the mismatch. The hypothesis itself is **not adopted** as a decision about Λ, and
   the entry stays as the record of that. Implementation: T0–T13 of
-  `history.md` §12. Raised 2026-09-17.
+  `agent/history.md` §12. Raised 2026-09-17.
 - Decided by: not decided. Raised by the **user**, as a hypothesis to be checked before it is
   adopted: "1. scalar expressions with unstable atomicity are associated with weaker lexical
   strength; 2. open-scale adjectives behave similar to *some*; complete scale adjectives behave
-  similar to endpoint(s)+*some*." Record: `history.md` §12.
+  similar to endpoint(s)+*some*." Record: `agent/history.md` §12.
 - **What it would change.** Λ and θ_L are two independently fixed quantities of Text cell 3 §3
   (A5 gives θ_L its denotation through n; §3 item 6 fixes Λ = 8 "if not said otherwise"). H1 makes
   Λ a **function of how stably the predicate fixes** n — a count where the predicate has atoms, a
@@ -1737,7 +1737,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   **What does not change: the entry is still not adopted.** The paper states H1 and H2, reports this
   comparison, and makes no claim about what any mismatch is due to (R16). Whether Λ becomes a
   function of anything is still the user's, and still open.
-- **Finding, 2026-09-22 (two probes, `audits/2026-09-22-o13-options/`). O13 STAYS OPEN, and the
+- **Finding, 2026-09-22 (two probes, `agent/audits/2026-09-22-o13-options/`). O13 STAYS OPEN, and the
   entry now records why a fit statistic cannot close it.** Class (e); no cell prints any of it and
   none of it reaches prose.
   1. **H1's independent variable does not vary in Appendix F.** Both classes run at n = 4, so
@@ -1808,7 +1808,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - **Depends on it:** `sections_3-6.md` §5.2 and §5.4, `background_sections.md` §1.7, revisions.md
   Q7; the reading of the Λ axis in Text cell 6 and Code Cell 4; A5's θ_L and §3 item 6's Λ = 8.
 - Evidence: **Code Cell F of `main.ipynb`** (2026-09-22), which is now the source of record;
-  `audits/2026-09-17-scale-classes/output.txt` and `xiang_items_output.txt` are the superseded
+  `agent/audits/2026-09-17-scale-classes/output.txt` and `xiang_items_output.txt` are the superseded
   audit. Everything the paper quotes is printed by the cell, so C6 is satisfied; what remains only
   in the audit — the relative class's fit, the m = 3/m = 4 comparison, the per-image-type Λ — stays
   class (e) and reaches no prose.
@@ -1820,7 +1820,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   the hypothesis under test and reports the comparison; whether the model adopts a Λ that varies
   with atomicity is still open here**, and the difference matters: a variable Λ would be a change to
   Text cell 3 §3, while a scanned Λ is a control (B4). Seven decisions block the implementation,
-  listed as S-1 to S-7 in `history.md` §12 §8; S-1 (whether a fitted
+  listed as S-1 to S-7 in `agent/history.md` §12 §8; S-1 (whether a fitted
   Λ may be quoted, and what class of quantity it is) and S-2 (whether the relative cut *t* enters
   the model) are the two that reach back into this entry. **Both are now answered** (same record, §8): Λ is
   fitted for H1 and nowhere else, and *t* does not enter — the relative class is not modelled, so
@@ -1832,7 +1832,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   is just as representational is explicitly not carried into the asymmetric phase this entry
   describes. Raised 2026-09-17. **What is settled** is how the paper treats it: §5.2 points
   to it as an instinct, once, promising nothing, and the relative class is not modelled with the
-  current implementation (record `history.md` §12 §8, S-2).
+  current implementation (record `agent/history.md` §12 §8, S-2).
 - Decided by: the instinct is the **user's** (2026-09-17), in their words:
 
   > even though we currently model the two endpoint as symmetric to each other, I do not think it is
@@ -1884,8 +1884,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   overclaimed. Nothing in the notebooks depends on it, and no result here rests on it.
 - **Depends on it:** `sections_3-6.md` §5.2's closing sentence and its pointer to §5.1. Nothing
   computed.
-- Evidence: `audits/2026-09-17-scale-classes/xiang_items_output.txt` block 16(e) for the symmetry,
-  and `history.md` §12 F18 for what breaks it;
+- Evidence: `agent/audits/2026-09-17-scale-classes/xiang_items_output.txt` block 16(e) for the symmetry,
+  and `agent/history.md` §12 F18 for what breaks it;
   the mismatch it is an instinct about is F8 to F10 and F17 of the record. **No measurement here
   tests the instinct**, and §5.2 does not say that it accounts for the mismatch (R16).
 
@@ -1894,8 +1894,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 ## D. Bogacz divergence register
 
 **Audited 2026-09-13** against `main.ipynb` and `appendix_E.ipynb` at commit 76df22e, by the
-procedure of `agent.md` §3.2, reading `Bogacz_2017_Free_Energy_Tutorial.md`. The scripts and their
-output are in `audits/2026-09-13/`; V1 to V4 below refer to `verify_output.txt` there. Every
+procedure of `agent/agent.md` §3.2, reading `agent/Bogacz_2017_Free_Energy_Tutorial.md`. The scripts and their
+output are in `agent/audits/2026-09-13/`; V1 to V4 below refer to `verify_output.txt` there. Every
 verdict is the agent's reading and has not been confirmed by the user.
 **Extended 2026-09-22** with D12, the two rows on halting, which the 2026-09-13 audit predates.
 
@@ -1972,7 +1972,7 @@ necessity (I1).
 below it is inert while ε_y ≡ 0.
 
 **D9. The read-out rereads a state vector as a log-density.** **Resolved 2026-09-13** (A16, B7,
-`history.md` §4): q is a comparison read-out, and the delta at the settled
+`agent/history.md` §4): q is a comparison read-out, and the delta at the settled
 state is reported beside it. The finding as audited: divergence (interpretive), not
 previously registered. **Flagged to the user.** Bogacz's approximate posterior is a delta at φ
 (Eq. 34), so the maximizer of F is the whole of his inference. Here that maximizer, φ_S ∈ ℝ^K, is
@@ -1994,7 +1994,7 @@ while φ_L is clamped.
 **D12. Halting by a tolerance, and the fast tolerance's dependence on λ_max(H).**
 **Divergence, UNSETTLED** — entered 2026-09-22 at the user's instruction (A19's demotion).
 
-- **What Bogacz says about parameter convergence** (read 2026-09-22 per `agent.md` §3.2, before
+- **What Bogacz says about parameter convergence** (read 2026-09-22 per `agent/agent.md` §3.2, before
   citing him either way). He states that the parameters **never converge**, because they are
   updated after each observation and successive observations differ; what he offers in place of
   convergence is the value at which the *expected* change vanishes, the neighbourhood the parameter
@@ -2044,11 +2044,11 @@ becomes live if a later phase unfixes σ.
 
 ## E. Quantity trace register
 
-**Audited 2026-09-13** at the same commit, by the procedure of `agent.md` §3.3, in two passes.
+**Audited 2026-09-13** at the same commit, by the procedure of `agent/agent.md` §3.3, in two passes.
 Every default, module constant and numeric literal in Code Cells 1–4 and E1–E3 was listed and
 classed (`constants.txt`). Every number quoted in the markdown was matched against the stored
 outputs of both notebooks (`prose_numbers.txt`): of 373, 273 match a stored output, 53 appear only
-in `history.md` §3, and 47 in neither. Setting aside section numbers and coordinate
+in `agent/history.md` §3, and 47 in neither. Setting aside section numbers and coordinate
 pairs the matcher misread, 86 have no printed source. The matcher checks value and not provenance,
 so a number with few significant figures can match by coincidence.
 
@@ -2089,7 +2089,7 @@ rises still holds, in that metric. Stating D6 repairs both E1 and E2.
 
 What these sentences use the value for, that it is nonzero, is unaffected.
 
-**E4. "The elicited prior".** Class (e). **Resolved 2026-09-13** (A15, `history.md` §2):
+**E4. "The elicited prior".** Class (e). **Resolved 2026-09-13** (A15, `agent/history.md` §2):
 reworded at every site, and Text cell 3 §3.4 now gives the user's reason for a Gaussian default.
 The finding as audited: The Gaussian of mean 0 and
 precision 1 in ζ is called elicited in Text cell 3 (the inventory's "fixed (elicited)", and §3.4),
@@ -2118,9 +2118,9 @@ quantities. The window's comment ("from 1e6 down to 1e3 times the settling toler
   σ at the floor of 1.
 
 **E7. Prose numbers printed by no cell and no recorded script.** **Resolved 2026-09-13** (C6, I10,
-`history.md` §2): every number below is now printed by a code cell. A re-run of the audit
+`agent/history.md` §2): every number below is now printed by a code cell. A re-run of the audit
 over 365 quoted numbers finds none unsourced; its 9 unmatched are section numbers and coordinate
-pairs (`audits/2026-09-13/after_e7/`). Recomputing them corrected several quoted values (F1, F3–F7,
+pairs (`agent/audits/2026-09-13/after_e7/`). Recomputing them corrected several quoted values (F1, F3–F7,
 F9 there) and raised F2 and F8, now O5 and O6. The finding as audited: class (e) until sourced. ★ marks
 the ones an argument rests on.
 - Text cell 3 §2: Gram rank 3, condition number 21.0, θ_L AWX = I₃ to 2.4e-15. A and g_y exist
@@ -2154,7 +2154,7 @@ the ones an argument rests on.
 prose says only that χ_y becomes a profile in [0,1]^K (§9.2), and defines neither the form nor the
 parameter (composition guide Entry 5c).
 
-**E9. Comment drift, including one mirror difference E3 cannot see.** Hygiene (`agent.md` §5.5),
+**E9. Comment drift, including one mirror difference E3 cannot see.** Hygiene (`agent/agent.md` §5.5),
 not quantities.
 - Code Cell 2 calls the Λ×α sweep "Code Cell 3" in two comments, above `DELTA_ALL_ALPHA` and above
   the third figure. E2 corrected the first and kept the second. E3 compares printed output only, so
@@ -2184,7 +2184,7 @@ user 2026-09-14.
   check, extended from the delta-like row to every row. Not yet defined in prose: Text cell 4b is a
   scope paragraph until the prose pass.
 - Every number Code Cell 2b prints is class (e) for prose until Text cell 4b or Parts C–D quote it
-  against the executed output (`history.md` §7 §5).
+  against the executed output (`agent/history.md` §7 §5).
 
 **E13. Part D quoted all-region masses no cell printed (found 2026-09-14, prose pass F15).** Class (e),
 resolved. q_lit under *some* (0.0504 flat, 0.1368 Beta(3,1)) and the tempered control (0.0066, 0.1357,
@@ -2217,7 +2217,7 @@ single-part fields is the user's (C8).
 - Code Cell 2b's own quantities stay under E12, and E13's masses are unchanged.
 
 **E15. The quantities Code Cell D's Sec. 5 adds (2026-09-18, task U3 of
-`history.md` §13; entered 2026-09-21 in U14, having been
+`agent/history.md` §13; entered 2026-09-21 in U14, having been
 missed when U3 closed).** Classed by the agent. Nothing here is class (e): every number the prose of
 Appendix D Sec. 5, §3.2, §3.3 and §4.1 quotes is printed by this block.
 - The couplings c_y under Eq. (9) and under Eq. (D5), per utterance, and the two identities
@@ -2263,7 +2263,7 @@ Nothing here is class (e): every number Appendix F and §5.2 quote is printed by
   Appendix C §5's parity argument evaluated at this n. The unweighted 0.0194 is printed beside it
   and labelled as the node's own mass, not a property of the cut.
 - **A defect in the source audit, corrected here.** One image set, `curved_greenline`, drew no
-  Experiment 3 response at all, for both of its adjectives. `audits/2026-09-17-scale-classes/`
+  Experiment 3 response at all, for both of its adjectives. `agent/audits/2026-09-17-scale-classes/`
   scored the model against those 10 rows as measured zeros, which is a comparison against nothing.
   Dropping them moves the maximum class's R² from 0.953 to **0.993** and the minimum class's from
   0.401 to **0.434** — the maximum class crossing from below the published ST and QF values to above
@@ -2275,7 +2275,7 @@ Nothing here is class (e): every number Appendix F and §5.2 quote is printed by
 
 **E17. The grid half-width, and what the verdicts depend on (2026-09-23).** Classed by the agent;
 raised by another agent's report that widening the logit range from ±6 to ±8 overturns the results.
-Evidence: `audits/2026-09-23-grid-half-width/`. **Everything the audit prints is class (e)** — no
+Evidence: `agent/audits/2026-09-23-grid-half-width/`. **Everything the audit prints is class (e)** — no
 cell varies the half-width — so none of it reaches prose, and §4.2's guard below is written without
 a number from it.
 

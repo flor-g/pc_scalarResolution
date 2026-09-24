@@ -47,4 +47,4 @@ so Appendix F §6 describes the quantities and attributes nothing.
 
 **Never average θ_u\* over items.** Near the degenerate ray its magnitude diverges and its sign
 turns, so a mean mixes signs and is dominated by whichever item sits closest to the ray. Medians and
-sign counts; block F.9 prints both, and `decisions.md` A5 records why.
+sign counts; block F.9 prints both, and `agent/decisions.md` A5 records why.

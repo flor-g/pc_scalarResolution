@@ -1,7 +1,7 @@
 # O13: what the Appendix F data can and cannot say about H1
 
 Two probes, run 2026-09-22 after T0–T13 closed. **Nothing in the notebooks was changed by them.**
-Every number here is class (e) under `agent.md` §3.3 until a cell prints it (C6), and none reaches
+Every number here is class (e) under `agent/agent.md` §3.3 until a cell prints it (C6), and none reaches
 prose. They are evidence for the user's standing decision on **O13**, which remains open.
 
 | file | what it does |

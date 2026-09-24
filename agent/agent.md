@@ -1,37 +1,51 @@
 # agent.md
 
-Working standard for any agent editing the paper or the code in this folder. Read it in full before
-the first edit of a session. It covers where things are, the couplings that break silently, and the
-procedures that protect the integrity of the architecture. The standard for prose is a separate
-file, `composition guide.md`, and this file does not repeat it.
+Working standard for any agent editing the paper or the code in this repository. Read it in full
+before the first edit of a session. It covers where things are, the couplings that break silently,
+and the procedures that protect the integrity of the architecture. The standard for prose is a
+separate file, `agent/composition guide.md`, and this file does not repeat it.
+
+**Paths are written from the repository root**, in this file and in every other project file, so
+`agent/decisions.md` names that file wherever it is cited from and whatever folder you are in. The
+standards, the records and the audits moved under `agent/` on 2026-09-23; the notebooks, the
+outline and the data stayed at the root, and **the notebooks must be executed with the root as the
+working directory**, since Code Cell F opens `data/xiang_2022/xiang_items.csv` by a relative path
+(§5.1).
 
 **Precedence.** The user's instructions in chat come first. After that, the settled entries of
-`decisions.md`, then this file, then `composition guide.md` for prose. When two of these conflict,
+`agent/decisions.md`, then this file, then `agent/composition guide.md` for prose. When two of these conflict,
 stop and ask; do not pick one.
 
 **Other agents' memory is invisible to you, and yours to them.** Anything a later agent needs goes
-into a project file (`decisions.md`, the change record, this file), never only into private memory.
+into a project file (`agent/decisions.md`, the change record, this file), never only into private memory.
 
 ---
 
 ## 1. Where to look
 
-### In this folder
+### The tree
 
-| File | What it is | Read it when |
+Two levels. The root holds what the dissertation **is** and what it reads; `agent/` holds what an
+agent works **from**.
+
+| Path | What it is | Read it when |
 |---|---|---|
 | `main.ipynb` | The primary text: prose, architecture code, evaluation code. | Always. |
 | `appendix_E.ipynb` | Bonus notebook: the same model made fully local with a relay node. Read after `main.ipynb`. | Any change to main's code or to Eq. (20). |
-| `Bogacz_2017_Free_Energy_Tutorial.md` | The tutorial the architecture is built against. The reference for §3.2 below. | Any claim about, or check against, Bogacz. Cite from this file, never from memory. |
-| `composition guide.md` | The five-entry prose standard, applied in its stated order. | Before drafting or editing any prose or code comment. |
-| `decisions.md` | Every architectural and implementation decision, who made it, why, and every open decision. Also the Bogacz divergence register and the quantity trace register. | Before any change that touches the architecture, an evaluation, or a quantity. |
-| `audits/` | One folder per audit run, holding its scripts and their output, which the registers of `decisions.md` cite. | To reproduce or rerun an audit. |
-| `history.md` | The sixteen closed working records in one file, oldest first, each with when it was opened and closed, what it settled, and its numbered findings, which `decisions.md` cites as evidence. It replaced `procedure_records/` on 2026-09-23; the full originals stay in git and each section gives the command. §3 is the record of the change that made θ_u learned everywhere: tasks T0-T11, findings F1-F34, and the table of retained fixed-θ controls. | As the model for a change record (§5.3), for the evidence behind decisions A9-A11 and I1-I5, and to find when a change happened. |
-| `thesis_outline/` | The dissertation outline: `sections_3-6.md` (proposal, evaluation, discussion, conclusion), `background_sections.md` (background), and `revisions.md` (the pending revision plan for both). The composition guide covers the outlines. | Before any claim about the paper's argument, and before editing either outline: read `revisions.md` first. |
-| `backups/` | Folder snapshots from before the project was under git (2026-09-11, 2026-09-12). Historical: never modify. Read a folder's README before trusting its name. | Only to recover something older than the first commit. |
+| `thesis_outline/` | The dissertation outline: `sections_3-6.md` (proposal, evaluation, discussion, conclusion), `background_sections.md` (background), and `revisions.md` (the revision plan and its task blocks, which also record what each change did). The composition guide covers the outlines. | Before any claim about the paper's argument, and before editing either outline: read `revisions.md` first. |
+| `data/xiang_2022/` | The one data file in the repository, the derived item aggregate of Xiang, Kennedy, Xu & Leffel (2022), with its README and `check_data.py`. Code Cell F opens it **relative to the root**, so the working directory matters. | Before touching Appendix F or anything it prints. |
+| `runnb.py` | The executor: `.venv/bin/python runnb.py NOTEBOOK`, in place, one line of verification per run (§5.1). | Every execution. |
+| `backups/` | Folder and file snapshots from before, and during, the life of the repository. Historical: never modify (§4.7). Read a folder's README before trusting its name. | Only to recover something a commit does not hold. |
 | `.gitignore`, `.gitattributes` | Git configuration: what is excluded (`.venv/`, `.DS_Store`, notebook checkpoints, caches), and the nbdime diff and merge drivers for notebooks. | Before changing what git tracks (§4.5). |
+| **`agent/`** | **Everything below sits in this folder.** | |
+| `agent/agent.md` | This file. | First, every session. |
+| `agent/decisions.md` | Every architectural and implementation decision, who made it, why, and every open decision. Also the Bogacz divergence register and the quantity trace register. | Before any change that touches the architecture, an evaluation, or a quantity. |
+| `agent/history.md` | The sixteen closed working records in one file, oldest first, each with when it was opened and closed, what it settled, and its numbered findings, which `agent/decisions.md` cites as evidence. It replaced `procedure_records/` on 2026-09-23; the full originals stay in git and each section gives the command. §3 is the record of the change that made θ_u learned everywhere: tasks T0-T11, findings F1-F34, and the table of retained fixed-θ controls. | As the model for a change record (§5.3), for the evidence behind decisions A9-A11 and I1-I5, and to find when a change happened. |
+| `agent/composition guide.md` | The five-entry prose standard, applied in its stated order. | Before drafting or editing any prose or code comment. |
+| `agent/audits/` | One folder per audit run, holding its scripts and their output, which the registers of `agent/decisions.md` cite. Some carry a README; the rest are read from their `output.txt`. | To reproduce or rerun an audit. |
+| `agent/Bogacz_2017_Free_Energy_Tutorial.md` | The tutorial the architecture is built against. The reference for §3.2 below. | Any claim about, or check against, Bogacz. Cite from this file, never from memory. |
 
-**Repository.** The folder is a git repository on branch `main`, with the user's private GitHub
+**Repository.** The root is a git repository on branch `main`, with the user's private GitHub
 repository as remote `origin` (`https://github.com/flor-g/pc_scalarResolution.git`). The first
 commit is 499918c (2026-09-13). Procedures are in §4.
 
@@ -65,7 +79,7 @@ Code Cell 2 plus four checks), **Code Cell E2b** (main's Code Cell 2b, verbatim)
 **Code Cell E4** (the numbers E.1 quotes that E2 does not print), E.2 commitments, E.3 claims in
 main restated, references.
 
-### Outside this folder
+### Outside the repository
 
 - **Not maintained, do not edit or treat as current:** `~/Desktop/sections_3-5_outline.md`,
   `~/Desktop/background_sections_outline.md` and their `_copy` versions (drafts of 2026-09-01,
@@ -190,7 +204,7 @@ The direction of authority is **prose defines, code implements**. Text cell 3 sp
 the code cells are an implementation of it. When the two disagree, do not repair whichever is more
 convenient. Record the disagreement (§3.3) and ask the user which side is wrong.
 
-### 3.1 Recording decisions in `decisions.md`
+### 3.1 Recording decisions in `agent/decisions.md`
 
 **What counts as a decision.** Any choice that a different, defensible choice could have replaced
 and that a result, an equation, or a sentence of the argument depends on. That includes:
@@ -204,7 +218,7 @@ and that a result, an equation, or a sentence of the argument depends on. That i
 
 Choices of pure presentation (layout, variable spelling in a loop) are not decisions.
 
-**Entry format** (the template is at the top of `decisions.md`). Every entry carries:
+**Entry format** (the template is at the top of `agent/decisions.md`). Every entry carries:
 
 - **Status:** Settled, Open, or Superseded by another entry. Never delete a superseded entry.
 - **Decided by:** exactly one of `user (date)`; `agent, confirmed by user (date)`;
@@ -236,7 +250,7 @@ point replacing integration, a stopping rule, a step-size rule) are checked too,
 **Procedure, per operation.**
 
 1. Write the operation as the code computes it, not only as the prose states it.
-2. Find the Bogacz equation it should instantiate in `Bogacz_2017_Free_Energy_Tutorial.md`, and write
+2. Find the Bogacz equation it should instantiate in `agent/Bogacz_2017_Free_Energy_Tutorial.md`, and write
    out the substitution that makes it an instance (e.g. Eq. (10) is his Eq. (42) with Θ = θ_u b,
    h = id; Eq. (19) is his Eq. (53) with Θ_L = −I).
 3. Assign one verdict:
@@ -245,7 +259,7 @@ point replacing integration, a stopping rule, a step-size rule) are checked too,
    - **Divergence:** no substitution works, or the operation has no counterpart in the tutorial.
    - **Surrogate:** a numerical stand-in. State the operation it replaces and the measured agreement
      with it.
-4. **Every divergence goes into the Bogacz divergence register of `decisions.md`** with: what
+4. **Every divergence goes into the Bogacz divergence register of `agent/decisions.md`** with: what
    differs; why the construction needs it; whether locality (composition guide Entry 1) survives it
    and by what argument; which results depend on it; who decided it.
 5. Check locality at the same time: which quantities the update reads, and whether each is
@@ -275,8 +289,8 @@ or use as a default, and to every number the prose quotes.
 | **(a) Model quantity** | A symbol in Text cell 3 §2's inventory, or defined by a numbered equation. The code name is mapped to the symbol, and the code value equals the value the prose states (σ = 1, m = 2, μ_u = 1, Λ = 8, n = 10, and so on). |
 | **(b) Reported statistic** | Defined in Text cell 4 (Eqs. (25)-(27), (36)-(41)) as a summary of the read-out. The prose says it is not a model quantity. |
 | **(c) Control** | A deliberate departure from the model (e.g. θ_u held fixed): a configuration the network is actually run in. Under decision **B4** its justification is stated in the prose where it is used, and it is labelled as a control in the output. A quantity built by algebra on settled fields, which no setting of the model produces, is not a control but a **counterfactual manipulation** (C8). |
-| **(d) Implementation constant** | A numerical choice with no model meaning (grid size, tolerance, feasibility threshold, zero band). Recorded in `decisions.md` with evidence that the results it supports do not depend on its exact value. |
-| **(e) Does not follow** | None of the above. **Flag it to the user in the same turn, add it to the quantity trace register in `decisions.md`, and neither keep it silently nor remove it silently.** |
+| **(d) Implementation constant** | A numerical choice with no model meaning (grid size, tolerance, feasibility threshold, zero band). Recorded in `agent/decisions.md` with evidence that the results it supports do not depend on its exact value. |
+| **(e) Does not follow** | None of the above. **Flag it to the user in the same turn, add it to the quantity trace register in `agent/decisions.md`, and neither keep it silently nor remove it silently.** |
 
 **Rules.**
 
@@ -354,8 +368,8 @@ A checkpoint (§4.2) is required before:
 - any scripted or bulk edit across cells: renumbering, find-and-replace, whitespace normalization,
   ToC regeneration;
 - inserting, deleting, moving, or splitting cells;
-- rewriting (not appending to) `decisions.md`, `composition guide.md`, or a change record;
-- any edit to files outside this folder.
+- rewriting (not appending to) `agent/decisions.md`, `agent/composition guide.md`, or a change record;
+- any edit to files outside the repository.
 
 A single hand edit to one prose sentence is low-risk. When unsure, make a checkpoint: it is cheap.
 
@@ -375,7 +389,7 @@ A single hand edit to one prose sentence is low-risk. When unsure, make a checkp
 
 ### 4.3 Commits
 
-- **Stage explicit paths** (`git add main.ipynb appendix_E.ipynb decisions.md`). Never run
+- **Stage explicit paths** (`git add main.ipynb appendix_E.ipynb agent/decisions.md`). Never run
   `git add -A` or `git add .` without reading `git status` first. Never commit credentials, tokens,
   `.venv/`, or scratch files.
 - **One logical change per commit, and never half a coupling.** A commit that changes main's Code
@@ -464,7 +478,10 @@ or delete them. New folder backups are made only under §4.2, step 5.
 
 ### 5.1 Execution and verification
 
-Run notebooks with nbclient, in place, from this folder, `main.ipynb` first:
+Run notebooks with nbclient, in place, **with the repository root as the working directory**,
+`main.ipynb` first. The root is not a convenience: Code Cell F opens
+`data/xiang_2022/xiang_items.csv` by a path relative to it, and `runnb.py` passes `"path": "."` to
+the kernel.
 
 ```python
 # runnb.py NOTEBOOK
@@ -553,12 +570,13 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
 ### 5.3 Change records for multi-step work
 
 Any change spanning more than one cell or session gets a working record, on the pattern of
-`history.md` §3. Write it as its own file at the project root while the change is open, and fold it
-into `history.md` when it closes, keeping its findings (2026-09-23; `procedure_records/` is gone and
-its sixteen records are §§1-16 there). A record holds:
+`agent/history.md` §3. **Write it as its own file in `agent/` while the change is open**, beside the
+history it will join, and **fold it into `agent/history.md` when it closes**, keeping its findings,
+because other files cite those by number. (2026-09-23: `procedure_records/` is gone and its sixteen
+records are §§1-16 of `agent/history.md`.) A record holds:
 
 1. the user's instructions, verbatim;
-2. the decisions the change rests on, with pointers into `decisions.md`;
+2. the decisions the change rests on, with pointers into `agent/decisions.md`;
 3. tasks **in order**, the checkpoint first (§4.2, hash recorded), each closed as
    `[x] Tn (date): what changed; acceptance result; commit hash`;
 4. a findings log, written the moment something unexpected appears, before moving on;
@@ -585,7 +603,7 @@ session is deciding what to pick up.
   carrying a plan's gap into prose, check whether it is still a gap.**
 
 The cheap general rule: **a plan describes what was true when it was written.** Verify its claims
-about the repository's state before acting on them, exactly as `decisions.md` entries are verified
+about the repository's state before acting on them, exactly as `agent/decisions.md` entries are verified
 before being cited.
 
 ### 5.4 Stop and ask the user
@@ -608,7 +626,7 @@ Stop, report, and wait when:
   a cell or to working documents.
 - Code comments stay short and point to the markdown (Sec. N, Eq. (N), Appendix X) rather than
   restating the argument.
-- Settled naming and framing conventions are in `decisions.md` section C. The ones most often
+- Settled naming and framing conventions are in `agent/decisions.md` section C. The ones most often
   broken: no Gricean reference frame; θ_L, not β; F is maximized; the three objects of §3.3.
 - **One quantity, one name.** Where two symbols would denote the same quantity, the dissertation
   keeps one. The scale's resolution is **n** and never δ (O1): a count where the predicate has
@@ -621,7 +639,7 @@ Stop, report, and wait when:
 
 **Session start**
 
-- [ ] Read this file, `decisions.md`, and the relevant change record.
+- [ ] Read this file, `agent/decisions.md`, and the relevant change record.
 - [ ] Confirm the files named in §1 exist and the cell map still holds (count cells, check headers).
 - [ ] Read the composition guide if prose will be touched.
 - [ ] `git status`: the tree is clean, or every uncommitted change is accounted for (§4.2).
@@ -636,6 +654,6 @@ Stop, report, and wait when:
 - [ ] Both notebooks executed; results match the baseline or the departure is reported (§5.1).
 - [ ] Every number the prose quotes is printed by a cell or a recorded script (§3.3).
 - [ ] Anchors, ToC, equation numbers, and references cell consistent (§2).
-- [ ] Change record and `decisions.md` updated, so the next agent does not depend on your memory.
+- [ ] Change record and `agent/decisions.md` updated, so the next agent does not depend on your memory.
 - [ ] Committed under §4.3: explicit paths, the IDs and a verification line in the message, the hash
       in the change record. Pushed only if the user asked (§4.4).

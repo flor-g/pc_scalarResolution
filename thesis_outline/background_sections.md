@@ -647,7 +647,7 @@ arriving from the FEP literature finds the absence stated rather than having to 
 `sections_3-6.md` has none of its own — and it covers the background, §§3–6, **and the appendices
 as `main.ipynb` and `appendix_E.ipynb` carry them**. A work cited anywhere in the dissertation has
 an entry here. Each notebook keeps its own References cell for its own text — `main.ipynb` cell 24,
-`appendix_E.ipynb` cell 9 (`agent.md` §1, coupling 11). **BG10** reconciled the three on
+`appendix_E.ipynb` cell 9 (`agent/agent.md` §1, coupling 11). **BG10** reconciled the three on
 2026-09-22, 50 entries to 64: eight works that lived only in main's cell and six only in
 appendix_E's were folded in here. *Two divergences left standing, both wanting one pass across all
 three: Friston is "Friston, K." for 2005 and "Friston, K. J." for 2007-2010, and the notebooks set
