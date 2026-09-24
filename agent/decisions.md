@@ -1071,6 +1071,29 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Evidence: no setting of θ_u, Λ, μ_u or B makes the network settle on either field; each is
   φ_S\*(θ_u = 0) plus one column's share of Eq. (23)'s utility field.
 
+### C9. The design strategy is determinacy, and it is named with that word
+- Status: Settled
+- Decided by: user (2026-09-24): the four points are the user's; the wording below is the agent's
+  review of them, which the user approved ("Draft it in that form").
+- Decision: `thesis_outline/sections_3-6.md` opens §3 with the strategy. At each choice Bogacz's
+  construction leaves open, the architecture takes the option that makes its result **determinate**:
+  linear-Gaussian maps, a field-valued situation level (A21), and θ_u\* as the reported parameter
+  (A9). The chain is field → linearity → concavity → unique fixed point in closed form. The costs
+  are named: representation (A21), timescale (A11), locality at m > 1 (A12, the relay), and the
+  halting question (A19, D12).
+- Wording that follows from it: never "maximally"; never "deterministic" for the property, since
+  Bogacz's dynamics already are; "approaches", not "converges", for Eq. (20)'s flow; the halting
+  problem's cause (batching, O2) is stated without calling it a dissolution (A19's 2026-09-22
+  ruling); the stipulations that still shape results are listed (Z, n, the uniform ensemble, the
+  realizable θ_u's tolerance, the read-out).
+- Theoretical reason: the user's; the review corrected four points against the record — the
+  causal order (concavity comes from linearity, which the field preserves: Text cell 3 §8.1), the
+  name of the choice (the field, A21, is not the ζ coordinate, B13), the halting cause (D12), and
+  "maximally deterministic" (overclaims, and names the wrong property).
+- Implementational reason: none.
+- Bogacz status: framing; the divergences it summarizes are D1, D4, D12, D13.
+- Depends on it: `thesis_outline/sections_3-6.md` §3's opening; §§3.4, 3.6, 5.3, 5.5 carry the costs.
+
 ### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
 - Decided by: user (2026-09-13)
 - A number computed off-notebook, or only by a script recorded in a change record, does not count

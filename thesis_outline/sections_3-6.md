@@ -158,7 +158,8 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
-| **3. The proposed architecture** | 800 | **1,360** | |
+| **3. The proposed architecture** | 800 | **1,460** | |
+| 3 (opening) The design strategy (new) | — | **100** | Determinacy as the strategy: linear-Gaussian, the field-valued situation level, $\theta_u^\ast$; the four costs (2026-09-24, C9) |
 | 3.1 What the model must do | 90 | 90 | Four design requirements |
 | 3.2 A continuous world state and a soft lexicon | 160 | **295** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
 | 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
@@ -180,7 +181,7 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 5.5 Limits (was 5.3) | 65 | **465** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5); **+120 the same day for the open question of whether the read-out falls under locality** (`agent/review_2026-09-23_proof_scope.md` PS8) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **5,820** | |
+| **Total** | **2,400** | **5,920** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -192,7 +193,51 @@ figure against text still written to the old one. **Every section heading's figu
 against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
 agree, and the check is worth repeating whenever a budget moves.
 
-# 3. The proposed architecture (about 1,360 words)
+# 3. The proposed architecture (about 1,460 words)
+ 
+## The design strategy (section opening, about 100 words)
+
+*New, 2026-09-24 (the user's four points, reviewed; `thesis_outline/revisions.md` §14,
+`agent/decisions.md` C9). It states why §3.1's requirements take the shape they do, before they are
+listed.*
+
+- **Main claim:** at each choice Bogacz's (2017) construction leaves open, the architecture takes
+  the option that makes its result **determinate** — fixed by the configuration alone, and not by
+  initialization, integration path, learning history or stopping time. Three choices carry it, and
+  the first two are one chain.
+- **1. Linear-Gaussian.** Bogacz's densities are Gaussian throughout, but his generative maps may be
+  nonlinear (his first example has $g(v)=v^2$); ours are linear (Eqs. 9–10). While $\varphi_L$ is
+  clamped and at fixed $\theta_u$ this gives a unique fixed point in closed form (Eqs. 15–16, and
+  $\theta_u^\ast$ by Eq. B2), which makes the dynamics exactly testable (§4.3) and lets the
+  evaluation read configurations too stiff to integrate. Its cost is that the recurrent dynamics
+  become a claim about implementation rather than a computational necessity (§5.5). Say the scope
+  once: $\mathcal F$ is not jointly concave in $(\theta_u,\varphi_u)$ (Text cell 3 §8.5; §5.5).
+- **2. A field-valued situation level** (`agent/decisions.md` A21) is what keeps choice 1
+  available. An entry is a set over the scale, and on a single node for $\zeta$ a set enters only
+  as a step in the log-likelihood, which leaves $\mathcal F$ non-concave. Carried as a field, the
+  entry is predicted affinely (Eq. 9). **State the order of the chain**: the field keeps the maps
+  linear, linearity gives concavity (Eq. 21), and concavity gives the unique fixed point and its
+  closed form. The field also carries mass, which the criterion of §4.2 and the RSA comparison
+  need, and a shape the utility level's width acts on (§3.5). Its cost is the representational one
+  §3.6 names: the network carries a value at every node. Not to be confused with §3.1's requirement
+  1, which sets a field against a finite set of categories, nor with the choice of $\zeta$ as the
+  coordinate, which is a change of variables (Eq. 1).
+- **3. $\theta_u^\ast$ as the reported parameter.** Under the batched uniform ensemble of this phase
+  every update is identical, so the flow of Eq. (20) **approaches** a $\theta_u^\ast$ the
+  configuration fixes, and results reported there depend on no tolerance and no learning history
+  (§§5.3, 5.5). Bogacz has no counterpart: his parameters never converge, being updated after each
+  observation. The cost is the halting question, whose cause is the batching and which is not
+  dissolved by naming it (§5.3). One sentence here; §5.3 carries the argument.
+- **In sum, and the trade-off.** The architecture is as determinate as the framework allows, given
+  the stipulations that still shape its results — the half-width $Z$, $n$, the uniform ensemble,
+  the tolerance behind any realizable $\theta_u$, and the choice of read-out. The price is
+  paid in four currencies, each owned where it falls: representation (a value at every node, §3.6),
+  timescale (commitment 7's separations grow as $\theta_u^2$, §5.3), locality at $m>1$ (the relay,
+  §3.4), and the halting question (§5.3). Bogacz's default pays none of them because it guarantees
+  less: no closed forms, no unique maximum once $g$ is nonlinear, no parameter convergence.
+- **Wording.** Never "maximally", and never "deterministic" for this property, since Bogacz's
+  dynamics are deterministic already; the word is **determinate**. "Approaches", not "converges",
+  for the flow of Eq. (20). Never say the model avoids representing a distribution over states.
  
 ## 3.1 What the model must do (about 90 words)
  

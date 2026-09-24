@@ -1656,6 +1656,11 @@ background target **4,160** (§2.4 400). Both tables re-summed.
    agent's decision pending the user's confirmation; §3.5 calls the property "retaining".
 5. **PS10** (optional) touches no outline sentence unless E.1 is to quote the full relay spectrum.
 
+**Added 2026-09-24: §3's opening, the design strategy** (PS13; `agent/decisions.md` C9). The user's
+four points, reviewed against the record and drafted at the head of §3: determinacy as the strategy,
+the chain field → linearity → concavity → closed form, θ_u\* as the reported parameter, and the four
+costs. §3 1,360 → 1,460; Total 5,820 → 5,920.
+
 ---
 
 ## 13. Z1–Z6: the half-width, printed (2026-09-23)

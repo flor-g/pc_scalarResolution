@@ -265,3 +265,10 @@ argues binary branching from it).
 - [x] **PS12** (2026-09-24): Text cell 3 §1 closes on "Why the situation level carries a field over
   ζ" — the alternative (a single ζ node with a nonlinear generative map, as in Bogacz §2's
   g(v) = v²), three reasons against it, and the price. Markdown only, no number quoted; A21 finding.
+
+**User, 2026-09-24:** a note in the outline on the general design strategy relative to Bogacz's
+construction; four points reviewed (linear-Gaussian; the field; θ\*; determinacy and its cost), then
+"Draft it in that form".
+
+- [x] **PS13** (2026-09-24): `thesis_outline/sections_3-6.md` §3 opens on "The design strategy"
+  (about 100 words; §3 1,460, Total 5,920); decision C9 records the framing and its wording rules.
