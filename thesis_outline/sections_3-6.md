@@ -330,8 +330,9 @@ Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the
   something to answer for in §5.3; and since $\lambda_{\max}(H)$ grows as $\theta_u^2$ it tightens
   as $\theta_u^{-2}$. What it secures is the **monotone** rise of $\mathcal F$, not convergence —
   the next bullet gets convergence from concavity instead, and the two should not be run together.
-  There is no learning rate and none is required: the constant of proportionality is a time constant
-  of the kind the error and state units already carry.
+  The learning rate is the ratio $\tau_\varphi/\tau_\theta$: the constant of proportionality is a
+  time constant of the kind the error and state units already carry, so no step size is set apart
+  from the ordering of timescales, though the ratio does a learning rate's work.
 - **Why the dynamics are a claim and not an assumption.** $\mathcal F$ is strictly concave in
   $(\varphi_S,\varphi_u)$ for *every* $\theta_u$ and *every* $\Lambda$ (Eq. 21), and Eq. (22) lifts
   this to arbitrary $B$ and arbitrary $m$. So there is a unique global maximum and the closed forms

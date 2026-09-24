@@ -181,6 +181,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: none.
 - Bogacz status: not applicable.
 - Depends on it: Part A's parity argument, Appendix C, the need for Appendix E's relay.
+- Findings added later: **2026-09-23 (agent, raised with the user; `agent/review_2026-09-23_proof_scope.md` F3).** The theoretical
+  reason overstates. One mixed-parity column, (b₁ + b₂)/√2, separates *no*, *some* and *all*
+  (+2.3697, −2.3697, −10.5266 at Λ = 8), and Text cell 5 already chooses m = 2 for tilt and width
+  as independent coordinates. The parity argument makes m ≥ 2 necessary only within a basis of
+  definite parity. Outline §3.5's "neither is chosen" is the site (R6, Q3).
 
 ### A8. g_y = θ_L A W φ_L; θ_L is a gain and a threshold
 - Status: Settled
@@ -259,6 +264,9 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Findings added later: under A11 the relay needs only τ_r ≤ τ_ε, for monotone F (F26, 2026-09-11).
   2026-09-13: at τ_r = τ_ε F is monotone under *some* only; under *no* and *all* three steps fall
   (Code Cell E4). Eq. (E6) keeps ≤ for stability, with the exception stated (O6).
+  2026-09-23 (`agent/review_2026-09-23_proof_scope.md` F5, R4): Eq. (E5) holds φ_S fixed and so is a subsystem spectrum; E.1 and E.3
+  now say so. The full linear network with the relay is stable at the four θ_u of E.1 for
+  τ_r/τ_ε ∈ {1, 2, 10} (agent's check, printed by no cell; R10 would print it).
 
 ### A13. The read-out is a softmax outside the dynamics
 - Status: Settled; its standing as the reported belief is reframed by A16 (2026-09-13)
@@ -342,6 +350,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     (which read-out the criterion is written in), 4.4, 4.5, the central claim and 6; and
     `thesis_outline/background_sections.md` 2.2 (what commitment 3 is a commitment about). **The
     notebooks are untouched: B10 keeps positions out of them.**
+  - **2026-09-23, an external review finds reason 3 false of this implementation (agent, raised
+    with the user; `agent/review_2026-09-23_proof_scope.md` F1, F2, Q1, Q2).** The delta is over x = (φ_S, φ_u), K + m = 103 numbers
+    at the defaults, so it carries the whole field q normalizes; it does not reduce a distribution to
+    a mode and a variance. And the delta is not a consequence of Gaussianity: Bogacz adopts it "for
+    simplicity" (tutorial line 297), and a Laplace approximation keeps a covariance. Reasons 1 and 2
+    are untouched. Not edited, since the ruling is the user's.
 
 ### A19. Halting by tolerance: a proposed direction, not a commitment
 - Status: **DEMOTED 2026-09-22 by the user, from a commitment to a direction.** Settled as of
@@ -696,6 +710,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
       and it is the n guard of `sections_3-6.md` 4.2 made concrete.
   - **2026-09-23: how the paper reads these two criteria is B11**, not this entry. B8 stays a
     definition.
+  - **2026-09-23, the mode is coordinate-dependent (agent, raised with the user; `agent/review_2026-09-23_proof_scope.md` F6, Q5).**
+    "The grid node where the field is largest" is the mode of q in ζ. On the delta-like row under
+    *some* it maps to s = 0.94685, outside the cell of *all*; the mode of the same distribution as a
+    density over s, which carries the Jacobian 1/s(1−s), is at s = 0.95257, inside it. The mode
+    position criterion on that row is met in ζ and not in s. No cell prints the second number.
+    Selecting the argmax is also an operation beyond the delta, and its locality is not argued.
 
 ### B10. The notebooks report the conditions and take no position on what counts as strengthening
 - Status: Settled

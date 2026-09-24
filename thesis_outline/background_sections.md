@@ -567,9 +567,10 @@ arriving from the FEP literature finds the absence stated rather than having to 
   and the bound on \(\tau_\varepsilon\) is **ours and not his** (§2.1, commitment 7): it is
   critical damping of the stiffest mode, it tightens as \(\theta_u^2\), and what it secures is
   the monotone rise of \(\mathcal F\), not convergence — which §5.5 records and §5.3 prices.
-  - **There is no learning rate and none is required:** the constant of proportionality is a time
-    constant of the kind the error and state units already carry. Worth one sentence, because it is
-    where the model differs from a fitted network.
+  - **The learning rate is a ratio of time constants,** \(\tau_\varphi/\tau_\theta\): the constant
+    of proportionality is a time constant of the kind the error and state units already carry, so
+    the model has no step size set apart from its ordering of timescales. One sentence, and no
+    stronger: the ratio still does a learning rate's work (Text cell 3 §7).
   - **The slow parameter is learned, and its flow starts at \(\theta_u(0)=0\)** — one start
     shared by every configuration, and there the network is the **tempered control** rather than
     the literal listener (§4.1 names both). Worth one sentence: it is why §4's readings are
