@@ -52,16 +52,16 @@ about the architecture.
   item 5's regex (`[A-F]` → `[A-G]`), and the loud-dependency list. Main run twice (the first
   exposed CX-F5): **RUNNER OK, 0 errors, 8 figures, 943 s**. Acceptance PASS: spectrum gap 2.1e-15;
   all fourteen runs converged; decay × 8κ 1.0005–1.0334; every other cell's printed output
-  identical to `22c5b35` apart from Code Cell 2b's `cost:` lines; C6 sweep of Appendix G clean.
+  identical to `22c5b35` apart from Code Cell 2b's `cost:` lines; C6 sweep of Appendix G clean. `0475a21`
 - [x] **CX2 (2026-09-24). appendix_E re-run** after main's second run: **RUNNER OK, 0 errors,
   5 figures, 1985 s**; E2 19/19; E3 PASS on both cells, Code Cell 2 223 lines identical with the
-  usual shape (1 changed, 4 inserted), Code Cell 2b 263 identical and nothing else.
+  usual shape (1 changed, 4 inserted), Code Cell 2b 263 identical and nothing else. `0475a21`
 - [x] **CX3 (2026-09-24). Outline**: §5.5's numerical-substrate group gets one bullet (82 words)
   on the simulation's cost, pointing to Appendix G and naming how n reaches the cost, the (K, Z)(n)
   proposal included; Tier C gains Appendix G. §5.5 745 → 830, §5 2,085 → 2,170, total 6,350 →
-  6,435, headings in step. `revisions.md` §17 records it.
+  6,435, headings in step. `revisions.md` §17 records it. `ec2eb0d`
 - [x] **CX4 (2026-09-24). Records**: I14 and E20 in `agent/decisions.md`; findings CX-F1 to
-  CX-F6 below.
+  CX-F6 below. `0475a21`
 
 ## 4. Findings
 
