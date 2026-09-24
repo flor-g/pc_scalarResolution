@@ -108,7 +108,15 @@ Every point was checked against the files and, where numerical, recomputed with 
 - [x] **PS9** (2026-09-23, PSQ6 approved; also narrows the drafted §1.5's closing line, "in which it
   does not hold" → "in which the interpretation is not staged that way", flagged to the user): background §2.6's staging claim restated as joint inference of
   the downstream fields given the clamped lexical input.
-- [ ] **PS11**, TODO, not to be applied until the user says (user, 2026-09-23): print PSF17's and PSF18's
+- [x] **PS11** (2026-09-23, applied on the user's word "start applying"; checkpoint e403106):
+  Code Cell A gains `peak_locality_report`, Appendix A a closing paragraph, Text cell 4 a pointer.
+  767 configurations under *some* (Part D's nine rows on the Z ladder, the n ladder and K = 101,
+  201, 401; the plane at every Z): one peak of φ_S\* and of ℓ₀ in all, both neighbour rules equal to
+  the argmax in all; the Beta(1, β) control reproduces PSF18. The count is tie-aware (E18: symmetric
+  priors on even-K grids have two equal central nodes). Placement in Code Cell A recorded under I10,
+  pending the user. main 0 errors, 8 figures, 15/15, 846 s; appendix_E 0 errors, 5 figures, E3 PASS
+  (223 identical / 1 changed / 4 inserted; 263 identical); only Code Cell A's output changed.
+  Was: TODO, not to be applied until the user says (user, 2026-09-23): print PSF17's and PSF18's
   counts from a code cell so that `thesis_outline/sections_3-6.md` 5.5 may quote them (C6) — the
   265 configurations in which φ_S\* and ℓ₀ are unimodal under *some* and the neighbour rule agrees
   with the argmax, and the Beta(1, 64) / Beta(1, 256) at Λ = 8 counterexamples. Source:

@@ -1262,6 +1262,14 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     the delta conjunction being a **subset** of the q conjunction rather than from the size of the
     gap, and a difference of two counts does not establish a subset relation; the reversal column
     does, and it is zero at every rung.
+  - **2026-09-23, PS11: Code Cell A takes the neighbour-comparison counts** (agent's placement,
+    pending user confirmation). `peak_locality_report` counts, under *some*, the local maxima of
+    φ_S\* and ℓ₀ and checks the two neighbour rules against the argmax, over Part D's nine rows on
+    this cell's Z and n ladders and at K = 101, 201, 401, and Code Cell 4's plane at every Z; then a
+    control of Beta(1, β) priors. Code Cell A, not Code Cell 2, because the counts run over this
+    cell's ladders, need Code Cell 2b's rows (Code Cell 2 runs before 2b), and Code Cell A has no
+    mirror, so E2, E2b and E3 are untouched. Appendix A's closing paragraph describes the block,
+    and Text cell 4 points to it.
 
 ### I11. Code Cell 2b, its mirror, and how E3 finds both
 - Status: Settled
@@ -2502,3 +2510,20 @@ a number from it.
   baseline-conditioned counts empty as fast as the conjunction does, which is the opposite of the
   Z robustness B12 first recorded as its reason. See B12's own correction; nothing in any section
   had relied on it.
+
+**E18. The quantities `peak_locality_report` adds (2026-09-23, PS11 of
+`agent/review_2026-09-23_proof_scope.md`).** Classed by the agent.
+- **(b) reported statistics**, defined in Appendix A's closing paragraph: the number of strict
+  local maxima of φ_S\* and of ℓ₀ under *some* (a run of equal values counting once, at its first
+  node, which is the argmax's tie-break of I12), and the agreement of the two neighbour rules with
+  the argmax. Nothing reads them back into the model.
+- **(c) a control**, labelled as one in the output and in the prose: the Beta(1, β) priors,
+  β ∈ {3, 16, 64, 256}, at Λ = 8 and STRONG_LAMBDA, configurations the network is actually run in
+  and the evaluation does not use.
+- **(d) no new implementation constant.** The ladders are Code Cell A's own (HALF_WIDTHS,
+  NODE_SPACING, the n ladder of `granularity_report`); K = 101, 201, 401 repeats Code Cell 2's
+  refinement check.
+- **A finding the prototype made, recorded because it would otherwise recur.** A strict
+  "larger than both neighbours" test finds **no** maximum of ℓ₀ for a prior symmetric about ζ = 0
+  on a grid with an even node count: the two central nodes are exactly equal (Z = 5, 7, 8, 10 of
+  the Z ladder, K = 84, 118, 134, 168). The count is therefore tie-aware, matching the argmax.

@@ -1645,10 +1645,9 @@ background target **4,160** (§2.4 400). Both tables re-summed.
 
 **Open, and binding on a writer.**
 
-1. **PS11 (TODO, not applied by the user's instruction).** §5.5's read-out bullet rests on counts
-   printed only by an audit script: unimodality under *some* in 265 configurations, and the
-   Beta(1, 64) / Beta(1, 256) exceptions at Λ = 8. Under C6 the paper quotes none of them until a
-   cell prints them.
+1. ~~PS11~~ **Closed 2026-09-23**: Code Cell A's `peak_locality_report` prints the counts §5.5
+   rests on (767 configurations under *some*, and the Beta(1, 64) / Beta(1, 256) control at
+   Λ = 8), and Appendix A's closing paragraph describes them. §5.5 may quote them.
 2. **A21's reasons await the user's confirmation.** §3.6's reason 3 and §5.5's read-out bullet rest
    on them.
 3. **§5.5's read-out question is posed, not answered.** Do not draft a position on whether the

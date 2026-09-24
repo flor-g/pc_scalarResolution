@@ -1334,8 +1334,11 @@ what it costs and what is still owed.
     statistics; and unimodality under *some* is **measured, not proved**, and fails where the
     prior peaks inside *some*'s excluded region, $s<1/2n$, at a weak $\Lambda$ (a Beta(1, 64)
     prior at $\Lambda=8$ gives two peaks). It does nothing for $q$'s normalizer.
-  - C6 before drafting: the counts behind "every configuration" and the Beta(1, 64) case are printed
-    by an audit script only (`agent/audits/2026-09-23-mode-coordinate/`), not by a cell.
+  - Sourced (C6): Code Cell A's last block prints the counts — a single peak of $\varphi_S^\ast$ and
+    of $\ell_0$ under *some*, and both neighbour rules agreeing with the argmax, in all 767
+    configurations it runs (Part D's rows along Appendix A's two ladders and at three node counts,
+    and the plane at every half-width) — and the Beta(1, 64) and Beta(1, 256) control at
+    $\Lambda=8$.
 - The model is linear-Gaussian while $\varphi_L$ is clamped, so the recurrent dynamics are an
   implementation claim rather than a computational necessity.
 - The relay secures locality at the cost of a fourth timescale, $\tau_r\le\tau_\varepsilon$

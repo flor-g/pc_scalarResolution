@@ -189,6 +189,10 @@ than silently, but an agent renaming or re-signing these should know what breaks
 - **Code Cell D reads names from Code Cells 2 and 2b**: `part_d_priors` and `criterion_for_some`
   (Code Cell 2), `STRONG_LAMBDA` and `DELTA_ALL_ALPHA` (Code Cell 2b). Renaming any of them raises
   `NameError` in Code Cell D.
+- **Code Cell A reads names from Code Cells 2 and 2b**: `evaluation_network` (Code Cell 2),
+  `STRONG_LAMBDA` and `delta_like_row` (Code Cell 2b), in `peak_locality_report` (added
+  2026-09-23, PS11), so that its Part D rows are the ones Text cell 4b reports. Renaming any of
+  them raises `NameError` in Code Cell A.
 - **Code Cell F reads `evaluation_network` from Code Cell 2** and respawns it at `num_atoms=4`.
   It defines every other name it uses, so `code cell 1` is untouched and coupling 9 stays quiet.
 - **Code Cell D overrides `predict_state` against main's signature**, `(phi_u, theta_u=None)`, in
