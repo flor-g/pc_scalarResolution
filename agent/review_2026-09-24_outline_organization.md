@@ -19,7 +19,7 @@ tasks in §5 wait for the user.
 `thesis_outline/revisions.md` is the revision log, not the outline, and is where bookkeeping moved
 out of the two files would go.
 
-## 2. The line between "result" and "technicality" (OR-D1, needs the user)
+## 2. The line between "result" and "technicality" (OR-D1, confirmed by the user 2026-09-24)
 
 A dissertation's §4 must report results, and a pointer cannot replace a number the discussion argues
 from. The agent's proposed line, **pending the user**:
@@ -141,7 +141,7 @@ content is rationale and literature, as the rule wants.
 ## 5. Proposed tasks (not started; wait for the user)
 
 - [ ] **OR0.** Checkpoint.
-- [ ] **OR-D1.** The user confirms or redraws §2's line.
+- [x] **OR-D1.** Confirmed by the user 2026-09-24 ("Your decisions are confirmed"), with the proposals of §§3–4.
 - [ ] **OR-A. Housekeeping** (OR1, OR2, OR3): header, bookkeeping moved to `revisions.md`, one
   form for writer's notes. No content change.
 - [ ] **OR-B. Notebook first** (OR-N1, OR-N2): Appendix C and Appendix A (or Text cell 3 §1) gain
