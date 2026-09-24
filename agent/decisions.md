@@ -354,7 +354,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: no operation. Bogacz's F has no cost of computation in it.
 - Depends on it: `sections_3-6.md` §5.4 and its footnote; the reference list's nine entries of
   2026-09-24; I14 (whose cost is the one in question).
-- Evidence: `agent/complexity_2026-09-24.md` CX7 (the user's argument, the corrections, the
+- Evidence: `agent/history.md` §19, CX7 (the user's argument, the corrections, the
   literature review with what was verified and what was not, the rulings).
 
 ---
@@ -1505,7 +1505,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: no operation is added. Code Cell G rebuilds H as `stiffest_state_rate` does, as a
   diagnostic, and checks the two agree.
 - Depends on it: `main.ipynb` Appendix G, Code Cell G; `sections_3-6.md` §5.6 and Tier C; §5.4 (A22).
-- Evidence: `agent/complexity_2026-09-24.md` §4, CX-F1 to CX-F6; Code Cell G's output.
+- Evidence: `agent/history.md` §19, CX-F1 to CX-F8; Code Cell G's output.
 - Findings added later: 2026-09-24 (user), **the scope bullet's gloss was wrong, and so was the
   theoretical reason above.** There are three things, not two: the **process**; the
   **architecture**, an algorithm claimed to represent the process; and the **simulation**, one
@@ -2740,7 +2740,7 @@ a number from it.
   from 101 to 5). Odd K only at the coarse end, since an even K ties the central nodes of a
   symmetric prior (E18). No model constant changes; K = 101 stays the default everywhere else.
 
-**E20. The quantities Code Cell G adds (2026-09-24, CX1 of `agent/complexity_2026-09-24.md`).**
+**E20. The quantities Code Cell G adds (2026-09-24, CX1 of `agent/history.md` §19).**
 Classed by the agent.
 - **(b) reported statistics** of the simulation, defined in Appendix G: the largest gap between H's
   eigenvalues and Eq. (G1), relative to λ_max; κ(H); the stiffness ratio printed beside it for

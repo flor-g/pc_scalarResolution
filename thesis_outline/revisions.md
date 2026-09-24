@@ -1623,7 +1623,7 @@ deferring to §3 (the two files had been pointing at each other).
 
 ## 18. CX7: cost in the dynamics, a new §5.4 (2026-09-24)
 
-The working record is `agent/complexity_2026-09-24.md` (CX7); the position is decision A22. **What
+The working record, closed, is `agent/history.md` §19 (CX7); the position is decision A22. **What
 changed in the outlines:** `sections_3-6.md` gains §5.4, *Cost in the dynamics* (about 250 words):
 the approved lead sentence citing neo-Gricean pragmatics, Relevance Theory and standard RSA; the
 three-step position that the true cost of an inference cannot take part in its dynamics; the two
@@ -1647,7 +1647,7 @@ in `background_sections.md`; this file's older sections and the records keep the
 
 ## 17. CX: the computational complexity of the simulation (2026-09-24)
 
-The working record is `agent/complexity_2026-09-24.md` while it is open. **What changed in the
+The working record, closed, is `agent/history.md` §19. **What changed in the
 outline:** one bullet at the end of §5.5's numerical-substrate group, which states the total for an
 integrated inference, names $\theta_u^2+2$ as the condition number of $H$ (Eq. G1), and gives the
 two routes by which $n$ reaches the cost; Tier C gains Appendix G. The derivation, the breakdown
