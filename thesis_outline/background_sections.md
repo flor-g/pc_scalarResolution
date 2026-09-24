@@ -1,24 +1,15 @@
 Background sections outline · MD
 # Outline for the dissertation background
  
-**Rewritten 2026-09-11** under the three-question frame (Revision 4). *That plan file,
-`claude/background_revision_plan.md`, is **not in the repository** and was never tracked; the live
-plan for this document is `thesis_outline/revisions.md` **§6**, with the open tasks in **§10**.
-Pointer corrected at BG8, 2026-09-22.* The previous version motivated a model that
-learns confidence in the prior; this architecture performs no precision inference, and the question
-it answers is a different one. Nothing from the precision/wonkiness arc survives except as contrast.
- 
+The live plan for this document is `thesis_outline/revisions.md`; its history is in §16 there.
+The precision/wonkiness arc of earlier drafts survives only as contrast.
+
 ---
  
 ## Scale and argumentative shape
  
-- **Target length: approximately 4,160 words.** Raised from 4,090 on 2026-09-23 (§2.4, +70 for
-  Bogacz on the read-out and the basal-ganglia note; `agent/review_2026-09-23_proof_scope.md` PS8).
-  Raised from 4,050 on 2026-09-23 (§2.2, for what
-  commitment 3 is a commitment *about*; PP7 of `revisions.md` §11). Raised from 3,670 on 2026-09-22 under BG7: the
-  budget follows what the sections have to carry, and is not trimmed to preserve a number (the
-  user's ruling, R8's successor for the background). The old figure also **omitted the Opening**,
-  summing Part I, Part II and the bridge alone.
+- **Target length: approximately 4,160 words.** The budget follows what the sections have to carry
+  (raise history: `revisions.md` §16).
 - **Opening (about 245 words).** The explanandum; the three questions the dissertation answers; and
   Marr's levels, fixed by contrast with RSA.
 - **Part I — What scalar resolution is asked to explain, and why the existing division does not
@@ -840,80 +831,3 @@ Gu, S. (2026b). *Scalar implicature as predictive coding (discrete state space)*
  
 ---
  
-# Drafting checklist
-
-**ALL THIRTEEN ITEMS WERE ALREADY DONE. Audited and ticked 2026-09-22**, item by item against the
-file rather than from the change record — the boxes had gone stale, some of them long ago (§1.7 was
-written and then edited again at T11 while its box stood unticked). The evidence for each tick is
-given beside it, so nobody has to re-derive it. **Nothing was written to satisfy this audit; only
-the boxes changed.**
-
-**Tier 1 — the background is wrong without these.**
-
-- [x] §2.5 cut to the scope statement (the previous 300-word precision subsection describes a
-      mechanism this architecture does not have) — *§2.5 is 60 words and carries the note
-      "Replaces the previous draft's 300-word precision subsection".*
-- [x] Opening rewritten with the three questions and the RSA level contrast — *the Opening is
-      "three questions, and the level they are asked at", in three moves, with the level distinction
-      fixed by the RSA contrast rather than by definition.*
-- [x] Closing bridge rewritten — the old question asked whether the muted prior effect emerges when
-      confidence in the prior is learnable — *that question is gone; the bridge now restates the
-      three questions and carries the standing qualification §5.1 leans on.*
-- [x] §2.3's mapping paragraph corrected (the state is continuous, not a discrete softmax) —
-      *§2.3 says "Replace the mapping paragraph entirely… The state is continuous".*
-- [x] The old "testable payoff" bullet cut — *"testable payoff" and "prior entropy" now appear
-      nowhere in the file outside this checklist line.*
-- [x] §1.4's trailing two-utility line deleted — *the only surviving occurrence of
-      "alternative-sensitive"/"world-sensitive" in §1.4 is inside the **Delete:** instruction that
-      names the line, so the line itself is gone. The instruction stays, because the prose pass
-      still has to honour it.*
-
-**Tier 2 — a question goes unsupported without these.**
-
-- [x] §1.5 pasted and edited (drafted above) — *§1.5 is marked "— DRAFTED" and "Prose, not an
-      outline. Edit directly."*
-- [x] §1.7 written — *§1.7 exists at about 190 words, and was revised again at T11 (2026-09-22) to
-      fix F12's backwards prior-manipulation bullet and soften Q3b.*
-- [x] §1.6 written — *§1.6 "Alternatives: where they come from, and what bounds them", about 180
-      words.*
-
-**Tier 3 — improvements.**
-
-- [x] §2.2 three commitments — *§2.2 is "Three commitments of the canonical framework".*
-- [x] §2.4 expanded to carry locality as a thesis — *§2.4 is 330 words and says so: "the previous
-      draft's 250 words were thinner than the load it bears".*
-- [x] §2.6 rewritten to the staging warrant — *§2.6 carries "Note the warrant: the claim is about
-      **staging**, not about message direction".*
-- [x] §1.3 merge; §1.4 trim; §1.8 rewritten; §2.7's claim-level close — *§1.3 says "Merges the
-      previous draft's §1.3 and §1.4"; §1.4 stands at 360 words; §1.8 is "Part I synthesis: three
-      questions, and an impasse"; §2.7 closes on "Close on claim level, not on apology".*
-
-**What this leaves.** The background outline is complete as an outline. What it does **not** claim
-is that the background *prose* is written: §1.5 is the only section drafted as prose, and the rest
-are specifications for it. That distinction is what the ticks mean.
-**Verification: DONE 2026-09-22, all of it.** Every entry below was checked against Crossref's
-registered metadata, not against memory or press coverage.
-
-- **Corrected.** *Cremers, Wilcox & Spector (2023)* was cited as issue **3**; it is **47(5)**, and
-  the second author is **Wilcox, E. G.** *Sauerland (2012)* gained its issue and pages, **6(1),
-  36-49**.
-- **Resolved from a bare marker.** *Furutachi & Hofer (2026)*, "Rethinking predictive processing",
-  *Annual Review of Neuroscience, 49*, 471-494. *Schlegel et al. (2024)*, "Whole-brain annotation
-  and multi-connectome cell typing of *Drosophila*", *Nature, 634*, 139-152 — note the **published
-  title differs from the preprint's**, which is why this one was worth checking. *Spratling (2013)*,
-  "Distinguishing theory from implementation in predictive coding accounts of brain function",
-  *Behavioral and Brain Sciences, 36*(3), 231-232 — a commentary, and exactly the Marr-levels
-  framing §2.7 cites it for.
-- **Confirmed unchanged.** *Lassiter & Goodman (2017)*, *Synthese, 194*(10), 3801-3836, and its DOI.
-  *Griffiths, Lieder & Goodman (2015)*, *Topics in Cognitive Science, 7*(2), 217-229; DOI added.
-  *Lieder & Griffiths (2020)*, *Behavioral and Brain Sciences, 43*, Article e1; DOI added.
-- **Added.** The **MICrONS Consortium (2025)** primary paper, *Nature, 640*, 435-447, now cited in
-  §2.7 where "a cubic millimetre of mouse cortex" previously stood with no source at all.
-- **Still open, and both are questions about other people's papers rather than about these
-  entries.** *Gutzmann*: Crossref dates the chapter and the Companion **2020** (online) while the
-  print volume is **2021** — pick one and use it for every Companion chapter. And whether Xiang et
-  al. (2022) build their LG model on *Lassiter & Goodman (2017)* or on *Lassiter & Goodman (2013,
-  SALT 23)*, which needs their paper, not a registry.
-- **Leffel et al. (2017)** was resolved earlier (T5, 2026-09-22): the published article reports the
-  shapes/artifacts contrast itself, so the manuscript is dropped and Xiang et al. (2022) cited
-  alone.

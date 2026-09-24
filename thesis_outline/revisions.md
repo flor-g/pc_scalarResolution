@@ -1621,6 +1621,203 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 16. OR: the outline reorganized (2026-09-24)
+
+The working record is `agent/review_2026-09-24_outline_organization.md`. This section holds, verbatim,
+the bookkeeping OR-A moved out of the two outlines, so that nothing is lost; the outlines keep the
+tables, targets and entries, and point here for their history.
+
+### Moved from sections_3-6.md, word allocation: the raise chain and its reconciliation note
+
+2,400 → 3,000 (R1) → 3,200 (S-6) →
+**3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet) → **3,610**
+(§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard) → **3,760** (§5.2 raised 400 → 550 on
+2026-09-22 at T10, under S-6's standing permission for this section) → **3,880** (§5.2 550 → 650 and
+§6 165 → 185 the same day, for R27's reservation on H1) → **4,030** (§5.2 650 → 800 the same day,
+for R28's mechanism and its one hedged causal statement) → **4,210** (§5.6 60 → 130 the same day:
+it carries four predictions and R27 had added the H1 reservation to the fourth without raising it)
+→ **4,270** (§3.4 230 → 290 the same day, at **BG13**: commitment 7 in its exact form, conditioning,
+and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been applied) → **5,060**
+(2026-09-23, the two positions of §11 of `revisions.md`: §3.6 100 → 190, §4.2 480 → 525, §4.4 355 → 415,
+§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225) → **5,160** (the same day, §5.1 460 → 560 at PP10) → **5,290** (the same day, the constructive claim's rewrite at §12 of `revisions.md`: §4.4 415 → 470, §4.5 370 → 420, §6 225 → 250) → **5,600** (the same day, the half-width printed, §13's Z8: §3.2 270 → 295, §4.2 525 → 545, §4.3 70 → 105, §4.5 420 → 530, §5.2 800 → 860, §5.5 300 → 345, §6 250 → 265). The "was" column is the 2,400 allocation this outline was written to.
+
+**The running chain above does not reconcile with the rows, and the rows are what to trust.** Before
+this entry the chain read 4,270 while the rows summed to 4,730: four raises were applied to rows
+without being appended here (§4.2, §4.4, §4.5 and §5.5), and which raise accounts for which part of
+the 460 cannot be recovered from this file. **The subtotals and the Total are re-summed from the
+rows and agree with them**; the chain is a record of raises with gaps in it. Treat it as history.
+
+### Moved from sections_3-6.md, word allocation: "What this table does not do"
+
+**What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
+`revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
+until BG13 corrected it — it had gone stale within the same day they were written.* Every
+subsection of §§3–6 now has a body. Limits and Predictions keep
+their text under their new numbers, §5.5 and §5.6. Bodies rewritten to their new budgets: §§3.2,
+3.3, 4.1, 4.4, 4.5 and 6 (tasks U9–U12), plus §5.2 (T10, R27, R28) and §3.6; the rest carry the new
+figure against text still written to the old one. **Every section heading's figure was checked
+against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
+agree, and the check is worth repeating whenever a budget moves.
+
+### Moved from sections_3-6.md: Open items (all four closed)
+
+## Open items
+ 
+1. ~~The §5.2 magnitudes are not yet in the notebook.~~ **CLOSED 2026-09-22 (T2, T7).** Every number
+   §5.2 quotes is printed by **Code Cell F** (Appendix F, cells 22–23 of `main.ipynb`), and a C6
+   sweep over the rewritten section returns none without a printed source. The magnitudes are not
+   the ones this item meant: the off-centre loading ratios, the utility contributions to posterior
+   degree and the sign reversal under a sharp prior belonged to the prediction that F13 withdrew.
+   What survives is the parity result, now restated at $n=4$ against printed $\kappa$, and what
+   replaces the rest is the class comparison against Xiang et al.'s own items. The "drafted probe"
+   was never found in the project or on the Desktop and is not needed.
+
+2. ~~The background is being rewritten.~~ **DONE, and the pointers here were dangling
+   (2026-09-22).** The rewrite under the three-question frame (Q1 locality; Q2 not one pass; Q3
+   algorithmic-level peculiarities) is complete: the outline is `thesis_outline/background_sections.md`,
+   whose 13-item drafting checklist is fully ticked. The two files this item used to name —
+   `claude/background_revision_plan.md` and `background_sections_outline.md` — **do not exist**;
+   the second is one of the superseded Desktop drafts `agent/agent.md` §1 lists as not maintained. Two
+   consequences for this document, both applied long since: §5.1's sub-bullet on alternative-sensitive versus
+   world-sensitive utility is deleted rather than redirected, since the model has one utility level;
+   and the background now introduces Levinson (2000), Rooth, Kratzer & Shimoyama, Katzir,
+   Fox & Spector, Kennedy (2007) and Xiang et al. (2022) before §5.1 and §5.2 use them.
+3. ~~The $g_a$ algebra.~~ **Resolved by decision: not derived, and admitted as such in §5.1** under
+   "What this dissertation does not derive", with the four remaining obligations named. Do not
+   attempt the derivation. Note that the admission is written as a scope statement; any account of
+   *why* it was out of scope belongs in an introductory scope note or the acknowledgements, not in
+   §5.1, where it would add nothing about the model. **Notation settled 2026-09-11: the subscript is
+   lowercase, because $\varphi_a$ has the same type as $\chi$ — an indicator selecting a subdomain,
+   not a graded field.**
+4. ~~The *most* case, and the cascade check.~~ **Resolved: both are arguments, not measurements.**
+   §5.1's $m=1$ result now runs through Eq. (C1) with $\chi_D$ substituted for $\mathbf 1$, which is
+   a proved result applied to a restricted domain and therefore holds at any cascade depth whose
+   levels are complementary pairs. ⟨*some*, *most*, *all*⟩ is such a cascade — split off $s=0$,
+   split the remainder at $s=\tfrac12$, split the upper part at $s=1$ — so it needs no separate
+   check, and the $8\times10^{-16}$ figure is no longer cited.
+
+### Moved from sections_3-6.md: "Sources for §5.2"
+
+## Sources for §5.2
+ 
+**The entries live in `background_sections.md`'s reference list, which is the dissertation's only
+one** (BG10, 2026-09-22): Xiang, Kennedy, Xu and Leffel (2022), Ronai and Xiang (2024), and
+Kennedy (2007). They were duplicated here, and the duplicate had drifted — Kennedy's issue number
+was missing from it. **This file keeps no entries of its own**; what follows is the note about
+where the §5.1 citations went, which is a drafting instruction and not a list.
+
+Citations redeployed into §5.1: Rooth (1985, 1992) and Kratzer & Shimoyama (2002) make the
+alternative set depend on context rather than on the uttered expression; Katzir (2007) and
+Fox & Spector (2018) treat competition as resolved by, rather than generative of, what is produced.
+Both constrain where such a level would sit, and Katzir and Fox & Spector are also the right
+citations for a structurally bounded alternative set.
+ 
+
+### Moved from background_sections.md: header revision note
+
+**Rewritten 2026-09-11** under the three-question frame (Revision 4). *That plan file,
+`claude/background_revision_plan.md`, is **not in the repository** and was never tracked; the live
+plan for this document is `thesis_outline/revisions.md` **§6**, with the open tasks in **§10**.
+Pointer corrected at BG8, 2026-09-22.* The previous version motivated a model that
+learns confidence in the prior; this architecture performs no precision inference, and the question
+it answers is a different one. Nothing from the precision/wonkiness arc survives except as contrast.
+ 
+
+### Moved from background_sections.md: the target length's raise history
+
+- **Target length: approximately 4,160 words.** Raised from 4,090 on 2026-09-23 (§2.4, +70 for
+  Bogacz on the read-out and the basal-ganglia note; `agent/review_2026-09-23_proof_scope.md` PS8).
+  Raised from 4,050 on 2026-09-23 (§2.2, for what
+  commitment 3 is a commitment *about*; PP7 of `revisions.md` §11). Raised from 3,670 on 2026-09-22 under BG7: the
+  budget follows what the sections have to carry, and is not trimmed to preserve a number (the
+  user's ruling, R8's successor for the background). The old figure also **omitted the Opening**,
+  summing Part I, Part II and the bridge alone.
+
+### Moved from background_sections.md: the drafting checklist (all thirteen ticked)
+
+# Drafting checklist
+
+**ALL THIRTEEN ITEMS WERE ALREADY DONE. Audited and ticked 2026-09-22**, item by item against the
+file rather than from the change record — the boxes had gone stale, some of them long ago (§1.7 was
+written and then edited again at T11 while its box stood unticked). The evidence for each tick is
+given beside it, so nobody has to re-derive it. **Nothing was written to satisfy this audit; only
+the boxes changed.**
+
+**Tier 1 — the background is wrong without these.**
+
+- [x] §2.5 cut to the scope statement (the previous 300-word precision subsection describes a
+      mechanism this architecture does not have) — *§2.5 is 60 words and carries the note
+      "Replaces the previous draft's 300-word precision subsection".*
+- [x] Opening rewritten with the three questions and the RSA level contrast — *the Opening is
+      "three questions, and the level they are asked at", in three moves, with the level distinction
+      fixed by the RSA contrast rather than by definition.*
+- [x] Closing bridge rewritten — the old question asked whether the muted prior effect emerges when
+      confidence in the prior is learnable — *that question is gone; the bridge now restates the
+      three questions and carries the standing qualification §5.1 leans on.*
+- [x] §2.3's mapping paragraph corrected (the state is continuous, not a discrete softmax) —
+      *§2.3 says "Replace the mapping paragraph entirely… The state is continuous".*
+- [x] The old "testable payoff" bullet cut — *"testable payoff" and "prior entropy" now appear
+      nowhere in the file outside this checklist line.*
+- [x] §1.4's trailing two-utility line deleted — *the only surviving occurrence of
+      "alternative-sensitive"/"world-sensitive" in §1.4 is inside the **Delete:** instruction that
+      names the line, so the line itself is gone. The instruction stays, because the prose pass
+      still has to honour it.*
+
+**Tier 2 — a question goes unsupported without these.**
+
+- [x] §1.5 pasted and edited (drafted above) — *§1.5 is marked "— DRAFTED" and "Prose, not an
+      outline. Edit directly."*
+- [x] §1.7 written — *§1.7 exists at about 190 words, and was revised again at T11 (2026-09-22) to
+      fix F12's backwards prior-manipulation bullet and soften Q3b.*
+- [x] §1.6 written — *§1.6 "Alternatives: where they come from, and what bounds them", about 180
+      words.*
+
+**Tier 3 — improvements.**
+
+- [x] §2.2 three commitments — *§2.2 is "Three commitments of the canonical framework".*
+- [x] §2.4 expanded to carry locality as a thesis — *§2.4 is 330 words and says so: "the previous
+      draft's 250 words were thinner than the load it bears".*
+- [x] §2.6 rewritten to the staging warrant — *§2.6 carries "Note the warrant: the claim is about
+      **staging**, not about message direction".*
+- [x] §1.3 merge; §1.4 trim; §1.8 rewritten; §2.7's claim-level close — *§1.3 says "Merges the
+      previous draft's §1.3 and §1.4"; §1.4 stands at 360 words; §1.8 is "Part I synthesis: three
+      questions, and an impasse"; §2.7 closes on "Close on claim level, not on apology".*
+
+**What this leaves.** The background outline is complete as an outline. What it does **not** claim
+is that the background *prose* is written: §1.5 is the only section drafted as prose, and the rest
+are specifications for it. That distinction is what the ticks mean.
+
+### Moved from background_sections.md: the reference list's verification log
+
+**Verification: DONE 2026-09-22, all of it.** Every entry below was checked against Crossref's
+registered metadata, not against memory or press coverage.
+
+- **Corrected.** *Cremers, Wilcox & Spector (2023)* was cited as issue **3**; it is **47(5)**, and
+  the second author is **Wilcox, E. G.** *Sauerland (2012)* gained its issue and pages, **6(1),
+  36-49**.
+- **Resolved from a bare marker.** *Furutachi & Hofer (2026)*, "Rethinking predictive processing",
+  *Annual Review of Neuroscience, 49*, 471-494. *Schlegel et al. (2024)*, "Whole-brain annotation
+  and multi-connectome cell typing of *Drosophila*", *Nature, 634*, 139-152 — note the **published
+  title differs from the preprint's**, which is why this one was worth checking. *Spratling (2013)*,
+  "Distinguishing theory from implementation in predictive coding accounts of brain function",
+  *Behavioral and Brain Sciences, 36*(3), 231-232 — a commentary, and exactly the Marr-levels
+  framing §2.7 cites it for.
+- **Confirmed unchanged.** *Lassiter & Goodman (2017)*, *Synthese, 194*(10), 3801-3836, and its DOI.
+  *Griffiths, Lieder & Goodman (2015)*, *Topics in Cognitive Science, 7*(2), 217-229; DOI added.
+  *Lieder & Griffiths (2020)*, *Behavioral and Brain Sciences, 43*, Article e1; DOI added.
+- **Added.** The **MICrONS Consortium (2025)** primary paper, *Nature, 640*, 435-447, now cited in
+  §2.7 where "a cubic millimetre of mouse cortex" previously stood with no source at all.
+- **Still open, and both are questions about other people's papers rather than about these
+  entries.** *Gutzmann*: Crossref dates the chapter and the Companion **2020** (online) while the
+  print volume is **2021** — pick one and use it for every Companion chapter. And whether Xiang et
+  al. (2022) build their LG model on *Lassiter & Goodman (2017)* or on *Lassiter & Goodman (2013,
+  SALT 23)*, which needs their paper, not a registry.
+- **Leffel et al. (2017)** was resolved earlier (T5, 2026-09-22): the published article reports the
+  shapes/artifacts contrast itself, so the manuscript is dropped and Xiang et al. (2022) cited
+  alone.
+
+---
+
 ## 15. NK1–NK10: the node count, printed and discussed (2026-09-24)
 
 The user asked what the criteria do at node counts other than K = 101, and above all toward

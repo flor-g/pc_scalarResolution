@@ -1,11 +1,10 @@
 Sections 3 6 outline · MD
 # Outline for the proposal, evaluation, and discussion sections
  
-Scope: §§3–6, approximately **5,600 words**, which is what this file's own word table sums to and
-the figure to trust (`revisions.md` §3 is the historical plan; the raises are listed above the table). Written against
-`main.ipynb` (Text cells 1–6, Code Cells 1–4, Appendices A–D with Code Cells A–D, Eqs. (1)–(41))
-and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
- 
+Scope: §§3–6, at the length the word table's **Total** row gives; the table is the authority and
+its history is in `revisions.md` §16. Written against `main.ipynb` (Text cells 1–6, Code Cells 1–4
+and 2b, Appendices A–F with Code Cells A–F) and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
+
 ---
  
 ## Central claim
@@ -136,25 +135,8 @@ in §5.5; the weight-transport accounting of § E.2.
  
 ## Word allocation
 
-**This table is the authority.** `revisions.md` §3 is the historical plan it grew out of, and that
-file's own closing note says so: its Total and its §5 subtotal have not been re-summed since 2026-09-22.
-2,400 → 3,000 (R1) → 3,200 (S-6) →
-**3,520** (P-3, then §5.5 raised 80 → 150 on 2026-09-22 for A19's halting bullet) → **3,610**
-(§4.2 raised 170 → 260 on 2026-09-22 for S-8/T15's $n$ guard) → **3,760** (§5.2 raised 400 → 550 on
-2026-09-22 at T10, under S-6's standing permission for this section) → **3,880** (§5.2 550 → 650 and
-§6 165 → 185 the same day, for R27's reservation on H1) → **4,030** (§5.2 650 → 800 the same day,
-for R28's mechanism and its one hedged causal statement) → **4,210** (§5.6 60 → 130 the same day:
-it carries four predictions and R27 had added the H1 reservation to the fourth without raising it)
-→ **4,270** (§3.4 230 → 290 the same day, at **BG13**: commitment 7 in its exact form, conditioning,
-and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been applied) → **5,060**
-(2026-09-23, the two positions of §11 of `revisions.md`: §3.6 100 → 190, §4.2 480 → 525, §4.4 355 → 415,
-§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225) → **5,160** (the same day, §5.1 460 → 560 at PP10) → **5,290** (the same day, the constructive claim's rewrite at §12 of `revisions.md`: §4.4 415 → 470, §4.5 370 → 420, §6 225 → 250) → **5,600** (the same day, the half-width printed, §13's Z8: §3.2 270 → 295, §4.2 525 → 545, §4.3 70 → 105, §4.5 420 → 530, §5.2 800 → 860, §5.5 300 → 345, §6 250 → 265). The "was" column is the 2,400 allocation this outline was written to.
-
-**The running chain above does not reconcile with the rows, and the rows are what to trust.** Before
-this entry the chain read 4,270 while the rows summed to 4,730: four raises were applied to rows
-without being appended here (§4.2, §4.4, §4.5 and §5.5), and which raise accounts for which part of
-the 460 cannot be recovered from this file. **The subtotals and the Total are re-summed from the
-rows and agree with them**; the chain is a record of raises with gaps in it. Treat it as history.
+**This table is the authority**, and the section headings are kept in step with it.
+The raise history of this table is in `revisions.md` §16.
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
@@ -182,16 +164,6 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
 | **Total** | **2,400** | **6,310** | |
-
-**What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
-`revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
-until BG13 corrected it — it had gone stale within the same day they were written.* Every
-subsection of §§3–6 now has a body. Limits and Predictions keep
-their text under their new numbers, §5.5 and §5.6. Bodies rewritten to their new budgets: §§3.2,
-3.3, 4.1, 4.4, 4.5 and 6 (tasks U9–U12), plus §5.2 (T10, R27, R28) and §3.6; the rest carry the new
-figure against text still written to the old one. **Every section heading's figure was checked
-against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
-agree, and the check is worth repeating whenever a budget moves.
 
 # 3. The proposed architecture (about 1,530 words)
  
@@ -1521,51 +1493,3 @@ what it costs and what is still owed.
    reported and not explained.
 ---
  
-## Sources for §5.2
- 
-**The entries live in `background_sections.md`'s reference list, which is the dissertation's only
-one** (BG10, 2026-09-22): Xiang, Kennedy, Xu and Leffel (2022), Ronai and Xiang (2024), and
-Kennedy (2007). They were duplicated here, and the duplicate had drifted — Kennedy's issue number
-was missing from it. **This file keeps no entries of its own**; what follows is the note about
-where the §5.1 citations went, which is a drafting instruction and not a list.
-
-Citations redeployed into §5.1: Rooth (1985, 1992) and Kratzer & Shimoyama (2002) make the
-alternative set depend on context rather than on the uttered expression; Katzir (2007) and
-Fox & Spector (2018) treat competition as resolved by, rather than generative of, what is produced.
-Both constrain where such a level would sit, and Katzir and Fox & Spector are also the right
-citations for a structurally bounded alternative set.
- 
-## Open items
- 
-1. ~~The §5.2 magnitudes are not yet in the notebook.~~ **CLOSED 2026-09-22 (T2, T7).** Every number
-   §5.2 quotes is printed by **Code Cell F** (Appendix F, cells 22–23 of `main.ipynb`), and a C6
-   sweep over the rewritten section returns none without a printed source. The magnitudes are not
-   the ones this item meant: the off-centre loading ratios, the utility contributions to posterior
-   degree and the sign reversal under a sharp prior belonged to the prediction that F13 withdrew.
-   What survives is the parity result, now restated at $n=4$ against printed $\kappa$, and what
-   replaces the rest is the class comparison against Xiang et al.'s own items. The "drafted probe"
-   was never found in the project or on the Desktop and is not needed.
-
-2. ~~The background is being rewritten.~~ **DONE, and the pointers here were dangling
-   (2026-09-22).** The rewrite under the three-question frame (Q1 locality; Q2 not one pass; Q3
-   algorithmic-level peculiarities) is complete: the outline is `thesis_outline/background_sections.md`,
-   whose 13-item drafting checklist is fully ticked. The two files this item used to name —
-   `claude/background_revision_plan.md` and `background_sections_outline.md` — **do not exist**;
-   the second is one of the superseded Desktop drafts `agent/agent.md` §1 lists as not maintained. Two
-   consequences for this document, both applied long since: §5.1's sub-bullet on alternative-sensitive versus
-   world-sensitive utility is deleted rather than redirected, since the model has one utility level;
-   and the background now introduces Levinson (2000), Rooth, Kratzer & Shimoyama, Katzir,
-   Fox & Spector, Kennedy (2007) and Xiang et al. (2022) before §5.1 and §5.2 use them.
-3. ~~The $g_a$ algebra.~~ **Resolved by decision: not derived, and admitted as such in §5.1** under
-   "What this dissertation does not derive", with the four remaining obligations named. Do not
-   attempt the derivation. Note that the admission is written as a scope statement; any account of
-   *why* it was out of scope belongs in an introductory scope note or the acknowledgements, not in
-   §5.1, where it would add nothing about the model. **Notation settled 2026-09-11: the subscript is
-   lowercase, because $\varphi_a$ has the same type as $\chi$ — an indicator selecting a subdomain,
-   not a graded field.**
-4. ~~The *most* case, and the cascade check.~~ **Resolved: both are arguments, not measurements.**
-   §5.1's $m=1$ result now runs through Eq. (C1) with $\chi_D$ substituted for $\mathbf 1$, which is
-   a proved result applied to a restricted domain and therefore holds at any cascade depth whose
-   levels are complementary pairs. ⟨*some*, *most*, *all*⟩ is such a cascade — split off $s=0$,
-   split the remainder at $s=\tfrac12$, split the upper part at $s=1$ — so it needs no separate
-   check, and the $8\times10^{-16}$ figure is no longer cited.
