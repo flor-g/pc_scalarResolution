@@ -124,7 +124,7 @@ or a footnote.
 the $\mu_u$/$\ell_0$ common-mode invariance and its polar sweep (Eqs. 32–35), cited from §4.1.2's
 guard; the flat-direction resolution (§9.1); grid refinement's figures, cited from §4.1.3 and §5.5;
 the multidimensional ceiling (§9.3), except for one sentence in §5.5; the weight-transport
-accounting of § E.2. **The rule for all of it:** the outline carries the rationale and the numbers
+accounting of § E.2; the simulation's computational complexity (Appendix G), cited from §5.5. **The rule for all of it:** the outline carries the rationale and the numbers
 the argument uses, and points to the notebook for derivations, verification figures and
 enumerations.
  
@@ -157,15 +157,15 @@ The raise history of this table is in `revisions.md` §16.
 | 4.2.2 Where the model matches | 170 | The fits; the half-width control; the utility level's gain; the image-type sign |
 | 4.2.3 Where it does not | 70 | The residuals |
 | 4.2.4 How far the utility level reaches | 110 | $\theta_u^\ast$'s sign; the displacement; the parity result |
-| **5. Discussion** | **2,085** | |
+| **5. Discussion** | **2,170** | |
 | 5.1 What an alternatives level would have to supply | 560 | The design and its savings; what the criteria add; what is not derived; the current gain |
 | 5.2 Scale structure: what the comparison of §4.2 is worth | 360 | Why no position on H1; the one causal belief; the comparison's worth; the instinct |
 | 5.3 Realizability, halting, and the plausibility commitment | 170 | What halts; why $\theta_u^\ast$ stays the commitment; the cost |
 | 5.4 What an algorithmic account makes posable | 120 | Four questions the computational level cannot pose |
-| 5.5 Limits | 745 | The numerical substrate; the architecture; stipulations; the read-out's locality |
+| 5.5 Limits | 830 | The numerical substrate, and what the simulation costs; the architecture; stipulations; the read-out's locality |
 | 5.6 Predictions | 130 | Exposure; granularity; the midpoint cut; the lexical strength of a class |
 | **6. Conclusion** | **265** | |
-| **Total** | **6,350** | |
+| **Total** | **6,435** | |
 
 # 3. The proposed architecture (about 1,530 words)
  
@@ -881,7 +881,7 @@ every number attributed to Xiang et al. is cited and printed by no cell (S-5). *
   Appendix C's, not a fitted trend. Appendix F prints the loadings; quote them from there.
 ---
 
-# 5. Discussion (about 2,085 words)
+# 5. Discussion (about 2,170 words)
  
 ## 5.1 What an alternatives level would have to supply (about 560 words)
  
@@ -1258,7 +1258,7 @@ what it costs and what is still owed.
   natural misreading: the claim is about what a level can be asked, not about what is true.
 ---
  
-## 5.5 Limits (about 745 words)
+## 5.5 Limits (about 830 words)
 
 Four groups, each under a run-in head in the paper, so that a limit of the numerical substrate is not
 read as a limit of the architecture.
@@ -1312,6 +1312,13 @@ read as a limit of the architecture.
     itself need a motivation, and it joins O1's question of what fixes $n$. **This phase does not
     implement it**: the evaluations it reports do not need it, and a fixed grid is the more
     determinate stipulation (§3's opening).
+- **What the simulation costs is not what the architecture costs.** Appendix G gives the
+  computational complexity of the simulation: one integrated inference is
+  $O\big(K^3+Km(\theta_u^2+2)\log(a/\mathrm{tol})\big)$, where $\theta_u^2+2$ is the condition number
+  of $H$ (Eq. G1) and depends on neither $K$ nor $m$. That factor is proportional to the separation
+  §4.1.6 reports, counted in Euler steps; the architecture's settling time, in units of $\tau_\varphi$, does not grow
+  with it. $n$ enters the cost only through $\theta_u^\ast$, and under the proposal above through
+  $K$ as well.
 
 **The architecture.**
 

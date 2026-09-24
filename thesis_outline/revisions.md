@@ -1621,6 +1621,16 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 17. CX: the computational complexity of the simulation (2026-09-24)
+
+The working record is `agent/complexity_2026-09-24.md` while it is open. **What changed in the
+outline:** one bullet at the end of §5.5's numerical-substrate group, which states the total for an
+integrated inference, names $\theta_u^2+2$ as the condition number of $H$ (Eq. G1), says that
+the factor is proportional to §4.1.6's separation and that the architecture's settling time does
+not carry it, and gives the two routes by which $n$ reaches the cost; Tier C gains Appendix G. The
+derivation, the breakdown and every figure are in `main.ipynb` Appendix G and Code Cell G. Word
+table: §5.5 745 → 830, §5 2,085 → 2,170, total 6,350 → 6,435.
+
 ## 16. OR: the outline reorganized (2026-09-24)
 
 The working record, closed, is `agent/history.md` §18. **What changed in the
