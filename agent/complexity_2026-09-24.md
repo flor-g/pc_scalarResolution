@@ -62,6 +62,21 @@ about the architecture.
   6,435, headings in step. `revisions.md` §17 records it. `ec2eb0d`
 - [x] **CX4 (2026-09-24). Records**: I14 and E20 in `agent/decisions.md`; findings CX-F1 to
   CX-F6 below. `0475a21`
+- [ ] **CX5. OPEN (user, 2026-09-24): remove the avoidable Θ(K³) from `infer`** (CX-F2).
+  `stiffest_state_rate` finds λ_max(H) by a dense eigendecomposition of the (K + m)-square H, and
+  `infer` calls it twice per inference (the tolerance and τ_ε); Eq. (G1) gives λ_max(H) = θ_u² + 2
+  in closed form at σ = 1 and BᵀWB = I. **What the fix has to respect:**
+  1. `code cell 1` and E1 both carry `stiffest_state_rate` verbatim (coupling 9): change both in
+     one pass, lifted, not retyped.
+  2. The closed form holds only at σ = 1 and G = I. The code carries σ symbolically and supports a
+     non-orthonormal B, so either keep the decomposition as the general path with the closed form
+     where its premises hold, or state the restriction; do not silently narrow the method.
+  3. λ_max(H) keys the stopping tolerance (I3) and τ_ε (I4), so any change must reproduce it to
+     roundoff: every step count in both notebooks must be unchanged, E3 included.
+  4. Appendix G §2's table row and its "costs of this implementation" sentence, Eq. (G3)'s K³
+     term, and the outline §5.5 bullet's total all change with it.
+  Acceptance: both notebooks re-run, no printed line changes outside `cost:` lines and Appendix G's
+  own, and λ_max agrees with the decomposition to roundoff at every configuration Code Cell G lists.
 
 ## 4. Findings
 
@@ -73,7 +88,8 @@ about the architecture.
   `stiffest_state_rate` runs a dense eigendecomposition of the (K + m)-square H, and `infer` calls it
   twice (the tolerance and τ_ε). At K = 101 it is negligible against the steps; at K = 3201 it is
   3.2 s per call on this machine, against 0.06 s of stepping at θ_u = 2. **Not changed**: it is
-  `code cell 1` and E1 (coupling 9), and outside this task. Named to the user.
+  `code cell 1` and E1 (coupling 9), and outside this task. Named to the user, who made it an
+  open task to fix: **CX5**.
 - **CX-F3. The step count is Θ(κ log) in every printed run.** The largest derivative's decay per
   step over the second half of the run, × 8κ(H), is 1.0334 at κ = 6 falling to 1.0005 at κ = 402:
   the slowest mode is excited, which is the requirement the lower bound needs. N/κ is 176–204 and
