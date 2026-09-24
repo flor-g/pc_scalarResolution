@@ -134,10 +134,50 @@ over s (the node where φ_S\* − log s(1−s) is largest):
   ζ mode. The s mode needs a fixed per-unit bias, −log s(1−s), which no part of the model supplies.
   Outside source worth checking before citing: MacKay (1998), "Choice of basis for Laplace
   approximation", on mode-based approximations being basis-dependent and the logit/softmax basis
-  being the better one for probabilities. [verify]
+  being the better one for probabilities. **Checked 2026-09-23, see F14.**
 - **F12. The argmax is an operation across nodes.** Selecting the most active unit compares every
   node, as q's normalizer sums over every node: a max where q has a sum. §3.6 reason 1 ("it needs
   no sum across nodes") is true of the delta, which is the settled vector, but not of the mode
   criteria read from it. This is P6's second half, and it bears on the position of A16.
 
 - **Q6**: may background §2.6's no-semantic-stage claim be narrowed?
+
+**User, 2026-09-23:** elaborate point 1 (F10); check MacKay (F11); on point 4, "it is yet unclear to
+me whether we want to think of the read-out as part of the system constrained by locality" — look
+for any discussion in Bogacz.
+
+- **F13 (point 1, `z_dependence_output.txt`).** The s-read baselines are the grid's edge nodes
+  exactly: s = 0.99753 / 0.00247 at Z = 6 and 0.99966 / 0.00034 at Z = 8, for the flat, Beta(1,3),
+  Beta(3,1) and Beta(64,1) priors. Only the Gaussian prior, whose ζ tails fall faster than the
+  Jacobian 1/s(1−s) ≈ e^{|ζ|} rises, keeps an interior s mode (0.5 at both Z). The rule: a
+  Beta(α, β) has an interior s mode only if α > 1 and β > 1; its ζ mode is interior for every
+  α, β > 0, at log(α/β). The s-read model modes move with Z more than the ζ-read ones (flat 0.947 →
+  0.989 against 0.673 → 0.690; Beta(1,3) 0.192 → 0.083 against 0.327 → 0.277). Note also that the
+  ζ-read delta-like row moves from 0.94685 to 0.98879 between Z = 6 and 8: that is E17's Z
+  dependence, not this question.
+- **F14 (point 3, MacKay).** MacKay, D. J. C. (1998). Choice of basis for Laplace approximation.
+  *Machine Learning, 33*(1), 77–86, https://doi.org/10.1023/A:1007558615313. **Abstract read
+  (mlanthology.org):** MAP optimization and the Laplace approximation are both basis-dependent, and
+  for models parameterized by probabilities the softmax basis improves on the probability simplex.
+  **Full text not read** (Springer requires a login; MacKay's own page returned 403). The detail
+  is read from a secondary source, Hennig, Stern, Herbrich & Graepel, *Kernel Topic Models*
+  (arXiv:1110.4713, AISTATS 2012), §3.3: MacKay showed that since the softmax's Jacobian is
+  proportional to ∏π_k, a Dirichlet in the softmax basis has exponents α_k rather than α_k − 1, does
+  not diverge at the boundary for α_k < 1, and is unimodal with its mode at α/‖α‖, which is also its
+  mean. For two outcomes the softmax basis is ζ = logit s, and that mode is F10's log(α/β). Cite
+  MacKay for the basis dependence; read the paper itself before citing the Dirichlet details to him.
+- **F15 (point 4, Bogacz).** The tutorial has **no read-out stage and no discussion of one.** The
+  locality constraints (§1) are stated as conditions on "any computational model" to be
+  biologically plausible — a neuron computes from its inputs, a synapse changes from its pre- and
+  post-synaptic activity — and the model's output is the activity of the φ nodes itself (§2.2: the
+  brain represents only most likely values). Two passages bear on the question:
+  - §2.2 (line 97) gives **two** reasons against computing the posterior. (1) Representing it takes
+    infinitely many values "rather than a few summary statistics like mean and variance" — the
+    source of the user's original "two numbers" wording, stated for a scalar v; (2) **the
+    normalization term**: for continuous distributions it is an integral that "would be challenging
+    for a simple biological system". Reason (2) is q's cost, in Bogacz's own words.
+  - The same passage notes that circuits in the basal ganglia have been proposed to compute the
+    normalization term **for discrete distributions** (Bogacz & Gurney, 2007). Our grid is discrete,
+    so the tutorial itself names a candidate mechanism, outside the inference network, for a
+    normalization over a discrete set.
+  Nothing in the tutorial addresses selecting a maximum across nodes (F12).
