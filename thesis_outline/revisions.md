@@ -1621,6 +1621,33 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 15. NK1–NK10: the node count, printed and discussed (2026-09-24)
+
+The user asked what the criteria do at node counts other than K = 101, and above all toward
+coarser K, "since that informs us the minimum complexity required before things become
+unpredictive". The working record is `agent/node_count_2026-09-24.md`; its IDs carry the prefix
+NK. Code Cell A's `node_count_report` (NK1) prints both ends; this section is the outline-side view.
+
+**Applied to the outlines.**
+
+| Task | Site | What changed |
+|---|---|---|
+| NK6 | §4.3 | A one-sentence warning after the refinement result: a lower bound on K is suspected and not established; pointer to §5.5. **§4.2's guard is not touched** (NK-D1, the user's ruling) |
+| NK6 | §5.5 | A bullet on what is known: the finer end (Part D unchanged to K = 1601; plane counts 33, 36, 36, 34 and 13, 15, 15, 15; seven cells move; subset relation intact) and the coarse end (tracks to K = 81, three statuses change at K = 61, below that the counts sort by where the grid's lower edge of the all-region falls against θ_L) |
+| NK7 | §5.5 | Four directions: separate placement from resolution; state the minimum in the model's units; give A21's cost a number; prefer smooth statistics |
+| NK8 | table | §4.3 105 → 145, §5.5 465 → 645; §4 1,930, §5 2,485, Total **6,210** |
+
+**Binding on a writer.**
+
+1. **The lower bound is suspected, not established**, wherever it is written. Do not state a
+   minimum K, and do not add K to §4.2's guard.
+2. **The headline counts carry no per-site K qualifier** (the agent's reading of NK-D1, named to
+   the user). Their spread across K is reported once, in §5.5.
+3. What §5.5 quotes about the coarse end is a description of printed columns. The reading "cut-based
+   statistics, not the model" is the outline's, and the notebook takes no position on it (B10).
+
+---
+
 ## 14. PS1–PS11: the proof-scope review, as it bears on the outlines (2026-09-23)
 
 An external review of the proofs and read-outs, applied under the user's rulings. The working

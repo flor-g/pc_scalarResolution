@@ -166,22 +166,22 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 3.4 State units, error units, and what is local | 210 | **320** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied; **+30 on 2026-09-23 for the four convergence results kept apart**, `agent/review_2026-09-23_proof_scope.md` PS7) |
 | 3.5 Two choices the scale motivates | 140 | **180** | $m=2$ from threshold parity; the amplification axis; **+40 on 2026-09-23 for the three properties of $B$ kept apart, and necessity scoped to definite parity** (`agent/review_2026-09-23_proof_scope.md` PS6) |
 | 3.6 Two read-outs (new) | — | **220** | `revisions.md` §5, item 1; **+90 on 2026-09-23 for the position that the delta read-out is the one the construction motivates, and the four things it does not license** (§11 of `revisions.md`, PP1) |
-| **4. Evaluation** | 745 | **1,890** | |
+| **4. Evaluation** | 745 | **1,930** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
 | 4.2 The criterion, and how to read the statistics | 170 | **545** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17); **+45 the same day for which read-out the criterion is written in** (PP2) |
-| 4.3 The specification holds | 90 | **105** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14); **+35 on 2026-09-23 for the fifteenth check, $Z$ against $K$** (Z8) |
+| 4.3 The specification holds | 90 | **145** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14); **+35 on 2026-09-23 for the fifteenth check, $Z$ against $K$** (Z8); **+40 on 2026-09-24 for the warning that a lower bound on $K$ is suspected, and the pointer to §5.5** (NK6) |
 | 4.4 The five priors | 220 | **470** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
 | 4.5 The plane, and where both conditions hold | 165 | **530** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **2,305** | |
+| **5. Discussion** | 705 | **2,485** | |
 | 5.1 What an alternatives level would have to supply | 390 | **560** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5); **+100 the same day for the order of the two motivations, and why the conjecture stays second** (PP10) |
 | 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **860** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement; **+60 on 2026-09-23 for F.10's half-width control** (Z5) |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
-| 5.5 Limits (was 5.3) | 65 | **465** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5); **+120 the same day for the open question of whether the read-out falls under locality** (`agent/review_2026-09-23_proof_scope.md` PS8) |
+| 5.5 Limits (was 5.3) | 65 | **645** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5); **+120 the same day for the open question of whether the read-out falls under locality** (`agent/review_2026-09-23_proof_scope.md` PS8); **+180 on 2026-09-24 for what is known about the node count at both ends, and four directions** (`agent/node_count_2026-09-24.md` NK6–NK7) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **5,990** | |
+| **Total** | **2,400** | **6,210** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -537,7 +537,7 @@ here rather than assumed.
   App. A shows would not be local, and the one §5.1 argues binarity absorbs.
 ---
  
-# 4. Evaluation (about 1,890 words)
+# 4. Evaluation (about 1,930 words)
  
 ## 4.1 What is compared (about 140 words)
  
@@ -628,7 +628,7 @@ quantitative comparison is offered or implied.
   Two further cautions attach. A sweep **brackets** a change rather than locating it; and a change
   of status may be the sign flip of a quantity already decayed to $10^{-7}$, which is not the
   finding that a flip at $10^{-1}$ is.
-## 4.3 The specification holds (about 105 words)
+## 4.3 The specification holds (about 145 words)
  
 Brief, and reported as a table rather than argued. The closed forms agree with the integrated
 dynamics to $4.45\times10^{-9}$ — **quoted as $1.00$ times the stopping tolerance, not as an
@@ -646,6 +646,11 @@ fixed node spacing does not settle, $\mathbb E[s]$ spreading $1.5\times10^{-1}$ 
 against the $1.7\times10^{-3}$ tail in $K$, which is §3.2's two-parameter point measured rather
 than asserted. Report the pair in one sentence and send the consequences to §4.2's guard.
 Code Cell E3 checks that the relay reproduces every one of these numbers.
+**A warning follows the pair, in one sentence: a lower bound on $K$ is suspected and not
+established.** Coarsening from $K=101$, the four criteria track the fine grid to $K=81$, and at
+$K=61$ they first disagree with it on Part D's statuses (Appendix A's third ladder); what they do
+below that cannot yet be told apart from where the nodes fall against $\theta_L$. Point to §5.5 for
+what is known, and add nothing to §4.2's guard, which stays with $n$ and $Z$ (NK-D1).
  
 ## 4.4 The five priors (about 470 words)
  
@@ -882,7 +887,7 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   locality debt (D12) is admitted. This section states neither.
 ---
  
-# 5. Discussion (about 2,305 words)
+# 5. Discussion (about 2,485 words)
  
 ## 5.1 What an alternatives level would have to supply (about 560 words)
  
@@ -1337,7 +1342,7 @@ what it costs and what is still owed.
   natural misreading: the claim is about what a level can be asked, not about what is true.
 ---
  
-## 5.5 Limits (about 465 words, was §5.3)
+## 5.5 Limits (about 645 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
   reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
@@ -1371,6 +1376,37 @@ what it costs and what is still owed.
   **reformulating the criterion cannot remove it** — only a projection under a fixed reference
   measure would, and that breaks the $B^{\mathsf T}WB=I$ that Eq. (B2) assumes. Owned rather than
   hedged, under §4.2's guard.
+- **The node count has a suspected lower bound, not an established one** (§4.3's warning points
+  here). $K$ is an accuracy parameter in the sense Text cell 3 §1 gives it: the settled fields and
+  $\mathbb E[s]$ converge as $K$ is refined. A criterion's status is a threshold on those fields, so
+  it can change at a boundary cell as $K$ moves. Appendix A's third ladder prints both ends (C6).
+  - *The finer end.* Part D's 36 statuses are the same at every $K$ from $101$ to $1601$. The
+    plane's counts move by boundary cells: the q conjunction runs $33, 36, 36, 34$ and the mode
+    conjunction $13, 15, 15, 15$ at $K=101, 201, 401, 801$, seven cells change in some column, and
+    the mode conjunction stays a subset of the q conjunction at every $K$. §4.5 quotes its counts
+    at $K=101$; this bullet is where their spread is reported.
+  - *The coarse end.* Against $K=801$, the plane's agreement stays near the fine grids' own floor
+    ($K=401$ against $801$: $119$ to $121$ of $121$ per column) down to $K=81$ ($117$ to $120$),
+    and Part D's 36 statuses all agree;
+    at $K=61$ only $33$ agree. Below that the counts do not decay with $K$; they sort by where the
+    grid's lower edge of the all-region falls against $\theta_L$. Where the edge falls below
+    $\theta_L$, the q conjunction shrinks as the gap grows ($32, 29, 24, 9$, then $0$ from
+    $K=21$). Where it falls $0.056$ above, the q conjunction holds in $32$ to $39$ cells at every
+    such rung down to $K=7$, against $K=801$'s $34$. Even at that
+    fixed offset, agreement falls with the spacing (q shift $116$ of $121$ at $K=51$, $76$ at
+    $K=7$). The smooth mask removes the step from the network but not from the statistic's cut,
+    and it softens the pattern without removing it.
+  - *What the evidence allows.* A suspected floor near $K=61$–$81$ at $Z=6$ for the evaluation's
+    **cut-based** statistics. It is not a measured minimum for the model, because node placement
+    and resolution have not been separated.
+  - *Directions.* (i) **Separate placement from resolution**: hold $\theta_L$ on the grid's lower
+    edge at every $K$, or integrate the region with exact partial weights, so that what degrades
+    is the field's own resolution. (ii) **State the minimum in the model's units**: the spacing
+    against the region's width $Z-\theta_L$, and against $n$, which fixes $\theta_L$; (i) is what
+    would show whether the minimum tracks $n$. (iii) **Give the field-valued situation level's cost
+    a number**: $K$ counts its units, so a representational minimum would say how many that choice
+    needs, the cost §3's opening names in words (A21). (iv) **Prefer a smooth statistic where one
+    exists**, so that the reported quantities converge as the fields do.
 - **Open: is the read-out part of the system, and so bound by locality?** Bogacz's model has no
   read-out stage (background §2.4), so the tutorial does not say. The question arises here because
   the hidden variables are a field over the scale (`agent/decisions.md` A21): any statement about
