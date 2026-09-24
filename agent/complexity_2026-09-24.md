@@ -81,7 +81,7 @@ Later in the session, after the agent had twice misread the scope:
   cell map, I14's finding. No printed line changes; notebooks not re-executed (markdown and one
   comment). `cf2a25f`
 - [x] **CX5 (2026-09-24, opened as an open task; done at the user's instruction). Remove the avoidable
-  Θ(K³) from `infer`** (CX-F2). **Closed**: see CX-F8 for what was done and the acceptance result.
+  Θ(K³) from `infer`** (CX-F2). **Closed**: see CX-F8 for what was done and the acceptance result. `3dffadd`
   `stiffest_state_rate` finds λ_max(H) by a dense eigendecomposition of the (K + m)-square H, and
   `infer` calls it twice per inference (the tolerance and τ_ε); Eq. (G1) gives λ_max(H) = θ_u² + 2
   in closed form at σ = 1 and BᵀWB = I. **What the fix has to respect:**
