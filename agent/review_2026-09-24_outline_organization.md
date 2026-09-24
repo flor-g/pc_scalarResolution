@@ -2,8 +2,7 @@
 
 Working record under `agent/agent.md` §5.3. Fold into `agent/history.md` when it closes. IDs carry
 the prefix **OR** (organization review) so they do not collide with `thesis_outline/revisions.md`'s
-series or with decisions' O entries. **Nothing is applied yet**: this record is the review; the
-tasks in §5 wait for the user.
+series or with decisions' O entries. Applied 2026-09-24 under the user's "approved. Start."; the tasks in §5 carry the commits.
 
 ## 1. The user's instruction
 
@@ -173,25 +172,42 @@ content is rationale and literature, as the rule wants.
 
 ## 5. Proposed tasks (not started; wait for the user)
 
-- [ ] **OR0.** Checkpoint.
+- [x] **OR0.** Checkpoint: clean at `574aa23`.
 - [x] **OR-D1.** Confirmed by the user 2026-09-24 ("Your decisions are confirmed"), with the proposals of §§3–4.
-- [ ] **OR-A. Housekeeping** (OR1, OR2, OR3): header, bookkeeping moved to `revisions.md`, one
+- [x] **OR-A. Housekeeping** (`5fb809a`; OR3's history notes in `f08ad77`) (OR1, OR2, OR3): header, bookkeeping moved to `revisions.md`, one
   form for writer's notes. No content change.
-- [ ] **OR-S. The new §4** (OR9), before any pointer pass, so that pointers are written against
+- [x] **OR-S. The new §4** (`83aa693`) (OR9), before any pointer pass, so that pointers are written against
   the new layout: renumber, move §5.2's measurements to §4.2, add §4's opening, re-aim references,
   re-sum the word table.
-- [ ] **OR-B. Notebook first** (OR-N1, OR-N2): Appendix C and Appendix A (or Text cell 3 §1) gain
+- [x] **OR-B. Notebook first** (`b777247`) (OR-N1, OR-N2): Appendix C and Appendix A (or Text cell 3 §1) gain
   the two technical passages; no code changes, so no re-execution is needed. Code before prose does
   not bind here, since neither passage quotes a number, but each is checked against the equations it
   cites.
-- [ ] **OR-C. Pointers** (OR-P1 to P17), section by section, keeping what the table's right column
+- [x] **OR-C. Pointers** (`f08ad77`) (OR-P1 to P17), section by section, keeping what the table's right column
   names.
-- [ ] **OR-D. Restructure** (OR4 §5.1 order; OR5 §5.5 grouping; OR6 Tier C; OR7 de-duplication;
+- [x] **OR-D. Restructure** (`f08ad77`) (OR4 §5.1 order; OR5 §5.5 grouping; OR6 Tier C; OR7 de-duplication;
   OR8 background §1.3).
-- [ ] **OR-E. Word budget.** Pointers shorten the outline, not the dissertation's budget, unless a
+- [x] **OR-E. Word budget.** No budget line changed: the detail moved out was the outline's, not the dissertation's; the table was rebuilt at OR-S (Total 6,350). Pointers shorten the outline, not the dissertation's budget, unless a
   budget line was paying for the moved detail; re-sum where it was.
 - [ ] **OR-F. Close**: dangling references, C6 sweep, `revisions.md` §16, fold.
 
 ## 6. Findings log
 
-(empty)
+- **OR-F1 (OR-A): §5.1 never carried the citations "Sources for §5.2" said had been redeployed
+  into it.** No Rooth, Kratzer & Shimoyama, Katzir or Fox & Spector appeared in §5.1. They are now
+  placed in the design's "inventory at any one level is binary" bullet (background §1.6 introduces
+  all four).
+- **OR-F2 (OR-S): the §4.1 heading was first written as 1,430 words**; its subsections sum to 1,930.
+  Corrected before commit.
+- **OR-F3 (OR-C): two pointers first named the wrong home.** The utterance-contrast spreads across
+  priors (0.0575, 0.0001) and the Z ladder's peak list (0.8516 …) are printed by code cells, not
+  stated in markdown; the pointers now name Code Cells 2 and 2b, and Code Cell A.
+- **OR-F4 (OR3): decision IDs were kept, revision-plan IDs mostly kept.** Only dated history
+  ("since 2026-09-23", "supersedes the ruling", "settled on …", "New.", raise notes) was removed.
+  A bare ID like (R14) or (R16) often names a ruling the writer must honour, so a blanket strip
+  would have lost rulings. The background's "the previous draft …" instructions were kept: they
+  direct a revision of existing prose.
+- **OR-F5 (OR7.1): the conclusion's item 3 now states the result in words with pointers**, as the
+  confirmed proposal said, so the four headline counts appear in §§4.1.4–4.1.5 only.
+- **OR-F6 (OR-B): the orthonormality claim was checked before it entered Appendix A.** Eliminating
+  x gives Eq. (B1)'s scalar ratio only when BᵀWB = I; otherwise the denominator is a matrix.
