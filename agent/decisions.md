@@ -1093,6 +1093,16 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: none.
 - Bogacz status: framing; the divergences it summarizes are D1, D4, D12, D13.
 - Depends on it: `thesis_outline/sections_3-6.md` §3's opening; §§3.4, 3.6, 5.3, 5.5 carry the costs.
+- Findings added later: **2026-09-24, the motivation (user).** The available facts do not settle
+  which choices within the framework give the best-fitting, most predictive representation of the
+  process; the dissertation is agnostic among them, and trying them all would be better. It starts
+  from the most determinate set. Agent's adjustments, named to the user: the reason is
+  **methodological**, not theoretical or empirical (a determinate model's predictions can be checked
+  and its failures traced to the configuration), which reconciles "no principled reason to have
+  chosen otherwise" with a rule for where to start; "always" and "most" scoped to this dissertation
+  and the choices it considered; and two consequences added — every result is conditional on the
+  choices, and each alternative is a comparison still owed. Wording rule: never call a choice
+  forced or optimal.
 
 ### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
 - Decided by: user (2026-09-13)

@@ -158,8 +158,8 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
-| **3. The proposed architecture** | 800 | **1,460** | |
-| 3 (opening) The design strategy (new) | — | **100** | Determinacy as the strategy: linear-Gaussian, the field-valued situation level, $\theta_u^\ast$; the four costs (2026-09-24, C9) |
+| **3. The proposed architecture** | 800 | **1,530** | |
+| 3 (opening) The design strategy (new) | — | **170** | Determinacy as the strategy: linear-Gaussian, the field-valued situation level, $\theta_u^\ast$; the four costs (2026-09-24, C9); **+70 the same day for the motivation**: agnosticism among the choices, determinacy as where to start |
 | 3.1 What the model must do | 90 | 90 | Four design requirements |
 | 3.2 A continuous world state and a soft lexicon | 160 | **295** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
 | 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
@@ -181,7 +181,7 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 | 5.5 Limits (was 5.3) | 65 | **465** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5); **+120 the same day for the open question of whether the read-out falls under locality** (`agent/review_2026-09-23_proof_scope.md` PS8) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
 | **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **5,920** | |
+| **Total** | **2,400** | **5,990** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -193,9 +193,9 @@ figure against text still written to the old one. **Every section heading's figu
 against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
 agree, and the check is worth repeating whenever a budget moves.
 
-# 3. The proposed architecture (about 1,460 words)
+# 3. The proposed architecture (about 1,530 words)
  
-## The design strategy (section opening, about 100 words)
+## The design strategy (section opening, about 170 words)
 
 *New, 2026-09-24 (the user's four points, reviewed; `thesis_outline/revisions.md` §14,
 `agent/decisions.md` C9). It states why §3.1's requirements take the shape they do, before they are
@@ -205,6 +205,20 @@ listed.*
   the option that makes its result **determinate** — fixed by the configuration alone, and not by
   initialization, integration path, learning history or stopping time. Three choices carry it, and
   the first two are one chain.
+- **Why determinacy first (the motivation, the user's, 2026-09-24).** The available facts do not
+  settle how to choose within the framework so as to arrive at the representation of a
+  psychological process that fits best and predicts best; which choice is right can be learned only
+  by trying the alternatives. The dissertation is **agnostic** among them and says so: it has no
+  theoretical or empirical reason to hold that the choices below are right and the alternatives
+  wrong, and a comparison across all of them would be better than any single build. What it has is
+  a **methodological** reason for where to start. Among choices it cannot yet rank, it takes the
+  set whose predictions are most determinate, because a determinate model is the one whose
+  predictions can be checked and whose failures can be traced to its configuration rather than to
+  an initialization, a path or a stopping time — which makes it the informative first build. Two
+  consequences, stated with it: every result of §§4–5 is conditional on these choices (as §3.2
+  already says of the prior's placement), and each alternative is named where its choice is made
+  — nonlinear maps and a single node for $\zeta$ below, trial-by-trial sampling in §5.3 — as a
+  comparison still owed, not as one lost.
 - **1. Linear-Gaussian.** Bogacz's densities are Gaussian throughout, but his generative maps may be
   nonlinear (his first example has $g(v)=v^2$); ours are linear (Eqs. 9–10). While $\varphi_L$ is
   clamped and at fixed $\theta_u$ this gives a unique fixed point in closed form (Eqs. 15–16, and
@@ -235,7 +249,8 @@ listed.*
   timescale (commitment 7's separations grow as $\theta_u^2$, §5.3), locality at $m>1$ (the relay,
   §3.4), and the halting question (§5.3). Bogacz's default pays none of them because it guarantees
   less: no closed forms, no unique maximum once $g$ is nonlinear, no parameter convergence.
-- **Wording.** Never "maximally", and never "deterministic" for this property, since Bogacz's
+- **Wording.** Never write that a choice is forced or optimal; the stance is agnostic, and the
+  reason given is methodological. Never "maximally", and never "deterministic" for this property, since Bogacz's
   dynamics are deterministic already; the word is **determinate**. "Approaches", not "converges",
   for the flow of Eq. (20). Never say the model avoids representing a distribution over states.
  

@@ -272,3 +272,6 @@ construction; four points reviewed (linear-Gaussian; the field; θ\*; determinac
 
 - [x] **PS13** (2026-09-24): `thesis_outline/sections_3-6.md` §3 opens on "The design strategy"
   (about 100 words; §3 1,460, Total 5,920); decision C9 records the framing and its wording rules.
+- [x] **PS14** (2026-09-24): the motivation for the strategy added to §3's opening, with the
+  agent's adjustments named to the user (methodological reason; scoping of "always" and "most";
+  the two consequences); C9 finding.
