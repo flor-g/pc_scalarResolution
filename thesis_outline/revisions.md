@@ -1638,6 +1638,8 @@ convenient.
 | **Z3** | `main.ipynb` Code Cell F | **F.10**: R² per class at every half-width, the control for Z1. Rebuilds only the Voronoi node masks per grid; its Z = 6.0 row must reproduce F.3's model column | APPLIED |
 | **Z4** | Appendix A's markdown | A closing subsection: the cell of *all* has two ends, n fixes the lower and Z the upper; what the second ladder shows, with the peak as the mechanism; the two cautions of the n ladder carried over, plus the new one about conditioned counts. Takes no position (B10), no dashes as sentence punctuation (C5) | APPLIED |
 | **Z5** | §4.2, §4.5, §5.2, §5.5 | §4.2's Z bullet stops saying the end has no printed evidence; §4.5 says 15 and 9 are Z = 6 figures and why they cannot be otherwise; §5.5 quotes the peak's climb; §5.2 gains F.10's control and marks the minimum class's bracket as a default-grid figure | APPLIED |
+| **Z7** | `main.ipynb` Code Cell A | The plane block also counts the cells where the **mode conjunction holds and the q conjunction does not**, at each Z. The column is zero at every rung, so §4.5's "delta is a strict subset of q at every half-width" is sourced rather than argued from the audit | APPLIED |
+| **Z8** | `sections_3-6.md` §3.2, §4.3, §4.5, the central claim, §6, the Tier table, the budgets | The alignment sweep: see below | APPLIED |
 | **Z6** | `decisions.md` E17, I6, I10, B12 | E17 records the supersession; I6 gains printed evidence and still fails its class; I10 records where each block went and why; **B12's rationale is corrected** | APPLIED |
 
 **The correction this turned up, and it is the reason to have printed it.** B12 recorded that the
@@ -1652,6 +1654,29 @@ in no section, so the rewrite stands on the grounds it was argued on. The entry 
 
 **The honest summary to carry forward:** conditioning on the baseline buys the argument and costs
 the robustness. §4.5 reports both halves.
+
+**Z8, the alignment sweep, site by site.** Z1-Z6 put the numbers in and pointed four sections at
+them. This pass asked the different question: what does the outline now say that is **stale**
+because Z is printed?
+
+- **§3.2 was the one that mattered.** It said the grid "discretizes the integral rather than the
+  state", full stop. That is true of $K$ and false of $Z$, which bounds the state space, and the
+  sentence had been standing in for the whole grid. It now says what each parameter does, in one
+  clause each, and sends the consequences to §4.2 and §5.5. 270 → 295.
+- **§4.3 had gained a check without gaining a sentence.** The specification table went from 14
+  lines to 15, and the new line is the companion to the grid-refinement one the section already
+  describes. Both are now reported as a pair. 70 → 105.
+- **§4.5's writer's note was the only place still saying the measurements are class (e)** and
+  telling the writer to quote no number from them. Rewritten: the conjunction counts and the
+  reversal column are printed (Z7), so "robust" is sourced; what stays class (e) is the least
+  $\alpha$ at which the mode shift criterion is met, which no cell prints.
+- **The central claim and §6 quote 15 and 9 and did not say they were $Z=6$ figures.** They do now,
+  with the reason in one clause: a conditioned count entails a shift and so cannot outlast the
+  shift criterion.
+- **The Tier table had no row for the guard at all.** It has one now, in Tier A, because §§4.4-4.5
+  are relative to it and it is printed at both ends.
+- **Budgets and headings re-summed**, 5,290 → **5,600**. §5.2's row had kept 800 against a heading
+  of 860 and was corrected in the same pass, which is the check the table's own note prescribes.
 
 ---
 

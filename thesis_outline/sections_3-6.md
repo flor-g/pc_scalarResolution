@@ -1,7 +1,7 @@
 Sections 3 6 outline · MD
 # Outline for the proposal, evaluation, and discussion sections
  
-Scope: §§3–6, approximately **5,290 words**, which is what this file's own word table sums to and
+Scope: §§3–6, approximately **5,600 words**, which is what this file's own word table sums to and
 the figure to trust (`revisions.md` §3 is the historical plan; the raises are listed above the table). Written against
 `main.ipynb` (Text cells 1–6, Code Cells 1–4, Appendices A–D with Code Cells A–D, Eqs. (1)–(41))
 and `appendix_E.ipynb` (Eqs. (E1)–(E6)).
@@ -33,7 +33,11 @@ in 77 of the 121 cells and the settled belief holds less than half in **15** of 
 $\ell_0$ peaks inside the cell in 66 cells and $\varphi_S^\ast$ peaks outside it in **9** of those,
 the 9 a subset of the 15 (§4.5). **In every one of those cells the shift criterion is met as well**,
 which the cell counts rather than the prose asserts: where the network changes the position
-verdict it meets both criteria, and it does so under either read-out.
+verdict it meets both criteria, and it does so under either read-out. **The 15 and the 9 are
+figures at the stipulated half-width**, and Appendix A's ladder counts them $32, 15, 0, 0, 0$ and
+$22, 9, 0, 0, 0$ over $Z\in\{5,6,7,8,10\}$: a count conditioned on the baseline failing entails a
+shift and so cannot outlast the shift criterion, which is empty by $Z=7$. §4.2's guard governs this
+claim as it governs the counts below it, and §4.5 states it there in full.
 
 The unconditioned counts belong in the claim too, and only with what they include. Both conditions
 hold under three of the five priors at $\Lambda=512$, the three with the most prior mass on the
@@ -93,6 +97,7 @@ reader should weigh is recorded as a fact with our position reserved.
 |---|---|---|
 | Amplification mechanism, Eqs. (23)–(24) | §3.5, §4.4 | It is what produces the effect, and it is measured |
 | The two-condition criterion and its results | §4.2–§4.5 | The verdict. **Carried as the position criterion with the baseline's own cells left out** (§4.4's one row; §4.5's 15 and 9), with the unconditioned counts reported beside them |
+| The cell of *all* has two stipulated ends, $n$ and $Z$ | §3.2, §4.2, §4.5, §5.5 | The guard every count in §§4.4–4.5 is relative to. **Printed at both ends since 2026-09-23** (Appendix A's two ladders; Code Cell 2's $K$-against-$Z$ check; F.10's control), so it is carried rather than reserved |
 | Conventionalization of $\theta_u^\ast$ by exposure (App. B) | §3.4, §5.1 | The position the architecture commits to |
 | The four construction obligations (Text cell 3; §8; App. B) | §5.1 | Turns the gap into a specification |
 | Binary branching per level, and $m=1$ (App. C §§2, 5) | §5.1 | Makes the alternatives level tractable and local |
@@ -143,7 +148,7 @@ it carries four predictions and R27 had added the H1 reservation to the fourth w
 → **4,270** (§3.4 230 → 290 the same day, at **BG13**: commitment 7 in its exact form, conditioning,
 and $\theta_u(0)=0$ — three items of `revisions.md` §4 that had never been applied) → **5,060**
 (2026-09-23, the two positions of §11 of `revisions.md`: §3.6 100 → 190, §4.2 480 → 525, §4.4 355 → 415,
-§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225) → **5,160** (the same day, §5.1 460 → 560 at PP10) → **5,290** (the same day, the constructive claim's rewrite at §12 of `revisions.md`: §4.4 415 → 470, §4.5 370 → 420, §6 225 → 250). The "was" column is the 2,400 allocation this outline was written to.
+§4.5 345 → 370, §5.1 390 → 460, §6 185 → 225) → **5,160** (the same day, §5.1 460 → 560 at PP10) → **5,290** (the same day, the constructive claim's rewrite at §12 of `revisions.md`: §4.4 415 → 470, §4.5 370 → 420, §6 225 → 250) → **5,600** (the same day, the half-width printed, §13's Z8: §3.2 270 → 295, §4.2 525 → 545, §4.3 70 → 105, §4.5 420 → 530, §5.2 800 → 860, §5.5 300 → 345, §6 250 → 265). The "was" column is the 2,400 allocation this outline was written to.
 
 **The running chain above does not reconcile with the rows, and the rows are what to trust.** Before
 this entry the chain read 4,270 while the rows summed to 4,730: four raises were applied to rows
@@ -153,29 +158,29 @@ rows and agree with them**; the chain is a record of raises with gaps in it. Tre
 
 | Section | Was | Words | Function |
 |---|---:|---:|---|
-| **3. The proposed architecture** | 800 | **1,235** | |
+| **3. The proposed architecture** | 800 | **1,260** | |
 | 3.1 What the model must do | 90 | 90 | Four design requirements |
-| 3.2 A continuous world state and a soft lexicon | 160 | **270** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
+| 3.2 A continuous world state and a soft lexicon | 160 | **295** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
 | 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
 | 3.4 State units, error units, and what is local | 210 | **290** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied) |
 | 3.5 Two choices the scale forces | 140 | 140 | $m=2$ from threshold parity; the amplification axis |
 | 3.6 Two read-outs (new) | — | **190** | `revisions.md` §5, item 1; **+90 on 2026-09-23 for the position that the delta read-out is the one the construction motivates, and the four things it does not license** (§11 of `revisions.md`, PP1) |
-| **4. Evaluation** | 745 | **1,725** | |
+| **4. Evaluation** | 745 | **1,890** | |
 | 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
-| 4.2 The criterion, and how to read the statistics | 170 | **525** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17); **+45 the same day for which read-out the criterion is written in** (PP2) |
-| 4.3 The specification holds | 90 | **70** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14) |
+| 4.2 The criterion, and how to read the statistics | 170 | **545** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17); **+45 the same day for which read-out the criterion is written in** (PP2) |
+| 4.3 The specification holds | 90 | **105** | Closed forms, Hessian, grid (trimmed to fund §4.5, R14); **+35 on 2026-09-23 for the fifteenth check, $Z$ against $K$** (Z8) |
 | 4.4 The five priors | 220 | **470** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
-| 4.5 The plane, and where both conditions hold | 165 | **420** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
+| 4.5 The plane, and where both conditions hold | 165 | **530** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
 | 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.6 entry |
-| **5. Discussion** | 705 | **2,080** | |
+| **5. Discussion** | 705 | **2,185** | |
 | 5.1 What an alternatives level would have to supply | 390 | **560** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5); **+100 the same day for the order of the two motivations, and why the conjecture stays second** (PP10) |
-| 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **800** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement |
+| 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **860** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement; **+60 on 2026-09-23 for F.10's half-width control** (Z5) |
 | 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
 | 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
-| 5.5 Limits (was 5.3) | 65 | **300** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17) |
+| 5.5 Limits (was 5.3) | 65 | **345** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5) |
 | 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
-| **6. Conclusion** | 150 | **250** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
-| **Total** | **2,400** | **5,290** | |
+| **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
+| **Total** | **2,400** | **5,600** | |
 
 **What this table does not do.** **§§3.6, 4.6, 5.3 and 5.4 are all written** (2026-09-22;
 `revisions.md` §5 items 1–3 and §4's §4.6 entry). *This note said §§4.6, 5.3 and 5.4 were unwritten
@@ -187,7 +192,7 @@ figure against text still written to the old one. **Every section heading's figu
 against this table on 2026-09-22 and three were stale** (§4 1,020, §5 1,250, §6 165); they now
 agree, and the check is worth repeating whenever a budget moves.
 
-# 3. The proposed architecture (about 1,235 words)
+# 3. The proposed architecture (about 1,260 words)
  
 ## 3.1 What the model must do (about 90 words)
  
@@ -204,15 +209,21 @@ a desideratum imposed from outside:
    dynamics can be assessed as a claim about implementation rather than assumed to converge.
 Requirement 4 is what distinguishes this model from a fit, and §4.3 reports the test.
  
-## 3.2 A continuous world state and a soft lexicon (about 270 words)
+## 3.2 A continuous world state and a soft lexicon (about 295 words)
  
 - The world state is a proportion $s\in(0,1)$ carried in logit coordinates,
   $\zeta=\operatorname{logit}(s)$ (Eq. 1). Because $\operatorname{logit}$ is a bijection
   $(0,1)\to\mathbb R$, this is a change of coordinates and not a modelling assumption. Integrals
-  over $\zeta$ are evaluated on a fixed quadrature grid (Eq. 2), and the grid discretizes the
-  integral rather than the state: no quantity in the model is defined in terms of a node. State the
-  point explicitly, because a reader will otherwise take $K$ for a state-space size. **Flag for
-  §5.1 that $\zeta$ is a log-odds coordinate**; that fact does work twice later.
+  over $\zeta$ are evaluated on a fixed quadrature grid (Eq. 2). **Say what the grid's two
+  parameters do, and do not let the familiar half of it stand for both.** The node count $K$
+  discretizes the integral rather than the state, and no quantity in the model is defined in terms
+  of a node, so a reader must not take $K$ for a state-space size; Code Cell 2's specification
+  check reports $\mathbb E[s]$ converging in $K$. **The half-width $Z$ is the other kind.** Eq. (1)
+  carries $\zeta$ onto the whole of $\mathbb R$, so cutting it at $\pm Z$ **bounds the state
+  space**, there is nothing for it to converge to, and the same check reports that it does not
+  settle. §4.2's guard and §5.5 are where that is paid for; here it is one clause, so that the
+  sentence about $K$ is not read as covering the grid entire. **Flag for §5.1 that $\zeta$ is a
+  log-odds coordinate**; that fact does work twice later.
 - Each utterance carries an **exclusion set** $E_y$, the states its entry rules out (Eq. 5), and the
   lexical field is that set's indicator scaled by lexical strength, $\varphi_L=\Lambda\chi_y$
   (Eq. 6). Two sentences on why exclusion rather than the truth set: under exclusion, "this entry
@@ -444,7 +455,7 @@ here rather than assumed.
   App. A shows would not be local, and the one §5.1 argues binarity absorbs.
 ---
  
-# 4. Evaluation (about 1,725 words)
+# 4. Evaluation (about 1,890 words)
  
 ## 4.1 What is compared (about 140 words)
  
@@ -470,7 +481,7 @@ Three beliefs, all internal to the model:
 State once, plainly, that RSA and wRSA are **analytic baselines and are not implemented**, so no
 quantitative comparison is offered or implied.
  
-## 4.2 The criterion, and how to read the statistics (about 525 words)
+## 4.2 The criterion, and how to read the statistics (about 545 words)
  
 - Scalar strengthening is taken to be the conjunction of two conditions on the all-region mass under
   *some*: $q_H<q_{\mathrm{lit}}$, the network lowering the mass the entry and prior already assign;
@@ -535,7 +546,7 @@ quantitative comparison is offered or implied.
   Two further cautions attach. A sweep **brackets** a change rather than locating it; and a change
   of status may be the sign flip of a quantity already decayed to $10^{-7}$, which is not the
   finding that a flip at $10^{-1}$ is.
-## 4.3 The specification holds (about 70 words)
+## 4.3 The specification holds (about 105 words)
  
 Brief, and reported as a table rather than argued. The closed forms agree with the integrated
 dynamics to $4.45\times10^{-9}$ — **quoted as $1.00$ times the stopping tolerance, not as an
@@ -547,8 +558,12 @@ $\varphi_L$; the analytic messages agree with finite differences. Grid refinemen
 a step: $|401-801|$ in $\mathbb E[s]$ is $1.7\times10^{-3}$ under the hard mask against
 $3.3\times10^{-6}$ under a smooth one, with the smooth mask serving as the control that identifies
 which of the two is model and which is quadrature. (The coarse $51$–$401$ spread, $1.1\times10^{-2}$,
-is the $O(h)$ step artefact, which is why the tail is what is tested.) Code Cell E3 checks that the
-relay reproduces every one of these numbers.
+is the $O(h)$ step artefact, which is why the tail is what is tested.) **The table's fifteenth
+line is the companion to that one and belongs beside it in the prose**: widening the half-width at
+fixed node spacing does not settle, $\mathbb E[s]$ spreading $1.5\times10^{-1}$ over $Z\in[5,10]$
+against the $1.7\times10^{-3}$ tail in $K$, which is §3.2's two-parameter point measured rather
+than asserted. Report the pair in one sentence and send the consequences to §4.2's guard.
+Code Cell E3 checks that the relay reproduces every one of these numbers.
  
 ## 4.4 The five priors (about 470 words)
  
@@ -665,7 +680,7 @@ it, so the reader sees the rows before being told which one carries weight.
   the plane, where it is a count and not a single row.
 - **One sentence pointing to §4.6:** the conjunction is shown in the integrated dynamics, not only
   in closed form, for all three rows that meet it (Code Cell 2b).
-## 4.5 The plane, and where both conditions hold (about 420 words)
+## 4.5 The plane, and where both conditions hold (about 530 words)
  
 - **What the network carries, with the cells its baseline already holds left out (Code Cell 4).**
   Lead with this, because it is the plane's version of §4.4's one row and it is what the
@@ -723,14 +738,18 @@ it, so the reader sees the rows before being told which one carries weight.
   difference**: it holds in **13** of the 121 cells against $q$'s 33, and §3.6's position makes 13
   the figure this dissertation's preferred read-out returns. Report both, and do not let the
   preference quietly promote one of the two numbers. Report the V as a result, and derive no evidence for a missing level
-  from it. **Say which half of that is $Z$-conditional** (§4.2's guard). **Robust:** the delta
-  conjunction is a strict subset of the q conjunction at every half-width swept, with no reversal,
-  so the two read-outs part only in $q$'s favour, the left arm exists only under $q$, and the
-  instruction just given stands on that and not on the count. **Not robust:** the figures **13** and
-  **20** and the boundary $\alpha\le8$ are all $Z=6$ figures, and all move. *(Writer's note: at a wider
-  grid the gap reaches zero because **both** conjunctions empty, not because the read-outs agree.
-  Never report a zero gap as agreement. The measurements are class (e), so quote no number from
-  them beyond the two this section already prints.)*
+  from it. **Say which half of that is $Z$-conditional** (§4.2's guard). **Robust, and now printed:** Appendix A's ladder counts the two
+  conjunctions at each half-width and counts the cells where the mode conjunction holds and the q
+  conjunction does not, and **that column is zero at every rung**. So the delta conjunction is a
+  strict subset at every half-width swept, the two read-outs part only in $q$'s favour, and the
+  instruction just given stands on the subset relation and not on the count. **Not robust:** the
+  figures **13** and **20** are $Z=6$ figures. The ladder gives the delta conjunction as
+  $37, 13, 0, 0, 0$ and the q conjunction as $68, 33, 0, 0, 0$, so the gap runs $31, 20, 0, 0, 0$.
+  *(Writer's note: a zero gap at the wide rungs is **both** conjunctions empty, not the read-outs
+  agreeing, and the zero reversal column is what distinguishes the two. Never report a zero gap as
+  agreement. What is still **class (e)** is the boundary $\alpha\le8$: the least $\alpha$ at which
+  the mode shift criterion is met runs $8, 16, 32, 32, 128$ in the audit and no cell prints it, so
+  write the boundary as a $Z=6$ figure without quoting its ladder.)*
 - **The override law, the exchange rate of §3.2's contest.** $\Lambda_{\mathrm{crit}}\approx\alpha\log2n$
   (Eq. 41), linear in prior concentration with a slope fixed by the predicate's granularity alone:
   the rate at which lexical strength must grow to hold the entry against a sharper $\ell_0$.
@@ -781,7 +800,7 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   locality debt (D12) is admitted. This section states neither.
 ---
  
-# 5. Discussion (about 2,080 words)
+# 5. Discussion (about 2,185 words)
  
 ## 5.1 What an alternatives level would have to supply (about 560 words)
  
@@ -1005,7 +1024,7 @@ remain, and naming them is the point of saying so:
   alternatives computation in the present model — $\varphi_L$ is a function of the observed
   utterance alone, $g_S$ reaches the belief only through $\varphi_u$, and no term in Eq. (13)
   involves any unobserved utterance — and they settle nothing about human processing.
-## 5.2 Scale structure: two hypotheses, and what the comparison shows (about 800 words)
+## 5.2 Scale structure: two hypotheses, and what the comparison shows (about 860 words)
 
 Written against Code Cell F's executed output (Appendix F). Every number below is printed there;
 every number attributed to Xiang et al. is cited and printed by no cell (S-5). **No sentence in this
@@ -1232,7 +1251,7 @@ what it costs and what is still owed.
   natural misreading: the claim is about what a level can be asked, not about what is true.
 ---
  
-## 5.5 Limits (about 300 words, was §5.3)
+## 5.5 Limits (about 345 words, was §5.3)
  
 - Convergence status: **global** for $(\varphi_S,\varphi_u)$; for $\theta_u$, convergence of the
   reduced objective plus convergence to a stationary point guaranteed only **locally**, since that
@@ -1303,7 +1322,7 @@ what it costs and what is still owed.
   a sharp prior — which is withdrawn.
 ---
  
-# 6. Conclusion (about 250 words)
+# 6. Conclusion (about 265 words)
  
 1. A field-valued world state on a dense scale, with a soft lexical entry competing additively
    against the world prior in the same log-density — a placement of the prior the architecture
@@ -1314,7 +1333,8 @@ what it costs and what is still owed.
    therefore does not by itself diagnose a within-trial alternatives computation.
 3. Where the prior leaves the all-region in the majority the network takes it out, and where the
    prior peaks inside the cell of *all* the network carries the peak outside it: in a single row of
-   §4.4, and in 15 and 9 of the 121 cells of §4.5, under the two read-outs respectively. In every
+   §4.4, and in 15 and 9 of the 121 cells of §4.5, under the two read-outs respectively, at the
+   stipulated half-width and not at wider ones (§4.2's guard, sourced at both ends). In every
    one of those the shift criterion is met as well. The unconditioned counts are three of five
    priors and 33 cells under $q$, and the delta-like prior and 13 cells under the delta read-out
    §3.6 argues for — counts in which the prior is doing part of the work, which is why the

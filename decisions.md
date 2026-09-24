@@ -1155,6 +1155,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     there. Code Cells A and F are not mirrored, so E3's replay is unaffected by either.
   - **F.10 carries its own check**: it rebuilds only the Voronoi node masks per grid, and its
     Z = 6.0 row must reproduce F.3's model column, which is how a wrong rebuild would show.
+  - **2026-09-23, Z7: Code Cell A's plane block also counts the reversals**, the cells where the
+    mode conjunction holds and the q conjunction does not, at each half-width. Sec. 4.5 argues from
+    the delta conjunction being a **subset** of the q conjunction rather than from the size of the
+    gap, and a difference of two counts does not establish a subset relation; the reversal column
+    does, and it is zero at every rung.
 
 ### I11. Code Cell 2b, its mirror, and how E3 finds both
 - Status: Settled
