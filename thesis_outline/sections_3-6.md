@@ -427,7 +427,7 @@ here rather than assumed.
   should be named together: the normalizer $\sum_j w_j e^{\varphi_{S,j}}$ sums across every node,
   so no unit could form it from its own afferents; it sits outside the dynamics and takes no part in
   Eq. (20); and nothing in the architecture dictates it.
-- **What they share, and where they part.** The **mode is shared**: the exponential and the
+- **What they share, and where they part.** The **mode is shared**, read over $\zeta$: the exponential and the
   normalizer are monotone, so the peak of $\varphi_S^\ast$ is also $q$'s mode. What differs is
   what needs the normalizer — and, with it, tempering. Halving $\varphi_S$ does not move its peak,
   so **the tempering/utility confound in $\Delta$ is a property of $q$**, not of the settled state.

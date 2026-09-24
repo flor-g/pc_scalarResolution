@@ -181,3 +181,26 @@ for any discussion in Bogacz.
     so the tutorial itself names a candidate mechanism, outside the inference network, for a
     normalization over a discrete set.
   Nothing in the tutorial addresses selecting a maximum across nodes (F12).
+
+**User, 2026-09-23 (Q5 answered in part):** reading over s fails and the notebook reports in ζ, so
+add a clarification to the notebook on why s is not used (done: Text cell 4, decision B13; MacKay
+(1998) added to main's cell 24 and the dissertation list). The locality question belongs to the
+dissertation: background discusses Bogacz's position on the read-out and his basal-ganglia note
+(done: background §2.4, +70 words, target 4,160; Bogacz & Gurney (2007) added to the list). The
+user asked: doesn't φ_S\* already encode the largest unit, and why must it be searched over the grid?
+
+- **F16 (`local_maxima_output.txt`).** Under *some*, φ_S\* has exactly **one** strict local maximum in
+  all 9 Part D rows and all 121 plane cells, so the peak unit is the only unit that exceeds both its
+  neighbours. Under *no* and *all* it has two to four in most cells (plane: *no* 92 of 121 cells with
+  more than one, *all* 35), edge nodes and the lexical step's edges among them. A sketch of why *some*
+  is unimodal, not a proof: ℓ₀ is concave in ζ for every prior used, the width part of the utility
+  field is negative (F4) and so concave, the tilt is linear, and the lexical step under *some* lowers
+  the left tail, which only removes candidates to the left of a rising field. Measured, not proved.
+- **MacKay (1998), full text read** (the user supplied the PDF): F14's secondary-source reading is
+  confirmed in the primary (§1; §2, Eq. 10 and Eq. 14; §3, Fig. 1 for the binary case p(a) =
+  1/(1 + e^{−2a}), so a = ζ/2).
+
+R8 status: notebook clarification and §3.6's coordinate done. Open: §3.6's reason 1 ("needs no sum
+across nodes") and whether a read-out falls under locality — the user's call, with F12 and F16 as
+the evidence. Flagged, not edited: background §2.4 says "§3.5 derives the utility basis dimension
+from [locality]", which R6's recast of §3.5 no longer supports.

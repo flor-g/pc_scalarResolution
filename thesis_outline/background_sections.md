@@ -12,7 +12,9 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
  
 ## Scale and argumentative shape
  
-- **Target length: approximately 4,090 words.** Raised from 4,050 on 2026-09-23 (§2.2, for what
+- **Target length: approximately 4,160 words.** Raised from 4,090 on 2026-09-23 (§2.4, +70 for
+  Bogacz on the read-out and the basal-ganglia note; `agent/review_2026-09-23_proof_scope.md` R8).
+  Raised from 4,050 on 2026-09-23 (§2.2, for what
   commitment 3 is a commitment *about*; PP7 of `revisions.md` §11). Raised from 3,670 on 2026-09-22 under BG7: the
   budget follows what the sections have to carry, and is not trimmed to preserve a number (the
   user's ruling, R8's successor for the background). The old figure also **omitted the Opening**,
@@ -25,7 +27,7 @@ it answers is a different one. Nothing from the precision/wonkiness arc survives
   accounts deriving it *from the prior* carry a documented liability; and that the debates over
   which level a pattern belongs to share a presupposition about staging.
 - **Part II — Predictive coding, its commitments, and the constraint that generates the answers
-  (about 1,610 words).** Only the parts the model uses, organized around the framework's three
+  (about 1,680 words).** Only the parts the model uses, organized around the framework's three
   commitments, with locality carrying the most weight because it is Q1's answer.
 - **Closing bridge (about 120 words).** The three questions restated, and the standing qualification.
 ### Terminological corrections carried through the dissertation
@@ -411,7 +413,7 @@ project's "scalar vagueness resolution" keyword.*
   single density rather than in sequence.
 ---
  
-# Part II. Predictive coding, its commitments, and the constraint that generates the answers (about 1,610 words)
+# Part II. Predictive coding, its commitments, and the constraint that generates the answers (about 1,680 words)
  
 ## 2.1 FEP, generative models, and Bayesian model inversion (about 235 words)
  
@@ -518,7 +520,7 @@ the unified objective.*
   exactly, so the variational formulation is justified here not by computational necessity but
   because it defines dynamics that can be compared with predictive-coding-style iterative inference.
   State this candidly.
-## 2.4 Predictive coding as local, error-driven message passing (about 330 words)
+## 2.4 Predictive coding as local, error-driven message passing (about 400 words)
  
 *Commitment 2, and the answer to the first of the three questions. This is the weightiest subsection
 in Part II; the previous draft's 250 words were thinner than the load it bears.*
@@ -550,6 +552,18 @@ in Part II; the previous draft's 250 words were thinner than the load it bears.*
   not a stability requirement the relay carries of its own (F26). Say here that the
   dissertation treats an implementation constraint as a *source of structure*, and that Part I's
   three questions will be answered from it.
+- **Where the constraint is stated, and what Bogacz does with a read-out.** Bogacz (2017, §1)
+  states both constraints as conditions any computational model must meet to be biologically
+  plausible, and his model has **no read-out stage**: what it delivers is the activity of its state
+  units, which is what he takes to be represented (§2.2). The same section gives two reasons not to
+  compute the posterior itself. Representing it takes infinitely many values rather than a few
+  summary statistics; and its normalization, for a continuous distribution an integral, would be
+  challenging for a simple biological system. He adds that circuits in the basal ganglia have been
+  proposed to compute the normalization for **discrete** distributions (Bogacz & Gurney, 2007).
+  State both and draw nothing from them here: the tutorial does not say whether a read-out falls
+  under the locality constraint, and §3.6 is where the dissertation takes that up. Worth the
+  sentence on discreteness, since the quadrature grid of §3 makes \(q\)'s normalizer a sum over a
+  discrete set.
 - **Potential neural support, kept proportionate:** canonical-microcircuit proposals associate
   feedforward and feedback pathways with error and prediction signals (Bastos et al., 2012);
   language-focused work has proposed related beta/gamma dynamics during sentence comprehension
@@ -684,6 +698,8 @@ Bastos, A. M., Usrey, W. M., Adams, R. A., Mangun, G. R., Fries, P., & Friston, 
  
 Bogacz, R. (2017). A tutorial on the free-energy framework for modelling perception and learning. *Journal of Mathematical Psychology, 76*, 198-211. https://doi.org/10.1016/j.jmp.2015.11.003
  
+Bogacz, R., & Gurney, K. (2007). The basal ganglia and cortex implement optimal decision making between alternative actions. *Neural Computation, 19*(2), 442-477. https://doi.org/10.1162/neco.2007.19.2.442
+ 
 Chemla, E., & Spector, B. (2011). Experimental evidence for embedded scalar implicatures. *Journal of Semantics, 28*(3), 359-400. https://doi.org/10.1093/jos/ffq023
  
 Chierchia, G. (2004). Scalar implicatures, polarity phenomena, and the syntax/pragmatics interface. In A. Belletti (Ed.), *Structures and beyond: The cartography of syntactic structures* (Vol. 3, pp. 39-103). Oxford University Press.
@@ -769,6 +785,8 @@ Lewis, A. G., & Bastiaansen, M. (2015). A predictive coding framework for rapid 
 Lieder, F., & Griffiths, T. L. (2020). Resource-rational analysis: Understanding human cognition as the optimal use of limited computational resources. *Behavioral and Brain Sciences, 43*, Article e1. https://doi.org/10.1017/S0140525X1900061X
  
 Lillicrap, T. P., Cownden, D., Tweed, D. B., & Akerman, C. J. (2016). Random synaptic feedback weights support error backpropagation for deep learning. *Nature Communications, 7*, Article 13276. https://doi.org/10.1038/ncomms13276
+ 
+MacKay, D. J. C. (1998). Choice of basis for Laplace approximation. *Machine Learning, 33*(1), 77-86. https://doi.org/10.1023/A:1007558615313
  
 Magri, G. (2011). Another argument for embedded scalar implicatures based on oddness in downward-entailing environments. *Semantics and Pragmatics, 4*, Article 6, 1-51. https://doi.org/10.3765/sp.4.6
  

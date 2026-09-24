@@ -740,6 +740,24 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     and 5 of Part D's 9 rows change; in s the evaluation's priors have their modes at the excluded
     endpoints, so the s baselines sit on the grid's edge node. The user holds the question open.
 
+### B13. The mode criteria are read over ζ, and the notebook says why
+- Status: Settled
+- Decided by: user (2026-09-23), on the evidence of `agent/review_2026-09-23_proof_scope.md` F9-F14
+- Decision: the mode of B7/B8 stays the grid node where φ_S\* is largest, i.e. the mode of q over ζ,
+  and Text cell 4 carries a paragraph, "Why the mode is read over ζ and not over s", giving the reason.
+- Theoretical reason: φ_S\* is a log-density against the quadrature measure of Eq. (2), uniform in
+  ζ. Read over s, a Beta(α, β) peaks inside the scale only when α > 1 and β > 1, so the flat prior
+  has no s-peak and Beta(1,3), Beta(3,1) and every Beta(α, 1) peak at an endpoint the open scale
+  excludes (Eq. A1); on the grid that is the outermost node, set by Z. Over ζ every Beta peaks inside,
+  at log(α/β), where s is the mean α/(α+β) — the two-outcome case of MacKay (1998), read in full
+  2026-09-23 (his §2, Eq. 14, and §1: the location of a maximum is not invariant under a non-linear
+  reparameterization, and "the '−1' terms ... are artefacts of the choice of basis").
+- Implementational reason: none new; the code already reads the argmax over grid nodes (I12).
+- Bogacz status: a statistic of the delta read-out; the tutorial has no counterpart (B8).
+- Depends on it: B7, B8, B11, B12; Text cell 4's paragraph; outline §3.6 ("the mode is shared, read
+  over ζ").
+- Evidence: `agent/audits/2026-09-23-mode-coordinate/` (output.txt, z_dependence_output.txt).
+
 ### B10. The notebooks report the conditions and take no position on what counts as strengthening
 - Status: Settled
 - Decided by: user (2026-09-14)
