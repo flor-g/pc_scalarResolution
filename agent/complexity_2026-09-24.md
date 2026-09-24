@@ -30,6 +30,20 @@ stored. **Settling time in units of τ_φ is also the architecture's**, and O7/�
 So the appendix is framed as the simulation's complexity, and names every line that is also a fact
 about the architecture.
 
+Later in the session, after the agent had twice misread the scope:
+
+> I might not have explained myself clearly. We have three concepts at hand: the process, the
+> architecture, the simulation. The architecture is essentially an algorithm which we claim to
+> represent the true process. The simulation is an instantiation of the algorithm, and therefore a
+> representation of the architecture. Therefore the simulation is to be understood as a
+> representation of the true process. --- That being said, the simulation is not the only possible
+> instantiation of the architecture, nor is the architecture the only possible representation of
+> the true process. Hence when Appendix G's complexity is specifically the complexity of the
+> simulation and should not be conflated with the unique complexity of the architecture.
+
+> Good. Now Correct whatever you got wrong in Appendix G and such. Don't touch the
+> cost-part-of-algorithm argument yet.
+
 ## 2. Decisions this rests on
 
 - **I14** (new, below): the framing, the notation rule, the placement. User's, 2026-09-24, except
@@ -62,6 +76,10 @@ about the architecture.
   6,435, headings in step. `revisions.md` §17 records it. `ec2eb0d`
 - [x] **CX4 (2026-09-24). Records**: I14 and E20 in `agent/decisions.md`; findings CX-F1 to
   CX-F6 below. `0475a21`
+- [ ] **CX6. Correct the framing to the user's three levels** (CX-F7). Appendix G's opening and §3's
+  closing paragraph, Code Cell G's header comment, the §5.5 bullet, `revisions.md` §17, agent.md's
+  cell map, I14's finding. No printed line changes; notebooks not re-executed (markdown and one
+  comment).
 - [ ] **CX5. OPEN (user, 2026-09-24): remove the avoidable Θ(K³) from `infer`** (CX-F2).
   `stiffest_state_rate` finds λ_max(H) by a dense eigendecomposition of the (K + m)-square H, and
   `infer` calls it twice per inference (the tolerance and τ_ε); Eq. (G1) gives λ_max(H) = θ_u² + 2
@@ -94,7 +112,8 @@ about the architecture.
   step over the second half of the run, × 8κ(H), is 1.0334 at κ = 6 falling to 1.0005 at κ = 402:
   the slowest mode is excited, which is the requirement the lower bound needs. N/κ is 176–204 and
   does not move with K (1223, 1224, 1223 at κ = 6) or with m (182.3, 187.0, 187.5 at κ = 102).
-- **CX-F4. The architecture's settling time does not carry θ_u².** N dt/τ_φ falls from 25.5 at
+- **CX-F4. The architecture's settling time does not carry θ_u².** *(Its framing is superseded by
+  CX-F7: the settling time is a quantity of the shared equations, not "the architecture's" cost.)* N dt/τ_φ falls from 25.5 at
   κ = 6 to 22.0 at κ = 402. The growth of N with θ_u² is the separation 8λ_max(H) = τ_φ/dt counted
   in steps. The fall itself is the tolerance: it is keyed to λ_max(H) (I3), so log(a/tol) shrinks
   as θ_u grows.
@@ -108,3 +127,11 @@ about the architecture.
 - **CX-F6. n is not free of cost after all.** n appears in no per-step or construction count, but it
   sets θ_L, so c_y, so θ_u\*, so κ(H). The proposal's "n costs nothing at fixed K" was wrong as
   worded; the appendix says n enters only through θ_u\* (and through K under §5.5's proposal).
+- **CX-F7. The first framing was wrong (the user's correction, 2026-09-24).** The agent's answer to
+  "(correct?)" in §1 split time from size and gave the size and the settling time to "the
+  architecture", on the grounds that a parallel instantiation updates every unit at once. That took
+  one instantiation to be the architecture, and denied that the simulation's cost represents the
+  process's. The user's three levels (§1): the simulation represents the process through the
+  architecture, and its complexity is this instantiation's, not the architecture's unique one.
+  Appendix G, the §5.5 bullet and I14 were written on the first framing; CX6 corrects them. The
+  argument about cost taking part in the dynamics is held back by the user and not recorded yet.

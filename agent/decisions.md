@@ -1464,6 +1464,21 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   diagnostic, and checks the two agree.
 - Depends on it: `main.ipynb` Appendix G, Code Cell G; `sections_3-6.md` §5.5 and Tier C.
 - Evidence: `agent/complexity_2026-09-24.md` §4, CX-F1 to CX-F6; Code Cell G's output.
+- Findings added later: 2026-09-24 (user), **the scope bullet's gloss was wrong, and so was the
+  theoretical reason above.** There are three things, not two: the **process**; the
+  **architecture**, an algorithm claimed to represent the process; and the **simulation**, one
+  instantiation of the architecture. The simulation therefore represents the process through the
+  architecture, and its cost represents the process's cost. What the scope bullet gets right is
+  that the complexity is this instantiation's: the simulation is not the only instantiation of the
+  architecture, nor the architecture the only representation of the process, so Appendix G's
+  complexity must not be read as the architecture's unique complexity. What it got wrong: it
+  classed the size and the settling time as "the architecture's", took a parallel instantiation to
+  be the architecture, and gave as the reason that a step count must not be read as a demand on the
+  modelled process. Applied (CX6): Appendix G's opening now says the counts represent the process's
+  cost through this instantiation and are not the architecture's complexity, and attributes each
+  quantity to the equations every instantiation shares or to this instantiation's choices; §3's
+  closing paragraph attributes the θ_u² in N to the separation commitment 7 requires and the
+  constant 8, the step and the stopping rule to this instantiation; the §5.5 bullet follows.
 
 ---
 

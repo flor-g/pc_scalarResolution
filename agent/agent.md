@@ -69,7 +69,7 @@ commit is 499918c (2026-09-13). Procedures are in §4.
 | 15, 17, 19, 21 | Code Cells A-D | Each prints the numbers the appendix above it quotes; Code Cell A also prints Text cell 3 §2's (decision I10). |
 | 22 | **Appendix F** | H1 and H2 against Xiang et al. (2022), Eqs. (F1)–(F3). The only cell that reads a data file, and the only place Λ is fitted (S-1). States the two hypotheses, reports match and mismatch, and says nothing about what a mismatch is due to. |
 | 23 | Code Cell F | The numbers Appendix F quotes, in eight blocks. Runs at n = 4 in its own respawned network; the default n = 10 everywhere else is untouched. |
-| 24 | **Appendix G** | The computational complexity of the **simulation**, not of the architecture (decision I14): the spectrum of H in closed form, Eq. (G1); the cost operation by operation, Θ where tight and O where not; the Euler step count, Eq. (G2); the total, Eq. (G3). |
+| 24 | **Appendix G** | The computational complexity of **this simulation**, one instantiation of the architecture; it represents the process's cost and is not the architecture's complexity (decision I14 and its 2026-09-24 finding): the spectrum of H in closed form, Eq. (G1); the cost operation by operation, Θ where tight and O where not; the Euler step count, Eq. (G2); the total, Eq. (G3). |
 | 25 | Code Cell G | The numbers Appendix G quotes: the spectrum check, the step-count ladder (θ_u fixed, a control), and the wall clock behind `cost:`. Reads `evaluation_network` (Code Cell 2). |
 | 26 | References | APA 7th, alphabetical. Add a work here whenever a new citation enters the text. |
 

@@ -1625,11 +1625,20 @@ deferring to §3 (the two files had been pointing at each other).
 
 The working record is `agent/complexity_2026-09-24.md` while it is open. **What changed in the
 outline:** one bullet at the end of §5.5's numerical-substrate group, which states the total for an
-integrated inference, names $\theta_u^2+2$ as the condition number of $H$ (Eq. G1), says that
-the factor is proportional to §4.1.6's separation and that the architecture's settling time does
-not carry it, and gives the two routes by which $n$ reaches the cost; Tier C gains Appendix G. The
-derivation, the breakdown and every figure are in `main.ipynb` Appendix G and Code Cell G. Word
-table: §5.5 745 → 830, §5 2,085 → 2,170, total 6,350 → 6,435.
+integrated inference, names $\theta_u^2+2$ as the condition number of $H$ (Eq. G1), and gives the
+two routes by which $n$ reaches the cost; Tier C gains Appendix G. The derivation, the breakdown
+and every figure are in `main.ipynb` Appendix G and Code Cell G. Word table: §5.5 745 → 830,
+§5 2,085 → 2,170, total 6,350 → 6,435.
+
+**Corrected the same day (the user's three levels).** The process, the architecture (an algorithm
+claimed to represent the process) and the simulation (one instantiation of the architecture) are
+three things. The simulation represents the process through the architecture, so its cost
+represents the process's cost; but it is one instantiation of one representation, so its
+complexity is not the architecture's. The first version of the bullet, and of Appendix G, instead
+contrasted the simulation's cost with "the architecture's settling time" and denied that the
+arithmetic was a time the process spends. The bullet now says what the figure represents and that
+Appendix G attributes each factor to the equations every instantiation shares or to this
+instantiation's choices. §5.5 830 → 870, §5 2,170 → 2,210, total 6,435 → 6,475.
 
 ## 16. OR: the outline reorganized (2026-09-24)
 
