@@ -26,7 +26,7 @@ into a project file (`decisions.md`, the change record, this file), never only i
 | `composition guide.md` | The five-entry prose standard, applied in its stated order. | Before drafting or editing any prose or code comment. |
 | `decisions.md` | Every architectural and implementation decision, who made it, why, and every open decision. Also the Bogacz divergence register and the quantity trace register. | Before any change that touches the architecture, an evaluation, or a quantity. |
 | `audits/` | One folder per audit run, holding its scripts and their output, which the registers of `decisions.md` cite. | To reproduce or rerun an audit. |
-| `procedure_records/` | One working record per multi-step change (§5.3). Its `theta_u_learned_reach.md` is the record of the change that made θ_u learned everywhere: tasks T0-T11, findings F1-F34, and §5.C, the table of retained fixed-θ controls. | As the model for a change record (§5.3), and for the evidence behind decisions A9-A11 and I1-I5. |
+| `history.md` | The sixteen closed working records in one file, oldest first, each with when it was opened and closed, what it settled, and its numbered findings, which `decisions.md` cites as evidence. It replaced `procedure_records/` on 2026-09-23; the full originals stay in git and each section gives the command. §3 is the record of the change that made θ_u learned everywhere: tasks T0-T11, findings F1-F34, and the table of retained fixed-θ controls. | As the model for a change record (§5.3), for the evidence behind decisions A9-A11 and I1-I5, and to find when a change happened. |
 | `thesis_outline/` | The dissertation outline: `sections_3-6.md` (proposal, evaluation, discussion, conclusion), `background_sections.md` (background), and `revisions.md` (the pending revision plan for both). The composition guide covers the outlines. | Before any claim about the paper's argument, and before editing either outline: read `revisions.md` first. |
 | `backups/` | Folder snapshots from before the project was under git (2026-09-11, 2026-09-12). Historical: never modify. Read a folder's README before trusting its name. | Only to recover something older than the first commit. |
 | `.gitignore`, `.gitattributes` | Git configuration: what is excluded (`.venv/`, `.DS_Store`, notebook checkpoints, caches), and the nbdime diff and merge drivers for notebooks. | Before changing what git tracks (§4.5). |
@@ -552,8 +552,10 @@ print(f"RUNNER {status}  {path}: error outputs {errors}, figures {figures}, runt
 
 ### 5.3 Change records for multi-step work
 
-Any change spanning more than one cell or session gets a working record in `procedure_records/`, on
-the pattern of `procedure_records/theta_u_learned_reach.md`:
+Any change spanning more than one cell or session gets a working record, on the pattern of
+`history.md` §3. Write it as its own file at the project root while the change is open, and fold it
+into `history.md` when it closes, keeping its findings (2026-09-23; `procedure_records/` is gone and
+its sixteen records are §§1-16 there). A record holds:
 
 1. the user's instructions, verbatim;
 2. the decisions the change rests on, with pointers into `decisions.md`;

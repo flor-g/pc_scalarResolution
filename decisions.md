@@ -4,7 +4,7 @@ The record of architectural, evaluation, and implementation decisions for `main.
 `appendix_E.ipynb`, with who made each and why. Procedures for adding to it are in `agent.md` §3.
 
 > **Seeded 2026-09-13 from earlier working records** (agent memory files and
-> `procedure_records/theta_u_learned_reach.md`, abbreviated reach.md below), condensed. Equation numbers follow the 2026-09-09 numbering. Numbers
+> `history.md` §3, abbreviated reach.md below), condensed. Equation numbers follow the 2026-09-09 numbering. Numbers
 > quoted here are for orientation: verify against the executed notebook before citing one.
 > Where the records do not say who made a decision, **Decided by** reads `not recorded`; the user
 > may wish to fill these in. Registers D and E were audited on 2026-09-13; their verdicts are
@@ -205,7 +205,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: see I1 for how θ\* is obtained.
 - Bogacz status: see D2.
 - Depends on it: every reported result.
-- Evidence: `procedure_records/theta_u_learned_reach.md` §1, T0-T11.
+- Evidence: `history.md` §3 §1, T0-T11.
 - Findings added later: 2026-09-13 (agent). The outline revision (`thesis_outline/revisions.md`
   R9, item 2) argues that the slow flow of Eq. (20) never arrives at θ\* (F15) and that, without an
   alternatives level, a mechanism outside F̃ must halt it. A flow halted short of θ\* holds θ_u at
@@ -312,7 +312,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Bogacz status: the delta is an instance of his Eq. (34); q has no counterpart in the tutorial (D9).
 - Depends on it: Text cell 3 §4 item 5; Text cell 4 Part C, Part D, Reporting statistics;
   `delta_readout_report` in Code Cell 2.
-- Evidence: `procedure_records/d9_delta_readout.md` F1-F4.
+- Evidence: `history.md` §4 F1-F4.
 - Findings added later:
   - **2026-09-23, the user takes a position this entry left open.** A16 settles what each read-out
     *is*; it does not say which one the dissertation prefers. The user's ruling: **both are
@@ -380,7 +380,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      stipulate a tolerance representative of the brain, and a tolerance need not be uniform across
      inference tasks. What can be argued is that a representative tolerance is almost certainly
      **greater than 1e-9**, so a real system halts **earlier** than the flow's asymptote.
-- **Evidence** (`procedure_records/tolerance_halting.md`, findings H1–H7; audit
+- **Evidence** (`history.md` §16, findings H1–H7; audit
   `audits/2026-09-21-tolerance-halting/`): the rule is self-contained, using only |Δθ_u| and never
   θ\*; at Λ = 512 every Part D verdict is unchanged for tolerances from 1e-9 to 1; the plane keeps
   33 of 121 and agrees with θ\* in 121 of 121 cells; and 4λ_max(H) falls from about 9e6 to about
@@ -427,7 +427,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
      otherwise specified. This is what keeps every reported result independent of the ad hoc
      quantity, and it is position 1 restated.
 - Evidence for points 3 and 4: block 5 of `audits/2026-09-21-tolerance-halting/output.txt`.
-- Tasks: `procedure_records/tolerance_halting.md` §7 (HA0–HA8). **Q-HA1 and Q-HA2 are answered:**
+- Tasks: `history.md` §16 §7 (HA0–HA8). **Q-HA1 and Q-HA2 are answered:**
   `learn_theta_u` halts by the committed tolerance, every realizable θ_u is reported at it, and the
   two rules that locate today's realizable values stop defining one.
 
@@ -466,13 +466,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: A9's ensemble, hence every θ\*; O8; §5.2's ensemble sentence; Appendix D §2's
   kernel table, which is where the notation is defined; §5.1's cascade, already written as
   ⟨E_some, ker E_some⟩ and ⟨E_all, ker E_all⟩.
-- Evidence: F20 and F1 in `procedure_records/scale_classes_hypothesis.md`; the ensemble probes of
+- Evidence: F20 and F1 in `history.md` §12; the ensemble probes of
   `audits/2026-09-13-scale-structure/` (|θ\*| 4.6 to 91 across candidate ensembles, verdicts
-  unchanged in what was tested). Tasks: `procedure_records/exposure_stipulation.md` X6–X8.
+  unchanged in what was tested). Tasks: `history.md` §15 X6–X8.
 
 ### A20. Appendix F's configuration: n = 4, a fitted Λ, and one data file
 - Status: **Settled 2026-09-22**, implementing S-1, S-3, S-4, S-5 and S-7 of
-  `procedure_records/scale_classes_hypothesis.md` §8. Printed by **Code Cell F**; nothing in it
+  `history.md` §12 §8. Printed by **Code Cell F**; nothing in it
   reaches any other cell.
 - Decided by: the **user** (2026-09-17 for S-1 to S-7; 2026-09-22 for the data file's form).
 - **n = 4 is a setting, class (a).** Xiang et al. elicit on a five-point scale, and Eq. (A1) reads a
@@ -566,7 +566,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   prior overrides the entry.
 - Evidence: the Gaussian prior at Λ = 512 is the control showing the effect is the prior's, not Λ's.
 - Findings added later:
-  - 2026-09-14 (`procedure_records/evaluation_partD_atStrongLambda.md` F1–F5). With Λ = 512 for all
+  - 2026-09-14 (`history.md` §7 F1–F5). With Λ = 512 for all
     five priors, the conjunction holds under three (flat, Beta(3,1), delta-like); every leak falls
     below 1e−174, and the *no*/*all* shifts saturate to zero. The Gaussian control above still reads
     +0.0071, but raising Λ alone does bring two diffuse priors into the conjunction. By B9 the row
@@ -576,7 +576,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Status: Settled
 - Decided by: user (2026-09-11, D2)
 - Decision: each retained fixed-θ control states its justification in the prose. The list is
-  `procedure_records/theta_u_learned_reach.md` §5.C. θ_u = 1 is no longer the start, so that cannot be a control's
+  `history.md` §3 §5.C. θ_u = 1 is no longer the start, so that cannot be a control's
   justification.
 
 ### B5. Text cell 5 Part B keeps its θ_u = 1 table and adds a learned table
@@ -603,7 +603,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Theoretical reason: A16.
 - Implementational reason: printed in Code Cell 2 so that E2 mirrors it and E3 checks it.
 - Depends on it: the reading guide in Text cell 4 Part D.
-- Evidence: `procedure_records/d9_delta_readout.md` F2-F4.
+- Evidence: `history.md` §4 F2-F4.
 
 ### B8. The delta read-out carries two criteria of its own
 - Status: Settled as a definition. Where and how the paper uses them is open (`thesis_outline/revisions.md` Q2, Q6). Reported without position in the notebooks (B10).
@@ -635,7 +635,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   - **The user approved revisions.md Q2 option (a) as R14.** §4.5 reports the V under both
     read-outs, and no evidence for a missing level is derived from it.
   - **The code edits that print these criteria are open tasks** T0–T8 in
-    `procedure_records/delta_criteria_printing.md`.
+    `history.md` §6.
   - **Preliminary, `audits/2026-09-13-delta-criteria/mode_mechanism_output.txt` (record F4).** The
     utility field splits into B's odd (tilt) and even (width) parts. The width is negative in every
     configuration tested and lowers all-region mass in all 121 plane cells. The tilt moves the mode
@@ -650,7 +650,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     - k and c have the same signs in every configuration.
     - The limit field reproduces the model's mode node and all four verdicts ((a), (b), and both q
       conditions) in all 121 cells and Part D's five rows. F4's reading therefore holds cell by cell.
-  - **2026-09-14, Λ = 512 for all five priors (`procedure_records/evaluation_partD_atStrongLambda.md`
+  - **2026-09-14, Λ = 512 for all five priors (`history.md` §7
     F7).** The delta criteria part from q's on two Part D rows for the first time: under the flat and
     Beta(3,1) priors the q conjunction holds and criterion (a) does not (peaks move up to s = 0.917).
   - **2026-09-15. The criteria are printed, and so is the mechanism under them.**
@@ -712,18 +712,18 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: Text cell 4 Part C (the criterion paragraph, "Neither is sufficient alone", every
   "verdict" and "criterion met"), Parts D and 4b, Text cell 6, Code Cells 2 and 2b's printed lines
   ("a scalar implicature for \"some\" requires a NEGATIVE shift", "the criterion is NOT met", "Part
-  C's verdict"), Code Cell 4's summary; `procedure_records/delta_criteria_printing.md` T1 wording.
+  C's verdict"), Code Cell 4's summary; `history.md` §6 T1 wording.
 - Findings added later:
   - 2026-09-14: the existing prose and printed lines take the position in many places; listed for the
     user, not yet revised (agent.md §5.4).
   - 2026-09-14, the user refined B10: "criterion is kay. Calling it a criterion does not mean we
     commit to this criterion." Naming and wording in C7. Sites revised under
-    `procedure_records/b10_no_position.md`.
+    `history.md` §8.
 
 ### B9. Part D's companion at a strong Λ: every prior at Λ = 512, in a cell of its own
 - Status: Settled (implementation in progress)
 - Decided by: user (2026-09-14), approving S-1 to S-5 and S-7 of
-  `procedure_records/evaluation_partD_atStrongLambda.md`
+  `history.md` §7
 - Decision:
   - A new text cell and code cell ("Text cell 4b", "Code Cell 2b") follow Code Cell 2. They report
     Part D's evaluations with Λ = 512 (B3's Λ = 8α at α = 64) for all five priors and all three
@@ -941,7 +941,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     either one of the two alone, or even neither criteria as scalar strengthening. This notebook takes
     no position on how the criteria should be interpreted." (The instruction wrote "nether"; read as
     "neither".)
-- Depends on it: every site of `procedure_records/b10_no_position.md` §2; printed lines of Code Cells
+- Depends on it: every site of `history.md` §8 §2; printed lines of Code Cells
   2, 2b and 4 and of E2, E2b; decisions B2, B8 keep their historical wording.
 
 ### C8. "Control" names a manipulation of the model; an algebraic one is a counterfactual manipulation
@@ -956,7 +956,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Theoretical reason: none. The distinction is for the reader (the user: "for the sake of not
   confusing the reader").
 - Implementational reason: `agent.md` §3.3 keeps q_lit, the tempered control and the model apart, and
-  B4 lists the retained fixed-θ_u controls in `procedure_records/theta_u_learned_reach.md` §5.C. A
+  B4 lists the retained fixed-θ_u controls in `history.md` §3 §5.C. A
   field that is the tempered control plus part of the utility field would take a third name
   confusable with the second, and would enter that list without matching any run.
 - Bogacz status: naming convention; no operation.
@@ -1038,7 +1038,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 ### I3. Stopping tolerance = DERIVATIVE_TOLERANCE_PER_RATE x lambda_max(H)
 - Status: **Revised 2026-09-21** (user). Was a fixed 1e-9 from 2026-09-13 (T11), which superseded
   1e-10. The *principle* is unchanged and is the whole reason for the revision.
-- Decided by: user (2026-09-21), on the measurements in `procedure_records/tolerance_halting.md`
+- Decided by: user (2026-09-21), on the measurements in `history.md` §16
   H12-H18
 - Implementational reason: 1e-10 sat inside the roundoff floor, so step counts were decided by
   roundoff (F34); a tolerance must sit **above** that floor. What was not known in 2026-09-13 is
@@ -1119,7 +1119,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### I8. Appendix C and D numbers come from a recorded script, not a cell
 - Status: Superseded by C6 and I10 (2026-09-13)
-- Decided by: T5.1 decision in `procedure_records/theta_u_learned_reach.md`; who made it not recorded
+- Decided by: T5.1 decision in `history.md` §3; who made it not recorded
 - The script is recorded verbatim in reach.md §7.1, and covers Appendix C §6 and Appendix D §1
   only. See E7.
 
@@ -1137,7 +1137,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 
 ### I10. Where the numbers of C6 are printed
 - Status: Settled; amended in part by I11 (2026-09-14)
-- Decided by: agent, confirmed by user (2026-09-13); proposed as DEC3 of `procedure_records/e4_e7_sourcing.md`
+- Decided by: agent, confirmed by user (2026-09-13); proposed as DEC3 of `history.md` §2
 - Decision: numbers quoted in Text cells 4 and 5 are printed by Code Cells 2 and 3, inside the
   functions whose output they belong to. Each of Appendices A–D is followed by its own code cell
   (Code Cells A–D; Code Cell A also prints Text cell 3 §2's numbers about g_y). Numbers Appendix
@@ -1164,7 +1164,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 ### I11. Code Cell 2b, its mirror, and how E3 finds both
 - Status: Settled
 - Decided by: agent, confirmed by user (2026-09-14; S-3 and S-4 of
-  `procedure_records/evaluation_partD_atStrongLambda.md`)
+  `history.md` §7)
 - Decision:
   - The cells B9 adds are named "Text cell 4b" and "Code Cell 2b" (anchors `tc4b`, `code2b`), so no
     later cell is renumbered. Numbers Text cell 4b quotes are printed by Code Cell 2b.
@@ -1245,13 +1245,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   **our own name, not Xiang et al.'s** — their models are LG, QF and ST, and none of them uses it.
   So the dissertation keeps **one name, n**, with a two-part gloss: the atoms a counting predicate
   resolves, and the distinguishable steps of a scale where no count exists, in which case n need not
-  be an integer. Eq. (A6)'s separate δ form goes. Tasks: `procedure_records/resolution_naming.md`
+  be an integer. Eq. (A6)'s separate δ form goes. Tasks: `history.md` §14
   (N0–N8). The clash with the **delta read-out** (A16, B7) is a second reason: "delta" already names
   the posterior of the construction.
 - Appendix A derives θ_L from the scale's resolution, ς(−θ_L) = 1/2n (Eq. A5). The implementation
   takes n = 10.
 - Findings added later: 2026-09-15 (agent), **this decision is consequential, not cosmetic.** Probing
-  n while holding everything else fixed (O10, `procedure_records/side_quests_mirror_and_granularity.md`
+  n while holding everything else fixed (O10, `history.md` §9
   F9) crosses criterion readings: under N(0,1) the q shift criterion for *some* is unmet at
   n = 2…20 and met at n = 50, and under Beta(3,1) the q position and mode position criteria are
   unmet at n = 2, 3 and met at n ≥ 4. So what fixes *n* also fixes which side of a crossing the
@@ -1294,7 +1294,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   criteria. Code Cell B's *ALTERNATIVE SPACES* block varies ensemble **membership** (θ_u\* from
   −11.2844 for *no* alone to −65.7004 for *all* alone, −28.4375 for the three together), which is
   not the same probe. The sensitivity sweep of option (d) was considered and **not** adopted.
-- Tasks: `procedure_records/exposure_stipulation.md` (X0–X5).
+- Tasks: `history.md` §15 (X0–X5).
 
 ### O3. The outline pointer for the cost of realizability
 - Status: **Settled 2026-09-22** (user). The condition this was left open on is met: the settling-cost
@@ -1338,8 +1338,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   the term itself is O7.
 
 ### O5. Appendix B's sign sentence
-- Status: **Settled** (user, 2026-09-13; record `procedure_records/o5_o6_resolution.md`). Opened
-  2026-09-13 from `procedure_records/e4_e7_sourcing.md` F2.
+- Status: **Settled** (user, 2026-09-13; record `history.md` §1). Opened
+  2026-09-13 from `history.md` §2 F2.
 - Decision: the counterfactual is both signs reversed, c_y → −c_y, maximizer +28.4375. Appendix B now
   reads "were both signs reversed the maximizer would be +28.437".
 - Appendix B says that "were the two signs reversed the maximizer would be +22.578". Code Cell B
@@ -1348,8 +1348,8 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   written until the user restates what it should claim.
 
 ### O6. Does a relay as fast as the error units keep F monotone?
-- Status: **Settled for now** (user, 2026-09-13; record `procedure_records/o5_o6_resolution.md`).
-  Opened 2026-09-13 from `procedure_records/e4_e7_sourcing.md` F8.
+- Status: **Settled for now** (user, 2026-09-13; record `history.md` §1).
+  Opened 2026-09-13 from `history.md` §2 F8.
 - Decision: Eq. (E6) keeps τ_r ≤ τ_ε, and E.1 states the exception: at equality F is monotone under
   *some* only. E.1 also states what a strict bound would require: the largest τ_r/τ_ε at which no
   step of F decreases under any utterance, measured at every θ_u and prior claimed, with the bound
@@ -1422,7 +1422,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     Sense 2 lives in a function name, a printed header, row labels and a docstring that E2 copies and
     E3 calls by name, so renaming it means re-running both notebooks.
 - Findings added later: 2026-09-13, **senses 1 and 3 renamed by the user** (record
-  `procedure_records/o7_renaming.md`).
+  `history.md` §5).
   - Sense 1 → **"exact solvability"** (agent's proposal, approved by the user). Appendix B's
     preceding sentence already says θ v_p = u "is solvable". Changed: Appendix B's two sentences, and
     Code Cell B's header, now `EXACT SOLVABILITY AT theta_u*`. Rejected: "exact fit", because in the
@@ -1502,7 +1502,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   *no* exactly, while for *all* it is a field no utterance names — architectural, not lexical
   (A18). Appendix F §2 says the ensemble is the **inventory's**, never the experiment's.
 - **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
-- **Finding, 2026-09-17** (record `procedure_records/scale_classes_hypothesis.md`, raised under
+- **Finding, 2026-09-17** (record `history.md` §12, raised under
   O13). **The ensemble question has an answer wherever the predicate is tested against an antonym.**
   In Xiang et al.'s paradigm every item pairs an adjective with its antonym, and in the uttered
   adjective's own orientation that antonym is the entry's **complement**: for a minimum-standard
@@ -1520,7 +1520,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Status: **Settled 2026-09-21**
 - Decided by: the **user** (2026-09-21), on the measurement below. Raised by the user as a side
   quest 2026-09-15, with the answer wanted as a sense rather than in full. Record:
-  `procedure_records/side_quests_mirror_and_granularity.md`.
+  `history.md` §9.
 - **Decision.** The reflection is exact (finding 1), so **this implementation predicts that the O
   corner is just as representational**. The prediction is read as a fact about the implementation as
   it stands: it is **not transported to the proposed next phase**, where {0} and {1} stop being
@@ -1598,7 +1598,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Evidence: as O9. Class (e) until a cell prints it (C6).
 
 ### O11. Eq. (27)'s all-region is open where its own gloss, and the rest of the notebook, are closed
-- Status: **Settled** (user, 2026-09-17; record `procedure_records/all_region_closed.md`). Opened
+- Status: **Settled** (user, 2026-09-17; record `history.md` §11). Opened
   2026-09-17 while applying I13.
 - Decided by: user (2026-09-17), choosing option 2 below: "the formula needs to be changed".
 - **Decision.** Eq. (27)'s all-region is the **closed** R = {ζ ≥ θ_L}. Applied to 23 mask sites
@@ -1640,7 +1640,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   2b, 4 and C; B2's conjunction; O9's symmetry statement.
 
 ### O12. The all-region and the cell of *all* are now the same set
-- Status: **Settled** (user, 2026-09-17; record `procedure_records/all_region_closed.md`). Opened
+- Status: **Settled** (user, 2026-09-17; record `history.md` §11). Opened
   and settled the same day; recorded first, at the user's direction, before being acted on.
 - Decided by: user (2026-09-17), in their words: "resolve the redundancy in prose. In code,
   preserve both 'upper_region' and 'inside', but add a comment next to the declaration statement of
@@ -1678,11 +1678,11 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   §5.2 states H1, reports match and mismatch against Xiang et al. (2022), and makes no claim about
   the nature of the mismatch. The hypothesis itself is **not adopted** as a decision about Λ, and
   the entry stays as the record of that. Implementation: T0–T13 of
-  `procedure_records/scale_classes_hypothesis.md`. Raised 2026-09-17.
+  `history.md` §12. Raised 2026-09-17.
 - Decided by: not decided. Raised by the **user**, as a hypothesis to be checked before it is
   adopted: "1. scalar expressions with unstable atomicity are associated with weaker lexical
   strength; 2. open-scale adjectives behave similar to *some*; complete scale adjectives behave
-  similar to endpoint(s)+*some*." Record: `procedure_records/scale_classes_hypothesis.md`.
+  similar to endpoint(s)+*some*." Record: `history.md` §12.
 - **What it would change.** Λ and θ_L are two independently fixed quantities of Text cell 3 §3
   (A5 gives θ_L its denotation through n; §3 item 6 fixes Λ = 8 "if not said otherwise"). H1 makes
   Λ a **function of how stably the predicate fixes** n — a count where the predicate has atoms, a
@@ -1820,7 +1820,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   the hypothesis under test and reports the comparison; whether the model adopts a Λ that varies
   with atomicity is still open here**, and the difference matters: a variable Λ would be a change to
   Text cell 3 §3, while a scanned Λ is a control (B4). Seven decisions block the implementation,
-  listed as S-1 to S-7 in `procedure_records/scale_classes_hypothesis.md` §8; S-1 (whether a fitted
+  listed as S-1 to S-7 in `history.md` §12 §8; S-1 (whether a fitted
   Λ may be quoted, and what class of quantity it is) and S-2 (whether the relative cut *t* enters
   the model) are the two that reach back into this entry. **Both are now answered** (same record, §8): Λ is
   fitted for H1 and nowhere else, and *t* does not enter — the relative class is not modelled, so
@@ -1832,7 +1832,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   is just as representational is explicitly not carried into the asymmetric phase this entry
   describes. Raised 2026-09-17. **What is settled** is how the paper treats it: §5.2 points
   to it as an instinct, once, promising nothing, and the relative class is not modelled with the
-  current implementation (record `procedure_records/scale_classes_hypothesis.md` §8, S-2).
+  current implementation (record `history.md` §12 §8, S-2).
 - Decided by: the instinct is the **user's** (2026-09-17), in their words:
 
   > even though we currently model the two endpoint as symmetric to each other, I do not think it is
@@ -1885,7 +1885,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - **Depends on it:** `sections_3-6.md` §5.2's closing sentence and its pointer to §5.1. Nothing
   computed.
 - Evidence: `audits/2026-09-17-scale-classes/xiang_items_output.txt` block 16(e) for the symmetry,
-  and `procedure_records/scale_classes_hypothesis.md` F18 for what breaks it;
+  and `history.md` §12 F18 for what breaks it;
   the mismatch it is an instinct about is F8 to F10 and F17 of the record. **No measurement here
   tests the instinct**, and §5.2 does not say that it accounts for the mismatch (R16).
 
@@ -1972,7 +1972,7 @@ necessity (I1).
 below it is inert while ε_y ≡ 0.
 
 **D9. The read-out rereads a state vector as a log-density.** **Resolved 2026-09-13** (A16, B7,
-`procedure_records/d9_delta_readout.md`): q is a comparison read-out, and the delta at the settled
+`history.md` §4): q is a comparison read-out, and the delta at the settled
 state is reported beside it. The finding as audited: divergence (interpretive), not
 previously registered. **Flagged to the user.** Bogacz's approximate posterior is a delta at φ
 (Eq. 34), so the maximizer of F is the whole of his inference. Here that maximizer, φ_S ∈ ℝ^K, is
@@ -2048,7 +2048,7 @@ becomes live if a later phase unfixes σ.
 Every default, module constant and numeric literal in Code Cells 1–4 and E1–E3 was listed and
 classed (`constants.txt`). Every number quoted in the markdown was matched against the stored
 outputs of both notebooks (`prose_numbers.txt`): of 373, 273 match a stored output, 53 appear only
-in `procedure_records/theta_u_learned_reach.md`, and 47 in neither. Setting aside section numbers and coordinate
+in `history.md` §3, and 47 in neither. Setting aside section numbers and coordinate
 pairs the matcher misread, 86 have no printed source. The matcher checks value and not provenance,
 so a number with few significant figures can match by coincidence.
 
@@ -2089,7 +2089,7 @@ rises still holds, in that metric. Stating D6 repairs both E1 and E2.
 
 What these sentences use the value for, that it is nonzero, is unaffected.
 
-**E4. "The elicited prior".** Class (e). **Resolved 2026-09-13** (A15, `procedure_records/e4_e7_sourcing.md`):
+**E4. "The elicited prior".** Class (e). **Resolved 2026-09-13** (A15, `history.md` §2):
 reworded at every site, and Text cell 3 §3.4 now gives the user's reason for a Gaussian default.
 The finding as audited: The Gaussian of mean 0 and
 precision 1 in ζ is called elicited in Text cell 3 (the inventory's "fixed (elicited)", and §3.4),
@@ -2118,7 +2118,7 @@ quantities. The window's comment ("from 1e6 down to 1e3 times the settling toler
   σ at the floor of 1.
 
 **E7. Prose numbers printed by no cell and no recorded script.** **Resolved 2026-09-13** (C6, I10,
-`procedure_records/e4_e7_sourcing.md`): every number below is now printed by a code cell. A re-run of the audit
+`history.md` §2): every number below is now printed by a code cell. A re-run of the audit
 over 365 quoted numbers finds none unsourced; its 9 unmatched are section numbers and coordinate
 pairs (`audits/2026-09-13/after_e7/`). Recomputing them corrected several quoted values (F1, F3–F7,
 F9 there) and raised F2 and F8, now O5 and O6. The finding as audited: class (e) until sourced. ★ marks
@@ -2184,7 +2184,7 @@ user 2026-09-14.
   check, extended from the delta-like row to every row. Not yet defined in prose: Text cell 4b is a
   scope paragraph until the prose pass.
 - Every number Code Cell 2b prints is class (e) for prose until Text cell 4b or Parts C–D quote it
-  against the executed output (`procedure_records/evaluation_partD_atStrongLambda.md` §5).
+  against the executed output (`history.md` §7 §5).
 
 **E13. Part D quoted all-region masses no cell printed (found 2026-09-14, prose pass F15).** Class (e),
 resolved. q_lit under *some* (0.0504 flat, 0.1368 Beta(3,1)) and the tempered control (0.0066, 0.1357,
@@ -2217,7 +2217,7 @@ single-part fields is the user's (C8).
 - Code Cell 2b's own quantities stay under E12, and E13's masses are unchanged.
 
 **E15. The quantities Code Cell D's Sec. 5 adds (2026-09-18, task U3 of
-`procedure_records/ell0_placement_and_counterforce.md`; entered 2026-09-21 in U14, having been
+`history.md` §13; entered 2026-09-21 in U14, having been
 missed when U3 closed).** Classed by the agent. Nothing here is class (e): every number the prose of
 Appendix D Sec. 5, §3.2, §3.3 and §4.1 quotes is printed by this block.
 - The couplings c_y under Eq. (9) and under Eq. (D5), per utterance, and the two identities

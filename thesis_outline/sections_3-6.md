@@ -464,7 +464,7 @@ Three beliefs, all internal to the model:
 - $q_{\mathrm{lit}}$, the **untempered literal listener**, $\varphi_S=\ell_0-\varphi_L$: the prior
   restricted by the entry and nothing else. At this first mention, one sentence saying that what
   "literal" denotes here is distinct from what it denotes in RSA and the Gricean literature, and no
-  further explanation (DEC5 of `procedure_records/d9_delta_readout.md`). Writer's note, not for the
+  further explanation (DEC5 of `history.md` §4). Writer's note, not for the
   paper: the sentence does not contradict §3.2, whose identification with RSA's $L_0$ holds only as
   $\Lambda\to\infty$, a limit and not a setting, so the sentence is true of every configuration
   evaluated. $q_{\mathrm{lit}}$ is a fixed point of this network rather than an external
@@ -793,7 +793,7 @@ $\Lambda=512$ (Code Cell 2b), the case the criterion is under most pressure in.
   and **this integrator does not reach it at all**. That $\theta_u^\ast$ *is* the maximizer rests
   on the closed form and the monotone rise, not on an integration.
   *(Writer's note, not for the paper: the sharper statement — not within $0.1\%$ of
-  $\theta_u^\ast$ after $5{,}000$ updates, F15 of `procedure_records/theta_u_learned_reach.md` —
+  $\theta_u^\ast$ after $5{,}000$ updates, F15 of `history.md` §3 —
   is **class (e)**. No cell prints it, and I8, which once licensed recorded scripts as sources, is
   superseded by C6 and I10. Do not reinstate those figures unless a cell prints them.)*
 - **Report, and stop.** §5.3 is where the cost is interpreted, and §5.5 is where the tolerance's own

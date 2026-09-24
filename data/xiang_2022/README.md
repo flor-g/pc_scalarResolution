@@ -81,5 +81,5 @@ is the data; what is modelled is a property of Code Cell F, not of the aggregate
 ```
 
 Reads the CSV and reprints the six empirical class profiles (F1 of
-`procedure_records/scale_classes_hypothesis.md`). It is a data-integrity check and **not** a source
+`history.md` §12). It is a data-integrity check and **not** a source
 for any number the paper quotes — under C6 that source is Code Cell F.
