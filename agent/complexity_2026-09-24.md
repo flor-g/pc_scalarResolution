@@ -189,8 +189,26 @@ Later in the session, after the agent had twice misread the scope:
     comprehension stops (Sperber & Wilson 1995; Wilson & Sperber 2004): squarely in scope, and its
     stopping rule parallels A19's halting question. Neither work is yet in the dissertation's
     reference list (only Horn 1972 and Levinson 2000 are).
-  **To settle:** whether 1–3, amended, is the position the dissertation takes; the lead sentence's
-  wording, after the accuracy point; and where the argument is written, and at what length
+  **Ruled by the user, 2026-09-24:** the lead does not expand on what the traditions say; it cites
+  them with cf. in parentheses, and standard RSA joins the list. The footnote is approved. Wording
+  as approved (cf., not c.f.: APA's form, and main.ipynb's "(cf. Bogacz Eq. 42)"):
+  > *Lead.* Neo-Gricean pragmatics (cf. Horn, 1984; Levinson, 2000), Relevance Theory (cf. Sperber
+  > & Wilson, 1995) and standard RSA (cf. Frank & Goodman, 2012; Goodman & Frank, 2016) all give cost
+  > a role in interpretation; we ask what cost in the dynamics would mean for a system of the kind
+  > instantiated here.
+  > *Footnote.* The argument does not rest on the classical limits of self-reference — Gödel's
+  > incompleteness theorems, the undecidability of halting (Turing, 1936), or the physical limits on
+  > self-prediction (Wolpert, 2008) — which concern systems in general; the dynamics here are
+  > predictable from outside to within constants (Appendix G, Eq. G2), and the argument needs only
+  > the weaker, temporal premise. For self-reference treated as a process unfolding in time rather
+  > than as paradox, see Hofstadter (1979) and Abramsky et al. (2026).
+  The accuracy point on the two traditions' costs is thereby moot for the lead (it names no cost).
+  New reference-list entries needed when it is written: Horn (1984), Sperber & Wilson (1995), Turing
+  (1936), Wolpert (2008), Hofstadter (1979), Abramsky et al. (2026); Frank & Goodman (2012), Goodman
+  & Frank (2016) and Levinson (2000) are already there. Verify Horn 1984, Sperber & Wilson 1995,
+  Turing 1936 and Hofstadter 1979 against their sources before entering them.
+  **To settle:** whether 1–3, amended, is the position the dissertation takes; and where the
+  argument is written, and at what length
   (candidates: an `agent/decisions.md` entry; §5.3, which interprets the cost;
   §5.5; Appendix G).
 
