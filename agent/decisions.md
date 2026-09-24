@@ -9,6 +9,11 @@ The record of architectural, evaluation, and implementation decisions for `main.
 > Where the records do not say who made a decision, **Decided by** reads `not recorded`; the user
 > may wish to fill these in. Registers D and E were audited on 2026-09-13; their verdicts are
 > the agent's and have not been confirmed by the user.
+>
+> **Outline section numbers changed on 2026-09-24 (OR9).** References to `sections_3-6.md` below use
+> the new numbers where they were rewritten: §4.x became §4.1.x, and §5.2's measurements against
+> Xiang et al. (2022) became §4.2, §5.2 keeping the discussion. Dated findings that name the old
+> §5.2 meant both halves; the mapping is in `thesis_outline/revisions.md` §16.
 
 ## Entry template
 
@@ -501,7 +506,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   stipulation, in O2's sense, and is labelled as one. This phase models no exposure statistics; it
   declines to derive the inventory and declines to invent frequencies for it (O2).
 - Bogacz status: none; this is a statement about what the ensemble of A9 contains.
-- Depends on it: A9's ensemble, hence every θ\*; O8; §5.2's ensemble sentence; Appendix D §2's
+- Depends on it: A9's ensemble, hence every θ\*; O8; §4.2.1's ensemble sentence; Appendix D §2's
   kernel table, which is where the notation is defined; §5.1's cascade, already written as
   ⟨E_some, ker E_some⟩ and ⟨E_all, ker E_all⟩.
 - Evidence: F20 and F1 in `agent/history.md` §12; the ensemble probes of
@@ -710,7 +715,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   - mode(ℓ₀) = mode(ℓ₀ − φ_L) in every cell under *some*.
   - Four cells have an unmoved mode.
 - Findings added later: 2026-09-13.
-  - **The user approved revisions.md Q2 option (a) as R14.** §4.5 reports the V under both
+  - **The user approved revisions.md Q2 option (a) as R14.** §4.1.5 reports the V under both
     read-outs, and no evidence for a missing level is derived from it.
   - **The code edits that print these criteria are open tasks** T0–T8 in
     `agent/history.md` §6.
@@ -1142,9 +1147,9 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   Text cell 3's headed subsections are §§1-9 with §§8.1-8.6 and §§9.1-9.3 beneath them; there is no
   §3.3 and no §4.2. Three references used §N.M for "item M of the numbered list in §N" instead:
   Text cell 4 Part C's "(§3.3)" for the utility basis, item 3 of §3, and Appendix D §§3 and 5's two
-  "§4.2" for g_L, item 2 of §4. The content was right and the pointer was unfollowable, which is
+  "§4.1.2" for g_L, item 2 of §4. The content was right and the pointer was unfollowable, which is
   composition guide Entry 5c: the notation was never declared and it collides with the real
-  subsection numbering, so a reader who follows §4.2 finds nothing and cannot tell whether the
+  subsection numbering, so a reader who follows §4.1.2 finds nothing and cannot tell whether the
   reference or their reading is at fault. All three now read "Text cell 3 §N, item M".
   **This is the agent's reading of an undeclared convention, not the user's ruling** (agent/agent.md
   §3.1); it is recorded here rather than as its own entry because reader-facing text is what C5
@@ -1234,10 +1239,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   entry needs.** `agent/agent.md` §3.3 makes the half-width a class (d) implementation constant, which
   requires evidence that the results it supports do not depend on its exact value. That evidence was
   never recorded — this entry held a title, a status and nothing else until 2026-09-23 — and the
-  audit shows it would not have been produced: §4.5's conjunction runs 68, 33, 5, 0, 0 of 121 cells
+  audit shows it would not have been produced: §4.1.5's conjunction runs 68, 33, 5, 0, 0 of 121 cells
   over Z = 5 to 8, and Z = 6 sits about half a unit below the turn. **The constant therefore fails
   its own class's requirement**, which is recorded rather than repaired: the verdicts are reported
-  under §4.2's widened guard instead.
+  under §4.1.2's widened guard instead.
 - Findings added later:
   - **2026-09-23, later the same day: this entry now has printed evidence, and it still fails its
     class.** Appendix A's cell prints the four criteria and Code Cell 4's plane at Z = 5, 6, 7, 8,
@@ -1245,10 +1250,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     requirement is now *testable from the notebook* rather than only from an audit, and the test
     comes back the same way: the conjunction runs 68, 33, 0, 0, 0 over the ladder. **The constant's
     failure is documented in the notebook itself**, which is the useful outcome; the entry is not
-    repaired by it and the verdicts stay reported under §4.2's guard.
+    repaired by it and the verdicts stay reported under §4.1.2's guard.
   - 2026-09-23 (E17). What the verdicts track is **Z − θ_L**, the *all*-cell's width in log-odds,
-    not Z and not n separately, so this entry and §4.2's n guard are one question. Appendix F's
-    claims are unaffected because R² over profiles is a correlation; §§4.4–4.5's are affected
+    not Z and not n separately, so this entry and §4.1.2's n guard are one question. Appendix F's
+    claims are unaffected because R² over profiles is a correlation; §§4.1.4–4.1.5's are affected
     because an absolute mass threshold over a truncated cell is not.
   - **2026-09-24, the K half: no cell re-evaluates the criteria at another node count, and the
     plane counts move with it** (agent, raised with the user; `agent/audits/2026-09-24-node-count/`,
@@ -1266,7 +1271,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
       conjunctions at every finer K (0.36 to 0.46); (4, 64) and (8, 32) carry q shifts of about
       ±5e-3 whose sign changes with K, the O(h) step artefact of Code Cell 2's check; (1024, 1024)
       has a q shift at the 1e-12 zero band (I5), counted at finer K.
-    - So §4.5's 33 and 13, and every place they are quoted, are **K = 101 counts**, conditional on
+    - So §4.1.5's 33 and 13, and every place they are quoted, are **K = 101 counts**, conditional on
       the node count by a few cells as they are on Z (E17) — at K = 101 the q count sits at the low
       end of the range the finer grids give. Not applied anywhere; the user decides (agent.md §5.4).
     - **The coarse end, which the user asked for (2026-09-24): where results stop tracking the
@@ -1295,7 +1300,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     grows (K = 101, 81, 61, 41, 25, 21, then 0 on every such rung); 0.056 above it, 32 to 39 on every
     such rung. At that fixed offset, agreement still falls with the spacing (q shift 116 of 121 at
     K = 51, 76 at K = 7), so placement does not account for all of it. The user ruled (NK-D1) that
-    the lower bound is **suspected, not established**, and §4.2's guard stays with n and Z.
+    the lower bound is **suspected, not established**, and §4.1.2's guard stays with n and Z.
   - **2026-09-24, the grid as a function of n: proposed, not implemented (user).** §5.5 proposes
     that (K, Z) be set by n jointly, and says this phase does not implement it because the
     evaluations do not need it. Evidence for the second half, class (e) and not quoted:
@@ -1462,7 +1467,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   reported criteria sit on. n enters only through θ_L = log(2n − 1); K does not track it (I6).
 - **The reporting exists, 2026-09-22 (T14–T16).** That this decision is consequential is no longer
   a record-only finding: **Code Cell A** prints all four criteria at every (n, Λ, ℓ_0), Appendix A
-  states it, and §4.2 carries it into the paper as a guard on how the verdicts are read, with a
+  states it, and §4.1.2 carries it into the paper as a guard on how the verdicts are read, with a
   clause in §5.2. This is why O1 must be **labelled a stipulation wherever n is used** — n = 10 in
   the implementation, n = 4 in §5.2's instantiation — and it is the reason the label is not
   cosmetic. What the reporting does **not** do is bear on part 1 or part 2 of this decision: it
@@ -1705,7 +1710,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   class, and the cell states in its own docstring that for *some* the kernel **is** the entry for
   *no* exactly, while for *all* it is a field no utterance names — architectural, not lexical
   (A18). Appendix F §2 says the ensemble is the **inventory's**, never the experiment's.
-- **Depends on it:** `sections_3-6.md` §5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
+- **Depends on it:** `sections_3-6.md` §§4.2, 5.2, §5.4, §6 item 4; `background_sections.md` §1.7.
 - **Finding, 2026-09-17** (record `agent/history.md` §12, raised under
   O13). **The ensemble question has an answer wherever the predicate is tested against an antonym.**
   In Xiang et al.'s paradigm every item pairs an adjective with its antonym, and in the uttered
@@ -1767,7 +1772,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   n ∈ {2,3,4,5,10,15,20,50,100,201} × Λ ∈ {8, 512} × all four `BASE_WORLD_PRIORS`, 80 rows —
   θ_L, ⟨μ_u, Σc⟩, θ_u\*, the q shift and P(all∣*some*), the mode step, and the **status of all
   four criteria**; then the κ separation and rank ladder, and the n = 1 refusal.
-  **Paper site:** §4.2's second guard, with a clause in §5.2 (`thesis_outline/sections_3-6.md`).
+  **Paper site:** §4.1.2's second guard, with a clause in §5.2 (`thesis_outline/sections_3-6.md`).
   **Notebook prose:** Appendix A, *What n does to what the evaluation reports*.
 - **What the wider sweep changed in the finding itself** (F7 qualified, F9 extended, 2026-09-22):
   the "crossings" of F9 are **threshold-test status changes**, they are **bracketed and not
@@ -2009,7 +2014,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   what fixes it — the record shows the data want it to vary with the object's familiarity as well as
   with the expression, which is a context dependence Λ does not now have. (c) Whether a relative
   adjective's cut t enters the model at all, which is what H2's open-scale half requires.
-- **Depends on it:** `sections_3-6.md` §5.2 and §5.4, `background_sections.md` §1.7, revisions.md
+- **Depends on it:** `sections_3-6.md` §§4.2, 5.2 and §5.4, `background_sections.md` §1.7, revisions.md
   Q7; the reading of the Λ axis in Text cell 6 and Code Cell 4; A5's θ_L and §3 item 6's Λ = 8.
 - Evidence: **Code Cell F of `main.ipynb`** (2026-09-22), which is now the source of record;
   `agent/audits/2026-09-17-scale-classes/output.txt` and `xiang_items_output.txt` are the superseded
@@ -2184,7 +2189,7 @@ reread as the log-density of a distribution over s (Eq. 12), and every reported 
 functional of that second distribution. No locality question arises, since the read-out is outside
 the dynamics. What rests on it: the temperature ½ of Eq. (15) and so the "tempering"; the reading
 of q_lit as a posterior; every verdict of Parts C–D and Text cell 6. The prose says the statistics
-are not model quantities (§4.5, §9.1), but not that q is not the framework's variational posterior.
+are not model quantities (§4.1.5, §9.1), but not that q is not the framework's variational posterior.
 Decided by: not recorded.
 
 **D10. The θ_L gradient pools across word-form units.** **Resolved 2026-09-13** (A17): Appendix A
@@ -2436,7 +2441,7 @@ single-part fields is the user's (C8).
 **E15. The quantities Code Cell D's Sec. 5 adds (2026-09-18, task U3 of
 `agent/history.md` §13; entered 2026-09-21 in U14, having been
 missed when U3 closed).** Classed by the agent. Nothing here is class (e): every number the prose of
-Appendix D Sec. 5, §3.2, §3.3 and §4.1 quotes is printed by this block.
+Appendix D Sec. 5, §3.2, §3.3 and §4.1.1 quotes is printed by this block.
 - The couplings c_y under Eq. (9) and under Eq. (D5), per utterance, and the two identities
   c(g_L) − c(g_S) = 2BᵀWℓ₀ and c(g_L) + c(g_S) = −2BᵀWφ_L: **class (a)**, c_y being Eq. (16)'s
   quantity and Eq. (D7) naming the identities.
@@ -2493,7 +2498,7 @@ Nothing here is class (e): every number Appendix F and §5.2 quote is printed by
 **E17. The grid half-width, and what the verdicts depend on (2026-09-23).** Classed by the agent;
 raised by another agent's report that widening the logit range from ±6 to ±8 overturns the results.
 Evidence: `agent/audits/2026-09-23-grid-half-width/`. **Everything the audit prints is class (e)** — no
-cell varies the half-width — so none of it reaches prose, and §4.2's guard below is written without
+cell varies the half-width — so none of it reaches prose, and §4.1.2's guard below is written without
 a number from it.
 
 - **The report is substantially right, and its framing is wrong.** The controlling quantity is not
@@ -2506,9 +2511,9 @@ a number from it.
   (~1e-170), q_lit is flat at ≈ 0.05 across every Z, and the effect survives holding the node
   spacing fixed. The channel is that **B is ζ and ζ² orthonormalized on [−Z, Z]**, so the basis is
   rebuilt by the grid.
-- **§4.5's plane collapses**: both conditions together in 68, 33, 5, 0, 0 of 121 cells at
+- **§4.1.5's plane collapses**: both conditions together in 68, 33, 5, 0, 0 of 121 cells at
   Z = 5, 6, 6.5, 7, 8, with both floors moving, so the *opposing floors* reading is Z-conditional
-  too. Z = 6 returns 33 with least Λ = 64 over α = 1 to 128, which is what §4.5 reports, so the
+  too. Z = 6 returns 33 with least Λ = 64 over α = 1 to 128, which is what §4.1.5 reports, so the
   sweep computes the notebook's own quantity.
 - **Appendix F's claims survive; its numbers are conditional.** H1's content — the maximum class
   unbounded in Λ, the minimum class with an interior optimum — holds at Z = 5, 6, 7, 8 alike, as do
@@ -2554,23 +2559,23 @@ a number from it.
   the two under the half-width**, not the less. **The conjunction is
   therefore not "a claim about where the peak sits"**; the peak is the channel Z acts through, and
   the two must not be identified.
-- **§4.5's 20-cell gap between the two read-outs moves too, and the part the section argues from
+- **§4.1.5's 20-cell gap between the two read-outs moves too, and the part the section argues from
   does not.** Sweeping the plane on both conjunctions — q shift ∧ q position against mode shift ∧
   mode position — Z = 6 returns **33 (q), 13 (delta), gap 20, delta a strict subset**, which is what
-  §4.5 and R12/R14 report, and its least α at which the mode shift criterion is met anywhere is
+  §4.1.5 and R12/R14 report, and its least α at which the mode shift criterion is met anywhere is
   **16**, which is that section's "never met at α ≤ 8". Both are Z = 6 figures: the gap runs
   **31, 20, 4, 0, 0** and the least α runs **8, 16, 32, 32, 128** over Z = 5, 6, 6.5, 7, 8.
   **Robust: the delta conjunction is a strict subset of the q conjunction at every Z, with 0
   reversals in all 605 cells**, so the left arm existing only under q stands, and so does R14's
   instruction to derive no evidence for a missing level from the V. **Caution:** a gap of 0 at
   Z ≥ 7 means *both* conjunctions are empty, not that the read-outs agree.
-- **Depends on it:** §§4.4, 4.5, 4.6 and §6 item 3 through the conjunction; §4.2's guard, widened
+- **Depends on it:** §§4.1.4, 4.1.5, 4.1.6 and §6 item 3 through the conjunction; §4.1.2's guard, widened
   2026-09-23; I6, which was an empty entry and now carries this as its evidence.
 - **Settled by the user, 2026-09-23: the criterion's form does not change.** The options and their
   costs were put to them — report the peak instead (no robustness, the peak is what moves); state
   the criterion on φ_S contrasts (real invariance, but it stops being a claim about belief mass and
   the RSA comparison goes with it); a shape-agreement statistic (Z-robust but needs data to agree
-  with, which §4.4 has none of); project under a fixed reference measure (removes the dependence,
+  with, which §4.1.4 has none of); project under a fixed reference measure (removes the dependence,
   breaks BᵀWB = I). **Answer: no.** The agent's recommendation was the same, on the ground that the
   dependence sits below the criterion, so reformulating relocates it rather than removing it.
 - **Finding, 2026-09-23: this entry's first-condition series was counted by the wrong rule, and
@@ -2587,7 +2592,7 @@ a number from it.
   reconciliation, and block 3's first column reads 113, 74, 24, 0, 0. Block 7 is unchanged. The
   random rotation of block 6 is seeded as well, so two consecutive runs of the script are
   byte-identical, which it was not before.
-- **Settled by the user, 2026-09-23: Z does not need printed evidence.** The Z half of §4.2's guard
+- **Settled by the user, 2026-09-23: Z does not need printed evidence.** The Z half of §4.1.2's guard
   stays qualitative and no cell is added to sweep the half-width. The audit remains class (e) and
   the guard quotes no number from it. **This is the disposition, not a holding position** — do not
   reopen it as an outstanding task.
@@ -2596,7 +2601,7 @@ a number from it.
   half-width ladder beside its ladder in n, running the same four criteria and recounting Code
   Cell 4's plane at each Z; Code Cell 2's specification check gained the K-against-Z contrast; and
   Code Cell F gained F.10, R² at every half-width. **What those cells print is no longer class (e)**
-  and §4.2's guard is sourced at both ends. The audit keeps its class for everything the cells do
+  and §4.1.2's guard is sourced at both ends. The audit keeps its class for everything the cells do
   not print, which is most of this entry: the mechanism blocks, the projection measurements, the
   32-configuration agreement count and the Appendix F brackets. Recorded as Z1-Z6 of
   `thesis_outline/revisions.md` §13.

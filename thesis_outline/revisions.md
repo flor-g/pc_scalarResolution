@@ -1816,6 +1816,51 @@ registered metadata, not against memory or press coverage.
   shapes/artifacts contrast itself, so the manuscript is dropped and Xiang et al. (2022) cited
   alone.
 
+### The section numbers of `sections_3-6.md`, before and after OR9
+
+| Before | After |
+|---|---|
+| §4.1 What is compared | §4.1.1 |
+| §4.2 The criterion | §4.1.2 |
+| §4.3 The specification holds | §4.1.3 |
+| §4.4 The five priors | §4.1.4 |
+| §4.5 The plane | §4.1.5 |
+| §4.6 What the verdict needs | §4.1.6 |
+| §5.2 (its measurements against Xiang et al.) | §§4.2.1–4.2.4 |
+| §5.2 (its discussion) | §5.2, retitled |
+
+References in the two outlines, `agent/decisions.md` and Code Cell A's one comment were rewritten.
+The sections of this file before §16, and `agent/history.md`, keep the old numbers.
+
+### Moved from sections_3-6.md, the word table as it stood before OR9 (its Function column held the raise history)
+
+| Section | Was | Words | Function |
+|---|---:|---:|---|
+| **3. The proposed architecture** | 800 | **1,530** | |
+| 3 (opening) The design strategy (new) | — | **170** | Determinacy as the strategy: linear-Gaussian, the field-valued situation level, $\theta_u^\ast$; the four costs (2026-09-24, C9); **+70 the same day for the motivation**: agnosticism among the choices, determinacy as where to start |
+| 3.1 What the model must do | 90 | 90 | Four design requirements |
+| 3.2 A continuous world state and a soft lexicon | 160 | **295** | Eq. (1); $\varphi_L=\Lambda\chi_y$; defeasibility as the price; the Λ–ℓ₀ commitment and Λ → ∞ as RSA's L₀ (R18) |
+| 3.3 The chain, and the semantics of its threshold | 200 | **255** | Eq. (7); $\theta_L$ from granularity; $\mu_u\ne0$; the projection parallel and its warning (R19) |
+| 3.4 State units, error units, and what is local | 210 | **320** | Concavity, closed forms, the relay; commitment 7 **in its exact form**; conditioning; $\theta_u$ learned, starting at the tempered control (raised from 230 on 2026-09-22 at **BG13**, for the three items of `revisions.md` §4 that had never been applied; **+30 on 2026-09-23 for the four convergence results kept apart**, `agent/review_2026-09-23_proof_scope.md` PS7) |
+| 3.5 Two choices the scale motivates | 140 | **180** | $m=2$ from threshold parity; the amplification axis; **+40 on 2026-09-23 for the three properties of $B$ kept apart, and necessity scoped to definite parity** (`agent/review_2026-09-23_proof_scope.md` PS6) |
+| 3.6 Two read-outs (new) | — | **220** | `revisions.md` §5, item 1; **+90 on 2026-09-23 for the position that the delta read-out is the one the construction motivates, and the four things it does not license** (§11 of `revisions.md`, PP1) |
+| **4. Evaluation** | 745 | **1,930** | |
+| 4.1 What is compared | 100 | **140** | Three beliefs; RSA/wRSA as analytic baselines only; q_lit's status depends on A3 |
+| 4.2 The criterion, and how to read the statistics | 170 | **545** | The conjunction; the softmax-nonlinearity guard; **the all-cell width guard** — the $n$ end (raised from 170 on 2026-09-22, S-8/T15) and the $Z$ end (raised from 260 on 2026-09-23, E17); **+45 the same day for which read-out the criterion is written in** (PP2) |
+| 4.3 The specification holds | 90 | **145** | Closed forms, Hessian, grid (trimmed to fund §4.1.5, R14); **+35 on 2026-09-23 for the fifteenth check, $Z$ against $K$** (Z8); **+40 on 2026-09-24 for the warning that a lower bound on $K$ is suspected, and the pointer to §5.5** (NK6) |
+| 4.4 The five priors | 220 | **470** | The Λ = 512 table, the Λ = 8 contrast, the Cremers parallel, the mechanism; **+70 on 2026-09-22 for item 1's delta read-out results**, unblocked by §3.6; **+60 on 2026-09-23 for the five priors' delta criteria at Λ = 512, and for which rows the baseline already meets** (PP3) |
+| 4.5 The plane, and where both conditions hold | 165 | **530** | The band; the opposing floors, where the trade-off claim is sourced; the V; Eq. (41); **+25 on 2026-09-23 for the delta conjunction's own count** (PP4) |
+| 4.6 What the verdict needs, against what θ\* costs (new) | — | **100** | `revisions.md` §4's §4.1.6 entry |
+| **5. Discussion** | 705 | **2,585** | |
+| 5.1 What an alternatives level would have to supply | 390 | **560** | The specification, and what is left undone; **+40 on 2026-09-22 for item 1's §3.6 link (R4)** — the second condition is a sign on one opposition, and the four qualifications on that; **+70 on 2026-09-23 for the reading of the two criteria** (PP5); **+100 the same day for the order of the two motivations, and why the conjecture stays second** (PP10) |
+| 5.2 Scale structure: two hypotheses, and what the comparison shows | 200 | **860** | H1 and H2 against Xiang et al. (R16, R17); 400 → 550 at T10, → 650 for **R27** (why no position is taken on H1), → 800 for **R28**: Eq. (F3)'s sign result, the Eq. (24) reach, and the one hedged causal statement; **+60 on 2026-09-23 for F.10's half-width control** (Z5) |
+| 5.3 Realizability, halting, and the plausibility commitment (new) | — | **170** | `revisions.md` §5, item 2 |
+| 5.4 What an algorithmic account makes posable (new) | — | **120** | `revisions.md` §5, item 3 |
+| 5.5 Limits (was 5.3) | 65 | **745** | Convergence status, linear-Gaussian caveat, the relay's cost, **halting by tolerance** (raised from 80 on 2026-09-22: the section carried six topics at 80 and A19 adds a seventh), **the truncated state space** (raised from 150 on 2026-09-23, E17; **+45 the same day, the peak's climb now printed**, Z5); **+120 the same day for the open question of whether the read-out falls under locality** (`agent/review_2026-09-23_proof_scope.md` PS8); **+180 on 2026-09-24 for what is known about the node count at both ends, and four directions** (`agent/history.md` §17, NK6–NK7); **+100 the same day for the proposal that $(K,Z)$ be a function of $n$, not implemented** (user) |
+| 5.6 Predictions (was 5.4) | 50 | **130** | Exposure; granularity; the midpoint cut; **the lexical strength of a class (R27)**. Raised from 60 on 2026-09-22: it carries four predictions, and R27 gave the fourth the H1 reservation, at 15 words each |
+| **6. Conclusion** | 150 | **265** | **+40 on 2026-09-23: what the change of read-out leaves standing** (PP6) |
+| **Total** | **2,400** | **6,310** | |
+
 ---
 
 ## 15. NK1–NK10: the node count, printed and discussed (2026-09-24)
@@ -1829,15 +1874,15 @@ NK. Code Cell A's `node_count_report` (NK1) prints both ends; this section is th
 
 | Task | Site | What changed |
 |---|---|---|
-| NK6 | §4.3 | A one-sentence warning after the refinement result: a lower bound on K is suspected and not established; pointer to §5.5. **§4.2's guard is not touched** (NK-D1, the user's ruling) |
+| NK6 | §4.1.3 | A one-sentence warning after the refinement result: a lower bound on K is suspected and not established; pointer to §5.5. **§4.1.2's guard is not touched** (NK-D1, the user's ruling) |
 | NK6 | §5.5 | A bullet on what is known: the finer end (Part D unchanged to K = 1601; plane counts 33, 36, 36, 34 and 13, 15, 15, 15; seven cells move; subset relation intact) and the coarse end (tracks to K = 81, three statuses change at K = 61, below that the counts sort by where the grid's lower edge of the all-region falls against θ_L) |
 | NK7 | §5.5 | Four directions: separate placement from resolution; state the minimum in the model's units; give A21's cost a number; prefer smooth statistics |
-| NK8 | table | §4.3 105 → 145, §5.5 465 → 645; §4 1,930, §5 2,485, Total **6,210** |
+| NK8 | table | §4.1.3 105 → 145, §5.5 465 → 645; §4 1,930, §5 2,485, Total **6,210** |
 
 **Binding on a writer.**
 
 1. **The lower bound is suspected, not established**, wherever it is written. Do not state a
-   minimum K, and do not add K to §4.2's guard.
+   minimum K, and do not add K to §4.1.2's guard.
 2. **The headline counts carry no per-site K qualifier** (the agent's reading of NK-D1, confirmed by
    the user). Their spread across K is reported once, in §5.5.
 3. What §5.5 quotes about the coarse end is a description of printed columns. The reading "cut-based

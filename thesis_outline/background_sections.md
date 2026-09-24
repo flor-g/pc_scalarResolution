@@ -96,9 +96,9 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
   - The ignorance inference ("the speaker does not know that all") distinguished from the scalar
     inference proper ("the speaker believes that not all"), since grammatical accounts treat the
     latter as exhaustification rather than as ordinary mind-reading (Chierchia, 2017).
-  - **New, and load-bearing for §4.2 of the proposal:** this dissertation's explanandum is
+  - **New, and load-bearing for §4.1.2 of the proposal:** this dissertation's explanandum is
     **graded** — movement of belief mass off the *all* reading — rather than a truth-value judgment.
-    Say so here, because §4.2's two-condition criterion is otherwise a stipulation arriving without
+    Say so here, because §4.1.2's two-condition criterion is otherwise a stipulation arriving without
     motivation.
   - **New, one sentence:** flag *defeasibility* as one of the criteria by which patterns are sorted
     into semantics or pragmatics, so the reader meets it once before §1.5 questions it.
@@ -117,7 +117,7 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
   - Pragmatic speaker: \(S_1(u\mid s)\propto \exp\{\alpha_{\mathrm{rsa}}[\log L_0(s\mid u)-C(u)]\}\).
   - Pragmatic listener: \(L_1(s\mid u)\propto S_1(u\mid s)P(s)\).
   - \(\alpha_{\mathrm{rsa}}\) controls soft-maximal speaker choice; \(C(u)\) penalizes costly
-    forms. **The subscript is not decoration** (Q8, settled by the user 2026-09-21): §§4.5 and 5.2
+    forms. **The subscript is not decoration** (Q8, settled by the user 2026-09-21): §§4.1.5 and 5.2
     use a bare \(\alpha\) for the concentration of the prior \(\mathrm{Beta}(\alpha,1)\), and the
     two quantities meet in §1.3's override-law sentence. Every RSA \(\alpha\) in the dissertation
     carries the subscript; the Beta concentration keeps the bare symbol, as the notebooks write it. The
@@ -168,7 +168,7 @@ of the two empirical anchors §5.1 uses.*
   ignored world knowledge.
 - **The redeployment.** Human strengthening is **robust against prior concentration**. In this
   model the strengthened reading stays a majority under a concentrated prior only above a floor in
-  lexical strength, and that floor rises with the concentration (§4.5). Flag forward to §4.5 for the
+  lexical strength, and that floor rises with the concentration (§4.1.5). Flag forward to §4.1.5 for the
   floor and to §5.1, which argues that a drain keyed to the alternative would not carry it up.
 - *Counterargument:* numerical and slider judgments are noisy. The convergence of expected-number
   judgments, all-state judgments, and separate normality judgments is nevertheless stronger than
@@ -181,7 +181,7 @@ of the two empirical anchors §5.1 uses.*
   normality judgments for *some*.
 - **Its function here is contrast, not target.** wRSA keeps Bayesian reasoning by making **the
   prior** defeasible against the utterance. This dissertation's architecture makes **the lexical
-  entry** defeasible against the prior — finite lexical strength \(\Lambda\), §3.2 — and §4.5
+  entry** defeasible against the prior — finite lexical strength \(\Lambda\), §3.2 — and §4.1.5
   quantifies where that override bites. Two sentences, no verdict, forward pointer only.
 - **What RSA has of the commitment, and what it lacks (R18; about 50 words).** §3.2 states as a
   commitment that the prior and the lexical entry meet as counterforces at one node. Foreshadow it
@@ -195,11 +195,11 @@ of the two empirical anchors §5.1 uses.*
     trade off use a **latent variable** rather than a strength: lexical uncertainty (Potts et al.,
     2016), threshold uncertainty, where the listener infers the cut jointly with the state
     (Lassiter & Goodman, 2017; the basis of Xiang et al.'s (2022) LG model, §1.7), and wonkiness,
-    above. **Nothing in RSA plays the role of the override law** (§4.5, Eq. 41): the lexical
+    above. **Nothing in RSA plays the role of the override law** (§4.1.5, Eq. 41): the lexical
     strength needed to hold the entry against the prior grows linearly in the prior's concentration,
     at a rate set by the logarithm of the predicate's granularity. That is the part of the commitment
     with no parallel, and the one worth the words. **State the law in words here, not in symbols:**
-    §4.5 writes it \(\Lambda_{\mathrm{crit}}\approx\alpha\log2n\), whose \(\alpha\) is the Beta
+    §4.1.5 writes it \(\Lambda_{\mathrm{crit}}\approx\alpha\log2n\), whose \(\alpha\) is the Beta
     concentration and not §1.2's \(\alpha_{\mathrm{rsa}}\) (Q8), and the background has defined
     neither the family nor \(n\).
 - **The projection parallel, foreshadowed and warned against in one breath (R19; about 25 words).**
@@ -224,12 +224,12 @@ of the two empirical anchors §5.1 uses.*
 - State that it does not by itself establish a covert grammatical operator, and that it is a second,
   independent reason to ask whether the computation of strengthening should reference the listener's
   current prior at all.
-- **Forward pointer, stated without embarrassment (R7, P-9).** §4.4 reports the same direction in
+- **Forward pointer, stated without embarrassment (R7, P-9).** §4.1.4 reports the same direction in
   this model, as a property of its read-out \(q\) against its literal listener. Give both counts: it
   appears under all four priors that have a row at the weaker lexical strength, and under two of
   five at the stronger, where raising the strength removes it under two priors and enlarges it under
-  the other two. Name what carries it: the tempering, the halving of the settled log-density that §4.1's tempered
-  control isolates (§4.4). Call it a parallel in direction, not a
+  the other two. Name what carries it: the tempering, the halving of the settled log-density that §4.1.1's tempered
+  control isolates (§4.1.4). Call it a parallel in direction, not a
   shared liability, since the mechanisms differ. Do not treat it as corroboration, and do not say
   what would avoid it: §5.1 no longer uses it (R2).
 - **Transition:** The grammatical tradition computes strengthening over alternatives without
@@ -351,7 +351,7 @@ guide Entry 5b requires a sourced name to be cited before first use.*
   difference is the point.
 ## 1.7 Scale structure, thresholds, and extreme-favouring interpretation (about 190 words)
  
-*New. Supplies §5.2's entire literature, motivates a continuous state space in §3.2, and earns the
+*New. Supplies the entire literature of §4.2 and §5.2, motivates a continuous state space in §3.2, and earns the
 project's "scalar vagueness resolution" keyword.*
  
 - **Main claim to establish:** Where a predicate's threshold sits on its scale is a matter of
@@ -370,16 +370,16 @@ project's "scalar vagueness resolution" keyword.*
     **concentration**: Xiang et al. report that the elicited priors for artifacts are the **less**
     categorical ones (9:19), and their own elicited priors bear it out. State the manipulation as
     novel versus familiar, and say which way the elicited priors actually go — an earlier draft of
-    this bullet and of §5.2 had it backwards.
+    this bullet and of the comparison had it backwards.
   - Xiang et al.'s own conclusion: Bayesian pragmatics models what is *communicated* well
     (\(R^2=.78\)–\(.82\)) but threshold judgments poorly (\(R^2=.36\)–\(.63\)), especially for
     absolute adjectives, so Bayesian reasoning must be combined with the semantic conventions
     governing thresholds.
 - **State Q3b as the open question this leaves:** *what mechanism produces endpoint orientation?*
-  **Do not answer it here**, and do not promise an answer later: §5.2 **takes it up**. Parity fixes
+  **Do not answer it here**, and do not promise an answer later: §§4.2 and 5.2 **take it up**. Parity fixes
   an entry's width loading, but the contribution that is actually measured is carried by the tilt,
-  and under learning the prior's width enters too — so "§5.2 answers it from the parity structure of
-  the utility basis" claims more than §5.2 can carry. The background's job is to make the question
+  and under learning the prior's width enters too — so "the comparison answers it from the parity structure of
+  the utility basis" claims more than §§4.2 and 5.2 can carry. The background's job is to make the question
   askable.
 - **Connection to make explicit:** quantifiers and gradable adjectives share a scale structure, which
   is what licenses §3.2's treatment of the world state as a proportion on a dense scale rather than
@@ -449,7 +449,7 @@ to them rather than floating free.*
   principle makes three commitments. Each is adopted for good reasons and established by none.
 | Commitment | What it asserts | What it buys | What this dissertation does with it |
 |---|---|---|---|
-| **1. A unified objective** | One functional — variational free energy — is minimized by perception, learning and action alike (Friston, 2008, 2010) | State inference and parameter learning fall out of one quantity, and the same objective yields both sets of dynamics | Taken. It is what makes the strict concavity of §3.4 and the closed forms meaningful rather than incidental, and §4.3 tests them |
+| **1. A unified objective** | One functional — variational free energy — is minimized by perception, learning and action alike (Friston, 2008, 2010) | State inference and parameter learning fall out of one quantity, and the same objective yields both sets of dynamics | Taken. It is what makes the strict concavity of §3.4 and the closed forms meaningful rather than incidental, and §4.1.3 tests them |
 | **2. Local computation and local plasticity** | A unit updates from its own afferents; a synapse updates from the activities it connects (Bogacz, 2017) | That the algorithm could be carried by neurons at all | Taken as a **design constraint on the build**, and treated as generative. **This is the dissertation's answer to the first question** |
 | **3. Gaussian machinery** | Densities are Gaussian, or Laplace-approximated as such (Friston et al., 2007; Bogacz, 2017) | Free energy reduces to precision-weighted squared prediction errors; updates become subtraction and multiplication | Inherited. It is what makes the model linear-Gaussian while the lexical field is clamped, and hence what §5.5 records as a limit. It does **not** make the posterior a delta: Bogacz's delta is a further approximation adopted beside it, and §3.6 offers that delta as a read-out and prefers it, on the bullet below |
  
@@ -600,7 +600,7 @@ arriving from the FEP literature finds the absence stated rather than having to 
     stronger: the ratio still does a learning rate's work (Text cell 3 §7).
   - **The slow parameter is learned, and its flow starts at \(\theta_u(0)=0\)** — one start
     shared by every configuration, and there the network is the **tempered control** rather than
-    the literal listener (§4.1 names both). Worth one sentence: it is why §4's readings are
+    the literal listener (§4.1.1 names both). Worth one sentence: it is why §4's readings are
     displacements from a control the model passes through, and not from a baseline stipulated
     beside it.
   - Appendix E adds a fourth timescale, ordered \(\tau_r\le\tau_\varepsilon\) as in §2.4;
