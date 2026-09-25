@@ -5380,7 +5380,7 @@ The agent's own calls — the wording of the factual fixes (Rao and Ballard, the
 *Was* `agent/central_claim_2026-09-24.md` (folded under `agent/agent.md` §5.3 on 2026-09-24)
 
 **Opened** 2026-09-24 · **Closed** 2026-09-24 · commits `45b7654` (central claim), `0b7df81`
-(the standing qualification), `f5ab22c` (C11's sweep), and the commit that applied §6 and folded this
+(the standing qualification), `f5ab22c` (C11's sweep), `79767d7` (§6 applied)
 
 **Settled** C10 (the thesis is the answer to the three questions; scalar implicature the main
 demonstration) and its findings; C11 (scalar resolution, implicature, strengthening); B12's finding;
@@ -5616,4 +5616,4 @@ ensemble is a kind of alternatives, used across trials. 26 edits, validated firs
   again"), and cited constructs (the strengthened interpretation of §1.1, Chierchia's parses and
   local strengthening, the experimental reports of §1.4, Appendix B's Horn/Gazdar sentence).
 
-*Full original:* `git log --all -- agent/central_claim_2026-09-24.md` lists every version.
+*Full original:* `git show 79767d7:agent/central_claim_2026-09-24.md`
