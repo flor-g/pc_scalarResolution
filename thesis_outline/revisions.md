@@ -1623,7 +1623,7 @@ deferring to §3 (the two files had been pointing at each other).
 
 ## 19. RV: cost, attribution and scope, after an external review (2026-09-24)
 
-The working record is `agent/review_2026-09-24_cost_and_attribution.md` (RV0–RV8, findings
+The working record is `agent/history.md` §20 (RV0–RV8, findings
 RVF1–RVF12); the user's four rulings are RVQ1–RVQ4 there. **What changed in the outlines**, no
 budget moved:
 
