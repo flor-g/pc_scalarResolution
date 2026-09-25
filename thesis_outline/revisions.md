@@ -1647,7 +1647,9 @@ semantic/pragmatic division is **not resolved at this phase** — it waits on φ
 rather than clamped (user) — so §6 drops it, the central claim says so, and background §2.6 no longer
 calls the demarcation problem answered. Word table: §6 265 → 350, total 6,725 → 6,810. **The second answer is a negation (user):** one pass is a single forward sweep, a semantic value
 then a pragmatic one computed on it; joint settlement is not one pass. The central claim answers
-**no** and defines the term; §6 item 2 is *Joint settlement, not one pass*.
+**no** and defines the term; §6 item 2 is *Joint settlement, not a single feedforward pass* — the term renamed from "one pass" (user),
+in the Opening's question too. What settles jointly is φ_S with φ_u, never φ_L, which is clamped:
+the closing bridge and §1.8's bridge corrected.
 
 ## 19. RV: cost, attribution and scope, after an external review (2026-09-24)
 

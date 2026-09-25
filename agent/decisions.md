@@ -1231,6 +1231,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     scalar resolution one pass?" is **no**, at this architecture's scope (a demonstration answers
     that it need not be). The central claim and §6 item 2 now say so; the background's Opening is to
     define "one pass" before the question uses it.
+  - **2026-09-24, the name and what settles jointly (user).** "One pass" is renamed **a single
+    feedforward pass** (the question now asks "Is scalar resolution a single feedforward pass?"; the
+    agent added "pass" for grammar). What joint settlement claims is φ_S and φ_u settling together,
+    **not** φ_L with φ_S, since L is clamped. Two background sites said otherwise and are corrected:
+    the closing bridge ("settles a lexical entry and a world prior jointly") and §1.8's bridge to
+    Part II ("compete in a single density rather than in sequence"; the competition in one density
+    stays, the settlement is now φ_S with φ_u, the entry clamped).
 
 ### C11. Scalar resolution, scalar implicature, scalar strengthening: three terms, kept apart
 - Status: Settled

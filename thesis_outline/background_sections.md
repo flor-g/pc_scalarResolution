@@ -45,7 +45,7 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
   2. *The three questions*, stated as questions and in this order, so the reader knows from the
      first page that one architecture answers all three:
      - **What computational constraint(s) might scalar resolution obey?**
-     - **Is scalar resolution one pass?**
+     - **Is scalar resolution a single feedforward pass?**
      - **Can patterns observed in scalar resolution be understood as peculiarities arising at the
        algorithmic rather than the computational level?** — with the three sub-questions named:
        whether alternative competition is necessary to produce scalar implicature and whether it is a
@@ -411,8 +411,9 @@ project's "scalar vagueness resolution" keyword.*
   conclusion at the level of what the theories assume, not what processing does.
 - **Bridge to Part II:** predictive coding is introduced not as a mechanism for revising confidence,
   but as the framework in which an inference architecture can be **built under an explicit
-  implementation constraint** — and in which a prior and a lexical entry can be made to compete in a
-  single density rather than in sequence.
+  implementation constraint** — and in which a prior and a lexical entry can be made to compete in one
+  density, with the belief they bear on settled jointly with the utility state rather than in a
+  single feedforward pass. The entry itself is clamped and is not settled with them.
 ---
  
 # Part II. Predictive coding, its commitments, and the constraint that generates the answers (about 1,680 words)
@@ -677,8 +678,8 @@ rather than having to infer it.*
  
 - State the three questions once more, and that one architecture answers them together because the
   constraint generates the rest:
-  > The architecture is built under locality; it settles a lexical entry and a world prior jointly in
-  > one density rather than in sequence; and it produces movement of belief mass off the *all*
+  > The architecture is built under locality; given the entry the utterance clamps, it settles the
+  > world belief and the utility state jointly rather than in a single feedforward pass; and it produces movement of belief mass off the *all*
   > reading with no explicit competition among alternatives at any point.
 - **Then the standing qualification**, because §5.1 leans on it, stated as what the claims do say
   about human processing and not only what they do not: they bear on what it **need not contain**
