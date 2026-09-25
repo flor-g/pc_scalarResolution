@@ -23,10 +23,11 @@ carries each answer.
    check applied afterwards (background §2.2). It is what the utility basis puts under strain at
    $m>1$, what Appendix E's relay buys back at the cost of a fourth timescale, and what motivates
    the binary branching of the level §5.1 proposes.
-2. **Is scalar resolution a single feedforward pass?** **No.** A single feedforward pass computes a
-   semantic value and then a pragmatic one on it, once. In this architecture resolution is **joint
-   settlement** instead: given the lexical entry, which the utterance clamps, the world belief and the utility state
-   settle together as the one maximizer of an objective strictly concave in both, and no literal
+2. **Is scalar resolution a single feedforward pass?** **No.** A single feedforward pass computes
+   successive linguistic representations in sequence — here the lexical, the situational and the
+   utility representations. In this architecture only the first step is sequential: the lexical
+   representation is clamped by the utterance. Resolution is then **joint settlement**: the world
+   belief and the utility state ($\varphi_S$ and $\varphi_u$) settle together as the one maximizer of an objective strictly concave in both, and no literal
    interpretation is settled on the entry alone and then revised (background §2.6). **State the
    scope with the answer, because the question asks more than one architecture can.** The entry
    itself exists before any pragmatic influence; and the answer is about how this architecture
@@ -1531,8 +1532,7 @@ together, and scalar implicature is where it is shown.
    branching.
 2. **Joint settlement, not a single feedforward pass.** Given the entry the utterance clamps, the
    world belief and the utility state settle together as the one maximizer of a single objective,
-   rather than in a single feedforward pass that settles a literal interpretation first and computes
-   a pragmatic one on it. The entry itself precedes pragmatic influence; what settles
+   not in sequence as a single feedforward pass would compute them. The entry itself precedes pragmatic influence; what settles
    jointly is everything downstream of it.
 3. **Two patterns, as algorithmic-level peculiarities.**
    - *Implicature without explicit competition, and strengthening only in part.* Where the prior

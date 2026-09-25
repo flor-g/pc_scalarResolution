@@ -1238,6 +1238,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     the closing bridge ("settles a lexical entry and a world prior jointly") and §1.8's bridge to
     Part II ("compete in a single density rather than in sequence"; the competition in one density
     stays, the settlement is now φ_S with φ_u, the entry clamped).
+  - **2026-09-24, the definition corrected (user).** "A single feedforward pass computes successive
+    linguistic representations in sequence" — the representations being the lexical, situational
+    and utility ones. The agent's definition above ("a semantic value, then a pragmatic one computed
+    on it") was inaccurate and is superseded. With φ_L clamped, only the first step is sequential;
+    the answer is no because φ_S and φ_u then settle together. Applied to the central claim and §6
+    item 2.
 
 ### C11. Scalar resolution, scalar implicature, scalar strengthening: three terms, kept apart
 - Status: Settled
