@@ -1465,7 +1465,10 @@ read as a limit of the architecture.
   reported at **uniform exposure** — $p(y)$ is not a variable of the implementation but is implicit
   in the batched sum, and no frequency-bearing version is built. And the inventory is taken to hold
   at least $\{\chi,\ker\chi\}$ for any entry; membership follows from exposure somewhere, not
-  from exposure in a given experiment.
+  from exposure in a given experiment. §4.1's ensemble, $\{\textit{no},\textit{some},\textit{all}\}$, meets it for
+  $\{\textit{some},\textit{no}\}$, each the other's kernel; *all* is a stray member, its kernel
+  $\ker E_{\textit{all}}=\{1\}$ left out — the O corner, which costs the architecture no dimension
+  (Appendix C §4) but would move $\theta_u^\ast$ if added. §4.2's ensembles meet it in full.
 - Tier B facts recorded here, position reserved.
 
 **Open.**

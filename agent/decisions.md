@@ -556,6 +556,14 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   a level, while O14's asymmetry is *across* levels — the 0 boundary fixed by θ_L and the 1 boundary
   by an alternatives level's θ_A. F18's broken parity is a fact about moving one boundary against
   the other, which is a relation between levels, not between the two entries of one.
+- **2026-09-24, the evaluation's ensemble instantiates the stipulation for {some, no} only (user).**
+  `UTTERANCES` = {no, some, all}: ker E_some = E_no, so {some, no} is a pair, and *all* is a
+  **stray member**, its kernel ker E_all = {1} absent. Appendix D §2 had said the O corner "is there
+  all the same", which the §4.1 ensemble contradicts. Now stated in Appendix D §2 (the establishing
+  site), Appendix B's restatement and outline §5.6, each pointing to Appendix C §4 (the O corner
+  costs no dimension). Added by the agent, as a derivation and with no number printed: including
+  ker E_all would still change Σ_y c_y and so θ_u\* (Eq. B2). Appendix F's ensembles, one
+  {χ, ker χ} per class, meet the stipulation in full. Markdown only; no re-execution.
 - **What stays a stipulation here.** That the inventory contains the pair at all is this phase's
   stipulation, in O2's sense, and is labelled as one. This phase models no exposure statistics; it
   declines to derive the inventory and declines to invent frequencies for it (O2).
