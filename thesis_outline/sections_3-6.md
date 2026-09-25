@@ -34,8 +34,9 @@ carries each answer.
 3. **Can patterns observed in scalar resolution be understood as algorithmic-level
    peculiarities?** Yes, for the three the background names, each shown or argued in this
    implementation:
-   - *whether strengthening needs a within-trial competition among alternatives* — it does not
-     need one to occur (the demonstration below);
+   - *whether scalar implicature needs explicit competition among alternatives* — it does not
+     need one to occur (the demonstration below); strengthening, the mechanism proposed for it,
+     shows with it there, but not consistently;
    - *what underlies extreme-favouring resolution on complete scales* — argued from parity: the
      extreme-favouring axis is the even coordinate of the utility basis (Appendix C §5), and at
      $n=4$ the two absolute entries differ in that coordinate alone (§4.2.4);
@@ -49,10 +50,10 @@ carries each answer.
 
 **The main demonstration: scalar implicature.** A predictive-coding network organized under the
 free-energy principle, in which the observed utterance's lexical entry is the only lexical quantity
-represented and no alternative is consulted at any point in an inference pass, reproduces part of
-the profile of scalar strengthening. Movement of belief mass away from the *all* reading therefore
-does not, by itself, require a within-trial computation over alternatives. What produces the
-movement is measured rather than assumed: the utility level amplifies the observed entry's own
+represented within an inference pass — alternatives enter only across trials, through the exposure
+ensemble, and none compete within the pass — yields scalar implicature in part of its profile, with
+strengthening's shift where it does. Scalar implicature therefore does not, by itself, require
+explicit competition among alternatives. What produces it is measured rather than assumed: the utility level amplifies the observed entry's own
 low-rank projection of the prior–lexicon net (Eqs. 23–24), under a gain $\theta_u$ whose value is
 fixed by cross-trial exposure rather than by anything about the current trial.
 
@@ -94,13 +95,13 @@ on what such a level would save:
 **How the two criteria are read.** §5.1 states the reading, as a conjecture and not a measurement:
 **the position criterion is what this architecture comes closest to supplying — one operation on
 the settled field, locating its peak (§5.6) — and consistent shift is what the absent level would
-supply** — with neither standing as the criterion of strengthening on its own, which is why §4.1.2
-takes the conjunction. It is argued from §4.1.5's opposed floors and §4.1.4's rows, under the guard
+supply** — with neither standing on its own as the test of scalar implicature reached by
+strengthening, which is why §4.1.2 takes the conjunction. It is argued from §4.1.5's opposed floors and §4.1.4's rows, under the guard
 §4.1.2 sets on $n$ and $Z$, and nothing here measures a level that is not built. **It is the second
 motivation and not the first.** The case for the level is the complexity it would save (R2), a
 conditional design argument from the construction that needs no datum; the conjecture is about
-what *this* architecture cannot deliver, and whether strengthening must be a shift at all rests on
-a baseline that is a construct in every account that has one (§5.1). Do not let the order slip.
+what *this* architecture cannot deliver, and whether scalar implicature must come by strengthening
+at all rests on a baseline that is a construct in every account that has one (§5.1). Do not let the order slip.
 
 **Such a level is compatible with this architecture; it is specified here and not built.** What
 the dissertation contributes in its place is that specification: the construction the model works
@@ -109,11 +110,11 @@ chain, generative maps in both directions, and a convergence argument — and §
 of it as the present results determine, naming precisely what is left.
 
 **What the claims say about human processing, and what they do not — carried into §5.** They bear
-on it in three ways: what it need not contain to produce the effect, since strengthening arises
-here with no alternative represented within the trial; what it would contain if it runs an
+on it in three ways: what it need not contain to produce the effect, since scalar implicature
+arises here with no explicit competition among alternatives; what it would contain if it runs an
 algorithm of this kind, which §5.7's predictions make testable; and what constraint it might obey.
-They do not say what it does contain. The model has no alternatives space to begin with, so nothing
-in it could show that human strengthening lacks one.
+They do not say what it does contain. The model has no explicit competition among alternatives to
+begin with, so nothing in it could show that human scalar resolution lacks one.
  
 ---
  
@@ -504,7 +505,7 @@ here rather than assumed.
      the model avoids representing a distribution over states**; it does not.
 - **Four things the position does not license.** State them in the same place, or the position
   reads as licensing all four.
-  1. **The criterion stays on $q$** (§4.1.2). Strengthening is stated as a mass in the accounts this
+  1. **The criterion stays on $q$** (§4.1.2). Scalar implicature is stated as a mass in the accounts this
      dissertation answers to, the delta supplies no mass, and comparability is the whole reason $q$
      is kept (A16). A preference about which read-out the *architecture* motivates is not a
      preference about which read-out the *criterion* is written in.
@@ -525,7 +526,8 @@ here rather than assumed.
 # 4. Evaluation (about 2,470 words)
 
 Two evaluations, under different configurations, and the opening says so in two sentences. §4.1
-evaluates scalar strengthening under *some* against the model's own criterion, at $n=10$ and the
+evaluates scalar implicature under *some*, and strengthening as the mechanism proposed for it,
+against the model's own criterion, at $n=10$ and the
 stated lexical strengths. §4.2 evaluates the threshold semantics against human judgments of
 gradable adjectives (Xiang et al., 2022), at $n=4$ with $\Lambda$ fitted.
 
@@ -556,10 +558,13 @@ quantitative comparison with them is offered or implied; §4.2 compares the mode
  
 ### 4.1.2 The criterion, and how to read the statistics (about 545 words)
  
-- Scalar strengthening is taken to be the conjunction of two conditions on the all-region mass under
-  *some*: $q_H<q_{\mathrm{lit}}$, the network lowering the mass the entry and prior already assign;
-  and $q_H<\tfrac12$, the strengthened reading being the majority outcome rather than merely the
-  suppressed alternative. Writing $\Delta_{\textit{some}}$ for the shift (Eq. 37), the first is
+- Two conditions on the all-region mass under *some*, one for each of background §1.1's terms:
+  $q_H<q_{\mathrm{lit}}$, the network lowering the mass the entry and prior already assign, which
+  tests for **strengthening** by its signature, a shift; and $q_H<\tfrac12$, the not-all reading
+  being the majority outcome rather than merely the suppressed alternative, which tests for the
+  **implicature**, a position. The dissertation takes their conjunction: implicature reached by way
+  of strengthening. The shift is strengthening's signature and not the mechanism itself; §4.1.4
+  separates a tempering that shifts mass by a finite variance alone. Writing $\Delta_{\textit{some}}$ for the shift (Eq. 37), the first is
   $\Delta_{\textit{some}}<0$.
 - Neither is sufficient alone: the second can hold under literal conditioning by itself, since the
   non-all states stand together against the single all state; the first can hold while *all* remains
@@ -569,7 +574,7 @@ quantitative comparison with them is offered or implied; §4.2 compares the mode
   up *in this model*, and every verdict is relative to it.
 - **Which read-out the criterion is written in, and why that is not the read-out the dissertation
   prefers.** Both conditions are stated on $q$, because a mass above a cut is what the probabilistic
-  accounts state strengthening in and the delta read-out supplies no mass (§3.6). **§3.6
+  accounts state the implicature in and the delta read-out supplies no mass (§3.6). **§3.6
   nonetheless holds the delta read-out to be the better motivated one**, and the two sit together
   without strain: $q$ is the read-out this criterion is *comparable* in, the delta is the read-out
   the construction *commits* to, and §§4.1.4 and 4.1.5 report the criteria of both. What the preference
@@ -1086,9 +1091,9 @@ first motivation and needs no datum; what follows is the second, and it stays se
      the argument the floors already carry. **The conjecture is that this architecture cannot
      deliver consistent shift because it lacks that level, not because the effect is absent.**
      Nothing here measures what such a level would do, and the sentence says so.
-  2. **Shift does not stand as the criterion of scalar strengthening on its own**, and this is not a
-     retreat from 1. A shift that leaves *all* the most probable single outcome is movement without
-     resolution (§4.1.2), so the dissertation does not fall back on the shift alone when the position
+  2. **Strengthening's signature does not stand as the criterion of scalar implicature on its
+     own**, and this is not a retreat from 1. A shift that leaves *all* the most probable single
+     outcome is strengthening without the implicature it is proposed to yield (§4.1.2), so the dissertation does not fall back on the shift alone when the position
      criterion is the one its architecture supplies, and does not treat the shift's fragility as
      the finding.
   3. **Position is mostly what this architecture instantiates.** Two reasons, of different kinds.
@@ -1149,12 +1154,13 @@ first motivation and needs no datum; what follows is the second, and it stays se
      **State the conclusion as a claim about what the quantity is, not about what instruments
      reach.** The position criterion is one distribution against a threshold, both of which a person
      can be asked for. The shift criterion is stated against a baseline that is a construct in every
-     account that has one, so any empirical claim of the form *strengthening is a shift* is relative
+     account that has one, so any empirical claim of the form *scalar implicature comes by
+     strengthening* is relative
      to a stipulated semantics and an elicited prior. Written that way the point does not expire;
      written as a limit of current methods it invites "wait for better methods".
   4. **And say where the wanting comes from, in one sentence and without contempt for it.** That
-     strengthening should be a shift and not only a position is, in the first instance, something we
-     introspect: hearing *some*, one takes oneself to have moved **away from** *all*, not merely to
+     scalar implicature should come by strengthening, a movement and not only a position, is, in the
+     first instance, something we introspect: hearing *some*, one takes oneself to have moved **away from** *all*, not merely to
      have landed below it. That is a real datum about the explanandum and it is the source of the
      framing the background sets out. It is also not the kind of thing that outranks a motivation
      needing no datum at all, which is move 1 of the frame and the whole of R2.
@@ -1168,8 +1174,8 @@ first motivation and needs no datum; what follows is the second, and it stays se
   trial. Ronai and Xiang (2024) are the relevant empirical constraint: alternative *accessibility*
   behaves like an exposure-indexed quantity, but contextual *relevance* governs inference rates, and
   relevance is a within-trial quantity only the level specified above could carry.
-- **Then the standing qualification**, in its own sentence: three facts settle the *absence* of an
-  alternatives computation in the present model — $\varphi_L$ is a function of the observed
+- **Then the standing qualification**, in its own sentence: three facts settle the *absence* of explicit
+  competition among alternatives within the trial in the present model — $\varphi_L$ is a function of the observed
   utterance alone, $g_S$ reaches the belief only through $\varphi_u$, and no term in Eq. (13)
   involves any unobserved utterance — and they settle nothing about whether human processing
   contains one. What they bear on is what it need not contain, the first of the three ways the
@@ -1489,7 +1495,7 @@ read as a limit of the architecture.
 
 ## 5.7 Predictions (about 130 words)
  
-- **Exposure frequency should shift strengthening.** $\theta_u^\ast$ is set by the mean drive of
+- **Exposure frequency should shift scalar implicature.** $\theta_u^\ast$ is set by the mean drive of
   the inventory under exposure (Appendix B), so non-uniform exposure to the inventory moves it. **This is a
   prediction about departures from a stipulated uniform**, which is what makes it a prediction at
   all: uniform $p(y)$ is this phase's stipulation (Appendix B), not a result, and the model is not

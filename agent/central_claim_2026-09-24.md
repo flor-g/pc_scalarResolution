@@ -167,7 +167,8 @@ what human processing contains.
 Plan agreed with the user: organized by the three answers; about 350 words (user approved the
 length); the Xiang comparison under extreme-favouring (user); no standing qualification (user: made
 elsewhere); the second answer **named joint settlement** (user), with the clamped-entry scope clause
-kept and the staging and human-processing clauses left to the central claim and §5.1.
+kept and the staging and human-processing clauses left to the central claim and §5.1. Revised
+2026-09-24 for C11: 3(a) is implicature without explicit competition, strengthening only in part.
 
 One architecture, built under the locality constraint, answers the background's three questions
 together, and scalar implicature is where it is shown.
@@ -183,20 +184,46 @@ together, and scalar implicature is where it is shown.
    settled first and then revised. The entry itself precedes pragmatic influence; what settles
    jointly is everything downstream of it.
 3. **Three patterns, as algorithmic-level peculiarities.**
-   - *Strengthening without alternatives.* The network moves belief mass off the *all* reading while
-     representing no alternative, by amplifying the observed entry's own projection under a gain
-     fixed by exposure; any implicature it carries is conventionalized. Where the prior peaks inside
-     the cell of *all*, it carries the peak outside — in one row of §4.1.4 and a band of the plane
-     (§4.1.5), at the stipulated half-width — and meets the shift criterion there too. The position
-     criterion survives the change of read-out; the shift does not.
-   - *Extreme-favouring on complete scales*, argued from parity: the utility basis's even
-     coordinate. On Xiang et al.'s (2022) items, the class fixed at its scale's own endpoint puts no
+   - *Implicature without explicit competition, and strengthening only in part.* Where the prior
+     puts the settled field's peak inside the cell of *all*, the network carries it outside with no
+     explicit competition among alternatives, by amplifying the observed entry's own projection
+     under a gain fixed by exposure — in one row of §4.1.4 and a band of the plane (§4.1.5), at the
+     stipulated half-width — so the implicature is conventionalized rather than computed.
+     Strengthening's shift shows in every one of those cells, but not consistently: it is met only
+     where the prior already puts mass on the all-region, and does not survive the change of
+     read-out.
+   - *Extreme-favouring on complete scales*, argued from parity (the utility basis's even
+     coordinate). On Xiang et al.'s (2022) items, the class fixed at its scale's own endpoint puts no
      upper bound on $\Lambda$ and the other requires a finite one, the direction the atomicity
      hypothesis predicts; the dissertation takes no position on it, and the residual is reported,
      not explained.
    - *The semantic/pragmatic division.* $\theta_L$ is a semantic convention inside one free-energy
      inference, and §5.5's questions are ones the computational level leaves unspecified.
-4. **The proposal.** A level representing competition among alternatives is specified, not built:
-   first for what it would save — logarithmic branching if its cuts stay balanced, one dimension per
-   level, locality without the relay, an affine map that keeps the convergence proof — and second for the reading that
-   consistent shift is what it would supply. Its algebra is not derived (§5.1).
+4. **The proposal.** A level representing competition among alternatives within the trial is
+   specified, not built: first for the complexity it would save, a conditional design argument
+   (§5.1), and second for the reading that consistent strengthening is what it would supply. Its
+   algebra is not derived.
+
+## 7. The terminology sweep (C11, 2026-09-24)
+
+The user's scheme: *scalar resolution* is picking a value on a scale; *scalar implicature* a
+peculiarity of it (the position); *scalar strengthening* a proposed mechanism yielding it (the shift
+is its signature). The mechanism is implicature **without explicit competition**: the exposure
+ensemble is a kind of alternatives, used across trials. 26 edits, validated first and read back:
+
+- `background_sections.md` §1.1 defines the three terms (and why the dissertation keeps apart what
+  the literature uses interchangeably); the opening's first sub-question asks about implicature;
+  §1.3's redeployment and §1.5's drafted paragraph use implicature; the closing bridge's quote and
+  qualification say "no explicit competition among alternatives".
+- `sections_3-6.md`: central claim (answer 3's first sub-question, the demonstration paragraph, the
+  criteria reading, the qualification), §3.6, §4.1 opening, §4.1.2 (the two conditions, one per term,
+  and the conjunction as implicature reached by way of strengthening), §5.1 move 2, the
+  quantity/instrument bullet, the introspection bullet, the closing bullet, §5.7's first prediction.
+- `main.ipynb` Text cell 4: the stance sentence ("as scalar implicature"), "the shift is relative to
+  the prior", "the shift to follow from the lexical scale", the note on mechanism (typo
+  "stenghtening" fixed), "without explicit competition among alternatives". No code cell prints
+  either word: no re-execution.
+- **Kept, by the rule in §1.1:** the mechanism sense wherever accounts "compute strengthening"
+  (background §§1.3, 1.4, 1.8, Part I summary; outline §5.1's "pragmatic strengthening excludes
+  again"), and cited constructs (the strengthened interpretation of §1.1, Chierchia's parses and
+  local strengthening, the experimental reports of §1.4, Appendix B's Horn/Gazdar sentence).

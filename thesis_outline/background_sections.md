@@ -48,7 +48,7 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
      - **Is scalar resolution one pass?**
      - **Can patterns observed in scalar resolution be understood as peculiarities arising at the
        algorithmic rather than the computational level?** — with the three sub-questions named:
-       whether alternative competition is necessary to produce strengthening and whether it is a
+       whether alternative competition is necessary to produce scalar implicature and whether it is a
        separate module from world-prior inference; what mechanism underlies extreme-favouring
        resolution for complete-scale inference; and how the semantic/pragmatic division is drawn to
        begin with.
@@ -98,7 +98,17 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
     inference proper ("the speaker believes that not all"), since grammatical accounts treat the
     latter as exhaustification rather than as ordinary mind-reading (Chierchia, 2017).
   - **New, and load-bearing for §4.1.2 of the proposal:** this dissertation's explanandum is
-    **graded** — movement of belief mass off the *all* reading — rather than a truth-value judgment.
+    **graded** — where belief mass settles against the *all* reading, and whether it moved off it —
+    rather than a truth-value judgment.
+  - **New, and load-bearing for every later section: three terms, kept apart.** *Scalar
+    resolution* is picking a value on a scale. *Scalar implicature* is a peculiarity of scalar
+    resolution: for *some*, the resolved value lands outside the region of *all*. *Scalar
+    strengthening* is a proposed mechanism that yields scalar implicature: belief moved off the
+    stronger reading. The literature uses the last two interchangeably, the strengthened meaning
+    being the implicature's content; this dissertation keeps them apart because §4.1.2 tests them
+    apart — the implicature by the position criterion, strengthening by the shift criterion, whose
+    shift is strengthening's signature and not the mechanism itself. Where a cited work names a
+    construct of its own (a strengthened parse, local strengthening), its term is kept.
     Say so here, because §4.1.2's two-condition criterion is otherwise a stipulation arriving without
     motivation.
   - **New, one sentence:** flag *defeasibility* as one of the criteria by which patterns are sorted
@@ -165,8 +175,8 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
   the all-state after *some*.
 - Filler conditions tracked prior knowledge, arguing against the explanation that participants simply
   ignored world knowledge.
-- **The redeployment.** Human strengthening is **robust against prior concentration**. In this
-  model the strengthened reading stays a majority under a concentrated prior only above a floor in
+- **The redeployment.** Human scalar implicature is **robust against prior concentration**. In this
+  model the not-all reading stays a majority under a concentrated prior only above a floor in
   lexical strength, and that floor rises with the concentration (§4.1.5). Flag forward to §4.1.5 for the
   floor and to §5.1, which argues that a drain keyed to the alternative would not carry it up.
 - *Counterargument:* numerical and slider judgments are noisy. The convergence of expected-number
@@ -303,7 +313,7 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
 > theoretical side, Jaszczolt (2012) likewise finds no clear-cut line, but rather frameworks drawing
 > different lines according to prior commitments about compositionality and psychological reality.
 >
-> Scalar strengthening sits in the contested region. It is cancellable and conversationally derived,
+> Scalar implicature sits in the contested region. It is cancellable and conversationally derived,
 > which conventionality counts as pragmatic; it has been argued to be truth-conditionally active
 > under embedding (§1.4), which truth-conditionality would count as semantic. Sauerland (2012)
 > accordingly presents pragmatic, lexical and grammatical treatments as three live options for one
@@ -662,12 +672,13 @@ rather than having to infer it.*
   constraint generates the rest:
   > The architecture is built under locality; it settles a lexical entry and a world prior jointly in
   > one density rather than in sequence; and it produces movement of belief mass off the *all*
-  > reading while representing no alternative at any point.
+  > reading with no explicit competition among alternatives at any point.
 - **Then the standing qualification**, because §5.1 leans on it, stated as what the claims do say
   about human processing and not only what they do not: they bear on what it **need not contain**
   to produce the effect, on what it **would contain** if it runs an algorithm of this kind (§5.7's
   predictions), and on what constraint it **might obey** — not on what it **does** contain. **The
-  model has no alternatives space, so nothing in it could show that human processing lacks one.**
+  model has no explicit competition among alternatives, so nothing in it could show that human
+  processing lacks one.**
 - **Do not** introduce implementation details, hyperparameter values, or results here.
 ---
  

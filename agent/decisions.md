@@ -1212,6 +1212,30 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     §5.1's closing bullet and the background's closing bridge. **Not repeated in §6** (user: it is
     made elsewhere).
 
+### C11. Scalar resolution, scalar implicature, scalar strengthening: three terms, kept apart
+- Status: Settled
+- Decided by: user (2026-09-24)
+- Decision: **scalar resolution** is picking a value on a scale; **scalar implicature** is a
+  peculiarity of scalar resolution, the position — for *some*, the resolved value outside the region
+  of *all* — tested by the position criterion; **scalar strengthening** is a proposed mechanism that
+  yields scalar implicature, tested by the shift criterion, whose shift is its **signature and not the
+  mechanism itself** (tempering shifts mass by a finite variance alone; amplification under θ_u
+  counts as strengthening only where it produces the shift). §4.1.2's conjunction is implicature
+  reached by way of strengthening. This model's route to implicature is **without explicit
+  competition**, never "without alternatives": the exposure ensemble {χ, ker χ} is a set of
+  alternatives, used across trials through θ_u\* (A14, A18).
+- Theoretical reason: the literature uses strengthening and implicature interchangeably, the
+  strengthened meaning being the implicature's content; the dissertation tests the two apart, so its
+  words must keep them apart. Cited constructs of other works (a strengthened parse, local
+  strengthening, the strengthened interpretation) keep their authors' terms.
+- Implementational reason: none. No code cell prints either word.
+- Bogacz status: not an operation.
+- Depends on it: background §1.1 (the definitions), the opening's first sub-question, §§1.3, 1.5, the
+  closing bridge; outline central claim, §§3.6, 4.1, 4.1.2, 5.1, 5.7, §6;  Text cell 4,
+  including B10's stance sentence, now "… or even neither criteria as scalar implicature" (the
+  user's sentence, one word changed with the user's approval). C7's criterion names are unchanged.
+- Evidence:  §7, the site list.
+
 ### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
 - Decided by: user (2026-09-13)
 - A number computed off-notebook, or only by a script recorded in a change record, does not count

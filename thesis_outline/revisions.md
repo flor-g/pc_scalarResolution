@@ -1636,7 +1636,12 @@ is outline guidance and carries no word count. **The standing qualification is r
 positively** (C10's finding): the claims bear on what human processing need not contain, would
 contain under an algorithm of this kind, and might obey, not on what it does contain — in the
 central claim, §5.1's closing bullet and the background's closing bridge; §6 does not repeat it.
-**Next:** §6, whose plan goes to the user before drafting.
+**Terms kept apart (C11, user):** scalar resolution (picking a value on a scale), scalar
+implicature (a peculiarity of it, tested by the position criterion), scalar strengthening (a proposed
+mechanism yielding it, whose signature the shift criterion tests); the model reaches implicature
+without explicit competition, the exposure ensemble being alternatives used across trials. Defined in
+background §1.1 and swept through both outlines and  Text cell 4 (26 sites; the record's
+§7 lists them). **Next:** §6, drafted and awaiting the user's review.
 
 ## 19. RV: cost, attribution and scope, after an external review (2026-09-24)
 
