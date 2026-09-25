@@ -161,3 +161,42 @@ what human processing contains.
       agreement; §6 will not repeat it (user).
 - [ ] CC4: §6 Conclusion — the plan goes to the user before any drafting (user's instruction:
       "Before you draft the conclusion, tell me what you plan to say first").
+
+## 6. §6 draft (pending the user's review; not applied)
+
+Plan agreed with the user: organized by the three answers; about 350 words (user approved the
+length); the Xiang comparison under extreme-favouring (user); no standing qualification (user: made
+elsewhere); the second answer **named joint settlement** (user), with the clamped-entry scope clause
+kept and the staging and human-processing clauses left to the central claim and §5.1.
+
+One architecture, built under the locality constraint, answers the background's three questions
+together, and scalar implicature is where it is shown.
+
+1. **The constraint.** Under locality, a field-valued world state with a soft lexical entry
+   competing additively against the world prior in one log-density (a placement the architecture
+   commits to, §3.2) admits a closed-form stationary point and a recurrent network that provably
+   reaches it. Plasticity is local at $m=1$, and at every $m$ with Appendix E's relay, whose added
+   timescale the proof does not cover. The same constraint points the next level toward binary
+   branching.
+2. **Joint settlement.** Given the entry the utterance clamps, the world belief and the utility
+   state settle together as the one maximizer of a single objective; no literal interpretation is
+   settled first and then revised. The entry itself precedes pragmatic influence; what settles
+   jointly is everything downstream of it.
+3. **Three patterns, as algorithmic-level peculiarities.**
+   - *Strengthening without alternatives.* The network moves belief mass off the *all* reading while
+     representing no alternative, by amplifying the observed entry's own projection under a gain
+     fixed by exposure; any implicature it carries is conventionalized. Where the prior peaks inside
+     the cell of *all*, it carries the peak outside — in one row of §4.1.4 and a band of the plane
+     (§4.1.5), at the stipulated half-width — and meets the shift criterion there too. The position
+     criterion survives the change of read-out; the shift does not.
+   - *Extreme-favouring on complete scales*, argued from parity: the utility basis's even
+     coordinate. On Xiang et al.'s (2022) items, the class fixed at its scale's own endpoint puts no
+     upper bound on $\Lambda$ and the other requires a finite one, the direction the atomicity
+     hypothesis predicts; the dissertation takes no position on it, and the residual is reported,
+     not explained.
+   - *The semantic/pragmatic division.* $\theta_L$ is a semantic convention inside one free-energy
+     inference, and §5.5's questions are ones the computational level leaves unspecified.
+4. **The proposal.** A level representing competition among alternatives is specified, not built:
+   first for what it would save — logarithmic branching if its cuts stay balanced, one dimension per
+   level, locality without the relay, an affine map that keeps the convergence proof — and second for the reading that
+   consistent shift is what it would supply. Its algebra is not derived (§5.1).
