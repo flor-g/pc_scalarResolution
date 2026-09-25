@@ -1621,6 +1621,20 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 20. CC: the central claim reframed by the three questions (2026-09-24)
+
+The working record is `agent/central_claim_2026-09-24.md`; the decision is C10 (user). **What
+changed:** `sections_3-6.md`'s *Central claim* now opens on the thesis as the answer to the
+background's three questions — locality as the generative constraint (background §2.2), the
+interpretation co-determined given the clamped entry, answered at this architecture's scope
+(§2.6), and three algorithmic-level peculiarities — with scalar implicature through the present
+implementation as the main demonstration and §4.2 a second one. The old *Thesis* paragraph is the
+demonstration, unchanged; the old *Constructive claim* keeps its name and text (B12) as what the
+demonstration shows; the alternatives level is a proposal the first answer motivates, not a second
+thesis; the standing qualification covers the answers as well. No budget moved: the central claim
+is outline guidance and carries no word count. **Next:** §6, whose plan goes to the user before
+drafting.
+
 ## 19. RV: cost, attribution and scope, after an external review (2026-09-24)
 
 The working record is `agent/history.md` §20 (RV0–RV8, findings

@@ -1076,6 +1076,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 ---
 
 ## C. Conventions that constrain claims
+- **2026-09-24, B12's object is now the demonstration's result (C10).** The central claim was
+  reframed by the background's three questions (user). The constructive claim keeps its name, its
+  lead and its counts unchanged, and now sits under *What the demonstration shows*, after the three
+  answers and the main demonstration; the alternatives level follows it as a proposal, not a thesis.
 
 ### C1. No Gricean reference frame
 - Decided by: user (2026-09-07)
@@ -1174,6 +1178,30 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   and the choices it considered; and two consequences added — every result is conditional on the
   choices, and each alternative is a comparison still owed. Wording rule: never call a choice
   forced or optimal.
+
+### C10. The thesis is the answer to the background's three questions; scalar implicature is the main demonstration
+- Status: Settled
+- Decided by: user (2026-09-24); the draft is the agent's, approved by the user
+- Decision: the dissertation's thesis is its answer to the three questions the background opens
+  with — what computational constraint scalar resolution might obey (locality, generative); whether
+  it is one pass (co-determined given the clamped entry, answered at this architecture's scope:
+  the question asks *is*, a demonstration answers *can be*); and whether its patterns can be
+  algorithmic-level peculiarities (yes, for strengthening without alternatives, extreme-favouring by
+  parity, and the semantic/pragmatic division). Scalar implicature through the present
+  implementation is the **main demonstration**, and §4.2's scale classes a second, smaller one. The
+  alternatives level is **a proposal the first answer motivates, not a second thesis**.
+- Theoretical reason: the background already frames the dissertation by the three questions and
+  closes on one architecture answering them together; the outline's central claim had instead
+  opened on the demonstration's result alone, so the two outlines announced different
+  dissertations. A question is not a thesis, so the thesis is the answers; the modal wording of the
+  first and third questions suits a demonstration, and the second's is answered at scope.
+- Implementational reason: none. No notebook, cell or number changes.
+- Bogacz status: not an operation.
+- Depends on it: `thesis_outline/sections_3-6.md` *Central claim* (rewritten 2026-09-24) and §6 (to
+  follow); B12, whose "constructive claim" is now the demonstration's result; R2 and B11, whose
+  ordering of the level's two motivations is kept inside the proposal.
+- Evidence: `agent/central_claim_2026-09-24.md` (the instruction, the constraints the draft kept,
+  the draft as approved).
 
 ### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
 - Decided by: user (2026-09-13)

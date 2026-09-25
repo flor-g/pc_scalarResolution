@@ -8,31 +8,66 @@ and 2b, Appendices A–F with Code Cells A–F) and `appendix_E.ipynb` (Eqs. (E1
 ---
  
 ## Central claim
- 
-The dissertation argues a positive thesis and, from the shape of what its architecture does not
-yet contain, a second constructive one.
- 
-**Thesis.** A predictive-coding network organized under the free-energy principle, in which the
-observed utterance's lexical entry is the only lexical quantity represented and no alternative is
-consulted at any point in an inference pass, reproduces part of the profile of scalar
-strengthening. Movement of belief mass away from the *all* reading therefore does not, by itself,
-require a within-trial computation over alternatives. What produces the movement is measured
-rather than assumed: the utility level amplifies the observed entry's own low-rank projection of
-the prior–lexicon net (Eqs. 23–24), under a gain $\theta_u$ whose value is fixed by cross-trial
-exposure rather than by anything about the current trial.
- 
-**Constructive claim.** Say what the network carries before saying how often, because a count is
-only worth something once the baseline is out of it. **Where the prior leaves the all-region in the
-majority, the network takes it out; where the prior puts the settled field's peak inside the cell
-of *all*, the network carries it outside.** Both are §4.1.2's position criterion, read through the
-two read-outs of §3.6. Part D's delta-like prior is the case in a single row (§4.1.4), and across
-the plane the network does it in a minority of the cells whose baseline fails a position criterion,
-under $q$ and, in a subset of those, under the delta read-out (§4.1.5). **In every one of those
-cells the shift criterion is met as well**, which the cell counts rather than the prose asserts:
-where the network changes the position verdict it meets both criteria, under either read-out.
-**The conditioned counts are figures at the stipulated half-width**, and they cannot outlast the
-shift criterion as the grid widens (§4.1.5). §4.1.2's guard governs this claim as it governs the
-counts below it.
+
+The dissertation's thesis is its answer to the three questions the background opens with, and one
+architecture answers all three together, because the constraint it is built under generates the
+rest (background, *Opening* and *Closing bridge*). **Scalar implicature, run through the present
+implementation, is the main demonstration**; §4.2's scale classes against Xiang et al. (2022) are a
+second and smaller one. The demonstration is what §§3–4 build and measure, and §5 says how far it
+carries each answer.
+
+**The thesis: three answers.**
+
+1. **What computational constraint might scalar resolution obey?** Locality, in Bogacz's (2017) two
+   senses, taken as a design constraint on the build and treated as **generative** rather than as a
+   check applied afterwards (background §2.2). It is what the utility basis puts under strain at
+   $m>1$, what Appendix E's relay buys back at the cost of a fourth timescale, and what motivates
+   the binary branching of the level §5.1 proposes.
+2. **Is scalar resolution one pass?** In this architecture the interpretation is **co-determined**:
+   given the lexical entry, which the utterance clamps, the world belief and the utility state
+   settle together as the one maximizer of an objective strictly concave in both, and no literal
+   interpretation is settled on the entry alone and then revised (background §2.6). **State the
+   scope with the answer, because the question asks more than one architecture can.** The entry
+   itself exists before any pragmatic influence; and the answer is about how this architecture
+   computes the interpretation, not about how no architecture could, nor about what human
+   processing does. The question asks *is*; a demonstration answers *can be*.
+3. **Can patterns observed in scalar resolution be understood as algorithmic-level
+   peculiarities?** Yes, for the three the background names, each shown or argued in this
+   implementation:
+   - *whether strengthening needs a within-trial competition among alternatives* — it does not
+     need one to occur (the demonstration below);
+   - *what underlies extreme-favouring resolution on complete scales* — argued from parity: the
+     extreme-favouring axis is the even coordinate of the utility basis (Appendix C §5), and at
+     $n=4$ the two absolute entries differ in that coordinate alone (§4.2.4);
+   - *how the semantic/pragmatic division is drawn* — the division's form is the problem: the
+     threshold $\theta_L$ is a semantic convention fixed by the predicate, sitting inside one
+     free-energy inference, and the joint settlement of the second answer is the fact §1.5's
+     demarcation problem is answered from.
+
+   §5.5 extends the third answer by one step: some questions are ones the computational level
+   leaves unspecified and an algorithmic account settles.
+
+**The main demonstration: scalar implicature.** A predictive-coding network organized under the
+free-energy principle, in which the observed utterance's lexical entry is the only lexical quantity
+represented and no alternative is consulted at any point in an inference pass, reproduces part of
+the profile of scalar strengthening. Movement of belief mass away from the *all* reading therefore
+does not, by itself, require a within-trial computation over alternatives. What produces the
+movement is measured rather than assumed: the utility level amplifies the observed entry's own
+low-rank projection of the prior–lexicon net (Eqs. 23–24), under a gain $\theta_u$ whose value is
+fixed by cross-trial exposure rather than by anything about the current trial.
+
+**What the demonstration shows, the constructive claim.** Say what the network carries before
+saying how often, because a count is only worth something once the baseline is out of it. **Where
+the prior leaves the all-region in the majority, the network takes it out; where the prior puts
+the settled field's peak inside the cell of *all*, the network carries it outside.** Both are
+§4.1.2's position criterion, read through the two read-outs of §3.6. Part D's delta-like prior is
+the case in a single row (§4.1.4), and across the plane the network does it in a minority of the
+cells whose baseline fails a position criterion, under $q$ and, in a subset of those, under the
+delta read-out (§4.1.5). **In every one of those cells the shift criterion is met as well**, which
+the cell counts rather than the prose asserts: where the network changes the position verdict it
+meets both criteria, under either read-out. **The conditioned counts are figures at the stipulated
+half-width**, and they cannot outlast the shift criterion as the grid widens (§4.1.5). §4.1.2's
+guard governs this claim as it governs the counts below it.
 
 The unconditioned counts belong in the claim too, and only with what they include. Both conditions
 hold under three of the five priors at $\Lambda=512$, the three with the most prior mass on the
@@ -42,9 +77,9 @@ since **what survives the change of read-out is the position criterion and what 
 shift** (§3.6's position). **Each of these is a count in which the baseline is doing part of the
 work**, which is why they stand after the paragraph above and not in place of it.
 
-The case for a level representing within-trial competition among alternatives therefore does not
-rest on the criterion failing (R2). It rests on what such a
-level would save:
+**What the first answer motivates: a proposed alternatives level.** It is a proposal the thesis
+motivates, not a second thesis, and its case does not rest on the criterion failing (R2). It rests
+on what such a level would save:
 - branching logarithmic in the predicate's granularity, if its cuts stay balanced at every depth
   (§5.1: a conditional design argument, not a derived bound);
 - one dimension per level, so plasticity is local without the relay;
@@ -53,31 +88,31 @@ level would save:
 - an end to learning short of a maximizer the slow flow never reaches, which the present
   architecture lacks (§5.3; argued, not derived);
 - and, on the plane, a drain keyed to the alternative rather than to prior mass on the all-region,
-  which would not carry the second condition's floor up as the first's falls (§4.1.5's floors; argued
-  in §5.1, not measured).
+  which would not carry the second condition's floor up as the first's falls (§4.1.5's floors;
+  argued in §5.1, not measured).
 
 **How the two criteria are read.** §5.1 states the reading, as a conjecture and not a measurement:
 **the position criterion is what this architecture comes closest to supplying — one operation on
 the settled field, locating its peak (§5.6) — and consistent shift is what the absent level would
-supply** — with neither standing as the criterion of strengthening on its
-own, which is why §4.1.2 takes the conjunction. It is argued from §4.1.5's opposed floors and §4.1.4's
-rows, under the guard §4.1.2 sets on $n$ and $Z$, and nothing here measures a level that is not built.
-**It is the second motivation and not the first.** The case for the level is the complexity it
-would save (R2), a conditional design argument from the construction that needs no datum; the
-conjecture is about what
-*this* architecture cannot deliver, and whether strengthening must be a shift at all rests on a
-baseline that is a construct in every account that has one (§5.1). Do not let the order slip.
+supply** — with neither standing as the criterion of strengthening on its own, which is why §4.1.2
+takes the conjunction. It is argued from §4.1.5's opposed floors and §4.1.4's rows, under the guard
+§4.1.2 sets on $n$ and $Z$, and nothing here measures a level that is not built. **It is the second
+motivation and not the first.** The case for the level is the complexity it would save (R2), a
+conditional design argument from the construction that needs no datum; the conjecture is about
+what *this* architecture cannot deliver, and whether strengthening must be a shift at all rests on
+a baseline that is a construct in every account that has one (§5.1). Do not let the order slip.
 
-**Such a level is compatible with this architecture; it is specified here and not
-built.** What the dissertation contributes in its place is that specification: the construction the
-model works under states exactly what any additional level must supply — a state space, a position
-in the chain, generative maps in both directions, and a convergence argument — and §5.1 discharges
-as much of it as the present results determine, naming precisely what is left.
- 
-**Standing qualification, carried into §5.** Neither claim says that human scalar strengthening
-lacks a within-trial alternatives computation, and nothing in this implementation could show it:
-the model has no alternatives space to begin with. The claims are about what the *effect*
-requires, not about what human processing contains.
+**Such a level is compatible with this architecture; it is specified here and not built.** What
+the dissertation contributes in its place is that specification: the construction the model works
+under states exactly what any additional level must supply — a state space, a position in the
+chain, generative maps in both directions, and a convergence argument — and §5.1 discharges as much
+of it as the present results determine, naming precisely what is left.
+
+**Standing qualification, carried into §5.** Neither the three answers nor the demonstration say
+that human scalar strengthening lacks a within-trial alternatives computation, and nothing in this
+implementation could show it: the model has no alternatives space to begin with. The claims are
+about what the *effect* requires, and about what one architecture shows can be the case, not about
+what human processing contains.
  
 ---
  
