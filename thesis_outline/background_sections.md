@@ -276,6 +276,10 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
     broader experimental evidence for embedded readings; Ippolito (2010) argues the
     Geurts–Pouscoulous findings resist localist treatment even when supplemented with a formal
     account of when an embedded implicature is preferred.
+    **Footnote** on "strengthening" in this bullet: *The authors' original usage is kept. What
+    these studies measure is the rate at which a reading is drawn, which §1.1's terms would call
+    scalar implicature; this dissertation reserves "strengthening" for the mechanism proposed to
+    yield it (§1.1), and changes no cited author's term.*
   - Oddness effects in downward-entailing environments have been argued to follow from embedded,
     grammatically mandated exhaustification (Magri, 2011).
   - **Say what this record shows, plainly:** two decades of task-sensitive results that have not
