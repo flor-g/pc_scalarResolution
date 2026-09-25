@@ -156,5 +156,8 @@ what human processing contains.
 - [x] CC2 (2026-09-24): approved; applied verbatim to `sections_3-6.md`, replacing the old central
       claim through the rule before *Scope decision*; read back.
 - [x] CC3 (2026-09-24): records — decision C10, B12's finding, `revisions.md` §20.
+- [x] CC5 (2026-09-24): the standing qualification restated positively at its three sites
+      (central claim, §5.1's closing bullet, background closing bridge), at the user's
+      agreement; §6 will not repeat it (user).
 - [ ] CC4: §6 Conclusion — the plan goes to the user before any drafting (user's instruction:
       "Before you draft the conclusion, tell me what you plan to say first").

@@ -663,9 +663,11 @@ rather than having to infer it.*
   > The architecture is built under locality; it settles a lexical entry and a world prior jointly in
   > one density rather than in sequence; and it produces movement of belief mass off the *all*
   > reading while representing no alternative at any point.
-- **Then the standing qualification, in its own sentence**, because §5.1 leans on it: **the model has
-  no alternatives space, so nothing in it could show that human processing lacks one.** The claims
-  are about what the *effect* requires, not about what human processing contains.
+- **Then the standing qualification**, because §5.1 leans on it, stated as what the claims do say
+  about human processing and not only what they do not: they bear on what it **need not contain**
+  to produce the effect, on what it **would contain** if it runs an algorithm of this kind (§5.7's
+  predictions), and on what constraint it **might obey** — not on what it **does** contain. **The
+  model has no alternatives space, so nothing in it could show that human processing lacks one.**
 - **Do not** introduce implementation details, hyperparameter values, or results here.
 ---
  

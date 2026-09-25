@@ -108,11 +108,12 @@ under states exactly what any additional level must supply — a state space, a 
 chain, generative maps in both directions, and a convergence argument — and §5.1 discharges as much
 of it as the present results determine, naming precisely what is left.
 
-**Standing qualification, carried into §5.** Neither the three answers nor the demonstration say
-that human scalar strengthening lacks a within-trial alternatives computation, and nothing in this
-implementation could show it: the model has no alternatives space to begin with. The claims are
-about what the *effect* requires, and about what one architecture shows can be the case, not about
-what human processing contains.
+**What the claims say about human processing, and what they do not — carried into §5.** They bear
+on it in three ways: what it need not contain to produce the effect, since strengthening arises
+here with no alternative represented within the trial; what it would contain if it runs an
+algorithm of this kind, which §5.7's predictions make testable; and what constraint it might obey.
+They do not say what it does contain. The model has no alternatives space to begin with, so nothing
+in it could show that human strengthening lacks one.
  
 ---
  
@@ -1170,7 +1171,9 @@ first motivation and needs no datum; what follows is the second, and it stays se
 - **Then the standing qualification**, in its own sentence: three facts settle the *absence* of an
   alternatives computation in the present model — $\varphi_L$ is a function of the observed
   utterance alone, $g_S$ reaches the belief only through $\varphi_u$, and no term in Eq. (13)
-  involves any unobserved utterance — and they settle nothing about human processing.
+  involves any unobserved utterance — and they settle nothing about whether human processing
+  contains one. What they bear on is what it need not contain, the first of the three ways the
+  central claim names.
 ## 5.2 Scale structure: what the comparison of §4.2 is worth (about 360 words)
 
 The measurements are §4.2's. This section says why no position is taken on H1, states the one

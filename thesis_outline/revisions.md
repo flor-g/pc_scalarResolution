@@ -1632,8 +1632,11 @@ implementation as the main demonstration and §4.2 a second one. The old *Thesis
 demonstration, unchanged; the old *Constructive claim* keeps its name and text (B12) as what the
 demonstration shows; the alternatives level is a proposal the first answer motivates, not a second
 thesis; the standing qualification covers the answers as well. No budget moved: the central claim
-is outline guidance and carries no word count. **Next:** §6, whose plan goes to the user before
-drafting.
+is outline guidance and carries no word count. **The standing qualification is restated
+positively** (C10's finding): the claims bear on what human processing need not contain, would
+contain under an algorithm of this kind, and might obey, not on what it does contain — in the
+central claim, §5.1's closing bullet and the background's closing bridge; §6 does not repeat it.
+**Next:** §6, whose plan goes to the user before drafting.
 
 ## 19. RV: cost, attribution and scope, after an external review (2026-09-24)
 

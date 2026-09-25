@@ -1202,6 +1202,15 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   ordering of the level's two motivations is kept inside the proposal.
 - Evidence: `agent/central_claim_2026-09-24.md` (the instruction, the constraints the draft kept,
   the draft as approved).
+- Findings added later:
+  - **2026-09-24, the standing qualification restated positively (user).** The user asked what the
+    point of the research is if it makes no claims about human processing. The old wording ("not
+    about what human processing contains") undersold it and sat against §5.7's predictions. It now
+    says the claims bear on human processing in three ways — what it **need not** contain to produce
+    the effect, what it **would** contain if it runs an algorithm of this kind (§5.7), and what
+    constraint it **might** obey — and not on what it **does** contain. Applied to the central claim,
+    §5.1's closing bullet and the background's closing bridge. **Not repeated in §6** (user: it is
+    made elsewhere).
 
 ### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
 - Decided by: user (2026-09-13)
