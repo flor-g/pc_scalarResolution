@@ -1621,6 +1621,40 @@ deferring to §3 (the two files had been pointing at each other).
 
 ---
 
+## 19. RV: cost, attribution and scope, after an external review (2026-09-24)
+
+The working record is `agent/review_2026-09-24_cost_and_attribution.md` (RV0–RV8, findings
+RVF1–RVF12); the user's four rulings are RVQ1–RVQ4 there. **What changed in the outlines**, no
+budget moved:
+
+- **§5.4 (RVQ1).** Step 1 no longer says no state before the halt fixes the cost: the trajectory,
+  and its cost, are fixed before the inference and computable from outside, and what the network
+  lacks is any mechanism that computes or reads the cost during the inference. Step 2 adds that
+  nothing in the network anticipates its own cost and that whether an anticipation could be exact
+  is not argued. The proxy bullet no longer says a non-contracting map oscillates or diverges:
+  without a contraction, convergence is not guaranteed. A22 gains the finding.
+- **§§4.2.2–4.2.4, 5.2 (RVQ2).** The gain over the literal listener is split: on the minimum class
+  tempering earns 0.123 and the utility level 0.207 of the 0.331; pooled over both classes the model
+  (0.819) does not improve on the tempered control (0.830), reported in §4.2.3 without explanation.
+  §4.2.4's displacement is measured from the tempered control, whose span-B component Eq. (24)'s
+  limit doubles: +0.92 and +1.17 against data −0.04 and +0.84. §5.2's hedged causal statement names
+  that base; its overshoots (+0.97, +0.32) are model − data and do not move.
+- **Central claim, §§5.1, 5.7 (RVQ3).** The logarithmic saving is a conditional design argument —
+  a stated search task, cuts balanced at every depth, a bound per level — and not a derived bound;
+  it still leads, since it needs no datum. One balanced cut is the first step of a balanced search,
+  not the search. φ_a is one real-valued log-odds unit and χ_D the domain its sign selects; the
+  first underived item now puts the involution's reference point on that unit.
+- **§5.5, §5.1 move 3, central claim, background opening (RVQ4).** §5.5 is *What an algorithmic
+  account specifies*: three questions the computational level leaves unspecified, the tempering
+  instance dropped and the read-out instance restated over the variables each read-out is over.
+  Move 3 and the central claim say the construction infers a field configuration and that locating
+  its peak is a further operation; position is what the architecture "comes closest to supplying".
+- **§5.6, §6 item 1, background §§2.2, 2.4 (agent, factual).** n reaches the step count through the
+  start as well as through θ_u\*; the conclusion separates the network the proof covers from the
+  relay network whose locality holds at every m; Rao and Ballard's model satisfies locality by
+  Bogacz's account and Friston's (2005) does not fully; the subtractive-error sentence is narrowed
+  to what the Gaussian buys.
+
 ## 18. CX7: cost in the dynamics, a new §5.4 (2026-09-24)
 
 The working record, closed, is `agent/history.md` §19 (CX7); the position is decision A22. **What

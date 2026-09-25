@@ -60,9 +60,10 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
      specifies representations and a process running under those constraints**: message passing,
      state and error units, locality, a basis of fixed dimension. A pattern is an algorithmic-level
      peculiarity **when the computational goal does not entail it**. §5.5 extends that definition
-     by one step, and the clause belongs here rather than there: a question can fail to be
-     **posable** at the computational level at all — not answered wrongly, but unaskable, because a
-     theory that fixes only the goal supplies nothing for the question to be about. Name the
+     by one step, and the clause belongs here rather than there: a question can be **left
+     unspecified** at the computational level — not answered wrongly, but not settled, because a
+     theory that fixes only the goal says nothing about the resources and representations the
+     question is about. Name the
      extension in a clause and leave its instances to §5.5. **Never write that the computational
      level is wrong, or that such a question refutes RSA**; neither follows, and both are the
      natural misreading.
@@ -447,13 +448,17 @@ to them rather than floating free.*
  
 - **The scoping sentence.** No measurement shows that cortex minimizes one objective rather than
   several; locality is a desideratum imported from what neurons plausibly can do rather than a
-  measured constraint on cortical inference, and the field treats it as optional — Rao and Ballard
-  (1999) do not impose it, Whittington and Bogacz (2017) show it can be met, Millidge, Seth and
-  Buckley (2021) survey how much of the framework survives when it is enforced; and nothing
+  measured constraint on cortical inference, and the field treats it as optional — Rao and
+  Ballard's (1999) model satisfies it and Friston's (2005) does not fully (Bogacz, 2017), Whittington
+  and Bogacz (2017) show it can be met, Millidge, Seth and Buckley (2021) survey how much of the
+  framework survives when it is enforced; and nothing
   independently establishes that cortical densities are Gaussian.
 - **One further sentence on commitment 3, because it is more load-bearing than it looks.** The error
-  unit — the object the architecture is built around — is a *subtraction* only because the densities
-  are Gaussian. A non-Gaussian generative model would not yield subtractive error units at all.
+  unit — the object the architecture is built around — has the form it has here because the
+  densities are Gaussian: a linear, precision-weighted subtraction, whose squares make up the
+  quadratic objective of §2.3. The subtraction alone is not special to the Gaussian (a Poisson
+  likelihood with a log link has score $y-e^{\eta}$, also an observation minus a prediction); the
+  linearity, the precision weighting and the quadratic objective are what commitment 3 buys.
   **Cross-refer forward to §2.7's negative-firing-rate problem**, which is the same issue seen at the
   circuit level.
 - **And the further approximation §3.6 turns into a choice of read-out.** Bogacz (2017) goes one
@@ -527,9 +532,10 @@ Part II.*
 - **Where the project sits, and why that placement is earned.** Whittington and Bogacz (2017) show a
   predictive-coding network with strictly local Hebbian plasticity approximates backpropagation —
   the standard this project holds itself to. Millidge, Seth and Buckley (2021) survey how much of
-  the framework survives when locality is enforced rather than assumed. Rao and Ballard (1999), the
-  architecture's ancestor, do not impose it — which is itself evidence that the field treats locality
-  as optional.
+  the framework survives when locality is enforced rather than assumed. Rao and Ballard's (1999)
+  model, the architecture's ancestor, satisfies it, while Friston's (2005) does not fully and needs
+  Bogacz's (2017) modifications to — so the field has built canonical models on both sides of the
+  constraint, which is the sense in which it treats locality as optional.
 - **The move that makes the first question a thesis rather than a methodological note.** Locality is
   **generative**, though not of the utility basis's dimension: §3.5 chooses \(m=2\) for tilt and
   width, and locality is what that choice puts under strain, since at \(m>1\) the update of

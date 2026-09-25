@@ -45,7 +45,8 @@ work**, which is why they stand after the paragraph above and not in place of it
 The case for a level representing within-trial competition among alternatives therefore does not
 rest on the criterion failing (R2). It rests on what such a
 level would save:
-- branching logarithmic in the predicate's granularity;
+- branching logarithmic in the predicate's granularity, if its cuts stay balanced at every depth
+  (§5.1: a conditional design argument, not a derived bound);
 - one dimension per level, so plasticity is local without the relay;
 - an affine generative map that keeps the convergence proof;
 - a read-out that needs no normalization across the scale (§5.1);
@@ -56,12 +57,14 @@ level would save:
   in §5.1, not measured).
 
 **How the two criteria are read.** §5.1 states the reading, as a conjecture and not a measurement:
-**the position criterion is what this architecture supplies natively, and consistent shift is what
-the absent level would supply** — with neither standing as the criterion of strengthening on its
+**the position criterion is what this architecture comes closest to supplying — one operation on
+the settled field, locating its peak (§5.6) — and consistent shift is what the absent level would
+supply** — with neither standing as the criterion of strengthening on its
 own, which is why §4.1.2 takes the conjunction. It is argued from §4.1.5's opposed floors and §4.1.4's
 rows, under the guard §4.1.2 sets on $n$ and $Z$, and nothing here measures a level that is not built.
 **It is the second motivation and not the first.** The case for the level is the complexity it
-saves (R2), which is derived from the construction and needs no datum; the conjecture is about what
+would save (R2), a conditional design argument from the construction that needs no datum; the
+conjecture is about what
 *this* architecture cannot deliver, and whether strengthening must be a shift at all rests on a
 baseline that is a construct in every account that has one (§5.1). Do not let the order slip.
 
@@ -154,15 +157,15 @@ The raise history of this table is in `revisions.md` §16.
 | 4.1.5 The plane, and where both conditions hold | 530 | The conditioned counts; the band; the floors; the V; Eq. (41) |
 | 4.1.6 What the verdict needs, against what θ\* costs | 100 | The conjunction's threshold, the halt, and $\theta_u^\ast$'s cost |
 | 4.2.1 What is tested, and at what configuration | 150 | Adjectives at $n=4$, fitted $\Lambda$; H1 and H2 as what is tested; the untested half; the ensemble |
-| 4.2.2 Where the model matches | 170 | The fits; the half-width control; the utility level's gain; the image-type sign |
+| 4.2.2 Where the model matches | 170 | The fits; the half-width control; tempering's and the utility level's gains, apart; the image-type sign |
 | 4.2.3 Where it does not | 70 | The residuals |
 | 4.2.4 How far the utility level reaches | 110 | $\theta_u^\ast$'s sign; the displacement; the parity result |
 | **5. Discussion** | **2,460** | |
 | 5.1 What an alternatives level would have to supply | 560 | The design and its savings; what the criteria add; what is not derived; the current gain |
 | 5.2 Scale structure: what the comparison of §4.2 is worth | 360 | Why no position on H1; the one causal belief; the comparison's worth; the instinct |
 | 5.3 Realizability, halting, and the plausibility commitment | 170 | What halts; why $\theta_u^\ast$ stays the commitment; the cost |
-| 5.4 Cost in the dynamics | 250 | Why cost is raised (neo-Gricean, Relevance Theory, RSA); the true cost cannot take part; the two proxy forms; bounded optimality; the footnote on the classical limits |
-| 5.5 What an algorithmic account makes posable | 120 | Four questions the computational level cannot pose |
+| 5.4 Cost in the dynamics | 250 | Why cost is raised (neo-Gricean, Relevance Theory, RSA); the true cost takes no part, having no mechanism in the network; the two proxy forms; bounded optimality; the footnote on the classical limits |
+| 5.5 What an algorithmic account specifies | 120 | Three questions the computational level leaves unspecified |
 | 5.6 Limits | 870 | The numerical substrate, and what the simulation costs; the architecture; stipulations; the read-out's locality |
 | 5.7 Predictions | 130 | Exposure; granularity; the midpoint cut; the lexical strength of a class |
 | **6. Conclusion** | **265** | |
@@ -847,10 +850,11 @@ every number attributed to Xiang et al. is cited and printed by no cell (S-5). *
   of shape across items moves by hundredths where a mass above a fixed cut changes status
   outright. The maximum class's *threshold* is not identified by these data at all: its fit
   stays between $0.989$ and $0.993$ for every cut from $\zeta=-1.0$ to $+4.0$, and its literal,
-  tempered and settled beliefs agree to three decimals. The utility level is what earns
-  the minimum class's fit — the literal listener reaches $0.103$ against the model's $0.434$, a gain
-  of $0.331$, while on the maximum class it reaches $0.992$ against $0.993$, so that class is fitted
-  by its entry alone. And the image-type difference has the right sign and the right home: $-0.18$
+  tempered and settled beliefs agree to three decimals. Two steps separate the literal
+  listener from the model, and F.3 prints each: on the minimum class the literal listener reaches
+  $0.103$, the tempered control $0.227$ and the model $0.434$, so **tempering earns $0.123$ of the
+  $0.331$ and the utility level $0.207$**. On the maximum class all three read $0.992$–$0.993$, so
+  that class is fitted by its entry alone. And the image-type difference has the right sign and the right home: $-0.18$
   against a measured $-0.83$ in the minimum class, $+0.03$ against $+0.09$ in the maximum.
 
 ### 4.2.3 Where it does not (about 70 words)
@@ -860,7 +864,8 @@ every number attributed to Xiang et al. is cited and printed by no cell (S-5). *
   image-type difference is about a fifth of the measured size. The between-class gap is $+1.33$ and
   $+0.41$ measured against $+0.44$ and $+0.22$ modelled. And the model displaces belief further from
   the elicited prior than the data do in both conditions ($+3.37$ against $+2.40$ under shapes,
-  $+2.43$ against $+2.11$ under artifacts). **Reported, and not explained.**
+  $+2.43$ against $+2.11$ under artifacts). Pooled over both classes the utility level does not
+  improve on the tempered control: $0.819$ against $0.830$ (F.3). **Reported, and not explained.**
 
 ### 4.2.4 How far the utility level reaches (about 110 words)
 
@@ -871,11 +876,13 @@ every number attributed to Xiang et al. is cited and printed by no cell (S-5). *
   belief: in the minimum class the settled field is within $4.9\times10^{-3}$ of Eq. (24)'s limit,
   which is **the same from either sign**, and scoring that limit instead changes no $R^2$ in the
   third decimal.
-- **The displacement, measured.** Eq. (24) doubles the $\operatorname{span}B$ component of
-  $\ell_0-\varphi_L$, displacing the read-out up the scale. Measured from the literal listener, that
-  displacement is $+1.12$ under shapes and $+1.39$ under artifacts — **near-constant** — while the
-  data are displaced $+0.16$ and $+1.06$. In the maximum class both are within $0.02$ of zero.
-  Report it here; §5.2 says what we think it causes.
+- **The displacement, measured.** Eq. (24)'s limit doubles the $\operatorname{span}B$ component of
+  the tempered control $\tfrac12(\ell_0-\varphi_L)$, displacing the read-out up the scale, so the
+  utility level's displacement is measured from that control (F.9(d)): $+0.92$ under shapes and
+  $+1.17$ under artifacts — **near-constant** — while the data sit $-0.04$ and $+0.84$ from it.
+  Tempering alone moves the read-out $+0.20$ and $+0.22$ from the literal listener. In the maximum
+  class the utility level's displacement is $+0.03$ and $+0.12$. Report it here; §5.2 says what we
+  think it causes.
 - **The parity result at this resolution (S-7).** By §3.5 the even column is the width axis. An
   entry cut at the log-odds midpoint has no even component, and at $n=4$ the two absolute entries
   have identical tilts and differ in the even coordinate alone: a parity argument in the family of
@@ -893,8 +900,10 @@ results point at which design is the tractable one.
 
 **And state the order of the motivations in the frame, because the section carries two and they are
 not of equal weight.** **The complexity saving leads**, and it leads for an epistemic reason rather
-than a rhetorical one: it is derived from the construction and needs no datum to be true, so it
-survives a change of data. R2 rests the level on it and **R2 stands**. The conjecture about
+than a rhetorical one: it is argued from the construction and needs no datum, so it survives a
+change of data. It is a **conditional design argument**, holding if the conditions the next bullet
+states are met, and the section calls it that and not a derived bound. R2 rests the level on it and
+**R2 stands**. The conjecture about
 consistent shift is the **second** motivation, and the bullet below says what keeps it second.
  
 **The design: resolution as a negative search.** State the position, because it is what makes the
@@ -911,8 +920,14 @@ remaining obligations answerable rather than open.
   resolving $n$ atoms (Eq. A5) presents $n+1$ distinguishable states, $n=10$ by default and capped
   at $202$ by the grid. The **inventory at a level is the branching factor**, not the domain. The
   thesis that no inventory exceeds two members is therefore the thesis that resolution branches
-  binarily, and the comparison it invites is $O(n)$ against $O(\log n)$ in the granularity — which
-  at $n=10$, let alone $202$, is not a distinction without a difference.
+  binarily. **What that would save is conditional, and the conditions are stated rather than
+  assumed:** a search task, locating the state among the $n+1$ by one binary opposition per level;
+  cuts that stay balanced at every depth, so that the depth is $\lceil\log_2(n+1)\rceil$; and a bound
+  on the work each level does. Under those conditions a cascade resolves the scale in $O(\log n)$
+  levels where eliminating states one at a time takes $O(n)$ — at $n=10$, let alone $202$, not a
+  distinction without a difference. Neither side is measured here: no search task is built, and
+  Appendix G counts the present simulation's work in $K$, $m$ and $\theta_u$ with no rule setting
+  $K$ by $n$ (§5.6's proposal would supply one).
 - **The inventory at any one level is binary.** In place of a flat $\{$*no*, *some*, *all*$\}$, the
   same three-way partition is reached by a cascade of two complementary oppositions — which is the
   design reading of the commitment Appendix D §2 states, that the inventory holds at least
@@ -932,8 +947,9 @@ remaining obligations answerable rather than open.
   further to resolve; but it means ⟨*no*, *some*, *all*⟩ does not itself demonstrate the
   logarithmic claim. **The inventory that would is one with an interior cut, and *most* is the
   clean case:** true where $s>\tfrac12$, hence a cut at $\zeta=0$, the exact midpoint of the
-  log-odds coordinate and the first step of a balanced search. Present ⟨*some*, *most*, *all*⟩ as
-  the prediction rather than the three-word scale as the demonstration.
+  log-odds coordinate and the first step of a balanced search. One balanced cut is not a balanced
+  search: the logarithmic depth needs balanced cuts at every depth. Present ⟨*some*, *most*, *all*⟩
+  as where the condition first becomes testable, not as where it is met.
 - **The dimension and locality payoff, which is an argument and not a measurement.** Appendix C
   Eq. (C2) fixes the dimension by the threshold count, and Appendix C §5 shows that, within bases of
   definite parity, $m\ge2$ is forced exactly when one inventory carries two pairs of opposite
@@ -981,16 +997,19 @@ remaining obligations answerable rather than open.
 
 **What this dissertation does not derive, stated plainly.** The design above places the
 order-reversing involution at a new alternatives-level map $g_a$ rather than at $g_L$ — **lowercase
-because the level's state $\varphi_a$ has the same type as $\chi$**, an indicator selecting a
-subdomain of the scale rather than a graded field, so that $\varphi_a=\chi_D$ for the domain $D$ a
-level passes down — and **the algebra of that migration is not worked out here.** Four things
+because what the level passes down has the same type as $\chi$**, an indicator selecting a
+subdomain of the scale rather than a graded field, $\chi_D$ for the domain $D$. **The level's state
+is not that indicator.** $\varphi_a$ is the one real-valued log-odds unit of the level's opposition
+(the bullet on the second condition above), and $\chi_D$ is the domain its sign selects: a state and
+what is decoded from it, which coexist — and **the algebra of that migration is not worked out
+here.** Four things
 remain, and naming them is the point of saying so:
  
   1. **The reference point of $g_a$'s involution on the restricted domain** — the analogue of
-     $\ell_0$ in Eq. (9), not derived. The type constraint narrows it: an indicator-valued
-     $\varphi_a$ takes an indicator reference point rather than a log-density, and $\chi_D$ is the
-     natural candidate, being the same object obligation 3 turns on. Whether that is correct is the
-     algebra.
+     $\ell_0$ in Eq. (9), not derived. On the log-odds unit the involution is $x\mapsto c-x$ with $c$
+     a real offset; what the restriction adds is where it acts, through $\chi_D$, the same object
+     obligation 3 turns on. Whether $c$ is fixed by the domain, as $\ell_0$'s role in Eq. (9)
+     suggests, is the algebra.
   2. **What $g_L$ becomes** once it no longer carries the involution, and the sign of its Jacobian,
      since $g_L'=-I$ is currently what makes $\varepsilon_L$ reach $\varphi_S$ inhibitorily.
   3. **Whether Appendix D §3's argument for the exclusion convention re-anchors at $g_a$.** That
@@ -1037,14 +1056,17 @@ first motivation and needs no datum; what follows is the second, and it stays se
      criterion is the one its architecture supplies, and does not treat the shift's fragility as
      the finding.
   3. **Position is mostly what this architecture instantiates.** Two reasons, of different kinds.
-     *It is stated on the object the construction represents*: a mode is what commitment 3 says the
-     system carries (§3.6), so "where the settled field peaks, relative to the cell of *all*" is a
-     question this architecture answers natively, in either read-out — which is why the two position
+     *It is stated on the object the construction infers, plus one operation*: the construction
+     infers a field configuration, the settled $\varphi_S^\ast$ (§3.6), and "where that field
+     peaks, relative to the cell of *all*" asks for its peak, which is a further operation on the
+     field and not something the dynamics deliver; §5.6's open question says what finding it costs.
+     Needing no normalization, it is the question this architecture comes closest to answering,
+     in either read-out — which is why the two position
      criteria agree in every cell of the plane and in every row of Code Cells 2 and 2b, with the
      single exception move 5 names. *The shift criterion is not like that*: it is a difference
      between two normalized masses taken against a baseline, and the fourth qualification in the
-     design's list above already says binarity does not remove that and no level carries it as one unit. So the criterion this architecture supplies natively is position, and the criterion that
-     needs machinery beyond it is shift.
+     design's list above already says binarity does not remove that and no level carries it as one unit. So the criterion this architecture comes closest to supplying is position, at the cost of
+     locating a peak, and the criterion that needs machinery beyond it is shift.
   4. **The guard, in the same breath, because 3 overstates without it.** Where the baseline already
      meets the position criterion nothing is shown by the model meeting it (§4.1.4), and that is
      every prior but the delta-like one, at both lexical strengths; the delta-like row is the one
@@ -1134,8 +1156,8 @@ hedged causal statement, and says what the comparison is worth.
   looks.** What the maximum class establishes is a lower bound on $\Lambda$ and nothing above it —
   not that its threshold is endpoint-anchored, which is read in from the scale structure rather
   than measured.
-- **What we think the amplification causes.** **We think the near-constant displacement of §4.2.4 is the cause of
-  the minimum class's misfit**: the amplification the utility level supplies is close to insensitive
+- **What we think the amplification causes.** **We think the near-constant displacement of §4.2.4, measured from the
+  tempered control, is the cause of the minimum class's misfit**: the amplification the utility level supplies is close to insensitive
   to the manipulation the experiment actually ran, so it overshoots by $+0.97$ where the data barely
   move and by $+0.32$ where they move nearly as far.
   **Say it as a belief about this phase, and not more.** It is the one causal statement §5.2 makes,
@@ -1241,13 +1263,16 @@ a system of the kind instantiated here.*
 - **The cost in question is Appendix G's**, read as this instantiation's representation of the
   process's cost (§5.6 says what it is not). **The position, in three steps** (A22):
   1. **The true cost is a functional of the trajectory.** The step count, and the settling time it
-     counts, belong to the whole trajectory, halting step included, so no state before the halt
-     fixes them. A cost that is a function of the current state is outside this: it can take part
-     without self-reference.
+     counts, belong to the whole trajectory, halting step included. Given the dynamics, the start
+     and the stopping rule, that trajectory is fixed before the inference runs and its cost can be
+     computed from outside (the footnote's point); **what this network lacks is any mechanism that
+     computes or reads the cost during the inference.** A cost that is a function of the current
+     state is outside this: it can take part without self-reference.
   2. **Letting it take part makes the system self-referential, not paradoxical.** The present state
-     would have to be driven by the completed trajectory, a future self. The obstacle is causal, and
-     it stands with locality set aside: a system can be driven by an *anticipated* future state, not
-     an actual one (Rosen, 1985; Abramsky et al., 2026).
+     would have to be driven by the completed trajectory, a future self. With locality set aside
+     the obstacle is causal: a system can be driven by an *anticipated* future state, not an actual
+     one (Rosen, 1985; Abramsky et al., 2026), and this network contains nothing that anticipates
+     its own cost. Whether an anticipation could be exact is not argued here.
   3. **So within the inference in progress, a stipulated cost term is not the true cost.** Once a
      term takes part, the true cost is the modified system's; the two agree only at a fixed point,
      $C=\mathrm{cost}(\text{dynamics given }C)$, which the running inference does not compute.
@@ -1258,8 +1283,9 @@ a system of the kind instantiated here.*
   loop through $\theta_u^\ast$ (Appendix B) that is one of determination, not of time. (b) **A
   cross-trial proxy**, the realized cost of completed inferences fed to the slow timescale, which
   needs the halting signal §5.3 leaves as a direction. Iterated, (b) reaches step 3's fixed point
-  as an eigenform (Kauffman, 2005) if the map is a contraction, and oscillates or diverges
-  otherwise: what the running inference cannot compute, the sequence of inferences can approach.
+  as an eigenform (Kauffman, 2005) if the map is a contraction; without one, convergence is not
+  guaranteed, though it can still occur: what the running inference does not compute, the sequence
+  of inferences can approach.
 - **The nearest established position, in one sentence.** Bounded optimality optimizes a program
   against its cost from outside, by its designer or architecture, not by the running program
   (Russell & Subramanian, 1995); resource-rational analysis sets cost at the same level (§5.5).
@@ -1271,33 +1297,36 @@ a system of the kind instantiated here.*
   unfolding in time rather than as paradox, see Hofstadter (1979) and Abramsky et al. (2026).*
 ---
  
-## 5.5 What an algorithmic account makes posable (about 120 words)
+## 5.5 What an algorithmic account specifies (about 120 words)
 
-- **The claim.** Every question §§5.1–5.3 turn on is **not posable at the
-  computational level**. A computational theory states a goal and is silent on resources and
-  representation, so the questions do not have wrong answers there — they have no answers, because
-  they cannot be asked. Four instances, each naming where it arose:
-  - **There is one posterior**, so there is **no choice between a delta and a normalized read-out**,
-    and none of §3.6's costs is incurred by anything.
-  - **$\theta_u^\ast$ is the answer however long the flow takes toward it**, so the gap §5.3 makes
-    its subject — between where the verdict is reached and where learning would stop — does not open.
-  - **There is no computation whose end could be asked about**, so halting is not a question about a
-    theory of that kind, and a tolerance is not a candidate answer to it.
-  - **The $\tfrac12$ tempering has no counterpart.** It comes from representing the utility level
-    at finite $\sigma_S$, and §4.1.4 has to decompose $\Delta$ around it; a theory that fixes only
-    the posterior has nothing there to decompose.
+- **The claim.** The questions §§5.1–5.3 turn on are ones the computational level **leaves
+  unspecified**. A computational theory states a goal and is silent on resources and
+  representation, so it does not settle them; they are settled once an algorithm is specified.
+  Three instances, each naming where it arose:
+  - **Which variables are carried, and what is read off them.** A computational theory fixes a
+    posterior over the world state; it does not say whether a system carries that posterior
+    normalized over the scale ($q$, §3.6) or a point estimate over its own hidden variables (the
+    delta over $x=(\varphi_S,\varphi_u)$) with a statistic read off it. The two are over different
+    variables, so the choice is not between two versions of one posterior, and §3.6's costs belong
+    to it.
+  - **How long the flow takes.** The goal fixes $\theta_u^\ast$ and not the time the flow takes
+    toward it, so the gap §5.3 makes its subject — between where the verdict is reached and where
+    learning would stop — is not settled there.
+  - **Halting.** A goal specifies no computation whose end could be asked about, so it leaves
+    halting unspecified, and a tolerance is not something it supplies.
 - **What that licenses, stated as an extension and not a new thesis.** The background's opening
   defines an algorithmic-level peculiarity as **a pattern the computational goal does not entail**.
-  These four extend it by one step: **a question the computational level cannot pose**. Say that the
-  definition extends; do not restate it as a second claim.
+  These three extend it by one step: **a question the computational goal leaves unspecified**. Say
+  that the definition extends; do not restate it as a second claim, and do not strengthen it to a
+  question the computational level cannot pose, which nothing here shows.
 - **The counterargument, which should be raised here rather than left to a reader.**
   Resource-rational analysis brings costs into a computational-level analysis (Griffiths, Lieder &
   Goodman, 2015; Lieder & Griffiths, 2020), which looks like a direct denial. It is not: **it prices
-  a process, and so still needs one specified.** The questions are posable there **because an
+  a process, and so still needs one specified.** The questions are settled there **because an
   algorithm has been supplied** — which is this section's point, arrived at from the other side.
 - **Guard, and it is the whole risk of the section.** Do not say the computational level is
   **wrong**, and do not say these questions **refute RSA**. Neither follows, and both are the
-  natural misreading: the claim is about what a level can be asked, not about what is true.
+  natural misreading: the claim is about what a level specifies, not about what is true.
 ---
  
 ## 5.6 Limits (about 870 words)
@@ -1362,8 +1391,10 @@ read as a limit of the architecture.
   process's cost through this instantiation and is not the architecture's complexity. Appendix G
   attributes each factor to the equations every instantiation shares or to this instantiation's
   choices: the $\theta_u^2$ enters through the separation §4.1.6 reports, while the serial
-  arithmetic and the step size are choices. $n$ enters the cost only through $\theta_u^\ast$, and
-  under the proposal above through $K$ as well.
+  arithmetic and the step size are choices. $n$ enters the condition number only through
+  $\theta_u^\ast$, and the step count through the start as well: at fixed $\theta_u$ the spectrum
+  does not move while the slowest mode's share of the start does, and the step count with it (Code
+  Cell G, block 2b). Under the proposal above $n$ would enter through $K$ too.
 
 **The architecture.**
 
@@ -1428,7 +1459,7 @@ read as a limit of the architecture.
 - **Granularity should shift the override threshold**, $\Lambda_{\mathrm{crit}}\approx\alpha\log2n$.
 - **Scales providing interior cuts should partition the log-odds coordinate near-uniformly**, with
   *most* at $\zeta=0$ the confirming instance; ⟨*some*, *most*, *all*⟩ is where the search thesis of
-  §5.1 is testable, and §5.1's dimension argument already covers that cascade, its three levels
+  §5.1 first becomes testable, one balanced cut being its first step, and §5.1's dimension argument already covers that cascade, its three levels
   being complementary pairs on their own domains.
 - **The lexical strength of a class, from its scale structure (§§4.2, 5.2).** A predicate anchored at its
   scale's own endpoint should behave as a hard entry — its fit putting no upper bound on $\Lambda$ —
@@ -1446,7 +1477,9 @@ read as a limit of the architecture.
 1. A field-valued world state on a dense scale, with a soft lexical entry competing additively
    against the world prior in the same log-density — a placement of the prior the architecture
    commits to, not one its construction forces (§3.2) — admits a closed-form stationary point and a
-   recurrent network that provably reaches it, with plasticity local at every $m$.
+   recurrent network that provably reaches it. Its plasticity is local at $m=1$, and at every $m$
+   with Appendix E's relay, whose added timescale the proof does not cover: the relay's stability is
+   shown for a subsystem (Eq. E5) and measured for the whole network.
 2. That network moves belief mass away from the *all* reading without representing any alternative,
    by amplifying the observed entry's own projection under a gain fixed by exposure. The effect
    therefore does not by itself diagnose a within-trial alternatives computation.

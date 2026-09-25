@@ -356,6 +356,18 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   2026-09-24; I14 (whose cost is the one in question).
 - Evidence: `agent/history.md` §19, CX7 (the user's argument, the corrections, the
   literature review with what was verified and what was not, the rulings).
+- Findings added later:
+  - **2026-09-24, an external review corrects step 1 and one clause of the proxy bullet (user
+    ruling RVQ1, `agent/review_2026-09-24_cost_and_attribution.md` RVF1).** A trajectory functional of a deterministic system is fixed
+    before execution — the footnote's own "predictable from outside" says so — so "no state before
+    the halt fixes it" is false. The position is now **architectural**: the cost is fixed in advance
+    and computable from outside, and this network has no mechanism that computes or reads it during
+    the inference. Step 2 keeps the anticipated/actual distinction, adds that nothing in the network
+    anticipates its own cost, and says whether an anticipation could be exact is not argued. The
+    decision's own "reaches the fixed point … if the map is a contraction" was right; the outline's
+    "and oscillates or diverges otherwise" was not (contraction is sufficient, not necessary), and
+    now reads "without one, convergence is not guaranteed". Applied to `sections_3-6.md` §5.4 and
+    the word table.
 
 ---
 
@@ -661,6 +673,13 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   approved the wording). "Nothing here requires a normalization across the word-form units, which
   would not be local" read as a locality claim; it now says Eq. (A4) involves no normalization but
   does sum over the units (user, 2026-09-13).
+  - **2026-09-24, the complexity saving is a conditional design argument (user ruling RVQ3, `agent/review_2026-09-24_cost_and_attribution.md`
+    RVF3).** One midpoint cut is not a recursively balanced partition, and no O(n) baseline is set,
+    so the outline's "O(n) against O(log n)" was not derived. It is now stated with its conditions
+    (a search task of one binary opposition per level, cuts balanced at every depth, a bound on the
+    work per level) and still leads R2's case, because it needs no datum. The level's state φ_a is
+    one real-valued log-odds unit — the form this entry's conditional wording already requires —
+    and χ_D is the domain its sign selects; the outline had called φ_a both.
 
 ### B1. The shift Δ_y is measured against q_lit, the untempered literal posterior
 - Status: Settled; supersedes the θ_u = 0 control as baseline
@@ -1000,6 +1019,12 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     central claim, as PP10 of `revisions.md` Sec. 11.
 - **2026-09-23: the third clause is now the constructive claim's lead, under B12.** B11 stays the
   reading; B12 is what the paper does with it, and the measurement that made it quotable.
+- **2026-09-24, "natively" narrowed (user ruling RVQ4, `agent/review_2026-09-24_cost_and_attribution.md` RVF4).** The outline's reason
+  that position is native — "a mode is what commitment 3 says the system carries" — predated the
+  2026-09-23 posterior/read-out repair. The construction infers a field configuration; locating
+  that field's peak is a further operation (§5.6's open question on the read-out). Move 3 of §5.1
+  and the central claim now say position is what the architecture "comes closest to supplying", at
+  the cost of locating a peak. The reading itself is unchanged.
 
 ### B12. The constructive claim leads with the position criterion, baseline cells left out
 - Status: Settled for the paper. It changes **no criterion and no measurement**: B2, B8 and C7 stand
@@ -1532,6 +1557,19 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     1407.77) and to 9.8e-16 and 9.6e-16 over the 45 + 90 Code Cell G prints. Applied to `code cell 1`
     and E1 by lifting (coupling 9). Appendix G §1 gains the blockwise form (unnumbered), §2's row
     becomes Θ(Km²), Eq. (G3) becomes O(Km(m + (θ_u² + 2) log(a/tol))), and the §5.6 bullet follows.
+  - **2026-09-24 (agent, from an external review; `agent/review_2026-09-24_cost_and_attribution.md` RVF6, RVF7), two corrections to §3's
+    analysis, neither moving a result.** (i) `infer` updates the error units first and the states
+    from the updated errors, so a step is not forward Euler on the combined system. Per eigenvalue λ
+    of H the implemented step is a 2 × 2 map of determinant 1 − dt/τ_ε and trace
+    2 − dt/τ_ε − dt²λ/(τ_ε τ_φ); under `infer`'s guards both factors are real and in [0, 1). Its slow
+    factor predicts Code Cell G's measured decay to within 0.0002 in every row (1.0333 against
+    1.0334 at κ = 6), which the leading-order 1 − 1/(8κ) did not; Code Cell G prints it, and the code
+    comment in `infer` (main and E1) now argues from the recurrence. Eq. (G2) is unchanged, as the
+    leading order. (ii) "n enters only through θ_u\*" was too strong: at θ_u = 5 and K = 101, n = 2,
+    10, 100 give 5,296, 5,314, 5,103 steps at the same spectrum and the same start derivative a,
+    because the lexical field sets the slowest mode's share a₁ (7.47, 8.12, 3.04), and
+    log(a₁/tol)/(−log μ₁) + 10 reproduces each count to within one step. Code Cell G block 2b prints
+    it; Appendix G's opening and §3, and the §5.6 bullet, say so.
 
 ---
 
@@ -2357,6 +2395,16 @@ becomes live if a later phase unfixes σ.
 | CF5 | Code Cell E1 `relay()` docstring; Code Cell E2 comment above the relay checks | the m-fold pooling "is the sharing Bogacz's Sec. 5 rejects for Sigma" | His §5 removes a matrix inverse. Appendix B dropped this claim for that reason and E.2 says so; the two code comments kept it. |
 | CF6 | Text cell 3 Eq. (18); E.1 under Eq. (E3) | error units cite "Eqs. 53–54"; Θ tied to Θᵀ cites "Eqs. 53, 56" | Minor: the error units are his Eq. (54); Θᵀ appears in Eq. (53) and Θ in Eq. (54). |
 
+**CF2 and CF3 resolved 2026-09-24** (agent, from an external review that named both; `agent/review_2026-09-24_cost_and_attribution.md`
+RVF8). Text cell 3 §8.3 now says Bogacz gives an analysis of the same kind for a different
+subsystem, an error node and its interneuron with φ held constant (his §5.1, Eq. 66), and that the
+method is adopted and not the result. Appendix B now says the division matches his in form only: he
+argues φ converges to values maximizing F under separated timescales (his §6) without a concavity
+claim, which his g(v) = v² would not support, and his parameters never converge (his §2.4). The
+same review found background §§2.2 and 2.4 and `appendix_E.ipynb` E.2 saying Rao and Ballard (1999)
+did not impose locality; the tutorial (line 37) says their model fully satisfied it and Friston's
+(2005) did not. Corrected at all three sites.
+
 ---
 
 ## E. Quantity trace register
@@ -2390,6 +2438,12 @@ prose would change. Text cell 3 (inventory, commitment 7, Eq. 20, §8.3) defines
 is what §8.3's characteristic equation needs, and every quoted λ_max(H) is that one. The two
 differ: 3.0000 against 2.0647 at θ_u = 1, and 810.6907 against 809.8088 at θ\* (V2). Eqs. (21)–(22)
 are unaffected, since the quadratic form is the same in either coordinates.
+**Finding 2026-09-24 (agent, external review; `agent/review_2026-09-24_cost_and_attribution.md` RVF5):** that last clause holds only with
+the matching pairing, and Text cell 3 wrote neither. Eqs. (21)–(22) wrote an ordinary vᵀ∇²F v while
+§8 defines ∇²F as the metric operator G⁻¹∂²F/∂x², which is self-adjoint in G and not symmetric: at
+θ\* the ordinary symmetric part of H has least eigenvalue −0.7109 while H's is 1.0000. The equations
+now write the coordinate Hessian ∂²F/∂x², and §8 says the form equals the G-pairing of ∇²F and that
+H is positive definite in G.
 **Resolved 2026-09-23** (user approved the §8 restructure, `agent/review_2026-09-23_proof_scope.md` PS7): Text cell 3 §8 now states
 the metric G = diag(W, I_m) and defines H in it, and commitment 7 and §8.3 cite that H.
 
@@ -2757,3 +2811,17 @@ Classed by the agent.
   matrix's largest eigenvalue, relative to it, over the 45 spectrum configurations and over 90 more
   at σ (L, S, u) ∈ {(2, 1, 1), (1, 3, 1), (2.5, 4, 1.5)} with an orthonormal, a seeded random and a
   rank-deficient basis set on probe networks for the check alone; class (d): `GENERAL_SIGMAS`.
+
+**E21. The quantities the 2026-09-24 review adds to Code Cells F and G (`agent/review_2026-09-24_cost_and_attribution.md` RV1,
+RV2).** Classed by the agent.
+- **Code Cell F, (c) a control:** the tempered control, θ_u = 0 at the model's σ, field
+  ½(ℓ₀ − φ_L) (agent.md §3.3's second object), now printed in F.2's profiles, F.3's R² and F.9(d)'s
+  displacements under that name. **(b) reported statistics:** F.3's "tempering" (tempered − q_lit)
+  and "utility" (model − tempered) columns, which replace the single "utility gain"; F.9(d)'s
+  displacements measured from the tempered control, with tempered − q_lit beside them.
+- **Code Cell G, (b) reported statistics:** 'recurrence', −8κ(H) log μ₁ with μ₁ the slow factor of
+  `infer`'s update order at λ_min(H) = 1 (Appendix G §3), beside the measured decay; whether every
+  mode's two factors are real, and the largest in modulus; in block 2b, λ_max(H), the start's
+  largest derivative a, the slowest mode's share a₁ read off the run, N, and the count predicted from
+  a₁. **(c) a control:** θ_u fixed at 5 for block 2b. **(d) a ladder:** `N_LADDER` (2, 10, 100).
+  No model constant changes.
