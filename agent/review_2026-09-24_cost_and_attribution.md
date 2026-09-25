@@ -124,7 +124,8 @@ The agent's own calls, pending user confirmation, are marked (agent) where they 
       `appendix_E.ipynb` E.2's Rao sentence (no new citation: "by Bogacz's account").
 - [x] RV7 (2026-09-24): `agent/decisions.md` — findings under A22, I14, A17, B11, E1; CF2/CF3
       resolved; E21. `thesis_outline/revisions.md` §19.
-- [ ] RV8: commit.
+- [x] RV8 (2026-09-24): committed as 91cf560. Not pushed. The record stays open in `agent/` until
+      the user confirms the agent's calls below; then it folds into `agent/history.md`.
 
 ## 5. Findings log
 
