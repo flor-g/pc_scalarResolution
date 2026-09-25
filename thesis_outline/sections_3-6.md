@@ -33,20 +33,20 @@ carries each answer.
    itself exists before any pragmatic influence; and the answer is about how this architecture
    computes the interpretation, not about how no architecture could, nor about what human
    processing does. The question asks *is*; a demonstration answers that it *need not be*.
+   **Its sub-question, how the semantic/pragmatic division is drawn, is not resolved at this
+   phase.** The lexical level is clamped by the utterance, so a semantic value, the entry, exists
+   before any pragmatic influence by construction; how the division is drawn can be resolved only
+   once $\varphi_L$ is inferred rather than clamped (§3.3 says what unclamping sets running). What
+   this phase keeps is §1.5's diagnosis, that the dispute's criteria presuppose staging.
 3. **Can patterns observed in scalar resolution be understood as algorithmic-level
-   peculiarities?** Yes, for two of the three the background names, each shown or argued in this
-   implementation; the third waits on the next phase:
+   peculiarities?** Yes, for the two the background names, each shown or argued in this
+   implementation:
    - *whether scalar implicature needs explicit competition among alternatives* — it does not
      need one to occur (the demonstration below); strengthening, the mechanism proposed for it,
      shows with it there, but not consistently;
    - *what underlies extreme-favouring resolution on complete scales* — argued from parity: the
      extreme-favouring axis is the even coordinate of the utility basis (Appendix C §5), and at
      $n=4$ the two absolute entries differ in that coordinate alone (§4.2.4);
-   - *how the semantic/pragmatic division is drawn* — **not resolved at this phase**. The lexical
-     level is clamped by the utterance, so a semantic value, the entry, exists before any pragmatic
-     influence by construction; how the division is drawn can be resolved only once $\varphi_L$ is
-     inferred rather than clamped (§3.3 says what unclamping sets running). What this phase keeps is
-     §1.5's diagnosis, that the dispute's criteria presuppose staging.
 
    §5.5 extends the third answer by one step: some questions are ones the computational level
    leaves unspecified and an algorithmic account settles.

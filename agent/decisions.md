@@ -1244,6 +1244,15 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     on it") was inaccurate and is superseded. With φ_L clamped, only the first step is sequential;
     the answer is no because φ_S and φ_u then settle together. Applied to the central claim and §6
     item 2.
+  - **2026-09-24, the semantic/pragmatic sub-question belongs to the second question (user).** It
+    was listed under the third. Moved in the central claim (answer 2 now carries it, not resolved
+    at this phase; answer 3 answers its two sub-questions) and in the background's Opening, which
+    was rewritten the same day to carry C10 and C11: the thesis as the answer to the three
+    questions, scalar resolution and scalar implicature defined before the questions use them, the
+    single feedforward pass defined in question 2, the division posed and left open there. Background
+    §2.6 now answers **no** outright; the closing bridge states the demonstrated result as
+    implicature without explicit competition and names the division as open. Background target
+    4,160 → 4,235 (Opening 245 → 320).
 
 ### C11. Scalar resolution, scalar implicature, scalar strengthening: three terms, kept apart
 - Status: Settled

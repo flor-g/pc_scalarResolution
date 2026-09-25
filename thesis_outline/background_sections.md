@@ -8,10 +8,11 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
  
 ## Scale and argumentative shape
  
-- **Target length: approximately 4,160 words.** The budget follows what the sections have to carry
+- **Target length: approximately 4,235 words.** The budget follows what the sections have to carry
   (raise history: `revisions.md` §16).
-- **Opening (about 245 words).** The explanandum; the three questions the dissertation answers; and
-  Marr's levels, fixed by contrast with RSA.
+- **Opening (about 320 words).** The explanandum and its two terms; the three questions whose
+  answers are the thesis, the second's sub-question left open; and Marr's levels, fixed by contrast
+  with RSA.
 - **Part I — What scalar resolution is asked to explain, and why the existing division does not
   settle it (about 2,115 words).** Establishes two things §§3–6 need and one they dissolve: that
   every existing account computes strengthening over a *represented alternative set*; that the
@@ -33,25 +34,34 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
   documents agree.
 ---
  
-# Opening: three questions, and the level they are asked at (about 245 words)
+# Opening: three questions, and the level they are asked at (about 320 words)
  
 - **Main claim to establish:** Scalar interpretation is a test case for theories of inference
   because the listener must integrate lexical meaning, alternatives, assumptions about the speaker,
   and prior world knowledge — and because the field disagrees not only about the answer but about
-  what kind of answer is wanted.
+  what kind of answer is wanted. **The dissertation's thesis is its answer to three questions about
+  scalar resolution, and scalar implicature is where that answer is demonstrated.**
 - **Material to include, in three moves.**
-  1. *The explanandum.* Introduce *some* as semantically compatible with *all* but often interpreted
-     as *some but not all*.
+  1. *The explanandum, and the two terms the questions need.* **Scalar resolution** is picking a
+     value on a scale. Introduce *some* as semantically compatible with *all* but often interpreted
+     as *some but not all*: that interpretation, **scalar implicature**, is a peculiarity of scalar
+     resolution. Leave *strengthening*, the mechanism proposed to yield it, to §1.1, which keeps
+     the two apart.
   2. *The three questions*, stated as questions and in this order, so the reader knows from the
-     first page that one architecture answers all three:
+     first page that their answers are the thesis and that scalar implicature, run through one
+     implementation, is the main demonstration:
      - **What computational constraint(s) might scalar resolution obey?**
-     - **Is scalar resolution a single feedforward pass?**
+     - **Is scalar resolution a single feedforward pass?** Define the term in the same sentence: a
+       single feedforward pass computes successive linguistic representations in sequence — the
+       lexical, the situational and the utility representations. Name its sub-question, how the
+       semantic/pragmatic division is drawn to begin with, and **say in the same place that it is
+       posed and left open at this phase**: the architecture takes the lexical entry as given, and
+       the division cannot be drawn until the entry is inferred rather than supplied.
      - **Can patterns observed in scalar resolution be understood as peculiarities arising at the
-       algorithmic rather than the computational level?** — with the three sub-questions named:
-       whether alternative competition is necessary to produce scalar implicature and whether it is a
-       separate module from world-prior inference; what mechanism underlies extreme-favouring
-       resolution for complete-scale inference; and how the semantic/pragmatic division is drawn to
-       begin with.
+       algorithmic rather than the computational level?** — with its two sub-questions named:
+       whether explicit competition among alternatives is necessary to produce scalar implicature,
+       and whether it is a separate module from world-prior inference; and what mechanism
+       underlies extreme-favouring resolution for complete-scale inference.
   3. *The level distinction, fixed by contrast rather than by definition.* **A computational-level
      theory states a goal and is silent on compute-resource constraints.** RSA is the example, and
      Part I introduces it anyway: it specifies *what* is recovered — a posterior over states, by
@@ -73,8 +83,9 @@ The precision/wonkiness arc of earlier drafts survives only as contrast.
   (Grice, 1975); contemporary probabilistic and grammatical implementations differ over where and
   how enrichment occurs (Goodman & Frank, 2016; Chierchia et al., 2012).
 - **Guard against overclaiming:** Do not announce that either literature proves neural predictive
-  coding. Do not promise that the dissertation settles the semantic/pragmatic assignment question —
-  it argues the question's *form* is the problem.
+  coding. Do not promise that the dissertation settles the semantic/pragmatic assignment question:
+  it poses it and leaves it open at this phase (move 2), and what it argues is only that the
+  question's *form* presupposes staging (§1.5).
 - **Drafting note.** Resist making this an abstract exposition of Marr. The RSA contrast does the
   work in two sentences; a reader who knows RSA knows what a computational-level theory is as soon
   as it is named as one.
@@ -593,8 +604,10 @@ rather than having to infer it.*
   model built here rather than resolving it**, and is a scope narrowing, not a rebuttal.
 ## 2.6 Timescales, bidirectional flow, and joint settlement (about 250 words)
  
-*This is the dissertation's answer to the second question. Note the warrant: the claim is about
-**staging**, not about message direction.*
+*This is the dissertation's answer to the second question, and the answer is **no**: given the
+clamped \(\varphi_L\), scalar resolution here is the joint settlement of \(\varphi_S\) with
+\(\varphi_u\), not a single feedforward pass. Note the warrant: the claim is about **staging**, not
+about message direction.*
  
 - **Timescale separation, and it is a commitment rather than an ordering.**
   \(\tau_\varepsilon\le\tau_\varphi/(4\lambda_{\max}(H))\ll\tau_\varphi\ll\tau_\theta\):
@@ -677,10 +690,11 @@ rather than having to infer it.*
 # Closing bridge (about 120 words)
  
 - State the three questions once more, and that one architecture answers them together because the
-  constraint generates the rest:
+  constraint generates the rest — the one sub-question it leaves open, the semantic/pragmatic
+  division, named as open, because the entry is taken as given:
   > The architecture is built under locality; given the entry the utterance clamps, it settles the
-  > world belief and the utility state jointly rather than in a single feedforward pass; and it produces movement of belief mass off the *all*
-  > reading with no explicit competition among alternatives at any point.
+  > world belief and the utility state jointly rather than in a single feedforward pass; and it
+  > yields scalar implicature with no explicit competition among alternatives at any point.
 - **Then the standing qualification**, because §5.1 leans on it, stated as what the claims do say
   about human processing and not only what they do not: they bear on what it **need not contain**
   to produce the effect, on what it **would contain** if it runs an algorithm of this kind (§5.7's

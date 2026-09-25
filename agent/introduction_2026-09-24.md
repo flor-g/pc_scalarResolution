@@ -26,7 +26,7 @@ line and the closing bridge, which the plan named with it.
   representations in sequence (lexical, situational, utility). The agent's first definition ("a
   semantic value and then a pragmatic one on it, once") was inaccurate (user) and is superseded.
 
-## 3. The draft (pending the user's review; not applied)
+## 3. The draft as first shown (superseded in one place; see §5)
 
 ### 3a. Replaces the *Opening* (background lines 36–80), budget 245 → 320
 
@@ -96,4 +96,16 @@ about message direction.*
 
 - [x] IN1 (2026-09-24): the plan set out; item 5 ruled out (user).
 - [x] IN2 (2026-09-24): draft written (§3).
-- [ ] IN3: the user's review; apply; records; fold.
+- [x] IN3 (2026-09-24): the definition of a single feedforward pass corrected by the user
+      (successive linguistic representations in sequence: lexical, situational, utility).
+- [x] IN4 (2026-09-24): the semantic/pragmatic sub-question moved from the third question to the
+      second (user), in the draft and in the central claim; draft approved and applied to
+      `thesis_outline/background_sections.md` (Opening, *Scale* line, target, §2.6, closing bridge);
+      records; folded.
+
+## 5. As applied
+
+The draft of §3 with one change: question 2 carries the division sub-question ("Name its
+sub-question, how the semantic/pragmatic division is drawn to begin with, and say in the same place
+that it is posed and left open at this phase …"), and question 3 names two sub-questions. The
+*Scale* line reads "the second's sub-question left open".
