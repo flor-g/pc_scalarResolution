@@ -1645,7 +1645,9 @@ background §1.1 and swept through both outlines and `main.ipynb` Text cell 4 (2
 settlement** (also in the central claim and background §2.6), the third for two patterns; the
 semantic/pragmatic division is **not resolved at this phase** — it waits on φ_L being inferred
 rather than clamped (user) — so §6 drops it, the central claim says so, and background §2.6 no longer
-calls the demarcation problem answered. Word table: §6 265 → 350, total 6,725 → 6,810.
+calls the demarcation problem answered. Word table: §6 265 → 350, total 6,725 → 6,810. **The second answer is a negation (user):** one pass is a single forward sweep, a semantic value
+then a pragmatic one computed on it; joint settlement is not one pass. The central claim answers
+**no** and defines the term; §6 item 2 is *Joint settlement, not one pass*.
 
 ## 19. RV: cost, attribution and scope, after an external review (2026-09-24)
 

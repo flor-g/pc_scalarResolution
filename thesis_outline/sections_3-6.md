@@ -23,14 +23,15 @@ carries each answer.
    check applied afterwards (background §2.2). It is what the utility basis puts under strain at
    $m>1$, what Appendix E's relay buys back at the cost of a fourth timescale, and what motivates
    the binary branching of the level §5.1 proposes.
-2. **Is scalar resolution one pass?** In this architecture the answer is **joint settlement**:
-   given the lexical entry, which the utterance clamps, the world belief and the utility state
+2. **Is scalar resolution one pass?** **No.** One pass is a single forward sweep: a semantic value
+   computed, and a pragmatic one computed on it. In this architecture resolution is **joint
+   settlement** instead: given the lexical entry, which the utterance clamps, the world belief and the utility state
    settle together as the one maximizer of an objective strictly concave in both, and no literal
    interpretation is settled on the entry alone and then revised (background §2.6). **State the
    scope with the answer, because the question asks more than one architecture can.** The entry
    itself exists before any pragmatic influence; and the answer is about how this architecture
    computes the interpretation, not about how no architecture could, nor about what human
-   processing does. The question asks *is*; a demonstration answers *can be*.
+   processing does. The question asks *is*; a demonstration answers that it *need not be*.
 3. **Can patterns observed in scalar resolution be understood as algorithmic-level
    peculiarities?** Yes, for two of the three the background names, each shown or argued in this
    implementation; the third waits on the next phase:
@@ -1528,9 +1529,10 @@ together, and scalar implicature is where it is shown.
    reaches it. Plasticity is local at $m=1$, and at every $m$ with Appendix E's relay, whose added
    timescale the proof does not cover. The same constraint points the next level toward binary
    branching.
-2. **Joint settlement.** Given the entry the utterance clamps, the world belief and the utility
-   state settle together as the one maximizer of a single objective; no literal interpretation is
-   settled first and then revised. The entry itself precedes pragmatic influence; what settles
+2. **Joint settlement, not one pass.** Given the entry the utterance clamps, the world belief and
+   the utility state settle together as the one maximizer of a single objective, rather than in a
+   single forward sweep that settles a literal interpretation first and computes a pragmatic one on
+   it. The entry itself precedes pragmatic influence; what settles
    jointly is everything downstream of it.
 3. **Two patterns, as algorithmic-level peculiarities.**
    - *Implicature without explicit competition, and strengthening only in part.* Where the prior

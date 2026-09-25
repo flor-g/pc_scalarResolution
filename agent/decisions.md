@@ -1223,6 +1223,14 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     background §2.6); two patterns as algorithmic-level peculiarities (implicature without explicit
     competition and strengthening only in part; extreme-favouring, with the Xiang et al. comparison);
     the proposal. No standing qualification (user). Word table: §6 265 → 350, total 6,725 → 6,810.
+  - **2026-09-24, the second answer is a negation (user).** "Joint settlement is NOT one pass. So
+    the answer is negation." The decision's gloss above, "whether it is one pass (co-determined …)",
+    read as if joint settlement answered yes; the agent had taken "one pass" to mean "not staged".
+    **One pass** is a single forward sweep — a semantic value computed and a pragmatic one computed
+    on it, which a staged pipeline is — and joint settlement is recurrent, so the answer to "Is
+    scalar resolution one pass?" is **no**, at this architecture's scope (a demonstration answers
+    that it need not be). The central claim and §6 item 2 now say so; the background's Opening is to
+    define "one pass" before the question uses it.
 
 ### C11. Scalar resolution, scalar implicature, scalar strengthening: three terms, kept apart
 - Status: Settled
