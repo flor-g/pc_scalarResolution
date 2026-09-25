@@ -1640,7 +1640,7 @@ central claim, §5.1's closing bullet and the background's closing bridge; §6 d
 implicature (a peculiarity of it, tested by the position criterion), scalar strengthening (a proposed
 mechanism yielding it, whose signature the shift criterion tests); the model reaches implicature
 without explicit competition, the exposure ensemble being alternatives used across trials. Defined in
-background §1.1 and swept through both outlines and  Text cell 4 (26 sites; the record's
+background §1.1 and swept through both outlines and `main.ipynb` Text cell 4 (26 sites; the record's
 §7 lists them). **Next:** §6, drafted and awaiting the user's review.
 
 ## 19. RV: cost, attribution and scope, after an external review (2026-09-24)

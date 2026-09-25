@@ -1231,10 +1231,10 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Implementational reason: none. No code cell prints either word.
 - Bogacz status: not an operation.
 - Depends on it: background §1.1 (the definitions), the opening's first sub-question, §§1.3, 1.5, the
-  closing bridge; outline central claim, §§3.6, 4.1, 4.1.2, 5.1, 5.7, §6;  Text cell 4,
+  closing bridge; outline central claim, §§3.6, 4.1, 4.1.2, 5.1, 5.7, §6; `main.ipynb` Text cell 4,
   including B10's stance sentence, now "… or even neither criteria as scalar implicature" (the
   user's sentence, one word changed with the user's approval). C7's criterion names are unchanged.
-- Evidence:  §7, the site list.
+- Evidence: `agent/central_claim_2026-09-24.md` §7, the site list.
 
 ### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
 - Decided by: user (2026-09-13)
