@@ -1623,7 +1623,7 @@ deferring to §3 (the two files had been pointing at each other).
 
 ## 20. CC: the central claim reframed by the three questions (2026-09-24)
 
-The working record is `agent/central_claim_2026-09-24.md`; the decision is C10 (user). **What
+The working record is `agent/history.md` §21; the decision is C10 (user). **What
 changed:** `sections_3-6.md`'s *Central claim* now opens on the thesis as the answer to the
 background's three questions — locality as the generative constraint (background §2.2), the
 interpretation co-determined given the clamped entry, answered at this architecture's scope
@@ -1641,7 +1641,11 @@ implicature (a peculiarity of it, tested by the position criterion), scalar stre
 mechanism yielding it, whose signature the shift criterion tests); the model reaches implicature
 without explicit competition, the exposure ensemble being alternatives used across trials. Defined in
 background §1.1 and swept through both outlines and `main.ipynb` Text cell 4 (26 sites; the record's
-§7 lists them). **Next:** §6, drafted and awaiting the user's review.
+§7 lists them). **§6 applied (user approved):** organized by the three answers, the second named **joint
+settlement** (also in the central claim and background §2.6), the third for two patterns; the
+semantic/pragmatic division is **not resolved at this phase** — it waits on φ_L being inferred
+rather than clamped (user) — so §6 drops it, the central claim says so, and background §2.6 no longer
+calls the demarcation problem answered. Word table: §6 265 → 350, total 6,725 → 6,810.
 
 ## 19. RV: cost, attribution and scope, after an external review (2026-09-24)
 

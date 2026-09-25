@@ -23,7 +23,7 @@ carries each answer.
    check applied afterwards (background §2.2). It is what the utility basis puts under strain at
    $m>1$, what Appendix E's relay buys back at the cost of a fourth timescale, and what motivates
    the binary branching of the level §5.1 proposes.
-2. **Is scalar resolution one pass?** In this architecture the interpretation is **co-determined**:
+2. **Is scalar resolution one pass?** In this architecture the answer is **joint settlement**:
    given the lexical entry, which the utterance clamps, the world belief and the utility state
    settle together as the one maximizer of an objective strictly concave in both, and no literal
    interpretation is settled on the entry alone and then revised (background §2.6). **State the
@@ -32,18 +32,19 @@ carries each answer.
    computes the interpretation, not about how no architecture could, nor about what human
    processing does. The question asks *is*; a demonstration answers *can be*.
 3. **Can patterns observed in scalar resolution be understood as algorithmic-level
-   peculiarities?** Yes, for the three the background names, each shown or argued in this
-   implementation:
+   peculiarities?** Yes, for two of the three the background names, each shown or argued in this
+   implementation; the third waits on the next phase:
    - *whether scalar implicature needs explicit competition among alternatives* — it does not
      need one to occur (the demonstration below); strengthening, the mechanism proposed for it,
      shows with it there, but not consistently;
    - *what underlies extreme-favouring resolution on complete scales* — argued from parity: the
      extreme-favouring axis is the even coordinate of the utility basis (Appendix C §5), and at
      $n=4$ the two absolute entries differ in that coordinate alone (§4.2.4);
-   - *how the semantic/pragmatic division is drawn* — the division's form is the problem: the
-     threshold $\theta_L$ is a semantic convention fixed by the predicate, sitting inside one
-     free-energy inference, and the joint settlement of the second answer is the fact §1.5's
-     demarcation problem is answered from.
+   - *how the semantic/pragmatic division is drawn* — **not resolved at this phase**. The lexical
+     level is clamped by the utterance, so a semantic value, the entry, exists before any pragmatic
+     influence by construction; how the division is drawn can be resolved only once $\varphi_L$ is
+     inferred rather than clamped (§3.3 says what unclamping sets running). What this phase keeps is
+     §1.5's diagnosis, that the dispute's criteria presuppose staging.
 
    §5.5 extends the third answer by one step: some questions are ones the computational level
    leaves unspecified and an algorithmic account settles.
@@ -205,8 +206,8 @@ The raise history of this table is in `revisions.md` §16.
 | 5.5 What an algorithmic account specifies | 120 | Three questions the computational level leaves unspecified |
 | 5.6 Limits | 870 | The numerical substrate, and what the simulation costs; the architecture; stipulations; the read-out's locality |
 | 5.7 Predictions | 130 | Exposure; granularity; the midpoint cut; the lexical strength of a class |
-| **6. Conclusion** | **265** | |
-| **Total** | **6,725** | |
+| **6. Conclusion** | **350** | |
+| **Total** | **6,810** | |
 
 # 3. The proposed architecture (about 1,530 words)
  
@@ -1516,40 +1517,38 @@ read as a limit of the architecture.
   supported.
 ---
  
-# 6. Conclusion (about 265 words)
+# 6. Conclusion (about 350 words)
  
-1. A field-valued world state on a dense scale, with a soft lexical entry competing additively
-   against the world prior in the same log-density — a placement of the prior the architecture
-   commits to, not one its construction forces (§3.2) — admits a closed-form stationary point and a
-   recurrent network that provably reaches it. Its plasticity is local at $m=1$, and at every $m$
-   with Appendix E's relay, whose added timescale the proof does not cover: the relay's stability is
-   shown for a subsystem (Eq. E5) and measured for the whole network.
-2. That network moves belief mass away from the *all* reading without representing any alternative,
-   by amplifying the observed entry's own projection under a gain fixed by exposure. The effect
-   therefore does not by itself diagnose a within-trial alternatives computation.
-3. Where the prior leaves the all-region in the majority the network takes it out, and where the
-   prior peaks inside the cell of *all* the network carries the peak outside it: in a single row of
-   §4.1.4, and in a band of the plane under each read-out (§4.1.5), at the stipulated half-width and
-   not at wider ones (§4.1.2's guard, sourced at both ends). In every one of those the shift
-   criterion is met as well. The unconditioned counts, in which the prior is doing part of the work,
-   are larger under $q$ than under the delta read-out §3.6 argues for, which is why the conditioned
-   ones lead. **What survives the change of read-out is the position criterion and not
-   the shift**, and §5.1 reads that division as keyed to the level this architecture lacks.
-   What a level representing competition among alternatives would change is what the
-   network pays for that. On the plane the first condition's floor falls as the prior sharpens and
-   the second's rises (§4.1.5), and a drain keyed to the alternative would not raise the second; and
-   learning has no end short of a maximizer the slow flow never reaches. This dissertation specifies that level and
-   proposes a design for it — resolution as a negative search branching binarily at each level,
-   which keeps the dimension at one, the plasticity local, and the generative map affine enough to
-   inherit the convergence proof — but does not derive its algebra, and says so in §5.1.
-4. Independently, the same threshold semantics distinguishes scale classes by the entry each
-   carries. Run on Xiang et al.'s (2022) own items, the class whose entry is fixed at the scale's own
-   endpoint is fitted almost exactly and puts no upper bound on $\Lambda$, while the class whose
-   threshold sits a resolution step inside the other endpoint requires a finite one and is where this
-   model, like every model in their paper, is weakest. **That ordering runs in the direction the
-   atomicity hypothesis of §4.2.1 predicts, and the dissertation takes no position on that hypothesis**
-   — the comparison runs at a single resolution, and under architectural commitments §5.1 and §5.2
-   themselves put in doubt, so what it establishes is a fact about this phase. The residual is
-   reported and not explained.
+One architecture, built under the locality constraint, answers the background's three questions
+together, and scalar implicature is where it is shown.
+
+1. **The constraint.** Under locality, a field-valued world state with a soft lexical entry
+   competing additively against the world prior in one log-density (a placement the architecture
+   commits to, §3.2) admits a closed-form stationary point and a recurrent network that provably
+   reaches it. Plasticity is local at $m=1$, and at every $m$ with Appendix E's relay, whose added
+   timescale the proof does not cover. The same constraint points the next level toward binary
+   branching.
+2. **Joint settlement.** Given the entry the utterance clamps, the world belief and the utility
+   state settle together as the one maximizer of a single objective; no literal interpretation is
+   settled first and then revised. The entry itself precedes pragmatic influence; what settles
+   jointly is everything downstream of it.
+3. **Two patterns, as algorithmic-level peculiarities.**
+   - *Implicature without explicit competition, and strengthening only in part.* Where the prior
+     puts the settled field's peak inside the cell of *all*, the network carries it outside with no
+     explicit competition among alternatives, by amplifying the observed entry's own projection
+     under a gain fixed by exposure — in one row of §4.1.4 and a band of the plane (§4.1.5), at the
+     stipulated half-width — so the implicature is conventionalized rather than computed.
+     Strengthening's shift shows in every one of those cells, but not consistently: it is met only
+     where the prior already puts mass on the all-region, and does not survive the change of
+     read-out.
+   - *Extreme-favouring on complete scales*, argued from parity (the utility basis's even
+     coordinate). On Xiang et al.'s (2022) items, the class fixed at its scale's own endpoint puts no
+     upper bound on $\Lambda$ and the other requires a finite one, the direction the atomicity
+     hypothesis predicts; the dissertation takes no position on it, and the residual is reported,
+     not explained.
+4. **The proposal.** A level representing competition among alternatives within the trial is
+   specified, not built: first for the complexity it would save, a conditional design argument
+   (§5.1), and second for the reading that consistent strengthening is what it would supply. Its
+   algebra is not derived.
 ---
  

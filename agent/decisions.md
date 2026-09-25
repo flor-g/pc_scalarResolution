@@ -1200,7 +1200,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
 - Depends on it: `thesis_outline/sections_3-6.md` *Central claim* (rewritten 2026-09-24) and §6 (to
   follow); B12, whose "constructive claim" is now the demonstration's result; R2 and B11, whose
   ordering of the level's two motivations is kept inside the proposal.
-- Evidence: `agent/central_claim_2026-09-24.md` (the instruction, the constraints the draft kept,
+- Evidence: `agent/history.md` §21 (the instruction, the constraints the draft kept,
   the draft as approved).
 - Findings added later:
   - **2026-09-24, the standing qualification restated positively (user).** The user asked what the
@@ -1211,6 +1211,18 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
     constraint it **might** obey — and not on what it **does** contain. Applied to the central claim,
     §5.1's closing bullet and the background's closing bridge. **Not repeated in §6** (user: it is
     made elsewhere).
+  - **2026-09-24, the semantic/pragmatic division is not resolved at this phase (user).** "A
+    resolution to that question is only after we unclamp level L." While φ_L is clamped, a semantic
+    value exists before pragmatic influence by construction, so the third question's third
+    sub-question waits on φ_L being inferred. The central claim answers the third question for two
+    of its three patterns and says the division waits on the next phase; background §2.6 no longer
+    says the demarcation problem is answered from joint settlement; §6 drops the bullet. §1.5's
+    diagnosis (the dispute's criteria presuppose staging) is kept, since it resolves nothing.
+  - **2026-09-24, §6 applied (user approved).** The conclusion is organized by the three answers:
+    the constraint; joint settlement (the second answer's name, now also in the central claim and
+    background §2.6); two patterns as algorithmic-level peculiarities (implicature without explicit
+    competition and strengthening only in part; extreme-favouring, with the Xiang et al. comparison);
+    the proposal. No standing qualification (user). Word table: §6 265 → 350, total 6,725 → 6,810.
 
 ### C11. Scalar resolution, scalar implicature, scalar strengthening: three terms, kept apart
 - Status: Settled
@@ -1234,7 +1246,7 @@ IDs: **A** architecture, **B** evaluation, **C** conventions, **I** implementati
   closing bridge; outline central claim, §§3.6, 4.1, 4.1.2, 5.1, 5.7, §6; `main.ipynb` Text cell 4,
   including B10's stance sentence, now "… or even neither criteria as scalar implicature" (the
   user's sentence, one word changed with the user's approval). C7's criterion names are unchanged.
-- Evidence: `agent/central_claim_2026-09-24.md` §7, the site list.
+- Evidence: `agent/history.md` §21 §7, the site list.
 
 ### C6. Every number the prose quotes is computed by explicit code and printed by a code cell
 - Decided by: user (2026-09-13)

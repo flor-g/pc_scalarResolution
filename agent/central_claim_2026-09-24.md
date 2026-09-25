@@ -159,16 +159,22 @@ what human processing contains.
 - [x] CC5 (2026-09-24): the standing qualification restated positively at its three sites
       (central claim, §5.1's closing bullet, background closing bridge), at the user's
       agreement; §6 will not repeat it (user).
-- [ ] CC4: §6 Conclusion — the plan goes to the user before any drafting (user's instruction:
-      "Before you draft the conclusion, tell me what you plan to say first").
+- [x] CC4 (2026-09-24): §6 — plan set out first (user's instruction), drafted, revised for C11,
+      the semantic/pragmatic bullet dropped (user), applied; word table 265 → 350.
+- [x] CC6 (2026-09-24): C11's sweep (§7).
+- [x] CC7 (2026-09-24): the division deferred to unclamping φ_L in the central claim and background
+      §2.6; "joint settlement" named in the central claim and §2.6; records; folded here.
 
-## 6. §6 draft (pending the user's review; not applied)
+## 6. §6
 
 Plan agreed with the user: organized by the three answers; about 350 words (user approved the
 length); the Xiang comparison under extreme-favouring (user); no standing qualification (user: made
 elsewhere); the second answer **named joint settlement** (user), with the clamped-entry scope clause
 kept and the staging and human-processing clauses left to the central claim and §5.1. Revised
 2026-09-24 for C11: 3(a) is implicature without explicit competition, strengthening only in part.
+
+**Approved and applied 2026-09-24**, the semantic/pragmatic bullet dropped at the user's
+instruction (the division waits on unclamping φ_L).
 
 One architecture, built under the locality constraint, answers the background's three questions
 together, and scalar implicature is where it is shown.
@@ -183,7 +189,7 @@ together, and scalar implicature is where it is shown.
    state settle together as the one maximizer of a single objective; no literal interpretation is
    settled first and then revised. The entry itself precedes pragmatic influence; what settles
    jointly is everything downstream of it.
-3. **Three patterns, as algorithmic-level peculiarities.**
+3. **Two patterns, as algorithmic-level peculiarities.**
    - *Implicature without explicit competition, and strengthening only in part.* Where the prior
      puts the settled field's peak inside the cell of *all*, the network carries it outside with no
      explicit competition among alternatives, by amplifying the observed entry's own projection
@@ -197,8 +203,6 @@ together, and scalar implicature is where it is shown.
      upper bound on $\Lambda$ and the other requires a finite one, the direction the atomicity
      hypothesis predicts; the dissertation takes no position on it, and the residual is reported,
      not explained.
-   - *The semantic/pragmatic division.* $\theta_L$ is a semantic convention inside one free-energy
-     inference, and §5.5's questions are ones the computational level leaves unspecified.
 4. **The proposal.** A level representing competition among alternatives within the trial is
    specified, not built: first for the complexity it would save, a conditional design argument
    (§5.1), and second for the reading that consistent strengthening is what it would supply. Its

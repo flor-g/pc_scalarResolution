@@ -618,8 +618,8 @@ rather than having to infer it.*
   clamped before recurrence begins, so a semantic value, the entry itself, does exist before any
   pragmatic influence. What is joint is everything downstream of it. Given the clamped
   \(\varphi_L\), the world belief and the utility state are inferred together, as the one maximizer
-  of an objective strictly concave in both, and neither settles first. So the claim is that **the
-  interpretation is co-determined**: no literal interpretation is settled on the entry alone and
+  of an objective strictly concave in both, and neither settles first. So the claim is **joint
+  settlement**, the interpretation co-determined: no literal interpretation is settled on the entry alone and
   then revised by pragmatic influence.
   - **Be careful here, twice.** Bidirectional message flow alone does not deny staging — a
     feedforward pipeline with error feedback is still stageable; the claim rests on the joint
@@ -627,7 +627,10 @@ rather than having to infer it.*
     a *unique* solution, not an *impossibility* of staging: a staged computation could reach the
     same maximizer. The claim is about how this architecture computes the interpretation, not about
     how no architecture could.
-  - This is the architectural fact §1.5's demarcation problem is answered from.
+  - This is the architectural fact §1.5's demarcation problem will be taken up from, and **not
+    at this phase**: while \(\varphi_L\) is clamped, a semantic value exists before pragmatic
+    influence by construction, so how the division is drawn can be resolved only once the lexical
+    level is inferred rather than clamped.
 - **Counterargument/qualification:** updating the slow parameter once per utterance is closer to
   empirical-Bayes parameter learning than to a fully derived canonical predictive-coding circuit.
   The methods section specifies the schedule.
